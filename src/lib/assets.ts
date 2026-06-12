@@ -41,6 +41,11 @@ export function mapAsset(file = "main.jpg") {
   return imageAsset(file, "maps");
 }
 
+export function itemIconAsset(file: string | null | undefined) {
+  if (!file) return "";
+  return `${ASSET_ROOT}/items/${file.replace(/\\/g, "/")}`;
+}
+
 export function mediaAsset(file: string | null | undefined, bucket: string) {
   if (!file) return "";
   return `${ASSET_ROOT}/media/${baseOf(file)}--${bucket}${extOf(file)}`;

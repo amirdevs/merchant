@@ -5,6 +5,7 @@ import { items, visibleQuantity } from "../lib/game";
 import { money } from "../lib/format";
 import { cn } from "../lib/cn";
 import type { MoveAmount } from "../lib/inventory";
+import { itemIconAsset } from "../lib/assets";
 import { Panel } from "./ui";
 
 const tagIcons: Array<[string, string]> = [
@@ -26,6 +27,13 @@ const tagIcons: Array<[string, string]> = [
 function iconFor(entry: InventoryEntry) {
   const item = items[entry.itemIndex];
   return tagIcons.find(([tag]) => item.tags.includes(tag))?.[1] || "?";
+}
+
+function itemGridSpan(size: number) {
+  if (size >= 50) return "col-span-4 row-span-3";
+  if (size >= 25) return "col-span-3 row-span-3";
+  if (size >= 5) return "col-span-2 row-span-2";
+  return "col-span-1 row-span-1";
 }
 
 export function InventoryPanel({
@@ -99,22 +107,24 @@ export function InventoryPanel({
           <option value="quantity">Qty</option>
         </select>
       </div>
-      <div className="flex max-h-[326px] flex-col gap-1.5 overflow-auto pr-1">
+      <div className="grid max-h-[360px] auto-rows-[74px] grid-cols-[repeat(auto-fill,minmax(74px,1fr))] gap-1.5 overflow-auto pr-1">
         {rows.length ? (
           rows.map((entry) => {
             const item = items[entry.itemIndex];
             const quantity = mode === "offer" ? entry.offerQuantity : visibleQuantity(entry);
+            const icon = itemIconAsset(item.iconFile);
 
             return (
               <div
                 key={entry.itemIndex}
                 className={cn(
-                  "relative grid min-h-12 grid-cols-[1fr_auto] items-stretch border border-brass/35 bg-black/25 text-left text-parchment hover:bg-ember/60",
+                  "relative min-h-0 border border-brass/35 bg-black/25 text-left text-parchment hover:bg-ember/60",
+                  itemGridSpan(item.size),
                   entry.protected && "border-brass bg-brass/10"
                 )}
               >
                 <button
-                  className="grid min-h-12 grid-cols-[34px_1fr_46px] items-center gap-2 text-left"
+                  className="grid h-full w-full grid-rows-[1fr_auto] p-1 text-left"
                   onClick={(event) => onMove(entry, clickAmount(event))}
                   onContextMenu={(event) => {
                     event.preventDefault();
@@ -122,21 +132,28 @@ export function InventoryPanel({
                   }}
                   title="Left click moves one. Right click moves all or clears. Shift moves half. Alt moves ten."
                 >
-                  <span className="ml-1 grid h-[30px] w-[30px] place-items-center border border-brass/40 bg-white/5 text-brass">
-                    {iconFor(entry)}
+                  <span className="relative grid min-h-0 place-items-center overflow-hidden border border-brass/30 bg-black/20">
+                    {icon ? (
+                      <img
+                        className="relative z-10 max-h-full max-w-full bg-black/20 object-contain p-1"
+                        src={icon}
+                        alt=""
+                        onError={(event) => {
+                          event.currentTarget.style.display = "none";
+                        }}
+                      />
+                    ) : null}
+                    <span className="absolute inset-0 z-0 grid place-items-center text-lg font-bold text-brass/80">{iconFor(entry)}</span>
                   </span>
-                  <span className="min-w-0">
-                    <span className="block truncate">{item.name}</span>
-                    <small className="block truncate text-xs text-parchment-muted">{item.tags.slice(0, 3).join(", ")}</small>
+                  <span className="min-w-0 pt-1">
+                    <span className="block truncate text-xs">{item.name}</span>
+                    <small className="block truncate text-[11px] text-parchment-muted">{money(item.loafValue)}</small>
                   </span>
-                  <span className="flex flex-col items-end">
-                    <strong>{quantity}</strong>
-                    <small className="text-xs text-parchment-muted">{money(item.loafValue)}</small>
-                  </span>
+                  <strong className="absolute right-1 top-1 min-w-5 border border-brass/45 bg-panel/90 px-1 text-center text-xs">{quantity}</strong>
                 </button>
                 {allowProtect ? (
                   <button
-                    className={cn("grid w-8 place-items-center border-l border-brass/35 text-parchment-muted hover:text-brass", entry.protected && "text-brass")}
+                    className={cn("absolute left-1 top-1 grid h-6 w-6 place-items-center border border-brass/35 bg-panel/90 text-parchment-muted hover:text-brass", entry.protected && "text-brass")}
                     onClick={() => onToggleProtect?.(entry)}
                     title={entry.protected ? "Unstar item" : "Star item"}
                   >
