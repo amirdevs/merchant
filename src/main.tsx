@@ -29,7 +29,7 @@ import { HelpModal } from "./components/HelpModal";
 import { TypewriterText } from "./components/TypewriterText";
 import { Button, IconButton, Muted, Panel } from "./components/ui";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "./lib/audio";
-import { BookOpen, CircleHelp, Download, HandCoins, Map, RotateCcw, Save, Upload, Users, Volume2, VolumeX } from "lucide-react";
+import { BookOpen, CircleHelp, Download, HandCoins, Map, RotateCcw, Save, ScrollText, Upload, Users, Volume2, VolumeX } from "lucide-react";
 
 function App() {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -242,6 +242,7 @@ function App() {
             <p>{state.message}</p>
             <p className="mt-2 text-sm text-parchment-muted">{modStatus}</p>
           </Panel>
+          <QuestPanel market={market} />
           <TravelPanel market={market} onTravel={travel} />
         </section>
 
@@ -288,6 +289,30 @@ function CustomerList({
               <span className="truncate">{person.name}</span>
             </button>
           ))}
+        </div>
+      </div>
+    </Panel>
+  );
+}
+
+function QuestPanel({ market }: { market: ReturnType<typeof currentMarket> }) {
+  const quest = market.quest;
+  const event = market.event;
+  const hasQuest = Boolean(quest?.name);
+  const hasEvent = Boolean(event?.name);
+
+  return (
+    <Panel title={<span className="flex items-center gap-2"><ScrollText size={18} /> Market Notes</span>}>
+      <div className="grid grid-cols-2 gap-2 text-sm max-[760px]:grid-cols-1">
+        <div className="border border-brass/35 bg-black/25 p-2">
+          <strong className="text-brass">{hasQuest ? quest?.name : "No local quest"}</strong>
+          <p className="mt-1 text-parchment-muted">{quest?.todo || "No active task is listed for this market."}</p>
+          {quest?.questItems?.length ? <p className="mt-2 truncate text-parchment-muted">Items: {quest.questItems.join(", ")}</p> : null}
+        </div>
+        <div className="border border-brass/35 bg-black/25 p-2">
+          <strong className="text-brass">{hasEvent ? event?.name : "No scheduled event"}</strong>
+          <p className="mt-1 text-parchment-muted">{event?.frequency || "No event timing is listed."}</p>
+          {event?.characterName ? <p className="mt-2 text-parchment-muted">Contact: {event.characterName}</p> : null}
         </div>
       </div>
     </Panel>

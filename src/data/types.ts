@@ -70,6 +70,20 @@ export type Marketplace = {
   ambiancePrimaryFile?: string | null;
   ambianceSecondaryFile?: string | null;
   stallage: number;
+  event?: {
+    name?: string | null;
+    frequency?: string | null;
+    characterName?: string | null;
+    scene?: string | null;
+  } | null;
+  quest?: {
+    name: string;
+    todo?: string | null;
+    scene?: string | null;
+    started?: boolean;
+    finished?: boolean;
+    questItems?: string[];
+  } | null;
   bias?: Bias[];
   location?: {
     top: number;
