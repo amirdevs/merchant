@@ -14,8 +14,9 @@ import {
   selectedCharacter,
   type GameState,
 } from "./lib/game";
-import { backdropAsset, portraitAsset, stallAsset, townAsset } from "./lib/assets";
+import { backdropAsset, mapAsset, portraitAsset, routeAsset, stallAsset, townAsset } from "./lib/assets";
 import { money } from "./lib/format";
+import { compactBiasText, routeLedger } from "./lib/travel";
 import type { Character, InventoryEntry } from "./data/types";
 import type { MoveAmount } from "./lib/inventory";
 import { InventoryPanel } from "./components/InventoryPanel";
@@ -190,21 +191,72 @@ function CustomerList({
 }
 
 function TravelPanel({ market, onTravel }: { market: ReturnType<typeof currentMarket>; onTravel: (marketIndex: number) => void }) {
+  const routes = routeLedger(market, marketplaces);
+
   return (
     <Panel title={<span className="flex items-center gap-2"><Map size={18} /> Travel</span>}>
-      <div className="grid gap-2">
-        {market.connections.map((connection) => (
-          <button
-            key={connection.marketplaceIndex}
-            className="flex w-full justify-between gap-3 border border-brass bg-ember px-3 py-2 text-left text-parchment hover:brightness-110"
-            onClick={() => onTravel(connection.marketplaceIndex)}
-          >
-            <span>{marketplaces[connection.marketplaceIndex].name}</span>
-            <Muted>{connection.travelDays}d / {connection.tolls} toll</Muted>
-          </button>
-        ))}
+      <div className="grid gap-3">
+        <MarketMap market={market} onTravel={onTravel} />
+
+        <div className="grid grid-cols-2 gap-2 text-sm max-[760px]:grid-cols-1">
+          <div className="border border-brass/35 bg-black/25 p-2">
+            <strong className="text-brass">Current demand</strong>
+            <p className="mt-1 text-parchment-muted">{compactBiasText(market, "demand")}</p>
+          </div>
+          <div className="border border-brass/35 bg-black/25 p-2">
+            <strong className="text-brass">Current discounts</strong>
+            <p className="mt-1 text-parchment-muted">{compactBiasText(market, "discount")}</p>
+          </div>
+        </div>
+
+        <div className="grid gap-2">
+          {routes.map(({ connection, to, days, tolls, demand, discounts }) => (
+            <button
+              key={`${market.index}-${connection.marketplaceIndex}-${connection.routeFile}`}
+              className="grid grid-cols-[72px_1fr_auto] items-center gap-3 border border-brass bg-ember/95 p-2 text-left text-parchment hover:brightness-110 max-[640px]:grid-cols-1"
+              onClick={() => onTravel(connection.marketplaceIndex)}
+            >
+              <img className="h-12 w-[72px] border border-brass/45 bg-black/30 object-cover" src={routeAsset(connection.routeFile)} alt="" />
+              <span className="min-w-0">
+                <strong className="block truncate">{to.name}</strong>
+                <small className="block truncate text-parchment-muted">Demand: {demand}</small>
+                <small className="block truncate text-parchment-muted">Discounts: {discounts}</small>
+              </span>
+              <span className="text-right text-sm text-parchment-muted">{days}d / {tolls} toll</span>
+            </button>
+          ))}
+        </div>
       </div>
     </Panel>
+  );
+}
+
+function MarketMap({ market, onTravel }: { market: ReturnType<typeof currentMarket>; onTravel: (marketIndex: number) => void }) {
+  const connected = new Set(market.connections.map((connection) => connection.marketplaceIndex));
+
+  return (
+    <div className="relative aspect-[2/1] overflow-hidden border border-brass/45 bg-black/35">
+      <img className="h-full w-full object-cover opacity-80" src={mapAsset()} alt="" />
+      {marketplaces.map((place) => {
+        if (!place.location) return null;
+        const isCurrent = place.index === market.index;
+        const isConnected = connected.has(place.index);
+        return (
+          <button
+            key={place.index}
+            className={`absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border text-[0px] ${
+              isCurrent ? "border-parchment bg-good" : isConnected ? "border-parchment bg-brass" : "border-brass/40 bg-panel/70"
+            }`}
+            style={{ top: `${place.location.top}%`, left: `${place.location.left}%` }}
+            disabled={!isConnected}
+            title={place.name}
+            onClick={() => onTravel(place.index)}
+          >
+            {place.name}
+          </button>
+        );
+      })}
+    </div>
   );
 }
 

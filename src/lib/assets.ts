@@ -36,3 +36,7 @@ export function backdropAsset(file: string | null | undefined) {
 export function routeAsset(file: string | null | undefined) {
   return imageAsset(file, "routes");
 }
+
+export function mapAsset(file = "main.jpg") {
+  return imageAsset(file, "maps");
+}

@@ -63,9 +63,21 @@ export type Marketplace = {
   index: number;
   name: string;
   kingdomIndex: number;
+  unlocked?: boolean;
   townsquareFile: string;
   backdropFile: string;
   stallage: number;
+  bias?: Bias[];
+  location?: {
+    top: number;
+    left: number;
+  };
+  theft?: {
+    percent: number;
+    maxLoafValue: number;
+    maxQuantity: number;
+    maxSize: number;
+  };
   connections: Array<{
     marketplaceIndex: number;
     routeFile: string;
