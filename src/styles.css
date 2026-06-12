@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@font-face {
+  font-family: "CinzelDecorative";
+  src: url("/game-assets/fonts/CinzelDecorative-Regular--fonts.ttf");
+}
+
+@theme {
+  --font-display: "CinzelDecorative", Georgia, serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --color-ink: #140f09;
+  --color-panel: #1a120b;
+  --color-panel-soft: #24190f;
+  --color-parchment: #f4ead1;
+  --color-parchment-muted: #cdbf99;
+  --color-brass: #d2aa57;
+  --color-brass-soft: #9b7a3d;
+  --color-ember: #7b4b23;
+  --color-good: #b9f0a2;
+  --color-bad: #f3a09b;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #140f09;
+  color: #f4ead1;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+button {
+  font: inherit;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(210, 170, 87, 0.6) rgba(0, 0, 0, 0.25);
+}
