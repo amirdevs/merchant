@@ -9,6 +9,7 @@ import {
   marketplaces,
   moveOffer,
   newGame,
+  nextCustomerIndex,
   offerValue,
   saveGame,
   selectedCharacter,
@@ -17,6 +18,7 @@ import {
 import { backdropAsset, mapAsset, portraitAsset, routeAsset, stallAsset, townAsset } from "./lib/assets";
 import { money } from "./lib/format";
 import { compactBiasText, routeLedger } from "./lib/travel";
+import { customerIntro, customerPreference, customerPrompt, customerReply } from "./lib/dialogue";
 import type { Character, InventoryEntry } from "./data/types";
 import type { MoveAmount } from "./lib/inventory";
 import { InventoryPanel } from "./components/InventoryPanel";
@@ -44,7 +46,17 @@ function App() {
   function selectCharacter(next: Character) {
     update((draft) => {
       draft.selectedCharacterIndex = next.index;
-      draft.message = next.dialogue?.who || `${next.name} is ready to trade.`;
+      draft.message = customerIntro(next);
+    });
+  }
+
+  function nextCustomer() {
+    update((draft) => {
+      const nextIndex = nextCustomerIndex(draft);
+      if (nextIndex === null) return;
+      const next = draft.characters[nextIndex];
+      draft.selectedCharacterIndex = next.index;
+      draft.message = customerIntro(next);
     });
   }
 
@@ -130,7 +142,7 @@ function App() {
           <CustomerList people={people} selectedIndex={state.selectedCharacterIndex} market={market} onSelect={selectCharacter} />
 
           {character ? (
-            <CharacterCard character={character} playerOffer={playerOffer} characterOffer={characterOffer} onTrade={trade} />
+            <CharacterCard character={character} playerOffer={playerOffer} characterOffer={characterOffer} onTrade={trade} onNextCustomer={nextCustomer} />
           ) : (
             <Panel className="min-h-[300px]" title="Choose a customer">
               <p className="leading-relaxed text-parchment-muted">Select someone in the town square, compare their preferences, then build an offer from both inventories.</p>
@@ -265,11 +277,13 @@ function CharacterCard({
   playerOffer,
   characterOffer,
   onTrade,
+  onNextCustomer,
 }: {
   character: Character;
   playerOffer: number;
   characterOffer: number;
   onTrade: () => void;
+  onNextCustomer: () => void;
 }) {
   const likes = character.bias?.filter((bias) => bias.percent > 0).slice(0, 5) || [];
   const dislikes = character.bias?.filter((bias) => bias.percent < 0).slice(0, 4) || [];
@@ -284,8 +298,12 @@ function CharacterCard({
       <div className="p-4">
         <h2 className="font-display text-2xl">{character.name}</h2>
         <h3 className="mt-1 font-display text-sm text-brass">{character.profession || "Customer"}</h3>
-        <p className="mt-4 max-h-28 overflow-auto leading-relaxed">{character.dialogue?.who || "Open to trade."}</p>
-        <p className="mt-3 max-h-24 overflow-auto leading-relaxed text-parchment-muted">{character.dialogue?.preference || "No stated preference."}</p>
+        <p className="mt-4 max-h-28 overflow-auto leading-relaxed">{customerIntro(character)}</p>
+        <p className="mt-3 max-h-24 overflow-auto leading-relaxed text-parchment-muted">{customerPreference(character)}</p>
+        <div className="mt-3 border border-brass/35 bg-black/20 p-2 text-sm">
+          <strong className="block text-brass">{customerPrompt(character)}</strong>
+          <span className="mt-1 block text-parchment-muted">{customerReply(character)}</span>
+        </div>
         <div className="mt-3 flex flex-wrap gap-2">
           {likes.map((bias) => <span className="border border-brass/60 bg-white/5 px-2 py-1 text-good" key={bias.tag}>{bias.tag} +{bias.percent}%</span>)}
           {dislikes.map((bias) => <span className="border border-brass/60 bg-white/5 px-2 py-1 text-bad" key={bias.tag}>{bias.tag} {bias.percent}%</span>)}
@@ -297,9 +315,12 @@ function CharacterCard({
         <div className={`mt-2 border border-brass/35 bg-black/20 p-2 text-sm ${difference >= 0 ? "text-good" : "text-bad"}`}>
           {offerStatus}
         </div>
-        <Button className="mt-3 w-full font-bold" onClick={onTrade}>
-          <HandCoins size={18} /> Make Offer
-        </Button>
+        <div className="mt-3 grid grid-cols-[1fr_auto] gap-2">
+          <Button className="font-bold" onClick={onTrade}>
+            <HandCoins size={18} /> Make Offer
+          </Button>
+          <Button onClick={onNextCustomer}>Next Customer</Button>
+        </div>
       </div>
     </div>
   );

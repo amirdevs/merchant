@@ -5,7 +5,7 @@ import professionsJson from "../data/generated/professions.json";
 import type { Character, InventoryEntry, Item, Marketplace, ObtainableItem, Profession } from "../data/types";
 import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
 import { addInventory, moveOffer, transferOffers, visibleQuantity } from "./inventory";
-import { charactersAtMarket, selectedCharacter } from "./npc-flow";
+import { charactersAtMarket, nextCustomerIndex, selectedCharacter } from "./npc-flow";
 import { loadGame, saveGame } from "./save";
 
 export const items = itemsJson as Item[];
@@ -153,4 +153,4 @@ export function completeTrade(state: GameState) {
   };
 }
 
-export { charactersAtMarket, loadGame, moveOffer, saveGame, selectedCharacter, visibleQuantity };
+export { charactersAtMarket, loadGame, moveOffer, nextCustomerIndex, saveGame, selectedCharacter, visibleQuantity };

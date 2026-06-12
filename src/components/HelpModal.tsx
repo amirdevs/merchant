@@ -10,6 +10,7 @@ const actions = [
   ["Inventory search", "Filter the current inventory panel by item name or tag."],
   ["Inventory sort", "Sort the current inventory panel by name, value, or quantity."],
   ["Click customer", "Select that market customer and show their dialogue and inventories."],
+  ["Next Customer", "Switch to the next valid customer in the current market."],
   ["Make Offer", "Ask the selected customer to accept or reject the visible trade."],
   ["Travel route", "Move to another connected market and advance days."],
   ["New Game", "Start a fresh offline save state."],
