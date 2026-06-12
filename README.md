@@ -52,3 +52,7 @@ This is a playable vertical slice, not a full clone yet:
 - local save/load
 
 Steam and online systems are not included.
+
+## Version Plan
+
+The implementation order is tracked in `docs/version-plan.md`. The current direction is original gameplay parity first, with modern UI and quality-of-life changes layered on after the baseline rules are stable.
