@@ -1,7 +1,10 @@
+import type { MouseEvent } from "react";
 import type { InventoryEntry } from "../data/types";
 import { items, visibleQuantity } from "../lib/game";
 import { money } from "../lib/format";
 import { cn } from "../lib/cn";
+import type { MoveAmount } from "../lib/inventory";
+import { Panel } from "./ui";
 
 const tagIcons: Array<[string, string]> = [
   ["coins", "$"],
@@ -35,15 +38,20 @@ export function InventoryPanel({
   title: string;
   inventory: InventoryEntry[];
   mode?: "stock" | "offer";
-  onMove: (entry: InventoryEntry) => void;
+  onMove: (entry: InventoryEntry, amount: MoveAmount) => void;
   onMoveAll: (entry: InventoryEntry) => void;
   allowProtect?: boolean;
 }) {
   const rows = inventory.filter((entry) => (mode === "offer" ? entry.offerQuantity > 0 : visibleQuantity(entry) > 0));
 
+  function clickAmount(event: MouseEvent<HTMLButtonElement>): MoveAmount {
+    if (event.altKey) return mode === "offer" ? -10 : 10;
+    if (event.shiftKey) return "half";
+    return mode === "offer" ? -1 : 1;
+  }
+
   return (
-    <section className="min-h-[250px] border-2 border-brass-soft bg-panel/90 p-3 shadow-2xl">
-      <h2 className="mb-2 font-display text-lg">{title}</h2>
+    <Panel className="min-h-[250px]" title={title}>
       <div className="flex max-h-[326px] flex-col gap-1.5 overflow-auto pr-1">
         {rows.length ? (
           rows.map((entry) => {
@@ -57,12 +65,12 @@ export function InventoryPanel({
                   "relative grid min-h-12 grid-cols-[34px_1fr_46px] items-center gap-2 border border-brass/35 bg-black/25 text-left text-parchment hover:bg-ember/60",
                   entry.protected && "border-brass bg-brass/10"
                 )}
-                onClick={() => onMove(entry)}
+                onClick={(event) => onMove(entry, clickAmount(event))}
                 onContextMenu={(event) => {
                   event.preventDefault();
                   onMoveAll(entry);
                 }}
-                title="Left click moves one. Right click moves all or clears the offer."
+                title="Left click moves one. Right click moves all or clears. Shift moves half. Alt moves ten."
               >
                 <span className="ml-1 grid h-[30px] w-[30px] place-items-center border border-brass/40 bg-white/5 text-brass">
                   {iconFor(entry)}
@@ -83,6 +91,6 @@ export function InventoryPanel({
           <p className="m-2 text-parchment-muted">Empty</p>
         )}
       </div>
-    </section>
+    </Panel>
   );
 }
