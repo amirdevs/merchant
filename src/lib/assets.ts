@@ -40,3 +40,8 @@ export function routeAsset(file: string | null | undefined) {
 export function mapAsset(file = "main.jpg") {
   return imageAsset(file, "maps");
 }
+
+export function mediaAsset(file: string | null | undefined, bucket: string) {
+  if (!file) return "";
+  return `${ASSET_ROOT}/media/${baseOf(file)}--${bucket}${extOf(file)}`;
+}

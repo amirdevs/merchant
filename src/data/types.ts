@@ -66,6 +66,9 @@ export type Marketplace = {
   unlocked?: boolean;
   townsquareFile: string;
   backdropFile: string;
+  musicFile?: string | null;
+  ambiancePrimaryFile?: string | null;
+  ambianceSecondaryFile?: string | null;
   stallage: number;
   bias?: Bias[];
   location?: {

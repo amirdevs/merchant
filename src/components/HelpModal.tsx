@@ -16,6 +16,7 @@ const actions = [
   ["New Game", "Start a fresh offline save state."],
   ["Save", "Write the current game state to local browser storage."],
   ["Load", "Load the local browser save if one exists."],
+  ["Audio", "Toggle routed UI, item, travel, and ambient sounds."],
 ];
 
 export function HelpModal({ onClose }: { onClose: () => void }) {

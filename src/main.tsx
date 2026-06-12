@@ -26,13 +26,16 @@ import type { Character, InventoryEntry } from "./data/types";
 import type { MoveAmount } from "./lib/inventory";
 import { InventoryPanel } from "./components/InventoryPanel";
 import { HelpModal } from "./components/HelpModal";
+import { TypewriterText } from "./components/TypewriterText";
 import { Button, IconButton, Muted, Panel } from "./components/ui";
-import { BookOpen, CircleHelp, Download, HandCoins, Map, RotateCcw, Save, Upload, Users } from "lucide-react";
+import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "./lib/audio";
+import { BookOpen, CircleHelp, Download, HandCoins, Map, RotateCcw, Save, Upload, Users, Volume2, VolumeX } from "lucide-react";
 
 function App() {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
   const [helpOpen, setHelpOpen] = useState(false);
   const [modStatus, setModStatus] = useState("Loading mods...");
+  const [soundOn, setSoundOn] = useState(() => audioEnabled());
   const importInputRef = useRef<HTMLInputElement | null>(null);
   const market = currentMarket(state);
   const people = useMemo(() => charactersAtMarket(state).slice(0, 18), [state]);
@@ -52,6 +55,10 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    playAmbient(market.ambiancePrimaryFile);
+  }, [market.ambiancePrimaryFile]);
+
   function update(mutator: (draft: GameState) => void) {
     setState((current) => {
       const draft = structuredClone(current);
@@ -61,6 +68,7 @@ function App() {
   }
 
   function selectCharacter(next: Character) {
+    playUiSound("menu_click");
     update((draft) => {
       draft.selectedCharacterIndex = next.index;
       draft.message = customerIntro(next);
@@ -68,6 +76,7 @@ function App() {
   }
 
   function nextCustomer() {
+    playUiSound("menu_click");
     update((draft) => {
       const nextIndex = nextCustomerIndex(draft);
       if (nextIndex === null) return;
@@ -78,6 +87,7 @@ function App() {
   }
 
   function movePlayer(entry: InventoryEntry, amount: MoveAmount, isOfferPanel = false) {
+    playItemSound("page");
     update((draft) => {
       const actual = draft.playerInventory.find((item) => item.itemIndex === entry.itemIndex);
       if (actual) moveOffer(actual, amount, isOfferPanel);
@@ -85,6 +95,7 @@ function App() {
   }
 
   function moveCharacter(entry: InventoryEntry, amount: MoveAmount, isOfferPanel = false) {
+    playItemSound("page");
     update((draft) => {
       const current = selectedCharacter(draft);
       const actual = current?.inventory.find((item) => item.itemIndex === entry.itemIndex);
@@ -93,6 +104,7 @@ function App() {
   }
 
   function togglePlayerProtect(entry: InventoryEntry) {
+    playUiSound("pack_closed");
     update((draft) => {
       const actual = draft.playerInventory.find((item) => item.itemIndex === entry.itemIndex);
       if (!actual) return;
@@ -102,10 +114,12 @@ function App() {
   }
 
   function trade() {
+    playUiSound("trade");
     setState((current) => completeTrade(current));
   }
 
   function travel(toMarketIndex: number) {
+    playUiSound("map");
     update((draft) => {
       const route = currentMarket(draft).connections.find((connection) => connection.marketplaceIndex === toMarketIndex);
       draft.marketIndex = toMarketIndex;
@@ -116,6 +130,7 @@ function App() {
   }
 
   function exportSave() {
+    playUiSound("pack_open");
     const blob = new Blob([serializeGame(state)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -127,6 +142,7 @@ function App() {
 
   async function importSave(file: File | undefined) {
     if (!file) return;
+    playUiSound("pack_open");
     const imported = importGame(await file.text());
     if (!imported) {
       update((draft) => {
@@ -151,13 +167,31 @@ function App() {
           <IconButton aria-label="Open controls" title="Controls" onClick={() => setHelpOpen(true)}>
             <CircleHelp size={18} />
           </IconButton>
+          <IconButton
+            aria-label={soundOn ? "Disable audio" : "Enable audio"}
+            title={soundOn ? "Disable audio" : "Enable audio"}
+            onClick={() => {
+              const next = !soundOn;
+              setSoundOn(next);
+              setAudioEnabled(next);
+              if (next) playUiSound("menu_click");
+            }}
+          >
+            {soundOn ? <Volume2 size={18} /> : <VolumeX size={18} />}
+          </IconButton>
           <Button onClick={() => setState(newGame())}>
             <RotateCcw size={16} /> New Game
           </Button>
-          <Button onClick={() => saveGame(state)}>
+          <Button onClick={() => {
+            playUiSound("pack_closed");
+            saveGame(state);
+          }}>
             <Save size={16} /> Save
           </Button>
-          <Button onClick={() => setState(loadGame() || state)}>
+          <Button onClick={() => {
+            playUiSound("pack_open");
+            setState(loadGame() || state);
+          }}>
             <BookOpen size={16} /> Load
           </Button>
           <Button onClick={exportSave}>
@@ -356,7 +390,7 @@ function CharacterCard({
       <div className="p-4">
         <h2 className="font-display text-2xl">{character.name}</h2>
         <h3 className="mt-1 font-display text-sm text-brass">{character.profession || "Customer"}</h3>
-        <p className="mt-4 max-h-28 overflow-auto leading-relaxed">{customerIntro(character)}</p>
+        <TypewriterText className="mt-4 max-h-28 overflow-auto leading-relaxed" text={customerIntro(character)} />
         <p className="mt-3 max-h-24 overflow-auto leading-relaxed text-parchment-muted">{customerPreference(character)}</p>
         <div className="mt-3 border border-brass/35 bg-black/20 p-2 text-sm">
           <strong className="block text-brass">{customerPrompt(character)}</strong>
