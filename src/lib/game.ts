@@ -119,6 +119,16 @@ export function preferencePercent(character: Character, item: Item) {
   }, 0);
 }
 
+function preferenceHint(character: Character) {
+  const likes = (character.bias || [])
+    .filter((bias) => bias.percent > 0)
+    .sort((left, right) => right.percent - left.percent)
+    .slice(0, 3)
+    .map((bias) => `${bias.tag} +${bias.percent}%`);
+  if (!likes.length) return "They have no obvious stated favorites.";
+  return `They favor ${likes.join(", ")}.`;
+}
+
 export function completeTrade(state: GameState) {
   const character = selectedCharacter(state);
   if (!character) return state;
@@ -126,9 +136,10 @@ export function completeTrade(state: GameState) {
   const characterValue = offerValue(character.inventory, character, "character", state);
   const appraisal = appraiseOffer(playerValue, characterValue, character);
   if (!["great_deal", "good_deal", "fair_deal"].includes(appraisal)) {
+    const missing = Math.max(0, Math.ceil(characterValue - playerValue));
     return {
       ...state,
-      message: `${character.name} refuses. Add about ${Math.ceil(characterValue - playerValue)} more value or match their preferences.`,
+      message: `${character.name} refuses. Missing ${missing} loaf value. ${preferenceHint(character)}`,
     };
   }
 

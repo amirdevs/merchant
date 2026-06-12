@@ -62,6 +62,15 @@ function App() {
     });
   }
 
+  function togglePlayerProtect(entry: InventoryEntry) {
+    update((draft) => {
+      const actual = draft.playerInventory.find((item) => item.itemIndex === entry.itemIndex);
+      if (!actual) return;
+      actual.protected = !actual.protected;
+      if (actual.protected) actual.offerQuantity = 0;
+    });
+  }
+
   function trade() {
     setState((current) => completeTrade(current));
   }
@@ -133,7 +142,7 @@ function App() {
 
         <aside className="grid min-w-0 content-start gap-3">
           <InventoryPanel title="Your Offer" mode="offer" inventory={state.playerInventory} onMove={(entry, amount) => movePlayer(entry, amount, true)} onMoveAll={(entry) => movePlayer(entry, "none", true)} />
-          <InventoryPanel title="Your Inventory" inventory={state.playerInventory} onMove={(entry, amount) => movePlayer(entry, amount)} onMoveAll={(entry) => movePlayer(entry, "all")} allowProtect />
+          <InventoryPanel title="Your Inventory" inventory={state.playerInventory} onMove={(entry, amount) => movePlayer(entry, amount)} onMoveAll={(entry) => movePlayer(entry, "all")} onToggleProtect={togglePlayerProtect} allowProtect />
         </aside>
       </section>
 
@@ -212,6 +221,8 @@ function CharacterCard({
 }) {
   const likes = character.bias?.filter((bias) => bias.percent > 0).slice(0, 5) || [];
   const dislikes = character.bias?.filter((bias) => bias.percent < 0).slice(0, 4) || [];
+  const difference = Math.round(playerOffer - characterOffer);
+  const offerStatus = difference >= 0 ? `Ahead by ${money(difference)}` : `Missing ${money(Math.abs(difference))}`;
   return (
     <div className="grid min-h-[360px] grid-cols-[35%_65%] border-2 border-brass-soft bg-panel/90 shadow-2xl max-[760px]:grid-cols-1">
       <div className="relative min-h-[260px] overflow-hidden bg-panel-soft">
@@ -230,6 +241,9 @@ function CharacterCard({
         <div className="mt-4 flex justify-between gap-2 border border-brass/45 bg-black/30 p-3">
           <span>Your offer: {money(playerOffer)}</span>
           <span>Their offer: {money(characterOffer)}</span>
+        </div>
+        <div className={`mt-2 border border-brass/35 bg-black/20 p-2 text-sm ${difference >= 0 ? "text-good" : "text-bad"}`}>
+          {offerStatus}
         </div>
         <Button className="mt-3 w-full font-bold" onClick={onTrade}>
           <HandCoins size={18} /> Make Offer
