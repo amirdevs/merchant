@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 import {
@@ -6,6 +6,7 @@ import {
   completeTrade,
   currentMarket,
   loadGame,
+  loadMods,
   marketplaces,
   moveOffer,
   newGame,
@@ -13,6 +14,8 @@ import {
   offerValue,
   saveGame,
   selectedCharacter,
+  serializeGame,
+  importGame,
   type GameState,
 } from "./lib/game";
 import { backdropAsset, mapAsset, portraitAsset, routeAsset, stallAsset, townAsset } from "./lib/assets";
@@ -24,16 +27,30 @@ import type { MoveAmount } from "./lib/inventory";
 import { InventoryPanel } from "./components/InventoryPanel";
 import { HelpModal } from "./components/HelpModal";
 import { Button, IconButton, Muted, Panel } from "./components/ui";
-import { BookOpen, CircleHelp, HandCoins, Map, RotateCcw, Save, Users } from "lucide-react";
+import { BookOpen, CircleHelp, Download, HandCoins, Map, RotateCcw, Save, Upload, Users } from "lucide-react";
 
 function App() {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
   const [helpOpen, setHelpOpen] = useState(false);
+  const [modStatus, setModStatus] = useState("Loading mods...");
+  const importInputRef = useRef<HTMLInputElement | null>(null);
   const market = currentMarket(state);
   const people = useMemo(() => charactersAtMarket(state).slice(0, 18), [state]);
   const character = selectedCharacter(state);
   const playerOffer = offerValue(state.playerInventory, character, "player", state);
   const characterOffer = character ? offerValue(character.inventory, character, "character", state) : 0;
+
+  useEffect(() => {
+    let cancelled = false;
+    loadMods().then((result) => {
+      if (cancelled) return;
+      setModStatus(result.loaded ? `Loaded mods: ${result.names.join(", ")}` : "No mods loaded");
+      if (!loadGame()) setState(newGame());
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   function update(mutator: (draft: GameState) => void) {
     setState((current) => {
@@ -98,6 +115,28 @@ function App() {
     });
   }
 
+  function exportSave() {
+    const blob = new Blob([serializeGame(state)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `merchant-save-day-${state.day}.json`;
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+
+  async function importSave(file: File | undefined) {
+    if (!file) return;
+    const imported = importGame(await file.text());
+    if (!imported) {
+      update((draft) => {
+        draft.message = "Save import failed. The file was not a valid merchant save.";
+      });
+      return;
+    }
+    setState({ ...imported, message: "Imported save file." });
+  }
+
   return (
     <main
       className="relative min-h-screen bg-cover bg-center p-3 text-parchment before:pointer-events-none before:fixed before:inset-0 before:bg-ink/65 before:content-['']"
@@ -121,6 +160,22 @@ function App() {
           <Button onClick={() => setState(loadGame() || state)}>
             <BookOpen size={16} /> Load
           </Button>
+          <Button onClick={exportSave}>
+            <Download size={16} /> Export
+          </Button>
+          <Button onClick={() => importInputRef.current?.click()}>
+            <Upload size={16} /> Import
+          </Button>
+          <input
+            ref={importInputRef}
+            className="hidden"
+            type="file"
+            accept="application/json,.json"
+            onChange={(event) => {
+              void importSave(event.target.files?.[0]);
+              event.target.value = "";
+            }}
+          />
         </div>
       </header>
 
@@ -149,7 +204,10 @@ function App() {
             </Panel>
           )}
 
-          <Panel className="max-h-40 min-h-20 overflow-auto leading-relaxed">{state.message}</Panel>
+          <Panel className="max-h-40 min-h-20 overflow-auto leading-relaxed">
+            <p>{state.message}</p>
+            <p className="mt-2 text-sm text-parchment-muted">{modStatus}</p>
+          </Panel>
           <TravelPanel market={market} onTravel={travel} />
         </section>
 

@@ -5,14 +5,16 @@ import professionsJson from "../data/generated/professions.json";
 import type { Character, InventoryEntry, Item, Marketplace, ObtainableItem, Profession } from "../data/types";
 import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
 import { addInventory, moveOffer, transferOffers, visibleQuantity } from "./inventory";
+import { applyModPacks } from "./mods";
 import { charactersAtMarket, nextCustomerIndex, selectedCharacter } from "./npc-flow";
-import { loadGame, saveGame } from "./save";
+import { importGame, loadGame, saveGame, serializeGame } from "./save";
 
 export const items = itemsJson as Item[];
 export const marketplaces = marketplacesJson as Marketplace[];
 export const professions = professionsJson as Record<string, Profession>;
 
 const baseCharacters = charactersJson as Character[];
+let modsLoaded = false;
 
 export type GameState = {
   marketIndex: number;
@@ -92,6 +94,13 @@ export function newGame(): GameState {
   };
 }
 
+export async function loadMods() {
+  if (modsLoaded) return { loaded: 0, skipped: 0, names: [] };
+  const result = await applyModPacks({ items, characters: baseCharacters, marketplaces, professions });
+  modsLoaded = true;
+  return result;
+}
+
 export function itemIndexByName(name: string) {
   const found = items.find((item) => item.name.toLowerCase() === name.toLowerCase());
   return found?.index ?? 0;
@@ -153,4 +162,4 @@ export function completeTrade(state: GameState) {
   };
 }
 
-export { charactersAtMarket, loadGame, moveOffer, nextCustomerIndex, saveGame, selectedCharacter, visibleQuantity };
+export { charactersAtMarket, importGame, loadGame, moveOffer, nextCustomerIndex, saveGame, selectedCharacter, serializeGame, visibleQuantity };
