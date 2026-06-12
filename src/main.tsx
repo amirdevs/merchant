@@ -25,8 +25,8 @@ function App() {
   const market = currentMarket(state);
   const people = useMemo(() => charactersAtMarket(state).slice(0, 18), [state]);
   const character = selectedCharacter(state);
-  const playerOffer = offerValue(state.playerInventory, character, "player");
-  const characterOffer = character ? offerValue(character.inventory, character, "character") : 0;
+  const playerOffer = offerValue(state.playerInventory, character, "player", state);
+  const characterOffer = character ? offerValue(character.inventory, character, "character", state) : 0;
 
   function update(mutator: (draft: GameState) => void) {
     setState((current) => {
@@ -43,18 +43,18 @@ function App() {
     });
   }
 
-  function movePlayer(entry: InventoryEntry, delta: number | "all" | "none") {
+  function movePlayer(entry: InventoryEntry, delta: number | "all" | "none", isOfferPanel = false) {
     update((draft) => {
       const actual = draft.playerInventory.find((item) => item.itemIndex === entry.itemIndex);
-      if (actual) moveOffer(draft.playerInventory, actual, delta);
+      if (actual) moveOffer(actual, delta, isOfferPanel);
     });
   }
 
-  function moveCharacter(entry: InventoryEntry, delta: number | "all" | "none") {
+  function moveCharacter(entry: InventoryEntry, delta: number | "all" | "none", isOfferPanel = false) {
     update((draft) => {
       const current = selectedCharacter(draft);
       const actual = current?.inventory.find((item) => item.itemIndex === entry.itemIndex);
-      if (actual && current) moveOffer(current.inventory, actual, delta);
+      if (actual && current) moveOffer(actual, delta, isOfferPanel);
     });
   }
 
@@ -144,14 +144,14 @@ function App() {
         </section>
 
         <aside className="grid min-w-0 grid-rows-2 gap-3 max-[1100px]:grid-rows-none">
-          <InventoryPanel title="Your Offer" mode="offer" inventory={state.playerInventory} onMove={(entry) => movePlayer(entry, -1)} onMoveAll={(entry) => movePlayer(entry, "none")} />
+          <InventoryPanel title="Your Offer" mode="offer" inventory={state.playerInventory} onMove={(entry) => movePlayer(entry, -1, true)} onMoveAll={(entry) => movePlayer(entry, "none", true)} />
           <InventoryPanel title="Your Inventory" inventory={state.playerInventory} onMove={(entry) => movePlayer(entry, 1)} onMoveAll={(entry) => movePlayer(entry, "all")} allowProtect />
         </aside>
       </section>
 
       {character ? (
         <section className="relative z-10 mt-3 grid grid-cols-2 gap-3 max-[1100px]:grid-cols-1">
-          <InventoryPanel title={`${character.name}'s Offer`} mode="offer" inventory={character.inventory} onMove={(entry) => moveCharacter(entry, -1)} onMoveAll={(entry) => moveCharacter(entry, "none")} />
+          <InventoryPanel title={`${character.name}'s Offer`} mode="offer" inventory={character.inventory} onMove={(entry) => moveCharacter(entry, -1, true)} onMoveAll={(entry) => moveCharacter(entry, "none", true)} />
           <InventoryPanel title={`${character.name}'s Stock`} inventory={character.inventory} onMove={(entry) => moveCharacter(entry, 1)} onMoveAll={(entry) => moveCharacter(entry, "all")} />
         </section>
       ) : null}

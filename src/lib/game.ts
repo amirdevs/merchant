@@ -3,6 +3,10 @@ import itemsJson from "../data/generated/items.json";
 import marketplacesJson from "../data/generated/marketplaces.json";
 import professionsJson from "../data/generated/professions.json";
 import type { Character, InventoryEntry, Item, Marketplace, ObtainableItem, Profession } from "../data/types";
+import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
+import { addInventory, moveOffer, transferOffers, visibleQuantity } from "./inventory";
+import { charactersAtMarket, selectedCharacter } from "./npc-flow";
+import { loadGame, saveGame } from "./save";
 
 export const items = itemsJson as Item[];
 export const marketplaces = marketplacesJson as Marketplace[];
@@ -45,13 +49,6 @@ function quantityFor(pool: ObtainableItem, item: Item, roll: () => number) {
   return Math.max(0, quantity);
 }
 
-function addInventory(inventory: InventoryEntry[], itemIndex: number, quantity: number) {
-  if (quantity <= 0) return;
-  const existing = inventory.find((entry) => entry.itemIndex === itemIndex);
-  if (existing) existing.quantity += quantity;
-  else inventory.push({ itemIndex, quantity, offerQuantity: 0, conceal: false });
-}
-
 export function generateInventory(character: Character) {
   const roll = seeded((character.index + 1) * 7919);
   const inventory: InventoryEntry[] = [];
@@ -75,7 +72,6 @@ export function generateInventory(character: Character) {
 export function newGame(): GameState {
   const characters = clone(baseCharacters).map((character) => ({
     ...character,
-    isMerchant: character.isMerchant || Boolean(character.obtainableItems?.length),
     inventory: generateInventory(character),
   }));
 
@@ -101,41 +97,19 @@ export function itemIndexByName(name: string) {
   return found?.index ?? 0;
 }
 
-export function charactersAtMarket(state: GameState) {
-  return state.characters.filter(
-    (character) =>
-      character.isActive &&
-      !character.isPlunderer &&
-      (character.marketplaceIndex === state.marketIndex || character.marketplaces?.includes(state.marketIndex))
-  );
-}
-
 export function currentMarket(state: GameState) {
   return marketplaces[state.marketIndex];
 }
 
-export function selectedCharacter(state: GameState) {
-  if (state.selectedCharacterIndex === null) return null;
-  return state.characters[state.selectedCharacterIndex] || null;
-}
-
-export function visibleQuantity(entry: InventoryEntry) {
-  return Math.max(0, entry.quantity - entry.offerQuantity);
-}
-
-export function offerValue(inventory: InventoryEntry[], character: Character | null, perspective: "player" | "character") {
-  return inventory.reduce((sum, entry) => {
-    if (entry.offerQuantity <= 0) return sum;
-    const item = items[entry.itemIndex];
-    let value = item.loafValue * entry.offerQuantity;
-    if (character && perspective === "player") {
-      value += value * preferencePercent(character, item) / 100;
-    }
-    if (character && perspective === "character") {
-      value -= value * Math.max(0, character.frugalPercent || 0) / 100;
-    }
-    return sum + Math.max(0, value);
-  }, 0);
+export function offerValue(inventory: InventoryEntry[], character: Character | null, perspective: TradePerspective, state?: GameState) {
+  return valueOffer({
+    inventory,
+    items,
+    character,
+    perspective,
+    profession: character?.professionSlug ? professions[character.professionSlug] : undefined,
+    marketplace: state ? currentMarket(state) : undefined,
+  });
 }
 
 export function preferencePercent(character: Character, item: Item) {
@@ -145,19 +119,13 @@ export function preferencePercent(character: Character, item: Item) {
   }, 0);
 }
 
-export function moveOffer(inventory: InventoryEntry[], entry: InventoryEntry, delta: number | "all" | "none") {
-  if (entry.protected && delta !== "none") return;
-  if (delta === "all") entry.offerQuantity = entry.quantity;
-  else if (delta === "none") entry.offerQuantity = 0;
-  else entry.offerQuantity = Math.max(0, Math.min(entry.quantity, entry.offerQuantity + delta));
-}
-
 export function completeTrade(state: GameState) {
   const character = selectedCharacter(state);
   if (!character) return state;
-  const playerValue = offerValue(state.playerInventory, character, "player");
-  const characterValue = offerValue(character.inventory, character, "character");
-  if (playerValue < characterValue) {
+  const playerValue = offerValue(state.playerInventory, character, "player", state);
+  const characterValue = offerValue(character.inventory, character, "character", state);
+  const appraisal = appraiseOffer(playerValue, characterValue, character);
+  if (!["great_deal", "good_deal", "fair_deal"].includes(appraisal)) {
     return {
       ...state,
       message: `${character.name} refuses. Add about ${Math.ceil(characterValue - playerValue)} more value or match their preferences.`,
@@ -174,28 +142,4 @@ export function completeTrade(state: GameState) {
   };
 }
 
-function transferOffers(from: InventoryEntry[], to: InventoryEntry[]) {
-  for (const entry of from) {
-    if (entry.offerQuantity <= 0) continue;
-    addInventory(to, entry.itemIndex, entry.offerQuantity);
-    entry.quantity -= entry.offerQuantity;
-    entry.offerQuantity = 0;
-  }
-  for (let index = from.length - 1; index >= 0; index--) {
-    if (from[index].quantity <= 0) from.splice(index, 1);
-  }
-}
-
-export function saveGame(state: GameState) {
-  localStorage.setItem("merchant-react-save", JSON.stringify(state));
-}
-
-export function loadGame() {
-  const raw = localStorage.getItem("merchant-react-save");
-  if (!raw) return null;
-  try {
-    return JSON.parse(raw) as GameState;
-  } catch {
-    return null;
-  }
-}
+export { charactersAtMarket, loadGame, moveOffer, saveGame, selectedCharacter, visibleQuantity };
