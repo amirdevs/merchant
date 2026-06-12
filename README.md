@@ -21,10 +21,28 @@ Build:
 pnpm build
 ```
 
+Audit extracted content and asset references:
+
+```powershell
+pnpm audit:data
+```
+
 Run built Electron shell after build:
 
 ```powershell
 pnpm electron
+```
+
+Package an offline Windows folder:
+
+```powershell
+pnpm package:win
+```
+
+The package is written to `release/MerchantOfflineRemake-win`. If packaging reports a missing Electron runtime, repair the Electron install first:
+
+```powershell
+pnpm install --force
 ```
 
 ## Data And Assets
@@ -49,7 +67,10 @@ This is a playable vertical slice, not a full clone yet:
 - offer panels
 - haggling valuation using NPC preferences
 - travel between connected markets
-- local save/load
+- local save/load with import/export
+- offline mod packs from `public/data/mods`
+- market quest/event notes
+- routed original UI, item, travel, and ambient sounds
 
 Steam and online systems are not included.
 

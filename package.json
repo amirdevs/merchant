@@ -1,6 +1,6 @@
 {
   "name": "merchant-react-electron",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Offline React/Electron remake prototype.",
   "main": "electron/main.cjs",
@@ -10,6 +10,7 @@
     "build": "vite build",
     "audit:data": "node scripts/audit-data.cjs",
     "electron": "electron .",
+    "package:win": "pnpm build && node scripts/package-win.cjs",
     "extract:data": "node scripts/extract-data.cjs"
   },
   "dependencies": {
