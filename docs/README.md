@@ -6,6 +6,7 @@ This folder is grouped by purpose so routine work has one clear place to look.
 
 - `game/roadmap-and-parity.md` - gameplay roadmap, original feature parity gaps, and implementation order.
 - `game/ui-ux-brief.md` - AI-ready UI/UX brief and screen inventory for mockups/design.
+- `game/core-ui-wireframes.md` - focused wireframe brief for the first 12 core screens.
 
 ## Assets
 
@@ -20,4 +21,3 @@ This folder is grouped by purpose so routine work has one clear place to look.
 ## Root Reference
 
 - `../.refrence` - compact original-bundle reference cache and extraction reminders.
-
