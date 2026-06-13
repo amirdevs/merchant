@@ -10,6 +10,7 @@
     "build": "vite build",
     "audit:data": "node scripts/audit-data.cjs",
     "generate:icon-prompts": "node scripts/generate-icon-prompts.cjs",
+    "rename:item-icons": "node scripts/rename-item-icons.cjs",
     "electron": "electron .",
     "package:win": "pnpm build && node scripts/package-win.cjs",
     "extract:data": "node scripts/extract-data.cjs"
