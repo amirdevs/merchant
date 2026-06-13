@@ -19,7 +19,8 @@ param(
   [int]$BackgroundMinBrightness = 176,
   [int]$BackgroundColorSamples = 8,
   [double]$EdgeArtifactMaxAreaPercent = 0.04,
-  [int]$ComponentMergeGap = 0
+  [int]$ComponentMergeGap = 0,
+  [switch]$AllowPartial
 )
 
 Add-Type -AssemblyName System.Drawing
@@ -499,7 +500,7 @@ function Save-Crop {
 
 $refs = Get-OutputRefs -Path $Config
 $cells = Get-Cells -Path $Sheet
-if ($cells.Count -lt $refs.Count) {
+if ($cells.Count -lt $refs.Count -and -not $AllowPartial) {
   throw "Sheet has $($cells.Count) detected cells but config requires $($refs.Count) output references."
 }
 
@@ -508,7 +509,8 @@ $saved = 0
 $skippedDuplicate = 0
 $seen = @{}
 
-for ($i = 0; $i -lt $refs.Count; $i++) {
+$limit = [Math]::Min($refs.Count, $cells.Count)
+for ($i = 0; $i -lt $limit; $i++) {
   $ref = $refs[$i] -replace '/', [IO.Path]::DirectorySeparatorChar
   if ($seen.ContainsKey($ref)) {
     $skippedDuplicate++
@@ -533,5 +535,6 @@ $source.Dispose()
   RequiredRefs = $refs.Count
   Saved = $saved
   SkippedDuplicateOutputs = $skippedDuplicate
-  IgnoredExtraCells = $cells.Count - $refs.Count
+  IgnoredExtraCells = [Math]::Max(0, $cells.Count - $refs.Count)
+  MissingCells = [Math]::Max(0, $refs.Count - $cells.Count)
 }
