@@ -2,10 +2,10 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const root = path.resolve(__dirname, "..");
-const promptDir = path.join(root, "docs", "icon-prompts");
+const promptDir = path.join(root, "docs", "assets", "icon-prompts");
 const itemsFile = path.join(root, "src", "data", "generated", "items.json");
 const publicPrefix = "public/game-assets/items/";
-const reportFile = path.join(root, "docs", "icon-rename-report.json");
+const reportFile = path.join(root, "docs", "assets", "icon-rename-report.json");
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, "utf8"));

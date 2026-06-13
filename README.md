@@ -74,6 +74,11 @@ This is a playable vertical slice, not a full clone yet:
 
 Steam and online systems are not included.
 
-## Version Plan
+## Docs
 
-The implementation order is tracked in `docs/version-plan.md`. The current direction is original gameplay parity first, with modern UI and quality-of-life changes layered on after the baseline rules are stable.
+Project documentation is indexed in `docs/README.md`.
+
+- Gameplay roadmap and parity: `docs/game/roadmap-and-parity.md`
+- UI/UX brief: `docs/game/ui-ux-brief.md`
+- Asset pipeline: `docs/assets/asset-pipeline.md`
+- Technical notes: `docs/development/technical-notes.md`

@@ -3,7 +3,7 @@ const path = require("path");
 
 const root = path.join(__dirname, "..");
 const items = require(path.join(root, "src", "data", "generated", "items.json"));
-const outDir = path.join(root, "docs", "icon-prompts");
+const outDir = path.join(root, "docs", "assets", "icon-prompts");
 const slotsPerSheet = 50;
 const columns = 10;
 const rows = 5;

@@ -35,8 +35,8 @@ The item icon pipeline is being restarted. Old generated/cropped item icons were
 
 Important folders:
 
-- `docs/icon-prompts/`: generated JSON configs for image generation
-- `docs/icon-sheets/`: user will place generated full sheets here for review
+- `docs/assets/icon-prompts/`: generated JSON configs for image generation
+- `docs/assets/icon-sheets/`: user will place generated full sheets here for review
 - `public/game-assets/items/`: final cropped item icons should eventually go here
 - `scripts/generate-icon-prompts.cjs`: generates the prompt configs
 - `scripts/crop-icon-sheet.ps1`: existing cropper work from earlier; may need updates for green background and 16:9 sheets
@@ -67,10 +67,10 @@ Last known issue: a generated batch looked better stylistically but still too re
 
 ## Sheet Review Checklist
 
-When the user asks to "check" generated sheets in `docs/icon-sheets`:
+When the user asks to "check" generated sheets in `docs/assets/icon-sheets`:
 
 1. List files by `LastWriteTime`.
-2. Treat newest files as the next configs in sorted `docs/icon-prompts/items-*.json` order unless filenames match configs.
+2. Treat newest files as the next configs in sorted `docs/assets/icon-prompts/items-*.json` order unless filenames match configs.
 3. View the images.
 4. Check:
    - 50 icons per normal sheet, or correct count for final sheet
@@ -97,4 +97,3 @@ Current worktree may be very dirty because the user is intentionally deleting/re
 ## Validation
 
 Run `pnpm audit:data` after data/script prompt changes. This has been passing.
-
