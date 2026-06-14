@@ -6,16 +6,18 @@ import type { UiPreferences } from "@/sub-domains/game/types/ui-preferences.type
 import { Panel } from "@/sub-domains/shared/components/ui";
 
 const implementedScreens: Array<{ view: GameView; mockup: string; status: string; focus: string }> = [
-  { view: "main-menu", mockup: "01_main_menu_8x.png", status: "implemented", focus: "title, save card, primary navigation" },
-  { view: "new-profile", mockup: "02_new_merchant_profile_8x.png", status: "connected", focus: "profile paper, local persistence" },
-  { view: "load-game", mockup: "03_load_game_8x.png", status: "connected", focus: "local save, import/export" },
-  { view: "settings", mockup: "04_settings_8x.png", status: "connected", focus: "audio, UI scale, compact mode" },
-  { view: "system", mockup: "05_system_menu_8x.png", status: "connected", focus: "save/load/help tools" },
-  { view: "travel", mockup: "06_travel_map_8x.png", status: "implemented", focus: "map nodes, route ledger" },
-  { view: "market", mockup: "07_westgate_market_hub_8x.png", status: "implemented", focus: "town hub, economy cards" },
-  { view: "customers", mockup: "08_customers_8x.png", status: "implemented", focus: "customer board and dossier" },
-  { view: "barter", mockup: "09_barter_conversation_main_8x.png", status: "core-ready", focus: "offer columns, portrait, dialogue" },
-  { view: "inventory", mockup: "10_inventory_management_8x.png", status: "core-ready", focus: "search, filters, modal" },
+  { view: "main-menu", mockup: "01_main_menu_8x.png", status: "core page", focus: "title screen, continue/new/load/settings/exit commands" },
+  { view: "new-profile", mockup: "02_new_merchant_profile_8x.png", status: "core page", focus: "registration form, starting preview, begin/cancel" },
+  { view: "load-game", mockup: "03_load_game_8x.png", status: "core page", focus: "save ledger, local load, import/export" },
+  { view: "settings", mockup: "04_settings_8x.png", status: "core page", focus: "audio/display/gameplay controls" },
+  { view: "system", mockup: "05_system_menu_8x.png", status: "core page", focus: "pause overlay commands and current session" },
+  { view: "travel", mockup: "06_travel_map_8x.png", status: "core page", focus: "realm map, route list, selected-market planner" },
+  { view: "market", mockup: "07_westgate_market_hub_8x.png", status: "core page", focus: "town hub, market status, customers, services" },
+  { view: "customers", mockup: "08_customers_8x.png", status: "core page", focus: "NPC roster, filters, selected customer detail" },
+  { view: "barter", mockup: "09_barter_conversation_main_8x.png", status: "core page", focus: "NPC offer/stock, dialogue, player offer/inventory" },
+  { view: "inventory", mockup: "10_inventory_management_8x.png", status: "core page", focus: "inventory grid, toolbar, selected item behavior" },
+  { view: "inventory-filter", mockup: "11_inventory_search_filter_8x.png", status: "core page", focus: "anchored search/filter popover behavior" },
+  { view: "item-detail", mockup: "12_item_detail_modal_8x.png", status: "core page", focus: "item inspection modal and actions" },
 ];
 
 const qaChecks = [

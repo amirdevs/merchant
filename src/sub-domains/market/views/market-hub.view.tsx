@@ -8,7 +8,7 @@ import { Button, Panel } from "@/sub-domains/shared/components/ui";
 import { MarketEconomyStrip } from "@/sub-domains/market/components/market-economy-strip.component";
 import { QuestPanel } from "@/sub-domains/market/components/quest-panel.component";
 
-export function MarketHubView({ state, market, people, selectedIndex, onSelect, onTravel, onOpenTravel, onOpenInventory }: { state: GameState; market: Marketplace; people: Character[]; selectedIndex: number | null; onSelect: (character: Character) => void; onTravel: (marketIndex: number) => void; onOpenTravel: () => void; onOpenInventory: () => void }) {
+export function MarketHubView({ state, market, people, selectedIndex, onSelect, onTravel, onOpenTravel, onOpenInventory, onOpenCustomers }: { state: GameState; market: Marketplace; people: Character[]; selectedIndex: number | null; onSelect: (character: Character) => void; onTravel: (marketIndex: number) => void; onOpenTravel: () => void; onOpenInventory: () => void; onOpenCustomers: () => void }) {
   const carriedEntries = state.playerInventory.filter((entry) => visibleQuantity(entry) > 0);
   const totalValue = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].loafValue * visibleQuantity(entry), 0);
   const totalWeight = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].weight * visibleQuantity(entry), 0);
@@ -24,7 +24,7 @@ export function MarketHubView({ state, market, people, selectedIndex, onSelect, 
             <span className="game-brand-kicker">Current Market</span>
             <h2>{market.name}</h2>
             <p>Day {state.day}. Stallage {money(market.stallage)}. Watch the crowd, check demand, and choose the next customer before your route costs catch up.</p>
-            <div className="market-v5-hero-actions"><Button onClick={onOpenInventory}><PackageSearch size={16} /> Manage Goods</Button><Button onClick={onOpenTravel}><Compass size={16} /> Open Map</Button></div>
+            <div className="market-v5-hero-actions"><Button onClick={onOpenCustomers}><Users size={16} /> Customers</Button><Button onClick={onOpenInventory}><PackageSearch size={16} /> Manage Goods</Button><Button onClick={onOpenTravel}><Compass size={16} /> Open Map</Button></div>
           </div>
         </div>
       </Panel>
@@ -51,6 +51,7 @@ export function MarketHubView({ state, market, people, selectedIndex, onSelect, 
             </button>
           ))}
         </div>
+        <div className="market-v5-panel-footer"><Button subtle onClick={onOpenCustomers}>View full customer roster</Button></div>
       </Panel>
 
       <QuestPanel market={market} />

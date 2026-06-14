@@ -40,7 +40,7 @@ export function useGameKeyboardShortcuts({
       }
 
       const key = event.key.toLowerCase();
-      const numericViews: GameView[] = ["market", "customers", "barter", "inventory", "travel", "system", "ui-check"];
+      const numericViews: GameView[] = ["market", "customers", "barter", "inventory", "inventory-filter", "item-detail", "travel", "system", "ui-check"];
       const numericIndex = Number(key);
       if (Number.isInteger(numericIndex) && numericIndex >= 1 && numericIndex <= numericViews.length) {
         event.preventDefault();
@@ -55,6 +55,8 @@ export function useGameKeyboardShortcuts({
         b: character ? "barter" : "customers",
         i: "inventory",
         t: "travel",
+        f: "inventory-filter",
+        d: "item-detail",
         y: "system",
         q: "ui-check",
       };

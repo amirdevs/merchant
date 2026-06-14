@@ -15,17 +15,30 @@ Use this document as the focused UI/UX prompt source for the first playable app 
 11. Inventory Search / Filter Popover
 12. Item Detail Modal
 
-Design the actual game UI, not a landing page. The product is an offline medieval fantasy merchant trading game.
+Design the actual game UI using the current mockup images in `docs/ui_parts/` as the visual baseline. The product is an offline fantasy merchant trading game.
 
 ## Global Wireframe Rules
 
-- Style direction: readable parchment, dark carved wood, brass trim, leather tabs, ink dividers, wax seals, old-map details.
-- UX direction: dense, practical, repeated-use trading interface.
+- Style direction: bright painterly fantasy trade UI with sunlit coastal town art, parchment ledgers, carved dark wood shells, blue enamel title plates, brass trim, heraldic seals, gold status chips, polished NPC portraits, collectible item art, and beveled green/blue/red command buttons.
+- UX direction: compact, practical, repeated-use trading interface with enough ornament to feel like a polished PC merchant RPG.
 - Text should be rendered by the app. In mockups, use blank areas or unreadable placeholder marks only.
 - Every screen needs clear hover, selected, disabled, empty, and error states.
-- Avoid decorative clutter that makes inventory, route, or offer comparison slower.
-- Do not use modern SaaS cards, glossy mobile-game panels, sci-fi UI, oversized hero marketing layouts, or readable fake text baked into images.
+- Keep ornamentation in frames, badges, headers, and dividers; do not let decoration slow inventory, route, dialogue, or offer comparison.
+- Avoid plain productivity-dashboard styling, sci-fi UI, oversized marketing composition, and readable fake text baked into images.
 - Primary persistent status should include current merchant/save, city/market, day, money/wealth, and carry capacity where relevant.
+- Current reference images:
+  - `docs/ui_parts/01-title-main-menu.png`
+  - `docs/ui_parts/02-new-game-merchant-profile.png`
+  - `docs/ui_parts/03-save-load-browser.png`
+  - `docs/ui_parts/04-settings-options.png`
+  - `docs/ui_parts/05-system-pause-menu.png`
+  - `docs/ui_parts/06-travel-map-market-planner.png`
+  - `docs/ui_parts/07-market-town-hub.png`
+  - `docs/ui_parts/08-customer-npc-selection.png`
+  - `docs/ui_parts/09-barter-conversation-main-screen.png`
+  - `docs/ui_parts/10-inventory-management.png`
+  - `docs/ui_parts/11-inventory-search-filter-popover.png`
+  - `docs/ui_parts/12-item-detail-modal.png`
 
 ## Shared Layout Components
 
@@ -126,7 +139,7 @@ UX notes:
 AI mockup prompt:
 
 ```text
-Create a full-screen medieval fantasy merchant game main menu wireframe. Use a candlelit merchant desk, map, coins, ledgers, and parchment atmosphere. Include a clear title area and a compact vertical command menu with Continue, New Game, Load Game, Settings, and Exit. Leave all text areas blank or placeholder-only for React-rendered text. Serious trading game, not a marketing landing page.
+Create a full-screen fantasy merchant game main menu mockup matching `docs/ui_parts/01-title-main-menu.png`: bright coastal harbor/city artwork, ornate title treatment, carved dark wood side framing, blue enamel and parchment command buttons, gold trim, Continue/New Game/Load Game/Settings/Exit command stack, and a small version label area. Leave all text areas blank or placeholder-only for React-rendered text.
 ```
 
 ## 2. New Game / Merchant Profile
@@ -443,7 +456,7 @@ UX notes:
 AI mockup prompt:
 
 ```text
-Create a medieval town hub wireframe. Use a large town/market scene, header status with city/day/money/capacity, a customer roster, market status panel, and service/action buttons for trade, map, inventory, journal, notice board, and menu. Usable merchant sim layout, not decorative landing art.
+Create a fantasy market hub mockup matching `docs/ui_parts/07-market-town-hub.png`: a bright painterly coastal market scene, parchment status panels, gold coin/capacity chips, side market-status ledger, notable-customer roster, and large icon command buttons for trade, map, inventory, journal, notice board, and menu. Keep the scene rich while making all actions easy to find.
 ```
 
 ## 8. Customer / NPC Selection
@@ -561,7 +574,7 @@ UX notes:
 AI mockup prompt:
 
 ```text
-Create the main barter/conversation wireframe for a medieval merchant game. Three-column layout: left NPC offer and stock, center NPC portrait/dialogue/response buttons/offer comparison/preferences, right player offer and inventory. Include Ask Price, Ask Offer, Make Offer, Clear, Next Customer, Goodbye, Help, and Menu. Dense, readable, optimized for repeated trading.
+Create the main barter/conversation mockup matching `docs/ui_parts/09-barter-conversation-main-screen.png`: a three-column trade screen with dark carved wood frame, parchment offer ledgers, dark inventory slot grids, polished NPC portrait, mood/trust/interest indicators, dialogue and response buttons, offer comparison meter, and clear command buttons for Ask Price, Ask Offer, Make Offer, Clear, Next Customer, Goodbye, Help, and Menu. Compact, readable, optimized for repeated trading.
 ```
 
 ## 10. Inventory Management
@@ -620,7 +633,7 @@ UX notes:
 AI mockup prompt:
 
 ```text
-Create a dense medieval inventory management wireframe. Large variable-size inventory grid with item icons, quantity badges, value, protection, concealment, illegal, quest, and highlight markers. Add toolbar for search, category filters, sorting, and bulk actions. Add right-side selected item inspector with details and actions.
+Create an inventory management mockup matching `docs/ui_parts/10-inventory-management.png`: parchment workspace, dark side navigation, blue selected tabs, compact item tile grid with collectible item icons, quantity badges, rarity stars, protection/concealment/illegal/quest/highlight markers, top search/category/sort toolbar, bottom capacity/value controls, and a strong right-side selected-item inspector with details and actions.
 ```
 
 ## 11. Inventory Search / Filter Popover
@@ -741,8 +754,8 @@ Create a medieval item detail modal wireframe. Show large item icon, name, quant
 Use this if handing the whole set to another AI:
 
 ```text
-Design wireframe-level UI/UX mockups for an offline medieval fantasy merchant trading game. Only design these 12 core screens: Title/Main Menu, New Game/Merchant Profile, Save/Load Browser, Settings/Options, System/Pause Menu, Travel Map/Market Planner, Market/Town Hub, Customer/NPC Selection, Barter/Conversation Main Screen, Inventory Management, Inventory Search/Filter Popover, and Item Detail Modal.
+Design UI/UX mockups for an offline fantasy merchant trading game. Only design these 12 core screens: Title/Main Menu, New Game/Merchant Profile, Save/Load Browser, Settings/Options, System/Pause Menu, Travel Map/Market Planner, Market/Town Hub, Customer/NPC Selection, Barter/Conversation Main Screen, Inventory Management, Inventory Search/Filter Popover, and Item Detail Modal.
 
-Use the attached screen-by-screen wireframe brief exactly. The visual language is readable parchment, dark carved wood, brass trim, leather tabs, ink dividers, wax seals, old maps, and merchant ledgers. The UI must be dense, scannable, and practical for repeated trading. Do not create a marketing landing page. Do not bake readable text into generated art; leave clean areas for React-rendered text. Prioritize inventory, offer comparison, route planning, and clear command states.
+Use the attached screen-by-screen brief exactly and match the current `docs/ui_parts` reference style: bright painterly coastal fantasy scenes, parchment ledgers, carved dark wood shells, blue enamel title plates, brass trim, heraldic seals, gold status chips, polished NPC portraits, collectible item icons, and beveled green/blue/red command buttons. The UI must be compact, scannable, and practical for repeated trading. Do not bake readable text into generated art; leave clean areas for React-rendered text. Prioritize inventory, offer comparison, route planning, and clear command states.
 ```
 

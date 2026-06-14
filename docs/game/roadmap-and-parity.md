@@ -24,6 +24,11 @@ Implemented or partially implemented:
 
 Steam and online systems are not included.
 
+Current UI target:
+
+- Match the reference mockups in `docs/ui_parts/`: bright painterly fantasy merchant screens, sunlit coastal market art, parchment ledgers, carved dark wood frames, blue enamel headers, brass trim, heraldic seals, gold status chips, polished NPC portraits, collectible item icons, and beveled command buttons.
+- Keep the interface compact and fast for repeated trading, inventory, route, and offer comparison.
+
 ## Extracted Data Snapshot
 
 - 203 characters, 199 active characters, 53 merchant characters.
@@ -329,11 +334,11 @@ Missing:
 - Keep data/mod support for items, NPCs, markets, and balance overrides.
 - Add import/export for saves and data.
 
-### `v0.7.0` - Audio, Animation, And Original Feel
+### `v0.7.0` - Audio, Animation, And Visual Polish
 
 - Add original audio routing for voices and reactions.
 - Add dialogue typing, speech bubble sizing, and scroll behavior.
-- Polish with backgrounds, portraits, stalls, and UI textures.
+- Polish screens toward the `docs/ui_parts/` visual direction with backgrounds, portraits, item art, parchment panels, carved frames, enamel headers, and command-button states.
 
 ### `v0.8.0` - Quest And Special Systems
 

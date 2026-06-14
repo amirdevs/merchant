@@ -31,7 +31,8 @@ import type { UiPreferences } from "@/sub-domains/game/types/ui-preferences.type
 
 export function useGameController() {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
-  const [activeView, setActiveView] = useState<GameView>("market");
+  const [activeView, setActiveView] = useState<GameView>("main-menu");
+  const [hasSave, setHasSave] = useState(() => Boolean(loadGame()));
   const [merchantProfile, setMerchantProfile] = usePersistedSetting("merchant-profile-v1", defaultMerchantProfile);
   const [uiPreferences, setUiPreferences] = usePersistedSetting("merchant-ui-preferences-v1", defaultUiPreferences);
   const [helpOpen, setHelpOpen] = useState(false);
@@ -155,6 +156,7 @@ export function useGameController() {
       return;
     }
     setState({ ...imported, message: "Imported save file." });
+    setHasSave(true);
     setActiveView("market");
   }
 
@@ -168,11 +170,16 @@ export function useGameController() {
   function saveLocal() {
     playUiSound("pack_closed");
     saveGame(state);
+    setHasSave(true);
   }
 
   function loadLocal() {
     playUiSound("pack_open");
-    setState(loadGame() || state);
+    const loaded = loadGame();
+    if (!loaded) return;
+    setState(loaded);
+    setHasSave(true);
+    setActiveView("market");
   }
 
   return {
@@ -180,6 +187,7 @@ export function useGameController() {
     character,
     characterOffer,
     exportSave,
+    hasSave,
     helpOpen,
     importInputRef,
     importSave,

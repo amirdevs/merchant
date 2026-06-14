@@ -1,15 +1,14 @@
 # Game UI Pages And UX Brief
 
-Use this file as the UI/UX source brief for designing the Merchant React/Electron remake. It is written for an AI designer or mockup generator: each screen includes purpose, access path, required UI elements, and layout notes.
+Use this file as the UI/UX source brief for designing the Merchant React/Electron remake. It is written for an AI designer, mockup generator, or implementer: each screen includes purpose, access path, required UI elements, layout notes, and the current visual target.
 
-The target is an offline medieval fantasy merchant game inspired by Merchant of the Six Kingdoms. Do not create a marketing site or landing page. Design the actual playable application screens.
+The target is an offline fantasy merchant game inspired by Merchant of the Six Kingdoms. Design the actual playable application screens using the current UI reference images in `docs/ui_parts/`.
 
 ## Global Product Direction
 
-- Dense medieval fantasy trading interface.
-- Materials: parchment, ink, dark carved wood, brass, leather, wax seals, old maps, ledgers, town artwork, merchant-table details.
-- The game should feel like a serious trading desk and travel ledger, not a modern SaaS dashboard and not a mobile idle game.
-- Prioritize scanning, comparison, and repeated action.
+- Current visual target: bright illustrated fantasy trade UI with sunlit coastal towns, painterly world maps, polished character portraits, collectible item art, parchment ledgers, carved dark wood framing, blue enamel header plates, brass trim, heraldic seals, gold coin/status chips, and large game-like command buttons.
+- The project look is ornate and premium, but still practical: screens should feel like a polished PC merchant RPG interface, with clear trading, travel, inventory, and dialogue workflows.
+- Prioritize scanning, comparison, and repeated action without flattening the UI into a plain productivity dashboard.
 - Preserve strong visual separation between:
   - player inventory
   - NPC inventory
@@ -20,15 +19,30 @@ The target is an offline medieval fantasy merchant game inspired by Merchant of 
   - quest/event state
 - Use original-like flow: title/front-end -> map/market planner -> market/barter loop, with journal, settings, minigames, company, and event screens branching off.
 - Text must be rendered by React, not baked into images. Generated mockups should leave clean readable areas for real UI text.
+- Use the current reference mockups as the baseline for tone and proportions:
+  - `docs/ui_parts/01-title-main-menu.png`
+  - `docs/ui_parts/02-new-game-merchant-profile.png`
+  - `docs/ui_parts/03-save-load-browser.png`
+  - `docs/ui_parts/04-settings-options.png`
+  - `docs/ui_parts/05-system-pause-menu.png`
+  - `docs/ui_parts/06-travel-map-market-planner.png`
+  - `docs/ui_parts/07-market-town-hub.png`
+  - `docs/ui_parts/08-customer-npc-selection.png`
+  - `docs/ui_parts/09-barter-conversation-main-screen.png`
+  - `docs/ui_parts/10-inventory-management.png`
+  - `docs/ui_parts/11-inventory-search-filter-popover.png`
+  - `docs/ui_parts/12-item-detail-modal.png`
 
 ## Visual System Requirements
 
-- Panels: parchment or dark paper surfaces with restrained wood/brass framing.
-- Buttons: readable, compact, clearly clickable, with hover/pressed/disabled states.
-- Icons: use in-app icons for commands where possible; avoid decorative labels when a known symbol works.
-- Inventory cells: support variable item sizes, quantity badges, legality markers, quest markers, protect/star, conceal marker, and hover/selection states.
-- Modals: parchment overlays with clear confirm/cancel actions.
-- Toasts: small medieval notice badges that do not cover inventory or critical dialogue.
+- Frame: dark carved wood outer shell with brass cornerwork and occasional black vignette behind modal overlays.
+- Headers: blue enamel or dark lacquer title plates with gold serif labels and ornamental brass edges.
+- Panels: parchment ledgers and scroll surfaces with subtle ink dividers, gold filigree, and enough empty space for React-rendered text.
+- Buttons: beveled game command buttons in distinct colors: green for primary, blue for secondary/selected, red for dangerous, muted parchment/wood for neutral, and visibly desaturated disabled states.
+- Icons: use `lucide-react` for app-rendered controls when suitable, but style them to sit inside the fantasy UI language; use heraldic or item art where the reference mockups use richer game icons.
+- Inventory cells: parchment or dark slot tiles with gold borders, quantity badges, rarity stars, legality markers, quest markers, protect/star, conceal marker, and hover/selection states.
+- Modals: large parchment overlays with brass frames, close buttons, dimmed game background, and clear action rows.
+- Toasts: small parchment/brass notice badges that do not cover inventory or critical dialogue.
 - Mobile is secondary, but layouts must still avoid overlap and preserve readable text on narrow screens.
 
 ## Navigation Model
@@ -78,11 +92,11 @@ Required UI:
 - Settings.
 - Exit/Quit.
 - Optional version text.
-- Background art: merchant table, candlelit trade room, coins, maps, sealed ledgers, or city silhouette.
+- Background art: bright harbor/city vista or trade table scene with the menu framed on one side, matching `01-title-main-menu.png`.
 
 Layout notes:
 
-- This is a real game menu, not a landing page.
+- This is the game front door: illustrated, polished, and immediately playable.
 - Keep buttons grouped as a clear vertical command stack.
 - Title should be prominent, but leave a hint of interactive menu below the first viewport if adapting for small screens.
 
@@ -349,7 +363,7 @@ Required UI:
 
 Layout notes:
 
-- This is a high-frequency utility screen. Favor dense, legible layout over large decorative tiles.
+- This is a high-frequency utility screen. Favor compact, legible parchment tiles and a strong right-side inspector over oversized decorative cards.
 
 ### 12. Inventory Search / Filter Popover
 
@@ -853,7 +867,7 @@ Layout notes:
 Use this template for each screen.
 
 ```text
-Create a full-screen UI/UX mockup for an offline medieval fantasy merchant trading game.
+Create a full-screen UI/UX mockup for an offline fantasy merchant trading game.
 
 Screen: [SCREEN NAME]
 
@@ -864,15 +878,15 @@ Required elements:
 [PASTE REQUIRED UI LIST]
 
 Style:
-Readable parchment and dark paper panels, carved dark wood frame, brass trim, leather details, inked dividers, wax-seal accents, old-map details, candlelit merchant atmosphere. Serious trading game, not modern dashboard, not mobile idle-game cartoon.
+Bright painterly fantasy merchant UI matching the current `docs/ui_parts` references: sunlit coastal town and world-map artwork, parchment ledgers, carved dark wood shell, blue enamel header plates, brass trim, heraldic seals, gold status chips, polished NPC portraits, collectible item icons, and beveled green/blue/red command buttons.
 
 Layout requirements:
-- Dense but organized information hierarchy.
+- Compact but organized information hierarchy.
 - Clear interactive controls and disabled states.
 - Text areas must be blank or use unreadable placeholder marks only; final text will be rendered by the app.
 - Leave clean spaces for real labels, buttons, item icons, NPC portraits, inventory grids, map nodes, and status panels.
 - Do not bake readable text into the image.
-- Do not use sci-fi, modern flat UI, or decorative elements that reduce usability.
+- Keep ornamentation in the frame, dividers, and badges; inventory, route, offer, and dialogue information must remain fast to scan.
 - Keep panel styles consistent with other screens.
 ```
 

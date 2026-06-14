@@ -2,10 +2,24 @@ import type { InventoryEntry } from "@/data/types";
 import { items, type GameState, visibleQuantity } from "@/lib/game";
 import { money } from "@/lib/format";
 import type { MoveAmount } from "@/lib/inventory";
-import { Panel } from "@/sub-domains/shared/components/ui";
+import { Button, Panel } from "@/sub-domains/shared/components/ui";
 import { InventoryPanel } from "@/sub-domains/inventory/components";
 
-export function InventoryManagementView({ state, playerOffer, onMovePlayer, onTogglePlayerProtect }: { state: GameState; playerOffer: number; onMovePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void; onTogglePlayerProtect: (entry: InventoryEntry) => void }) {
+export function InventoryManagementView({
+  state,
+  playerOffer,
+  onMovePlayer,
+  onTogglePlayerProtect,
+  onOpenFilter,
+  onOpenItemDetail,
+}: {
+  state: GameState;
+  playerOffer: number;
+  onMovePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;
+  onTogglePlayerProtect: (entry: InventoryEntry) => void;
+  onOpenFilter: () => void;
+  onOpenItemDetail: () => void;
+}) {
   const carriedEntries = state.playerInventory.filter((entry) => visibleQuantity(entry) > 0);
   const offeredEntries = state.playerInventory.filter((entry) => entry.offerQuantity > 0);
   const protectedEntries = state.playerInventory.filter((entry) => entry.protected && visibleQuantity(entry) > 0);
@@ -17,7 +31,7 @@ export function InventoryManagementView({ state, playerOffer, onMovePlayer, onTo
   return (
     <section className="inventory-v4-screen ui-screen" aria-label="Inventory management">
       <Panel className="inventory-v4-overview" title="Merchant Pack" bodyClassName="inventory-v4-overview-body">
-        <div className="inventory-v4-hero-copy"><span className="game-brand-kicker">Inventory Management</span><h2>Your goods, offers, and protected cargo</h2><p>{state.message}</p></div>
+        <div className="inventory-v4-hero-copy"><span className="game-brand-kicker">Inventory Management</span><h2>Your goods, offers, and protected cargo</h2><p>{state.message}</p><div className="inventory-v4-hero-actions"><Button onClick={onOpenFilter}>Search / Filter</Button><Button subtle onClick={onOpenItemDetail}>Item Detail</Button></div></div>
         <div className="inventory-v4-stat-grid"><span><small>Total value</small><strong>{money(totalValue)}</strong></span><span><small>Offer value</small><strong>{money(playerOffer)}</strong></span><span><small>Weight</small><strong>{totalWeight}</strong></span><span><small>Goods</small><strong>{carriedEntries.length}</strong></span><span><small>Protected</small><strong>{protectedEntries.length}</strong></span><span><small>Rare / unique</small><strong>{rareCount}</strong></span></div>
       </Panel>
       <div className="inventory-v4-main">

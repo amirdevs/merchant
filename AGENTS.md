@@ -4,6 +4,12 @@ This repo is `C:\Freelance\merchant-react-electron`.
 
 The project is an offline React/Electron remake prototype inspired by Merchant of the Six Kingdoms. The user wants to rebuild the game as a local-only app, using the original game as a design/gameplay reference but gradually replacing generated assets so the project has its own look.
 
+## Current UI Direction
+
+Use `docs/ui_parts/` as the current UI visual reference. The target look is bright painterly fantasy merchant UI: sunlit coastal town scenes, parchment ledgers, carved dark wood shells, blue enamel title plates, brass trim, heraldic seals, gold status chips, polished NPC portraits, collectible item art, and beveled green/blue/red command buttons.
+
+Do not describe or implement the UI as a generic dense medieval app. Keep it compact and practical for repeated trading, but match the new premium PC merchant RPG mockups in `docs/ui_parts`.
+
 ## Stack
 
 - Package manager: `pnpm`

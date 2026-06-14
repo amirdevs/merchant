@@ -11,6 +11,8 @@ import { MarketHubView } from "@/sub-domains/market/views/market-hub.view";
 import { CustomersView } from "@/sub-domains/customer/views/customers.view";
 import { BarterConversationView } from "@/sub-domains/barter/views/barter-conversation.view";
 import { InventoryManagementView } from "@/sub-domains/inventory/views/inventory-management.view";
+import { InventorySearchFilterView } from "@/sub-domains/inventory/views/inventory-search-filter.view";
+import { ItemDetailPreviewView } from "@/sub-domains/inventory/views/item-detail-preview.view";
 import { TravelMapView } from "@/sub-domains/travel/views/travel-map.view";
 
 export function GameAppView() {
@@ -24,12 +26,10 @@ export function GameAppView() {
           market={controller.market}
           merchantProfile={controller.merchantProfile}
           soundOn={controller.soundOn}
+          hasSave={controller.hasSave}
           onContinue={() => controller.setActiveView("market")}
           onNewMerchant={() => controller.setActiveView("new-profile")}
           onLoadGame={() => controller.setActiveView("load-game")}
-          onOpenTravel={() => controller.setActiveView("travel")}
-          onOpenBarter={() => controller.setActiveView(controller.character ? "barter" : "customers")}
-          onOpenInventory={() => controller.setActiveView("inventory")}
           onOpenSettings={() => controller.setActiveView("settings")}
           onOpenSystem={() => controller.setActiveView("system")}
         />
@@ -41,19 +41,23 @@ export function GameAppView() {
     }
 
     if (controller.activeView === "load-game") {
-      return <LoadGameView state={controller.state} modStatus={controller.modStatus} onLoadLocal={() => { controller.loadLocal(); controller.setActiveView("market"); }} onExport={controller.exportSave} onImport={() => controller.importInputRef.current?.click()} onBack={() => controller.setActiveView("main-menu")} onOpenSettings={() => controller.setActiveView("settings")} />;
+      return <LoadGameView state={controller.state} modStatus={controller.modStatus} onLoadLocal={controller.loadLocal} onExport={controller.exportSave} onImport={() => controller.importInputRef.current?.click()} onBack={() => controller.setActiveView("main-menu")} onOpenSettings={() => controller.setActiveView("settings")} />;
     }
 
     if (controller.activeView === "settings") {
       return <SettingsView soundOn={controller.soundOn} modStatus={controller.modStatus} uiPreferences={controller.uiPreferences} onUpdatePreferences={controller.updateUiPreferences} onToggleSound={controller.toggleSound} onBack={() => controller.setActiveView("main-menu")} onOpenSystem={() => controller.setActiveView("system")} />;
     }
 
+    if (controller.activeView === "travel") {
+      return <TravelMapView state={controller.state} market={controller.market} onTravel={controller.travel} />;
+    }
+
     if (controller.activeView === "market") {
-      return <MarketHubView state={controller.state} market={controller.market} people={controller.people} selectedIndex={controller.state.selectedCharacterIndex} onSelect={(person) => controller.selectCharacter(person, true)} onTravel={controller.travel} onOpenTravel={() => controller.setActiveView("travel")} onOpenInventory={() => controller.setActiveView("inventory")} />;
+      return <MarketHubView state={controller.state} market={controller.market} people={controller.people} selectedIndex={controller.state.selectedCharacterIndex} onSelect={(person) => controller.selectCharacter(person, true)} onTravel={controller.travel} onOpenTravel={() => controller.setActiveView("travel")} onOpenInventory={() => controller.setActiveView("inventory")} onOpenCustomers={() => controller.setActiveView("customers")} />;
     }
 
     if (controller.activeView === "customers") {
-      return <CustomersView state={controller.state} market={controller.market} people={controller.people} character={controller.character} playerOffer={controller.playerOffer} characterOffer={controller.characterOffer} onSelect={(person) => controller.selectCharacter(person, true)} onTrade={controller.trade} onNextCustomer={controller.nextCustomer} />;
+      return <CustomersView state={controller.state} market={controller.market} people={controller.people} character={controller.character} playerOffer={controller.playerOffer} characterOffer={controller.characterOffer} onSelect={(person) => controller.selectCharacter(person)} onTrade={() => controller.setActiveView("barter")} onNextCustomer={controller.nextCustomer} />;
     }
 
     if (controller.activeView === "barter") {
@@ -61,11 +65,15 @@ export function GameAppView() {
     }
 
     if (controller.activeView === "inventory") {
-      return <InventoryManagementView state={controller.state} playerOffer={controller.playerOffer} onMovePlayer={controller.movePlayer} onTogglePlayerProtect={controller.togglePlayerProtect} />;
+      return <InventoryManagementView state={controller.state} playerOffer={controller.playerOffer} onMovePlayer={controller.movePlayer} onTogglePlayerProtect={controller.togglePlayerProtect} onOpenFilter={() => controller.setActiveView("inventory-filter")} onOpenItemDetail={() => controller.setActiveView("item-detail")} />;
     }
 
-    if (controller.activeView === "travel") {
-      return <TravelMapView state={controller.state} market={controller.market} onTravel={controller.travel} />;
+    if (controller.activeView === "inventory-filter") {
+      return <InventorySearchFilterView state={controller.state} onBack={() => controller.setActiveView("inventory")} />;
+    }
+
+    if (controller.activeView === "item-detail") {
+      return <ItemDetailPreviewView state={controller.state} market={controller.market} onBack={() => controller.setActiveView("inventory")} onMovePlayer={controller.movePlayer} onTogglePlayerProtect={controller.togglePlayerProtect} />;
     }
 
     if (controller.activeView === "ui-check") {
@@ -78,14 +86,16 @@ export function GameAppView() {
         merchantProfile={controller.merchantProfile}
         modStatus={controller.modStatus}
         soundOn={controller.soundOn}
+        onResume={() => controller.setActiveView("market")}
         onToggleSound={controller.toggleSound}
         onHelp={() => controller.setHelpOpen(true)}
-        onNewGame={() => controller.startNewGame()}
+        onNewGame={() => controller.setActiveView("new-profile")}
         onSave={controller.saveLocal}
         onLoad={controller.loadLocal}
         onExport={controller.exportSave}
         onImport={() => controller.importInputRef.current?.click()}
         onOpenSettings={() => controller.setActiveView("settings")}
+        onMainMenu={() => controller.setActiveView("main-menu")}
         onOpenUiAudit={() => controller.setActiveView("ui-check")}
       />
     );

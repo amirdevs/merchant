@@ -76,9 +76,11 @@ Steam and online systems are not included.
 
 ## Docs
 
-Project documentation is indexed in `docs/README.md`.
+Project documentation lives under `docs/`.
 
 - Gameplay roadmap and parity: `docs/game/roadmap-and-parity.md`
 - UI/UX brief: `docs/game/ui-ux-brief.md`
+- Core UI wireframes and current mockup references: `docs/game/core-ui-wireframes.md`
+- Current UI reference images: `docs/ui_parts/`
 - Asset pipeline: `docs/assets/asset-pipeline.md`
 - Technical notes: `docs/development/technical-notes.md`
