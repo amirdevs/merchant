@@ -3,7 +3,7 @@ import type { Character } from "../../../data/types";
 import { portraitAsset, stallAsset } from "../../../lib/assets";
 import { customerIntro, customerPreference, customerPrompt, customerReply } from "../../../lib/dialogue";
 import { money } from "../../../lib/format";
-import { Button } from "../../../components/ui";
+import { Button, FrameSurface, StatBadge } from "../../../components/ui";
 import { TypewriterText } from "../../../components/TypewriterText";
 
 export function CharacterCard({
@@ -25,7 +25,7 @@ export function CharacterCard({
   const offerStatus = difference >= 0 ? `Ahead by ${money(difference)}` : `Missing ${money(Math.abs(difference))}`;
 
   return (
-    <article className="character-card">
+    <FrameSurface className="character-card" variant="wood">
       <div className="character-portrait-frame">
         <img className="character-portrait" src={portraitAsset(character.portraitFile)} alt="" />
         {character.stallFile ? <img className="character-stall-badge" src={stallAsset(character.stallFile)} alt="" /> : null}
@@ -46,15 +46,15 @@ export function CharacterCard({
           {dislikes.map((bias) => <span className="bias-chip bias-chip-bad" key={bias.tag}>{bias.tag} {bias.percent}%</span>)}
         </div>
         <div className="offer-ledger">
-          <span>Your offer: {money(playerOffer)}</span>
-          <span>Their offer: {money(characterOffer)}</span>
+          <StatBadge label="Your offer" value={money(playerOffer)} />
+          <StatBadge label="Their offer" value={money(characterOffer)} />
         </div>
         <div className={difference >= 0 ? "offer-status offer-status-good" : "offer-status offer-status-bad"}>{offerStatus}</div>
         <div className="character-actions">
           <Button className="font-bold" onClick={onTrade}><HandCoins size={18} /> Make Offer</Button>
-          <Button onClick={onNextCustomer}>Next Customer</Button>
+          <Button subtle onClick={onNextCustomer}>Next Customer</Button>
         </div>
       </div>
-    </article>
+    </FrameSurface>
   );
 }

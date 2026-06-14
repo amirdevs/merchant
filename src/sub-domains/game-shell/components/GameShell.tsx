@@ -1,10 +1,11 @@
 import type { ReactNode } from "react";
+import { ScreenFrame } from "../../../components/ui";
 
 export function GameShell({ header, children }: { header: ReactNode; children: ReactNode }) {
   return (
-    <div className="game-shell">
+    <ScreenFrame className="game-shell">
       {header}
       {children}
-    </div>
+    </ScreenFrame>
   );
 }

@@ -1,4 +1,4 @@
-import { Panel } from "../../../components/ui";
+import { FrameSurface, Panel } from "../../../components/ui";
 import { InventoryPanel } from "../../inventory/components/InventoryPanel";
 import { CharacterCard } from "../../customer/components/CharacterCard";
 import { CustomerList } from "../../customer/components/CustomerList";
@@ -12,7 +12,7 @@ export function TradeWorkspace({ game }: { game: MerchantGameController }) {
 
   return (
     <section className="trade-workspace">
-      <aside className="trade-column trade-column-left">
+      <FrameSurface className="trade-column trade-column-left trade-rail" variant="wood">
         {character ? (
           <>
             <InventoryPanel title={`${character.name}'s Offer`} mode="offer" inventory={character.inventory} onMove={(entry, amount) => game.moveCharacter(entry, amount, true)} onMoveAll={(entry) => game.moveCharacter(entry, "none", true)} />
@@ -23,9 +23,9 @@ export function TradeWorkspace({ game }: { game: MerchantGameController }) {
             <p className="text-parchment-muted">Select a customer to inspect their stock and build their side of the trade.</p>
           </Panel>
         )}
-      </aside>
+      </FrameSurface>
 
-      <section className="trade-column trade-column-center">
+      <section className="trade-column trade-column-center trade-stage">
         <CustomerList people={game.people} selectedIndex={game.state.selectedCharacterIndex} market={game.market} onSelect={game.selectCharacter} />
 
         {character ? (
@@ -41,10 +41,10 @@ export function TradeWorkspace({ game }: { game: MerchantGameController }) {
         <TravelPanel market={game.market} onTravel={game.travel} />
       </section>
 
-      <aside className="trade-column trade-column-right">
+      <FrameSurface className="trade-column trade-column-right trade-rail" variant="wood">
         <InventoryPanel title="Your Offer" mode="offer" inventory={game.state.playerInventory} onMove={(entry, amount) => game.movePlayer(entry, amount, true)} onMoveAll={(entry) => game.movePlayer(entry, "none", true)} />
         <InventoryPanel title="Your Inventory" inventory={game.state.playerInventory} onMove={(entry, amount) => game.movePlayer(entry, amount)} onMoveAll={(entry) => game.movePlayer(entry, "all")} onToggleProtect={game.togglePlayerProtect} allowProtect />
-      </aside>
+      </FrameSurface>
     </section>
   );
 }

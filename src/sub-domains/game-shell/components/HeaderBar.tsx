@@ -1,7 +1,7 @@
 import type { RefObject } from "react";
 import { BookOpen, CircleHelp, Download, RotateCcw, Save, Upload, Volume2, VolumeX } from "lucide-react";
 import type { currentMarket } from "../../../lib/game";
-import { Button, IconButton, Muted } from "../../../components/ui";
+import { Button, FrameSurface, IconButton, Muted, StatBadge } from "../../../components/ui";
 
 export function HeaderBar({
   market,
@@ -30,13 +30,16 @@ export function HeaderBar({
 }) {
   return (
     <header className="game-header">
-      <div className="game-header-title">
+      <FrameSurface className="game-header-title" variant="wood">
         <span className="game-header-kicker">Current Market</span>
         <h1>{market.name}</h1>
-        <Muted className="text-sm">Day {day}</Muted>
-      </div>
+        <div className="game-header-meta">
+          <StatBadge label="Day" value={day} />
+          <Muted className="game-header-subtitle">Merchant ledger online</Muted>
+        </div>
+      </FrameSurface>
 
-      <div className="game-header-actions">
+      <nav className="game-header-actions" aria-label="Game actions">
         <IconButton aria-label="Open controls" title="Controls" onClick={onHelp}>
           <CircleHelp size={18} />
         </IconButton>
@@ -58,7 +61,7 @@ export function HeaderBar({
             event.target.value = "";
           }}
         />
-      </div>
+      </nav>
     </header>
   );
 }

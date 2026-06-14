@@ -1,4 +1,9 @@
-export { Button } from "./button.component";
-export { IconButton } from "./icon-button.component";
-export { Muted } from "./muted.component";
-export { Panel } from "./panel.component";
+export { Button } from "./Button";
+export { IconButton } from "./IconButton";
+export { Muted } from "./Muted";
+export { Panel } from "./Panel";
+export { FrameSurface } from "./FrameSurface";
+export { InventorySlotFrame } from "./InventorySlotFrame";
+export { BrassDivider } from "./BrassDivider";
+export { ScreenFrame } from "./ScreenFrame";
+export { StatBadge } from "./StatBadge";

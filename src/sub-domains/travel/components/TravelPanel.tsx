@@ -3,7 +3,7 @@ import type { currentMarket } from "../../../lib/game";
 import { marketplaces } from "../../../lib/game";
 import { routeAsset } from "../../../lib/assets";
 import { compactBiasText, routeLedger } from "../../../lib/travel";
-import { Panel } from "../../../components/ui";
+import { BrassDivider, Panel } from "../../../components/ui";
 import { MarketMap } from "./MarketMap";
 
 export function TravelPanel({ market, onTravel }: { market: ReturnType<typeof currentMarket>; onTravel: (marketIndex: number) => void }) {
@@ -24,6 +24,8 @@ export function TravelPanel({ market, onTravel }: { market: ReturnType<typeof cu
             <p>{compactBiasText(market, "discount")}</p>
           </div>
         </div>
+
+        <BrassDivider />
 
         <div className="route-ledger-list">
           {routes.map(({ connection, to, days, tolls, demand, discounts }) => (
