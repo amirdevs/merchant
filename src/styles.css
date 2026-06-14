@@ -957,3 +957,712 @@ button {
     height: 7rem;
   }
 }
+
+/* Patch 02: responsive screen navigation and 12-page mockup implementation scaffold */
+.game-brand {
+  appearance: none;
+  border: 0;
+  color: inherit;
+  text-align: left;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.view-tabs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.35rem, 0.7vw, 0.75rem);
+  padding: clamp(0.35rem, 0.55vw, 0.6rem);
+  border: 1px solid rgba(242, 212, 128, 0.45);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(69, 41, 21, 0.72), rgba(18, 10, 5, 0.88)),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 18px);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.55), 0 12px 28px rgba(0,0,0,0.34);
+}
+
+.view-tab {
+  min-height: clamp(2.7rem, 4.4vw, 3.6rem);
+  display: grid;
+  align-content: center;
+  gap: 0.05rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid rgba(242, 212, 128, 0.24);
+  border-radius: 13px;
+  color: var(--ui-parchment-light);
+  background: linear-gradient(180deg, rgba(84, 50, 24, 0.7), rgba(31, 17, 8, 0.9));
+  box-shadow: inset 0 1px rgba(255,255,255,0.08), inset 0 -10px 18px rgba(0,0,0,0.24);
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.view-tab:hover,
+.view-tab:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(242, 212, 128, 0.62);
+  outline: none;
+}
+
+.view-tab.is-active {
+  color: #fff8d7;
+  border-color: rgba(63, 168, 161, 0.86);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(63,168,161,0.34), transparent 64%),
+    linear-gradient(180deg, rgba(63, 105, 91, 0.9), rgba(38, 22, 10, 0.94));
+  box-shadow:
+    inset 0 1px rgba(255,255,255,0.15),
+    0 0 0 1px rgba(63, 168, 161, 0.16),
+    0 10px 28px rgba(0,0,0,0.35);
+}
+
+.view-tab strong {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(0.84rem, 1vw, 1.08rem);
+  letter-spacing: 0.04em;
+}
+
+.view-tab span {
+  color: rgba(244, 234, 209, 0.72);
+  font-size: clamp(0.66rem, 0.8vw, 0.78rem);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.ui-screen {
+  min-height: 0;
+  animation: ui-screen-in 180ms ease both;
+}
+
+@keyframes ui-screen-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.main-menu-screen {
+  min-height: min(72vh, 820px);
+  border-radius: 28px;
+  overflow: hidden;
+  border: 2px solid rgba(242, 212, 128, 0.54);
+  box-shadow: 0 24px 58px rgba(0,0,0,0.48), inset 0 0 0 1px rgba(0,0,0,0.75);
+}
+
+.main-menu-art {
+  min-height: min(72vh, 820px);
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 4rem);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  isolation: isolate;
+}
+
+.main-menu-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(12,7,3,0.06), rgba(12,7,3,0.75) 70%),
+    linear-gradient(90deg, rgba(12,7,3,0.78), transparent 42%, rgba(12,7,3,0.82));
+}
+
+.main-menu-card {
+  width: min(100%, 780px);
+  padding: clamp(1rem, 2.8vw, 2.4rem);
+  border: 2px solid rgba(242, 212, 128, 0.74);
+  border-radius: 26px;
+  color: var(--ui-parchment-light);
+  background:
+    linear-gradient(180deg, rgba(69, 40, 18, 0.88), rgba(19, 10, 4, 0.96)),
+    radial-gradient(circle at 50% 0%, rgba(242,212,128,0.22), transparent 56%);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.58), 0 22px 58px rgba(0,0,0,0.55);
+  backdrop-filter: blur(3px);
+}
+
+.main-menu-card h2,
+.market-hero-copy h2 {
+  margin: 0.12rem 0 0.45rem;
+  color: #fff3c2;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(2rem, 5vw, 4.8rem);
+  line-height: 0.95;
+  text-shadow: 0 5px 18px rgba(0,0,0,0.72);
+}
+
+.main-menu-card p,
+.market-hero-copy p {
+  max-width: 62ch;
+  color: rgba(244, 234, 209, 0.88);
+  font-size: clamp(0.95rem, 1.12vw, 1.15rem);
+}
+
+.main-menu-actions,
+.market-hero-actions,
+.system-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.05rem;
+}
+
+.main-menu-actions .game-button {
+  min-width: 11rem;
+  justify-content: center;
+}
+
+.market-hub-layout {
+  display: grid;
+  grid-template-columns: minmax(22rem, 1.2fr) minmax(20rem, 1fr);
+  gap: clamp(0.65rem, 1vw, 1rem);
+  align-items: start;
+}
+
+.market-hero-panel {
+  grid-row: span 2;
+  min-height: 100%;
+}
+
+.market-hero-art {
+  min-height: clamp(22rem, 52vh, 42rem);
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(1rem, 2vw, 2rem);
+  border-radius: inherit;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.market-hero-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, transparent 30%, rgba(13,7,3,0.82) 100%),
+    radial-gradient(circle at 50% 40%, transparent 25%, rgba(10,5,2,0.52));
+}
+
+.market-hero-copy {
+  max-width: 720px;
+  padding: clamp(0.9rem, 1.4vw, 1.35rem);
+  border: 1px solid rgba(242, 212, 128, 0.38);
+  border-radius: 20px;
+  background: rgba(18, 9, 3, 0.68);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.45);
+}
+
+.travel-route-list.compact {
+  max-height: 26rem;
+}
+
+.customers-screen-layout {
+  display: grid;
+  grid-template-columns: minmax(21rem, 1.1fr) minmax(24rem, 0.9fr);
+  gap: clamp(0.65rem, 1vw, 1rem);
+  align-items: start;
+}
+
+.barter-screen-layout {
+  animation: ui-screen-in 180ms ease both;
+}
+
+.inventory-screen-layout {
+  display: grid;
+  grid-template-columns: minmax(26rem, 1.45fr) minmax(21rem, 0.82fr);
+  gap: clamp(0.65rem, 1vw, 1rem);
+  align-items: start;
+}
+
+.inventory-screen-layout > .game-panel:first-child {
+  grid-row: span 2;
+}
+
+.travel-screen-layout {
+  display: grid;
+  grid-template-columns: minmax(24rem, 1.55fr) minmax(20rem, 0.75fr);
+  gap: clamp(0.65rem, 1vw, 1rem);
+  align-items: start;
+}
+
+.system-menu-layout {
+  display: grid;
+  grid-template-columns: minmax(20rem, 0.9fr) minmax(22rem, 1.1fr);
+  gap: clamp(0.65rem, 1vw, 1rem);
+  align-items: start;
+}
+
+.system-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.system-actions .game-button {
+  justify-content: center;
+  min-height: 3.2rem;
+}
+
+.system-ledger {
+  display: grid;
+  gap: 0.6rem;
+  color: var(--ui-ink);
+  line-height: 1.45;
+}
+
+.system-ledger p {
+  margin: 0;
+  padding: 0.7rem 0.85rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(70,43,20,0.18);
+}
+
+@media (max-width: 1280px) {
+  .market-hub-layout,
+  .customers-screen-layout,
+  .inventory-screen-layout,
+  .travel-screen-layout,
+  .system-menu-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .market-hero-panel,
+  .inventory-screen-layout > .game-panel:first-child {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 920px) {
+  .view-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .main-menu-actions .game-button,
+  .market-hero-actions .game-button {
+    min-width: min(100%, 12rem);
+    flex: 1 1 12rem;
+  }
+
+  .system-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .view-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .view-tab span {
+    display: none;
+  }
+
+  .main-menu-art,
+  .market-hero-art {
+    padding: 0.75rem;
+  }
+
+  .main-menu-card h2,
+  .market-hero-copy h2 {
+    font-size: clamp(1.7rem, 13vw, 3rem);
+  }
+}
+
+
+/* Patch 03: closer responsive barter/conversation screen matching 09_barter_conversation_main_8x */
+.barter-v3-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.88fr) minmax(460px, 1.28fr) minmax(260px, 0.88fr);
+  gap: clamp(0.58rem, 0.9vw, 1rem);
+  align-items: start;
+}
+
+.barter-v3-side,
+.barter-v3-center {
+  min-width: 0;
+  display: grid;
+  gap: clamp(0.55rem, 0.85vw, 0.9rem);
+  align-content: start;
+}
+
+.barter-v3-side-ribbon {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.55rem 0.82rem;
+  border: 1px solid rgba(242, 212, 128, 0.5);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(63,168,161,0.16), transparent 70%),
+    linear-gradient(180deg, rgba(68, 41, 21, 0.9), rgba(17, 9, 4, 0.94));
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.48), 0 8px 18px rgba(0,0,0,0.32);
+}
+
+.barter-v3-side-ribbon.player {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(210,170,87,0.2), transparent 70%),
+    linear-gradient(180deg, rgba(78, 47, 22, 0.92), rgba(17, 9, 4, 0.94));
+}
+
+.barter-v3-side-ribbon span {
+  color: rgba(244, 234, 209, 0.66);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.barter-v3-side-ribbon strong {
+  overflow: hidden;
+  color: var(--ui-brass-light);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(0.9rem, 1.12vw, 1.18rem);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.barter-v3-focus-panel {
+  border-color: rgba(242, 212, 128, 0.76);
+  box-shadow:
+    inset 0 0 0 1px rgba(0,0,0,0.66),
+    inset 0 22px 32px rgba(242, 212, 128, 0.05),
+    0 20px 42px rgba(0,0,0,0.48);
+}
+
+.barter-v3-focus-body {
+  display: grid;
+  gap: clamp(0.7rem, 1vw, 1rem);
+  padding: clamp(0.7rem, 1.1vw, 1.1rem);
+}
+
+.barter-v3-scene {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(0.65rem, 1vw, 1rem);
+  min-height: clamp(22rem, 42vh, 36rem);
+}
+
+.barter-v3-portrait-stage,
+.barter-v3-dialogue-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(242, 212, 128, 0.45);
+  border-radius: 18px;
+  background: rgba(8, 4, 2, 0.42);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.55);
+}
+
+.barter-v3-portrait-stage {
+  min-height: 22rem;
+  background: var(--ui-wood-deep);
+}
+
+.barter-v3-portrait-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 48%, rgba(0,0,0,0.76)),
+    radial-gradient(circle at 50% 18%, transparent 34%, rgba(0,0,0,0.3));
+  pointer-events: none;
+}
+
+.barter-v3-portrait {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.04);
+}
+
+.barter-v3-stall {
+  position: absolute;
+  right: 0.7rem;
+  top: 0.7rem;
+  z-index: 3;
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: contain;
+  padding: 0.36rem;
+  border: 1px solid rgba(242, 212, 128, 0.55);
+  border-radius: 1rem;
+  background: rgba(13, 7, 3, 0.78);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.42);
+}
+
+.barter-v3-nameplate {
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 4;
+  display: grid;
+  gap: 0.05rem;
+  padding: 0.62rem 0.7rem;
+  border: 1px solid rgba(242, 212, 128, 0.46);
+  border-radius: 14px;
+  background: rgba(14, 7, 3, 0.78);
+  backdrop-filter: blur(2px);
+}
+
+.barter-v3-nameplate strong {
+  color: #fff0bd;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1rem, 1.4vw, 1.45rem);
+  line-height: 1;
+}
+
+.barter-v3-nameplate span {
+  color: rgba(244, 234, 209, 0.72);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.barter-v3-dialogue-card {
+  display: grid;
+  grid-template-rows: auto minmax(7rem, 1fr) auto auto;
+  gap: 0.72rem;
+  padding: clamp(0.75rem, 1.15vw, 1.05rem);
+  color: var(--ui-ink);
+  background:
+    linear-gradient(180deg, rgba(240, 223, 171, 0.96), rgba(199, 159, 91, 0.94)),
+    repeating-linear-gradient(0deg, rgba(60,35,12,0.06) 0 1px, transparent 1px 15px);
+}
+
+.barter-v3-dialogue-head {
+  display: grid;
+  gap: 0.18rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(70, 43, 20, 0.22);
+}
+
+.barter-v3-dialogue-head span {
+  color: rgba(43, 26, 12, 0.64);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.barter-v3-dialogue-head strong {
+  color: #2a170a;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1rem, 1.35vw, 1.4rem);
+  line-height: 1.1;
+}
+
+.barter-v3-dialogue-text {
+  max-height: clamp(8rem, 18vh, 15rem);
+  overflow: auto;
+  padding: 0.7rem;
+  border: 1px solid rgba(70,43,20,0.16);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.18);
+  color: #28160a;
+  line-height: 1.55;
+}
+
+.barter-v3-preference,
+.barter-v3-reply {
+  margin: 0;
+  color: rgba(43, 26, 12, 0.76);
+  line-height: 1.42;
+}
+
+.barter-v3-reply {
+  padding: 0.6rem 0.7rem;
+  border: 1px solid rgba(70, 43, 20, 0.16);
+  border-radius: 13px;
+  background: rgba(255,255,255,0.2);
+  font-weight: 700;
+}
+
+.barter-v3-value-board {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.72fr) minmax(12rem, 1.3fr) minmax(7rem, 0.72fr);
+  gap: 0.58rem;
+  align-items: stretch;
+}
+
+.barter-v3-value-card,
+.barter-v3-balance {
+  min-width: 0;
+  display: grid;
+  align-content: center;
+  gap: 0.24rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid rgba(242, 212, 128, 0.36);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(43, 25, 12, 0.94), rgba(12, 7, 3, 0.94));
+  box-shadow: inset 0 1px rgba(255,255,255,0.06);
+}
+
+.barter-v3-value-card small {
+  color: rgba(244,234,209,0.62);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.barter-v3-value-card strong {
+  color: #fff1c4;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1rem, 1.35vw, 1.45rem);
+}
+
+.barter-v3-balance-track {
+  position: relative;
+  height: 0.72rem;
+  overflow: hidden;
+  border: 1px solid rgba(242, 212, 128, 0.35);
+  border-radius: 999px;
+  background: rgba(0,0,0,0.45);
+}
+
+.barter-v3-balance-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  display: block;
+  background: linear-gradient(90deg, rgba(168, 73, 53, 0.92), rgba(210,170,87,0.9), rgba(127,191,106,0.95));
+}
+
+.barter-v3-balance-mid {
+  position: absolute;
+  top: -0.25rem;
+  bottom: -0.25rem;
+  left: 50%;
+  width: 2px;
+  background: rgba(255,255,255,0.68);
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+.barter-v3-balance strong.good { color: var(--ui-emerald); }
+.barter-v3-balance strong.bad { color: #f6a79b; }
+
+.barter-v3-bias-row,
+.barter-v3-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.barter-v3-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.48rem;
+}
+
+.barter-v3-choice-grid button {
+  display: grid;
+  gap: 0.16rem;
+  padding: 0.62rem;
+  border: 1px solid rgba(242, 212, 128, 0.32);
+  border-radius: 14px;
+  color: var(--ui-parchment-light);
+  background: linear-gradient(180deg, rgba(61, 36, 16, 0.88), rgba(14, 8, 4, 0.94));
+  text-align: left;
+  cursor: pointer;
+}
+
+.barter-v3-choice-grid button:hover,
+.barter-v3-choice-grid button:focus-visible {
+  border-color: rgba(63, 168, 161, 0.72);
+  outline: none;
+  filter: brightness(1.08);
+}
+
+.barter-v3-choice-grid strong {
+  color: var(--ui-brass-light);
+  font-size: 0.86rem;
+}
+
+.barter-v3-choice-grid span {
+  color: rgba(244,234,209,0.66);
+  font-size: 0.74rem;
+}
+
+.barter-v3-action-row {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.barter-v3-primary-action {
+  min-width: 13rem;
+  border-color: rgba(126, 230, 190, 0.55);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(63, 168, 161, 0.34), transparent 72%),
+    linear-gradient(180deg, rgba(74, 98, 71, 0.95), rgba(37, 28, 13, 0.98));
+}
+
+.barter-v3-ledger-panel .game-panel-body {
+  min-height: 4.4rem;
+}
+
+.barter-v3-empty {
+  display: grid;
+  grid-template-columns: minmax(20rem, 0.72fr) minmax(22rem, 1.28fr);
+  gap: clamp(0.65rem, 1vw, 1rem);
+}
+
+.barter-empty-copy {
+  min-height: 14rem;
+  display: grid;
+  place-content: center;
+  gap: 0.45rem;
+  text-align: center;
+  color: rgba(244,234,209,0.78);
+}
+
+.barter-empty-copy strong {
+  color: var(--ui-brass-light);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+}
+
+@media (max-width: 1460px) {
+  .barter-v3-layout {
+    grid-template-columns: minmax(240px, 0.88fr) minmax(420px, 1.12fr);
+  }
+
+  .barter-v3-side-right {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .barter-v3-side-right .barter-v3-side-ribbon {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1080px) {
+  .barter-v3-layout,
+  .barter-v3-empty,
+  .barter-v3-side-right,
+  .barter-v3-scene {
+    grid-template-columns: 1fr;
+  }
+
+  .barter-v3-portrait-stage {
+    min-height: 18rem;
+  }
+
+  .barter-v3-choice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 660px) {
+  .barter-v3-value-board,
+  .barter-v3-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .barter-v3-action-row .game-button,
+  .barter-v3-primary-action {
+    width: 100%;
+    min-width: 0;
+  }
+}

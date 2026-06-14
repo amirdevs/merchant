@@ -31,8 +31,20 @@ import { Button, IconButton, Muted, Panel } from "./components/ui";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "./lib/audio";
 import { BookOpen, CircleHelp, Download, HandCoins, Map, RotateCcw, Save, ScrollText, Upload, Users, Volume2, VolumeX } from "lucide-react";
 
+type GameView = "main-menu" | "market" | "customers" | "barter" | "inventory" | "travel" | "system";
+
+const viewTabs: Array<{ view: GameView; label: string; helper: string }> = [
+  { view: "market", label: "Market", helper: "town hub" },
+  { view: "customers", label: "Customers", helper: "people" },
+  { view: "barter", label: "Barter", helper: "trade" },
+  { view: "inventory", label: "Inventory", helper: "goods" },
+  { view: "travel", label: "Travel", helper: "routes" },
+  { view: "system", label: "System", helper: "save" },
+];
+
 function App() {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
+  const [activeView, setActiveView] = useState<GameView>("market");
   const [helpOpen, setHelpOpen] = useState(false);
   const [modStatus, setModStatus] = useState("Loading mods...");
   const [soundOn, setSoundOn] = useState(() => audioEnabled());
@@ -67,12 +79,19 @@ function App() {
     });
   }
 
-  function selectCharacter(next: Character) {
+  function startNewGame() {
+    playUiSound("menu_click");
+    setState(newGame());
+    setActiveView("market");
+  }
+
+  function selectCharacter(next: Character, openBarter = false) {
     playUiSound("menu_click");
     update((draft) => {
       draft.selectedCharacterIndex = next.index;
       draft.message = customerIntro(next);
     });
+    if (openBarter) setActiveView("barter");
   }
 
   function nextCustomer() {
@@ -127,6 +146,7 @@ function App() {
       draft.selectedCharacterIndex = null;
       draft.message = `Arrived in ${marketplaces[toMarketIndex].name}.`;
     });
+    setActiveView("market");
   }
 
   function exportSave() {
@@ -151,17 +171,141 @@ function App() {
       return;
     }
     setState({ ...imported, message: "Imported save file." });
+    setActiveView("market");
+  }
+
+  function renderActiveView() {
+    if (activeView === "main-menu") {
+      return (
+        <MainMenuScreen
+          state={state}
+          market={market}
+          soundOn={soundOn}
+          onContinue={() => setActiveView("market")}
+          onNewGame={startNewGame}
+          onOpenTravel={() => setActiveView("travel")}
+          onOpenBarter={() => setActiveView(character ? "barter" : "customers")}
+          onOpenInventory={() => setActiveView("inventory")}
+          onOpenSystem={() => setActiveView("system")}
+        />
+      );
+    }
+
+    if (activeView === "market") {
+      return (
+        <MarketHubScreen
+          state={state}
+          market={market}
+          people={people}
+          selectedIndex={state.selectedCharacterIndex}
+          onSelect={(person) => selectCharacter(person, true)}
+          onTravel={travel}
+          onOpenTravel={() => setActiveView("travel")}
+          onOpenInventory={() => setActiveView("inventory")}
+        />
+      );
+    }
+
+    if (activeView === "customers") {
+      return (
+        <section className="ui-screen customers-screen-layout">
+          <CustomerList people={people} selectedIndex={state.selectedCharacterIndex} market={market} onSelect={(person) => selectCharacter(person, true)} />
+          {character ? (
+            <CharacterCard character={character} playerOffer={playerOffer} characterOffer={characterOffer} onTrade={trade} onNextCustomer={nextCustomer} />
+          ) : (
+            <Panel title="Choose a customer">
+              <div className="game-panel-empty">Select a customer to inspect preferences, stock, and current trade mood.</div>
+            </Panel>
+          )}
+        </section>
+      );
+    }
+
+    if (activeView === "barter") {
+      return (
+        <BarterConversationScreen
+          state={state}
+          market={market}
+          people={people}
+          character={character}
+          playerOffer={playerOffer}
+          characterOffer={characterOffer}
+          modStatus={modStatus}
+          onMovePlayer={movePlayer}
+          onMoveCharacter={moveCharacter}
+          onTogglePlayerProtect={togglePlayerProtect}
+          onSelectCustomer={(person) => selectCharacter(person)}
+          onNextCustomer={nextCustomer}
+          onTrade={trade}
+        />
+      );
+    }
+
+    if (activeView === "inventory") {
+      return (
+        <section className="ui-screen inventory-screen-layout">
+          <InventoryPanel
+            title="Your Inventory"
+            inventory={state.playerInventory}
+            onMove={(entry, amount) => movePlayer(entry, amount)}
+            onMoveAll={(entry) => movePlayer(entry, "all")}
+            onToggleProtect={togglePlayerProtect}
+            allowProtect
+          />
+          <InventoryPanel title="Your Offer" mode="offer" inventory={state.playerInventory} onMove={(entry, amount) => movePlayer(entry, amount, true)} onMoveAll={(entry) => movePlayer(entry, "none", true)} />
+          <Panel title="Ledger Notes" bodyClassName="message-ledger">
+            <p>{state.message}</p>
+            <p className="mt-2 text-sm text-parchment-muted">Protect valuable goods before building offers. Offer slots are generated from the same real inventory entries.</p>
+          </Panel>
+        </section>
+      );
+    }
+
+    if (activeView === "travel") {
+      return (
+        <section className="ui-screen travel-screen-layout">
+          <TravelPanel market={market} onTravel={travel} />
+          <QuestPanel market={market} />
+        </section>
+      );
+    }
+
+    return (
+      <SystemMenuScreen
+        state={state}
+        modStatus={modStatus}
+        soundOn={soundOn}
+        onToggleSound={() => {
+          const next = !soundOn;
+          setSoundOn(next);
+          setAudioEnabled(next);
+          if (next) playUiSound("menu_click");
+        }}
+        onHelp={() => setHelpOpen(true)}
+        onNewGame={startNewGame}
+        onSave={() => {
+          playUiSound("pack_closed");
+          saveGame(state);
+        }}
+        onLoad={() => {
+          playUiSound("pack_open");
+          setState(loadGame() || state);
+        }}
+        onExport={exportSave}
+        onImport={() => importInputRef.current?.click()}
+      />
+    );
   }
 
   return (
     <main className="game-root" style={{ backgroundImage: `url("${backdropAsset(market.backdropFile)}")` }}>
       <div className="game-viewport">
         <header className="game-topbar">
-          <div className="game-brand">
+          <button className="game-brand" type="button" onClick={() => setActiveView("main-menu")}>
             <span className="game-brand-kicker">Merchant Ledger</span>
             <h1 className="game-title">{market.name}</h1>
-            <Muted className="game-subtitle">Day {state.day} · stallage {money(market.stallage)} · offline trading prototype</Muted>
-          </div>
+            <Muted className="game-subtitle">Day {state.day} · stallage {money(market.stallage)} · {activeView.replace("-", " ")}</Muted>
+          </button>
           <div className="game-toolbar">
             <IconButton aria-label="Open controls" title="Controls" onClick={() => setHelpOpen(true)}>
               <CircleHelp size={18} />
@@ -178,104 +322,177 @@ function App() {
             >
               {soundOn ? <Volume2 size={18} /> : <VolumeX size={18} />}
             </IconButton>
-            <Button onClick={() => setState(newGame())}>
-              <RotateCcw size={16} /> New Game
-            </Button>
-            <Button
-              onClick={() => {
-                playUiSound("pack_closed");
-                saveGame(state);
-              }}
-            >
-              <Save size={16} /> Save
-            </Button>
-            <Button
-              onClick={() => {
-                playUiSound("pack_open");
-                setState(loadGame() || state);
-              }}
-            >
-              <BookOpen size={16} /> Load
-            </Button>
-            <Button onClick={exportSave}>
-              <Download size={16} /> Export
-            </Button>
-            <Button onClick={() => importInputRef.current?.click()}>
-              <Upload size={16} /> Import
-            </Button>
-            <input
-              ref={importInputRef}
-              className="hidden"
-              type="file"
-              accept="application/json,.json"
-              onChange={(event) => {
-                void importSave(event.target.files?.[0]);
-                event.target.value = "";
-              }}
-            />
+            <Button onClick={() => setActiveView("main-menu")}>Menu</Button>
+            <Button onClick={() => setActiveView("system")}>System</Button>
           </div>
         </header>
 
-        <section className="game-layout">
-          <aside className="game-column game-column-left">
-            {character ? (
-              <>
-                <InventoryPanel
-                  title={`${character.name}'s Offer`}
-                  mode="offer"
-                  inventory={character.inventory}
-                  onMove={(entry, amount) => moveCharacter(entry, amount, true)}
-                  onMoveAll={(entry) => moveCharacter(entry, "none", true)}
-                />
-                <InventoryPanel
-                  title={`${character.name}'s Stock`}
-                  inventory={character.inventory}
-                  onMove={(entry, amount) => moveCharacter(entry, amount)}
-                  onMoveAll={(entry) => moveCharacter(entry, "all")}
-                />
-              </>
-            ) : (
-              <Panel title="Customer Inventory">
-                <div className="game-panel-empty">Select a customer to inspect their stock and build their side of the trade.</div>
-              </Panel>
-            )}
-          </aside>
-
-          <section className="game-column game-center">
-            <CustomerList people={people} selectedIndex={state.selectedCharacterIndex} market={market} onSelect={selectCharacter} />
-
-            {character ? (
-              <CharacterCard character={character} playerOffer={playerOffer} characterOffer={characterOffer} onTrade={trade} onNextCustomer={nextCustomer} />
-            ) : (
-              <Panel title="Choose a customer">
-                <div className="game-panel-empty">Select someone in the town square, compare their preferences, then build an offer from both inventories.</div>
-              </Panel>
-            )}
-
-            <Panel bodyClassName="message-ledger">
-              <p>{state.message}</p>
-              <p className="mt-2 text-sm text-parchment-muted">{modStatus}</p>
-            </Panel>
-            <QuestPanel market={market} />
-            <TravelPanel market={market} onTravel={travel} />
-          </section>
-
-          <aside className="game-column game-column-right">
-            <InventoryPanel title="Your Offer" mode="offer" inventory={state.playerInventory} onMove={(entry, amount) => movePlayer(entry, amount, true)} onMoveAll={(entry) => movePlayer(entry, "none", true)} />
-            <InventoryPanel
-              title="Your Inventory"
-              inventory={state.playerInventory}
-              onMove={(entry, amount) => movePlayer(entry, amount)}
-              onMoveAll={(entry) => movePlayer(entry, "all")}
-              onToggleProtect={togglePlayerProtect}
-              allowProtect
-            />
-          </aside>
-        </section>
+        <ViewTabs activeView={activeView} onChange={setActiveView} />
+        {renderActiveView()}
       </div>
 
+      <input
+        ref={importInputRef}
+        className="hidden"
+        type="file"
+        accept="application/json,.json"
+        onChange={(event) => {
+          void importSave(event.target.files?.[0]);
+          event.target.value = "";
+        }}
+      />
       {helpOpen ? <HelpModal onClose={() => setHelpOpen(false)} /> : null}
     </main>
+  );
+}
+
+function ViewTabs({ activeView, onChange }: { activeView: GameView; onChange: (view: GameView) => void }) {
+  return (
+    <nav className="view-tabs" aria-label="Game sections">
+      {viewTabs.map((tab) => (
+        <button key={tab.view} className={`view-tab ${activeView === tab.view ? "is-active" : ""}`} type="button" onClick={() => onChange(tab.view)}>
+          <strong>{tab.label}</strong>
+          <span>{tab.helper}</span>
+        </button>
+      ))}
+    </nav>
+  );
+}
+
+function MainMenuScreen({
+  state,
+  market,
+  soundOn,
+  onContinue,
+  onNewGame,
+  onOpenTravel,
+  onOpenBarter,
+  onOpenInventory,
+  onOpenSystem,
+}: {
+  state: GameState;
+  market: ReturnType<typeof currentMarket>;
+  soundOn: boolean;
+  onContinue: () => void;
+  onNewGame: () => void;
+  onOpenTravel: () => void;
+  onOpenBarter: () => void;
+  onOpenInventory: () => void;
+  onOpenSystem: () => void;
+}) {
+  return (
+    <section className="main-menu-screen">
+      <div className="main-menu-art" style={{ backgroundImage: `url("${townAsset(market.townsquareFile)}")` }}>
+        <div className="main-menu-card">
+          <span className="game-brand-kicker">Merchant of the Six Kingdoms</span>
+          <h2>Trade, travel, bargain.</h2>
+          <p>Day {state.day} in {market.name}. Balance your ledger, read each customer, and move goods between cities before prices turn against you.</p>
+          <div className="main-menu-actions">
+            <Button onClick={onContinue}><BookOpen size={18} /> Continue</Button>
+            <Button onClick={onNewGame}><RotateCcw size={18} /> New Merchant</Button>
+            <Button onClick={onOpenBarter}><HandCoins size={18} /> Barter</Button>
+            <Button onClick={onOpenInventory}><ScrollText size={18} /> Inventory</Button>
+            <Button onClick={onOpenTravel}><Map size={18} /> Travel Map</Button>
+            <Button onClick={onOpenSystem}>{soundOn ? <Volume2 size={18} /> : <VolumeX size={18} />} System</Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MarketHubScreen({
+  state,
+  market,
+  people,
+  selectedIndex,
+  onSelect,
+  onTravel,
+  onOpenTravel,
+  onOpenInventory,
+}: {
+  state: GameState;
+  market: ReturnType<typeof currentMarket>;
+  people: Character[];
+  selectedIndex: number | null;
+  onSelect: (character: Character) => void;
+  onTravel: (marketIndex: number) => void;
+  onOpenTravel: () => void;
+  onOpenInventory: () => void;
+}) {
+  return (
+    <section className="ui-screen market-hub-layout">
+      <Panel className="market-hero-panel" bodyClassName="p-0">
+        <div className="market-hero-art" style={{ backgroundImage: `url("${townAsset(market.townsquareFile)}")` }}>
+          <div className="market-hero-copy">
+            <span className="game-brand-kicker">Current Market</span>
+            <h2>{market.name}</h2>
+            <p>Day {state.day}. Stallage {money(market.stallage)}. Find customers, inspect local demand, then prepare the next route.</p>
+            <div className="market-hero-actions">
+              <Button onClick={onOpenInventory}><ScrollText size={16} /> Open Inventory</Button>
+              <Button onClick={onOpenTravel}><Map size={16} /> Routes</Button>
+            </div>
+          </div>
+        </div>
+      </Panel>
+      <CustomerList people={people} selectedIndex={selectedIndex} market={market} onSelect={onSelect} />
+      <QuestPanel market={market} />
+      <Panel title={<span><Map size={18} /> Nearby Routes</span>}>
+        <div className="travel-route-list compact">
+          {routeLedger(market, marketplaces).slice(0, 5).map(({ connection, to, days, tolls }) => (
+            <button key={`${market.index}-${connection.marketplaceIndex}-${connection.routeFile}`} className="travel-route" onClick={() => onTravel(connection.marketplaceIndex)}>
+              <img src={routeAsset(connection.routeFile)} alt="" />
+              <span className="min-w-0"><strong>{to.name}</strong><small>{days} days · {tolls} toll</small></span>
+            </button>
+          ))}
+        </div>
+      </Panel>
+    </section>
+  );
+}
+
+function SystemMenuScreen({
+  state,
+  modStatus,
+  soundOn,
+  onToggleSound,
+  onHelp,
+  onNewGame,
+  onSave,
+  onLoad,
+  onExport,
+  onImport,
+}: {
+  state: GameState;
+  modStatus: string;
+  soundOn: boolean;
+  onToggleSound: () => void;
+  onHelp: () => void;
+  onNewGame: () => void;
+  onSave: () => void;
+  onLoad: () => void;
+  onExport: () => void;
+  onImport: () => void;
+}) {
+  return (
+    <section className="ui-screen system-menu-layout">
+      <Panel title="System Menu" bodyClassName="system-actions">
+        <Button onClick={onNewGame}><RotateCcw size={16} /> New Game</Button>
+        <Button onClick={onSave}><Save size={16} /> Save Local</Button>
+        <Button onClick={onLoad}><BookOpen size={16} /> Load Local</Button>
+        <Button onClick={onExport}><Download size={16} /> Export Save</Button>
+        <Button onClick={onImport}><Upload size={16} /> Import Save</Button>
+        <Button onClick={onToggleSound}>{soundOn ? <Volume2 size={16} /> : <VolumeX size={16} />} {soundOn ? "Disable Audio" : "Enable Audio"}</Button>
+        <Button onClick={onHelp}><CircleHelp size={16} /> Controls</Button>
+      </Panel>
+      <Panel title="Current Session">
+        <div className="system-ledger">
+          <p><strong>Day:</strong> {state.day}</p>
+          <p><strong>Mods:</strong> {modStatus}</p>
+          <p><strong>Audio:</strong> {soundOn ? "enabled" : "disabled"}</p>
+        </div>
+      </Panel>
+    </section>
   );
 }
 
@@ -391,6 +608,168 @@ function MarketMap({ market, onTravel }: { market: ReturnType<typeof currentMark
         );
       })}
     </div>
+  );
+}
+
+
+function BarterConversationScreen({
+  state,
+  market,
+  people,
+  character,
+  playerOffer,
+  characterOffer,
+  modStatus,
+  onMovePlayer,
+  onMoveCharacter,
+  onTogglePlayerProtect,
+  onSelectCustomer,
+  onNextCustomer,
+  onTrade,
+}: {
+  state: GameState;
+  market: ReturnType<typeof currentMarket>;
+  people: Character[];
+  character: Character | null;
+  playerOffer: number;
+  characterOffer: number;
+  modStatus: string;
+  onMovePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;
+  onMoveCharacter: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;
+  onTogglePlayerProtect: (entry: InventoryEntry) => void;
+  onSelectCustomer: (character: Character) => void;
+  onNextCustomer: () => void;
+  onTrade: () => void;
+}) {
+  if (!character) {
+    return (
+      <section className="barter-v3-empty ui-screen">
+        <Panel title="Choose a customer">
+          <div className="barter-empty-copy">
+            <strong>No customer is seated at the table.</strong>
+            <span>Select a customer from the board to open the full barter conversation layout.</span>
+          </div>
+        </Panel>
+        <CustomerList people={people} selectedIndex={state.selectedCharacterIndex} market={market} onSelect={onSelectCustomer} />
+      </section>
+    );
+  }
+
+  const likes = character.bias?.filter((bias) => bias.percent > 0).slice(0, 4) || [];
+  const dislikes = character.bias?.filter((bias) => bias.percent < 0).slice(0, 3) || [];
+  const difference = Math.round(playerOffer - characterOffer);
+  const totalReference = Math.max(1, Math.max(playerOffer, characterOffer));
+  const balancePercent = Math.max(6, Math.min(94, 50 + (difference / totalReference) * 42));
+  const offerStatus = difference >= 0 ? `Favorable by ${money(difference)}` : `Short by ${money(Math.abs(difference))}`;
+
+  return (
+    <section className="barter-v3-layout ui-screen" aria-label="Barter conversation">
+      <aside className="barter-v3-side barter-v3-side-left">
+        <div className="barter-v3-side-ribbon">
+          <span>Customer Table</span>
+          <strong>{character.name}</strong>
+        </div>
+        <InventoryPanel
+          title={`${character.name}'s Offer`}
+          mode="offer"
+          inventory={character.inventory}
+          onMove={(entry, amount) => onMoveCharacter(entry, amount, true)}
+          onMoveAll={(entry) => onMoveCharacter(entry, "none", true)}
+        />
+        <InventoryPanel
+          title={`${character.name}'s Stock`}
+          inventory={character.inventory}
+          onMove={(entry, amount) => onMoveCharacter(entry, amount)}
+          onMoveAll={(entry) => onMoveCharacter(entry, "all")}
+        />
+      </aside>
+
+      <section className="barter-v3-center">
+        <Panel className="barter-v3-focus-panel" bodyClassName="barter-v3-focus-body">
+          <div className="barter-v3-scene">
+            <div className="barter-v3-portrait-stage">
+              <img className="barter-v3-portrait" src={portraitAsset(character.portraitFile)} alt="" />
+              {character.stallFile ? <img className="barter-v3-stall" src={stallAsset(character.stallFile)} alt="" /> : null}
+              <div className="barter-v3-nameplate">
+                <strong>{character.name}</strong>
+                <span>{character.profession || "Customer"}</span>
+              </div>
+            </div>
+
+            <div className="barter-v3-dialogue-card">
+              <div className="barter-v3-dialogue-head">
+                <span>Conversation</span>
+                <strong>{customerPrompt(character)}</strong>
+              </div>
+              <TypewriterText className="barter-v3-dialogue-text" text={customerIntro(character)} />
+              <p className="barter-v3-preference">{customerPreference(character)}</p>
+              <div className="barter-v3-reply">{customerReply(character)}</div>
+            </div>
+          </div>
+
+          <div className="barter-v3-value-board">
+            <div className="barter-v3-value-card">
+              <small>Your offer</small>
+              <strong>{money(playerOffer)}</strong>
+            </div>
+            <div className="barter-v3-balance">
+              <div className="barter-v3-balance-track">
+                <span className="barter-v3-balance-fill" style={{ width: `${balancePercent}%` }} />
+                <span className="barter-v3-balance-mid" />
+              </div>
+              <strong className={difference >= 0 ? "good" : "bad"}>{offerStatus}</strong>
+            </div>
+            <div className="barter-v3-value-card">
+              <small>Their offer</small>
+              <strong>{money(characterOffer)}</strong>
+            </div>
+          </div>
+
+          <div className="barter-v3-bias-row">
+            {[...likes, ...dislikes].map((bias) => (
+              <span className={`bias-tag ${bias.percent > 0 ? "like" : "dislike"}`} key={`${bias.tag}-${bias.percent}`}>{bias.tag} {bias.percent > 0 ? "+" : ""}{bias.percent}%</span>
+            ))}
+          </div>
+
+          <div className="barter-v3-choice-grid">
+            <button type="button"><strong>Ask Price</strong><span>Read their value bias.</span></button>
+            <button type="button"><strong>Sweeten Deal</strong><span>Add goods from inventory.</span></button>
+            <button type="button"><strong>Remove Goods</strong><span>Pull back from your offer.</span></button>
+            <button type="button"><strong>Watch Mood</strong><span>Compare likes and dislikes.</span></button>
+          </div>
+
+          <div className="barter-v3-action-row">
+            <Button className="barter-v3-primary-action" onClick={onTrade}>
+              <HandCoins size={18} /> Make Offer
+            </Button>
+            <Button onClick={onNextCustomer}>Next Customer</Button>
+          </div>
+        </Panel>
+
+        <Panel className="barter-v3-ledger-panel" bodyClassName="message-ledger">
+          <p>{state.message}</p>
+          <p className="mt-2 text-sm text-parchment-muted">{modStatus}</p>
+        </Panel>
+
+        <CustomerList people={people.slice(0, 8)} selectedIndex={state.selectedCharacterIndex} market={market} onSelect={onSelectCustomer} />
+      </section>
+
+      <aside className="barter-v3-side barter-v3-side-right">
+        <div className="barter-v3-side-ribbon player">
+          <span>Your Ledger</span>
+          <strong>Merchant Pack</strong>
+        </div>
+        <InventoryPanel title="Your Offer" mode="offer" inventory={state.playerInventory} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} />
+        <InventoryPanel
+          title="Your Inventory"
+          inventory={state.playerInventory}
+          onMove={(entry, amount) => onMovePlayer(entry, amount)}
+          onMoveAll={(entry) => onMovePlayer(entry, "all")}
+          onToggleProtect={onTogglePlayerProtect}
+          allowProtect
+        />
+      </aside>
+    </section>
   );
 }
 
