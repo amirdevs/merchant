@@ -13,7 +13,11 @@
     "rename:item-icons": "node scripts/rename-item-icons.cjs",
     "electron": "electron .",
     "package:win": "pnpm build && node scripts/package-win.cjs",
-    "extract:data": "node scripts/extract-data.cjs"
+    "extract:data": "node scripts/extract-data.cjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "check": "pnpm typecheck && pnpm build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",
@@ -34,6 +38,7 @@
   "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
   "devDependencies": {
     "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3"
+    "@types/react-dom": "^19.2.3",
+    "@biomejs/biome": "^1.9.4"
   }
 }

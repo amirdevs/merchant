@@ -1,0 +1,15 @@
+export const tagIcons: Array<[string, string]> = [
+  ["coins", "$"],
+  ["food", "F"],
+  ["weapons", "W"],
+  ["armor", "A"],
+  ["books", "B"],
+  ["maps", "M"],
+  ["magic", "*"],
+  ["jewlery", "J"],
+  ["jewelry", "J"],
+  ["storage", "S"],
+  ["clothes", "C"],
+  ["alchemy", "X"],
+  ["monster parts", "P"],
+];
