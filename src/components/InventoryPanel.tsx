@@ -76,6 +76,7 @@ export function InventoryPanel({
         return leftItem.name.localeCompare(rightItem.name);
       });
   }, [inventory, mode, query, sort]);
+
   const totalValue = rows.reduce((total, entry) => {
     const item = items[entry.itemIndex];
     const quantity = mode === "offer" ? entry.offerQuantity : visibleQuantity(entry);
@@ -89,25 +90,24 @@ export function InventoryPanel({
   }
 
   return (
-    <Panel className="min-h-[250px]" title={<span className="flex items-center justify-between gap-2"><span>{title}</span><small className="font-serif text-xs text-parchment-muted">{money(totalValue)}</small></span>}>
-      <div className="mb-2 grid grid-cols-[1fr_110px] gap-2">
-        <input
-          className="min-w-0 border border-brass/45 bg-black/25 px-2 py-1 text-sm text-parchment outline-none placeholder:text-parchment-muted focus:border-brass"
-          placeholder="Search"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-        />
-        <select
-          className="border border-brass/45 bg-panel-soft px-2 py-1 text-sm text-parchment outline-none focus:border-brass"
-          value={sort}
-          onChange={(event) => setSort(event.target.value as "name" | "value" | "quantity")}
-        >
+    <Panel
+      className="inventory-panel"
+      title={
+        <span className="flex w-full items-center justify-between gap-2">
+          <span className="truncate">{title}</span>
+          <small className="font-serif text-xs text-parchment-muted">{money(totalValue)}</small>
+        </span>
+      }
+    >
+      <div className="inventory-controls">
+        <input className="game-input" placeholder="Search goods" value={query} onChange={(event) => setQuery(event.target.value)} />
+        <select className="game-select" value={sort} onChange={(event) => setSort(event.target.value as "name" | "value" | "quantity")}>
           <option value="name">Name</option>
           <option value="value">Value</option>
           <option value="quantity">Qty</option>
         </select>
       </div>
-      <div className="grid max-h-[360px] auto-rows-[74px] grid-cols-[repeat(auto-fill,minmax(74px,1fr))] gap-1.5 overflow-auto pr-1">
+      <div className="inventory-grid">
         {rows.length ? (
           rows.map((entry) => {
             const item = items[entry.itemIndex];
@@ -115,16 +115,9 @@ export function InventoryPanel({
             const icon = itemIconAsset(item.iconFile);
 
             return (
-              <div
-                key={entry.itemIndex}
-                className={cn(
-                  "relative min-h-0 border border-brass/35 bg-black/25 text-left text-parchment hover:bg-ember/60",
-                  itemGridSpan(item.size),
-                  entry.protected && "border-brass bg-brass/10"
-                )}
-              >
+              <div key={entry.itemIndex} className={cn("item-slot", itemGridSpan(item.size), entry.protected && "protected")}>
                 <button
-                  className="grid h-full w-full grid-rows-[1fr_auto] p-1 text-left"
+                  className="item-button"
                   onClick={(event) => onMove(entry, clickAmount(event))}
                   onContextMenu={(event) => {
                     event.preventDefault();
@@ -132,10 +125,9 @@ export function InventoryPanel({
                   }}
                   title="Left click moves one. Right click moves all or clears. Shift moves half. Alt moves ten."
                 >
-                  <span className="relative grid min-h-0 place-items-center overflow-hidden border border-brass/30 bg-black/20">
+                  <span className="item-art-frame">
                     {icon ? (
                       <img
-                        className="relative z-10 max-h-full max-w-full bg-black/20 object-contain p-1"
                         src={icon}
                         alt=""
                         onError={(event) => {
@@ -143,28 +135,28 @@ export function InventoryPanel({
                         }}
                       />
                     ) : null}
-                    <span className="absolute inset-0 z-0 grid place-items-center text-lg font-bold text-brass/80">{iconFor(entry)}</span>
+                    <span className="item-fallback">{iconFor(entry)}</span>
                   </span>
-                  <span className="min-w-0 pt-1">
-                    <span className="block truncate text-xs">{item.name}</span>
-                    <small className="block truncate text-[11px] text-parchment-muted">{money(item.loafValue)}</small>
+                  <span className="item-meta">
+                    <span className="item-name">{item.name}</span>
+                    <small className="item-value">{money(item.loafValue)}</small>
                   </span>
-                  <strong className="absolute right-1 top-1 min-w-5 border border-brass/45 bg-panel/90 px-1 text-center text-xs">{quantity}</strong>
+                  <strong className="item-qty">{quantity}</strong>
                 </button>
                 {allowProtect ? (
                   <button
-                    className={cn("absolute left-1 top-1 grid h-6 w-6 place-items-center border border-brass/35 bg-panel/90 text-parchment-muted hover:text-brass", entry.protected && "text-brass")}
+                    className={cn("item-protect", entry.protected && "active")}
                     onClick={() => onToggleProtect?.(entry)}
                     title={entry.protected ? "Unstar item" : "Star item"}
                   >
-                    <Star size={15} fill={entry.protected ? "currentColor" : "none"} />
+                    <Star size={14} fill={entry.protected ? "currentColor" : "none"} />
                   </button>
                 ) : null}
               </div>
             );
           })
         ) : (
-          <p className="m-2 text-parchment-muted">Empty</p>
+          <p className="game-panel-empty">Empty</p>
         )}
       </div>
     </Panel>
