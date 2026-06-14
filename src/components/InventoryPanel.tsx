@@ -1,1 +1,1 @@
-export { InventoryPanel } from "@/sub-domains/inventory/components/inventory-panel.component";
+export { InventoryPanel } from "../sub-domains/inventory/components/InventoryPanel";
