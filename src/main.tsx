@@ -16,6 +16,8 @@ import {
   selectedCharacter,
   serializeGame,
   importGame,
+  items,
+  visibleQuantity,
   type GameState,
 } from "./lib/game";
 import { backdropAsset, mapAsset, portraitAsset, routeAsset, stallAsset, townAsset } from "./lib/assets";
@@ -243,21 +245,12 @@ function App() {
 
     if (activeView === "inventory") {
       return (
-        <section className="ui-screen inventory-screen-layout">
-          <InventoryPanel
-            title="Your Inventory"
-            inventory={state.playerInventory}
-            onMove={(entry, amount) => movePlayer(entry, amount)}
-            onMoveAll={(entry) => movePlayer(entry, "all")}
-            onToggleProtect={togglePlayerProtect}
-            allowProtect
-          />
-          <InventoryPanel title="Your Offer" mode="offer" inventory={state.playerInventory} onMove={(entry, amount) => movePlayer(entry, amount, true)} onMoveAll={(entry) => movePlayer(entry, "none", true)} />
-          <Panel title="Ledger Notes" bodyClassName="message-ledger">
-            <p>{state.message}</p>
-            <p className="mt-2 text-sm text-parchment-muted">Protect valuable goods before building offers. Offer slots are generated from the same real inventory entries.</p>
-          </Panel>
-        </section>
+        <InventoryManagementScreen
+          state={state}
+          playerOffer={playerOffer}
+          onMovePlayer={movePlayer}
+          onTogglePlayerProtect={togglePlayerProtect}
+        />
       );
     }
 
@@ -611,6 +604,94 @@ function MarketMap({ market, onTravel }: { market: ReturnType<typeof currentMark
   );
 }
 
+
+
+function InventoryManagementScreen({
+  state,
+  playerOffer,
+  onMovePlayer,
+  onTogglePlayerProtect,
+}: {
+  state: GameState;
+  playerOffer: number;
+  onMovePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;
+  onTogglePlayerProtect: (entry: InventoryEntry) => void;
+}) {
+  const carriedEntries = state.playerInventory.filter((entry) => visibleQuantity(entry) > 0);
+  const offeredEntries = state.playerInventory.filter((entry) => entry.offerQuantity > 0);
+  const protectedEntries = state.playerInventory.filter((entry) => entry.protected && visibleQuantity(entry) > 0);
+  const totalValue = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].loafValue * visibleQuantity(entry), 0);
+  const totalWeight = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].weight * visibleQuantity(entry), 0);
+  const rareCount = carriedEntries.filter((entry) => (items[entry.itemIndex].rarity || 1) > 1 || items[entry.itemIndex].unique).length;
+  const topGoods = [...carriedEntries]
+    .sort((left, right) => items[right.itemIndex].loafValue * visibleQuantity(right) - items[left.itemIndex].loafValue * visibleQuantity(left))
+    .slice(0, 6);
+
+  return (
+    <section className="inventory-v4-screen ui-screen" aria-label="Inventory management">
+      <Panel className="inventory-v4-overview" title="Merchant Pack" bodyClassName="inventory-v4-overview-body">
+        <div className="inventory-v4-hero-copy">
+          <span className="game-brand-kicker">Inventory Management</span>
+          <h2>Your goods, offers, and protected cargo</h2>
+          <p>{state.message}</p>
+        </div>
+        <div className="inventory-v4-stat-grid">
+          <span><small>Total value</small><strong>{money(totalValue)}</strong></span>
+          <span><small>Offer value</small><strong>{money(playerOffer)}</strong></span>
+          <span><small>Weight</small><strong>{totalWeight}</strong></span>
+          <span><small>Goods</small><strong>{carriedEntries.length}</strong></span>
+          <span><small>Protected</small><strong>{protectedEntries.length}</strong></span>
+          <span><small>Rare / unique</small><strong>{rareCount}</strong></span>
+        </div>
+      </Panel>
+
+      <div className="inventory-v4-main">
+        <InventoryPanel
+          title="Inventory"
+          subtitle="Search, filter, inspect, protect, and move goods into the current offer."
+          inventory={state.playerInventory}
+          variant="management"
+          onMove={(entry, amount) => onMovePlayer(entry, amount)}
+          onMoveAll={(entry) => onMovePlayer(entry, "all")}
+          onToggleProtect={onTogglePlayerProtect}
+          allowProtect
+        />
+
+        <aside className="inventory-v4-side">
+          <InventoryPanel
+            title="Current Offer"
+            subtitle="Right click clears a stack from the offer."
+            mode="offer"
+            variant="compact"
+            inventory={state.playerInventory}
+            onMove={(entry, amount) => onMovePlayer(entry, amount, true)}
+            onMoveAll={(entry) => onMovePlayer(entry, "none", true)}
+          />
+
+          <Panel title="Valuable Goods" bodyClassName="inventory-v4-valuables">
+            {topGoods.map((entry) => {
+              const item = items[entry.itemIndex];
+              const quantity = visibleQuantity(entry);
+              return (
+                <div className="inventory-v4-valuable-row" key={entry.itemIndex}>
+                  <strong>{item.name}</strong>
+                  <span>{quantity} × {money(item.loafValue)}</span>
+                </div>
+              );
+            })}
+            {!topGoods.length ? <div className="game-panel-empty">No goods in pack.</div> : null}
+          </Panel>
+
+          <Panel title="Search & Filter Notes" bodyClassName="message-ledger inventory-v4-notes">
+            <p>Use the search bar to find goods by name or tag. Use category chips to narrow the pack like the search/filter mockup.</p>
+            <p className="mt-2 text-sm text-parchment-muted">Click the eye button on any item to open the reusable item detail modal.</p>
+            {offeredEntries.length ? <p className="mt-2">Current offer contains {offeredEntries.length} goods.</p> : null}
+          </Panel>
+        </aside>
+      </div>
+    </section>
+  );
+}
 
 function BarterConversationScreen({
   state,
