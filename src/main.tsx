@@ -31,7 +31,7 @@ import { HelpModal } from "./components/HelpModal";
 import { TypewriterText } from "./components/TypewriterText";
 import { Button, IconButton, Muted, Panel } from "./components/ui";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "./lib/audio";
-import { BookOpen, CircleHelp, Download, HandCoins, Map, RotateCcw, Save, ScrollText, Upload, Users, Volume2, VolumeX } from "lucide-react";
+import { BookOpen, CircleHelp, Compass, Download, HandCoins, Map, PackageSearch, RotateCcw, Route, Save, ScrollText, Star, Store, Upload, Users, Volume2, VolumeX } from "lucide-react";
 
 type GameView = "main-menu" | "market" | "customers" | "barter" | "inventory" | "travel" | "system";
 
@@ -210,16 +210,17 @@ function App() {
 
     if (activeView === "customers") {
       return (
-        <section className="ui-screen customers-screen-layout">
-          <CustomerList people={people} selectedIndex={state.selectedCharacterIndex} market={market} onSelect={(person) => selectCharacter(person, true)} />
-          {character ? (
-            <CharacterCard character={character} playerOffer={playerOffer} characterOffer={characterOffer} onTrade={trade} onNextCustomer={nextCustomer} />
-          ) : (
-            <Panel title="Choose a customer">
-              <div className="game-panel-empty">Select a customer to inspect preferences, stock, and current trade mood.</div>
-            </Panel>
-          )}
-        </section>
+        <CustomersScreen
+          state={state}
+          market={market}
+          people={people}
+          character={character}
+          playerOffer={playerOffer}
+          characterOffer={characterOffer}
+          onSelect={(person) => selectCharacter(person, true)}
+          onTrade={trade}
+          onNextCustomer={nextCustomer}
+        />
       );
     }
 
@@ -255,12 +256,7 @@ function App() {
     }
 
     if (activeView === "travel") {
-      return (
-        <section className="ui-screen travel-screen-layout">
-          <TravelPanel market={market} onTravel={travel} />
-          <QuestPanel market={market} />
-        </section>
-      );
+      return <TravelMapScreen state={state} market={market} onTravel={travel} />;
     }
 
     return (
@@ -413,34 +409,180 @@ function MarketHubScreen({
   onOpenTravel: () => void;
   onOpenInventory: () => void;
 }) {
+  const carriedEntries = state.playerInventory.filter((entry) => visibleQuantity(entry) > 0);
+  const totalValue = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].loafValue * visibleQuantity(entry), 0);
+  const totalWeight = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].weight * visibleQuantity(entry), 0);
+  const routes = routeLedger(market, marketplaces).slice(0, 4);
+  const featuredPeople = people.slice(0, 6);
+
   return (
-    <section className="ui-screen market-hub-layout">
-      <Panel className="market-hero-panel" bodyClassName="p-0">
-        <div className="market-hero-art" style={{ backgroundImage: `url("${townAsset(market.townsquareFile)}")` }}>
-          <div className="market-hero-copy">
+    <section className="ui-screen market-v5-layout" aria-label="Market hub">
+      <Panel className="market-v5-hero-panel" bodyClassName="p-0">
+        <div className="market-v5-hero-art" style={{ backgroundImage: `url("${townAsset(market.townsquareFile)}")` }}>
+          <div className="market-v5-hero-badge">
+            <Store size={18} />
+            <span>Westgate Market Hub</span>
+          </div>
+          <div className="market-v5-hero-copy">
             <span className="game-brand-kicker">Current Market</span>
             <h2>{market.name}</h2>
-            <p>Day {state.day}. Stallage {money(market.stallage)}. Find customers, inspect local demand, then prepare the next route.</p>
-            <div className="market-hero-actions">
-              <Button onClick={onOpenInventory}><ScrollText size={16} /> Open Inventory</Button>
-              <Button onClick={onOpenTravel}><Map size={16} /> Routes</Button>
+            <p>Day {state.day}. Stallage {money(market.stallage)}. Watch the crowd, check demand, and choose the next customer before your route costs catch up.</p>
+            <div className="market-v5-hero-actions">
+              <Button onClick={onOpenInventory}><PackageSearch size={16} /> Manage Goods</Button>
+              <Button onClick={onOpenTravel}><Compass size={16} /> Open Map</Button>
             </div>
           </div>
         </div>
       </Panel>
-      <CustomerList people={people} selectedIndex={selectedIndex} market={market} onSelect={onSelect} />
+
+      <Panel className="market-v5-ledger" title="Merchant Ledger" bodyClassName="market-v5-stat-grid">
+        <span><small>Day</small><strong>{state.day}</strong></span>
+        <span><small>Cash Value</small><strong>{money(totalValue)}</strong></span>
+        <span><small>Cargo Weight</small><strong>{totalWeight}</strong></span>
+        <span><small>Goods</small><strong>{carriedEntries.length}</strong></span>
+      </Panel>
+
+      <Panel className="market-v5-demand" title="Local Economy" bodyClassName="market-v5-economy-body">
+        <MarketEconomyStrip title="Demand" text={compactBiasText(market, "demand")} />
+        <MarketEconomyStrip title="Discounts" text={compactBiasText(market, "discount")} />
+      </Panel>
+
+      <Panel className="market-v5-customers" title={<span><Users size={18} /> Customers Waiting</span>}>
+        <div className="market-v5-customer-row">
+          {featuredPeople.map((person) => (
+            <button key={person.index} className={`market-v5-customer ${selectedIndex === person.index ? "is-active" : ""}`} type="button" onClick={() => onSelect(person)}>
+              <img src={portraitAsset(person.portraitFile)} alt="" />
+              <strong>{person.name}</strong>
+              <span>{person.profession || "Customer"}</span>
+            </button>
+          ))}
+        </div>
+      </Panel>
+
       <QuestPanel market={market} />
-      <Panel title={<span><Map size={18} /> Nearby Routes</span>}>
-        <div className="travel-route-list compact">
-          {routeLedger(market, marketplaces).slice(0, 5).map(({ connection, to, days, tolls }) => (
-            <button key={`${market.index}-${connection.marketplaceIndex}-${connection.routeFile}`} className="travel-route" onClick={() => onTravel(connection.marketplaceIndex)}>
+
+      <Panel className="market-v5-routes" title={<span><Route size={18} /> Nearby Routes</span>}>
+        <div className="travel-route-list compact market-v5-route-list">
+          {routes.map(({ connection, to, days, tolls, demand, discounts }) => (
+            <button key={`${market.index}-${connection.marketplaceIndex}-${connection.routeFile}`} className="travel-route market-v5-route" onClick={() => onTravel(connection.marketplaceIndex)}>
               <img src={routeAsset(connection.routeFile)} alt="" />
-              <span className="min-w-0"><strong>{to.name}</strong><small>{days} days · {tolls} toll</small></span>
+              <span className="min-w-0"><strong>{to.name}</strong><small>{days} days · {tolls} toll · demand {demand}</small><small>Discounts {discounts}</small></span>
             </button>
           ))}
         </div>
       </Panel>
     </section>
+  );
+}
+
+function MarketEconomyStrip({ title, text }: { title: string; text: string }) {
+  return (
+    <div className="market-v5-economy-strip">
+      <strong>{title}</strong>
+      <p>{text}</p>
+    </div>
+  );
+}
+
+function CustomersScreen({
+  state,
+  market,
+  people,
+  character,
+  playerOffer,
+  characterOffer,
+  onSelect,
+  onTrade,
+  onNextCustomer,
+}: {
+  state: GameState;
+  market: ReturnType<typeof currentMarket>;
+  people: Character[];
+  character: Character | null;
+  playerOffer: number;
+  characterOffer: number;
+  onSelect: (character: Character) => void;
+  onTrade: () => void;
+  onNextCustomer: () => void;
+}) {
+  const selectedInventory = character?.inventory || [];
+  const selectedVisible = selectedInventory.filter((entry) => visibleQuantity(entry) > 0);
+  const selectedStockValue = selectedVisible.reduce((total, entry) => total + items[entry.itemIndex].loafValue * visibleQuantity(entry), 0);
+
+  return (
+    <section className="customers-v5-layout ui-screen" aria-label="Customers">
+      <Panel className="customers-v5-board" bodyClassName="p-0" title={<span><Users size={18} /> Customer Board</span>}>
+        <div className="customers-v5-market-art" style={{ backgroundImage: `url("${townAsset(market.townsquareFile)}")` }}>
+          <div className="customers-v5-grid">
+            {people.map((person) => (
+              <button key={person.index} className={`customers-v5-token ${state.selectedCharacterIndex === person.index ? "is-active" : ""}`} type="button" onClick={() => onSelect(person)}>
+                <img src={portraitAsset(person.portraitFile)} alt="" />
+                <strong>{person.name}</strong>
+                <span>{person.profession || "Customer"}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </Panel>
+
+      <section className="customers-v5-dossier">
+        {character ? (
+          <>
+            <Panel className="customers-v5-profile" bodyClassName="customers-v5-profile-body">
+              <div className="customers-v5-portrait-frame">
+                <img className="customers-v5-portrait" src={portraitAsset(character.portraitFile)} alt="" />
+                {character.stallFile ? <img className="customers-v5-stall" src={stallAsset(character.stallFile)} alt="" /> : null}
+              </div>
+              <div className="customers-v5-profile-copy">
+                <span className="game-brand-kicker">Customer Dossier</span>
+                <h2>{character.name}</h2>
+                <h3>{character.profession || "Market Customer"}</h3>
+                <TypewriterText className="dialogue-scroll customers-v5-dialogue" text={customerIntro(character)} />
+                <p className="preference-text">{customerPreference(character)}</p>
+              </div>
+            </Panel>
+
+            <Panel title="Trade Position" bodyClassName="customers-v5-trade-grid">
+              <span><small>Your Offer</small><strong>{money(playerOffer)}</strong></span>
+              <span><small>Their Offer</small><strong>{money(characterOffer)}</strong></span>
+              <span><small>Stock Value</small><strong>{money(selectedStockValue)}</strong></span>
+              <span><small>Visible Stock</small><strong>{selectedVisible.length}</strong></span>
+            </Panel>
+
+            <Panel title="Preferences" bodyClassName="customers-v5-preferences">
+              <CustomerPreferenceBoard character={character} />
+            </Panel>
+
+            <Panel title="Conversation Choices" bodyClassName="customers-v5-actions">
+              <button type="button"><strong>{customerPrompt(character)}</strong><span>{customerReply(character)}</span></button>
+              <Button onClick={onTrade}><HandCoins size={18} /> Make Offer</Button>
+              <Button onClick={onNextCustomer}>Next Customer</Button>
+            </Panel>
+          </>
+        ) : (
+          <Panel title="Choose a customer">
+            <div className="game-panel-empty">Select a customer from the board to inspect their portrait, preferences, stock value, and trade position.</div>
+          </Panel>
+        )}
+      </section>
+    </section>
+  );
+}
+
+function CustomerPreferenceBoard({ character }: { character: Character }) {
+  const likes = character.bias?.filter((bias) => bias.percent > 0).slice(0, 6) || [];
+  const dislikes = character.bias?.filter((bias) => bias.percent < 0).slice(0, 6) || [];
+  return (
+    <div className="customers-v5-bias-columns">
+      <div>
+        <strong><Star size={15} /> Likes</strong>
+        {likes.length ? likes.map((bias) => <span className="bias-tag like" key={bias.tag}>{bias.tag} +{bias.percent}%</span>) : <small>No clear likes listed.</small>}
+      </div>
+      <div>
+        <strong><Star size={15} /> Avoids</strong>
+        {dislikes.length ? dislikes.map((bias) => <span className="bias-tag dislike" key={bias.tag}>{bias.tag} {bias.percent}%</span>) : <small>No clear dislikes listed.</small>}
+      </div>
+    </div>
   );
 }
 
@@ -540,40 +682,49 @@ function QuestPanel({ market }: { market: ReturnType<typeof currentMarket> }) {
   );
 }
 
-function TravelPanel({ market, onTravel }: { market: ReturnType<typeof currentMarket>; onTravel: (marketIndex: number) => void }) {
+function TravelMapScreen({ state, market, onTravel }: { state: GameState; market: ReturnType<typeof currentMarket>; onTravel: (marketIndex: number) => void }) {
   const routes = routeLedger(market, marketplaces);
+  const bestRoute = routes[0];
 
   return (
-    <Panel title={<span><Map size={18} /> Travel</span>}>
-      <div className="travel-layout">
-        <MarketMap market={market} onTravel={onTravel} />
-
-        <div className="market-notes-grid">
-          <div className="note-card">
-            <strong>Current demand</strong>
-            <p>{compactBiasText(market, "demand")}</p>
+    <section className="travel-v5-layout ui-screen" aria-label="Travel map">
+      <Panel className="travel-v5-map-panel" bodyClassName="p-0">
+        <div className="travel-v5-map-stage">
+          <MarketMap market={market} onTravel={onTravel} />
+          <div className="travel-v5-map-card">
+            <span className="game-brand-kicker">Travel Planner</span>
+            <h2>{market.name}</h2>
+            <p>Day {state.day}. Routes are carved into the map board. Connected destinations are bright brass; locked cities stay dim.</p>
           </div>
-          <div className="note-card">
-            <strong>Current discounts</strong>
-            <p>{compactBiasText(market, "discount")}</p>
-          </div>
+          <div className="travel-v5-compass"><Compass size={34} /><span>Routes</span></div>
         </div>
+      </Panel>
 
-        <div className="travel-route-list">
-          {routes.map(({ connection, to, days, tolls, demand, discounts }) => (
-            <button key={`${market.index}-${connection.marketplaceIndex}-${connection.routeFile}`} className="travel-route" onClick={() => onTravel(connection.marketplaceIndex)}>
-              <img src={routeAsset(connection.routeFile)} alt="" />
-              <span className="min-w-0">
-                <strong>{to.name}</strong>
-                <small>Demand: {demand}</small>
-                <small>Discounts: {discounts}</small>
-              </span>
-              <span className="travel-route-cost">{days}d / {tolls} toll</span>
-            </button>
-          ))}
-        </div>
-      </div>
-    </Panel>
+      <aside className="travel-v5-side">
+        <Panel title={<span><Route size={18} /> Route Ledger</span>}>
+          <div className="travel-v5-route-stack">
+            {routes.map(({ connection, to, days, tolls, demand, discounts }) => (
+              <button key={`${market.index}-${connection.marketplaceIndex}-${connection.routeFile}`} className="travel-v5-route-card" type="button" onClick={() => onTravel(connection.marketplaceIndex)}>
+                <img src={routeAsset(connection.routeFile)} alt="" />
+                <span className="travel-v5-route-copy">
+                  <strong>{to.name}</strong>
+                  <small>{days} days · {tolls} toll</small>
+                  <em>Demand {demand} · Discounts {discounts}</em>
+                </span>
+              </button>
+            ))}
+          </div>
+        </Panel>
+
+        <Panel title="Market Pressure" bodyClassName="travel-v5-pressure">
+          <MarketEconomyStrip title="Demand" text={compactBiasText(market, "demand")} />
+          <MarketEconomyStrip title="Discounts" text={compactBiasText(market, "discount")} />
+          {bestRoute ? <div className="travel-v5-best-route"><strong>Suggested first check</strong><span>{bestRoute.to.name}</span></div> : null}
+        </Panel>
+
+        <QuestPanel market={market} />
+      </aside>
+    </section>
   );
 }
 
@@ -581,7 +732,7 @@ function MarketMap({ market, onTravel }: { market: ReturnType<typeof currentMark
   const connected = new Set(market.connections.map((connection) => connection.marketplaceIndex));
 
   return (
-    <div className="market-map">
+    <div className="market-map travel-v5-map">
       <img src={mapAsset()} alt="" />
       {marketplaces.map((place) => {
         if (!place.location) return null;
@@ -590,13 +741,13 @@ function MarketMap({ market, onTravel }: { market: ReturnType<typeof currentMark
         return (
           <button
             key={place.index}
-            className={`map-node ${isCurrent ? "current" : isConnected ? "connected" : "locked"}`}
+            className={`map-node travel-v5-node ${isCurrent ? "current" : isConnected ? "connected" : "locked"}`}
             style={{ top: `${place.location.top}%`, left: `${place.location.left}%` }}
-            disabled={!isConnected}
+            disabled={isCurrent || !isConnected}
             title={place.name}
             onClick={() => onTravel(place.index)}
           >
-            {place.name}
+            <span>{place.name}</span>
           </button>
         );
       })}
