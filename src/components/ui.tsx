@@ -1,1 +1,1 @@
-export { Button, IconButton, Muted, Panel } from "./ui";
+export { Button, IconButton, Muted, Panel } from "./ui/index";
