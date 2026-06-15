@@ -1,1 +1,1 @@
-This branch is reserved for restoring the refactored Patch 17 UI on the clean Tailwind base. The actual patch file was produced in ChatGPT as `merchant-ui-patch-22-restore-refactored-patch17.git.patch`.
+This placeholder branch is obsolete. Do not merge it.
