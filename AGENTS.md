@@ -103,3 +103,15 @@ Current worktree may be very dirty because the user is intentionally deleting/re
 ## Validation
 
 Run `pnpm audit:data` after data/script prompt changes. This has been passing.
+
+## UI Architecture Rules
+
+- Tailwind CSS is the default styling system. Use Tailwind utility classes directly in components for layout, spacing, typography, state styling, and responsive behavior.
+- Keep `src/styles.css` minimal: Tailwind imports, font-face declarations, theme tokens, root/body reset, and truly global browser basics only.
+- Do not add broad global override files such as `ui-cooking.css`, `ui-gamefit.css`, or similar patch-layer CSS.
+- Do not use global CSS to force all screens into shape. Build each screen as real React components that fit the game viewport by design.
+- Use small modular React files. Avoid giant components, giant utility files, and multi-component dump files.
+- Use component-local CSS modules only when Tailwind cannot cleanly express the effect, such as masks, pseudo-elements, nine-slice frame effects, or complex decorative asset layering.
+- Do not introduce duplicate architecture roots. The current clean base uses `src/app`, `src/features`, `src/components`, `src/lib`, and `src/data`.
+- Do not recreate `src/sub-domains` unless the user explicitly asks to return to that naming.
+- Before returning a patch, check imports for stale references to deleted folders and removed CSS layers.

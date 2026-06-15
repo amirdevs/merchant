@@ -1,1 +1,4 @@
-export { BrassDivider, Button, FrameSurface, IconButton, InventorySlotFrame, Muted, Panel, ScreenFrame, StatBadge } from "../../sub-domains/shared/components/ui";
+export { Button } from "./Button";
+export { IconButton } from "./IconButton";
+export { Muted } from "./Muted";
+export { Panel } from "./Panel";
