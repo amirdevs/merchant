@@ -5,7 +5,8 @@ export function IconButton({ className, ...props }: ButtonHTMLAttributes<HTMLBut
   return (
     <button
       className={cn(
-        "grid h-10 w-10 place-items-center border border-brass bg-ember text-parchment transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-55",
+        "grid h-10 w-10 place-items-center rounded-lg border border-brass bg-gradient-to-b from-ember to-[#553016] text-parchment transition hover:brightness-110",
+        "disabled:cursor-not-allowed disabled:opacity-55",
         "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brass",
         className
       )}
