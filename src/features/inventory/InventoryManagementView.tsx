@@ -105,14 +105,16 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
             </button>
           </div>
           <InventoryPanel title="Cargo" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} illegalTags={illegalTags} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onSetOfferQuantity={onSetPlayerOfferQuantity} onToggleProtect={onTogglePlayerProtect} allowProtect />
-          <div className="mt-4 grid gap-3 md:grid-cols-[180px_1fr_220px]">
+          <div className="mt-4 grid gap-3 md:grid-cols-5">
             <StatChip label="Carry" value={`${totals.weight} / ${totals.carryCapacity}`} icon={uiAssets.hud.weight} />
+            <StatChip label="Pull" value={`${totals.size} / ${totals.sizeCapacity}`} icon={uiAssets.hud.inventory} />
+            <StatChip label="Animals" value={totals.packAnimals} />
+            <StatChip label="Storage" value={totals.storageItems} />
             <StatChip label="Total Value" value={money(totals.value)} icon={uiAssets.hud.goldCoin} />
-            <Button size="lg" variant="secondary" onClick={() => onUnavailable("Bulk inventory actions are not implemented yet.")}><Grid3X3 size={18} /> Bulk Actions</Button>
           </div>
           {totals.canTravel ? null : (
             <div className="mt-3 rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/65 p-3 text-sm font-bold text-[#8d271f]">
-              Cargo exceeds travel capacity by {totals.overWeight || totals.overSize}. Reduce weight or size before traveling.
+              Cargo exceeds travel capacity. Over carry: {totals.overWeight}. Over pull: {totals.overSize}. Add pack animals, storage, or reduce cargo before traveling.
             </div>
           )}
         </Panel>

@@ -14,6 +14,8 @@ export type InventoryTotals = {
   sizeCapacity: number;
   overWeight: number;
   overSize: number;
+  packAnimals: number;
+  storageItems: number;
   canTravel: boolean;
 };
 
@@ -34,6 +36,8 @@ export function inventoryTotals(inventory: InventoryEntry[], items: Item[]): Inv
       totals.size += item.size * count;
       totals.carryCapacity += (item.carry || 0) * count;
       totals.sizeCapacity += (item.pull || 0) * count;
+      if (item.tags.includes("packhorses")) totals.packAnimals += count;
+      if (item.tags.includes("storage")) totals.storageItems += count;
       totals.overWeight = Math.max(0, totals.weight - totals.carryCapacity);
       totals.overSize = Math.max(0, totals.size - totals.sizeCapacity);
       totals.canTravel = totals.overWeight <= 0 && totals.overSize <= 0;
@@ -49,6 +53,8 @@ export function inventoryTotals(inventory: InventoryEntry[], items: Item[]): Inv
       sizeCapacity: BASE_SIZE_CAPACITY,
       overWeight: 0,
       overSize: 0,
+      packAnimals: 0,
+      storageItems: 0,
       canTravel: true,
     }
   );

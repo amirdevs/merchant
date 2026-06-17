@@ -59,10 +59,11 @@ export function GameShell({ controller, activeView, merchantProfile, uiPreferenc
               </span>
             </button>
 
-            <dl className="grid grid-cols-4 gap-1.5">
+            <dl className="grid grid-cols-5 gap-1.5">
               <HudResource icon={uiAssets.hud.day} label="Day" value={controller.state.day} />
               <HudResource icon={uiAssets.hud.wealth} label="Value" value={money(cargo.value)} />
               <HudResource icon={uiAssets.hud.weight} label="Carry" value={`${cargo.weight}/${cargo.carryCapacity}`} />
+              <HudResource icon={uiAssets.hud.inventory} label="Pull" value={`${cargo.size}/${cargo.sizeCapacity}`} />
               <HudResource icon={uiAssets.hud.inventory} label="Goods" value={cargo.visibleEntries} />
             </dl>
 

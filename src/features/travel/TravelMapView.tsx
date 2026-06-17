@@ -56,9 +56,10 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
               <StatChip label="Risk" value="Normal" />
               <StatChip label="Demand" value="Mixed" />
               <StatChip label="Capacity" value={cargo.canTravel ? "Safe" : "Over"} />
+              <StatChip label="Animals" value={cargo.packAnimals} />
             </div>
             <div className="mt-3 rounded-sm border border-[#9a7138]/55 bg-[#fff6d7]/55 p-3 text-sm text-[#3b260f]">
-              Carry {cargo.weight}/{cargo.carryCapacity} / Size {cargo.size}/{cargo.sizeCapacity}
+              Carry {cargo.weight}/{cargo.carryCapacity} / Pull {cargo.size}/{cargo.sizeCapacity} / Storage {cargo.storageItems}
               {currentIllegal.length ? <span className="mt-1 block font-bold text-[#8d271f]">Illegal here: {currentIllegal.length} item stack{currentIllegal.length === 1 ? "" : "s"}</span> : null}
             </div>
             <div className="mt-3 flex flex-wrap gap-2"><Button onClick={onEnterMarket}><MapPinned size={16} /> Enter Market</Button><Button subtle onClick={onOpenJournal}><BookOpen size={16} /> Journal</Button><Button subtle disabled>Skip Day</Button></div>
@@ -91,6 +92,7 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
               <StatChip label="Days" value={pendingRoute.travelDays} />
               <StatChip label="Toll" value={money(pendingRoute.tolls)} icon={uiAssets.hud.goldCoin} />
               <StatChip label="Capacity" value={cargo.canTravel ? "Safe" : "Over"} tone={cargo.canTravel ? "parchment" : "danger"} />
+              <StatChip label="Pack Animals" value={cargo.packAnimals} />
               <StatChip label="Copper" value={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls) ? "Ready" : "Short"} tone={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls) ? "parchment" : "danger"} />
             </div>
             {pendingIllegal.length ? <div className="rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/70 p-3 font-bold text-[#8d271f]">Destination law warning: {pendingIllegal.length} illegal stack{pendingIllegal.length === 1 ? "" : "s"} in cargo.</div> : null}
