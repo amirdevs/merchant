@@ -398,9 +398,240 @@ Tasks:
 - Save/load migration checks.
 - Desktop packaging if needed.
 
+## Roadmap V2 - From Current Prototype To Finished Game
+
+This is the active roadmap after the first parity pass. The old phase list above remains as the broad feature map; this V2 list is the practical build order from the current codebase.
+
+### V2.1 Stabilize The Core Trade Loop
+
+Status: next.
+
+Goal: make barter, inventory, travel, saves, and dialogue reliable enough to support larger systems.
+
+Tasks:
+
+- Add tests for Ask Price and Ask Offer using fixed player/NPC inventories.
+- Add tests for travel toll payment, capacity blocking, theft, and guard confiscation.
+- Add tests for save migration and four local save slots.
+- Add UI smoke checks for the barter screen so black-screen regressions are caught early.
+- Add an explicit error boundary around major game views.
+- Add undo last offer change.
+- Add confirm overwrite/delete for save slots.
+
+Acceptance:
+
+- A build plus tests catches broken barter, travel, and save behavior.
+- User-facing actions fail with visible messages instead of blank screens.
+- Save slots cannot be accidentally overwritten or deleted without confirmation.
+
+### V2.2 Finish Trading Parity
+
+Goal: make the trading/bargaining logic feel close to the original while staying clearer than the original.
+
+Tasks:
+
+- Add original-like `benfordsLawRandom` quantity selection for generated inventory and counteroffers.
+- Add NPC budget/wealth limits.
+- Add fair-match random chance and safety-net/gift behavior.
+- Add ultimatum mode when patience gets low.
+- Add reputation gates and reputation minimums.
+- Add barter-specific NPC roles: guard, thief, beggar, traveler, plunderer, snitch, guild president.
+- Add offer-quality audio reactions.
+- Add detailed debug breakdown for balancing.
+
+Acceptance:
+
+- NPCs do not all negotiate the same way.
+- Repeated weak offers, generous offers, and role-specific NPCs change outcomes.
+- Balancing can be inspected without guessing.
+
+### V2.3 Finish Inventory And Item Interaction
+
+Goal: make every important item category useful, inspectable, and manageable.
+
+Tasks:
+
+- Add item notes and persistent item highlights.
+- Add quest-needed markers in inventory and barter panels.
+- Add item comparison popovers.
+- Add readable book/letter viewer.
+- Add image viewer for maps and paintings.
+- Add special item handlers for maps, deeds, Myth cards, storage, and permits.
+- Add bulk actions: protect all, reveal all, clear offer, move exact stack sets.
+- Add item search that works from the inventory screen, not only a placeholder filter page.
+
+Acceptance:
+
+- Books, maps, paintings, deeds, cards, permits, and storage items have obvious actions.
+- Large inventories can be searched, filtered, sorted, marked, and managed quickly.
+
+### V2.4 Deepen Travel, Law, And Smuggling
+
+Goal: turn route planning and contraband into a strategic layer.
+
+Tasks:
+
+- Add stallage/market fee charging.
+- Add route risk previews using theft, law, toll, distance, value, and concealment.
+- Add guard inspection odds instead of automatic first illegal stack confiscation.
+- Add bribes, forged permits, and active evasion choices.
+- Add concealment quality and hidden-compartment upgrades.
+- Add black market customer hooks.
+- Add snitch behavior and reputation penalties.
+- Add packhorse care, injury, upkeep, and upgrades.
+- Add route ledger history: cost, incidents, profit, and travel notes.
+
+Acceptance:
+
+- Illegal goods are profitable but risky.
+- Concealment helps without becoming a guaranteed bypass.
+- Travel creates memorable outcomes and useful route history.
+
+### V2.5 Build The Real Dialogue And Quest Runtime
+
+Goal: move from contextual generated dialogue to authored stateful conversations and quests.
+
+Tasks:
+
+- Extract or define dialogue graph nodes with typed response choices.
+- Add current dialogue node state per active conversation.
+- Add typed callback registry for safe quest/story effects.
+- Add quest rewards: items, coins, unlocks, discounts, reputation, and flags.
+- Add quest objective checking against inventory, market, day, and NPC relation state.
+- Add quest completion transactions through barter.
+- Add quest failure and expiry.
+- Add journal tabs: active quests, completed, rumors, markets, NPCs, items, notes.
+- Add quest item highlighting across inventory, trade, and item detail.
+
+Acceptance:
+
+- Quests can be accepted, progressed, completed, failed, and rewarded.
+- Dialogue choices can safely trigger game effects without arbitrary script execution.
+- The journal tells the player what to do next.
+
+### V2.6 Add Contracts And Notice Board Jobs
+
+Goal: ensure every market offers useful repeatable work.
+
+Tasks:
+
+- Add contract generator for delivery, procurement, smuggling, courier, race, auction, and rumor jobs.
+- Add time limits, destination markets, required items, optional secrecy, and bonus conditions.
+- Add contract difficulty tiers.
+- Add contract tracking and pinning.
+- Add generated rewards based on distance, risk, rarity, and urgency.
+- Add contract failure consequences.
+
+Acceptance:
+
+- A player can always find a meaningful job without relying only on authored quests.
+- Contracts interact with trading, travel, smuggling, and events.
+
+### V2.7 Make Events Playable
+
+Goal: convert event previews into playable activities.
+
+Tasks:
+
+- Add event sessions for market events.
+- Add event demand/supply modifiers before and during events.
+- Add event banners in market, travel, and journal views.
+- Add auctions with lots, bidder behavior, reserve prices, bid/pass, and results.
+- Add drafts with pick order, scouting, confirm pick, and item transfer.
+- Add horse racing with entries, odds, advice, betting, results, and payouts.
+- Add event preparation hints from NPC dialogue and rumors.
+
+Acceptance:
+
+- Events change prices and create special opportunities.
+- Auctions, drafts, and races are playable from start to result.
+
+### V2.8 Build Myth As A Full Side Game
+
+Goal: make Myth a polished optional game loop, not just an item tag.
+
+Tasks:
+
+- Build pure Myth rules module.
+- Add card definitions, decks, hand, board, turn state, and win conditions.
+- Add quick-play against NPCs.
+- Add wagers, prizes, and relationship effects.
+- Add tournaments linked to event calendar.
+- Add card collection and deck management.
+- Add AI personalities for cautious, aggressive, collector, gambler, and expert players.
+
+Acceptance:
+
+- Myth can be played independently and can connect back to NPCs, quests, and events.
+
+### V2.9 Add Long-Term Progression
+
+Goal: give the late game strategic depth beyond hand trading.
+
+Tasks:
+
+- Add warehouses per major market.
+- Add company state, staff, agents, and route history.
+- Add shipments with risk/reward outcomes.
+- Add passive routes only after manual route mastery.
+- Add banking, loans, repayment, and debt consequences.
+- Add faction and kingdom reputation.
+- Add permits, guild seals, tax breaks, fines, and political consequences.
+- Add rival merchants with route plans, stock pressure, event participation, and relationship states.
+
+Acceptance:
+
+- The player can grow from hand trader to company operator.
+- Political, financial, and rival choices affect the world.
+
+### V2.10 Dynamic Market Simulation
+
+Goal: make the economy replayable and reactive.
+
+Tasks:
+
+- Add supply/demand drift by market, day, season, and event.
+- Add scarcity after player buyouts.
+- Add rumors before major price shifts.
+- Add regional production chains.
+- Add rival merchant impact on scarcity and price.
+- Add market recovery over time.
+- Add balancing tools to inspect price drift and outliers.
+
+Acceptance:
+
+- Trade routes are not solved forever.
+- Market conditions create new opportunities and risks across a playthrough.
+
+### V2.11 Polish, Balance, And Release
+
+Goal: make the game stable, readable, balanced, and shippable.
+
+Tasks:
+
+- Balance travel costs, stallage, theft, guard odds, barter thresholds, and rewards.
+- Add separate audio channels for UI, dialogue, ambient, events, and minigames.
+- Add animation polish for trade, travel, dialogue, events, and inventory actions.
+- Add broken asset scans for portraits, items, backdrops, routes, and UI parts.
+- Add save import/export compatibility checks.
+- Add full-play manual smoke script.
+- Add packaging/release build checklist.
+- Add final UX pass for all buttons, disabled states, tooltips, and error states.
+
+Acceptance:
+
+- A new player can start, trade, travel, complete jobs, save/load, and recover from errors without developer help.
+- Release builds are reproducible and verified.
+
+## V2 Immediate Next Steps
+
+1. Add regression tests for Ask Price, Ask Offer, travel risk, and save slots.
+2. Add an app-level error boundary to stop blank screens.
+3. Add save-slot overwrite/delete confirmation.
+4. Add undo last offer change.
+5. Implement quest objective checking and rewards.
+6. Expand notice board contracts after quest rewards work.
+
 ## Immediate Next Steps
 
-1. Finish Phase 1.1: economy, capacity, and travel costs.
-2. Add Phase 1.2: illegal goods and concealment markers.
-3. Add Phase 1.3: barter regression tests.
-4. Continue through Phase 2 once the core loop has real pressure and stable math.
+Deprecated. Use `V2 Immediate Next Steps` above.
