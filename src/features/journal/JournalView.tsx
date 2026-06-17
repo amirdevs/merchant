@@ -2,7 +2,7 @@ import { BookOpen, CheckCircle2, ScrollText } from "lucide-react";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { items } from "@/lib/game";
 import { marketEventPreviews } from "@/lib/events";
-import { questCanComplete, questItemProgress, questRewardCopper } from "@/lib/quests";
+import { questCanComplete, questItemProgress, questReward } from "@/lib/quests";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { uiAssets } from "@/lib/ui-assets";
 
@@ -23,6 +23,7 @@ export function JournalView({ state, onBack, onSetQuestStatus }: JournalViewProp
   const eventPreviews = marketEventPreviews(marketplaces, state.day).slice(0, 8);
   const currentQuestProgress = questItemProgress(market, state.playerInventory, items);
   const currentQuestReady = questCanComplete(market, state.playerInventory, items);
+  const currentQuestReward = questReward(market, items);
 
   return (
     <ScreenFrame title="Journal" eyebrow="Quests, Notices, Rumors" backdrop={uiAssets.backplates.marketTown} overlay="light">
@@ -47,7 +48,10 @@ export function JournalView({ state, onBack, onSetQuestStatus }: JournalViewProp
                   ))}
                 </div>
               ) : null}
-              <p className="mt-2 text-sm font-bold text-[#75501f]">Reward: {questRewardCopper(market)} copper</p>
+              <p className="mt-2 text-sm font-bold text-[#75501f]">
+                Reward: {currentQuestReward.copper} copper
+                {currentQuestReward.items.length ? ` / ${currentQuestReward.items.map((entry) => `${entry.quantity} ${items[entry.itemIndex]?.name || "item"}`).join(", ")}` : ""}
+              </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 <Button onClick={() => onSetQuestStatus(market.index, "accepted")}>Accept</Button>
                 <Button disabled={!currentQuestReady} variant="secondary" onClick={() => onSetQuestStatus(market.index, "ready")}>Mark Ready</Button>

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { InventoryEntry, Item, Marketplace } from "@/data/types";
-import { questCanComplete, questItemProgress, questRewardCopper } from "./quests";
+import { questCanComplete, questItemProgress, questReward, questRewardCopper } from "./quests";
 
 const items: Item[] = [
   { index: 0, name: "Juggernaut", iconFile: "juggernaut.png", tags: ["livestock"], loafValue: 100, size: 10, weight: 10, kingdomIndex: 0 },
@@ -42,5 +42,15 @@ describe("quests", () => {
   it("allows no-item quests and computes copper rewards", () => {
     expect(questCanComplete(market([]), [], items)).toBe(true);
     expect(questRewardCopper(market([], 50))).toBe(200);
+  });
+
+  it("returns authored item rewards when reward item data is available", () => {
+    const rewardMarket = market([], 50);
+    rewardMarket.quest!.data = { reward: 50, rewardItemFilename: "blue_gem", rewardQuantity: 3 };
+
+    expect(questReward(rewardMarket, items)).toEqual({
+      copper: 200,
+      items: [{ itemIndex: 1, quantity: 3 }],
+    });
   });
 });

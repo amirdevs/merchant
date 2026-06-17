@@ -25,7 +25,7 @@ import {
   type GameState,
 } from "@/lib/game";
 import { setOfferQuantity, type MoveAmount } from "@/lib/inventory";
-import { questCanComplete, questRewardCopper } from "@/lib/quests";
+import { questCanComplete, questReward } from "@/lib/quests";
 import { customerIntro } from "@/lib/dialogue";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "@/lib/audio";
 import type { MerchantController } from "@/app/types/MerchantController";
@@ -201,14 +201,21 @@ export function useMerchantController(): MerchantController {
       draft.questStates[String(marketIndex)] = status;
       const questName = market?.quest?.name || "Quest";
       if (status === "finished" && market?.quest) {
-        const copper = questRewardCopper(market);
+        const reward = questReward(market, items);
+        const copper = reward.copper;
         const copperItem = items.find((item) => item.name.toLowerCase() === "copper coins");
         if (copperItem) {
           const entry = draft.playerInventory.find((item) => item.itemIndex === copperItem.index);
           if (entry) entry.quantity += copper;
           else draft.playerInventory.push({ itemIndex: copperItem.index, quantity: copper, offerQuantity: 0 });
         }
-        draft.message = `${questName}: finished. Rewarded ${copper} copper.`;
+        for (const itemReward of reward.items) {
+          const entry = draft.playerInventory.find((item) => item.itemIndex === itemReward.itemIndex);
+          if (entry) entry.quantity += itemReward.quantity;
+          else draft.playerInventory.push({ itemIndex: itemReward.itemIndex, quantity: itemReward.quantity, offerQuantity: 0 });
+        }
+        const itemText = reward.items.length ? ` and ${reward.items.length} item reward${reward.items.length === 1 ? "" : "s"}` : "";
+        draft.message = `${questName}: finished. Rewarded ${copper} copper${itemText}.`;
         return;
       }
       draft.message = `${questName}: ${status}.`;

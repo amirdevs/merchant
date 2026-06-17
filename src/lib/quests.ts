@@ -46,3 +46,28 @@ export function questRewardCopper(market: Marketplace) {
   if (explicit !== null) return Math.max(10, explicit * 4);
   return Math.max(25, (market.index + 1) * 15);
 }
+
+export type QuestReward = {
+  copper: number;
+  items: Array<{ itemIndex: number; quantity: number }>;
+};
+
+function questData(market: Marketplace) {
+  return (market.quest?.data || {}) as Record<string, unknown>;
+}
+
+export function questReward(market: Marketplace, items: Item[]): QuestReward {
+  const data = questData(market);
+  const rewardToken = typeof data.rewardItemFilename === "string"
+    ? data.rewardItemFilename
+    : typeof data.rewardItem === "string"
+      ? data.rewardItem
+      : null;
+  const rewardQuantity = typeof data.rewardQuantity === "number" ? Math.max(1, data.rewardQuantity) : 1;
+  const rewardItem = rewardToken ? items.find((item) => itemMatchesQuestToken(item, rewardToken)) : null;
+
+  return {
+    copper: questRewardCopper(market),
+    items: rewardItem ? [{ itemIndex: rewardItem.index, quantity: rewardQuantity }] : [],
+  };
+}
