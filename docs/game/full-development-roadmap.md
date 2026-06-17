@@ -511,15 +511,17 @@ Acceptance:
 
 ### V2.6 Add Contracts And Notice Board Jobs
 
+Status: first pass implemented.
+
 Goal: ensure every market offers useful repeatable work.
 
 Tasks:
 
-- Add contract generator for delivery, procurement, smuggling, courier, race, auction, and rumor jobs.
-- Add time limits, destination markets, required items, optional secrecy, and bonus conditions.
-- Add contract difficulty tiers.
-- Add contract tracking and pinning.
-- Add generated rewards based on distance, risk, rarity, and urgency.
+- Add contract generator for delivery, procurement, smuggling, courier, race, auction, and rumor jobs. First pass includes delivery, procurement, and smuggling.
+- Add time limits, destination markets, required items, optional secrecy, and bonus conditions. First pass includes time limits, destinations, and risk summaries.
+- Add contract difficulty tiers. First pass includes low/medium/high risk.
+- Add contract tracking and pinning. First pass includes accepted/completed contract state.
+- Add generated rewards based on distance, risk, rarity, and urgency. First pass includes copper rewards from route and risk data.
 - Add contract failure consequences.
 
 Acceptance:
@@ -625,24 +627,26 @@ Acceptance:
 
 ## V2 Immediate Next Steps
 
-1. Add direct tests for travel toll payment and capacity blocking.
-2. Add UI smoke checks for the barter screen.
-3. Add NPC budget/wealth limits.
-4. Add ultimatum mode when patience gets low.
-5. Expand quest rewards beyond copper.
-6. Expand notice board contracts after quest rewards work.
+1. Add fair-match random chance and safety-net/gift behavior.
+2. Add original role-specific NPC behavior: guard, thief, beggar, traveler, plunderer, snitch, guild president.
+3. Add contract completion requirements and failure consequences.
+4. Add route risk previews with guard odds, theft odds, illegal-goods exposure, tolls, and cargo value.
+5. Add event banners and demand/supply modifiers.
+6. Start playable auction event sessions.
 
 ## Current Sprint - V2.1 Completion
+
+Status: implemented.
 
 Goal: finish the remaining safety net before deeper NPC/economy work.
 
 Tasks:
 
-- Extract travel execution into a pure testable game-logic function.
-- Test successful travel: toll is paid, day advances, market changes, arrival result is recorded.
-- Test failed travel: unaffordable toll does not move the player.
-- Test failed travel: overloaded cargo does not move the player.
-- Add a barter screen smoke test that renders the conversation view with a selected NPC and verifies core controls exist.
+- Extract travel execution into a pure testable game-logic function. Implemented.
+- Test successful travel: toll is paid, day advances, market changes, arrival result is recorded. Implemented.
+- Test failed travel: unaffordable toll does not move the player. Implemented.
+- Test failed travel: overloaded cargo does not move the player. Implemented.
+- Add a barter screen smoke test that renders the conversation view with a selected NPC and verifies core controls exist. Implemented.
 - Keep `pnpm test`, `pnpm audit:data`, and `pnpm build` passing.
 
 Acceptance:
