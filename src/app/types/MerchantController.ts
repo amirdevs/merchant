@@ -54,6 +54,7 @@ export type MerchantActions = {
   goodbye: () => void;
   trade: () => void;
   travel: (toMarketIndex: number) => void;
+  clearTravelResult: () => void;
   deleteSave: () => void;
 };
 

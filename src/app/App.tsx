@@ -101,7 +101,7 @@ export function App() {
       case "system":
         return <SystemMenuView onResume={() => navigate("market")} onLoadGame={() => navigate("load-game")} onSettings={() => navigate("settings")} onMainMenu={() => navigate("main-menu")} onSave={saveCurrent} onExport={controller.actions.exportSave} onNewGame={startFresh} />;
       case "travel":
-        return <TravelMapView state={controller.state} onEnterMarket={() => navigate("market")} onOpenJournal={() => controller.actions.setMessage("Journal and quest ledger are not implemented yet.")} onTravel={(marketIndex) => { controller.actions.travel(marketIndex); navigate("market"); }} />;
+        return <TravelMapView state={controller.state} onEnterMarket={() => navigate("market")} onOpenJournal={() => controller.actions.setMessage("Journal and quest ledger are not implemented yet.")} onTravel={controller.actions.travel} onClearTravelResult={controller.actions.clearTravelResult} />;
       case "market":
         return <MarketHubView market={controller.market} people={controller.people} onNavigate={navigate} onSelectCustomer={(person) => { controller.actions.selectCharacter(person); navigate("barter"); }} onUnavailable={controller.actions.setMessage} />;
       case "customers":

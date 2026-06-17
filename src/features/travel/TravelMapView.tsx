@@ -1,4 +1,5 @@
-import { BookOpen, MapPinned } from "lucide-react";
+import { BookOpen, MapPinned, Route } from "lucide-react";
+import { useState } from "react";
 import type { GameState } from "@/lib/game";
 import { items, kingdoms, marketplaces } from "@/lib/game";
 import { routeAsset } from "@/lib/assets";
@@ -6,13 +7,20 @@ import { canPayCopperToll, inventoryTotals } from "@/lib/economy";
 import { inventoryIllegalEntries } from "@/lib/legal";
 import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
-import { Button, LedgerRow, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
+import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
 
-export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal }: { state: GameState; onTravel: (marketIndex: number) => void; onEnterMarket: () => void; onOpenJournal: () => void }) {
+export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult }: { state: GameState; onTravel: (marketIndex: number) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void }) {
+  const [pendingDestination, setPendingDestination] = useState<number | null>(null);
   const market = marketplaces[state.marketIndex];
   const cargo = inventoryTotals(state.playerInventory, items);
   const currentKingdom = kingdoms[market.kingdomIndex];
   const currentIllegal = inventoryIllegalEntries(state.playerInventory, items, currentKingdom?.illegalItemTags || []);
+  const pendingRoute = pendingDestination === null ? null : market.connections.find((connection) => connection.marketplaceIndex === pendingDestination) || null;
+  const pendingMarket = pendingDestination === null ? null : marketplaces[pendingDestination];
+  const pendingKingdom = pendingMarket ? kingdoms[pendingMarket.kingdomIndex] : null;
+  const pendingIllegal = pendingKingdom ? inventoryIllegalEntries(state.playerInventory, items, pendingKingdom.illegalItemTags || []) : [];
+  const requestTravel = (marketIndex: number) => setPendingDestination(marketIndex);
+
   return (
     <ScreenFrame title="Travel Map" eyebrow="Market Planner" backdrop={uiAssets.backplates.travelMap} overlay="light">
       <div className="grid flex-1 gap-4 xl:grid-cols-[1.2fr_380px]">
@@ -29,7 +37,7 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal }:
                 className="absolute grid place-items-center rounded-full border-2 border-[#7f5b2a] bg-[#f2ddb1]/95 px-4 py-2 font-bold text-[#26170a] shadow-xl transition hover:scale-105"
                 style={{ left: `${20 + index * 18}%`, top: `${42 + (index % 2) * 18}%` }}
                 type="button"
-                onClick={() => onTravel(destination.index)}
+                onClick={() => requestTravel(destination.index)}
               >
                 <img className="mb-1 h-8 w-8 object-contain" src={uiAssets.map.friendlyCityMarker} alt="" />
                 {destination.name}
@@ -67,7 +75,7 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal }:
                     title={destination.name}
                     subtitle={`Toll ${money(connection.tolls)} copper / ${canPayCopperToll(state.playerInventory, items, connection.tolls) ? "payable" : "need copper"}${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""} / route asset ${routeAsset(connection.routeFile) ? "linked" : "pending"}`}
                     trailing={<span className="text-sm font-bold text-[#75501f]">{connection.travelDays}d</span>}
-                    onClick={() => onTravel(destination.index)}
+                    onClick={() => requestTravel(destination.index)}
                   />
                 );
               })}
@@ -75,6 +83,40 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal }:
           </Panel>
         </aside>
       </div>
+      {pendingRoute && pendingMarket ? (
+        <ModalShell title={<span className="inline-flex items-center gap-2"><Route size={18} /> Confirm Route</span>}>
+          <div className="grid gap-4 text-[#3b260f]">
+            <p className="text-lg">Travel from <strong>{market.name}</strong> to <strong>{pendingMarket.name}</strong>?</p>
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+              <StatChip label="Days" value={pendingRoute.travelDays} />
+              <StatChip label="Toll" value={money(pendingRoute.tolls)} icon={uiAssets.hud.goldCoin} />
+              <StatChip label="Capacity" value={cargo.canTravel ? "Safe" : "Over"} tone={cargo.canTravel ? "parchment" : "danger"} />
+              <StatChip label="Copper" value={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls) ? "Ready" : "Short"} tone={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls) ? "parchment" : "danger"} />
+            </div>
+            {pendingIllegal.length ? <div className="rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/70 p-3 font-bold text-[#8d271f]">Destination law warning: {pendingIllegal.length} illegal stack{pendingIllegal.length === 1 ? "" : "s"} in cargo.</div> : null}
+            <div className="flex justify-end gap-2">
+              <Button variant="secondary" onClick={() => setPendingDestination(null)}>Cancel</Button>
+              <Button onClick={() => { const next = pendingDestination; setPendingDestination(null); if (next !== null) onTravel(next); }}>Travel</Button>
+            </div>
+          </div>
+        </ModalShell>
+      ) : null}
+      {state.travelResult ? (
+        <ModalShell title="Arrival Summary">
+          <div className="grid gap-4 text-[#3b260f]">
+            <p className="text-lg">Arrived in <strong>{state.travelResult.toMarketName}</strong> from <strong>{state.travelResult.fromMarketName}</strong>.</p>
+            <div className="grid grid-cols-3 gap-2">
+              <StatChip label="Days" value={state.travelResult.days} />
+              <StatChip label="Toll Paid" value={money(state.travelResult.tolls)} icon={uiAssets.hud.goldCoin} />
+              <StatChip label="Day" value={state.travelResult.arrivalDay} />
+            </div>
+            <div className="flex justify-end gap-2">
+              <Button variant="secondary" onClick={onClearTravelResult}>Stay On Map</Button>
+              <Button onClick={() => { onClearTravelResult(); onEnterMarket(); }}>Enter Market</Button>
+            </div>
+          </div>
+        </ModalShell>
+      ) : null}
     </ScreenFrame>
   );
 }

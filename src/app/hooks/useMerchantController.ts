@@ -310,11 +310,25 @@ export function useMerchantController(): MerchantController {
         draft.message = `You need ${route.tolls} copper coins for the route toll.`;
         return;
       }
+      const fromMarketName = currentMarket(draft).name;
       spendCopperToll(draft.playerInventory, items, route.tolls);
       draft.marketIndex = toMarketIndex;
       draft.day += route.travelDays || 1;
       draft.selectedCharacterIndex = null;
+      draft.travelResult = {
+        fromMarketName,
+        toMarketName: marketplaces[toMarketIndex].name,
+        days: route.travelDays || 1,
+        tolls: route.tolls,
+        arrivalDay: draft.day,
+      };
       draft.message = `Paid ${route.tolls} copper toll and arrived in ${marketplaces[toMarketIndex].name}.`;
+    });
+  }
+
+  function clearTravelResult() {
+    update((draft) => {
+      draft.travelResult = null;
     });
   }
 
@@ -389,6 +403,7 @@ export function useMerchantController(): MerchantController {
       goodbye,
       trade,
       travel,
+      clearTravelResult,
       deleteSave,
     },
   };

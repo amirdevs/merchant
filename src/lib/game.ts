@@ -28,6 +28,13 @@ export type GameState = {
   message: string;
   offersMade: number;
   npcRelations: NpcRelations;
+  travelResult?: {
+    fromMarketName: string;
+    toMarketName: string;
+    days: number;
+    tolls: number;
+    arrivalDay: number;
+  } | null;
 };
 
 function clone<T>(value: T): T {
@@ -98,6 +105,7 @@ export function newGame(): GameState {
     message: "A new ledger begins in Boone.",
     offersMade: 0,
     npcRelations: {},
+    travelResult: null,
   };
 }
 
