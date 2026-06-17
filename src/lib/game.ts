@@ -5,11 +5,13 @@ import marketplacesJson from "../data/generated/marketplaces.json";
 import professionsJson from "../data/generated/professions.json";
 import type { Character, InventoryEntry, Item, Kingdom, Marketplace, ObtainableItem, Profession } from "../data/types";
 import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
+import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { addInventory, clearOffers, moveOffer, transferOffers, visibleQuantity } from "./inventory";
 import { applyModPacks } from "./mods";
 import { charactersAtMarket, nextCustomerIndex, selectedCharacter } from "./npc-flow";
 import { ensureRelation, type NpcRelations, reactionText, startingPatience } from "./reputation";
 import { deleteGameSave, importGame, loadGame, saveGame, serializeGame } from "./save";
+import { applyTravelRisks } from "./travel-risk";
 
 export const items = itemsJson as Item[];
 export const kingdoms = kingdomsJson as Kingdom[];
@@ -310,6 +312,50 @@ export function completeTrade(state: GameState) {
     offersMade: 0,
     message: reactionText(appraisal, character),
   };
+}
+
+export function travelToMarket(state: GameState, toMarketIndex: number) {
+  const route = currentMarket(state).connections.find((connection) => connection.marketplaceIndex === toMarketIndex);
+  if (!route) {
+    state.message = "No known route connects these markets.";
+    return false;
+  }
+
+  const cargo = inventoryTotals(state.playerInventory, items);
+  if (!cargo.canTravel) {
+    state.message = `Cargo is too heavy or bulky to travel. Carry ${cargo.weight}/${cargo.carryCapacity}, size ${cargo.size}/${cargo.sizeCapacity}.`;
+    return false;
+  }
+
+  if (!canPayCopperToll(state.playerInventory, items, route.tolls)) {
+    state.message = `You need ${route.tolls} copper coins for the route toll.`;
+    return false;
+  }
+
+  const fromMarketName = currentMarket(state).name;
+  spendCopperToll(state.playerInventory, items, route.tolls);
+  state.marketIndex = toMarketIndex;
+  state.day += route.travelDays || 1;
+  state.selectedCharacterIndex = null;
+  const riskEvents = applyTravelRisks({
+    inventory: state.playerInventory,
+    items,
+    destination: marketplaces[toMarketIndex],
+    kingdom: currentKingdom(state),
+    day: state.day,
+  });
+  state.travelResult = {
+    fromMarketName,
+    toMarketName: marketplaces[toMarketIndex].name,
+    days: route.travelDays || 1,
+    tolls: route.tolls,
+    arrivalDay: state.day,
+    events: riskEvents.map((event) => event.message),
+  };
+  state.message = riskEvents.length
+    ? `Arrived in ${marketplaces[toMarketIndex].name}. ${riskEvents[0].message}`
+    : `Paid ${route.tolls} copper toll and arrived in ${marketplaces[toMarketIndex].name}.`;
+  return true;
 }
 
 export { charactersAtMarket, clearOffers, deleteGameSave, importGame, loadGame, moveOffer, nextCustomerIndex, saveGame, selectedCharacter, serializeGame, visibleQuantity };

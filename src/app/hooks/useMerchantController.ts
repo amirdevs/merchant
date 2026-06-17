@@ -21,11 +21,10 @@ import {
   saveGame,
   selectedCharacter,
   serializeGame,
+  travelToMarket,
   type GameState,
 } from "@/lib/game";
 import { setOfferQuantity, type MoveAmount } from "@/lib/inventory";
-import { canPayCopperToll, inventoryTotals, spendCopperToll } from "@/lib/economy";
-import { applyTravelRisks } from "@/lib/travel-risk";
 import { questCanComplete, questRewardCopper } from "@/lib/quests";
 import { customerIntro } from "@/lib/dialogue";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "@/lib/audio";
@@ -303,43 +302,7 @@ export function useMerchantController(): MerchantController {
   function travel(toMarketIndex: number) {
     playUiSound("map");
     update((draft) => {
-      const route = currentMarket(draft).connections.find((connection) => connection.marketplaceIndex === toMarketIndex);
-      if (!route) {
-        draft.message = "No known route connects these markets.";
-        return;
-      }
-      const cargo = inventoryTotals(draft.playerInventory, items);
-      if (!cargo.canTravel) {
-        draft.message = `Cargo is too heavy or bulky to travel. Carry ${cargo.weight}/${cargo.carryCapacity}, size ${cargo.size}/${cargo.sizeCapacity}.`;
-        return;
-      }
-      if (!canPayCopperToll(draft.playerInventory, items, route.tolls)) {
-        draft.message = `You need ${route.tolls} copper coins for the route toll.`;
-        return;
-      }
-      const fromMarketName = currentMarket(draft).name;
-      spendCopperToll(draft.playerInventory, items, route.tolls);
-      draft.marketIndex = toMarketIndex;
-      draft.day += route.travelDays || 1;
-      draft.selectedCharacterIndex = null;
-      const riskEvents = applyTravelRisks({
-        inventory: draft.playerInventory,
-        items,
-        destination: marketplaces[toMarketIndex],
-        kingdom: currentKingdom(draft),
-        day: draft.day,
-      });
-      draft.travelResult = {
-        fromMarketName,
-        toMarketName: marketplaces[toMarketIndex].name,
-        days: route.travelDays || 1,
-        tolls: route.tolls,
-        arrivalDay: draft.day,
-        events: riskEvents.map((event) => event.message),
-      };
-      draft.message = riskEvents.length
-        ? `Arrived in ${marketplaces[toMarketIndex].name}. ${riskEvents[0].message}`
-        : `Paid ${route.tolls} copper toll and arrived in ${marketplaces[toMarketIndex].name}.`;
+      travelToMarket(draft, toMarketIndex);
     });
   }
 

@@ -632,6 +632,25 @@ Acceptance:
 5. Expand quest rewards beyond copper.
 6. Expand notice board contracts after quest rewards work.
 
+## Current Sprint - V2.1 Completion
+
+Goal: finish the remaining safety net before deeper NPC/economy work.
+
+Tasks:
+
+- Extract travel execution into a pure testable game-logic function.
+- Test successful travel: toll is paid, day advances, market changes, arrival result is recorded.
+- Test failed travel: unaffordable toll does not move the player.
+- Test failed travel: overloaded cargo does not move the player.
+- Add a barter screen smoke test that renders the conversation view with a selected NPC and verifies core controls exist.
+- Keep `pnpm test`, `pnpm audit:data`, and `pnpm build` passing.
+
+Acceptance:
+
+- Travel regressions are caught without relying on manual clicking.
+- Barter screen rendering regressions are caught before they become black-screen bugs.
+- The sprint can be marked complete before starting NPC budgets and ultimatum mode.
+
 ## Immediate Next Steps
 
 Deprecated. Use `V2 Immediate Next Steps` above.
