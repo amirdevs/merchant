@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { GameShell } from "@/app/components";
+import { AppErrorBoundary } from "@/app/components/AppErrorBoundary";
 import { useMerchantController } from "@/app/hooks/useMerchantController";
 import type { GameView, MerchantProfile, UiPreferences } from "@/app/types";
 import { HelpModal } from "@/components/HelpModal";
@@ -124,9 +125,11 @@ export function App() {
   })();
 
   return (
-    <GameShell controller={controller} activeView={activeView} merchantProfile={merchantProfile} uiPreferences={uiPreferences} onNavigate={navigate}>
-      {view}
-      {controller.helpOpen ? <HelpModal onClose={() => controller.actions.setHelpOpen(false)} /> : null}
-    </GameShell>
+    <AppErrorBoundary>
+      <GameShell controller={controller} activeView={activeView} merchantProfile={merchantProfile} uiPreferences={uiPreferences} onNavigate={navigate}>
+        {view}
+        {controller.helpOpen ? <HelpModal onClose={() => controller.actions.setHelpOpen(false)} /> : null}
+      </GameShell>
+    </AppErrorBoundary>
   );
 }
