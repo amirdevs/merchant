@@ -36,6 +36,7 @@ Do not use npm for installs or scripts unless the user explicitly asks.
 - The user expects commits when requested, using Conventional Commit style like `feat(ui): improve inventory`.
 - The user is fine with creating new saves; do not spend time preserving old save compatibility unless specifically requested.
 - Dist/release build output should not be committed.
+- If work becomes slow because of fixable local conditions, such as huge untracked files, Git asset scanning, stuck Git processes, large binary pushes, or long-running dev/build processes, stop active work and ask the user before continuing. Prefer fixing the slowdown first over waiting silently.
 
 ## Asset Pipeline State
 
