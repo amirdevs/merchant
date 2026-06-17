@@ -1,5 +1,6 @@
 import { BookOpen, CheckCircle2, ScrollText } from "lucide-react";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
+import { marketEventPreviews } from "@/lib/events";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { uiAssets } from "@/lib/ui-assets";
 
@@ -17,6 +18,7 @@ export function JournalView({ state, onBack, onSetQuestStatus }: JournalViewProp
   const questMarkets = marketplaces.filter((nextMarket) => nextMarket.quest);
   const currentStatus: QuestStatus = state.questStates[String(market.index)] || (market.quest ? "offered" : "unseen");
   const notes = state.dialogueLog.slice(0, 12);
+  const eventPreviews = marketEventPreviews(marketplaces, state.day).slice(0, 8);
 
   return (
     <ScreenFrame title="Journal" eyebrow="Quests, Notices, Rumors" backdrop={uiAssets.backplates.marketTown} overlay="light">
@@ -60,6 +62,22 @@ export function JournalView({ state, onBack, onSetQuestStatus }: JournalViewProp
         </Panel>
 
         <aside className="grid content-start gap-4">
+          <Panel title="Event Calendar" variant="parchment">
+            {eventPreviews.length ? (
+              <div className="grid gap-2">
+                {eventPreviews.map((event) => (
+                  <LedgerRow
+                    key={`${event.marketName}-${event.name}`}
+                    title={event.name}
+                    subtitle={`${event.marketName} / ${event.frequency}${event.characterName ? ` / ${event.characterName}` : ""}`}
+                    trailing={<span className="text-sm font-bold text-[#75501f]">Day {event.nextDay}</span>}
+                  />
+                ))}
+              </div>
+            ) : (
+              <p className="text-[#3b260f]">No market events are recorded yet.</p>
+            )}
+          </Panel>
           <Panel title={<span className="inline-flex items-center gap-2"><BookOpen size={18} /> Rumor Ledger</span>} variant="parchment">
             {notes.length ? (
               <div className="grid max-h-[62vh] gap-2 overflow-auto pr-1">
