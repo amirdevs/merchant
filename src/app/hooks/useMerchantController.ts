@@ -39,6 +39,11 @@ export function useMerchantController(): MerchantController {
   const [soundOn, setSoundOn] = useState(() => audioEnabled());
   const [saveSlots, setSaveSlots] = useState(() => listSaveSlots());
   const importInputRef = useRef<HTMLInputElement>(null);
+  const lastOfferSnapshotRef = useRef<{
+    player: Array<[number, number]>;
+    characterIndex: number | null;
+    character: Array<[number, number]>;
+  } | null>(null);
 
   const market = currentMarket(state);
   const people = useMemo(() => charactersAtMarket(state).slice(0, 18), [state]);
@@ -70,6 +75,22 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function rememberOfferSnapshot(draft: GameState) {
+    const current = selectedCharacter(draft);
+    lastOfferSnapshotRef.current = {
+      player: draft.playerInventory.map((entry) => [entry.itemIndex, entry.offerQuantity]),
+      characterIndex: current?.index ?? null,
+      character: current?.inventory.map((entry) => [entry.itemIndex, entry.offerQuantity]) || [],
+    };
+  }
+
+  function restoreOfferQuantities(inventory: InventoryEntry[], snapshot: Array<[number, number]>) {
+    for (const entry of inventory) {
+      const found = snapshot.find(([itemIndex]) => itemIndex === entry.itemIndex);
+      entry.offerQuantity = Math.max(0, Math.min(entry.quantity, found?.[1] || 0));
+    }
+  }
+
   function selectCharacter(next: Character) {
     playUiSound("menu_click");
     update((draft) => {
@@ -92,6 +113,7 @@ export function useMerchantController(): MerchantController {
   function movePlayer(entry: InventoryEntry, amount: MoveAmount, isOfferPanel = false) {
     playItemSound("page");
     update((draft) => {
+      rememberOfferSnapshot(draft);
       const actual = draft.playerInventory.find((item) => item.itemIndex === entry.itemIndex);
       if (actual) moveOffer(actual, amount, isOfferPanel);
     });
@@ -100,6 +122,7 @@ export function useMerchantController(): MerchantController {
   function moveCharacter(entry: InventoryEntry, amount: MoveAmount, isOfferPanel = false) {
     playItemSound("page");
     update((draft) => {
+      rememberOfferSnapshot(draft);
       const current = selectedCharacter(draft);
       const actual = current?.inventory.find((item) => item.itemIndex === entry.itemIndex);
       if (actual && current) moveOffer(actual, amount, isOfferPanel);
@@ -109,6 +132,7 @@ export function useMerchantController(): MerchantController {
   function setPlayerOfferQuantity(entry: InventoryEntry, quantity: number) {
     playItemSound("page");
     update((draft) => {
+      rememberOfferSnapshot(draft);
       const actual = draft.playerInventory.find((item) => item.itemIndex === entry.itemIndex);
       if (actual) setOfferQuantity(actual, quantity);
     });
@@ -117,6 +141,7 @@ export function useMerchantController(): MerchantController {
   function setCharacterOfferQuantity(entry: InventoryEntry, quantity: number) {
     playItemSound("page");
     update((draft) => {
+      rememberOfferSnapshot(draft);
       const current = selectedCharacter(draft);
       const actual = current?.inventory.find((item) => item.itemIndex === entry.itemIndex);
       if (actual) setOfferQuantity(actual, quantity);
@@ -178,11 +203,28 @@ export function useMerchantController(): MerchantController {
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
+      rememberOfferSnapshot(draft);
       clearOffers(draft.playerInventory);
       const current = selectedCharacter(draft);
       if (current) clearOffers(current.inventory);
       draft.message = "Cleared both sides of the offer.";
       draft.offersMade = 0;
+    });
+  }
+
+  function undoLastOfferChange() {
+    playUiSound("pack_closed");
+    update((draft) => {
+      const snapshot = lastOfferSnapshotRef.current;
+      if (!snapshot) {
+        draft.message = "No offer change to undo.";
+        return;
+      }
+      restoreOfferQuantities(draft.playerInventory, snapshot.player);
+      const current = snapshot.characterIndex === null ? null : draft.characters[snapshot.characterIndex];
+      if (current) restoreOfferQuantities(current.inventory, snapshot.character);
+      draft.message = "Restored the previous offer.";
+      lastOfferSnapshotRef.current = null;
     });
   }
 
@@ -219,6 +261,7 @@ export function useMerchantController(): MerchantController {
         return;
       }
 
+      rememberOfferSnapshot(draft);
       clearOffers(draft.playerInventory);
       const avoid = current.inventory.filter((entry) => entry.offerQuantity > 0).length === 1
         ? current.inventory.find((entry) => entry.offerQuantity > 0)?.itemIndex
@@ -261,6 +304,7 @@ export function useMerchantController(): MerchantController {
         return;
       }
 
+      rememberOfferSnapshot(draft);
       clearOffers(current.inventory);
       const avoid = draft.playerInventory.filter((entry) => entry.offerQuantity > 0).length === 1
         ? draft.playerInventory.find((entry) => entry.offerQuantity > 0)?.itemIndex
@@ -447,6 +491,7 @@ export function useMerchantController(): MerchantController {
       togglePlayerProtect,
       togglePlayerConceal,
       clearTradeOffers,
+      undoLastOfferChange,
       askPrice,
       askOffer,
       goodbye,

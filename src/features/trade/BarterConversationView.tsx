@@ -27,12 +27,13 @@ type BarterConversationViewProps = {
   onAskPrice: () => void;
   onAskOffer: () => void;
   onClearOffers: () => void;
+  onUndoOfferChange: () => void;
   onGoodbye: () => void;
   onHelp: () => void;
   onSpeak: (character: Character, topic: string, reply: string) => void;
 };
 
-export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onSetPlayerOfferQuantity, onSetCharacterOfferQuantity, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onGoodbye, onHelp, onSpeak }: BarterConversationViewProps) {
+export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onSetPlayerOfferQuantity, onSetCharacterOfferQuantity, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onUndoOfferChange, onGoodbye, onHelp, onSpeak }: BarterConversationViewProps) {
   const advantage = playerOffer - characterOffer;
   const illegalTags = currentKingdom(state).illegalItemTags || [];
   const relation = relationFor(state.npcRelations, character);
@@ -118,7 +119,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
                 </div>
                 <div className="mt-1 text-center text-sm">Your Advantage <strong className={advantage >= 0 ? "text-[#1f6f38]" : "text-[#8d271f]"}>{advantage >= 0 ? "+" : ""}{money(advantage)}</strong></div>
               </div>
-              <div className="mt-4 grid grid-cols-3 gap-2 lg:grid-cols-6"><Button size="lg" variant="secondary" onClick={onAskPrice}>Ask Price</Button><Button size="lg" variant="secondary" onClick={onAskOffer}>Ask Offer</Button><Button size="lg" onClick={onTrade}><Handshake size={16} /> Accept</Button><Button size="lg" variant="secondary" onClick={onClearOffers}>Clear</Button><Button size="lg" subtle onClick={onGoodbye}>Goodbye</Button><Button size="lg" subtle onClick={onHelp}><HelpCircle size={16} /> Help</Button></div>
+              <div className="mt-4 grid grid-cols-3 gap-2 lg:grid-cols-7"><Button size="lg" variant="secondary" onClick={onAskPrice}>Ask Price</Button><Button size="lg" variant="secondary" onClick={onAskOffer}>Ask Offer</Button><Button size="lg" onClick={onTrade}><Handshake size={16} /> Accept</Button><Button size="lg" variant="secondary" onClick={onUndoOfferChange}>Undo</Button><Button size="lg" variant="secondary" onClick={onClearOffers}>Clear</Button><Button size="lg" subtle onClick={onGoodbye}>Goodbye</Button><Button size="lg" subtle onClick={onHelp}><HelpCircle size={16} /> Help</Button></div>
             </div>
           ) : <div className="grid min-h-[26rem] place-items-center rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/55 p-8 text-center text-xl text-[#725331]">Choose a customer first.</div>}
         </Panel>

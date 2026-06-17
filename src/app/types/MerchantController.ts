@@ -53,6 +53,7 @@ export type MerchantActions = {
   togglePlayerProtect: (entry: InventoryEntry) => void;
   togglePlayerConceal: (entry: InventoryEntry) => void;
   clearTradeOffers: () => void;
+  undoLastOfferChange: () => void;
   askPrice: () => void;
   askOffer: () => void;
   goodbye: () => void;
