@@ -26,6 +26,7 @@ import {
 import { setOfferQuantity, type MoveAmount } from "@/lib/inventory";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "@/lib/economy";
 import { applyTravelRisks } from "@/lib/travel-risk";
+import { questCanComplete, questRewardCopper } from "@/lib/quests";
 import { customerIntro } from "@/lib/dialogue";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "@/lib/audio";
 import type { MerchantController } from "@/app/types/MerchantController";
@@ -193,8 +194,24 @@ export function useMerchantController(): MerchantController {
 
   function setQuestStatus(marketIndex: number, status: GameState["questStates"][string]) {
     update((draft) => {
+      const market = marketplaces[marketIndex];
+      if (status === "finished" && market?.quest && !questCanComplete(market, draft.playerInventory, items)) {
+        draft.message = `${market.quest.name}: required quest items are still missing.`;
+        return;
+      }
       draft.questStates[String(marketIndex)] = status;
-      const questName = marketplaces[marketIndex]?.quest?.name || "Quest";
+      const questName = market?.quest?.name || "Quest";
+      if (status === "finished" && market?.quest) {
+        const copper = questRewardCopper(market);
+        const copperItem = items.find((item) => item.name.toLowerCase() === "copper coins");
+        if (copperItem) {
+          const entry = draft.playerInventory.find((item) => item.itemIndex === copperItem.index);
+          if (entry) entry.quantity += copper;
+          else draft.playerInventory.push({ itemIndex: copperItem.index, quantity: copper, offerQuantity: 0 });
+        }
+        draft.message = `${questName}: finished. Rewarded ${copper} copper.`;
+        return;
+      }
       draft.message = `${questName}: ${status}.`;
     });
   }

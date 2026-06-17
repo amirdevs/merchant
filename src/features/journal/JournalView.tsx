@@ -1,6 +1,8 @@
 import { BookOpen, CheckCircle2, ScrollText } from "lucide-react";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
+import { items } from "@/lib/game";
 import { marketEventPreviews } from "@/lib/events";
+import { questCanComplete, questItemProgress, questRewardCopper } from "@/lib/quests";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { uiAssets } from "@/lib/ui-assets";
 
@@ -19,6 +21,8 @@ export function JournalView({ state, onBack, onSetQuestStatus }: JournalViewProp
   const currentStatus: QuestStatus = state.questStates[String(market.index)] || (market.quest ? "offered" : "unseen");
   const notes = state.dialogueLog.slice(0, 12);
   const eventPreviews = marketEventPreviews(marketplaces, state.day).slice(0, 8);
+  const currentQuestProgress = questItemProgress(market, state.playerInventory, items);
+  const currentQuestReady = questCanComplete(market, state.playerInventory, items);
 
   return (
     <ScreenFrame title="Journal" eyebrow="Quests, Notices, Rumors" backdrop={uiAssets.backplates.marketTown} overlay="light">
@@ -34,11 +38,20 @@ export function JournalView({ state, onBack, onSetQuestStatus }: JournalViewProp
             <div className="mb-4 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/60 p-4 text-[#3b260f]">
               <h2 className="font-display text-3xl text-[#26170a]">{market.quest.name}</h2>
               <p className="mt-2 text-base">{market.quest.todo || "No written objective yet. Ask around the market for details."}</p>
-              {market.quest.questItems?.length ? <p className="mt-2 text-sm font-bold text-[#75501f]">Needed: {market.quest.questItems.join(", ")}</p> : null}
+              {currentQuestProgress.length ? (
+                <div className="mt-3 grid gap-1 text-sm">
+                  {currentQuestProgress.map((entry) => (
+                    <span className={entry.complete ? "font-bold text-[#1f6f38]" : "font-bold text-[#8d271f]"} key={entry.token}>
+                      {entry.token}: held {entry.held}
+                    </span>
+                  ))}
+                </div>
+              ) : null}
+              <p className="mt-2 text-sm font-bold text-[#75501f]">Reward: {questRewardCopper(market)} copper</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 <Button onClick={() => onSetQuestStatus(market.index, "accepted")}>Accept</Button>
-                <Button variant="secondary" onClick={() => onSetQuestStatus(market.index, "ready")}>Mark Ready</Button>
-                <Button subtle onClick={() => onSetQuestStatus(market.index, "finished")}><CheckCircle2 size={16} /> Finish</Button>
+                <Button disabled={!currentQuestReady} variant="secondary" onClick={() => onSetQuestStatus(market.index, "ready")}>Mark Ready</Button>
+                <Button disabled={!currentQuestReady} subtle onClick={() => onSetQuestStatus(market.index, "finished")}><CheckCircle2 size={16} /> Finish</Button>
               </div>
               <p className="mt-2 text-sm font-bold uppercase tracking-wide text-[#75501f]">Status: {currentStatus}</p>
             </div>
