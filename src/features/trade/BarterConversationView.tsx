@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Handshake, HelpCircle, Scale } from "lucide-react";
 import type { Character, InventoryEntry } from "@/data/types";
 import { currentKingdom, type GameState } from "@/lib/game";
+import { moodLabel, patienceLabel, relationFor, trustLabel } from "@/lib/reputation";
 import type { MoveAmount } from "@/lib/inventory";
 import { portraitAsset } from "@/lib/assets";
 import { money } from "@/lib/format";
@@ -30,6 +31,7 @@ type BarterConversationViewProps = {
 export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onGoodbye, onHelp, onUnavailable }: BarterConversationViewProps) {
   const advantage = playerOffer - characterOffer;
   const illegalTags = currentKingdom(state).illegalItemTags || [];
+  const relation = relationFor(state.npcRelations, character);
 
   return (
     <ScreenFrame title="Barter / Conversation" eyebrow="Main Screen" backdrop={uiAssets.backplates.tradeConversation} overlay="dark" contentClassName="p-2 lg:p-3">
@@ -58,9 +60,9 @@ export function BarterConversationView({ state, character, playerOffer, characte
                   <h1 className="text-center font-display text-4xl text-[#26170a] lg:text-left">{character.name}</h1>
                   <p className="text-center font-bold text-[#75501f] lg:text-left">{character.profession}</p>
                   <dl className="mt-3 grid grid-cols-3 gap-2">
-                    <StatChip label="Mood" value="Open" icon={uiAssets.town.moodPositive} />
-                    <StatChip label="Trust" value="New" icon={uiAssets.town.relationshipBadge} />
-                    <StatChip label="Interest" value="Fair" icon={uiAssets.town.tradeStyleBadge} />
+                    <StatChip label="Mood" value={moodLabel(relation)} icon={uiAssets.town.moodPositive} tone={relation && relation.mood <= -2 ? "danger" : "parchment"} />
+                    <StatChip label="Trust" value={trustLabel(relation)} icon={uiAssets.town.relationshipBadge} />
+                    <StatChip label="Patience" value={patienceLabel(relation)} icon={uiAssets.town.tradeStyleBadge} tone={relation && relation.patience <= 2 ? "danger" : "parchment"} />
                   </dl>
                   <p className="mt-3 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/65 p-4 text-lg leading-snug text-[#3b260f] shadow-inner shadow-[#6c4418]/15">{message}</p>
                 </div>

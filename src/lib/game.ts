@@ -8,6 +8,7 @@ import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
 import { addInventory, clearOffers, moveOffer, transferOffers, visibleQuantity } from "./inventory";
 import { applyModPacks } from "./mods";
 import { charactersAtMarket, nextCustomerIndex, selectedCharacter } from "./npc-flow";
+import { ensureRelation, type NpcRelations, reactionText, startingPatience } from "./reputation";
 import { deleteGameSave, importGame, loadGame, saveGame, serializeGame } from "./save";
 
 export const items = itemsJson as Item[];
@@ -26,6 +27,7 @@ export type GameState = {
   playerInventory: InventoryEntry[];
   message: string;
   offersMade: number;
+  npcRelations: NpcRelations;
 };
 
 function clone<T>(value: T): T {
@@ -95,6 +97,7 @@ export function newGame(): GameState {
     playerInventory,
     message: "A new ledger begins in Boone.",
     offersMade: 0,
+    npcRelations: {},
   };
 }
 
@@ -156,22 +159,42 @@ export function completeTrade(state: GameState) {
   const characterValue = offerValue(character.inventory, character, "character", state);
   const appraisal = appraiseOffer(playerValue, characterValue, character);
   if (!["great_deal", "good_deal", "fair_deal"].includes(appraisal)) {
+    const next = clone(state);
+    const nextCharacter = selectedCharacter(next);
+    if (!nextCharacter) return state;
+    const relation = ensureRelation(next.npcRelations, nextCharacter);
+    relation.failedOffers += 1;
+    relation.patience -= 1;
+    relation.mood += appraisal === "close" ? -1 : appraisal === "reaching" ? -2 : -3;
+    if (appraisal === "far" || appraisal === "leave") relation.trust -= 1;
+    if (relation.patience <= 0) {
+      clearOffers(next.playerInventory);
+      clearOffers(nextCharacter.inventory);
+      next.offersMade += 1;
+      next.selectedCharacterIndex = null;
+      next.message = `${character.name} has lost patience and leaves the table.`;
+      return next;
+    }
     const missing = Math.max(0, Math.ceil(characterValue - playerValue));
-    return {
-      ...state,
-      offersMade: state.offersMade + 1,
-      message: `${character.name} refuses. Missing ${missing} loaf value. ${preferenceHint(character)}`,
-    };
+    next.offersMade += 1;
+    next.message = `${reactionText(appraisal, character)} Missing ${missing} loaf value. ${preferenceHint(character)} Patience: ${relation.patience}.`;
+    return next;
   }
 
   const next = clone(state);
   const nextCharacter = next.characters[character.index];
+  const relation = ensureRelation(next.npcRelations, nextCharacter);
+  relation.trades += 1;
+  relation.failedOffers = 0;
+  relation.patience = startingPatience(nextCharacter);
+  relation.mood += appraisal === "great_deal" ? 3 : appraisal === "good_deal" ? 2 : 1;
+  relation.trust += appraisal === "great_deal" ? 2 : 1;
   transferOffers(next.playerInventory, nextCharacter.inventory);
   transferOffers(nextCharacter.inventory, next.playerInventory);
   return {
     ...next,
     offersMade: 0,
-    message: `${character.name} accepts the trade.`,
+    message: reactionText(appraisal, character),
   };
 }
 

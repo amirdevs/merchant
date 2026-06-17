@@ -19,6 +19,7 @@ function isGameState(value: unknown): value is GameState {
       Array.isArray(candidate.playerInventory)
   )) return false;
   if (typeof candidate.offersMade !== "number") candidate.offersMade = 0;
+  if (!candidate.npcRelations || typeof candidate.npcRelations !== "object") candidate.npcRelations = {};
   return true;
 }
 
