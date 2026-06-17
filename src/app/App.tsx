@@ -73,13 +73,13 @@ export function App() {
     setActiveView("market");
   }
 
-  function saveCurrent() {
-    controller.actions.saveGame();
+  function saveCurrent(slot = 0) {
+    controller.actions.saveGame(slot);
     setSaveSeen(true);
   }
 
-  function loadCurrent() {
-    controller.actions.loadGame();
+  function loadCurrent(slot = 0) {
+    controller.actions.loadGame(slot);
     setSaveSeen(true);
     setActiveView("market");
   }
@@ -97,7 +97,7 @@ export function App() {
       case "new-profile":
         return <NewMerchantProfileView market={controller.market} merchantProfile={merchantProfile} onCreate={createMerchant} onBack={() => navigate("main-menu")} />;
       case "load-game":
-        return <SaveLoadView state={controller.state} merchantProfile={merchantProfile} importInputRef={controller.importInputRef} onBack={() => navigate("main-menu")} onSave={saveCurrent} onLoad={loadCurrent} onExport={controller.actions.exportSave} onImport={(file) => void controller.actions.importSave(file)} onDelete={() => { controller.actions.deleteSave(); setSaveSeen(false); }} onUnavailable={controller.actions.setMessage} />;
+        return <SaveLoadView state={controller.state} merchantProfile={merchantProfile} saveSlots={controller.saveSlots} importInputRef={controller.importInputRef} onBack={() => navigate("main-menu")} onSave={saveCurrent} onLoad={loadCurrent} onExport={controller.actions.exportSave} onImport={(file, slot) => void controller.actions.importSave(file, slot)} onDelete={(slot) => { controller.actions.deleteSave(slot); setSaveSeen(false); }} onUnavailable={controller.actions.setMessage} />;
       case "settings":
         return <SettingsView soundOn={controller.soundOn} uiPreferences={uiPreferences} onToggleSound={controller.actions.toggleAudio} onChangePreferences={setUiPreferences} onBack={() => navigate("main-menu")} />;
       case "system":

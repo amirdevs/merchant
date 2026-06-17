@@ -30,12 +30,14 @@ import { appraiseOffer } from "@/lib/barter";
 import { customerIntro } from "@/lib/dialogue";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "@/lib/audio";
 import type { MerchantController } from "@/app/types/MerchantController";
+import { listSaveSlots } from "@/lib/save";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
   const [helpOpen, setHelpOpen] = useState(false);
   const [modStatus, setModStatus] = useState("Loading mods...");
   const [soundOn, setSoundOn] = useState(() => audioEnabled());
+  const [saveSlots, setSaveSlots] = useState(() => listSaveSlots());
   const importInputRef = useRef<HTMLInputElement>(null);
 
   const market = currentMarket(state);
@@ -312,11 +314,16 @@ export function useMerchantController(): MerchantController {
     setState((current) => completeTrade(current));
   }
 
-  function deleteSave() {
+  function refreshSaveSlots() {
+    setSaveSlots(listSaveSlots());
+  }
+
+  function deleteSave(slot = 0) {
     playUiSound("pack_closed");
-    deleteGameSave();
+    deleteGameSave(slot);
+    refreshSaveSlots();
     update((draft) => {
-      draft.message = "Deleted the local browser save.";
+      draft.message = `Deleted save slot ${slot + 1}.`;
     });
   }
 
@@ -380,17 +387,18 @@ export function useMerchantController(): MerchantController {
     URL.revokeObjectURL(url);
   }
 
-  async function importSaveFile(file: File | undefined) {
+  async function importSaveFile(file: File | undefined, slot = 0) {
     if (!file) return;
     playUiSound("pack_open");
-    const imported = importGame(await file.text());
+    const imported = importGame(await file.text(), slot);
     if (!imported) {
       update((draft) => {
         draft.message = "Save import failed. The file was not a valid merchant save.";
       });
       return;
     }
-    setState({ ...imported, message: "Imported save file." });
+    refreshSaveSlots();
+    setState({ ...imported, message: `Imported save file into slot ${slot + 1}.` });
   }
 
   function toggleAudio() {
@@ -410,17 +418,19 @@ export function useMerchantController(): MerchantController {
     modStatus,
     helpOpen,
     soundOn,
+    saveSlots,
     importInputRef,
     actions: {
       setHelpOpen,
       newGame: () => setState(newGame()),
-      saveGame: () => {
+      saveGame: (slot = 0) => {
         playUiSound("pack_closed");
-        saveGame(state);
+        saveGame(state, slot);
+        refreshSaveSlots();
       },
-      loadGame: () => {
+      loadGame: (slot = 0) => {
         playUiSound("pack_open");
-        setState(loadGame() || state);
+        setState(loadGame(slot) || state);
       },
       exportSave,
       importSave: importSaveFile,

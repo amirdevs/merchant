@@ -2,11 +2,22 @@ import type { GameState } from "./game";
 
 export const SAVE_VERSION = 1;
 const SAVE_KEY = "merchant-react-save";
+const SAVE_SLOT_PREFIX = "merchant-react-save-slot-";
+const SAVE_SLOT_COUNT = 4;
 
 export type SaveEnvelope = {
   saveVersion: number;
   savedAt: string;
   game: GameState;
+};
+
+export type SaveSlotSummary = {
+  slot: number;
+  name: string;
+  savedAt: string | null;
+  day: number | null;
+  marketIndex: number | null;
+  empty: boolean;
 };
 
 function isGameState(value: unknown): value is GameState {
@@ -46,23 +57,51 @@ export function parseGameSave(raw: string) {
   }
 }
 
-export function saveGame(state: GameState) {
-  localStorage.setItem(SAVE_KEY, serializeGame(state));
+function slotKey(slot = 0) {
+  return `${SAVE_SLOT_PREFIX}${Math.max(0, Math.min(SAVE_SLOT_COUNT - 1, slot))}`;
 }
 
-export function loadGame() {
-  const raw = localStorage.getItem(SAVE_KEY);
+export function saveGame(state: GameState, slot = 0) {
+  const serialized = serializeGame(state);
+  localStorage.setItem(slotKey(slot), serialized);
+  if (slot === 0) localStorage.setItem(SAVE_KEY, serialized);
+}
+
+export function loadGame(slot = 0) {
+  const raw = localStorage.getItem(slotKey(slot)) || (slot === 0 ? localStorage.getItem(SAVE_KEY) : null);
   if (!raw) return null;
   return parseGameSave(raw);
 }
 
-export function deleteGameSave() {
-  localStorage.removeItem(SAVE_KEY);
+export function deleteGameSave(slot = 0) {
+  localStorage.removeItem(slotKey(slot));
+  if (slot === 0) localStorage.removeItem(SAVE_KEY);
 }
 
-export function importGame(raw: string) {
+export function importGame(raw: string, slot = 0) {
   const game = parseGameSave(raw);
   if (!game) return null;
-  saveGame(game);
+  saveGame(game, slot);
   return game;
+}
+
+export function listSaveSlots(): SaveSlotSummary[] {
+  return Array.from({ length: SAVE_SLOT_COUNT }, (_, slot) => {
+    const raw = localStorage.getItem(slotKey(slot)) || (slot === 0 ? localStorage.getItem(SAVE_KEY) : null);
+    if (!raw) return { slot, name: `Archive Slot ${slot + 1}`, savedAt: null, day: null, marketIndex: null, empty: true };
+    try {
+      const parsed = JSON.parse(raw) as SaveEnvelope | GameState;
+      const game = "game" in parsed ? parsed.game : parsed;
+      return {
+        slot,
+        name: slot === 0 ? "Primary Ledger" : `Archive Slot ${slot + 1}`,
+        savedAt: "savedAt" in parsed ? parsed.savedAt : null,
+        day: typeof game.day === "number" ? game.day : null,
+        marketIndex: typeof game.marketIndex === "number" ? game.marketIndex : null,
+        empty: false,
+      };
+    } catch {
+      return { slot, name: `Archive Slot ${slot + 1}`, savedAt: null, day: null, marketIndex: null, empty: true };
+    }
+  });
 }

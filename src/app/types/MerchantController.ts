@@ -2,6 +2,7 @@ import type { Dispatch, RefObject, SetStateAction } from "react";
 import type { Character, InventoryEntry, Marketplace } from "@/data/types";
 import type { GameState } from "@/lib/game";
 import type { MoveAmount } from "@/lib/inventory";
+import type { SaveSlotSummary } from "@/lib/save";
 
 export type GameView =
   | "main-menu"
@@ -35,10 +36,10 @@ export type UiPreferences = {
 export type MerchantActions = {
   setHelpOpen: Dispatch<SetStateAction<boolean>>;
   newGame: () => void;
-  saveGame: () => void;
-  loadGame: () => void;
+  saveGame: (slot?: number) => void;
+  loadGame: (slot?: number) => void;
   exportSave: () => void;
-  importSave: (file: File | undefined) => Promise<void>;
+  importSave: (file: File | undefined, slot?: number) => Promise<void>;
   toggleAudio: () => void;
   setMessage: (message: string) => void;
   speakWith: (character: Character, topic: string, reply: string) => void;
@@ -58,7 +59,7 @@ export type MerchantActions = {
   trade: () => void;
   travel: (toMarketIndex: number) => void;
   clearTravelResult: () => void;
-  deleteSave: () => void;
+  deleteSave: (slot?: number) => void;
 };
 
 export type MerchantController = {
@@ -71,6 +72,7 @@ export type MerchantController = {
   modStatus: string;
   helpOpen: boolean;
   soundOn: boolean;
+  saveSlots: SaveSlotSummary[];
   importInputRef: RefObject<HTMLInputElement | null>;
   actions: MerchantActions;
 };
