@@ -404,19 +404,19 @@ This is the active roadmap after the first parity pass. The old phase list above
 
 ### V2.1 Stabilize The Core Trade Loop
 
-Status: next.
+Status: mostly implemented.
 
 Goal: make barter, inventory, travel, saves, and dialogue reliable enough to support larger systems.
 
 Tasks:
 
-- Add tests for Ask Price and Ask Offer using fixed player/NPC inventories.
-- Add tests for travel toll payment, capacity blocking, theft, and guard confiscation.
-- Add tests for save migration and four local save slots.
+- Add tests for Ask Price and Ask Offer using fixed player/NPC inventories. Implemented.
+- Add tests for travel toll payment, capacity blocking, theft, and guard confiscation. Implemented for theft/guard risk; toll/capacity still need direct tests.
+- Add tests for save migration and four local save slots. Implemented.
 - Add UI smoke checks for the barter screen so black-screen regressions are caught early.
-- Add an explicit error boundary around major game views.
-- Add undo last offer change.
-- Add confirm overwrite/delete for save slots.
+- Add an explicit error boundary around major game views. Implemented.
+- Add undo last offer change. Implemented.
+- Add confirm overwrite/delete for save slots. Implemented.
 
 Acceptance:
 
@@ -430,7 +430,7 @@ Goal: make the trading/bargaining logic feel close to the original while staying
 
 Tasks:
 
-- Add original-like `benfordsLawRandom` quantity selection for generated inventory and counteroffers.
+- Add original-like `benfordsLawRandom` quantity selection for generated inventory and counteroffers. Implemented for generated inventory.
 - Add NPC budget/wealth limits.
 - Add fair-match random chance and safety-net/gift behavior.
 - Add ultimatum mode when patience gets low.
@@ -496,8 +496,8 @@ Tasks:
 - Extract or define dialogue graph nodes with typed response choices.
 - Add current dialogue node state per active conversation.
 - Add typed callback registry for safe quest/story effects.
-- Add quest rewards: items, coins, unlocks, discounts, reputation, and flags.
-- Add quest objective checking against inventory, market, day, and NPC relation state.
+- Add quest rewards: items, coins, unlocks, discounts, reputation, and flags. First pass copper rewards implemented.
+- Add quest objective checking against inventory, market, day, and NPC relation state. Inventory objective checking implemented.
 - Add quest completion transactions through barter.
 - Add quest failure and expiry.
 - Add journal tabs: active quests, completed, rumors, markets, NPCs, items, notes.
@@ -625,11 +625,11 @@ Acceptance:
 
 ## V2 Immediate Next Steps
 
-1. Add regression tests for Ask Price, Ask Offer, travel risk, and save slots.
-2. Add an app-level error boundary to stop blank screens.
-3. Add save-slot overwrite/delete confirmation.
-4. Add undo last offer change.
-5. Implement quest objective checking and rewards.
+1. Add direct tests for travel toll payment and capacity blocking.
+2. Add UI smoke checks for the barter screen.
+3. Add NPC budget/wealth limits.
+4. Add ultimatum mode when patience gets low.
+5. Expand quest rewards beyond copper.
 6. Expand notice board contracts after quest rewards work.
 
 ## Immediate Next Steps
