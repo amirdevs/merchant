@@ -29,10 +29,10 @@ type BarterConversationViewProps = {
   onClearOffers: () => void;
   onGoodbye: () => void;
   onHelp: () => void;
-  onUnavailable: (message: string) => void;
+  onSpeak: (character: Character, topic: string, reply: string) => void;
 };
 
-export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onSetPlayerOfferQuantity, onSetCharacterOfferQuantity, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onGoodbye, onHelp, onUnavailable }: BarterConversationViewProps) {
+export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onSetPlayerOfferQuantity, onSetCharacterOfferQuantity, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onGoodbye, onHelp, onSpeak }: BarterConversationViewProps) {
   const advantage = playerOffer - characterOffer;
   const illegalTags = currentKingdom(state).illegalItemTags || [];
   const relation = relationFor(state.npcRelations, character);
@@ -44,6 +44,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
     relation,
     day: state.day,
   }) : [];
+  const recentNotes = character ? state.dialogueLog.filter((entry) => entry.characterIndex === character.index).slice(0, 3) : [];
 
   return (
     <ScreenFrame title="Barter / Conversation" eyebrow="Main Screen" backdrop={uiAssets.backplates.tradeConversation} overlay="dark" contentClassName="p-2 lg:p-3">
@@ -87,7 +88,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
                       if (choice.id === "ask-price") onAskPrice();
                       else if (choice.id === "ask-offer" || choice.id === "barter") onAskOffer();
                       else if (choice.id === "goodbye") onGoodbye();
-                      else onUnavailable(choice.reply);
+                      else if (character) onSpeak(character, choice.label, choice.reply);
                     }}
                   >
                     {choice.label}
@@ -106,6 +107,12 @@ export function BarterConversationView({ state, character, playerOffer, characte
                   <img className="h-14 w-14 object-contain drop-shadow" src={uiAssets.hud.weight} alt="" />
                   <div><span className="block text-sm text-[#75501f]">Your Offer Value</span><strong className="font-display text-2xl">{money(playerOffer)}</strong></div>
                 </div>
+                {recentNotes.length ? (
+                  <div className="mt-3 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/55 p-3 text-sm text-[#3b260f]">
+                    <strong className="block text-[#75501f]">Remembered Notes</strong>
+                    {recentNotes.map((note) => <p className="mt-1 line-clamp-2" key={`${note.day}-${note.topic}`}>Day {note.day}, {note.topic}: {note.note}</p>)}
+                  </div>
+                ) : null}
                 <div className="mt-3 h-3 rounded-full border border-[#7f5b2a]/55 bg-[#7f5b2a]/35">
                   <span className="block h-full w-1/2 rounded-full bg-gradient-to-r from-[#1f5960] via-[#d5a641] to-[#8d271f]" />
                 </div>

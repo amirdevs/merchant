@@ -8,10 +8,11 @@ import { uiAssets } from "@/lib/ui-assets";
 import type { GameView } from "@/app/types";
 import { Button, Panel, ScreenFrame, StatChip, TabButton } from "@/components/ui";
 
-export function CustomersView({ state, people, selected, onSelect, onNext, onNavigate, onUnavailable }: { state: GameState; people: Character[]; selected: Character | null; onSelect: (person: Character) => void; onNext: () => void; onNavigate: (view: GameView) => void; onUnavailable: (message: string) => void }) {
+export function CustomersView({ state, people, selected, onSelect, onNext, onNavigate, onSpeak }: { state: GameState; people: Character[]; selected: Character | null; onSelect: (person: Character) => void; onNext: () => void; onNavigate: (view: GameView) => void; onSpeak: (character: Character, topic: string, reply: string) => void }) {
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
   const selectedRelation = relationFor(state.npcRelations, selected);
+  const recentNotes = selected ? state.dialogueLog.filter((entry) => entry.characterIndex === selected.index).slice(0, 5) : [];
 
   return (
     <ScreenFrame title="Customers" eyebrow="Roster and Dossier" backdrop={uiAssets.backplates.marketTown} overlay="light">
@@ -65,10 +66,16 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
               <p className="mt-3 rounded-md border border-[#9a7138]/60 bg-[#fff6d7]/45 p-3 text-sm text-[#3b260f]">{selected.dialogue?.who || selected.dialogue?.customReply || "A market customer waiting to bargain."}</p>
               <div className="mt-4 grid max-h-80 gap-2 overflow-auto pr-1">
                 {dialogueChoices(selected, { market, markets: marketplaces, kingdom, relation: selectedRelation, day: state.day }).filter((choice) => !["ask-price", "ask-offer", "barter", "goodbye"].includes(choice.id)).map((choice) => (
-                  <Button key={choice.id} subtle onClick={() => onUnavailable(choice.reply)}><MessageSquare size={16} /> {choice.label}</Button>
+                  <Button key={choice.id} subtle onClick={() => onSpeak(selected, choice.label, choice.reply)}><MessageSquare size={16} /> {choice.label}</Button>
                 ))}
                 <div className="flex flex-wrap gap-2"><Button onClick={() => onNavigate("barter")}>Trade</Button><Button subtle onClick={onNext}>Next Customer</Button></div>
               </div>
+              {recentNotes.length ? (
+                <div className="mt-4 rounded-md border border-[#9a7138]/60 bg-[#fff6d7]/45 p-3 text-sm text-[#3b260f]">
+                  <strong className="block text-[#75501f]">Conversation Notes</strong>
+                  {recentNotes.map((note) => <p className="mt-1 line-clamp-2" key={`${note.day}-${note.topic}`}>Day {note.day}, {note.topic}: {note.note}</p>)}
+                </div>
+              ) : null}
             </div>
           ) : (
             <div className="grid place-items-center rounded-md border border-dashed border-[#9a7138]/60 p-8 text-center text-[#725331]"><UserRound className="mb-3" /> Select a customer to inspect their preferences.</div>

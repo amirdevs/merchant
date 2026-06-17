@@ -40,6 +40,7 @@ export type MerchantActions = {
   importSave: (file: File | undefined) => Promise<void>;
   toggleAudio: () => void;
   setMessage: (message: string) => void;
+  speakWith: (character: Character, topic: string, reply: string) => void;
   selectCharacter: (next: Character) => void;
   nextCustomer: () => void;
   movePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;

@@ -147,6 +147,24 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function speakWith(character: Character, topic: string, reply: string) {
+    playUiSound("menu_click");
+    update((draft) => {
+      draft.message = reply;
+      draft.dialogueLog = [
+        {
+          day: draft.day,
+          characterIndex: character.index,
+          characterName: character.name,
+          marketIndex: draft.marketIndex,
+          topic,
+          note: reply,
+        },
+        ...(draft.dialogueLog || []).filter((entry) => !(entry.characterIndex === character.index && entry.topic === topic && entry.note === reply)),
+      ].slice(0, 80);
+    });
+  }
+
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
@@ -400,6 +418,7 @@ export function useMerchantController(): MerchantController {
       importSave: importSaveFile,
       toggleAudio,
       setMessage,
+      speakWith,
       selectCharacter,
       nextCustomer,
       movePlayer,

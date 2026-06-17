@@ -28,6 +28,14 @@ export type GameState = {
   message: string;
   offersMade: number;
   npcRelations: NpcRelations;
+  dialogueLog: Array<{
+    day: number;
+    characterIndex: number;
+    characterName: string;
+    marketIndex: number;
+    topic: string;
+    note: string;
+  }>;
   travelResult?: {
     fromMarketName: string;
     toMarketName: string;
@@ -106,6 +114,7 @@ export function newGame(): GameState {
     message: "A new ledger begins in Boone.",
     offersMade: 0,
     npcRelations: {},
+    dialogueLog: [],
     travelResult: null,
   };
 }
