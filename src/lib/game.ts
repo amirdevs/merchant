@@ -162,6 +162,91 @@ export function preferencePercent(character: Character, item: Item) {
   }, 0);
 }
 
+function itemPreferenceScore(state: GameState, character: Character, itemIndex: number) {
+  const item = items[itemIndex];
+  const profession = character.professionSlug ? professions[character.professionSlug] : undefined;
+  const market = currentMarket(state);
+  const kingdom = currentKingdom(state);
+  const scoreBias = (biases: Array<{ tag: string; percent: number }> = []) =>
+    biases.reduce((total, bias) => item.tags.includes(bias.tag) || item.name.toLowerCase() === bias.tag.toLowerCase() ? total + bias.percent : total, 0);
+  const exotic = item.kingdomIndex !== null && item.kingdomIndex !== kingdom?.index ? 20 : 0;
+  return preferencePercent(character, item) + scoreBias(profession?.bias) + scoreBias(market.bias) + scoreBias(kingdom?.bias) + exotic;
+}
+
+export function autoAskPrice(state: GameState, character: Character) {
+  const characterValue = offerValue(character.inventory, character, "character", state);
+  if (characterValue <= 0) return `Select goods from ${character.name}'s stock first, then ask for the price.`;
+
+  clearOffers(state.playerInventory);
+  const avoid = character.inventory.filter((entry) => entry.offerQuantity > 0).length === 1
+    ? character.inventory.find((entry) => entry.offerQuantity > 0)?.itemIndex
+    : undefined;
+  const candidates = state.playerInventory
+    .filter((entry) => entry.quantity > 0 && !entry.conceal && entry.itemIndex !== avoid)
+    .sort((left, right) => itemPreferenceScore(state, character, right.itemIndex) - itemPreferenceScore(state, character, left.itemIndex));
+
+  for (const entry of candidates) {
+    const item = items[entry.itemIndex];
+    if (item.tags.includes("packhorses") || item.tags.includes("storage") || item.tags.includes("cards")) continue;
+    if (item.loafValue > characterValue) continue;
+    while (entry.offerQuantity < entry.quantity) {
+      entry.offerQuantity++;
+      if (offerValue(state.playerInventory, character, "player", state) > characterValue) return `${character.name} names a price from your goods.`;
+    }
+  }
+
+  clearOffers(state.playerInventory);
+  return characterValue < 5
+    ? `${character.name} will not price such a small offer.`
+    : `${character.name} cannot find a fair price from your visible goods.`;
+}
+
+export function autoAskOffer(state: GameState, character: Character) {
+  const playerValue = offerValue(state.playerInventory, character, "player", state);
+  if (playerValue <= 0) return "Select some of your goods first, then ask what they will offer.";
+
+  clearOffers(character.inventory);
+  const avoid = state.playerInventory.filter((entry) => entry.offerQuantity > 0).length === 1
+    ? state.playerInventory.find((entry) => entry.offerQuantity > 0)?.itemIndex
+    : undefined;
+  const candidates = character.inventory
+    .filter((entry) => entry.quantity > 0 && entry.itemIndex !== avoid)
+    .sort((left, right) => itemPreferenceScore(state, character, left.itemIndex) - itemPreferenceScore(state, character, right.itemIndex));
+
+  for (const entry of candidates) {
+    const item = items[entry.itemIndex];
+    if (item.tags.includes("masks")) continue;
+    if (item.loafValue > playerValue) continue;
+    while (entry.offerQuantity < entry.quantity) {
+      entry.offerQuantity++;
+      if (offerValue(character.inventory, character, "character", state) > playerValue) break;
+    }
+    while (entry.offerQuantity > 1 && offerValue(character.inventory, character, "character", state) >= playerValue) {
+      entry.offerQuantity--;
+    }
+    if (offerValue(character.inventory, character, "character", state) > 0) break;
+  }
+
+  while (offerValue(state.playerInventory, character, "player", state) > offerValue(character.inventory, character, "character", state) * 3) {
+    const offered = character.inventory.find((entry) => entry.offerQuantity > 0);
+    if (!offered) break;
+    if (offered.offerQuantity <= 1) break;
+    offered.offerQuantity--;
+  }
+
+  const appraisal = appraiseOffer(
+    offerValue(state.playerInventory, character, "player", state),
+    offerValue(character.inventory, character, "character", state),
+    character
+  );
+  if (["great_deal", "good_deal", "fair_deal"].includes(appraisal) && character.inventory.some((entry) => entry.offerQuantity > 0)) {
+    return `${character.name} makes a counteroffer.`;
+  }
+
+  clearOffers(character.inventory);
+  return `${character.name} cannot match that offer with their stock.`;
+}
+
 function preferenceHint(character: Character) {
   const likes = (character.bias || [])
     .filter((bias) => bias.percent > 0)

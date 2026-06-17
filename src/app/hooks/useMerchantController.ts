@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { Character, InventoryEntry } from "@/data/types";
 import {
   charactersAtMarket,
+  autoAskOffer,
+  autoAskPrice,
   completeTrade,
   currentMarket,
   currentKingdom,
@@ -16,8 +18,6 @@ import {
   newGame,
   nextCustomerIndex,
   offerValue,
-  preferencePercent,
-  professions,
   saveGame,
   selectedCharacter,
   serializeGame,
@@ -26,7 +26,6 @@ import {
 import { setOfferQuantity, type MoveAmount } from "@/lib/inventory";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "@/lib/economy";
 import { applyTravelRisks } from "@/lib/travel-risk";
-import { appraiseOffer } from "@/lib/barter";
 import { customerIntro } from "@/lib/dialogue";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "@/lib/audio";
 import type { MerchantController } from "@/app/types/MerchantController";
@@ -228,25 +227,6 @@ export function useMerchantController(): MerchantController {
     });
   }
 
-  function itemPreferenceScore(draft: GameState, current: Character, itemIndex: number) {
-    const item = items[itemIndex];
-    const profession = current.professionSlug ? professions[current.professionSlug] : undefined;
-    const market = currentMarket(draft);
-    const kingdom = currentKingdom(draft);
-    const scoreBias = (biases: Array<{ tag: string; percent: number }> = []) =>
-      biases.reduce((total, bias) => item.tags.includes(bias.tag) || item.name.toLowerCase() === bias.tag.toLowerCase() ? total + bias.percent : total, 0);
-    const exotic = item.kingdomIndex !== null && item.kingdomIndex !== kingdom?.index ? 20 : 0;
-    return preferencePercent(current, item) + scoreBias(profession?.bias) + scoreBias(market.bias) + scoreBias(kingdom?.bias) + exotic;
-  }
-
-  function acceptanceFor(draft: GameState, current: Character) {
-    return appraiseOffer(
-      offerValue(draft.playerInventory, current, "player", draft),
-      offerValue(current.inventory, current, "character", draft),
-      current
-    );
-  }
-
   function askPrice() {
     playUiSound("menu_click");
     update((draft) => {
@@ -255,38 +235,8 @@ export function useMerchantController(): MerchantController {
         draft.message = "Choose a customer before asking for a price.";
         return;
       }
-      const characterValue = offerValue(current.inventory, current, "character", draft);
-      if (characterValue <= 0) {
-        draft.message = `Select goods from ${current.name}'s stock first, then ask for the price.`;
-        return;
-      }
-
       rememberOfferSnapshot(draft);
-      clearOffers(draft.playerInventory);
-      const avoid = current.inventory.filter((entry) => entry.offerQuantity > 0).length === 1
-        ? current.inventory.find((entry) => entry.offerQuantity > 0)?.itemIndex
-        : undefined;
-      const candidates = draft.playerInventory
-        .filter((entry) => entry.quantity > 0 && !entry.conceal && entry.itemIndex !== avoid)
-        .sort((left, right) => itemPreferenceScore(draft, current, right.itemIndex) - itemPreferenceScore(draft, current, left.itemIndex));
-
-      for (const entry of candidates) {
-        const item = items[entry.itemIndex];
-        if (item.tags.includes("packhorses") || item.tags.includes("storage") || item.tags.includes("cards")) continue;
-        if (item.loafValue > characterValue) continue;
-        while (entry.offerQuantity < entry.quantity) {
-          entry.offerQuantity++;
-          if (offerValue(draft.playerInventory, current, "player", draft) > characterValue) {
-            draft.message = `${current.name} names a price from your goods.`;
-            return;
-          }
-        }
-      }
-
-      clearOffers(draft.playerInventory);
-      draft.message = characterValue < 5
-        ? `${current.name} will not price such a small offer.`
-        : `${current.name} cannot find a fair price from your visible goods.`;
+      draft.message = autoAskPrice(draft, current);
     });
   }
 
@@ -298,46 +248,8 @@ export function useMerchantController(): MerchantController {
         draft.message = "Choose a customer before asking for an offer.";
         return;
       }
-      const playerValue = offerValue(draft.playerInventory, current, "player", draft);
-      if (playerValue <= 0) {
-        draft.message = "Select some of your goods first, then ask what they will offer.";
-        return;
-      }
-
       rememberOfferSnapshot(draft);
-      clearOffers(current.inventory);
-      const avoid = draft.playerInventory.filter((entry) => entry.offerQuantity > 0).length === 1
-        ? draft.playerInventory.find((entry) => entry.offerQuantity > 0)?.itemIndex
-        : undefined;
-      const candidates = current.inventory
-        .filter((entry) => entry.quantity > 0 && entry.itemIndex !== avoid)
-        .sort((left, right) => itemPreferenceScore(draft, current, left.itemIndex) - itemPreferenceScore(draft, current, right.itemIndex));
-
-      for (const entry of candidates) {
-        const item = items[entry.itemIndex];
-        if (item.tags.includes("masks")) continue;
-        if (item.loafValue > playerValue) continue;
-        while (entry.offerQuantity < entry.quantity) {
-          entry.offerQuantity++;
-          if (offerValue(current.inventory, current, "character", draft) > playerValue) break;
-        }
-        if (offerValue(current.inventory, current, "character", draft) > 0) break;
-      }
-
-      while (offerValue(draft.playerInventory, current, "player", draft) > offerValue(current.inventory, current, "character", draft) * 3) {
-        const offered = current.inventory.find((entry) => entry.offerQuantity > 0);
-        if (!offered) break;
-        offered.offerQuantity--;
-      }
-
-      const appraisal = acceptanceFor(draft, current);
-      if (["great_deal", "good_deal", "fair_deal"].includes(appraisal) && current.inventory.some((entry) => entry.offerQuantity > 0)) {
-        draft.message = `${current.name} makes a counteroffer.`;
-        return;
-      }
-
-      clearOffers(current.inventory);
-      draft.message = `${current.name} cannot match that offer with their stock.`;
+      draft.message = autoAskOffer(draft, current);
     });
   }
 
