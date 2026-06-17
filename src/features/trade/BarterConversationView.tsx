@@ -3,6 +3,7 @@ import { Handshake, HelpCircle, Scale } from "lucide-react";
 import type { Character, InventoryEntry } from "@/data/types";
 import { currentKingdom, type GameState } from "@/lib/game";
 import { moodLabel, patienceLabel, relationFor, trustLabel } from "@/lib/reputation";
+import { buildDealHints } from "@/lib/deal-intelligence";
 import type { MoveAmount } from "@/lib/inventory";
 import { portraitAsset } from "@/lib/assets";
 import { money } from "@/lib/format";
@@ -32,6 +33,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
   const advantage = playerOffer - characterOffer;
   const illegalTags = currentKingdom(state).illegalItemTags || [];
   const relation = relationFor(state.npcRelations, character);
+  const dealHints = buildDealHints(state, character, playerOffer, characterOffer);
 
   return (
     <ScreenFrame title="Barter / Conversation" eyebrow="Main Screen" backdrop={uiAssets.backplates.tradeConversation} overlay="dark" contentClassName="p-2 lg:p-3">
@@ -98,7 +100,20 @@ export function BarterConversationView({ state, character, playerOffer, characte
         <div className="grid gap-4">
           <InventoryPanel title="Your Offer" mode="offer" variant="compact" panelVariant="wood" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} />
           <InventoryPanel title="Your Inventory" variant="compact" panelVariant="wood" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onToggleProtect={onTogglePlayerProtect} allowProtect />
-          <Panel title={<span className="inline-flex items-center gap-2"><Scale size={18} /> Preferences</span>} variant="wood" dense><p className="text-sm text-[#ead7a8]">Likes, dislikes, missing value, and acceptance hints stay close to both offer panels.</p></Panel>
+          <Panel title={<span className="inline-flex items-center gap-2"><Scale size={18} /> Deal Intelligence</span>} variant="wood" dense>
+            {dealHints.length ? (
+              <div className="grid gap-2 text-sm text-[#ead7a8]">
+                {dealHints.map((hint) => (
+                  <div className="rounded-sm border border-[#d0a65a]/35 bg-[#1f1308]/35 px-3 py-2" key={`${hint.label}-${hint.detail}`}>
+                    <div className={hint.tone === "good" ? "font-black text-[#b7ef9a]" : hint.tone === "bad" ? "font-black text-[#ffb3a1]" : "font-black text-[#ffe6a0]"}>{hint.label}</div>
+                    <div>{hint.detail}</div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className="text-sm text-[#ead7a8]">Put goods on either side of the scale to reveal trade pressure.</p>
+            )}
+          </Panel>
         </div>
       </div>
     </ScreenFrame>

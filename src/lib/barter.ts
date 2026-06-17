@@ -1,6 +1,18 @@
 import type { Bias, Character, InventoryEntry, Item, Marketplace, Profession } from "../data/types";
 
 export type TradePerspective = "player" | "character";
+export type ValueAdjustment = {
+  label: string;
+  amount: number;
+};
+
+export type OfferValueLine = {
+  itemName: string;
+  quantity: number;
+  baseValue: number;
+  finalValue: number;
+  adjustments: ValueAdjustment[];
+};
 
 const EXOTIC_BIAS_PERCENT = 20;
 const BULK_BIAS_NERF = 10;
@@ -80,29 +92,58 @@ export function valueOffer(options: {
   ultimatum?: boolean;
   perspective: TradePerspective;
 }) {
+  return valueOfferBreakdown(options).total;
+}
+
+export function valueOfferBreakdown(options: {
+  inventory: InventoryEntry[];
+  items: Item[];
+  character: Character | null;
+  profession?: Profession;
+  marketplace?: Marketplace;
+  kingdom?: { bias?: Bias[]; index?: number };
+  offersMade?: number;
+  difficulty?: number;
+  biasMagnitude?: number;
+  ultimatum?: boolean;
+  perspective: TradePerspective;
+}) {
   const { inventory, items, character, profession, marketplace, kingdom, offersMade = 0, difficulty = 0, biasMagnitude = DEFAULT_BIAS_MAGNITUDE, ultimatum, perspective } = options;
-  return inventory.reduce((sum, entry) => {
+  const lines: OfferValueLine[] = [];
+  const total = inventory.reduce((sum, entry) => {
     if (entry.offerQuantity <= 0) return sum;
     const item = items[entry.itemIndex];
     const baseValue = item.loafValue * entry.offerQuantity;
-    let value =
-      baseValue +
-      bulkBias(baseValue, entry.offerQuantity) +
-      marketplaceBias(marketplace, item, baseValue, biasMagnitude) +
-      kingdomBias(kingdom, item, baseValue, biasMagnitude) +
-      exoticBias(kingdom?.index, item, baseValue);
+    const adjustments: ValueAdjustment[] = [
+      { label: "Bulk stack", amount: bulkBias(baseValue, entry.offerQuantity) },
+      { label: "Market demand", amount: marketplaceBias(marketplace, item, baseValue, biasMagnitude) },
+      { label: "Kingdom demand", amount: kingdomBias(kingdom, item, baseValue, biasMagnitude) },
+      { label: "Imported goods", amount: exoticBias(kingdom?.index, item, baseValue) },
+    ];
 
     if (character) {
-      value += characterBias(character, item, baseValue, biasMagnitude);
-      value += professionBias(profession, item, baseValue, biasMagnitude);
-      value += frugalBias(character, baseValue, perspective, ultimatum);
-      value += hagglingBias(character, baseValue, perspective, offersMade, ultimatum);
+      adjustments.push(
+        { label: "Personal taste", amount: characterBias(character, item, baseValue, biasMagnitude) },
+        { label: "Profession taste", amount: professionBias(profession, item, baseValue, biasMagnitude) },
+        { label: "Frugal discount", amount: frugalBias(character, baseValue, perspective, ultimatum) },
+        { label: "Haggling pressure", amount: hagglingBias(character, baseValue, perspective, offersMade, ultimatum) }
+      );
     }
 
-    value += percentage(baseValue, perspective === "player" ? -difficulty : difficulty);
+    adjustments.push({ label: "Difficulty", amount: percentage(baseValue, perspective === "player" ? -difficulty : difficulty) });
 
-    return sum + Math.max(0, value);
+    const rawValue = baseValue + adjustments.reduce((lineTotal, adjustment) => lineTotal + adjustment.amount, 0);
+    const finalValue = Math.max(0, rawValue);
+    lines.push({
+      itemName: item.name,
+      quantity: entry.offerQuantity,
+      baseValue,
+      finalValue,
+      adjustments: adjustments.filter((adjustment) => Math.abs(adjustment.amount) > 0.001),
+    });
+    return sum + finalValue;
   }, 0);
+  return { total, lines };
 }
 
 export function appraiseOffer(playerValue: number, characterValue: number, character: Character) {
