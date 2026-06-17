@@ -215,6 +215,8 @@ export function autoAskPrice(state: GameState, character: Character) {
 export function autoAskOffer(state: GameState, character: Character) {
   const playerValue = offerValue(state.playerInventory, character, "player", state);
   if (playerValue <= 0) return "Select some of your goods first, then ask what they will offer.";
+  const budget = npcTradeBudget(character);
+  if (budget <= 0) return `${character.name} cannot afford to make an offer.`;
 
   clearOffers(character.inventory);
   const avoid = state.playerInventory.filter((entry) => entry.offerQuantity > 0).length === 1
@@ -230,6 +232,10 @@ export function autoAskOffer(state: GameState, character: Character) {
     if (item.loafValue > playerValue) continue;
     while (entry.offerQuantity < entry.quantity) {
       entry.offerQuantity++;
+      if (offerValue(character.inventory, character, "character", state) > budget) {
+        entry.offerQuantity--;
+        break;
+      }
       if (offerValue(character.inventory, character, "character", state) > playerValue) break;
     }
     while (entry.offerQuantity > 1 && offerValue(character.inventory, character, "character", state) >= playerValue) {
@@ -258,6 +264,10 @@ export function autoAskOffer(state: GameState, character: Character) {
   return `${character.name} cannot match that offer with their stock.`;
 }
 
+export function npcTradeBudget(character: Character) {
+  return Math.max(0, character.maxObtainValue || 0);
+}
+
 function preferenceHint(character: Character) {
   const likes = (character.bias || [])
     .filter((bias) => bias.percent > 0)
@@ -273,6 +283,13 @@ export function completeTrade(state: GameState) {
   if (!character) return state;
   const playerValue = offerValue(state.playerInventory, character, "player", state);
   const characterValue = offerValue(character.inventory, character, "character", state);
+  const budget = npcTradeBudget(character);
+  if (characterValue > budget) {
+    return {
+      ...state,
+      message: `${character.name} cannot afford that much from their stock.`,
+    };
+  }
   const appraisal = appraiseOffer(playerValue, characterValue, character);
   if (!["great_deal", "good_deal", "fair_deal"].includes(appraisal)) {
     const next = clone(state);

@@ -70,4 +70,16 @@ describe("auto barter matching", () => {
     expect(message).toBe("Select some of your goods first, then ask what they will offer.");
     expect(character.inventory.every((entry) => entry.offerQuantity === 0)).toBe(true);
   });
+
+  it("ask offer respects the NPC trade budget", () => {
+    const character = { ...testCharacter([{ itemIndex: itemIndexByName("silver coins"), quantity: 10, offerQuantity: 0 }]), maxObtainValue: 5 };
+    const state = stateWith(character);
+    state.playerInventory.find((entry) => entry.itemIndex === itemIndexByName("working gloves"))!.conceal = false;
+    state.playerInventory.find((entry) => entry.itemIndex === itemIndexByName("working gloves"))!.offerQuantity = 1;
+
+    const message = autoAskOffer(state, character);
+
+    expect(message).toBe("Mira cannot match that offer with their stock.");
+    expect(character.inventory.every((entry) => entry.offerQuantity === 0)).toBe(true);
+  });
 });
