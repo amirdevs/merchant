@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
 import { Handshake, HelpCircle, Scale } from "lucide-react";
 import type { Character, InventoryEntry } from "@/data/types";
-import { currentKingdom, type GameState } from "@/lib/game";
+import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { moodLabel, patienceLabel, relationFor, trustLabel } from "@/lib/reputation";
 import { buildDealHints } from "@/lib/deal-intelligence";
+import { dialogueChoices } from "@/lib/dialogue";
 import type { MoveAmount } from "@/lib/inventory";
 import { portraitAsset } from "@/lib/assets";
 import { money } from "@/lib/format";
@@ -36,6 +37,13 @@ export function BarterConversationView({ state, character, playerOffer, characte
   const illegalTags = currentKingdom(state).illegalItemTags || [];
   const relation = relationFor(state.npcRelations, character);
   const dealHints = buildDealHints(state, character, playerOffer, characterOffer);
+  const choices = character ? dialogueChoices(character, {
+    market: currentMarket(state),
+    markets: marketplaces,
+    kingdom: currentKingdom(state),
+    relation,
+    day: state.day,
+  }) : [];
 
   return (
     <ScreenFrame title="Barter / Conversation" eyebrow="Main Screen" backdrop={uiAssets.backplates.tradeConversation} overlay="dark" contentClassName="p-2 lg:p-3">
@@ -71,11 +79,20 @@ export function BarterConversationView({ state, character, playerOffer, characte
                   <p className="mt-3 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/65 p-4 text-lg leading-snug text-[#3b260f] shadow-inner shadow-[#6c4418]/15">{message}</p>
                 </div>
               </div>
-              <div className="mt-4 grid grid-cols-2 gap-2 text-[#3b260f]">
-                <ResponseLine onClick={() => onUnavailable("Dialogue choices are placeholders until the dialogue graph engine is implemented.")}>I have just what you're looking for.</ResponseLine>
-                <ResponseLine onClick={onAskOffer}>Perhaps we can find a fair trade.</ResponseLine>
-                <ResponseLine onClick={onAskPrice}>What goods do you value most?</ResponseLine>
-                <ResponseLine onClick={onGoodbye}>I'll think on it. Farewell.</ResponseLine>
+              <div className="mt-4 grid max-h-72 grid-cols-2 gap-2 overflow-auto pr-1 text-[#3b260f]">
+                {choices.map((choice) => (
+                  <ResponseLine
+                    key={choice.id}
+                    onClick={() => {
+                      if (choice.id === "ask-price") onAskPrice();
+                      else if (choice.id === "ask-offer" || choice.id === "barter") onAskOffer();
+                      else if (choice.id === "goodbye") onGoodbye();
+                      else onUnavailable(choice.reply);
+                    }}
+                  >
+                    {choice.label}
+                  </ResponseLine>
+                ))}
               </div>
               <div
                 className="mt-4 rounded-sm border border-[#9a7138]/60 p-4 text-[#3b260f] shadow-inner shadow-[#6c4418]/20"

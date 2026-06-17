@@ -1,11 +1,18 @@
 import { MessageSquare, Search, UserRound } from "lucide-react";
 import type { Character } from "@/data/types";
 import { portraitAsset } from "@/lib/assets";
+import { dialogueChoices } from "@/lib/dialogue";
+import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
+import { relationFor } from "@/lib/reputation";
 import { uiAssets } from "@/lib/ui-assets";
 import type { GameView } from "@/app/types";
 import { Button, Panel, ScreenFrame, StatChip, TabButton } from "@/components/ui";
 
-export function CustomersView({ people, selected, onSelect, onNext, onNavigate, onUnavailable }: { people: Character[]; selected: Character | null; onSelect: (person: Character) => void; onNext: () => void; onNavigate: (view: GameView) => void; onUnavailable: (message: string) => void }) {
+export function CustomersView({ state, people, selected, onSelect, onNext, onNavigate, onUnavailable }: { state: GameState; people: Character[]; selected: Character | null; onSelect: (person: Character) => void; onNext: () => void; onNavigate: (view: GameView) => void; onUnavailable: (message: string) => void }) {
+  const market = currentMarket(state);
+  const kingdom = currentKingdom(state);
+  const selectedRelation = relationFor(state.npcRelations, selected);
+
   return (
     <ScreenFrame title="Customers" eyebrow="Roster and Dossier" backdrop={uiAssets.backplates.marketTown} overlay="light">
       <div className="grid flex-1 gap-5 xl:grid-cols-[1fr_420px]">
@@ -56,7 +63,12 @@ export function CustomersView({ people, selected, onSelect, onNext, onNavigate, 
                 {(selected.obtainableItems || []).slice(0, 4).map((pool) => <span key={pool.tag} className="rounded border border-[#9a7138]/45 bg-[#fff6d7]/55 px-2 py-1">{pool.tag}</span>)}
               </div>
               <p className="mt-3 rounded-md border border-[#9a7138]/60 bg-[#fff6d7]/45 p-3 text-sm text-[#3b260f]">{selected.dialogue?.who || selected.dialogue?.customReply || "A market customer waiting to bargain."}</p>
-              <div className="mt-4 flex flex-wrap gap-2"><Button subtle onClick={() => onUnavailable("Dialogue graph conversations are not implemented yet; use Trade for the current barter loop.")}><MessageSquare size={16} /> Talk</Button><Button onClick={() => onNavigate("barter")}>Trade</Button><Button subtle onClick={onNext}>Next Customer</Button></div>
+              <div className="mt-4 grid max-h-80 gap-2 overflow-auto pr-1">
+                {dialogueChoices(selected, { market, markets: marketplaces, kingdom, relation: selectedRelation, day: state.day }).filter((choice) => !["ask-price", "ask-offer", "barter", "goodbye"].includes(choice.id)).map((choice) => (
+                  <Button key={choice.id} subtle onClick={() => onUnavailable(choice.reply)}><MessageSquare size={16} /> {choice.label}</Button>
+                ))}
+                <div className="flex flex-wrap gap-2"><Button onClick={() => onNavigate("barter")}>Trade</Button><Button subtle onClick={onNext}>Next Customer</Button></div>
+              </div>
             </div>
           ) : (
             <div className="grid place-items-center rounded-md border border-dashed border-[#9a7138]/60 p-8 text-center text-[#725331]"><UserRound className="mb-3" /> Select a customer to inspect their preferences.</div>
