@@ -1,18 +1,12 @@
-# Merchant React/Electron Remake
+# Merchant React/Vite Remake
 
-Offline remake prototype using React, Electron, Vite, Tailwind 4, and local extracted game assets/data.
+Offline remake prototype using React, Vite, Tailwind 4, and local extracted game assets/data.
 
 ## Commands
 
 ```powershell
 pnpm install
 pnpm dev
-```
-
-For a browser-only dev run:
-
-```powershell
-pnpm dev:web
 ```
 
 Build:
@@ -25,24 +19,6 @@ Audit extracted content and asset references:
 
 ```powershell
 pnpm audit:data
-```
-
-Run built Electron shell after build:
-
-```powershell
-pnpm electron
-```
-
-Package an offline Windows folder:
-
-```powershell
-pnpm package:win
-```
-
-The package is written to `release/MerchantOfflineRemake-win`. If packaging reports a missing Electron runtime, repair the Electron install first:
-
-```powershell
-pnpm install --force
 ```
 
 ## Data And Assets
@@ -80,7 +56,8 @@ Project documentation lives under `docs/`.
 
 - Gameplay roadmap and parity: `docs/game/roadmap-and-parity.md`
 - UI/UX brief: `docs/game/ui-ux-brief.md`
-- Core UI wireframes and current mockup references: `docs/game/core-ui-wireframes.md`
 - Current UI reference images: `docs/ui_parts/`
+- UI regeneration backlog and prompts: `docs/ui-regeneration/`
+- Older UI wireframes, not a current visual target: `docs/game/core-ui-wireframes.md`
 - Asset pipeline: `docs/assets/asset-pipeline.md`
 - Technical notes: `docs/development/technical-notes.md`

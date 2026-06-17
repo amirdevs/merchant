@@ -1,6 +1,6 @@
 # Game UI Pages And UX Brief
 
-Use this file as the UI/UX source brief for designing the Merchant React/Electron remake. It is written for an AI designer, mockup generator, or implementer: each screen includes purpose, access path, required UI elements, layout notes, and the current visual target.
+Use this file as the UI/UX source brief for designing the Merchant React/Vite remake. It is written for an AI designer, mockup generator, or implementer: each screen includes purpose, access path, required UI elements, layout notes, and the current visual target.
 
 The target is an offline fantasy merchant game inspired by Merchant of the Six Kingdoms. Design the actual playable application screens using the current UI reference images in `docs/ui_parts/`.
 

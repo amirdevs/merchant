@@ -1,8 +1,10 @@
-# Merchant React Electron - Agent Context
+# Merchant React Vite - Agent Context
 
 This repo is `C:\Freelance\merchant-react-electron`.
 
-The project is an offline React/Electron remake prototype inspired by Merchant of the Six Kingdoms. The user wants to rebuild the game as a local-only app, using the original game as a design/gameplay reference but gradually replacing generated assets so the project has its own look.
+Always treat `C:\Freelance\merchant-react-electron` as the only valid project root for this app. Do not use, inspect, edit, sync from, or infer project state from any `D:\game\...` checkout unless the user explicitly asks for work in that path. If Codex is launched from another directory, change to `C:\Freelance\merchant-react-electron` before reading or editing project files.
+
+The project is an offline React/Vite remake prototype inspired by Merchant of the Six Kingdoms. The user wants to rebuild the game as a local-only app, using the original game as a design/gameplay reference but gradually replacing generated assets so the project has its own look.
 
 ## Current UI Direction
 
@@ -13,7 +15,7 @@ Do not describe or implement the UI as a generic dense medieval app. Keep it com
 ## Stack
 
 - Package manager: `pnpm`
-- App: React 18, TypeScript, Vite, Electron
+- App: React 18, TypeScript, Vite
 - Styling: Tailwind CSS v4
 - UI icons: `lucide-react`
 - Main scripts:

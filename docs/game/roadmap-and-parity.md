@@ -330,7 +330,7 @@ Missing:
 ### `v0.6.0` - Save System And Modding
 
 - Add explicit save schema versioning.
-- Store saves offline in Electron app data or local JSON.
+- Store saves in local JSON or browser-local storage while the app remains web-only.
 - Keep data/mod support for items, NPCs, markets, and balance overrides.
 - Add import/export for saves and data.
 
@@ -354,7 +354,7 @@ Missing:
 
 ### `v1.0.0` - Offline Complete Remake
 
-- Package standalone Electron app.
+- Package standalone desktop app only if a desktop shell is reintroduced later.
 - Include full offline content, saves, mod support, and stable gameplay loop.
 - Acceptance: user can play extended trade progression without the original executable.
 
@@ -395,8 +395,8 @@ Missing:
 
 ## Assumptions
 
-- Continue the React/Electron remake, not old asar patching.
+- Continue the React/Vite remake, not old asar patching.
 - New saves only; no original save migration unless explicitly requested.
 - Offline-only remains mandatory.
-- Use pnpm, Tailwind 4, React, Electron, and local extracted assets/data.
+- Use pnpm, Tailwind 4, React, Vite, and local extracted assets/data.
 
