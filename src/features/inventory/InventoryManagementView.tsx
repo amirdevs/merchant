@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { BookOpen, Box, Grid3X3, PackageSearch, Search, Shield, Star } from "lucide-react";
 import type { InventoryEntry } from "@/data/types";
 import type { GameState } from "@/lib/game";
@@ -16,6 +16,7 @@ type InventoryManagementViewProps = {
   state: GameState;
   playerOffer: number;
   onMovePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;
+  onSetPlayerOfferQuantity?: (entry: InventoryEntry, quantity: number) => void;
   onTogglePlayerProtect: (entry: InventoryEntry) => void;
   onOpenFilter: () => void;
   onOpenItemDetail: () => void;
@@ -25,9 +26,17 @@ type InventoryManagementViewProps = {
 type InventoryCategory = "All" | "Goods" | "Materials" | "Luxuries" | "Quest Items";
 type InventorySort = "Value" | "Name" | "Quantity" | "Weight";
 
-export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerProtect, onOpenFilter, onOpenItemDetail, onUnavailable }: InventoryManagementViewProps) {
-  const [category, setCategory] = useState<InventoryCategory>("All");
-  const [sortBy, setSortBy] = useState<InventorySort>("Value");
+const FILTER_KEY = "merchant-inventory-filters";
+
+export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQuantity, onTogglePlayerProtect, onOpenFilter, onOpenItemDetail, onUnavailable }: InventoryManagementViewProps) {
+  const [category, setCategory] = useState<InventoryCategory>(() => {
+    const saved = localStorage.getItem(FILTER_KEY);
+    return saved ? (JSON.parse(saved).category as InventoryCategory) || "All" : "All";
+  });
+  const [sortBy, setSortBy] = useState<InventorySort>(() => {
+    const saved = localStorage.getItem(FILTER_KEY);
+    return saved ? (JSON.parse(saved).sortBy as InventorySort) || "Value" : "Value";
+  });
   const illegalTags = currentKingdom(state).illegalItemTags || [];
   const carriedEntries = state.playerInventory.filter((entry) => visibleQuantity(entry) > 0);
   const filteredEntries = useMemo(() => {
@@ -54,6 +63,10 @@ export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerPro
   const totals = inventoryTotals(state.playerInventory, items);
   const selected = filteredEntries[0] || carriedEntries[0];
   const selectedItem = selected ? items[selected.itemIndex] : null;
+
+  useEffect(() => {
+    localStorage.setItem(FILTER_KEY, JSON.stringify({ category, sortBy }));
+  }, [category, sortBy]);
 
   return (
     <ScreenFrame title="Inventory Management" eyebrow="Cargo Ledger" backdrop={uiAssets.backplates.warehouseInventory} overlay="dark" contentClassName="p-2 lg:p-3">
@@ -91,7 +104,7 @@ export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerPro
               <Grid3X3 size={22} />
             </button>
           </div>
-          <InventoryPanel title="Cargo" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} illegalTags={illegalTags} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onToggleProtect={onTogglePlayerProtect} allowProtect />
+          <InventoryPanel title="Cargo" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} illegalTags={illegalTags} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onSetOfferQuantity={onSetPlayerOfferQuantity} onToggleProtect={onTogglePlayerProtect} allowProtect />
           <div className="mt-4 grid gap-3 md:grid-cols-[180px_1fr_220px]">
             <StatChip label="Carry" value={`${totals.weight} / ${totals.carryCapacity}`} icon={uiAssets.hud.weight} />
             <StatChip label="Total Value" value={money(totals.value)} icon={uiAssets.hud.goldCoin} />
@@ -129,7 +142,7 @@ export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerPro
               </>
             ) : <p>No item selected for {category}.</p>}
           </Panel>
-          <InventoryPanel title="Current Offer" mode="offer" variant="compact" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} />
+          <InventoryPanel title="Current Offer" mode="offer" variant="compact" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} onSetOfferQuantity={onSetPlayerOfferQuantity} />
         </aside>
       </div>
     </ScreenFrame>

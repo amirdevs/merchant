@@ -23,6 +23,7 @@ type InventoryPanelProps = {
   illegalTags?: string[];
   onMove: (entry: InventoryEntry, amount: MoveAmount) => void;
   onMoveAll: (entry: InventoryEntry) => void;
+  onSetOfferQuantity?: (entry: InventoryEntry, quantity: number) => void;
   onToggleProtect?: (entry: InventoryEntry) => void;
 };
 
@@ -40,7 +41,7 @@ function moveAmountFromInput(event: MouseEvent | KeyboardEvent, mode: InventoryP
   return mode === "offer" ? -1 : 1;
 }
 
-export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, illegalTags = [], onMove, onMoveAll, onToggleProtect }: InventoryPanelProps) {
+export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, illegalTags = [], onMove, onMoveAll, onSetOfferQuantity, onToggleProtect }: InventoryPanelProps) {
   const rows = inventory.filter((entry) => quantityFor(entry, mode) > 0);
   const isGrid = variant === "compact" || variant === "management";
   const darkPanel = panelVariant === "wood" || panelVariant === "dark";
@@ -136,6 +137,20 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
                   {item?.name || `Item ${entry.itemIndex}`}
                 </div>
                 {item ? <RarityStars rarity={item.rarity || 1} dark={darkPanel} /> : null}
+                {onSetOfferQuantity ? (
+                  <label className={cn("mt-1 flex items-center justify-center gap-1 rounded-sm border px-1 py-0.5 text-[0.65rem] font-black", darkPanel ? "border-[#d0a65a]/35 bg-black/35 text-[#ffe6a0]" : "border-[#9a7138]/45 bg-[#fff4c5]/70 text-[#5a3917]")}>
+                    Offer
+                    <input
+                      className="h-6 w-12 rounded-sm border border-[#9a7138]/45 bg-[#fff8df] px-1 text-center text-[#24170b]"
+                      min={0}
+                      max={entry.quantity}
+                      type="number"
+                      value={entry.offerQuantity}
+                      onChange={(event) => onSetOfferQuantity(entry, Number(event.target.value))}
+                      onClick={(event) => event.stopPropagation()}
+                    />
+                  </label>
+                ) : null}
               </div>
             );
           }) : <div className="col-span-full border border-[#9a7138]/45 bg-[#fff6d7]/40 p-3 text-sm text-[#725331]">No visible items here.</div>}
@@ -176,6 +191,20 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
                     >
                       <Lock size={12} />
                     </Button>
+                  ) : null}
+                  {onSetOfferQuantity ? (
+                    <label className="flex items-center gap-1 text-[0.65rem] font-black uppercase text-[#75501f]">
+                      Offer
+                      <input
+                        className="h-7 w-14 rounded-sm border border-[#9a7138]/50 bg-[#fff8df] px-1 text-center text-[#24170b]"
+                        min={0}
+                        max={entry.quantity}
+                        type="number"
+                        value={entry.offerQuantity}
+                        onChange={(event) => onSetOfferQuantity(entry, Number(event.target.value))}
+                        onClick={(event) => event.stopPropagation()}
+                      />
+                    </label>
                   ) : null}
                 </span>
               }

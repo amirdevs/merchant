@@ -23,7 +23,7 @@ import {
   serializeGame,
   type GameState,
 } from "@/lib/game";
-import type { MoveAmount } from "@/lib/inventory";
+import { setOfferQuantity, type MoveAmount } from "@/lib/inventory";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "@/lib/economy";
 import { appraiseOffer } from "@/lib/barter";
 import { customerIntro } from "@/lib/dialogue";
@@ -100,6 +100,23 @@ export function useMerchantController(): MerchantController {
       const current = selectedCharacter(draft);
       const actual = current?.inventory.find((item) => item.itemIndex === entry.itemIndex);
       if (actual && current) moveOffer(actual, amount, isOfferPanel);
+    });
+  }
+
+  function setPlayerOfferQuantity(entry: InventoryEntry, quantity: number) {
+    playItemSound("page");
+    update((draft) => {
+      const actual = draft.playerInventory.find((item) => item.itemIndex === entry.itemIndex);
+      if (actual) setOfferQuantity(actual, quantity);
+    });
+  }
+
+  function setCharacterOfferQuantity(entry: InventoryEntry, quantity: number) {
+    playItemSound("page");
+    update((draft) => {
+      const current = selectedCharacter(draft);
+      const actual = current?.inventory.find((item) => item.itemIndex === entry.itemIndex);
+      if (actual) setOfferQuantity(actual, quantity);
     });
   }
 
@@ -362,6 +379,8 @@ export function useMerchantController(): MerchantController {
       nextCustomer,
       movePlayer,
       moveCharacter,
+      setPlayerOfferQuantity,
+      setCharacterOfferQuantity,
       togglePlayerProtect,
       togglePlayerConceal,
       clearTradeOffers,

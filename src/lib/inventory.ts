@@ -40,6 +40,12 @@ export function moveOffer(entry: InventoryEntry, amount: MoveAmount, isOfferPane
   entry.offerQuantity = Math.max(0, Math.min(entry.quantity, entry.offerQuantity + amount));
 }
 
+export function setOfferQuantity(entry: InventoryEntry, quantity: number) {
+  if (entry.protected && quantity > 0) return;
+  const nextQuantity = Number.isFinite(quantity) ? Math.floor(quantity) : 0;
+  entry.offerQuantity = Math.max(0, Math.min(entry.quantity, nextQuantity));
+}
+
 export function clearOffers(inventory: InventoryEntry[]) {
   for (const entry of inventory) entry.offerQuantity = 0;
 }

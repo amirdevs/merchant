@@ -19,6 +19,8 @@ type BarterConversationViewProps = {
   message: string;
   onMovePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;
   onMoveCharacter: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;
+  onSetPlayerOfferQuantity: (entry: InventoryEntry, quantity: number) => void;
+  onSetCharacterOfferQuantity: (entry: InventoryEntry, quantity: number) => void;
   onTogglePlayerProtect: (entry: InventoryEntry) => void;
   onTrade: () => void;
   onAskPrice: () => void;
@@ -29,7 +31,7 @@ type BarterConversationViewProps = {
   onUnavailable: (message: string) => void;
 };
 
-export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onGoodbye, onHelp, onUnavailable }: BarterConversationViewProps) {
+export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onSetPlayerOfferQuantity, onSetCharacterOfferQuantity, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onGoodbye, onHelp, onUnavailable }: BarterConversationViewProps) {
   const advantage = playerOffer - characterOffer;
   const illegalTags = currentKingdom(state).illegalItemTags || [];
   const relation = relationFor(state.npcRelations, character);
@@ -39,8 +41,8 @@ export function BarterConversationView({ state, character, playerOffer, characte
     <ScreenFrame title="Barter / Conversation" eyebrow="Main Screen" backdrop={uiAssets.backplates.tradeConversation} overlay="dark" contentClassName="p-2 lg:p-3">
       <div className="grid flex-1 gap-3 xl:grid-cols-[27rem_minmax(340px,1fr)_27rem]">
         <div className="grid min-h-0 content-start gap-3">
-          <InventoryPanel title="NPC Offer" mode="offer" variant="compact" panelVariant="wood" inventory={character?.inventory || []} illegalTags={illegalTags} onMove={(entry, amount) => onMoveCharacter(entry, amount, true)} onMoveAll={(entry) => onMoveCharacter(entry, "none", true)} />
-          <InventoryPanel title="NPC Stock" variant="compact" panelVariant="wood" inventory={character?.inventory || []} illegalTags={illegalTags} onMove={(entry, amount) => onMoveCharacter(entry, amount)} onMoveAll={(entry) => onMoveCharacter(entry, "all")} />
+          <InventoryPanel title="NPC Offer" mode="offer" variant="compact" panelVariant="wood" inventory={character?.inventory || []} illegalTags={illegalTags} onMove={(entry, amount) => onMoveCharacter(entry, amount, true)} onMoveAll={(entry) => onMoveCharacter(entry, "none", true)} onSetOfferQuantity={onSetCharacterOfferQuantity} />
+          <InventoryPanel title="NPC Stock" variant="compact" panelVariant="wood" inventory={character?.inventory || []} illegalTags={illegalTags} onMove={(entry, amount) => onMoveCharacter(entry, amount)} onMoveAll={(entry) => onMoveCharacter(entry, "all")} onSetOfferQuantity={onSetCharacterOfferQuantity} />
         </div>
 
         <Panel className="p-4" title={character ? character.name : "Conversation"} variant="parchment">
@@ -98,8 +100,8 @@ export function BarterConversationView({ state, character, playerOffer, characte
         </Panel>
 
         <div className="grid gap-4">
-          <InventoryPanel title="Your Offer" mode="offer" variant="compact" panelVariant="wood" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} />
-          <InventoryPanel title="Your Inventory" variant="compact" panelVariant="wood" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onToggleProtect={onTogglePlayerProtect} allowProtect />
+          <InventoryPanel title="Your Offer" mode="offer" variant="compact" panelVariant="wood" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} onSetOfferQuantity={onSetPlayerOfferQuantity} />
+          <InventoryPanel title="Your Inventory" variant="compact" panelVariant="wood" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onSetOfferQuantity={onSetPlayerOfferQuantity} onToggleProtect={onTogglePlayerProtect} allowProtect />
           <Panel title={<span className="inline-flex items-center gap-2"><Scale size={18} /> Deal Intelligence</span>} variant="wood" dense>
             {dealHints.length ? (
               <div className="grid gap-2 text-sm text-[#ead7a8]">
