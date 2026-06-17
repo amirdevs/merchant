@@ -5,7 +5,7 @@ import type { GameState } from "@/lib/game";
 import { marketplaces } from "@/lib/game";
 import type { SaveSlotSummary } from "@/lib/save";
 import { uiAssets } from "@/lib/ui-assets";
-import { Button, LedgerRow, Panel, ScreenFrame, TabButton } from "@/components/ui";
+import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, TabButton } from "@/components/ui";
 
 type SaveLoadViewProps = {
   state: GameState;
@@ -23,6 +23,7 @@ type SaveLoadViewProps = {
 
 export function SaveLoadView({ state, merchantProfile, saveSlots, importInputRef, onBack, onSave, onLoad, onExport, onImport, onDelete, onUnavailable }: SaveLoadViewProps) {
   const [selectedSlot, setSelectedSlot] = useState(0);
+  const [confirmAction, setConfirmAction] = useState<"save" | "delete" | null>(null);
   const selected = saveSlots.find((slot) => slot.slot === selectedSlot) || saveSlots[0];
   const rows = saveSlots.map((slot) => ({
     ...slot,
@@ -69,14 +70,42 @@ export function SaveLoadView({ state, merchantProfile, saveSlots, importInputRef
               <span>{selected?.empty ? "Empty archive slot" : `Saved day ${selected?.day ?? "-"}`} / Current day {state.day} / {merchantProfile.difficulty}</span>
             </div>
             <Button disabled={selected?.empty} onClick={() => onLoad(selectedSlot)}><BookOpen size={16} /> Load Slot {selectedSlot + 1}</Button>
-            <Button variant="secondary" onClick={() => onSave(selectedSlot)}><Save size={16} /> Save Slot {selectedSlot + 1}</Button>
-            <Button variant="danger" disabled={selected?.empty} onClick={() => onDelete(selectedSlot)}><Trash2 size={16} /> Delete Slot {selectedSlot + 1}</Button>
+            <Button variant="secondary" onClick={() => selected?.empty ? onSave(selectedSlot) : setConfirmAction("save")}><Save size={16} /> Save Slot {selectedSlot + 1}</Button>
+            <Button variant="danger" disabled={selected?.empty} onClick={() => setConfirmAction("delete")}><Trash2 size={16} /> Delete Slot {selectedSlot + 1}</Button>
             <Button variant="secondary" onClick={onExport}><Download size={16} /> Export JSON</Button>
             <Button subtle onClick={onBack}>Back</Button>
             <input ref={importInputRef} className="hidden" type="file" accept="application/json,.json" onChange={(event) => { onImport(event.target.files?.[0], selectedSlot); event.target.value = ""; }} />
           </div>
         </Panel>
       </div>
+      {confirmAction ? (
+        <ModalShell title={confirmAction === "save" ? "Overwrite Save Slot" : "Delete Save Slot"}>
+          <div className="grid gap-4 text-[#3b260f]">
+            <p className="text-base">
+              {confirmAction === "save"
+                ? `Overwrite slot ${selectedSlot + 1}? The previous saved ledger will be replaced.`
+                : `Delete slot ${selectedSlot + 1}? This local save cannot be recovered.`}
+            </p>
+            <div className="rounded-sm border border-[#9a7138]/55 bg-[#fff6d7]/60 p-3 text-sm">
+              <strong className="block">{selected?.name}</strong>
+              <span>{selected?.empty ? "Empty" : `Saved day ${selected?.day ?? "-"} at ${selected?.savedAt ? new Date(selected.savedAt).toLocaleString() : "unknown time"}`}</span>
+            </div>
+            <div className="flex justify-end gap-2">
+              <Button variant="secondary" onClick={() => setConfirmAction(null)}>Cancel</Button>
+              <Button
+                variant={confirmAction === "delete" ? "danger" : "primary"}
+                onClick={() => {
+                  if (confirmAction === "save") onSave(selectedSlot);
+                  else onDelete(selectedSlot);
+                  setConfirmAction(null);
+                }}
+              >
+                {confirmAction === "save" ? "Overwrite" : "Delete"}
+              </Button>
+            </div>
+          </div>
+        </ModalShell>
+      ) : null}
     </ScreenFrame>
   );
 }
