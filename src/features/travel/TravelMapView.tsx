@@ -1,13 +1,15 @@
 import { BookOpen, MapPinned } from "lucide-react";
 import type { GameState } from "@/lib/game";
-import { marketplaces } from "@/lib/game";
+import { items, marketplaces } from "@/lib/game";
 import { routeAsset } from "@/lib/assets";
+import { canPayCopperToll, inventoryTotals } from "@/lib/economy";
 import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
 
 export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal }: { state: GameState; onTravel: (marketIndex: number) => void; onEnterMarket: () => void; onOpenJournal: () => void }) {
   const market = marketplaces[state.marketIndex];
+  const cargo = inventoryTotals(state.playerInventory, items);
   return (
     <ScreenFrame title="Travel Map" eyebrow="Market Planner" backdrop={uiAssets.backplates.travelMap} overlay="light">
       <div className="grid flex-1 gap-4 xl:grid-cols-[1.2fr_380px]">
@@ -42,7 +44,10 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal }:
               <StatChip label="Market" value={market.name} icon={uiAssets.map.currentLocationMarker} />
               <StatChip label="Risk" value="Normal" />
               <StatChip label="Demand" value="Mixed" />
-              <StatChip label="Capacity" value="Safe" />
+              <StatChip label="Capacity" value={cargo.canTravel ? "Safe" : "Over"} />
+            </div>
+            <div className="mt-3 rounded-sm border border-[#9a7138]/55 bg-[#fff6d7]/55 p-3 text-sm text-[#3b260f]">
+              Carry {cargo.weight}/{cargo.carryCapacity} / Size {cargo.size}/{cargo.sizeCapacity}
             </div>
             <div className="mt-3 flex flex-wrap gap-2"><Button onClick={onEnterMarket}><MapPinned size={16} /> Enter Market</Button><Button subtle onClick={onOpenJournal}><BookOpen size={16} /> Journal</Button><Button subtle disabled>Skip Day</Button></div>
           </Panel>
@@ -54,7 +59,7 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal }:
                   <LedgerRow
                     key={destination.index}
                     title={destination.name}
-                    subtitle={`Toll ${money(connection.tolls)} / route asset ${routeAsset(connection.routeFile) ? "linked" : "pending"}`}
+                    subtitle={`Toll ${money(connection.tolls)} copper / ${canPayCopperToll(state.playerInventory, items, connection.tolls) ? "payable" : "need copper"} / route asset ${routeAsset(connection.routeFile) ? "linked" : "pending"}`}
                     trailing={<span className="text-sm font-bold text-[#75501f]">{connection.travelDays}d</span>}
                     onClick={() => onTravel(destination.index)}
                   />

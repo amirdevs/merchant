@@ -11,13 +11,15 @@ export type SaveEnvelope = {
 
 function isGameState(value: unknown): value is GameState {
   const candidate = value as Partial<GameState> | null;
-  return Boolean(
+  if (!(
     candidate &&
       typeof candidate.marketIndex === "number" &&
       typeof candidate.day === "number" &&
       Array.isArray(candidate.characters) &&
       Array.isArray(candidate.playerInventory)
-  );
+  )) return false;
+  if (typeof candidate.offersMade !== "number") candidate.offersMade = 0;
+  return true;
 }
 
 export function serializeGame(state: GameState) {

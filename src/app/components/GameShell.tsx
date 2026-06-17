@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
 import { CircleHelp, Cog, Map as MapIcon, PackageSearch, Store, Users, Volume2, VolumeX, type LucideIcon } from "lucide-react";
 import { backdropAsset, townAsset } from "@/lib/assets";
+import { inventoryTotals } from "@/lib/economy";
 import { money } from "@/lib/format";
-import { items, visibleQuantity } from "@/lib/game";
+import { items } from "@/lib/game";
 import { uiAssets } from "@/lib/ui-assets";
 import type { GameView, MerchantController, MerchantProfile, UiPreferences } from "@/app/types";
 import { Button, HudResource, IconButton, Muted } from "@/components/ui";
@@ -27,9 +28,7 @@ const navItems: Array<{ view: GameView; label: string; icon: LucideIcon }> = [
 
 export function GameShell({ controller, activeView, merchantProfile, uiPreferences, onNavigate, children }: GameShellProps) {
   const isTitleArea = titleViews.has(activeView);
-  const carriedEntries = controller.state.playerInventory.filter((entry) => visibleQuantity(entry) > 0);
-  const cargoWeight = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].weight * visibleQuantity(entry), 0);
-  const cargoValue = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].loafValue * visibleQuantity(entry), 0);
+  const cargo = inventoryTotals(controller.state.playerInventory, items);
   const backgroundImage = isTitleArea ? townAsset(controller.market.townsquareFile) : backdropAsset(controller.market.backdropFile);
 
   return (
@@ -62,9 +61,9 @@ export function GameShell({ controller, activeView, merchantProfile, uiPreferenc
 
             <dl className="grid grid-cols-4 gap-1.5">
               <HudResource icon={uiAssets.hud.day} label="Day" value={controller.state.day} />
-              <HudResource icon={uiAssets.hud.wealth} label="Value" value={money(cargoValue)} />
-              <HudResource icon={uiAssets.hud.weight} label="Carry" value={cargoWeight} />
-              <HudResource icon={uiAssets.hud.inventory} label="Goods" value={carriedEntries.length} />
+              <HudResource icon={uiAssets.hud.wealth} label="Value" value={money(cargo.value)} />
+              <HudResource icon={uiAssets.hud.weight} label="Carry" value={`${cargo.weight}/${cargo.carryCapacity}`} />
+              <HudResource icon={uiAssets.hud.inventory} label="Goods" value={cargo.visibleEntries} />
             </dl>
 
             <nav className="flex flex-wrap items-center justify-end gap-1.5" aria-label="Primary game pages">

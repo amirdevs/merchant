@@ -4,6 +4,7 @@ import {
   charactersAtMarket,
   completeTrade,
   currentMarket,
+  currentKingdom,
   clearOffers,
   deleteGameSave,
   importGame,
@@ -15,12 +16,16 @@ import {
   newGame,
   nextCustomerIndex,
   offerValue,
+  preferencePercent,
+  professions,
   saveGame,
   selectedCharacter,
   serializeGame,
   type GameState,
 } from "@/lib/game";
 import type { MoveAmount } from "@/lib/inventory";
+import { canPayCopperToll, inventoryTotals, spendCopperToll } from "@/lib/economy";
+import { appraiseOffer } from "@/lib/barter";
 import { customerIntro } from "@/lib/dialogue";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "@/lib/audio";
 import type { MerchantController } from "@/app/types/MerchantController";
@@ -131,7 +136,27 @@ export function useMerchantController(): MerchantController {
       const current = selectedCharacter(draft);
       if (current) clearOffers(current.inventory);
       draft.message = "Cleared both sides of the offer.";
+      draft.offersMade = 0;
     });
+  }
+
+  function itemPreferenceScore(draft: GameState, current: Character, itemIndex: number) {
+    const item = items[itemIndex];
+    const profession = current.professionSlug ? professions[current.professionSlug] : undefined;
+    const market = currentMarket(draft);
+    const kingdom = currentKingdom(draft);
+    const scoreBias = (biases: Array<{ tag: string; percent: number }> = []) =>
+      biases.reduce((total, bias) => item.tags.includes(bias.tag) || item.name.toLowerCase() === bias.tag.toLowerCase() ? total + bias.percent : total, 0);
+    const exotic = item.kingdomIndex !== null && item.kingdomIndex !== kingdom?.index ? 20 : 0;
+    return preferencePercent(current, item) + scoreBias(profession?.bias) + scoreBias(market.bias) + scoreBias(kingdom?.bias) + exotic;
+  }
+
+  function acceptanceFor(draft: GameState, current: Character) {
+    return appraiseOffer(
+      offerValue(draft.playerInventory, current, "player", draft),
+      offerValue(current.inventory, current, "character", draft),
+      current
+    );
   }
 
   function askPrice() {
@@ -142,10 +167,37 @@ export function useMerchantController(): MerchantController {
         draft.message = "Choose a customer before asking for a price.";
         return;
       }
-      const value = offerValue(current.inventory, current, "character", draft);
-      draft.message = value > 0
-        ? `${current.name} values their selected goods at ${Math.ceil(value)} loaf value.`
-        : `${current.name} has not placed anything in their offer yet.`;
+      const characterValue = offerValue(current.inventory, current, "character", draft);
+      if (characterValue <= 0) {
+        draft.message = `Select goods from ${current.name}'s stock first, then ask for the price.`;
+        return;
+      }
+
+      clearOffers(draft.playerInventory);
+      const avoid = current.inventory.filter((entry) => entry.offerQuantity > 0).length === 1
+        ? current.inventory.find((entry) => entry.offerQuantity > 0)?.itemIndex
+        : undefined;
+      const candidates = draft.playerInventory
+        .filter((entry) => entry.quantity > 0 && !entry.conceal && entry.itemIndex !== avoid)
+        .sort((left, right) => itemPreferenceScore(draft, current, right.itemIndex) - itemPreferenceScore(draft, current, left.itemIndex));
+
+      for (const entry of candidates) {
+        const item = items[entry.itemIndex];
+        if (item.tags.includes("packhorses") || item.tags.includes("storage") || item.tags.includes("cards")) continue;
+        if (item.loafValue > characterValue) continue;
+        while (entry.offerQuantity < entry.quantity) {
+          entry.offerQuantity++;
+          if (offerValue(draft.playerInventory, current, "player", draft) > characterValue) {
+            draft.message = `${current.name} names a price from your goods.`;
+            return;
+          }
+        }
+      }
+
+      clearOffers(draft.playerInventory);
+      draft.message = characterValue < 5
+        ? `${current.name} will not price such a small offer.`
+        : `${current.name} cannot find a fair price from your visible goods.`;
     });
   }
 
@@ -157,16 +209,45 @@ export function useMerchantController(): MerchantController {
         draft.message = "Choose a customer before asking for an offer.";
         return;
       }
-      const visible = current.inventory.filter((entry) => entry.quantity - entry.offerQuantity > 0);
-      if (!visible.length) {
-        draft.message = `${current.name} has nothing else to offer.`;
+      const playerValue = offerValue(draft.playerInventory, current, "player", draft);
+      if (playerValue <= 0) {
+        draft.message = "Select some of your goods first, then ask what they will offer.";
         return;
       }
-      const next = visible
-        .slice()
-        .sort((left, right) => items[left.itemIndex].loafValue - items[right.itemIndex].loafValue)[0];
-      next.offerQuantity = Math.min(next.quantity, next.offerQuantity + 1);
-      draft.message = `${current.name} adds ${items[next.itemIndex].name} to their side.`;
+
+      clearOffers(current.inventory);
+      const avoid = draft.playerInventory.filter((entry) => entry.offerQuantity > 0).length === 1
+        ? draft.playerInventory.find((entry) => entry.offerQuantity > 0)?.itemIndex
+        : undefined;
+      const candidates = current.inventory
+        .filter((entry) => entry.quantity > 0 && entry.itemIndex !== avoid)
+        .sort((left, right) => itemPreferenceScore(draft, current, left.itemIndex) - itemPreferenceScore(draft, current, right.itemIndex));
+
+      for (const entry of candidates) {
+        const item = items[entry.itemIndex];
+        if (item.tags.includes("masks")) continue;
+        if (item.loafValue > playerValue) continue;
+        while (entry.offerQuantity < entry.quantity) {
+          entry.offerQuantity++;
+          if (offerValue(current.inventory, current, "character", draft) > playerValue) break;
+        }
+        if (offerValue(current.inventory, current, "character", draft) > 0) break;
+      }
+
+      while (offerValue(draft.playerInventory, current, "player", draft) > offerValue(current.inventory, current, "character", draft) * 3) {
+        const offered = current.inventory.find((entry) => entry.offerQuantity > 0);
+        if (!offered) break;
+        offered.offerQuantity--;
+      }
+
+      const appraisal = acceptanceFor(draft, current);
+      if (["great_deal", "good_deal", "fair_deal"].includes(appraisal) && current.inventory.some((entry) => entry.offerQuantity > 0)) {
+        draft.message = `${current.name} makes a counteroffer.`;
+        return;
+      }
+
+      clearOffers(current.inventory);
+      draft.message = `${current.name} cannot match that offer with their stock.`;
     });
   }
 
@@ -177,6 +258,7 @@ export function useMerchantController(): MerchantController {
       const current = selectedCharacter(draft);
       if (current) clearOffers(current.inventory);
       draft.selectedCharacterIndex = null;
+      draft.offersMade = 0;
       draft.message = "You step away from the bargaining table.";
     });
   }
@@ -198,10 +280,24 @@ export function useMerchantController(): MerchantController {
     playUiSound("map");
     update((draft) => {
       const route = currentMarket(draft).connections.find((connection) => connection.marketplaceIndex === toMarketIndex);
+      if (!route) {
+        draft.message = "No known route connects these markets.";
+        return;
+      }
+      const cargo = inventoryTotals(draft.playerInventory, items);
+      if (!cargo.canTravel) {
+        draft.message = `Cargo is too heavy or bulky to travel. Carry ${cargo.weight}/${cargo.carryCapacity}, size ${cargo.size}/${cargo.sizeCapacity}.`;
+        return;
+      }
+      if (!canPayCopperToll(draft.playerInventory, items, route.tolls)) {
+        draft.message = `You need ${route.tolls} copper coins for the route toll.`;
+        return;
+      }
+      spendCopperToll(draft.playerInventory, items, route.tolls);
       draft.marketIndex = toMarketIndex;
-      draft.day += route?.travelDays || 1;
+      draft.day += route.travelDays || 1;
       draft.selectedCharacterIndex = null;
-      draft.message = `Arrived in ${marketplaces[toMarketIndex].name}.`;
+      draft.message = `Paid ${route.tolls} copper toll and arrived in ${marketplaces[toMarketIndex].name}.`;
     });
   }
 

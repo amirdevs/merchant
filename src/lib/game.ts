@@ -1,5 +1,6 @@
 import charactersJson from "../data/generated/characters.json";
 import itemsJson from "../data/generated/items.json";
+import kingdomsJson from "../data/generated/kingdoms.json";
 import marketplacesJson from "../data/generated/marketplaces.json";
 import professionsJson from "../data/generated/professions.json";
 import type { Character, InventoryEntry, Item, Marketplace, ObtainableItem, Profession } from "../data/types";
@@ -10,6 +11,7 @@ import { charactersAtMarket, nextCustomerIndex, selectedCharacter } from "./npc-
 import { deleteGameSave, importGame, loadGame, saveGame, serializeGame } from "./save";
 
 export const items = itemsJson as Item[];
+export const kingdoms = kingdomsJson as Array<{ index: number; bias?: { tag: string; percent: number }[] }>;
 export const marketplaces = marketplacesJson as Marketplace[];
 export const professions = professionsJson as Record<string, Profession>;
 
@@ -23,6 +25,7 @@ export type GameState = {
   characters: Character[];
   playerInventory: InventoryEntry[];
   message: string;
+  offersMade: number;
 };
 
 function clone<T>(value: T): T {
@@ -91,6 +94,7 @@ export function newGame(): GameState {
     characters,
     playerInventory,
     message: "A new ledger begins in Boone.",
+    offersMade: 0,
   };
 }
 
@@ -110,6 +114,11 @@ export function currentMarket(state: GameState) {
   return marketplaces[state.marketIndex];
 }
 
+export function currentKingdom(state: GameState) {
+  const kingdomIndex = currentMarket(state).kingdomIndex;
+  return { ...kingdoms[kingdomIndex], index: kingdomIndex };
+}
+
 export function offerValue(inventory: InventoryEntry[], character: Character | null, perspective: TradePerspective, state?: GameState) {
   return valueOffer({
     inventory,
@@ -118,6 +127,8 @@ export function offerValue(inventory: InventoryEntry[], character: Character | n
     perspective,
     profession: character?.professionSlug ? professions[character.professionSlug] : undefined,
     marketplace: state ? currentMarket(state) : undefined,
+    kingdom: state ? currentKingdom(state) : undefined,
+    offersMade: state?.offersMade || 0,
   });
 }
 
@@ -148,6 +159,7 @@ export function completeTrade(state: GameState) {
     const missing = Math.max(0, Math.ceil(characterValue - playerValue));
     return {
       ...state,
+      offersMade: state.offersMade + 1,
       message: `${character.name} refuses. Missing ${missing} loaf value. ${preferenceHint(character)}`,
     };
   }
@@ -158,6 +170,7 @@ export function completeTrade(state: GameState) {
   transferOffers(nextCharacter.inventory, next.playerInventory);
   return {
     ...next,
+    offersMade: 0,
     message: `${character.name} accepts the trade.`,
   };
 }

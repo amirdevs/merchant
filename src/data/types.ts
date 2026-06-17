@@ -6,6 +6,8 @@ export type Item = {
   loafValue: number;
   size: number;
   weight: number;
+  pull?: number;
+  carry?: number;
   kingdomIndex: number | null;
   unique?: boolean;
   rarity?: number;
@@ -45,8 +47,10 @@ export type Character = {
   marketplaces?: number[];
   maxObtainValue: number;
   frugalPercent: number;
+  hagglePercent?: number;
   closeToDealPercent: number;
   reachingDealPercent: number;
+  farFromDealPercent?: number;
   dialogue?: {
     who?: string;
     preference?: string;

@@ -6,6 +6,7 @@ import type { MoveAmount } from "@/lib/inventory";
 import { itemIconAsset } from "@/lib/assets";
 import { items, visibleQuantity } from "@/lib/game";
 import { money } from "@/lib/format";
+import { inventoryTotals } from "@/lib/economy";
 import { uiAssets } from "@/lib/ui-assets";
 import { InventoryPanel } from "@/components/InventoryPanel";
 import { Button, ItemSlot, Panel, ScreenFrame, StatChip } from "@/components/ui";
@@ -49,8 +50,7 @@ export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerPro
         return rightItem.loafValue - leftItem.loafValue;
       });
   }, [carriedEntries, category, sortBy]);
-  const totalValue = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].loafValue * visibleQuantity(entry), 0);
-  const totalWeight = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].weight * visibleQuantity(entry), 0);
+  const totals = inventoryTotals(state.playerInventory, items);
   const selected = filteredEntries[0] || carriedEntries[0];
   const selectedItem = selected ? items[selected.itemIndex] : null;
 
@@ -92,10 +92,15 @@ export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerPro
           </div>
           <InventoryPanel title="Cargo" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onToggleProtect={onTogglePlayerProtect} allowProtect />
           <div className="mt-4 grid gap-3 md:grid-cols-[180px_1fr_220px]">
-            <StatChip label="Capacity" value={`${totalWeight} / 200`} icon={uiAssets.hud.weight} />
-            <StatChip label="Total Value" value={money(totalValue)} icon={uiAssets.hud.goldCoin} />
+            <StatChip label="Carry" value={`${totals.weight} / ${totals.carryCapacity}`} icon={uiAssets.hud.weight} />
+            <StatChip label="Total Value" value={money(totals.value)} icon={uiAssets.hud.goldCoin} />
             <Button size="lg" variant="secondary" onClick={() => onUnavailable("Bulk inventory actions are not implemented yet.")}><Grid3X3 size={18} /> Bulk Actions</Button>
           </div>
+          {totals.canTravel ? null : (
+            <div className="mt-3 rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/65 p-3 text-sm font-bold text-[#8d271f]">
+              Cargo exceeds travel capacity by {totals.overWeight || totals.overSize}. Reduce weight or size before traveling.
+            </div>
+          )}
         </Panel>
 
         <aside className="grid content-start gap-3">
