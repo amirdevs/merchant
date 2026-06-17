@@ -77,13 +77,23 @@ Important original behavior now matched:
 
 - Travel between connected markets works.
 - Travel advances day count by route `travelDays`.
-- Travel currently does not charge tolls or stallage.
+- Travel charges route tolls in copper, advances days, and shows confirmation/arrival summaries.
+- Arrival can trigger guard confiscation for unconcealed illegal goods and deterministic market theft events.
 
 ### Save/Load
 
 - Local browser save/load/import/export works.
 - Save delete works.
 - Old saves without `offersMade` are upgraded in memory with `offersMade: 0`.
+- Four local save slots with metadata are supported.
+- Old saves without NPC relations, quest states, dialogue notes, or travel results are upgraded in memory.
+
+### Dialogue, Journal, And Events
+
+- Dialogue choices are generated from extracted NPC dialogue, preferences, market demand, route data, laws, theft risk, stock pools, haggling style, and relationship memory.
+- Dialogue replies are persisted into an NPC conversation ledger.
+- Journal/Notice Board displays local market quests, quest statuses, authored market quest lists, conversation notes, and upcoming market events.
+- Quest statuses persist through save/load.
 
 ### UI Action Feedback
 
@@ -94,10 +104,9 @@ Important original behavior now matched:
 
 ### Barter And NPC Behavior
 
-- Reputation, reputation minimums, and reputation changes.
-- NPC patience and leaving after too many offers.
+- Reputation minimums and original-specific reputation gates.
 - Ultimatum mode.
-- Original voice/tone reactions for offer quality.
+- Original voice/tone audio reactions for offer quality.
 - Full original request/solicit dialogue text routing.
 - Random chance for fair match offer.
 - Safety net/gift behavior.
@@ -116,32 +125,24 @@ Important original behavior now matched:
 
 ### Travel, Capacity, And Risk
 
-- Toll payment.
 - Stallage/market fees.
-- Carry and pull capacity.
-- Packhorse mechanics.
-- Travel confirmation modal.
+- Deeper packhorse care/injury/upgrades.
 - Arrival result summary.
 - Route risk and travel incidents.
 - Market closing/packup flow.
 
 ### Illegal Items, Theft, And Guards
 
-- Illegal item markers from current kingdom.
-- Concealment consequences.
-- Guard inspections and confiscation.
-- Theft chance by marketplace theft config.
-- Theft constraints: max loaf value, max quantity, max size.
+- Bribes and active evasion choices.
+- Deeper concealment odds and guard personality rules.
 - Snitch behavior and reputation penalties.
 
 ### Dialogue, Quests, And Events
 
-- Original dialogue graph runtime.
+- Full original dialogue graph runtime.
 - Response choices from extracted scripts.
 - Typed callback registry for original callback ids.
-- Quest state machine.
-- Journal and notice board.
-- Market event calendar.
+- Quest rewards and completion transactions.
 - Event sessions and rewards.
 - Quest-specific barter hooks such as forced offer items, special costs, or quest completion transactions.
 

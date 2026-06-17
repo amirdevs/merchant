@@ -14,19 +14,19 @@ This roadmap is the working path from the current prototype to a complete offlin
 
 ### 1. Economy, Capacity, And Travel Costs
 
-Status: started.
+Status: mostly implemented.
 
 Goal: make inventory and travel pressure real.
 
 Tasks:
 
-- Add money helpers for coin inventory and spendable currency. Started with copper toll helpers.
-- Add cargo value, weight, size, carry, and pull summaries. Started.
-- Add route toll charging. Started with route tolls paid in copper.
+- Add money helpers for coin inventory and spendable currency. Implemented for copper tolls.
+- Add cargo value, weight, size, carry, and pull summaries. Implemented.
+- Add route toll charging. Implemented with route tolls paid in copper.
 - Add stallage/market fee hooks.
-- Display capacity state in header, inventory, and travel map. Started.
-- Block or warn on unaffordable travel. Started.
-- Prepare pure helpers for later tests. Started with `src/lib/economy.ts`.
+- Display capacity state in header, inventory, and travel map. Implemented.
+- Block or warn on unaffordable travel. Implemented.
+- Prepare pure helpers for later tests. Implemented with `src/lib/economy.ts`.
 
 Acceptance:
 
@@ -37,17 +37,17 @@ Acceptance:
 
 ### 2. Illegal Goods And Concealment
 
-Status: started.
+Status: mostly implemented.
 
 Goal: make laws and risk visible before adding punishment.
 
 Tasks:
 
-- Add helpers for current kingdom illegal item tags. Started with `src/lib/legal.ts`.
-- Mark illegal items in inventory, item detail, trade, and travel warnings. Started.
-- Keep concealment separate from protection. Started.
+- Add helpers for current kingdom illegal item tags. Implemented with `src/lib/legal.ts`.
+- Mark illegal items in inventory, item detail, trade, and travel warnings. Implemented.
+- Keep concealment separate from protection. Implemented.
 - Prevent auto-offer matching from using concealed items.
-- Add current/destination legality panels. Started with travel route warnings.
+- Add current/destination legality panels. Implemented with travel route warnings.
 
 Acceptance:
 
@@ -56,6 +56,8 @@ Acceptance:
 - Travel map warns about illegal goods for destination kingdom.
 
 ### 3. Barter Regression Tests
+
+Status: implemented.
 
 Goal: lock down original-style barter math.
 
@@ -75,6 +77,8 @@ Acceptance:
 
 ### 4. NPC Reputation, Patience, And Reactions
 
+Status: first pass implemented.
+
 Goal: make customers feel like people.
 
 Tasks:
@@ -93,6 +97,8 @@ Acceptance:
 
 ### 5. Deal Intelligence
 
+Status: first pass implemented.
+
 Goal: make trading understandable without removing discovery.
 
 Tasks:
@@ -109,6 +115,8 @@ Acceptance:
 - Hints preserve hidden exact math unless debug mode is enabled.
 
 ### 6. Inventory Quality Of Life
+
+Status: partial.
 
 Goal: make large inventories usable.
 
@@ -130,6 +138,8 @@ Acceptance:
 
 ### 7. Travel Confirmation And Arrival Results
 
+Status: implemented.
+
 Goal: make every route a meaningful decision.
 
 Tasks:
@@ -145,6 +155,8 @@ Acceptance:
 - Arrival summarizes time and costs.
 
 ### 8. Carry, Pull, And Packhorses
+
+Status: first pass implemented.
 
 Goal: rebuild original capacity pressure.
 
@@ -162,6 +174,8 @@ Acceptance:
 - Packhorses and storage have real value.
 
 ### 9. Theft, Guards, And Smuggling
+
+Status: first pass implemented.
 
 Goal: turn illegal goods into a strategic risk/reward layer.
 
@@ -183,14 +197,16 @@ Acceptance:
 
 ### 10. Dialogue Graph Runtime
 
+Status: first pass implemented, improved beyond original one-line prompts.
+
 Goal: restore original conversation structure.
 
 Tasks:
 
-- Extract/load dialogue graphs.
+- Extract/load dialogue graphs. Partially implemented through typed contextual choices from extracted character fields and market data.
 - Track current node per conversation.
-- Render response choices.
-- Support Goodbye and Barter exits.
+- Render response choices. Implemented.
+- Support Goodbye and Barter exits. Implemented in the barter conversation screen.
 - Add typed callback registry.
 
 Acceptance:
@@ -199,13 +215,15 @@ Acceptance:
 
 ### 11. Quest State And Journal
 
+Status: first pass implemented.
+
 Goal: make story and jobs persistent.
 
 Tasks:
 
-- Add quest states: unseen, offered, accepted, active, ready, finished, failed.
-- Add objectives and rewards.
-- Add journal tabs for quests, items, markets, rumors, and notes.
+- Add quest states: unseen, offered, accepted, active, ready, finished, failed. Implemented except active is not separately used yet.
+- Add objectives and rewards. Objectives display from extracted market quest data; rewards still missing.
+- Add journal tabs for quests, items, markets, rumors, and notes. First pass implemented as Notice Board plus Rumor Ledger.
 - Add quest item highlighting.
 
 Acceptance:
@@ -232,12 +250,14 @@ Acceptance:
 
 ### 13. Event Calendar
 
+Status: first pass implemented.
+
 Goal: make markets feel alive.
 
 Tasks:
 
-- Add day/week/season/year schedule.
-- Add recurring and one-time events.
+- Add day/week/season/year schedule. First pass estimates next day from extracted frequency.
+- Add recurring and one-time events. First pass displays extracted market events.
 - Add demand/supply event bias.
 - Add event banners and warnings.
 
@@ -341,8 +361,8 @@ Acceptance:
 
 Tasks:
 
-- Multiple save slots.
-- Save metadata.
+- Multiple save slots. Implemented with four local slots.
+- Save metadata. Implemented with saved date, day, and market.
 - Confirm overwrite/delete.
 - Schema migrations.
 - Import/export stability.
