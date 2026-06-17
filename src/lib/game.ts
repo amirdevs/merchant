@@ -59,6 +59,15 @@ function seeded(seed: number) {
   };
 }
 
+export function benfordsQuantity(min: number, max: number, roll: () => number) {
+  const safeMin = Math.max(0, Math.floor(min || 0));
+  const safeMax = Math.max(safeMin, Math.floor(max || 1));
+  if (safeMin === safeMax) return safeMin;
+  const span = safeMax - safeMin + 1;
+  const skewed = Math.floor(Math.pow(roll(), 2) * span);
+  return Math.min(safeMax, safeMin + skewed);
+}
+
 function itemMatchesPool(item: Item, pool: ObtainableItem) {
   const tag = pool.tag.toLowerCase();
   return item.name.toLowerCase() === tag || item.tags.some((itemTag) => itemTag.toLowerCase() === tag);
@@ -67,7 +76,7 @@ function itemMatchesPool(item: Item, pool: ObtainableItem) {
 function quantityFor(pool: ObtainableItem, item: Item, roll: () => number) {
   const min = Math.max(0, Math.floor(pool.quantityMin || 0));
   const max = Math.max(min, Math.floor(pool.quantityMax || 1));
-  let quantity = min + Math.floor(roll() * (max - min + 1));
+  let quantity = benfordsQuantity(min, max, roll);
   if (quantity <= 0 && max > 0) quantity = 1;
   if (item.loafValue > 1000) quantity = Math.min(quantity, 1);
   return Math.max(0, quantity);
