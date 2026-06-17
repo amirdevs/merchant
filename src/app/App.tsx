@@ -31,9 +31,29 @@ const defaultUiPreferences: UiPreferences = {
   decorativeMotion: true,
 };
 
+const gameViews: GameView[] = [
+  "main-menu",
+  "new-profile",
+  "load-game",
+  "settings",
+  "system",
+  "travel",
+  "market",
+  "customers",
+  "barter",
+  "inventory",
+  "inventory-filter",
+  "item-detail",
+];
+
+function initialView(): GameView {
+  const view = new URLSearchParams(window.location.search).get("view");
+  return gameViews.includes(view as GameView) ? (view as GameView) : "main-menu";
+}
+
 export function App() {
   const controller = useMerchantController();
-  const [activeView, setActiveView] = useState<GameView>("main-menu");
+  const [activeView, setActiveView] = useState<GameView>(() => initialView());
   const [merchantProfile, setMerchantProfile] = useState<MerchantProfile>(defaultMerchantProfile);
   const [uiPreferences, setUiPreferences] = useState<UiPreferences>(defaultUiPreferences);
   const [saveSeen, setSaveSeen] = useState(() => Boolean(loadGame()));

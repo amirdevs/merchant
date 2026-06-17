@@ -1,41 +1,69 @@
 import { BookOpen, MapPinned } from "lucide-react";
 import type { GameState } from "@/lib/game";
 import { marketplaces } from "@/lib/game";
-import { mapAsset, routeAsset } from "@/lib/assets";
+import { routeAsset } from "@/lib/assets";
 import { money } from "@/lib/format";
-import { Button, Panel } from "@/components/ui";
+import { uiAssets } from "@/lib/ui-assets";
+import { Button, LedgerRow, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
 
 export function TravelMapView({ state, onTravel }: { state: GameState; onTravel: (marketIndex: number) => void }) {
   const market = marketplaces[state.marketIndex];
   return (
-    <section className="grid w-full gap-5 rounded-3xl border-2 border-brass/60 bg-panel/90 p-5 shadow-2xl shadow-black/50 xl:grid-cols-[1.25fr_0.75fr]">
-      <div className="relative min-h-[66vh] overflow-hidden rounded-3xl border border-brass-soft/70 bg-cover bg-center" style={{ backgroundImage: `linear-gradient(rgba(244,234,209,.12), rgba(20,15,9,.52)), url(\"${mapAsset()}\")` }}>
-        <div className="absolute left-[8%] top-[8%] rounded-full border-2 border-brass bg-panel/90 px-5 py-3 shadow-xl"><span className="text-[0.7rem] uppercase tracking-[0.25em] text-brass">Current</span><strong className="block font-display text-2xl">{market.name}</strong></div>
-        {market.connections.map((connection, index) => {
-          const destination = marketplaces[connection.marketplaceIndex];
-          return <button key={destination.index} className="absolute rounded-full border-2 border-brass bg-ember px-4 py-2 font-bold shadow-xl transition hover:scale-105" style={{ left: `${22 + index * 17}%`, top: `${42 + (index % 2) * 18}%` }} type="button" onClick={() => onTravel(destination.index)}>{destination.name}</button>;
-        })}
-      </div>
-      <Panel title="Selected Market">
-        <div className="grid gap-2 text-sm">
-          <Stat label="Name / kingdom" value={market.name} />
-          <Stat label="Legal warnings" value="No locked contraband warning" />
-          <Stat label="Demand / discounts" value="Route hints pending" />
-          <Stat label="Quests / events" value={market.event?.name || market.quest?.todo || "None"} />
-          <Stat label="Risk / capacity" value="Capacity check visible" />
-        </div>
-        <div className="mt-3 flex flex-wrap gap-2"><Button><MapPinned size={16} /> Enter Market</Button><Button subtle><BookOpen size={16} /> Journal</Button><Button subtle disabled>Skip Day</Button></div>
-      </Panel>
-      <Panel title="Route Ledger">
-        <div className="grid gap-3">
-          {market.connections.map((connection) => {
+    <ScreenFrame title="Travel Map" eyebrow="Market Planner" backdrop={uiAssets.backplates.travelMap} overlay="light">
+      <div className="grid flex-1 gap-4 xl:grid-cols-[1.2fr_380px]">
+        <div className="relative min-h-[65vh] overflow-hidden rounded-lg border-2 border-[#7f5b2a] bg-cover bg-center shadow-2xl shadow-black/40" style={{ backgroundImage: `linear-gradient(rgba(255,244,210,.08), rgba(44,25,9,.12)), url("${uiAssets.backplates.travelMap}")` }}>
+          <div className="absolute left-[5%] top-[5%] rounded-md border-2 border-[#7f5b2a] bg-[#f2ddb1]/92 p-3 text-[#26170a] shadow-xl">
+            <span className="text-[0.65rem] uppercase tracking-[0.22em] text-[#75501f]">Current</span>
+            <strong className="block font-display text-2xl">{market.name}</strong>
+          </div>
+          {market.connections.map((connection, index) => {
             const destination = marketplaces[connection.marketplaceIndex];
-            return <article key={destination.index} className="rounded-xl border border-brass-soft/60 bg-black/25 p-3"><div className="flex items-center justify-between gap-3"><strong className="font-display text-xl">{destination.name}</strong><span className="rounded-full border border-brass-soft px-2 py-1 text-xs text-brass">{connection.travelDays} days</span></div><p className="mt-1 text-sm text-parchment-muted">Toll {money(connection.tolls)} · route asset {routeAsset(connection.routeFile) ? "linked" : "pending"}</p><Button className="mt-3 w-full" onClick={() => onTravel(destination.index)}><MapPinned size={16} /> Travel</Button></article>;
+            return (
+              <button
+                key={destination.index}
+                className="absolute grid place-items-center rounded-full border-2 border-[#7f5b2a] bg-[#f2ddb1]/95 px-4 py-2 font-bold text-[#26170a] shadow-xl transition hover:scale-105"
+                style={{ left: `${20 + index * 18}%`, top: `${42 + (index % 2) * 18}%` }}
+                type="button"
+                onClick={() => onTravel(destination.index)}
+              >
+                <img className="mb-1 h-8 w-8 object-contain" src={uiAssets.map.friendlyCityMarker} alt="" />
+                {destination.name}
+              </button>
+            );
           })}
+          <div className="absolute bottom-4 left-4">
+            <TitleRibbon size="sm">Routes / Demand / Risk</TitleRibbon>
+          </div>
         </div>
-      </Panel>
-    </section>
+
+        <aside className="grid content-start gap-4">
+          <Panel title="Selected Destination" variant="parchment">
+            <div className="grid grid-cols-2 gap-2">
+              <StatChip label="Market" value={market.name} icon={uiAssets.map.currentLocationMarker} />
+              <StatChip label="Risk" value="Normal" />
+              <StatChip label="Demand" value="Mixed" />
+              <StatChip label="Capacity" value="Safe" />
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2"><Button><MapPinned size={16} /> Enter Market</Button><Button subtle><BookOpen size={16} /> Journal</Button><Button subtle disabled>Skip Day</Button></div>
+          </Panel>
+          <Panel title="Route Ledger" variant="parchment">
+            <div className="grid gap-2">
+              {market.connections.map((connection) => {
+                const destination = marketplaces[connection.marketplaceIndex];
+                return (
+                  <LedgerRow
+                    key={destination.index}
+                    title={destination.name}
+                    subtitle={`Toll ${money(connection.tolls)} / route asset ${routeAsset(connection.routeFile) ? "linked" : "pending"}`}
+                    trailing={<span className="text-sm font-bold text-[#75501f]">{connection.travelDays}d</span>}
+                    onClick={() => onTravel(destination.index)}
+                  />
+                );
+              })}
+            </div>
+          </Panel>
+        </aside>
+      </div>
+    </ScreenFrame>
   );
 }
-
-function Stat({ label, value }: { label: string; value: string | number }) { return <div className="flex items-center justify-between rounded-xl border border-brass-soft/50 bg-black/25 p-2"><span className="text-brass">{label}</span><strong>{value}</strong></div>; }

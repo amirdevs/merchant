@@ -1,4 +1,5 @@
 const ASSET_ROOT = "/game-assets";
+export const GAME_ASSET_ROOT = ASSET_ROOT;
 
 function extOf(file: string) {
   const dot = file.lastIndexOf(".");
