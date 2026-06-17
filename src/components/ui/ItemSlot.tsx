@@ -39,7 +39,7 @@ export function ItemSlot({ className, imageSrc, quantity, marker, selected, lock
       {imageSrc ? <img className="max-h-[72%] max-w-[72%] object-contain drop-shadow" src={imageSrc} alt="" /> : null}
       {locked ? <LockKeyhole className="absolute text-brass drop-shadow" size={18} /> : null}
       {quantity ? (
-        <span className="absolute bottom-1 right-1 rounded-full border border-[#5a3b18] bg-[#f1dcae] px-1.5 text-xs font-bold leading-5 text-[#2a1a0c] shadow">
+        <span className="absolute bottom-1 right-1 min-w-6 rounded-full border-2 border-[#5a3b18] bg-[#fff2bd] px-1.5 text-center text-sm font-black leading-6 text-[#160d05] shadow shadow-black/35">
           {quantity}
         </span>
       ) : null}

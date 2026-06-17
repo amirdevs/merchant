@@ -1,10 +1,9 @@
 import type { ButtonHTMLAttributes } from "react";
 import type { Marketplace } from "@/data/types";
-import { money } from "@/lib/format";
 import { visibleQuantity, type GameState } from "@/lib/game";
 import { uiAssets } from "@/lib/ui-assets";
 import type { MerchantProfile } from "@/app/types";
-import { Button, Muted, Panel, ScreenFrame, TitleRibbon } from "@/components/ui";
+import { Muted, ScreenFrame } from "@/components/ui";
 
 type MainMenuViewProps = {
   state: GameState;
@@ -24,10 +23,10 @@ export function MainMenuView({ state, market, merchantProfile, soundOn, hasSave,
 
   return (
     <ScreenFrame className="min-h-[calc(100dvh-1.5rem)]" contentClassName="justify-center" backdrop={uiAssets.backplates.mainMenuHarbor} overlay="light">
-      <div className="grid gap-6 p-2 lg:grid-cols-[minmax(320px,0.52fr)_1fr_minmax(280px,0.38fr)] lg:p-6">
-        <aside className="flex max-w-[430px] flex-col justify-center">
+      <div className="grid min-h-[calc(100dvh-4rem)] items-center p-3 lg:grid-cols-[minmax(360px,0.4fr)_1fr] lg:p-8">
+        <aside className="max-w-[520px]">
           <div className="mb-5 text-center lg:text-left">
-            <div className="text-[0.68rem] uppercase tracking-[0.32em] text-[#ffe09a] drop-shadow">Offline Fantasy Merchant RPG</div>
+            <div className="text-[0.72rem] uppercase tracking-[0.34em] text-[#ffe09a] drop-shadow">Offline Fantasy Merchant RPG</div>
             <h1 className="mt-3 font-display text-5xl leading-none text-[#ffeec4] drop-shadow-2xl md:text-6xl">
               <span className="block">Merchants</span>
               <span className="block text-brass">of Eudora</span>
@@ -35,7 +34,7 @@ export function MainMenuView({ state, market, merchantProfile, soundOn, hasSave,
             <Muted className="mt-2 block text-sm">Local save / painterly merchant UI build</Muted>
           </div>
 
-          <nav className="grid gap-2" aria-label="Main menu actions">
+          <nav className="grid gap-2.5" aria-label="Main menu actions">
             <MenuCommand disabled={!hasSave} title="Continue" detail={hasSave ? `Day ${state.day} / ${market.name}` : "No local save yet"} onClick={onContinue} />
             <MenuCommand title="New Game" detail="Create a merchant profile" onClick={onNewMerchant} />
             <MenuCommand title="Load Game" detail="Save ledger, import and export" onClick={onLoadGame} />
@@ -45,23 +44,9 @@ export function MainMenuView({ state, market, merchantProfile, soundOn, hasSave,
         </aside>
 
         <div className="hidden lg:block" />
-
-        <Panel className="self-center" title="Current Session" variant="parchment">
-          <h2 className="font-display text-3xl leading-tight text-[#2b1a0c]">{merchantProfile.name}</h2>
-          <p className="text-sm text-[color:var(--ui-muted)]">{merchantProfile.background}</p>
-          <dl className="mt-4 grid grid-cols-2 gap-2">
-            <SummaryStat label="City" value={market.name} />
-            <SummaryStat label="Day" value={state.day} />
-            <SummaryStat label="Goods" value={goodsCount} />
-            <SummaryStat label="Audio" value={soundOn ? "On" : "Off"} />
-          </dl>
-          <p className="mt-4 rounded-md border border-[#9a7138]/60 bg-[#fff6d7]/45 p-3 text-sm text-[#4a3218]">
-            {money(market.stallage)} stallage / {merchantProfile.difficulty}
-          </p>
-          <Button className="mt-4 w-full" variant="secondary" onClick={onLoadGame}>
-            Open Save Ledger
-          </Button>
-        </Panel>
+        <div className="absolute bottom-7 right-8 rounded-sm border border-[#d0a65a]/65 bg-black/45 px-5 py-2 font-display text-xl text-[#fff0bf] shadow-lg shadow-black/40">
+          {merchantProfile.name} / Day {state.day} / {goodsCount} goods / {soundOn ? "Audio On" : "Audio Off"}
+        </div>
       </div>
     </ScreenFrame>
   );
@@ -69,20 +54,16 @@ export function MainMenuView({ state, market, merchantProfile, soundOn, hasSave,
 
 function MenuCommand({ title, detail, ...props }: { title: string; detail: string } & ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <button type="button" {...props} className="group text-left disabled:cursor-not-allowed disabled:opacity-45">
-      <TitleRibbon className="w-full justify-start px-6 text-base transition group-hover:brightness-110" size="md">
-        {title}
-      </TitleRibbon>
-      <span className="mt-1 block px-5 text-xs text-[#fff0bf] opacity-90 drop-shadow">{detail}</span>
+    <button
+      type="button"
+      {...props}
+      className="group min-h-16 rounded-sm border-2 border-[#d0a65a]/85 bg-cover bg-center px-8 py-2 text-center shadow-xl shadow-black/45 transition hover:-translate-y-0.5 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
+      style={{
+        backgroundImage: `linear-gradient(180deg, rgba(255,248,225,.70), rgba(232,195,126,.46)), url("${uiAssets.core.buttonSecondaryParchment}")`,
+      }}
+    >
+      <span className="block font-display text-2xl font-black leading-none text-[#160d05]">{title}</span>
+      <span className="mt-1 block text-sm font-black text-[#5a3917]">{detail}</span>
     </button>
-  );
-}
-
-function SummaryStat({ label, value }: { label: string; value: string | number }) {
-  return (
-    <div className="rounded-md border border-[#9a7138]/55 bg-[#fff6d7]/45 p-3">
-      <dt className="text-[0.62rem] uppercase tracking-[0.18em] text-[#75501f]">{label}</dt>
-      <dd className="mt-1 truncate font-display text-lg text-[#26170a]">{value}</dd>
-    </div>
   );
 }

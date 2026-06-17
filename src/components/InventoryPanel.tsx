@@ -64,7 +64,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
             darkPanel
               ? "border-[#d0a65a]/35 bg-black/25 shadow-black/35"
               : "border-[#9a7138]/55 bg-[#fff6d7]/35 shadow-[#6c4418]/20",
-            variant === "compact" ? "max-h-56 grid-cols-3 gap-1.5 sm:grid-cols-4" : "max-h-[62vh] grid-cols-4 gap-2 sm:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"
+            variant === "compact" ? "max-h-56 grid-cols-3 gap-1.5 sm:grid-cols-4" : "max-h-[67vh] grid-cols-4 gap-3 sm:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"
           )}
         >
           {rows.length ? rows.map((entry) => {
@@ -77,10 +77,10 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
               <div
                 key={`${panelTitle}-${entry.itemIndex}`}
                 className={cn(
-                  "group relative min-w-0 rounded-md border p-1.5 shadow-sm transition hover:-translate-y-0.5 hover:brightness-105",
+                  "group relative min-w-0 rounded-sm border-2 p-1.5 shadow-sm transition hover:-translate-y-0.5 hover:brightness-105",
                   darkPanel
-                    ? "border-[#9b7a3d]/45 bg-[#120b05]/70 text-[#fff2c7] shadow-black/25"
-                    : "border-[#c89d55]/45 bg-[#f5e1b7]/60 text-[#2a1a0c] shadow-[#6c4418]/15"
+                    ? "border-[#d0a65a]/65 bg-[#120b05]/85 text-[#fff8d8] shadow-black/25"
+                    : "border-[#c89d55]/65 bg-[#f5e1b7]/80 text-[#201207] shadow-[#6c4418]/15"
                 )}
                 style={{
                   backgroundImage: `linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.10)), url("${uiAssets.inventory.itemIconFrameLarge}")`,
@@ -88,7 +88,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
                 }}
               >
                 <ItemSlot
-                  className={cn("mx-auto", variant === "compact" ? "w-14" : "w-16 xl:w-[4.5rem]")}
+                  className={cn("mx-auto", variant === "compact" ? "w-14" : "w-20 xl:w-24")}
                   imageSrc={icon}
                   marker={marker}
                   quantity={shownQuantity}
@@ -121,8 +121,8 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
                 ) : null}
                 <div
                   className={cn(
-                    "mt-0.5 truncate text-center text-[0.66rem] font-bold leading-tight",
-                    darkPanel ? "text-[#fff0bf]" : "text-[#3b260f]"
+                    "mt-1 truncate rounded-sm border px-1.5 py-0.5 text-center text-[0.72rem] font-black leading-tight shadow-sm",
+                    darkPanel ? "border-[#d0a65a]/45 bg-black/55 text-[#fff3bd]" : "border-[#9a7138]/45 bg-[#fff4c5]/80 text-[#24170b]"
                   )}
                   title={item?.name || `Item ${entry.itemIndex}`}
                 >

@@ -1,11 +1,11 @@
 import type { ReactNode } from "react";
-import { CircleHelp, Map as MapIcon, Menu, PackageSearch, Store, Users, Volume2, VolumeX, type LucideIcon } from "lucide-react";
+import { CircleHelp, Cog, Map as MapIcon, PackageSearch, Store, Users, Volume2, VolumeX, type LucideIcon } from "lucide-react";
 import { backdropAsset, townAsset } from "@/lib/assets";
 import { money } from "@/lib/format";
 import { items, visibleQuantity } from "@/lib/game";
 import { uiAssets } from "@/lib/ui-assets";
 import type { GameView, MerchantController, MerchantProfile, UiPreferences } from "@/app/types";
-import { Button, HudResource, IconButton, Muted, TitleRibbon } from "@/components/ui";
+import { Button, HudResource, IconButton, Muted } from "@/components/ui";
 
 const titleViews = new Set<GameView>(["main-menu", "new-profile", "load-game", "settings"]);
 
@@ -39,38 +39,37 @@ export function GameShell({ controller, activeView, merchantProfile, uiPreferenc
       data-view={activeView}
       data-ui-scale={uiPreferences.uiScale}
     >
-      <div className="mx-auto flex min-h-dvh max-w-[1720px] flex-col gap-3 p-3 lg:p-4">
+      <div className="mx-auto flex min-h-dvh flex-col gap-2 p-2 lg:p-3">
         {!isTitleArea ? (
           <header
-            className="relative z-10 grid gap-3 rounded-lg border-2 border-[#7f5b2a] p-3 shadow-2xl shadow-black/45 xl:grid-cols-[minmax(280px,0.9fr)_1.2fr_auto]"
+            className="relative z-10 grid min-h-16 items-center gap-2 rounded-sm border-2 border-[#b98b37] px-3 py-2 shadow-2xl shadow-black/45 xl:grid-cols-[minmax(260px,0.8fr)_1fr_auto]"
             style={{
-              backgroundImage: `linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.28)), url("${uiAssets.nineSlice.textureWoodDark}")`,
+              backgroundImage: `linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.34)), url("${uiAssets.nineSlice.textureWoodDark}")`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
             }}
           >
-            <button className="rounded-md border border-[#caa45b]/60 bg-black/25 px-4 py-3 text-left transition hover:border-brass" type="button" onClick={() => onNavigate("market")}>
-              <span className="block text-[0.68rem] uppercase tracking-[0.24em] text-brass">
-                {merchantProfile.name} / {activeView.replace(/-/g, " ")}
+            <button className="grid min-h-12 grid-cols-[44px_1fr] items-center gap-3 rounded-sm border border-[#d0a65a]/55 bg-black/25 px-3 py-1.5 text-left transition hover:border-brass" type="button" onClick={() => onNavigate("market")}>
+              <span className="grid h-11 w-11 place-items-center bg-contain bg-center bg-no-repeat" style={{ backgroundImage: `url("${uiAssets.core.circularEmblemHolder}")` }}>
+                <img className="h-7 w-7 object-contain" src={uiAssets.hud.market} alt="" />
               </span>
-              <TitleRibbon className="mt-1 justify-start" size="sm">
-                {controller.market.name}
-              </TitleRibbon>
-              <Muted className="mt-1 block text-xs">
-                {merchantProfile.background} / stallage {money(controller.market.stallage)}
-              </Muted>
+              <span className="min-w-0">
+                <span className="block truncate text-[0.65rem] uppercase tracking-[0.22em] text-brass">{merchantProfile.name} / {activeView.replace(/-/g, " ")}</span>
+                <span className="block truncate font-display text-2xl leading-none text-[#fff0bf]">{controller.market.name}</span>
+                <Muted className="block truncate text-[0.68rem]">{merchantProfile.background} / stallage {money(controller.market.stallage)}</Muted>
+              </span>
             </button>
 
-            <dl className="grid grid-cols-2 gap-2 md:grid-cols-4">
+            <dl className="grid grid-cols-4 gap-1.5">
               <HudResource icon={uiAssets.hud.day} label="Day" value={controller.state.day} />
-              <HudResource icon={uiAssets.hud.wealth} label="Wealth" value={money(cargoValue)} />
+              <HudResource icon={uiAssets.hud.wealth} label="Value" value={money(cargoValue)} />
               <HudResource icon={uiAssets.hud.weight} label="Carry" value={cargoWeight} />
               <HudResource icon={uiAssets.hud.inventory} label="Goods" value={carriedEntries.length} />
             </dl>
 
-            <nav className="flex flex-wrap items-center justify-end gap-2" aria-label="Primary game pages">
+            <nav className="flex flex-wrap items-center justify-end gap-1.5" aria-label="Primary game pages">
               {navItems.map(({ view, label, icon: Icon }) => (
-                <Button key={view} variant={activeView === view ? "primary" : "secondary"} onClick={() => onNavigate(view)}>
+                <Button key={view} size="sm" variant={activeView === view ? "primary" : "secondary"} onClick={() => onNavigate(view)}>
                   <Icon size={16} /> {label}
                 </Button>
               ))}
@@ -84,8 +83,8 @@ export function GameShell({ controller, activeView, merchantProfile, uiPreferenc
               >
                 {controller.soundOn ? <Volume2 size={18} /> : <VolumeX size={18} />}
               </IconButton>
-              <Button onClick={() => onNavigate("system")}>
-                <Menu size={16} /> Menu
+              <Button size="sm" onClick={() => onNavigate("system")}>
+                <Cog size={16} /> Menu
               </Button>
             </nav>
           </header>
