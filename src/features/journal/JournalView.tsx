@@ -2,6 +2,7 @@ import { BookOpen, CheckCircle2, ScrollText } from "lucide-react";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { items } from "@/lib/game";
 import { marketEventPreviews } from "@/lib/events";
+import { generatedContracts } from "@/lib/contracts";
 import { questCanComplete, questItemProgress, questReward } from "@/lib/quests";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { uiAssets } from "@/lib/ui-assets";
@@ -12,15 +13,17 @@ type JournalViewProps = {
   state: GameState;
   onBack: () => void;
   onSetQuestStatus: (marketIndex: number, status: QuestStatus) => void;
+  onSetContractStatus: (contractId: string, status: GameState["contractStates"][string]) => void;
 };
 
-export function JournalView({ state, onBack, onSetQuestStatus }: JournalViewProps) {
+export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStatus }: JournalViewProps) {
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
   const questMarkets = marketplaces.filter((nextMarket) => nextMarket.quest);
   const currentStatus: QuestStatus = state.questStates[String(market.index)] || (market.quest ? "offered" : "unseen");
   const notes = state.dialogueLog.slice(0, 12);
   const eventPreviews = marketEventPreviews(marketplaces, state.day).slice(0, 8);
+  const contracts = generatedContracts(market, marketplaces, kingdom);
   const currentQuestProgress = questItemProgress(market, state.playerInventory, items);
   const currentQuestReady = questCanComplete(market, state.playerInventory, items);
   const currentQuestReward = questReward(market, items);
@@ -79,6 +82,29 @@ export function JournalView({ state, onBack, onSetQuestStatus }: JournalViewProp
         </Panel>
 
         <aside className="grid content-start gap-4">
+          <Panel title="Contracts" variant="parchment">
+            <div className="grid max-h-72 gap-2 overflow-auto pr-1">
+              {contracts.map((contract) => {
+                const status = state.contractStates[contract.id] || "available";
+                return (
+                  <div className="rounded-sm border border-[#9a7138]/50 bg-[#fff6d7]/55 p-3 text-sm text-[#3b260f]" key={contract.id}>
+                    <div className="flex items-start justify-between gap-2">
+                      <span>
+                        <strong className="block text-[#26170a]">{contract.title}</strong>
+                        <span>{contract.detail}</span>
+                      </span>
+                      <span className="rounded-full border border-[#9a7138]/60 bg-[#fff6d7]/70 px-2 py-1 text-[0.68rem] font-bold uppercase text-[#75501f]">{status}</span>
+                    </div>
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
+                      <span className="font-bold text-[#75501f]">{contract.rewardCopper} copper / {contract.daysLimit}d / {contract.risk} risk</span>
+                      <Button disabled={status !== "available"} size="sm" onClick={() => onSetContractStatus(contract.id, "accepted")}>Accept</Button>
+                      <Button disabled={status !== "accepted"} size="sm" variant="secondary" onClick={() => onSetContractStatus(contract.id, "completed")}>Complete</Button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </Panel>
           <Panel title="Event Calendar" variant="parchment">
             {eventPreviews.length ? (
               <div className="grid gap-2">

@@ -5,6 +5,7 @@ import marketplacesJson from "../data/generated/marketplaces.json";
 import professionsJson from "../data/generated/professions.json";
 import type { Character, InventoryEntry, Item, Kingdom, Marketplace, ObtainableItem, Profession } from "../data/types";
 import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
+import type { ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { addInventory, clearOffers, moveOffer, transferOffers, visibleQuantity } from "./inventory";
 import { applyModPacks } from "./mods";
@@ -31,6 +32,7 @@ export type GameState = {
   offersMade: number;
   npcRelations: NpcRelations;
   questStates: Record<string, "unseen" | "offered" | "accepted" | "ready" | "finished" | "failed">;
+  contractStates: ContractStates;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -127,6 +129,7 @@ export function newGame(): GameState {
     offersMade: 0,
     npcRelations: {},
     questStates: {},
+    contractStates: {},
     dialogueLog: [],
     travelResult: null,
   };

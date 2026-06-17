@@ -222,6 +222,13 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function setContractStatus(contractId: string, status: GameState["contractStates"][string]) {
+    update((draft) => {
+      draft.contractStates[contractId] = status;
+      draft.message = `Contract ${status}: ${contractId.split(":").slice(1).join(" / ")}.`;
+    });
+  }
+
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
@@ -381,6 +388,7 @@ export function useMerchantController(): MerchantController {
       setMessage,
       speakWith,
       setQuestStatus,
+      setContractStatus,
       selectCharacter,
       nextCustomer,
       movePlayer,

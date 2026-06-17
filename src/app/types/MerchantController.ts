@@ -44,6 +44,7 @@ export type MerchantActions = {
   setMessage: (message: string) => void;
   speakWith: (character: Character, topic: string, reply: string) => void;
   setQuestStatus: (marketIndex: number, status: GameState["questStates"][string]) => void;
+  setContractStatus: (contractId: string, status: GameState["contractStates"][string]) => void;
   selectCharacter: (next: Character) => void;
   nextCustomer: () => void;
   movePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;

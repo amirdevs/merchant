@@ -32,6 +32,7 @@ function isGameState(value: unknown): value is GameState {
   if (typeof candidate.offersMade !== "number") candidate.offersMade = 0;
   if (!candidate.npcRelations || typeof candidate.npcRelations !== "object") candidate.npcRelations = {};
   if (!candidate.questStates || typeof candidate.questStates !== "object") candidate.questStates = {};
+  if (!candidate.contractStates || typeof candidate.contractStates !== "object") candidate.contractStates = {};
   if (!Array.isArray(candidate.dialogueLog)) candidate.dialogueLog = [];
   if (!("travelResult" in candidate)) candidate.travelResult = null;
   return true;
