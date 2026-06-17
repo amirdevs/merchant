@@ -9,7 +9,7 @@ import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { addInventory, clearOffers, moveOffer, transferOffers, visibleQuantity } from "./inventory";
 import { applyModPacks } from "./mods";
 import { charactersAtMarket, nextCustomerIndex, selectedCharacter } from "./npc-flow";
-import { ensureRelation, type NpcRelations, reactionText, startingPatience } from "./reputation";
+import { ensureRelation, type NpcRelations, reactionText, startingPatience, ultimatumActive } from "./reputation";
 import { deleteGameSave, importGame, loadGame, saveGame, serializeGame } from "./save";
 import { applyTravelRisks } from "./travel-risk";
 
@@ -310,7 +310,7 @@ export function completeTrade(state: GameState) {
     }
     const missing = Math.max(0, Math.ceil(characterValue - playerValue));
     next.offersMade += 1;
-    next.message = `${reactionText(appraisal, character)} Missing ${missing} loaf value. ${preferenceHint(character)} Patience: ${relation.patience}.`;
+    next.message = `${reactionText(appraisal, character)} Missing ${missing} loaf value. ${preferenceHint(character)} Patience: ${relation.patience}.${ultimatumActive(relation) ? " Final offer: improve the trade now or they will leave." : ""}`;
     return next;
   }
 

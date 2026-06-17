@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { Handshake, HelpCircle, Scale } from "lucide-react";
 import type { Character, InventoryEntry } from "@/data/types";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
-import { moodLabel, patienceLabel, relationFor, trustLabel } from "@/lib/reputation";
+import { moodLabel, patienceLabel, relationFor, trustLabel, ultimatumActive } from "@/lib/reputation";
 import { buildDealHints } from "@/lib/deal-intelligence";
 import { dialogueChoices } from "@/lib/dialogue";
 import type { MoveAmount } from "@/lib/inventory";
@@ -79,6 +79,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
                     <StatChip label="Patience" value={patienceLabel(relation)} icon={uiAssets.town.tradeStyleBadge} tone={relation && relation.patience <= 2 ? "danger" : "parchment"} />
                   </dl>
                   <p className="mt-3 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/65 p-4 text-lg leading-snug text-[#3b260f] shadow-inner shadow-[#6c4418]/15">{message}</p>
+                  {ultimatumActive(relation) ? <p className="mt-2 rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/80 p-2 text-sm font-black uppercase tracking-wide text-[#8d271f]">Final offer warning</p> : null}
                 </div>
               </div>
               <div className="mt-4 grid max-h-72 grid-cols-2 gap-2 overflow-auto pr-1 text-[#3b260f]">

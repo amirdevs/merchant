@@ -64,6 +64,10 @@ export function patienceLabel(relation: NpcRelation | null) {
   return "Leaving";
 }
 
+export function ultimatumActive(relation: NpcRelation | null) {
+  return Boolean(relation && relation.patience <= 1);
+}
+
 export function reactionText(appraisal: string, character: Character) {
   switch (appraisal) {
     case "great_deal":
