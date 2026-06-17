@@ -5,6 +5,7 @@ import { itemIconAsset } from "@/lib/assets";
 import { items } from "@/lib/game";
 import { money, title } from "@/lib/format";
 import { type MoveAmount, visibleQuantity } from "@/lib/inventory";
+import { itemIsIllegal } from "@/lib/legal";
 import { cn } from "@/lib/cn";
 import { uiAssets } from "@/lib/ui-assets";
 import { Button, ItemSlot, LedgerRow, Panel } from "@/components/ui";
@@ -19,6 +20,7 @@ type InventoryPanelProps = {
   variant?: "default" | "compact" | "management";
   panelVariant?: "parchment" | "wood" | "dark";
   allowProtect?: boolean;
+  illegalTags?: string[];
   onMove: (entry: InventoryEntry, amount: MoveAmount) => void;
   onMoveAll: (entry: InventoryEntry) => void;
   onToggleProtect?: (entry: InventoryEntry) => void;
@@ -38,7 +40,7 @@ function moveAmountFromInput(event: MouseEvent | KeyboardEvent, mode: InventoryP
   return mode === "offer" ? -1 : 1;
 }
 
-export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, onMove, onMoveAll, onToggleProtect }: InventoryPanelProps) {
+export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, illegalTags = [], onMove, onMoveAll, onToggleProtect }: InventoryPanelProps) {
   const rows = inventory.filter((entry) => quantityFor(entry, mode) > 0);
   const isGrid = variant === "compact" || variant === "management";
   const darkPanel = panelVariant === "wood" || panelVariant === "dark";
@@ -71,7 +73,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
             const item = itemFor(entry);
             const shownQuantity = quantityFor(entry, mode);
             const icon = itemIconAsset(item?.iconFile);
-            const marker = item?.unique ? "rare" : entry.protected && mode !== "offer" ? "protected" : undefined;
+            const marker = item && itemIsIllegal(item, illegalTags) ? "illegal" : item?.unique ? "rare" : entry.protected && mode !== "offer" ? "protected" : undefined;
 
             return (
               <div
@@ -119,6 +121,11 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
                     <Lock size={11} />
                   </button>
                 ) : null}
+                {entry.conceal && mode !== "offer" ? (
+                  <span className="absolute left-1 top-1 rounded-full border border-[#1f5960]/80 bg-[#102f34]/90 px-1.5 py-0.5 text-[0.56rem] font-black uppercase tracking-wide text-[#dffcff] shadow">
+                    Hidden
+                  </span>
+                ) : null}
                 <div
                   className={cn(
                     "mt-1 truncate rounded-sm border px-1.5 py-0.5 text-center text-[0.72rem] font-black leading-tight shadow-sm",
@@ -139,14 +146,19 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
           const item = itemFor(entry);
           const shownQuantity = quantityFor(entry, mode);
           const icon = itemIconAsset(item?.iconFile);
-          const marker = item?.unique ? "rare" : entry.protected && mode !== "offer" ? "protected" : undefined;
+          const marker = item && itemIsIllegal(item, illegalTags) ? "illegal" : item?.unique ? "rare" : entry.protected && mode !== "offer" ? "protected" : undefined;
 
           return (
             <LedgerRow
               key={`${panelTitle}-${entry.itemIndex}`}
               className="text-[#2a1a0c]"
               selected={entry.protected && mode !== "offer"}
-              leading={<ItemSlot className="w-12" imageSrc={icon} marker={marker} selected={entry.protected && mode !== "offer"} />}
+              leading={
+                <span className="relative">
+                  <ItemSlot className="w-12" imageSrc={icon} marker={marker} selected={entry.protected && mode !== "offer"} />
+                  {entry.conceal && mode !== "offer" ? <span className="absolute -bottom-0.5 left-0 rounded-sm bg-[#102f34] px-1 text-[0.55rem] font-black uppercase text-[#dffcff]">Hidden</span> : null}
+                </span>
+              }
               title={item?.name || `Item ${entry.itemIndex}`}
               subtitle={item ? `${money(item.loafValue)} value / ${item.tags.slice(0, 3).map(title).join(", ")}` : "Unknown item"}
               trailing={

@@ -3,7 +3,7 @@ import itemsJson from "../data/generated/items.json";
 import kingdomsJson from "../data/generated/kingdoms.json";
 import marketplacesJson from "../data/generated/marketplaces.json";
 import professionsJson from "../data/generated/professions.json";
-import type { Character, InventoryEntry, Item, Marketplace, ObtainableItem, Profession } from "../data/types";
+import type { Character, InventoryEntry, Item, Kingdom, Marketplace, ObtainableItem, Profession } from "../data/types";
 import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
 import { addInventory, clearOffers, moveOffer, transferOffers, visibleQuantity } from "./inventory";
 import { applyModPacks } from "./mods";
@@ -11,7 +11,7 @@ import { charactersAtMarket, nextCustomerIndex, selectedCharacter } from "./npc-
 import { deleteGameSave, importGame, loadGame, saveGame, serializeGame } from "./save";
 
 export const items = itemsJson as Item[];
-export const kingdoms = kingdomsJson as Array<{ index: number; bias?: { tag: string; percent: number }[] }>;
+export const kingdoms = kingdomsJson as Kingdom[];
 export const marketplaces = marketplacesJson as Marketplace[];
 export const professions = professionsJson as Record<string, Profession>;
 

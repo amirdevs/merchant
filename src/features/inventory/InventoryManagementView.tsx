@@ -4,7 +4,7 @@ import type { InventoryEntry } from "@/data/types";
 import type { GameState } from "@/lib/game";
 import type { MoveAmount } from "@/lib/inventory";
 import { itemIconAsset } from "@/lib/assets";
-import { items, visibleQuantity } from "@/lib/game";
+import { currentKingdom, items, visibleQuantity } from "@/lib/game";
 import { money } from "@/lib/format";
 import { inventoryTotals } from "@/lib/economy";
 import { uiAssets } from "@/lib/ui-assets";
@@ -28,6 +28,7 @@ type InventorySort = "Value" | "Name" | "Quantity" | "Weight";
 export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerProtect, onOpenFilter, onOpenItemDetail, onUnavailable }: InventoryManagementViewProps) {
   const [category, setCategory] = useState<InventoryCategory>("All");
   const [sortBy, setSortBy] = useState<InventorySort>("Value");
+  const illegalTags = currentKingdom(state).illegalItemTags || [];
   const carriedEntries = state.playerInventory.filter((entry) => visibleQuantity(entry) > 0);
   const filteredEntries = useMemo(() => {
     const matchesCategory = (entry: InventoryEntry) => {
@@ -90,7 +91,7 @@ export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerPro
               <Grid3X3 size={22} />
             </button>
           </div>
-          <InventoryPanel title="Cargo" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onToggleProtect={onTogglePlayerProtect} allowProtect />
+          <InventoryPanel title="Cargo" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} illegalTags={illegalTags} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onToggleProtect={onTogglePlayerProtect} allowProtect />
           <div className="mt-4 grid gap-3 md:grid-cols-[180px_1fr_220px]">
             <StatChip label="Carry" value={`${totals.weight} / ${totals.carryCapacity}`} icon={uiAssets.hud.weight} />
             <StatChip label="Total Value" value={money(totals.value)} icon={uiAssets.hud.goldCoin} />
@@ -114,7 +115,7 @@ export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerPro
                     backgroundSize: "100% 100%",
                   }}
                 >
-                  <ItemSlot className="w-48" imageSrc={itemIconAsset(selectedItem.iconFile)} selected />
+                  <ItemSlot className="w-48" imageSrc={itemIconAsset(selectedItem.iconFile)} selected marker={selectedItem.tags.some((tag) => illegalTags.includes(tag)) ? "illegal" : selectedItem.unique ? "rare" : undefined} />
                 </div>
                 <h2 className="mt-4 font-display text-3xl text-[#26170a]">{selectedItem.name}</h2>
                 <p className="text-sm text-[#725331]">{selectedItem.tags.join(" / ")}</p>
@@ -128,7 +129,7 @@ export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerPro
               </>
             ) : <p>No item selected for {category}.</p>}
           </Panel>
-          <InventoryPanel title="Current Offer" mode="offer" variant="compact" inventory={state.playerInventory} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} />
+          <InventoryPanel title="Current Offer" mode="offer" variant="compact" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} />
         </aside>
       </div>
     </ScreenFrame>

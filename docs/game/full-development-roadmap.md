@@ -37,15 +37,17 @@ Acceptance:
 
 ### 2. Illegal Goods And Concealment
 
+Status: started.
+
 Goal: make laws and risk visible before adding punishment.
 
 Tasks:
 
-- Add helpers for current kingdom illegal item tags.
-- Mark illegal items in inventory, item detail, trade, and travel warnings.
-- Keep concealment separate from protection.
+- Add helpers for current kingdom illegal item tags. Started with `src/lib/legal.ts`.
+- Mark illegal items in inventory, item detail, trade, and travel warnings. Started.
+- Keep concealment separate from protection. Started.
 - Prevent auto-offer matching from using concealed items.
-- Add current/destination legality panels.
+- Add current/destination legality panels. Started with travel route warnings.
 
 Acceptance:
 

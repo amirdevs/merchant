@@ -107,6 +107,13 @@ export type Marketplace = {
   }>;
 };
 
+export type Kingdom = {
+  index: number;
+  name: string;
+  bias?: Bias[];
+  illegalItemTags?: string[];
+};
+
 export type Profession = {
   slug: string;
   bias?: Bias[];

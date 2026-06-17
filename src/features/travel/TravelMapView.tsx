@@ -1,8 +1,9 @@
 import { BookOpen, MapPinned } from "lucide-react";
 import type { GameState } from "@/lib/game";
-import { items, marketplaces } from "@/lib/game";
+import { items, kingdoms, marketplaces } from "@/lib/game";
 import { routeAsset } from "@/lib/assets";
 import { canPayCopperToll, inventoryTotals } from "@/lib/economy";
+import { inventoryIllegalEntries } from "@/lib/legal";
 import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
@@ -10,6 +11,8 @@ import { Button, LedgerRow, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/
 export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal }: { state: GameState; onTravel: (marketIndex: number) => void; onEnterMarket: () => void; onOpenJournal: () => void }) {
   const market = marketplaces[state.marketIndex];
   const cargo = inventoryTotals(state.playerInventory, items);
+  const currentKingdom = kingdoms[market.kingdomIndex];
+  const currentIllegal = inventoryIllegalEntries(state.playerInventory, items, currentKingdom?.illegalItemTags || []);
   return (
     <ScreenFrame title="Travel Map" eyebrow="Market Planner" backdrop={uiAssets.backplates.travelMap} overlay="light">
       <div className="grid flex-1 gap-4 xl:grid-cols-[1.2fr_380px]">
@@ -48,6 +51,7 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal }:
             </div>
             <div className="mt-3 rounded-sm border border-[#9a7138]/55 bg-[#fff6d7]/55 p-3 text-sm text-[#3b260f]">
               Carry {cargo.weight}/{cargo.carryCapacity} / Size {cargo.size}/{cargo.sizeCapacity}
+              {currentIllegal.length ? <span className="mt-1 block font-bold text-[#8d271f]">Illegal here: {currentIllegal.length} item stack{currentIllegal.length === 1 ? "" : "s"}</span> : null}
             </div>
             <div className="mt-3 flex flex-wrap gap-2"><Button onClick={onEnterMarket}><MapPinned size={16} /> Enter Market</Button><Button subtle onClick={onOpenJournal}><BookOpen size={16} /> Journal</Button><Button subtle disabled>Skip Day</Button></div>
           </Panel>
@@ -55,11 +59,13 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal }:
             <div className="grid gap-2">
               {market.connections.map((connection) => {
                 const destination = marketplaces[connection.marketplaceIndex];
+                const destinationKingdom = kingdoms[destination.kingdomIndex];
+                const destinationIllegal = inventoryIllegalEntries(state.playerInventory, items, destinationKingdom?.illegalItemTags || []);
                 return (
                   <LedgerRow
                     key={destination.index}
                     title={destination.name}
-                    subtitle={`Toll ${money(connection.tolls)} copper / ${canPayCopperToll(state.playerInventory, items, connection.tolls) ? "payable" : "need copper"} / route asset ${routeAsset(connection.routeFile) ? "linked" : "pending"}`}
+                    subtitle={`Toll ${money(connection.tolls)} copper / ${canPayCopperToll(state.playerInventory, items, connection.tolls) ? "payable" : "need copper"}${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""} / route asset ${routeAsset(connection.routeFile) ? "linked" : "pending"}`}
                     trailing={<span className="text-sm font-bold text-[#75501f]">{connection.travelDays}d</span>}
                     onClick={() => onTravel(destination.index)}
                   />
