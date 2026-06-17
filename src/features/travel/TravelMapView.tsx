@@ -6,7 +6,7 @@ import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
 
-export function TravelMapView({ state, onTravel }: { state: GameState; onTravel: (marketIndex: number) => void }) {
+export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal }: { state: GameState; onTravel: (marketIndex: number) => void; onEnterMarket: () => void; onOpenJournal: () => void }) {
   const market = marketplaces[state.marketIndex];
   return (
     <ScreenFrame title="Travel Map" eyebrow="Market Planner" backdrop={uiAssets.backplates.travelMap} overlay="light">
@@ -44,7 +44,7 @@ export function TravelMapView({ state, onTravel }: { state: GameState; onTravel:
               <StatChip label="Demand" value="Mixed" />
               <StatChip label="Capacity" value="Safe" />
             </div>
-            <div className="mt-3 flex flex-wrap gap-2"><Button><MapPinned size={16} /> Enter Market</Button><Button subtle><BookOpen size={16} /> Journal</Button><Button subtle disabled>Skip Day</Button></div>
+            <div className="mt-3 flex flex-wrap gap-2"><Button onClick={onEnterMarket}><MapPinned size={16} /> Enter Market</Button><Button subtle onClick={onOpenJournal}><BookOpen size={16} /> Journal</Button><Button subtle disabled>Skip Day</Button></div>
           </Panel>
           <Panel title="Route Ledger" variant="parchment">
             <div className="grid gap-2">

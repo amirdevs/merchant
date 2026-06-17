@@ -5,7 +5,7 @@ import { uiAssets } from "@/lib/ui-assets";
 import type { GameView } from "@/app/types";
 import { Button, Panel, ScreenFrame, StatChip, TabButton } from "@/components/ui";
 
-export function CustomersView({ people, selected, onSelect, onNext, onNavigate }: { people: Character[]; selected: Character | null; onSelect: (person: Character) => void; onNext: () => void; onNavigate: (view: GameView) => void }) {
+export function CustomersView({ people, selected, onSelect, onNext, onNavigate, onUnavailable }: { people: Character[]; selected: Character | null; onSelect: (person: Character) => void; onNext: () => void; onNavigate: (view: GameView) => void; onUnavailable: (message: string) => void }) {
   return (
     <ScreenFrame title="Customers" eyebrow="Roster and Dossier" backdrop={uiAssets.backplates.marketTown} overlay="light">
       <div className="grid flex-1 gap-5 xl:grid-cols-[1fr_420px]">
@@ -56,7 +56,7 @@ export function CustomersView({ people, selected, onSelect, onNext, onNavigate }
                 {(selected.obtainableItems || []).slice(0, 4).map((pool) => <span key={pool.tag} className="rounded border border-[#9a7138]/45 bg-[#fff6d7]/55 px-2 py-1">{pool.tag}</span>)}
               </div>
               <p className="mt-3 rounded-md border border-[#9a7138]/60 bg-[#fff6d7]/45 p-3 text-sm text-[#3b260f]">{selected.dialogue?.who || selected.dialogue?.customReply || "A market customer waiting to bargain."}</p>
-              <div className="mt-4 flex flex-wrap gap-2"><Button subtle><MessageSquare size={16} /> Talk</Button><Button onClick={() => onNavigate("barter")}>Trade</Button><Button subtle onClick={onNext}>Next Customer</Button></div>
+              <div className="mt-4 flex flex-wrap gap-2"><Button subtle onClick={() => onUnavailable("Dialogue graph conversations are not implemented yet; use Trade for the current barter loop.")}><MessageSquare size={16} /> Talk</Button><Button onClick={() => onNavigate("barter")}>Trade</Button><Button subtle onClick={onNext}>Next Customer</Button></div>
             </div>
           ) : (
             <div className="grid place-items-center rounded-md border border-dashed border-[#9a7138]/60 p-8 text-center text-[#725331]"><UserRound className="mb-3" /> Select a customer to inspect their preferences.</div>

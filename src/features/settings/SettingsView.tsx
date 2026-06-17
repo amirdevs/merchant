@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { UiPreferences } from "@/app/types";
 import { uiAssets } from "@/lib/ui-assets";
 import { Button, Panel, ScreenFrame, TabButton } from "@/components/ui";
@@ -11,6 +12,21 @@ type SettingsViewProps = {
 };
 
 export function SettingsView({ soundOn, uiPreferences, onToggleSound, onChangePreferences, onBack }: SettingsViewProps) {
+  const [fullscreen, setFullscreen] = useState(Boolean(document.fullscreenElement));
+  const [highContrast, setHighContrast] = useState(true);
+  const [theftEnabled, setTheftEnabled] = useState(false);
+  const [highlightItems, setHighlightItems] = useState(true);
+  const [largeFocusRings, setLargeFocusRings] = useState(true);
+  const resetDefaults = () => onChangePreferences({ uiScale: 100, textSpeed: 45, compactMode: false, decorativeMotion: true });
+  const toggleFullscreen = () => {
+    if (document.fullscreenElement) {
+      void document.exitFullscreen();
+      setFullscreen(false);
+      return;
+    }
+    void document.documentElement.requestFullscreen();
+    setFullscreen(true);
+  };
   return (
     <ScreenFrame title="Settings" eyebrow="Options Ledger" backdrop={uiAssets.backplates.settingsRoom} overlay="light">
       <div className="grid flex-1 gap-5 lg:grid-cols-[220px_1fr]">
@@ -34,18 +50,18 @@ export function SettingsView({ soundOn, uiPreferences, onToggleSound, onChangePr
           </Panel>
           <Panel title="Display" variant="parchment">
             <Range label="UI scale" value={uiPreferences.uiScale} min={80} max={125} onChange={(value) => onChangePreferences({ ...uiPreferences, uiScale: value })} />
-            <Toggle label="Fullscreen" active={false} onClick={() => undefined} />
-            <Toggle label="Windowed mode" active onClick={() => undefined} />
-            <Toggle label="High contrast parchment" active onClick={() => undefined} />
+            <Toggle label="Fullscreen" active={fullscreen} onClick={toggleFullscreen} />
+            <Toggle label="Windowed mode" active={!fullscreen} onClick={toggleFullscreen} />
+            <Toggle label="High contrast parchment" active={highContrast} onClick={() => setHighContrast(!highContrast)} />
             <Toggle label="Compact mode" active={uiPreferences.compactMode} onClick={() => onChangePreferences({ ...uiPreferences, compactMode: !uiPreferences.compactMode })} />
           </Panel>
           <Panel title="Gameplay / Accessibility" variant="parchment">
             <Range label="Text speed" value={uiPreferences.textSpeed} min={0} max={100} onChange={(value) => onChangePreferences({ ...uiPreferences, textSpeed: value })} />
-            <Toggle label="Theft enabled" active={false} onClick={() => undefined} />
-            <Toggle label="Highlight important items" active onClick={() => undefined} />
+            <Toggle label="Theft enabled" active={theftEnabled} onClick={() => setTheftEnabled(!theftEnabled)} />
+            <Toggle label="Highlight important items" active={highlightItems} onClick={() => setHighlightItems(!highlightItems)} />
             <Toggle label="Decorative motion" active={uiPreferences.decorativeMotion} onClick={() => onChangePreferences({ ...uiPreferences, decorativeMotion: !uiPreferences.decorativeMotion })} />
-            <Toggle label="Large focus rings" active onClick={() => undefined} />
-            <footer className="mt-5 flex flex-wrap justify-end gap-2"><Button subtle>Reset Defaults</Button><Button subtle onClick={onBack}>Cancel</Button><Button>Apply</Button></footer>
+            <Toggle label="Large focus rings" active={largeFocusRings} onClick={() => setLargeFocusRings(!largeFocusRings)} />
+            <footer className="mt-5 flex flex-wrap justify-end gap-2"><Button subtle onClick={resetDefaults}>Reset Defaults</Button><Button subtle onClick={onBack}>Cancel</Button><Button onClick={onBack}>Apply</Button></footer>
           </Panel>
         </div>
       </div>

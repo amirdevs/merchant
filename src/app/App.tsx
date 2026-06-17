@@ -95,25 +95,25 @@ export function App() {
       case "new-profile":
         return <NewMerchantProfileView market={controller.market} merchantProfile={merchantProfile} onCreate={createMerchant} onBack={() => navigate("main-menu")} />;
       case "load-game":
-        return <SaveLoadView state={controller.state} merchantProfile={merchantProfile} importInputRef={controller.importInputRef} onBack={() => navigate("main-menu")} onSave={saveCurrent} onLoad={loadCurrent} onExport={controller.actions.exportSave} onImport={(file) => void controller.actions.importSave(file)} />;
+        return <SaveLoadView state={controller.state} merchantProfile={merchantProfile} importInputRef={controller.importInputRef} onBack={() => navigate("main-menu")} onSave={saveCurrent} onLoad={loadCurrent} onExport={controller.actions.exportSave} onImport={(file) => void controller.actions.importSave(file)} onDelete={() => { controller.actions.deleteSave(); setSaveSeen(false); }} onUnavailable={controller.actions.setMessage} />;
       case "settings":
         return <SettingsView soundOn={controller.soundOn} uiPreferences={uiPreferences} onToggleSound={controller.actions.toggleAudio} onChangePreferences={setUiPreferences} onBack={() => navigate("main-menu")} />;
       case "system":
         return <SystemMenuView onResume={() => navigate("market")} onLoadGame={() => navigate("load-game")} onSettings={() => navigate("settings")} onMainMenu={() => navigate("main-menu")} onSave={saveCurrent} onExport={controller.actions.exportSave} onNewGame={startFresh} />;
       case "travel":
-        return <TravelMapView state={controller.state} onTravel={(marketIndex) => { controller.actions.travel(marketIndex); navigate("market"); }} />;
+        return <TravelMapView state={controller.state} onEnterMarket={() => navigate("market")} onOpenJournal={() => controller.actions.setMessage("Journal and quest ledger are not implemented yet.")} onTravel={(marketIndex) => { controller.actions.travel(marketIndex); navigate("market"); }} />;
       case "market":
-        return <MarketHubView market={controller.market} people={controller.people} onNavigate={navigate} />;
+        return <MarketHubView market={controller.market} people={controller.people} onNavigate={navigate} onSelectCustomer={(person) => { controller.actions.selectCharacter(person); navigate("barter"); }} onUnavailable={controller.actions.setMessage} />;
       case "customers":
-        return <CustomersView people={controller.people} selected={controller.character} onSelect={controller.actions.selectCharacter} onNext={controller.actions.nextCustomer} onNavigate={navigate} />;
+        return <CustomersView people={controller.people} selected={controller.character} onSelect={controller.actions.selectCharacter} onNext={controller.actions.nextCustomer} onNavigate={navigate} onUnavailable={controller.actions.setMessage} />;
       case "barter":
-        return <BarterConversationView state={controller.state} character={controller.character} playerOffer={controller.playerOffer} characterOffer={controller.characterOffer} message={controller.state.message} onMovePlayer={controller.actions.movePlayer} onMoveCharacter={controller.actions.moveCharacter} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onTrade={controller.actions.trade} />;
+        return <BarterConversationView state={controller.state} character={controller.character} playerOffer={controller.playerOffer} characterOffer={controller.characterOffer} message={controller.state.message} onMovePlayer={controller.actions.movePlayer} onMoveCharacter={controller.actions.moveCharacter} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onTrade={controller.actions.trade} onAskPrice={controller.actions.askPrice} onAskOffer={controller.actions.askOffer} onClearOffers={controller.actions.clearTradeOffers} onGoodbye={() => { controller.actions.goodbye(); navigate("customers"); }} onHelp={() => controller.actions.setHelpOpen(true)} onUnavailable={controller.actions.setMessage} />;
       case "inventory":
-        return <InventoryManagementView state={controller.state} playerOffer={controller.playerOffer} onMovePlayer={controller.actions.movePlayer} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onOpenFilter={() => navigate("inventory-filter")} onOpenItemDetail={() => navigate("item-detail")} />;
+        return <InventoryManagementView state={controller.state} playerOffer={controller.playerOffer} onMovePlayer={controller.actions.movePlayer} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onOpenFilter={() => navigate("inventory-filter")} onOpenItemDetail={() => navigate("item-detail")} onUnavailable={controller.actions.setMessage} />;
       case "inventory-filter":
         return <InventoryFilterView state={controller.state} onBack={() => navigate("inventory")} />;
       case "item-detail":
-        return <ItemDetailView state={controller.state} market={controller.market} onBack={() => navigate("inventory")} onMovePlayer={controller.actions.movePlayer} onTogglePlayerProtect={controller.actions.togglePlayerProtect} />;
+        return <ItemDetailView state={controller.state} market={controller.market} onBack={() => navigate("inventory")} onMovePlayer={controller.actions.movePlayer} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onTogglePlayerConceal={controller.actions.togglePlayerConceal} onUnavailable={controller.actions.setMessage} />;
       default:
         return null;
     }

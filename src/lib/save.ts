@@ -50,6 +50,10 @@ export function loadGame() {
   return parseGameSave(raw);
 }
 
+export function deleteGameSave() {
+  localStorage.removeItem(SAVE_KEY);
+}
+
 export function importGame(raw: string) {
   const game = parseGameSave(raw);
   if (!game) return null;

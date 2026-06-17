@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { BookOpen, Box, Grid3X3, PackageSearch, Search, Shield, Star } from "lucide-react";
 import type { InventoryEntry } from "@/data/types";
 import type { GameState } from "@/lib/game";
@@ -9,6 +9,7 @@ import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { InventoryPanel } from "@/components/InventoryPanel";
 import { Button, ItemSlot, Panel, ScreenFrame, StatChip } from "@/components/ui";
+import { cn } from "@/lib/cn";
 
 type InventoryManagementViewProps = {
   state: GameState;
@@ -17,13 +18,40 @@ type InventoryManagementViewProps = {
   onTogglePlayerProtect: (entry: InventoryEntry) => void;
   onOpenFilter: () => void;
   onOpenItemDetail: () => void;
+  onUnavailable: (message: string) => void;
 };
 
-export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerProtect, onOpenFilter, onOpenItemDetail }: InventoryManagementViewProps) {
+type InventoryCategory = "All" | "Goods" | "Materials" | "Luxuries" | "Quest Items";
+type InventorySort = "Value" | "Name" | "Quantity" | "Weight";
+
+export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerProtect, onOpenFilter, onOpenItemDetail, onUnavailable }: InventoryManagementViewProps) {
+  const [category, setCategory] = useState<InventoryCategory>("All");
+  const [sortBy, setSortBy] = useState<InventorySort>("Value");
   const carriedEntries = state.playerInventory.filter((entry) => visibleQuantity(entry) > 0);
+  const filteredEntries = useMemo(() => {
+    const matchesCategory = (entry: InventoryEntry) => {
+      const item = items[entry.itemIndex];
+      const tags = item.tags.map((tag) => tag.toLowerCase());
+      if (category === "All") return true;
+      if (category === "Goods") return true;
+      if (category === "Materials") return tags.some((tag) => ["wood", "metal", "cloth", "leather", "stone"].includes(tag));
+      if (category === "Luxuries") return tags.some((tag) => ["jewelry", "gem", "luxury", "art", "rare"].includes(tag)) || item.loafValue >= 250;
+      return tags.some((tag) => ["quest", "map", "deed"].includes(tag)) || item.unique;
+    };
+    return carriedEntries
+      .filter(matchesCategory)
+      .sort((left, right) => {
+        const leftItem = items[left.itemIndex];
+        const rightItem = items[right.itemIndex];
+        if (sortBy === "Name") return leftItem.name.localeCompare(rightItem.name);
+        if (sortBy === "Quantity") return visibleQuantity(right) - visibleQuantity(left);
+        if (sortBy === "Weight") return rightItem.weight - leftItem.weight;
+        return rightItem.loafValue - leftItem.loafValue;
+      });
+  }, [carriedEntries, category, sortBy]);
   const totalValue = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].loafValue * visibleQuantity(entry), 0);
   const totalWeight = carriedEntries.reduce((total, entry) => total + items[entry.itemIndex].weight * visibleQuantity(entry), 0);
-  const selected = carriedEntries[0];
+  const selected = filteredEntries[0] || carriedEntries[0];
   const selectedItem = selected ? items[selected.itemIndex] : null;
 
   return (
@@ -42,26 +70,31 @@ export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerPro
         <Panel className="p-4" title="Inventory Grid" variant="parchment">
           <div className="mb-4 flex flex-wrap items-center gap-2">
             <div className="flex min-w-[20rem] flex-1 flex-wrap gap-2">
-              <Button variant="primary">All</Button>
-              <Button variant="secondary">Goods</Button>
-              <Button variant="secondary">Materials</Button>
-              <Button variant="secondary">Luxuries</Button>
-              <Button variant="secondary">Quest Items</Button>
+              {(["All", "Goods", "Materials", "Luxuries", "Quest Items"] as InventoryCategory[]).map((nextCategory) => (
+                <Button key={nextCategory} variant={category === nextCategory ? "primary" : "secondary"} onClick={() => setCategory(nextCategory)}>{nextCategory}</Button>
+              ))}
             </div>
             <button className="flex min-h-11 w-56 items-center gap-3 rounded-sm border border-[#b98b37]/65 bg-[#fff6d7]/65 px-4 text-left text-[#3b260f]" type="button" onClick={onOpenFilter}>
               <Search size={24} />
               <span className="text-base text-[#725331]">Search items...</span>
             </button>
-            <button className="flex min-h-11 w-52 items-center justify-between gap-3 rounded-sm border border-[#b98b37]/65 bg-[#fff6d7]/65 px-4 text-left text-base text-[#3b260f]" type="button">
-              <span>Sort by: Value</span>
+            <button
+              className="flex min-h-11 w-52 items-center justify-between gap-3 rounded-sm border border-[#b98b37]/65 bg-[#fff6d7]/65 px-4 text-left text-base text-[#3b260f]"
+              type="button"
+              onClick={() => {
+                const order: InventorySort[] = ["Value", "Name", "Quantity", "Weight"];
+                setSortBy(order[(order.indexOf(sortBy) + 1) % order.length]);
+              }}
+            >
+              <span>Sort by: {sortBy}</span>
               <Grid3X3 size={22} />
             </button>
           </div>
-          <InventoryPanel title="Cargo" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={state.playerInventory} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onToggleProtect={onTogglePlayerProtect} allowProtect />
+          <InventoryPanel title="Cargo" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onToggleProtect={onTogglePlayerProtect} allowProtect />
           <div className="mt-4 grid gap-3 md:grid-cols-[180px_1fr_220px]">
             <StatChip label="Capacity" value={`${totalWeight} / 200`} icon={uiAssets.hud.weight} />
             <StatChip label="Total Value" value={money(totalValue)} icon={uiAssets.hud.goldCoin} />
-            <Button size="lg" variant="secondary"><Grid3X3 size={18} /> Bulk Actions</Button>
+            <Button size="lg" variant="secondary" onClick={() => onUnavailable("Bulk inventory actions are not implemented yet.")}><Grid3X3 size={18} /> Bulk Actions</Button>
           </div>
         </Panel>
 
@@ -88,7 +121,7 @@ export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerPro
                 </dl>
                 <div className="mt-5 grid grid-cols-2 gap-2"><Button size="lg" onClick={() => onMovePlayer(selected, 1)}>Add to Offer</Button><Button size="lg" variant="secondary" onClick={() => onTogglePlayerProtect(selected)}>{selected.protected ? "Unprotect" : "Protect"}</Button><Button className="col-span-2" size="lg" variant="secondary" onClick={onOpenItemDetail}>More</Button></div>
               </>
-            ) : <p>No item selected.</p>}
+            ) : <p>No item selected for {category}.</p>}
           </Panel>
           <InventoryPanel title="Current Offer" mode="offer" variant="compact" inventory={state.playerInventory} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} />
         </aside>
@@ -100,7 +133,7 @@ export function InventoryManagementView({ state, onMovePlayer, onTogglePlayerPro
 function InventoryTab({ active, icon, label }: { active?: boolean; icon: ReactNode; label: string }) {
   return (
     <button
-      className={`grid min-h-24 place-items-center gap-1 rounded-sm border-2 px-2 py-3 font-display text-lg font-bold shadow-lg shadow-black/35 [text-shadow:0_1px_2px_rgba(0,0,0,.9)] ${active ? "border-[#d7ad55] text-[#fff8d8]" : "border-[#b98b37]/80 text-[#fff0bf]"}`}
+      className={cn("grid min-h-24 place-items-center gap-1 rounded-sm border-2 px-2 py-3 font-display text-lg font-bold shadow-lg shadow-black/35 [text-shadow:0_1px_2px_rgba(0,0,0,.9)]", active ? "border-[#d7ad55] text-[#fff8d8]" : "border-[#b98b37]/80 text-[#fff0bf]")}
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.54)), url("${active ? uiAssets.nineSlice.textureEnamelBlue : uiAssets.nineSlice.textureWoodDark}")`,
         backgroundSize: "cover",

@@ -91,6 +91,11 @@ export function GameShell({ controller, activeView, merchantProfile, uiPreferenc
         ) : null}
 
         <div className="relative z-10 flex min-h-0 flex-1">{children}</div>
+        {!isTitleArea && controller.state.message ? (
+          <div className="pointer-events-none fixed bottom-3 left-3 z-50 max-w-xl rounded-sm border-2 border-[#b98b37]/80 bg-[#fff6d7]/95 px-4 py-2 text-sm font-bold text-[#2b1a0b] shadow-2xl shadow-black/40">
+            {controller.state.message}
+          </div>
+        ) : null}
       </div>
     </main>
   );

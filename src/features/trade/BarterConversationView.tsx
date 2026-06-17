@@ -19,9 +19,15 @@ type BarterConversationViewProps = {
   onMoveCharacter: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;
   onTogglePlayerProtect: (entry: InventoryEntry) => void;
   onTrade: () => void;
+  onAskPrice: () => void;
+  onAskOffer: () => void;
+  onClearOffers: () => void;
+  onGoodbye: () => void;
+  onHelp: () => void;
+  onUnavailable: (message: string) => void;
 };
 
-export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onTogglePlayerProtect, onTrade }: BarterConversationViewProps) {
+export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onGoodbye, onHelp, onUnavailable }: BarterConversationViewProps) {
   const advantage = playerOffer - characterOffer;
 
   return (
@@ -59,10 +65,10 @@ export function BarterConversationView({ state, character, playerOffer, characte
                 </div>
               </div>
               <div className="mt-4 grid grid-cols-2 gap-2 text-[#3b260f]">
-                <ResponseLine>I have just what you're looking for.</ResponseLine>
-                <ResponseLine>Perhaps we can find a fair trade.</ResponseLine>
-                <ResponseLine>What goods do you value most?</ResponseLine>
-                <ResponseLine>I'll think on it. Farewell.</ResponseLine>
+                <ResponseLine onClick={() => onUnavailable("Dialogue choices are placeholders until the dialogue graph engine is implemented.")}>I have just what you're looking for.</ResponseLine>
+                <ResponseLine onClick={onAskOffer}>Perhaps we can find a fair trade.</ResponseLine>
+                <ResponseLine onClick={onAskPrice}>What goods do you value most?</ResponseLine>
+                <ResponseLine onClick={onGoodbye}>I'll think on it. Farewell.</ResponseLine>
               </div>
               <div
                 className="mt-4 rounded-sm border border-[#9a7138]/60 p-4 text-[#3b260f] shadow-inner shadow-[#6c4418]/20"
@@ -81,7 +87,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
                 </div>
                 <div className="mt-1 text-center text-sm">Your Advantage <strong className={advantage >= 0 ? "text-[#1f6f38]" : "text-[#8d271f]"}>{advantage >= 0 ? "+" : ""}{money(advantage)}</strong></div>
               </div>
-              <div className="mt-4 grid grid-cols-5 gap-2"><Button size="lg" variant="secondary">Ask Price</Button><Button size="lg" variant="secondary">Ask Offer</Button><Button size="lg" onClick={onTrade}><Handshake size={16} /> Accept</Button><Button size="lg" subtle>Goodbye</Button><Button size="lg" subtle><HelpCircle size={16} /> Help</Button></div>
+              <div className="mt-4 grid grid-cols-3 gap-2 lg:grid-cols-6"><Button size="lg" variant="secondary" onClick={onAskPrice}>Ask Price</Button><Button size="lg" variant="secondary" onClick={onAskOffer}>Ask Offer</Button><Button size="lg" onClick={onTrade}><Handshake size={16} /> Accept</Button><Button size="lg" variant="secondary" onClick={onClearOffers}>Clear</Button><Button size="lg" subtle onClick={onGoodbye}>Goodbye</Button><Button size="lg" subtle onClick={onHelp}><HelpCircle size={16} /> Help</Button></div>
             </div>
           ) : <div className="grid min-h-[26rem] place-items-center rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/55 p-8 text-center text-xl text-[#725331]">Choose a customer first.</div>}
         </Panel>
@@ -96,9 +102,9 @@ export function BarterConversationView({ state, character, playerOffer, characte
   );
 }
 
-function ResponseLine({ children }: { children: ReactNode }) {
+function ResponseLine({ children, onClick }: { children: ReactNode; onClick: () => void }) {
   return (
-    <button className="rounded-sm border border-[#b98b37]/55 bg-[#fff6d7]/60 px-4 py-3 text-left text-base shadow-inner shadow-[#6c4418]/10 hover:bg-[#fff1c6]" type="button">
+    <button className="rounded-sm border border-[#b98b37]/55 bg-[#fff6d7]/60 px-4 py-3 text-left text-base shadow-inner shadow-[#6c4418]/10 hover:bg-[#fff1c6]" type="button" onClick={onClick}>
       {children}
     </button>
   );

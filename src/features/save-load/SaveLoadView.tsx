@@ -14,9 +14,11 @@ type SaveLoadViewProps = {
   onLoad: () => void;
   onExport: () => void;
   onImport: (file: File | undefined) => void;
+  onDelete: () => void;
+  onUnavailable: (message: string) => void;
 };
 
-export function SaveLoadView({ state, merchantProfile, importInputRef, onBack, onSave, onLoad, onExport, onImport }: SaveLoadViewProps) {
+export function SaveLoadView({ state, merchantProfile, importInputRef, onBack, onSave, onLoad, onExport, onImport, onDelete, onUnavailable }: SaveLoadViewProps) {
   const rows = [
     { name: "Local Ledger", merchant: merchantProfile.name, city: "Current Market", day: state.day, wealth: "Current", mode: merchantProfile.difficulty, savedAt: "Browser local" },
     { name: "Archive Slot I", merchant: "-", city: "-", day: "-", wealth: "-", mode: "-", savedAt: "Empty" },
@@ -34,7 +36,7 @@ export function SaveLoadView({ state, merchantProfile, importInputRef, onBack, o
             <TabButton>Autosaves</TabButton>
             <Button variant="secondary" onClick={() => importInputRef.current?.click()}><Upload size={16} /> Import</Button>
             <Button variant="secondary" onClick={onExport}><Download size={16} /> Export</Button>
-            <Button subtle><Search size={16} /> Search</Button>
+            <Button subtle onClick={() => onUnavailable("Save search is not needed yet because only one browser save slot is implemented.")}><Search size={16} /> Search</Button>
           </div>
           <div className="overflow-hidden rounded-md border border-[#9a7138]/65 bg-[#fff6d7]/35">
             <div className="grid min-w-[820px] grid-cols-[1.15fr_1fr_1fr_70px_90px_1fr_1fr] gap-2 border-b border-[#9a7138]/50 bg-[#5b3a18]/20 px-3 py-2 text-xs uppercase tracking-[0.13em] text-[#75501f]">
@@ -59,7 +61,7 @@ export function SaveLoadView({ state, merchantProfile, importInputRef, onBack, o
             </div>
             <Button onClick={onLoad}><BookOpen size={16} /> Load</Button>
             <Button variant="secondary" onClick={onSave}><Save size={16} /> Overwrite</Button>
-            <Button variant="danger" disabled><Trash2 size={16} /> Delete</Button>
+            <Button variant="danger" onClick={onDelete}><Trash2 size={16} /> Delete</Button>
             <Button variant="secondary" onClick={onExport}><Download size={16} /> Export JSON</Button>
             <Button subtle onClick={onBack}>Back</Button>
             <input ref={importInputRef} className="hidden" type="file" accept="application/json,.json" onChange={(event) => { onImport(event.target.files?.[0]); event.target.value = ""; }} />

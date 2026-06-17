@@ -39,13 +39,20 @@ export type MerchantActions = {
   exportSave: () => void;
   importSave: (file: File | undefined) => Promise<void>;
   toggleAudio: () => void;
+  setMessage: (message: string) => void;
   selectCharacter: (next: Character) => void;
   nextCustomer: () => void;
   movePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;
   moveCharacter: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;
   togglePlayerProtect: (entry: InventoryEntry) => void;
+  togglePlayerConceal: (entry: InventoryEntry) => void;
+  clearTradeOffers: () => void;
+  askPrice: () => void;
+  askOffer: () => void;
+  goodbye: () => void;
   trade: () => void;
   travel: (toMarketIndex: number) => void;
+  deleteSave: () => void;
 };
 
 export type MerchantController = {

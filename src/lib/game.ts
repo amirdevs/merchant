@@ -4,10 +4,10 @@ import marketplacesJson from "../data/generated/marketplaces.json";
 import professionsJson from "../data/generated/professions.json";
 import type { Character, InventoryEntry, Item, Marketplace, ObtainableItem, Profession } from "../data/types";
 import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
-import { addInventory, moveOffer, transferOffers, visibleQuantity } from "./inventory";
+import { addInventory, clearOffers, moveOffer, transferOffers, visibleQuantity } from "./inventory";
 import { applyModPacks } from "./mods";
 import { charactersAtMarket, nextCustomerIndex, selectedCharacter } from "./npc-flow";
-import { importGame, loadGame, saveGame, serializeGame } from "./save";
+import { deleteGameSave, importGame, loadGame, saveGame, serializeGame } from "./save";
 
 export const items = itemsJson as Item[];
 export const marketplaces = marketplacesJson as Marketplace[];
@@ -162,4 +162,4 @@ export function completeTrade(state: GameState) {
   };
 }
 
-export { charactersAtMarket, importGame, loadGame, moveOffer, nextCustomerIndex, saveGame, selectedCharacter, serializeGame, visibleQuantity };
+export { charactersAtMarket, clearOffers, deleteGameSave, importGame, loadGame, moveOffer, nextCustomerIndex, saveGame, selectedCharacter, serializeGame, visibleQuantity };
