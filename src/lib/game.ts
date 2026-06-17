@@ -28,6 +28,7 @@ export type GameState = {
   message: string;
   offersMade: number;
   npcRelations: NpcRelations;
+  questStates: Record<string, "unseen" | "offered" | "accepted" | "ready" | "finished" | "failed">;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -114,6 +115,7 @@ export function newGame(): GameState {
     message: "A new ledger begins in Boone.",
     offersMade: 0,
     npcRelations: {},
+    questStates: {},
     dialogueLog: [],
     travelResult: null,
   };

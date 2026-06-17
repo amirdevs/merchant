@@ -6,7 +6,7 @@ import { uiAssets } from "@/lib/ui-assets";
 import type { GameView } from "@/app/types";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
-export function MarketHubView({ market, people, onNavigate, onSelectCustomer, onUnavailable }: { market: Marketplace; people: Character[]; onNavigate: (view: GameView) => void; onSelectCustomer: (person: Character) => void; onUnavailable: (message: string) => void }) {
+export function MarketHubView({ market, people, onNavigate, onSelectCustomer }: { market: Marketplace; people: Character[]; onNavigate: (view: GameView) => void; onSelectCustomer: (person: Character) => void; onUnavailable: (message: string) => void }) {
   const featuredPeople = people.slice(0, 5);
 
   return (
@@ -65,7 +65,7 @@ export function MarketHubView({ market, people, onNavigate, onSelectCustomer, on
             <MarketCommand icon={<Map size={34} />} label="Map" onClick={() => onNavigate("travel")} />
             <MarketCommand icon={<PackageSearch size={34} />} label="Inventory" onClick={() => onNavigate("inventory")} />
             <MarketCommand icon={<Users size={34} />} label="Customers" onClick={() => onNavigate("customers")} />
-            <MarketCommand icon={<ScrollText size={34} />} label="Notice Board" onClick={() => onUnavailable("Notice board jobs and quest journal are not implemented yet.")} />
+            <MarketCommand icon={<ScrollText size={34} />} label="Notice Board" onClick={() => onNavigate("journal")} />
             <MarketCommand icon={<Menu size={34} />} label="Menu" onClick={() => onNavigate("system")} />
           </div>
         </div>

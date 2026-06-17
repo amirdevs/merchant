@@ -7,6 +7,7 @@ import { CustomersView } from "@/features/customers/CustomersView";
 import { InventoryFilterView } from "@/features/inventory/InventoryFilterView";
 import { InventoryManagementView } from "@/features/inventory/InventoryManagementView";
 import { ItemDetailView } from "@/features/inventory/ItemDetailView";
+import { JournalView } from "@/features/journal/JournalView";
 import { MarketHubView } from "@/features/market/MarketHubView";
 import { MainMenuView } from "@/features/menu/MainMenuView";
 import { NewMerchantProfileView } from "@/features/profile/NewMerchantProfileView";
@@ -40,6 +41,7 @@ const gameViews: GameView[] = [
   "travel",
   "market",
   "customers",
+  "journal",
   "barter",
   "inventory",
   "inventory-filter",
@@ -101,11 +103,13 @@ export function App() {
       case "system":
         return <SystemMenuView onResume={() => navigate("market")} onLoadGame={() => navigate("load-game")} onSettings={() => navigate("settings")} onMainMenu={() => navigate("main-menu")} onSave={saveCurrent} onExport={controller.actions.exportSave} onNewGame={startFresh} />;
       case "travel":
-        return <TravelMapView state={controller.state} onEnterMarket={() => navigate("market")} onOpenJournal={() => controller.actions.setMessage("Journal and quest ledger are not implemented yet.")} onTravel={controller.actions.travel} onClearTravelResult={controller.actions.clearTravelResult} />;
+        return <TravelMapView state={controller.state} onEnterMarket={() => navigate("market")} onOpenJournal={() => navigate("journal")} onTravel={controller.actions.travel} onClearTravelResult={controller.actions.clearTravelResult} />;
       case "market":
         return <MarketHubView market={controller.market} people={controller.people} onNavigate={navigate} onSelectCustomer={(person) => { controller.actions.selectCharacter(person); navigate("barter"); }} onUnavailable={controller.actions.setMessage} />;
       case "customers":
         return <CustomersView state={controller.state} people={controller.people} selected={controller.character} onSelect={controller.actions.selectCharacter} onNext={controller.actions.nextCustomer} onNavigate={navigate} onSpeak={controller.actions.speakWith} />;
+      case "journal":
+        return <JournalView state={controller.state} onBack={() => navigate("market")} onSetQuestStatus={controller.actions.setQuestStatus} />;
       case "barter":
         return <BarterConversationView state={controller.state} character={controller.character} playerOffer={controller.playerOffer} characterOffer={controller.characterOffer} message={controller.state.message} onMovePlayer={controller.actions.movePlayer} onMoveCharacter={controller.actions.moveCharacter} onSetPlayerOfferQuantity={controller.actions.setPlayerOfferQuantity} onSetCharacterOfferQuantity={controller.actions.setCharacterOfferQuantity} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onTrade={controller.actions.trade} onAskPrice={controller.actions.askPrice} onAskOffer={controller.actions.askOffer} onClearOffers={controller.actions.clearTradeOffers} onGoodbye={() => { controller.actions.goodbye(); navigate("customers"); }} onHelp={() => controller.actions.setHelpOpen(true)} onSpeak={controller.actions.speakWith} />;
       case "inventory":

@@ -12,6 +12,7 @@ export type GameView =
   | "travel"
   | "market"
   | "customers"
+  | "journal"
   | "barter"
   | "inventory"
   | "inventory-filter"
@@ -41,6 +42,7 @@ export type MerchantActions = {
   toggleAudio: () => void;
   setMessage: (message: string) => void;
   speakWith: (character: Character, topic: string, reply: string) => void;
+  setQuestStatus: (marketIndex: number, status: GameState["questStates"][string]) => void;
   selectCharacter: (next: Character) => void;
   nextCustomer: () => void;
   movePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;

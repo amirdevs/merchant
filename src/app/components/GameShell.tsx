@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { CircleHelp, Cog, Map as MapIcon, PackageSearch, Store, Users, Volume2, VolumeX, type LucideIcon } from "lucide-react";
+import { CircleHelp, Cog, Map as MapIcon, PackageSearch, ScrollText, Store, Users, Volume2, VolumeX, type LucideIcon } from "lucide-react";
 import { backdropAsset, townAsset } from "@/lib/assets";
 import { inventoryTotals } from "@/lib/economy";
 import { money } from "@/lib/format";
@@ -23,6 +23,7 @@ const navItems: Array<{ view: GameView; label: string; icon: LucideIcon }> = [
   { view: "market", label: "Market", icon: Store },
   { view: "travel", label: "Map", icon: MapIcon },
   { view: "customers", label: "Customers", icon: Users },
+  { view: "journal", label: "Journal", icon: ScrollText },
   { view: "inventory", label: "Inventory", icon: PackageSearch },
 ];
 

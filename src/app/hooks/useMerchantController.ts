@@ -165,6 +165,14 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function setQuestStatus(marketIndex: number, status: GameState["questStates"][string]) {
+    update((draft) => {
+      draft.questStates[String(marketIndex)] = status;
+      const questName = marketplaces[marketIndex]?.quest?.name || "Quest";
+      draft.message = `${questName}: ${status}.`;
+    });
+  }
+
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
@@ -419,6 +427,7 @@ export function useMerchantController(): MerchantController {
       toggleAudio,
       setMessage,
       speakWith,
+      setQuestStatus,
       selectCharacter,
       nextCustomer,
       movePlayer,
