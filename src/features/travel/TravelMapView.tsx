@@ -112,6 +112,15 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
               <StatChip label="Toll Paid" value={money(state.travelResult.tolls)} icon={uiAssets.hud.goldCoin} />
               <StatChip label="Day" value={state.travelResult.arrivalDay} />
             </div>
+            {state.travelResult.events.length ? (
+              <div className="grid gap-2">
+                {state.travelResult.events.map((event) => (
+                  <div className="rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/70 p-3 font-bold text-[#8d271f]" key={event}>{event}</div>
+                ))}
+              </div>
+            ) : (
+              <div className="rounded-sm border border-[#1f5960]/35 bg-[#fff6d7]/70 p-3 font-bold text-[#1f5960]">No guard inspection or theft incident occurred.</div>
+            )}
             <div className="flex justify-end gap-2">
               <Button variant="secondary" onClick={onClearTravelResult}>Stay On Map</Button>
               <Button onClick={() => { onClearTravelResult(); onEnterMarket(); }}>Enter Market</Button>

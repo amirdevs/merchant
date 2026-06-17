@@ -25,6 +25,7 @@ import {
 } from "@/lib/game";
 import { setOfferQuantity, type MoveAmount } from "@/lib/inventory";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "@/lib/economy";
+import { applyTravelRisks } from "@/lib/travel-risk";
 import { appraiseOffer } from "@/lib/barter";
 import { customerIntro } from "@/lib/dialogue";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "@/lib/audio";
@@ -315,14 +316,24 @@ export function useMerchantController(): MerchantController {
       draft.marketIndex = toMarketIndex;
       draft.day += route.travelDays || 1;
       draft.selectedCharacterIndex = null;
+      const riskEvents = applyTravelRisks({
+        inventory: draft.playerInventory,
+        items,
+        destination: marketplaces[toMarketIndex],
+        kingdom: currentKingdom(draft),
+        day: draft.day,
+      });
       draft.travelResult = {
         fromMarketName,
         toMarketName: marketplaces[toMarketIndex].name,
         days: route.travelDays || 1,
         tolls: route.tolls,
         arrivalDay: draft.day,
+        events: riskEvents.map((event) => event.message),
       };
-      draft.message = `Paid ${route.tolls} copper toll and arrived in ${marketplaces[toMarketIndex].name}.`;
+      draft.message = riskEvents.length
+        ? `Arrived in ${marketplaces[toMarketIndex].name}. ${riskEvents[0].message}`
+        : `Paid ${route.tolls} copper toll and arrived in ${marketplaces[toMarketIndex].name}.`;
     });
   }
 

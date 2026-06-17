@@ -34,6 +34,7 @@ export type GameState = {
     days: number;
     tolls: number;
     arrivalDay: number;
+    events: string[];
   } | null;
 };
 
