@@ -7,6 +7,7 @@ import { eventBiases, eventIsActive, nextEventDay } from "@/lib/events";
 import { coinQuantity } from "@/lib/economy";
 import { money } from "@/lib/format";
 import { raceEntries } from "@/lib/racing";
+import { currentDraftRound } from "@/lib/draft";
 import { uiAssets } from "@/lib/ui-assets";
 import { Button, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
@@ -22,9 +23,12 @@ type EventViewProps = {
   onStartMythGame: () => void;
   onPlayMythCard: (cardId: string) => void;
   onCloseMythGame: () => void;
+  onStartDraft: () => void;
+  onPickDraftItem: (itemIndex: number) => void;
+  onCloseDraft: () => void;
 };
 
-export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAuction, onPassAuction, onCloseAuction, onRunHorseRace, onStartMythGame, onPlayMythCard, onCloseMythGame }: EventViewProps) {
+export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAuction, onPassAuction, onCloseAuction, onRunHorseRace, onStartMythGame, onPlayMythCard, onCloseMythGame, onStartDraft, onPickDraftItem, onCloseDraft }: EventViewProps) {
   const market = currentMarket(state);
   const active = eventIsActive(market, state.day);
   const session = state.auctionSession;
@@ -35,6 +39,9 @@ export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAu
   const isRace = Boolean(market.event?.name?.toLowerCase().includes("horse race"));
   const isMyth = Boolean(market.event?.name?.toLowerCase().includes("card game"));
   const mythSession = state.mythSession;
+  const isDraft = Boolean(market.event?.name?.toLowerCase().includes("draft"));
+  const draftSession = state.draftSession;
+  const draftRound = draftSession ? currentDraftRound(draftSession) : null;
   const horses = raceEntries(market);
   const [selectedHorse, setSelectedHorse] = useState(horses[0]?.name || "");
   const [wager, setWager] = useState(10);
@@ -51,6 +58,7 @@ export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAu
               <div className="flex flex-wrap gap-2">
                 {isAuction ? <Button disabled={!active} onClick={onStartAuction}><Gavel size={16} /> Enter Auction</Button> : null}
                 {isMyth && !mythSession ? <Button disabled={!active} onClick={onStartMythGame}>Enter Myth Tournament</Button> : null}
+                {isDraft && !draftSession ? <Button disabled={!active} onClick={onStartDraft}>Enter Magic Draft</Button> : null}
                 <Button variant="secondary" onClick={onAdvanceDay}><CalendarDays size={16} /> Wait One Day</Button>
                 <Button subtle onClick={onBack}>Back</Button>
               </div>
@@ -99,6 +107,27 @@ export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAu
                       <Button variant="secondary" onClick={onCloseMythGame}>Close Match</Button>
                     </div>
                   )}
+                </div>
+              ) : null}
+              {isDraft && draftSession ? (
+                <div className="grid gap-3 rounded-sm border-2 border-[#1f5960]/55 bg-[#fff6d7]/65 p-4">
+                  <div className="grid grid-cols-3 gap-2">
+                    <StatChip label="Round" value={`${Math.min(draftSession.roundIndex + 1, draftSession.rounds.length)}/${draftSession.rounds.length}`} />
+                    <StatChip label="Your Picks" value={draftSession.playerPicks.length} />
+                    <StatChip label="Rival Picks" value={draftSession.rivalPicks.length} />
+                  </div>
+                  <p className="font-bold text-[#3b260f]">{draftSession.message}</p>
+                  {draftRound ? (
+                    <div className="grid grid-cols-3 gap-3">
+                      {draftRound.choices.map((itemIndex) => (
+                        <button className="min-h-36 rounded-sm border-2 border-[#9a7138]/65 bg-[#fff8df] p-3 text-center text-[#26170a] shadow hover:-translate-y-0.5" key={itemIndex} type="button" onClick={() => onPickDraftItem(itemIndex)}>
+                          <strong className="block font-display text-xl">{items[itemIndex]?.name}</strong>
+                          <span className="mt-2 block text-sm">{items[itemIndex]?.tags.slice(0, 3).join(" / ")}</span>
+                          <span className="mt-3 block font-black">{money(items[itemIndex]?.loafValue || 0)}</span>
+                        </button>
+                      ))}
+                    </div>
+                  ) : <Button variant="secondary" onClick={onCloseDraft}>Close Draft Results</Button>}
                 </div>
               ) : null}
             </div>

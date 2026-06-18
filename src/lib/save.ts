@@ -43,6 +43,7 @@ function isGameState(value: unknown): value is GameState {
   if (!("mythSession" in candidate)) candidate.mythSession = null;
   if (!candidate.marketSimulation || typeof candidate.marketSimulation !== "object") candidate.marketSimulation = {};
   if (!candidate.company || typeof candidate.company !== "object") candidate.company = createCompanyState();
+  if (!("draftSession" in candidate)) candidate.draftSession = null;
   if (!Array.isArray(candidate.dialogueLog)) candidate.dialogueLog = [];
   if (!("travelResult" in candidate)) candidate.travelResult = null;
   if (candidate.travelResult && typeof candidate.travelResult.stallage !== "number") candidate.travelResult.stallage = 0;

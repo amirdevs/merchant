@@ -10,6 +10,7 @@ import type { RaceResult } from "./racing";
 import type { MythSession } from "./myth";
 import { advanceMarketSimulation, recordMarketTrade, simulatedMarketBiases, type MarketSimulation } from "./market-simulation";
 import { createCompanyState, settleShipments, type CompanyState } from "./company";
+import type { DraftSession } from "./draft";
 import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { eventBiases } from "./events";
@@ -58,6 +59,7 @@ export type GameState = {
   mythSession: MythSession | null;
   marketSimulation: MarketSimulation;
   company: CompanyState;
+  draftSession: DraftSession | null;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -165,6 +167,7 @@ export function newGame(): GameState {
     mythSession: null,
     marketSimulation: {},
     company: createCompanyState(),
+    draftSession: null,
     dialogueLog: [],
     travelResult: null,
   };

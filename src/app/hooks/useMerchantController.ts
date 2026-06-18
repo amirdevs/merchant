@@ -51,6 +51,7 @@ import {
   takeLoan as takeCompanyLoan,
   withdrawWarehouse as retrieveFromWarehouse,
 } from "@/lib/company";
+import { createDraftSession, pickDraftItem as resolveDraftPick } from "@/lib/draft";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -558,6 +559,37 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function startDraft() {
+    update((draft) => {
+      const current = currentMarket(draft);
+      if (!current.event?.name?.toLowerCase().includes("draft") || !eventIsActive(current, draft.day)) {
+        draft.message = "The draft is not active here today.";
+        return;
+      }
+      draft.draftSession = createDraftSession(current, items, draft.day);
+      draft.message = draft.draftSession.message;
+    });
+  }
+
+  function pickDraftItem(itemIndex: number) {
+    update((draft) => {
+      if (!draft.draftSession) {
+        draft.message = "Start a draft first.";
+        return;
+      }
+      const result = resolveDraftPick(draft.draftSession, itemIndex, items);
+      if (result.ok && result.pickedItemIndex !== null) addInventory(draft.playerInventory, result.pickedItemIndex, 1);
+      draft.message = result.message;
+    });
+  }
+
+  function closeDraft() {
+    update((draft) => {
+      draft.draftSession = null;
+      draft.message = "You leave the draft table.";
+    });
+  }
+
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
@@ -735,6 +767,9 @@ export function useMerchantController(): MerchantController {
       takeLoan,
       repayLoan,
       startShipment,
+      startDraft,
+      pickDraftItem,
+      closeDraft,
       selectCharacter,
       nextCustomer,
       movePlayer,
