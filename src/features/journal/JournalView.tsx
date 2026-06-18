@@ -138,7 +138,23 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
           <Panel title="Rival Merchants" variant="parchment">
             <div className="grid max-h-56 gap-2 overflow-auto">
               {state.rivals.merchants.map((rival) => (
-                <LedgerRow key={rival.id} title={rival.name} subtitle={`${rival.personality} / ${marketplaces[rival.marketIndex]?.name || "on the road"} / ${rival.favoriteTags.join(", ") || "mixed goods"}`} trailing={<span className="text-sm font-bold text-[#75501f]">{rival.wealth} wealth</span>} />
+                <div className="rounded-sm border border-[#9a7138]/45 bg-[#fff6d7]/55 p-3 text-sm text-[#3b260f]" key={rival.id}>
+                  <div className="flex items-start justify-between gap-2">
+                    <span>
+                      <strong className="block text-[#26170a]">{rival.name}</strong>
+                      <span className="font-bold text-[#75501f]">{rival.personality} / {rival.strategy} / {marketplaces[rival.marketIndex]?.name || "on the road"}</span>
+                    </span>
+                    <span className="text-right text-xs font-bold text-[#75501f]">{rival.wealth} cash<br />{rival.debt} debt</span>
+                  </div>
+                  <p className="mt-1">{rival.routeHabit || "route unknown"}</p>
+                  <div className="mt-2 flex flex-wrap gap-1">
+                    {(rival.cargoManifest || []).slice(0, 4).map((cargo) => (
+                      <span className="rounded-full border border-[#9a7138]/50 bg-[#fff8df]/75 px-2 py-1 text-[0.68rem] font-black uppercase text-[#75501f]" key={`${rival.id}-${cargo.tag}`}>
+                        {cargo.quantity} {cargo.tag} / {cargo.value}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               ))}
               {state.rivals.activityLog.slice(0, 5).map((activity, index) => <p className="rounded-sm border border-[#9a7138]/45 bg-[#fff6d7]/55 p-2 text-sm text-[#3b260f]" key={`${index}-${activity}`}>{activity}</p>)}
             </div>

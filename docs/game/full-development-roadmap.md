@@ -837,7 +837,7 @@ Status: implemented baseline.
 
 Status: implemented baseline.
 
-- Add named rival merchants with wealth, personality, and routes. Implemented; cargo manifests remain.
+- Add named rival merchants with wealth, personality, and routes. Implemented with baseline cargo manifests, strategy, cash, debt, and route habits.
 - Let rivals buy out stock and affect scarcity. Implemented; event and contract participation remain.
 - Add regional production chains and commodity dependencies.
 - Add seasonal production, shortages, disasters, and recovery. Seasonal production modifiers implemented; disasters remain.
@@ -918,9 +918,9 @@ Status: planned.
 
 ### V4.4 Rival Merchants And Competitive World
 
-Status: planned.
+Status: in progress.
 
-- Give rivals cargo manifests, preferred commodities, route habits, cash reserves, debt pressure, and changing strategies.
+- Give rivals cargo manifests, preferred commodities, route habits, cash reserves, debt pressure, and changing strategies. Implemented baseline in simulation and journal.
 - Let rivals participate in auctions, contracts, events, black-market deals, and regional shortages.
 - Add direct rivalry actions: undercutting, buying out key stock, bidding wars, rumor spreading, sabotage, and cooperation offers.
 - Add rival relationship states such as respectful competitor, bitter enemy, business partner, and secret underworld associate.

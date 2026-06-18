@@ -2,7 +2,7 @@ import { MARKET_OPEN_MINUTES, type GameState } from "./game";
 import { createCompanyState } from "./company";
 import { createCaravanState } from "./caravan";
 import { createLawState } from "./law";
-import { createRivalState } from "./rivals";
+import { createRivalState, ensureRivalState } from "./rivals";
 import { createMythProgression, ensureMythProgression } from "./myth";
 
 export const SAVE_VERSION = 1;
@@ -54,6 +54,7 @@ function isGameState(value: unknown): value is GameState {
   if (!candidate.caravan || typeof candidate.caravan !== "object") candidate.caravan = createCaravanState();
   if (!candidate.law || typeof candidate.law !== "object") candidate.law = createLawState();
   if (!candidate.rivals || typeof candidate.rivals !== "object") candidate.rivals = createRivalState(candidate.characters);
+  else candidate.rivals = ensureRivalState(candidate.rivals, candidate.characters);
   if (!Array.isArray(candidate.dialogueLog)) candidate.dialogueLog = [];
   if (!("travelResult" in candidate)) candidate.travelResult = null;
   if (candidate.travelResult && typeof candidate.travelResult.stallage !== "number") candidate.travelResult.stallage = 0;
