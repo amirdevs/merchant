@@ -29,6 +29,8 @@ describe("travel execution", () => {
       stallage: marketplaces[route.marketplaceIndex].stallage,
       arrivalDay: state.day,
     });
+    expect(state.travelResult?.events[0]).toContain("weather");
+    expect(state.caravan.routeHistory[0]).toMatchObject({ suppliesUsed: expect.any(Number), weather: expect.any(String), roadQuality: expect.any(String) });
   });
 
   it("does not move the player when route toll is unaffordable", () => {

@@ -1,6 +1,6 @@
 import { MARKET_OPEN_MINUTES, type GameState } from "./game";
 import { createCompanyState } from "./company";
-import { createCaravanState } from "./caravan";
+import { createCaravanState, ensureCaravanState } from "./caravan";
 import { createLawState } from "./law";
 import { createRivalState, ensureRivalState } from "./rivals";
 import { createMythProgression, ensureMythProgression } from "./myth";
@@ -52,6 +52,7 @@ function isGameState(value: unknown): value is GameState {
   if (!candidate.company || typeof candidate.company !== "object") candidate.company = createCompanyState();
   if (!("draftSession" in candidate)) candidate.draftSession = null;
   if (!candidate.caravan || typeof candidate.caravan !== "object") candidate.caravan = createCaravanState();
+  else candidate.caravan = ensureCaravanState(candidate.caravan);
   if (!candidate.law || typeof candidate.law !== "object") candidate.law = createLawState();
   if (!candidate.rivals || typeof candidate.rivals !== "object") candidate.rivals = createRivalState(candidate.characters);
   else candidate.rivals = ensureRivalState(candidate.rivals, candidate.characters);

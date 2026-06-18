@@ -11,7 +11,7 @@ import { createMythProgression, type MythProgression, type MythSession } from ".
 import { advanceMarketSimulation, recordMarketTrade, seasonalMarketBiases, simulatedMarketBiases, type MarketSimulation } from "./market-simulation";
 import { createCompanyState, settleShipments, type CompanyState } from "./company";
 import type { DraftSession } from "./draft";
-import { applyPackhorseTravelWear, createCaravanState, masteryRiskReduction, recordRoute, routeKey, type CaravanState } from "./caravan";
+import { applyPackhorseTravelWear, applyTravelConditions, createCaravanState, masteryRiskReduction, recordRoute, routeKey, routeTravelConditions, type CaravanState } from "./caravan";
 import { activePermit, adjustKingdomHeat, coolLawHeat, createLawState, kingdomHeat, permitInspectionMultiplier, type LawState } from "./law";
 import { npcRoles } from "./npc-behavior";
 import { advanceRivals, createRivalState, type RivalState } from "./rivals";
@@ -513,6 +513,8 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
 
   const fromMarketName = currentMarket(state).name;
   const departedDay = state.day;
+  const conditions = routeTravelConditions(fromMarketIndex, toMarketIndex, state.day, route.travelDays || 1);
+  const conditionResult = applyTravelConditions(state.caravan, conditions);
   spendCopperToll(state.playerInventory, items, totalCost);
   state.marketIndex = toMarketIndex;
   state.day += route.travelDays || 1;
@@ -556,7 +558,10 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
   });
   if (riskEvents.some((event) => event.kind === "inspection")) adjustKingdomHeat(state.law, destinationKingdom.index, 12);
   if (strategy === "evade") adjustKingdomHeat(state.law, destinationKingdom.index, riskEvents.some((event) => event.kind === "evasion" && event.message.includes("failed")) ? 18 : 6);
-  const wear = applyPackhorseTravelWear(state.caravan, cargo.packAnimals, route.travelDays || 1, !cargo.canTravel);
+  const wear = applyPackhorseTravelWear(state.caravan, cargo.packAnimals, route.travelDays || 1, !cargo.canTravel, conditions.wearBonus);
+  if (conditionResult.shortage > 0) {
+    riskEvents.push({ kind: "condition", message: `The caravan ran short by ${conditionResult.shortage} supplies; morale fell sharply.` });
+  }
   recordRoute(state.caravan, {
     id: `${fromMarketIndex}:${toMarketIndex}:${departedDay}`,
     dayDeparted: departedDay,
@@ -569,6 +574,10 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
     strategy,
     cargoValue: riskPreview.cargoValue,
     incidents: riskEvents.map((event) => event.message),
+    weather: conditions.weather,
+    roadQuality: conditions.roadQuality,
+    suppliesUsed: conditionResult.suppliesUsed,
+    moraleChange: conditionResult.moraleChange,
     success: true,
   });
   state.travelResult = {
@@ -578,7 +587,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
     tolls: route.tolls,
     stallage,
     arrivalDay: state.day,
-    events: riskEvents.map((event) => event.message),
+    events: [`${conditions.weather} weather, ${conditions.roadQuality} road, ${conditionResult.suppliesUsed}/${conditions.suppliesNeeded} supplies used.`, ...riskEvents.map((event) => event.message)],
   };
   state.message = rivalActivities.length
     ? `Arrived in ${marketplaces[toMarketIndex].name}. ${rivalActivities[0]}`

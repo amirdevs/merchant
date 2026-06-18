@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { applyPackhorseTravelWear, createCaravanState, masteryRiskReduction, recordRoute, repairPackhorses, routeMasteryLevel, toggleRouteBookmark, upgradeConcealment } from "./caravan";
+import { applyPackhorseTravelWear, applyTravelConditions, createCaravanState, ensureCaravanState, masteryRiskReduction, recordRoute, repairPackhorses, routeMasteryLevel, routeTravelConditions, toggleRouteBookmark, upgradeConcealment } from "./caravan";
 
 describe("caravan progression", () => {
   it("records routes and unlocks mastery perks", () => {
@@ -30,6 +30,23 @@ describe("caravan progression", () => {
     expect(repairPackhorses(caravan, 1)).toBe(1);
     expect(upgradeConcealment(caravan)).toBe(true);
     expect(caravan.concealmentLevel).toBe(1);
+  });
+
+  it("applies route weather, supplies, and morale", () => {
+    const caravan = createCaravanState();
+    const conditions = routeTravelConditions(0, 1, 4, 3);
+    const result = applyTravelConditions(caravan, conditions);
+    expect(result.suppliesUsed).toBeGreaterThan(0);
+    expect(caravan.supplies).toBeLessThan(12);
+    expect(caravan.morale).toBeGreaterThanOrEqual(0);
+    expect(applyPackhorseTravelWear(caravan, 1, 3, false, conditions.wearBonus)).toBeGreaterThanOrEqual(2);
+  });
+
+  it("migrates old caravan saves", () => {
+    const caravan = ensureCaravanState({ packhorseCondition: 101, concealmentLevel: 0, routeHistory: [], routeMastery: {}, bookmarkedRoutes: [] } as never);
+    expect(caravan.packhorseCondition).toBe(100);
+    expect(caravan.supplies).toBe(12);
+    expect(caravan.morale).toBe(70);
   });
 
   it("bookmarks routes", () => {

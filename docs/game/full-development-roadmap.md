@@ -929,9 +929,9 @@ Status: in progress.
 
 ### V4.5 Caravan, Travel, And Route Mastery Depth
 
-Status: planned.
+Status: in progress.
 
-- Add journey supplies, weather, terrain, road quality, caravan morale, and route-specific hazards.
+- Add journey supplies, weather, terrain, road quality, caravan morale, and route-specific hazards. Implemented baseline supplies, morale, weather, road quality, wear impact, and route-history display.
 - Add packhorse injuries, fatigue, special tack, armored packs, silent harnesses, cooling crates, and fragile-cargo protection.
 - Add custom route notes, player bookmarks, known incident history, and best-profit route comparison.
 - Add specialized caravan upgrades for legal trade, smuggling, luxury delivery, fragile goods, magical goods, and bulk cargo.

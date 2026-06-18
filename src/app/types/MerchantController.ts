@@ -80,6 +80,7 @@ export type MerchantActions = {
   pickDraftItem: (itemIndex: number) => void;
   closeDraft: () => void;
   repairPackhorses: () => void;
+  buyCaravanSupplies: (quantity?: number) => void;
   upgradeConcealment: () => void;
   toggleRouteBookmark: (toMarketIndex: number) => void;
   setRouteNote: (routeId: string, note: string) => void;

@@ -9,10 +9,10 @@ import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { routeRiskPreview } from "@/lib/travel-risk";
 import type { TravelStrategy } from "@/lib/travel-risk";
-import { masteryRiskReduction, routeKey, routeMasteryLevel, routeProfitSummary } from "@/lib/caravan";
+import { masteryRiskReduction, routeKey, routeMasteryLevel, routeProfitSummary, routeTravelConditions } from "@/lib/caravan";
 import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
 
-export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult, onToggleRouteBookmark, onSetRouteNote }: { state: GameState; onTravel: (marketIndex: number, strategy?: TravelStrategy) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void; onToggleRouteBookmark: (marketIndex: number) => void; onSetRouteNote: (routeId: string, note: string) => void }) {
+export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult, onToggleRouteBookmark, onSetRouteNote, onBuySupplies }: { state: GameState; onTravel: (marketIndex: number, strategy?: TravelStrategy) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void; onToggleRouteBookmark: (marketIndex: number) => void; onSetRouteNote: (routeId: string, note: string) => void; onBuySupplies: (quantity?: number) => void }) {
   const [pendingDestination, setPendingDestination] = useState<number | null>(null);
   const [strategy, setStrategy] = useState<TravelStrategy>("comply");
   const market = marketplaces[state.marketIndex];
@@ -35,6 +35,7 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
       masteryReduction: masteryRiskReduction(state.caravan.routeMastery[routeKey(market.index, pendingMarket.index)] || 0),
     })
     : null;
+  const pendingConditions = pendingRoute && pendingMarket ? routeTravelConditions(market.index, pendingMarket.index, state.day, pendingRoute.travelDays) : null;
   const requestTravel = (marketIndex: number) => setPendingDestination(marketIndex);
 
   return (
@@ -73,12 +74,14 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
               <StatChip label="Demand" value="Mixed" />
               <StatChip label="Capacity" value={cargo.canTravel ? "Safe" : "Over"} />
               <StatChip label="Animals" value={cargo.packAnimals} />
+              <StatChip label="Supplies" value={state.caravan.supplies} />
+              <StatChip label="Morale" value={state.caravan.morale} />
             </div>
             <div className="mt-3 rounded-sm border border-[#9a7138]/55 bg-[#fff6d7]/55 p-3 text-sm text-[#3b260f]">
               Carry {cargo.weight}/{cargo.carryCapacity} / Pull {cargo.size}/{cargo.sizeCapacity} / Storage {cargo.storageItems}
               {currentIllegal.length ? <span className="mt-1 block font-bold text-[#8d271f]">Illegal here: {currentIllegal.length} item stack{currentIllegal.length === 1 ? "" : "s"}</span> : null}
             </div>
-            <div className="mt-3 flex flex-wrap gap-2"><Button onClick={onEnterMarket}><MapPinned size={16} /> Enter Market</Button><Button subtle onClick={onOpenJournal}><BookOpen size={16} /> Journal</Button><Button subtle disabled>Skip Day</Button></div>
+            <div className="mt-3 flex flex-wrap gap-2"><Button onClick={onEnterMarket}><MapPinned size={16} /> Enter Market</Button><Button variant="secondary" onClick={() => onBuySupplies(6)}>Buy Supplies</Button><Button subtle onClick={onOpenJournal}><BookOpen size={16} /> Journal</Button><Button subtle disabled>Skip Day</Button></div>
           </Panel>
           <Panel title="Route Ledger" variant="parchment">
             <div className="grid gap-2">
@@ -99,11 +102,12 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
                 const trips = state.caravan.routeMastery[routeKey(market.index, destination.index)] || 0;
                 const bookmarked = state.caravan.bookmarkedRoutes.includes(routeKey(market.index, destination.index));
                 const summary = routeProfitSummary(state.caravan, market.index, destination.index);
+                const conditions = routeTravelConditions(market.index, destination.index, state.day, connection.travelDays);
                 return (
                   <div className="grid grid-cols-[1fr_auto] gap-2" key={destination.index}>
                     <LedgerRow
                       title={destination.name}
-                      subtitle={`Toll ${money(connection.tolls)} + stallage ${money(destination.stallage)} / guard ${risk.guardInspectionPercent}% / theft ${risk.theftPercent}% / mastery ${routeMasteryLevel(trips)}${summary ? ` / avg cost ${money(summary.averageCost)} / incident ${summary.incidentRate}%` : ""}${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""}`}
+                      subtitle={`Toll ${money(connection.tolls)} + stallage ${money(destination.stallage)} / ${conditions.weather}, ${conditions.roadQuality} road / supplies ${conditions.suppliesNeeded} / morale ${conditions.moraleChange > 0 ? "+" : ""}${conditions.moraleChange} / guard ${risk.guardInspectionPercent}% / theft ${risk.theftPercent}% / mastery ${routeMasteryLevel(trips)}${summary ? ` / avg cost ${money(summary.averageCost)} / incident ${summary.incidentRate}%` : ""}${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""}`}
                       trailing={<span className="text-sm font-bold uppercase text-[#75501f]">{connection.travelDays}d / {risk.level}</span>}
                       onClick={() => requestTravel(destination.index)}
                     />
@@ -117,7 +121,7 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
             <div className="grid max-h-48 gap-2 overflow-auto">
               {state.caravan.routeHistory.slice(0, 6).map((entry) => (
                 <div className="rounded-sm border border-[#9a7138]/55 bg-[#fff6d7]/45 p-2" key={entry.id}>
-                  <LedgerRow title={`${marketplaces[entry.fromMarketIndex].name} to ${marketplaces[entry.toMarketIndex].name}`} subtitle={`Day ${entry.dayDeparted}-${entry.dayArrived} / cargo ${money(entry.cargoValue)} / cost ${money(entry.tolls + entry.stallage)} / ${entry.strategy}`} trailing={<span className="text-xs font-bold">{entry.incidents.length ? `${entry.incidents.length} incident` : "Clear"}</span>} />
+                  <LedgerRow title={`${marketplaces[entry.fromMarketIndex].name} to ${marketplaces[entry.toMarketIndex].name}`} subtitle={`Day ${entry.dayDeparted}-${entry.dayArrived} / cargo ${money(entry.cargoValue)} / cost ${money(entry.tolls + entry.stallage)} / ${entry.weather || "clear"} / ${entry.roadQuality || "road"} / supplies ${entry.suppliesUsed || 0} / morale ${entry.moraleChange && entry.moraleChange > 0 ? "+" : ""}${entry.moraleChange || 0} / ${entry.strategy}`} trailing={<span className="text-xs font-bold">{entry.incidents.length ? `${entry.incidents.length} incident` : "Clear"}</span>} />
                   <label className="mt-2 block text-xs font-black uppercase tracking-wide text-[#75501f]">
                     Route Note
                     <input
@@ -148,6 +152,10 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
               {pendingRisk ? <StatChip label="Guard Check" value={`${pendingRisk.guardInspectionPercent}%`} /> : null}
               {pendingRisk ? <StatChip label="Theft" value={`${pendingRisk.theftPercent}%`} /> : null}
               {pendingRisk ? <StatChip label="Cargo Value" value={money(pendingRisk.cargoValue)} /> : null}
+              {pendingConditions ? <StatChip label="Weather" value={pendingConditions.weather} /> : null}
+              {pendingConditions ? <StatChip label="Road" value={pendingConditions.roadQuality} /> : null}
+              {pendingConditions ? <StatChip label="Supplies" value={`${Math.min(state.caravan.supplies, pendingConditions.suppliesNeeded)}/${pendingConditions.suppliesNeeded}`} tone={state.caravan.supplies >= pendingConditions.suppliesNeeded ? "parchment" : "danger"} /> : null}
+              {pendingConditions ? <StatChip label="Morale" value={`${pendingConditions.moraleChange > 0 ? "+" : ""}${pendingConditions.moraleChange}`} tone={state.caravan.morale + pendingConditions.moraleChange < 30 ? "danger" : "parchment"} /> : null}
               <StatChip label="Copper" value={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls + pendingMarket.stallage) ? "Ready" : "Short"} tone={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls + pendingMarket.stallage) ? "parchment" : "danger"} />
             </div>
             {pendingIllegal.length ? <div className="rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/70 p-3 font-bold text-[#8d271f]">Destination law warning: {pendingIllegal.length} illegal stack{pendingIllegal.length === 1 ? "" : "s"} in cargo.</div> : null}

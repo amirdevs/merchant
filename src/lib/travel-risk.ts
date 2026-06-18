@@ -4,7 +4,7 @@ import { itemIsIllegal } from "./legal";
 import { inventoryTotals } from "./economy";
 
 export type TravelRiskEvent = {
-  kind: "inspection" | "theft" | "bribe" | "evasion";
+  kind: "inspection" | "theft" | "bribe" | "evasion" | "condition";
   message: string;
 };
 

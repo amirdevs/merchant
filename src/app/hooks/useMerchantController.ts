@@ -660,6 +660,19 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function buyCaravanSupplies(quantity = 6) {
+    update((draft) => {
+      const safeQuantity = Math.max(1, Math.floor(quantity));
+      const cost = safeQuantity * 2;
+      if (!spendCopperToll(draft.playerInventory, items, cost)) {
+        draft.message = `Caravan supplies cost ${cost} copper.`;
+        return;
+      }
+      draft.caravan.supplies = Math.min(60, draft.caravan.supplies + safeQuantity);
+      draft.message = `Loaded ${safeQuantity} caravan supplies.`;
+    });
+  }
+
   function upgradeConcealment() {
     update((draft) => {
       const cost = 75 * (draft.caravan.concealmentLevel + 1);
@@ -918,6 +931,7 @@ export function useMerchantController(): MerchantController {
       pickDraftItem,
       closeDraft,
       repairPackhorses,
+      buyCaravanSupplies,
       upgradeConcealment,
       toggleRouteBookmark,
       setRouteNote,
