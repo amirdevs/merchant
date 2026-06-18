@@ -69,24 +69,24 @@ export function BarterConversationView({ state, character, playerOffer, characte
         <Panel className="min-h-0 p-3 [&>div:last-child]:h-[calc(100%-3.25rem)]" title={character ? character.name : "Conversation"} variant="parchment">
           {character ? (
             <div className="flex h-full min-h-0 flex-col">
-              <div className="grid gap-2 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/55 p-2 shadow-inner shadow-[#6c4418]/15">
-                <div className="flex items-center gap-3">
-                  <div className="grid h-16 w-14 shrink-0 place-items-center overflow-hidden rounded-sm border border-[#b98b37]/80 bg-[#f2ddb1] p-1">
-                    {character.portraitFile ? <img className="h-full w-full rounded object-cover" src={portraitAsset(character.portraitFile)} alt="" /> : null}
-                  </div>
-                  <div className="min-w-0 flex-1">
+              <div className="grid grid-cols-[6.5rem_minmax(0,1fr)] gap-3 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/55 p-2 shadow-inner shadow-[#6c4418]/15">
+                <div className="grid min-h-44 place-items-center overflow-hidden rounded-sm border border-[#b98b37]/80 bg-[#f2ddb1] p-1">
+                  {character.portraitFile ? <img className="h-full w-full rounded object-cover object-top" src={portraitAsset(character.portraitFile)} alt="" /> : null}
+                </div>
+                <div className="grid min-w-0 content-start gap-2">
+                  <div className="min-w-0">
                     <h1 className="truncate font-display text-2xl text-[#26170a]">{character.name}</h1>
                     <p className="truncate text-sm font-bold text-[#75501f]">{character.profession}</p>
                     <p className="truncate text-[0.68rem] font-black uppercase text-[#75501f]">{roleLabel(character)}</p>
                   </div>
+                  <dl className="grid grid-cols-3 gap-1.5">
+                    <StatChip label="Mood" value={moodLabel(relation)} icon={uiAssets.town.moodPositive} tone={relation && relation.mood <= -2 ? "danger" : "parchment"} />
+                    <StatChip label="Trust" value={trustLabel(relation)} icon={uiAssets.town.relationshipBadge} />
+                    <StatChip label="Patience" value={patienceLabel(relation)} icon={uiAssets.town.tradeStyleBadge} tone={relation && relation.patience <= 2 ? "danger" : "parchment"} />
+                  </dl>
+                  <p className="line-clamp-2 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/65 p-2 text-sm leading-snug text-[#3b260f]">{message}</p>
+                  <Button className="w-full justify-center" size="sm" variant="secondary" onClick={() => setConversationOpen(true)}>Talk With {character.name}</Button>
                 </div>
-                <dl className="grid grid-cols-3 gap-1.5">
-                  <StatChip label="Mood" value={moodLabel(relation)} icon={uiAssets.town.moodPositive} tone={relation && relation.mood <= -2 ? "danger" : "parchment"} />
-                  <StatChip label="Trust" value={trustLabel(relation)} icon={uiAssets.town.relationshipBadge} />
-                  <StatChip label="Patience" value={patienceLabel(relation)} icon={uiAssets.town.tradeStyleBadge} tone={relation && relation.patience <= 2 ? "danger" : "parchment"} />
-                </dl>
-                <p className="line-clamp-2 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/65 p-2 text-sm leading-snug text-[#3b260f]">{message}</p>
-                <Button className="w-full justify-center" size="sm" variant="secondary" onClick={() => setConversationOpen(true)}>Talk With {character.name}</Button>
               </div>
               <div
                 className="mt-2 min-h-0 rounded-sm border border-[#9a7138]/60 p-3 text-[#3b260f] shadow-inner shadow-[#6c4418]/20"
