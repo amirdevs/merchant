@@ -30,7 +30,8 @@ import { expireQuests, questCanComplete, questReward } from "@/lib/quests";
 import { customerIntro } from "@/lib/dialogue";
 import type { DialogueEffect, DialogueNodeId } from "@/lib/dialogue";
 import { applyDialogueEffect } from "@/lib/dialogue-runtime";
-import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "@/lib/audio";
+import { audioEnabled, playAmbient, playItemSound, playOfferReaction, playUiSound, setAudioEnabled } from "@/lib/audio";
+import { appraiseOffer } from "@/lib/barter";
 import type { MerchantController } from "@/app/types/MerchantController";
 import { listSaveSlots } from "@/lib/save";
 import { completeContract, expireContracts, resolveContract } from "@/lib/contracts";
@@ -658,6 +659,7 @@ export function useMerchantController(): MerchantController {
 
   function trade() {
     playUiSound("trade");
+    if (character) playOfferReaction(appraiseOffer(playerOffer, characterOffer, character));
     setState((current) => completeTrade(current));
   }
 
