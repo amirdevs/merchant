@@ -179,7 +179,7 @@ Acceptance:
 
 ### 2. Illegal Goods And Concealment
 
-Status: mostly implemented.
+Status: implemented baseline.
 
 Goal: make laws and risk visible before adding punishment.
 
@@ -268,7 +268,7 @@ Tasks:
 - Persistent filters.
 - Item notes.
 - Highlight, quest, illegal, concealed, protected, and collection markers.
-- Item comparison popovers.
+- Item comparison popovers. Implemented baseline on inventory item cards.
 - Text/image item readers.
 
 Acceptance:
@@ -613,7 +613,7 @@ Acceptance:
 
 ### V2.3 Finish Inventory And Item Interaction
 
-Status: mostly implemented.
+Status: implemented baseline.
 
 Goal: make every important item category useful, inspectable, and manageable.
 
@@ -621,11 +621,11 @@ Tasks:
 
 - Add item notes and persistent item highlights. Implemented.
 - Add quest-needed markers in inventory and barter panels. Implemented in shared inventory panels.
-- Add item comparison popovers.
+- Add item comparison popovers. Implemented baseline on inventory item cards.
 - Add readable book/letter viewer. Implemented baseline.
 - Add image/inspection viewer for maps and paintings. Implemented baseline.
 - Add special item handlers for maps, deeds, Myth cards, storage, and permits. Implemented baseline inspection and mechanical hooks.
-- Add bulk actions: protect all, reveal all, clear offer, move exact stack sets.
+- Add bulk actions: protect all, reveal all, clear offer, move exact stack sets. Implemented baseline for visible filtered cargo.
 - Add item search that works from the inventory screen, not only a placeholder filter page. Implemented.
 
 Acceptance:

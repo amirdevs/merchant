@@ -87,6 +87,12 @@ function slotSizeClass(itemSize = 0, itemWeight = 0, variant: InventoryPanelProp
   return "w-20 xl:w-24";
 }
 
+function itemSummary(entry: InventoryEntry) {
+  const item = itemFor(entry);
+  if (!item) return `Item ${entry.itemIndex}`;
+  return `${item.name}\nValue: ${money(item.loafValue)} each\nSize: ${item.size} / Weight: ${item.weight}\nTags: ${item.tags.slice(0, 5).map(title).join(", ")}${entry.protected ? "\nProtected" : ""}${entry.conceal ? "\nConcealed" : ""}`;
+}
+
 export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, illegalTags = [], questItemIndexes, onMove, onMoveAll, onSetOfferQuantity, onToggleProtect }: InventoryPanelProps) {
   const rows = inventory.filter((entry) => quantityFor(entry, mode) > 0);
   const isGrid = variant === "compact" || variant === "management";
@@ -187,6 +193,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                   backgroundImage: `linear-gradient(180deg, rgba(255,255,255,.08), rgba(0,0,0,.10)), url("${uiAssets.inventory.itemIconFrameLarge}")`,
                   backgroundSize: "100% 100%",
                 }}
+                title={itemSummary(entry)}
               >
                 <ItemSlot
                   className={cn("mx-auto", slotSizeClass(item?.size, item?.weight, variant))}
@@ -251,6 +258,20 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                   <div className={cn("mt-1 grid grid-cols-2 gap-1 text-center text-[0.58rem] font-black uppercase", darkPanel ? "text-[#ffe6a0]" : "text-[#6a451a]")}>
                     <span className="rounded-sm bg-black/15 px-1 py-0.5">S {item.size}</span>
                     <span className="rounded-sm bg-black/15 px-1 py-0.5">W {item.weight}</span>
+                  </div>
+                ) : null}
+                {item ? (
+                  <div
+                    className={cn(
+                      "pointer-events-none absolute left-2 right-2 top-2 z-20 hidden rounded-sm border p-2 text-left text-[0.68rem] font-bold leading-snug shadow-xl group-hover:block group-focus-within:block",
+                      darkPanel ? "border-[#d0a65a]/70 bg-[#1b1007]/95 text-[#fff3bd]" : "border-[#9a7138]/70 bg-[#fff8df]/95 text-[#2a1a0c]"
+                    )}
+                  >
+                    <strong className="block truncate text-xs">{item.name}</strong>
+                    <span className="block">Value {money(item.loafValue)} each</span>
+                    <span className="block">Size {item.size} / Weight {item.weight}</span>
+                    <span className="block truncate">{item.tags.slice(0, 4).map(title).join(", ")}</span>
+                    {entry.protected || entry.conceal ? <span className="block text-[#1f5960]">{entry.protected ? "Protected" : ""}{entry.protected && entry.conceal ? " / " : ""}{entry.conceal ? "Concealed" : ""}</span> : null}
                   </div>
                 ) : null}
                 {onSetOfferQuantity ? (

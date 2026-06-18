@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
-import { BookOpen, Box, Grid3X3, PackageSearch, Search, Shield, Star } from "lucide-react";
+import { BookOpen, Box, Eye, Grid3X3, PackageCheck, PackageSearch, Search, Shield, ShieldCheck, Star, XCircle } from "lucide-react";
 import type { InventoryEntry } from "@/data/types";
 import type { GameState } from "@/lib/game";
 import type { MoveAmount } from "@/lib/inventory";
@@ -19,6 +19,7 @@ type InventoryManagementViewProps = {
   onMovePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;
   onSetPlayerOfferQuantity?: (entry: InventoryEntry, quantity: number) => void;
   onTogglePlayerProtect: (entry: InventoryEntry) => void;
+  onTogglePlayerConceal: (entry: InventoryEntry) => void;
   onOpenFilter: () => void;
   onOpenItemDetail: (entry: InventoryEntry) => void;
   onUnavailable: (message: string) => void;
@@ -29,7 +30,7 @@ type InventorySort = "Value" | "Name" | "Quantity" | "Weight";
 
 const FILTER_KEY = "merchant-inventory-filters";
 
-export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQuantity, onTogglePlayerProtect, onOpenFilter, onOpenItemDetail, onUnavailable }: InventoryManagementViewProps) {
+export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQuantity, onTogglePlayerProtect, onTogglePlayerConceal, onOpenFilter, onOpenItemDetail, onUnavailable }: InventoryManagementViewProps) {
   const [category, setCategory] = useState<InventoryCategory>(() => {
     const saved = localStorage.getItem(FILTER_KEY);
     return saved ? (JSON.parse(saved).category as InventoryCategory) || "All" : "All";
@@ -79,6 +80,54 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
     localStorage.setItem(FILTER_KEY, JSON.stringify({ category, sortBy }));
   }, [category, sortBy]);
 
+  function protectVisible() {
+    const targets = filteredEntries.filter((entry) => !entry.protected);
+    if (!targets.length) {
+      onUnavailable("All visible cargo is already protected.");
+      return;
+    }
+    targets.forEach(onTogglePlayerProtect);
+    onUnavailable(`Protected ${targets.length} visible stacks.`);
+  }
+
+  function revealVisible() {
+    const targets = filteredEntries.filter((entry) => entry.conceal);
+    if (!targets.length) {
+      onUnavailable("No visible cargo is concealed.");
+      return;
+    }
+    targets.forEach(onTogglePlayerConceal);
+    onUnavailable(`Revealed ${targets.length} visible stacks.`);
+  }
+
+  function offerVisibleStacks() {
+    if (!onSetPlayerOfferQuantity) {
+      onUnavailable("Offer controls are unavailable here.");
+      return;
+    }
+    const targets = filteredEntries.filter((entry) => visibleQuantity(entry) > 0 && !entry.protected);
+    if (!targets.length) {
+      onUnavailable("No unprotected visible cargo can be offered.");
+      return;
+    }
+    targets.forEach((entry) => onSetPlayerOfferQuantity(entry, entry.quantity));
+    onUnavailable(`Moved ${targets.length} visible stacks into the offer.`);
+  }
+
+  function clearVisibleOffers() {
+    if (!onSetPlayerOfferQuantity) {
+      onUnavailable("Offer controls are unavailable here.");
+      return;
+    }
+    const targets = filteredEntries.filter((entry) => entry.offerQuantity > 0);
+    if (!targets.length) {
+      onUnavailable("No visible offers to clear.");
+      return;
+    }
+    targets.forEach((entry) => onSetPlayerOfferQuantity(entry, 0));
+    onUnavailable(`Cleared ${targets.length} visible offer stacks.`);
+  }
+
   return (
     <ScreenFrame title="Inventory Management" eyebrow="Cargo Ledger" backdrop={uiAssets.backplates.warehouseInventory} overlay="dark" contentClassName="p-2 lg:p-3">
       <div className="grid flex-1 gap-3 xl:grid-cols-[140px_minmax(0,1fr)_360px]">
@@ -115,6 +164,12 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
               <span>Sort by: {sortBy}</span>
               <Grid3X3 size={22} />
             </button>
+          </div>
+          <div className="mb-4 grid gap-2 rounded-sm border border-[#b98b37]/55 bg-[#fff6d7]/45 p-2 sm:grid-cols-2 xl:grid-cols-4">
+            <Button variant="secondary" onClick={protectVisible}><ShieldCheck size={16} /> Protect Visible</Button>
+            <Button variant="secondary" onClick={revealVisible}><Eye size={16} /> Reveal Visible</Button>
+            <Button variant="secondary" onClick={offerVisibleStacks}><PackageCheck size={16} /> Offer Visible</Button>
+            <Button variant="secondary" onClick={clearVisibleOffers}><XCircle size={16} /> Clear Visible Offers</Button>
           </div>
           <InventoryPanel title="Cargo" owner="player" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} illegalTags={illegalTags} questItemIndexes={questItemIndexes} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onSetOfferQuantity={onSetPlayerOfferQuantity} onToggleProtect={onTogglePlayerProtect} allowProtect />
           <div className="mt-4 grid gap-3 md:grid-cols-5">
