@@ -876,7 +876,7 @@ Status: in progress.
 - Add button-state, keyboard, tooltip, overflow, and error-state review.
 - Add animation polish and full audio asset/channel controls. Channel controls implemented; animation and real asset coverage remain.
 - Add broken-asset scans and missing-content reports. Implemented baseline with `pnpm audit:assets`; deeper content reports remain.
-- Split large React bundles and lazy-load major screens where useful.
+- Split large React bundles and lazy-load major screens where useful. Implemented baseline route-level lazy loading; data bundle optimization remains.
 - Keep desktop packaging deferred.
 
 ## Roadmap V4 - Content Depth And Replayability
@@ -951,13 +951,14 @@ Status: in progress.
 
 ### V4.7 React Quality, Presentation, And Tools
 
-Status: planned.
+Status: in progress.
 
 - Add screen-level UI tests for travel, company, events, inventory, dialogue, journal, Myth, and save/load flows.
 - Add a manual full-play smoke checklist covering a complete merchant run from new game through late-game systems.
 - Add broken asset scans for portraits, item art, UI parts, backdrops, audio, and event images.
 - Add button-state, disabled-state, tooltip, keyboard, overflow, and error-state review across every screen.
 - Add animation polish for trade offers, accepted deals, rejected offers, travel results, event rewards, Myth turns, and inventory actions.
+- Split route-level screens into lazy chunks. Implemented baseline; generated data and shared game logic still dominate the main bundle.
 - Add full audio settings with separate channel controls for UI, dialogue, ambient, events, minigames, and offer reactions.
 - Split large React bundles and lazy-load major screens where it helps browser performance.
 

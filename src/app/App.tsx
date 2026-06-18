@@ -1,25 +1,26 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { GameShell } from "@/app/components";
 import { AppErrorBoundary } from "@/app/components/AppErrorBoundary";
 import { useMerchantController } from "@/app/hooks/useMerchantController";
 import type { GameView, MerchantProfile, UiPreferences } from "@/app/types";
 import { HelpModal } from "@/components/HelpModal";
-import { CustomersView } from "@/features/customers/CustomersView";
-import { CompanyView } from "@/features/company/CompanyView";
-import { EventView } from "@/features/events/EventView";
-import { InventoryFilterView } from "@/features/inventory/InventoryFilterView";
-import { InventoryManagementView } from "@/features/inventory/InventoryManagementView";
-import { ItemDetailView } from "@/features/inventory/ItemDetailView";
-import { JournalView } from "@/features/journal/JournalView";
-import { MarketHubView } from "@/features/market/MarketHubView";
-import { MainMenuView } from "@/features/menu/MainMenuView";
-import { NewMerchantProfileView } from "@/features/profile/NewMerchantProfileView";
-import { SaveLoadView } from "@/features/save-load/SaveLoadView";
-import { SettingsView } from "@/features/settings/SettingsView";
-import { SystemMenuView } from "@/features/system/SystemMenuView";
-import { BarterConversationView } from "@/features/trade/BarterConversationView";
-import { TravelMapView } from "@/features/travel/TravelMapView";
 import { loadGame } from "@/lib/game";
+
+const BarterConversationView = lazy(() => import("@/features/trade/BarterConversationView").then((module) => ({ default: module.BarterConversationView })));
+const CompanyView = lazy(() => import("@/features/company/CompanyView").then((module) => ({ default: module.CompanyView })));
+const CustomersView = lazy(() => import("@/features/customers/CustomersView").then((module) => ({ default: module.CustomersView })));
+const EventView = lazy(() => import("@/features/events/EventView").then((module) => ({ default: module.EventView })));
+const InventoryFilterView = lazy(() => import("@/features/inventory/InventoryFilterView").then((module) => ({ default: module.InventoryFilterView })));
+const InventoryManagementView = lazy(() => import("@/features/inventory/InventoryManagementView").then((module) => ({ default: module.InventoryManagementView })));
+const ItemDetailView = lazy(() => import("@/features/inventory/ItemDetailView").then((module) => ({ default: module.ItemDetailView })));
+const JournalView = lazy(() => import("@/features/journal/JournalView").then((module) => ({ default: module.JournalView })));
+const MainMenuView = lazy(() => import("@/features/menu/MainMenuView").then((module) => ({ default: module.MainMenuView })));
+const MarketHubView = lazy(() => import("@/features/market/MarketHubView").then((module) => ({ default: module.MarketHubView })));
+const NewMerchantProfileView = lazy(() => import("@/features/profile/NewMerchantProfileView").then((module) => ({ default: module.NewMerchantProfileView })));
+const SaveLoadView = lazy(() => import("@/features/save-load/SaveLoadView").then((module) => ({ default: module.SaveLoadView })));
+const SettingsView = lazy(() => import("@/features/settings/SettingsView").then((module) => ({ default: module.SettingsView })));
+const SystemMenuView = lazy(() => import("@/features/system/SystemMenuView").then((module) => ({ default: module.SystemMenuView })));
+const TravelMapView = lazy(() => import("@/features/travel/TravelMapView").then((module) => ({ default: module.TravelMapView })));
 
 const defaultMerchantProfile: MerchantProfile = {
   name: "Arian Valecross",
@@ -63,6 +64,17 @@ const gameViews: GameView[] = [
 ];
 const passiveClockViews = new Set<GameView>(["market", "barter", "travel", "journal", "inventory", "inventory-filter", "item-detail", "company", "event", "customers"]);
 const sceneOverlayViews = new Set<GameView>(["customers", "journal", "inventory", "inventory-filter", "item-detail", "system"]);
+
+function SceneLoading() {
+  return (
+    <div className="grid min-h-0 flex-1 place-items-center bg-[#28190d] p-6 text-[#fff6d7]">
+      <div className="rounded-sm border-2 border-[#b98b37] bg-[#3b260f]/90 px-6 py-4 text-center shadow-xl">
+        <span className="text-xs font-black uppercase tracking-[0.18em] text-[#f1d48a]">Loading Scene</span>
+        <strong className="mt-1 block font-display text-2xl">Preparing the stall...</strong>
+      </div>
+    </div>
+  );
+}
 
 function initialView(): GameView {
   const view = new URLSearchParams(window.location.search).get("view");
@@ -181,13 +193,15 @@ export function App() {
   return (
     <AppErrorBoundary>
       <GameShell controller={controller} activeView={activeView} merchantProfile={merchantProfile} uiPreferences={uiPreferences} onNavigate={navigate}>
-        {sceneOverlayViews.has(activeView) ? (
-          <div className="relative flex min-h-0 flex-1">
-            <div className="pointer-events-none absolute inset-0 opacity-55 blur-[1px] saturate-75">{renderMarketScene()}</div>
-            <div className="absolute inset-0 z-20 bg-black/45" />
-            <div className="relative z-30 flex min-h-0 flex-1 p-2 lg:p-4">{view}</div>
-          </div>
-        ) : view}
+        <Suspense fallback={<SceneLoading />}>
+          {sceneOverlayViews.has(activeView) ? (
+            <div className="relative flex min-h-0 flex-1">
+              <div className="pointer-events-none absolute inset-0 opacity-55 blur-[1px] saturate-75">{renderMarketScene()}</div>
+              <div className="absolute inset-0 z-20 bg-black/45" />
+              <div className="relative z-30 flex min-h-0 flex-1 p-2 lg:p-4">{view}</div>
+            </div>
+          ) : view}
+        </Suspense>
         {controller.helpOpen ? <HelpModal onClose={() => controller.actions.setHelpOpen(false)} /> : null}
       </GameShell>
     </AppErrorBoundary>
