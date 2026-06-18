@@ -92,8 +92,6 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
               backgroundSize: "cover",
             }}
           >
-            <MarketCommand icon={<UserRoundPlus size={34} />} label="Next Customer" onClick={onNextCustomer} />
-            <MarketCommand icon={<Handshake size={34} />} label="Barter" onClick={() => currentCustomer && onSelectCustomer(currentCustomer)} />
             <MarketCommand icon={<ScrollText size={34} />} label="Journal" onClick={() => onNavigate("journal")} />
             <MarketCommand icon={<Map size={34} />} label="Packup" onClick={onPackup} />
             <MarketCommand icon={<Map size={34} />} label="Map" onClick={() => onNavigate("travel")} />
