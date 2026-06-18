@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { InventoryEntry, Item, Marketplace } from "@/data/types";
-import { questCanComplete, questItemProgress, questReward, questRewardCopper } from "./quests";
+import { expireQuests, questCanComplete, questDeadline, questItemProgress, questOfferCanComplete, questReward, questRewardCopper } from "./quests";
 
 const items: Item[] = [
   { index: 0, name: "Juggernaut", iconFile: "juggernaut.png", tags: ["livestock"], loafValue: 100, size: 10, weight: 10, kingdomIndex: 0 },
@@ -52,5 +52,21 @@ describe("quests", () => {
       copper: 200,
       items: [{ itemIndex: 1, quantity: 3 }],
     });
+  });
+
+  it("recognizes quest items offered through barter", () => {
+    const inventory: InventoryEntry[] = [{ itemIndex: 0, quantity: 2, offerQuantity: 1 }];
+
+    expect(questOfferCanComplete(market(["juggernaut"]), inventory, items)).toBe(true);
+  });
+
+  it("supports authored quest deadlines and failure", () => {
+    const deadlineMarket = market([]);
+    deadlineMarket.quest!.data = { deadlineDays: 3 };
+    const states: Record<string, string> = { [deadlineMarket.index]: "accepted" };
+
+    expect(questDeadline(deadlineMarket, 2)).toBe(5);
+    expect(expireQuests({ states, acceptedDays: { [deadlineMarket.index]: 2 }, currentDay: 6, markets: [deadlineMarket] })).toHaveLength(1);
+    expect(states[deadlineMarket.index]).toBe("failed");
   });
 });

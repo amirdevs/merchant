@@ -112,6 +112,9 @@ export type Marketplace = {
     started?: boolean;
     finished?: boolean;
     questItems?: string[];
+    data?: Record<string, unknown>;
+    outcome?: unknown;
+    wonVote?: boolean;
   } | null;
   bias?: Bias[];
   location?: {

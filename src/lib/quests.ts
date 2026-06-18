@@ -47,6 +47,39 @@ export function questCanComplete(market: Marketplace, inventory: InventoryEntry[
   return progress.every((entry) => entry.complete);
 }
 
+export function questOfferCanComplete(market: Marketplace, inventory: InventoryEntry[], items: Item[]) {
+  const required = market.quest?.questItems || [];
+  if (!market.quest || !required.length) return false;
+  return required.every((token) => inventory.some((entry) => {
+    const item = items[entry.itemIndex];
+    return entry.offerQuantity > 0 && item && itemMatchesQuestToken(item, token);
+  }));
+}
+
+export function questDeadline(market: Marketplace, acceptedDay: number | undefined) {
+  const days = typeof market.quest?.data?.deadlineDays === "number" ? market.quest.data.deadlineDays : null;
+  return acceptedDay !== undefined && days ? acceptedDay + Math.max(1, days) : null;
+}
+
+export function expireQuests(options: {
+  states: Record<string, string>;
+  acceptedDays: Record<string, number>;
+  currentDay: number;
+  markets: Marketplace[];
+}) {
+  const expired: Marketplace[] = [];
+  for (const market of options.markets) {
+    const key = String(market.index);
+    if (!["accepted", "active", "ready"].includes(options.states[key])) continue;
+    const deadline = questDeadline(market, options.acceptedDays[key]);
+    if (deadline !== null && options.currentDay > deadline) {
+      options.states[key] = "failed";
+      expired.push(market);
+    }
+  }
+  return expired;
+}
+
 export function questRewardCopper(market: Marketplace) {
   const explicit = market.quest?.data && typeof (market.quest.data as Record<string, unknown>).reward === "number"
     ? Number((market.quest.data as Record<string, unknown>).reward)

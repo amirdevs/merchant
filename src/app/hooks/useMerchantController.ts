@@ -26,14 +26,14 @@ import {
   type GameState,
 } from "@/lib/game";
 import { setOfferQuantity, type MoveAmount } from "@/lib/inventory";
-import { questCanComplete, questReward } from "@/lib/quests";
+import { expireQuests, questCanComplete, questReward } from "@/lib/quests";
 import { customerIntro } from "@/lib/dialogue";
 import type { DialogueEffect, DialogueNodeId } from "@/lib/dialogue";
 import { applyDialogueEffect } from "@/lib/dialogue-runtime";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "@/lib/audio";
 import type { MerchantController } from "@/app/types/MerchantController";
 import { listSaveSlots } from "@/lib/save";
-import { completeContract, resolveContract } from "@/lib/contracts";
+import { completeContract, expireContracts, resolveContract } from "@/lib/contracts";
 import { createAuctionSession, passAuctionLot, placeAuctionBid } from "@/lib/auction";
 import { eventIsActive } from "@/lib/events";
 import { coinQuantity, spendCopperToll } from "@/lib/economy";
@@ -235,6 +235,9 @@ export function useMerchantController(): MerchantController {
         return;
       }
       draft.questStates[String(marketIndex)] = status;
+      if (status === "accepted" && draft.questAcceptedDays[String(marketIndex)] === undefined) {
+        draft.questAcceptedDays[String(marketIndex)] = draft.day;
+      }
       const questName = market?.quest?.name || "Quest";
       if (status === "finished" && market?.quest) {
         const reward = questReward(market, items);
@@ -293,7 +296,25 @@ export function useMerchantController(): MerchantController {
   function advanceDay() {
     update((draft) => {
       draft.day += 1;
-      draft.message = `A day passes. It is now day ${draft.day}.`;
+      const expiredContracts = expireContracts({
+        states: draft.contractStates,
+        acceptedDays: draft.contractAcceptedDays,
+        currentDay: draft.day,
+        markets: marketplaces,
+        kingdoms,
+      });
+      const expiredQuests = expireQuests({
+        states: draft.questStates,
+        acceptedDays: draft.questAcceptedDays,
+        currentDay: draft.day,
+        markets: marketplaces,
+      });
+      const penalty = expiredContracts.reduce((total, contract) => total + contract.failurePenaltyCopper, 0);
+      if (penalty) spendCopperToll(draft.playerInventory, items, penalty);
+      const failures = [...expiredContracts.map((contract) => contract.title), ...expiredQuests.map((market) => market.quest?.name || "Quest")];
+      draft.message = failures.length
+        ? `Day ${draft.day}. Failed deadlines: ${failures.join(", ")}${penalty ? `. Up to ${penalty} copper paid in penalties.` : "."}`
+        : `A day passes. It is now day ${draft.day}.`;
     });
   }
 

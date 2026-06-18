@@ -24,6 +24,7 @@ import { charactersAtMarket, nextCustomerIndex, selectedCharacter } from "./npc-
 import { ensureRelation, type NpcRelations, reactionText, startingPatience, ultimatumActive } from "./reputation";
 import { deleteGameSave, importGame, loadGame, saveGame, serializeGame } from "./save";
 import { applyTravelRisks } from "./travel-risk";
+import { expireQuests, questOfferCanComplete, questReward } from "./quests";
 
 export const items = itemsJson as Item[];
 export const kingdoms = kingdomsJson as Kingdom[];
@@ -43,6 +44,7 @@ export type GameState = {
   offersMade: number;
   npcRelations: NpcRelations;
   questStates: Record<string, "unseen" | "offered" | "accepted" | "ready" | "finished" | "failed">;
+  questAcceptedDays: Record<string, number>;
   contractStates: ContractStates;
   contractAcceptedDays: ContractAcceptedDays;
   auctionSession: AuctionSession | null;
@@ -144,6 +146,7 @@ export function newGame(): GameState {
     offersMade: 0,
     npcRelations: {},
     questStates: {},
+    questAcceptedDays: {},
     contractStates: {},
     contractAcceptedDays: {},
     auctionSession: null,
@@ -339,6 +342,9 @@ export function completeTrade(state: GameState) {
 
   const playerCargoValue = next.playerInventory.reduce((total, entry) => total + items[entry.itemIndex].loafValue * entry.quantity, 0);
   const npcGift = playerValue <= 0 && safetyNetGiftAllowed(nextCharacter, relation, playerCargoValue, characterValue);
+  const marketQuest = currentMarket(next);
+  const completesQuest = next.questStates[String(marketQuest.index)] === "accepted"
+    && questOfferCanComplete(marketQuest, next.playerInventory, items);
   let appraisal = appraiseOffer(playerValue, characterValue, nextCharacter);
   const fairChance = fairMatchChance(nextCharacter, relation, playerValue, characterValue);
   const fairMatch = appraisal === "close" && deterministicTradeRoll(next.day, nextCharacter.index, next.offersMade) < fairChance;
@@ -370,6 +376,15 @@ export function completeTrade(state: GameState) {
   relation.trust += appraisal === "great_deal" ? 2 : 1;
   transferOffers(next.playerInventory, nextCharacter.inventory);
   transferOffers(nextCharacter.inventory, next.playerInventory);
+  let questMessage = "";
+  if (completesQuest && marketQuest.quest) {
+    const reward = questReward(marketQuest, items);
+    const copper = items.find((item) => item.name.toLowerCase() === "copper coins");
+    if (copper) addInventory(next.playerInventory, copper.index, reward.copper);
+    for (const itemReward of reward.items) addInventory(next.playerInventory, itemReward.itemIndex, itemReward.quantity);
+    next.questStates[String(marketQuest.index)] = "finished";
+    questMessage = ` ${marketQuest.quest.name} completed through the delivery. Reward: ${reward.copper} copper.`;
+  }
   const giftMessage = npcGift
     ? `${nextCharacter.name} offers a small safety-net gift to keep you trading.`
     : playerValue > 0 && characterValue <= 0
@@ -381,7 +396,7 @@ export function completeTrade(state: GameState) {
   return {
     ...next,
     offersMade: 0,
-    message: `${giftMessage}${suffix ? ` ${suffix}` : ""}`,
+    message: `${giftMessage}${suffix ? ` ${suffix}` : ""}${questMessage}`,
   };
 }
 
@@ -414,6 +429,12 @@ export function travelToMarket(state: GameState, toMarketIndex: number) {
     markets: marketplaces,
     kingdoms,
   });
+  const expiredQuests = expireQuests({
+    states: state.questStates,
+    acceptedDays: state.questAcceptedDays,
+    currentDay: state.day,
+    markets: marketplaces,
+  });
   const failurePenalty = expiredContracts.reduce((total, contract) => total + contract.failurePenaltyCopper, 0);
   if (failurePenalty > 0) spendCopperToll(state.playerInventory, items, failurePenalty);
   state.selectedCharacterIndex = null;
@@ -433,7 +454,9 @@ export function travelToMarket(state: GameState, toMarketIndex: number) {
     arrivalDay: state.day,
     events: riskEvents.map((event) => event.message),
   };
-  state.message = expiredContracts.length
+  state.message = expiredQuests.length
+    ? `Arrived in ${marketplaces[toMarketIndex].name}. ${expiredQuests.map((market) => market.quest?.name).join(", ")} failed after missing the deadline.`
+    : expiredContracts.length
     ? `Arrived in ${marketplaces[toMarketIndex].name}. ${expiredContracts.length} contract${expiredContracts.length === 1 ? "" : "s"} expired on the road; up to ${failurePenalty} copper was claimed in penalties.`
     : riskEvents.length
     ? `Arrived in ${marketplaces[toMarketIndex].name}. ${riskEvents[0].message}`

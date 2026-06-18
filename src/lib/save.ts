@@ -32,6 +32,7 @@ function isGameState(value: unknown): value is GameState {
   if (typeof candidate.offersMade !== "number") candidate.offersMade = 0;
   if (!candidate.npcRelations || typeof candidate.npcRelations !== "object") candidate.npcRelations = {};
   if (!candidate.questStates || typeof candidate.questStates !== "object") candidate.questStates = {};
+  if (!candidate.questAcceptedDays || typeof candidate.questAcceptedDays !== "object") candidate.questAcceptedDays = {};
   if (!candidate.contractStates || typeof candidate.contractStates !== "object") candidate.contractStates = {};
   if (!candidate.contractAcceptedDays || typeof candidate.contractAcceptedDays !== "object") candidate.contractAcceptedDays = {};
   if (!("auctionSession" in candidate)) candidate.auctionSession = null;

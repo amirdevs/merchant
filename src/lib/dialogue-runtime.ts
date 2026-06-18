@@ -14,6 +14,7 @@ const effectHandlers: Record<DialogueEffect, DialogueEffectHandler> = {
     const status = state.questStates[key] || "offered";
     if (status === "finished") return `${market.quest.name} is already complete.`;
     state.questStates[key] = "accepted";
+    state.questAcceptedDays[key] ??= state.day;
     const relation = ensureRelation(state.npcRelations, character);
     relation.mood += 1;
     return `${market.quest.name} accepted and added to your journal.`;
