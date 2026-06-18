@@ -1,4 +1,5 @@
-import { type ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
+import { toast, ToastContainer } from "react-toastify";
 import { backdropAsset, townAsset } from "@/lib/assets";
 import type { GameView, MerchantController, UiPreferences } from "@/app/types";
 
@@ -63,6 +64,15 @@ export function GameShell({ controller, activeView, uiPreferences, children }: G
   const clock = clockFor(controller.state.timeOfDayMinutes);
   const lighting = lightingFor(clock.hour, clock.minute);
 
+  useEffect(() => {
+    if (isTitleArea || !controller.state.message) return;
+    if (toast.isActive("game-message")) {
+      toast.update("game-message", { render: controller.state.message, autoClose: 4000 });
+      return;
+    }
+    toast(controller.state.message, { toastId: "game-message" });
+  }, [controller.state.message, isTitleArea]);
+
   return (
     <main
       className="relative h-dvh min-h-dvh overflow-hidden bg-ink bg-cover bg-center text-parchment transition-[filter] duration-1000"
@@ -75,12 +85,8 @@ export function GameShell({ controller, activeView, uiPreferences, children }: G
       ) : null}
       <div className="mx-auto flex h-full min-h-0 flex-col p-2 lg:p-3">
         <div className="relative z-10 flex min-h-0 flex-1">{children}</div>
-        {!isTitleArea && controller.state.message ? (
-          <div className="pointer-events-none fixed bottom-3 left-3 z-50 max-w-xl rounded-sm border-2 border-[#b98b37]/80 bg-[#fff6d7]/95 px-4 py-2 text-sm font-bold text-[#2b1a0b] shadow-2xl shadow-black/40">
-            {controller.state.message}
-          </div>
-        ) : null}
       </div>
+      <ToastContainer position="bottom-left" autoClose={4000} closeOnClick newestOnTop pauseOnFocusLoss={false} pauseOnHover theme="dark" limit={3} />
     </main>
   );
 }
