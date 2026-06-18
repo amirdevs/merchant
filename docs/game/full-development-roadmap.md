@@ -10,11 +10,38 @@ This roadmap is the working path from the current prototype to a complete offlin
 - Prefer pure logic modules with tests before large UI screens.
 - Keep the UI aligned with `docs/ui_parts`: bright painterly fantasy merchant UI, parchment ledgers, carved wood, brass trim, blue enamel plates, and practical trading density.
 
+## Current Completion Snapshot
+
+Updated: June 18, 2026.
+
+The roadmap now has a playable implementation baseline across every major game pillar. This does not mean final content, balance, art, or release QA is complete. It means each large system has working state, actions, persistence, UI entry points, and core tests that future content can extend.
+
+Implemented baseline:
+
+- Original-style barter valuation, Ask Price, Ask Offer, NPC budgets, patience, reputation, fair-match chance, gifts, ultimatum mode, and role-specific behavior.
+- Persistent inventory notes/highlights, quest markers, search, exact quantities, protection/concealment, and readable/inspectable special items.
+- Toll and stallage charging, capacity blocking, route risk forecasts, guard odds, theft, bribes, permits, evasion, and arrival results.
+- Persistent typed dialogue graphs, safe callbacks, richer contextual topics, remembered notes, and quest acceptance.
+- Authored quest state, item/coin rewards, barter delivery completion, optional deadlines, failure, and journal tracking.
+- Generated contracts with objectives, deadlines, rewards, cargo consumption, completion validation, and failure penalties.
+- Exact weekly event schedules, event demand modifiers, banners, auctions, Magic Draft, horse racing, and Myth matches.
+- Company warehouses, banking, loans, passive shipments, shipment outcomes, and basic faction standing.
+- Reactive market scarcity/oversupply, recovery over time, price modifiers, and market rumors.
+- Four save slots, migrations, import/export, error boundaries, audio channels, offer reactions, and automated regression tests.
+
+Release-hardening work still remains:
+
+- Expand authored dialogue/quest content and special-case story callbacks beyond the generic safe runtime.
+- Add deeper black markets, concealment upgrades, packhorse care, route history, permits, politics, rivals, and regional production chains.
+- Expand Myth collection/deck management and AI personalities.
+- Add event presentation polish, animation, real audio asset coverage, balancing tools, and manual full-play QA.
+- Split the main JavaScript bundle and complete desktop packaging/release checks.
+
 ## Phase 1 - Foundations
 
 ### 1. Economy, Capacity, And Travel Costs
 
-Status: mostly implemented.
+Status: implemented baseline.
 
 Goal: make inventory and travel pressure real.
 
@@ -77,7 +104,7 @@ Acceptance:
 
 ### 4. NPC Reputation, Patience, And Reactions
 
-Status: first pass implemented.
+Status: implemented baseline.
 
 Goal: make customers feel like people.
 
@@ -97,7 +124,7 @@ Acceptance:
 
 ### 5. Deal Intelligence
 
-Status: first pass implemented.
+Status: implemented baseline.
 
 Goal: make trading understandable without removing discovery.
 
@@ -116,7 +143,7 @@ Acceptance:
 
 ### 6. Inventory Quality Of Life
 
-Status: partial.
+Status: mostly implemented.
 
 Goal: make large inventories usable.
 
@@ -156,7 +183,7 @@ Acceptance:
 
 ### 8. Carry, Pull, And Packhorses
 
-Status: first pass implemented.
+Status: implemented baseline.
 
 Goal: rebuild original capacity pressure.
 
@@ -175,7 +202,7 @@ Acceptance:
 
 ### 9. Theft, Guards, And Smuggling
 
-Status: first pass implemented.
+Status: implemented baseline.
 
 Goal: turn illegal goods into a strategic risk/reward layer.
 
@@ -197,7 +224,7 @@ Acceptance:
 
 ### 10. Dialogue Graph Runtime
 
-Status: first pass implemented, improved beyond original one-line prompts.
+Status: implemented baseline, improved beyond original one-line prompts.
 
 Goal: restore original conversation structure.
 
@@ -215,7 +242,7 @@ Acceptance:
 
 ### 11. Quest State And Journal
 
-Status: first pass implemented.
+Status: implemented baseline.
 
 Goal: make story and jobs persistent.
 
@@ -232,6 +259,8 @@ Acceptance:
 - Player always knows active objectives.
 
 ### 12. Notice Board And Contracts
+
+Status: implemented baseline.
 
 Goal: add repeatable and authored objectives.
 
@@ -250,7 +279,7 @@ Acceptance:
 
 ### 13. Event Calendar
 
-Status: first pass implemented.
+Status: implemented baseline.
 
 Goal: make markets feel alive.
 
@@ -267,6 +296,8 @@ Acceptance:
 
 ### 14. Auctions And Drafts
 
+Status: implemented baseline.
+
 Goal: rebuild high-stakes item events.
 
 Tasks:
@@ -281,6 +312,8 @@ Acceptance:
 
 ### 15. Horse Racing
 
+Status: implemented baseline.
+
 Goal: add betting and event variety.
 
 Tasks:
@@ -293,6 +326,8 @@ Acceptance:
 - Player can place bets and receive results/rewards.
 
 ### 16. Myth Card Game
+
+Status: playable baseline.
 
 Goal: make Myth a polished side game.
 
@@ -312,6 +347,8 @@ Acceptance:
 
 ### 17. Company, Warehouse, And Shipments
 
+Status: implemented baseline.
+
 Goal: give late-game merchants strategic scale.
 
 Tasks:
@@ -325,6 +362,8 @@ Acceptance:
 - Player can invest in long-term trade operations.
 
 ### 18. Banking, Loans, And Factions
+
+Status: implemented baseline.
 
 Goal: make money and politics matter.
 
@@ -340,6 +379,8 @@ Acceptance:
 - Financial and political choices affect the world.
 
 ### 19. Dynamic Market Simulation
+
+Status: implemented baseline.
 
 Goal: make replayable markets.
 
@@ -359,6 +400,8 @@ Acceptance:
 
 ### 20. Save System Completion
 
+Status: implemented baseline.
+
 Tasks:
 
 - Multiple save slots. Implemented with four local slots.
@@ -368,6 +411,8 @@ Tasks:
 - Import/export stability.
 
 ### 21. Audio And Animation
+
+Status: audio infrastructure implemented; animation and asset coverage remain.
 
 Tasks:
 
@@ -379,6 +424,8 @@ Tasks:
 
 ### 22. Balance Pass
 
+Status: ongoing.
+
 Tasks:
 
 - Travel costs.
@@ -389,6 +436,8 @@ Tasks:
 - Event payouts.
 
 ### 23. Full QA And Packaging
+
+Status: automated checks implemented; manual full-play and desktop release QA remain.
 
 Tasks:
 
@@ -404,16 +453,16 @@ This is the active roadmap after the first parity pass. The old phase list above
 
 ### V2.1 Stabilize The Core Trade Loop
 
-Status: mostly implemented.
+Status: implemented.
 
 Goal: make barter, inventory, travel, saves, and dialogue reliable enough to support larger systems.
 
 Tasks:
 
 - Add tests for Ask Price and Ask Offer using fixed player/NPC inventories. Implemented.
-- Add tests for travel toll payment, capacity blocking, theft, and guard confiscation. Implemented for theft/guard risk; toll/capacity still need direct tests.
+- Add tests for travel toll payment, capacity blocking, theft, and guard confiscation. Implemented.
 - Add tests for save migration and four local save slots. Implemented.
-- Add UI smoke checks for the barter screen so black-screen regressions are caught early.
+- Add UI smoke checks for the barter screen so black-screen regressions are caught early. Implemented.
 - Add an explicit error boundary around major game views. Implemented.
 - Add undo last offer change. Implemented.
 - Add confirm overwrite/delete for save slots. Implemented.
@@ -426,18 +475,20 @@ Acceptance:
 
 ### V2.2 Finish Trading Parity
 
+Status: implemented baseline.
+
 Goal: make the trading/bargaining logic feel close to the original while staying clearer than the original.
 
 Tasks:
 
 - Add original-like `benfordsLawRandom` quantity selection for generated inventory and counteroffers. Implemented for generated inventory.
-- Add NPC budget/wealth limits.
-- Add fair-match random chance and safety-net/gift behavior.
-- Add ultimatum mode when patience gets low.
-- Add reputation gates and reputation minimums.
-- Add barter-specific NPC roles: guard, thief, beggar, traveler, plunderer, snitch, guild president.
-- Add offer-quality audio reactions.
-- Add detailed debug breakdown for balancing.
+- Add NPC budget/wealth limits. Implemented.
+- Add fair-match random chance and safety-net/gift behavior. Implemented.
+- Add ultimatum mode when patience gets low. Implemented.
+- Add reputation gates and reputation minimums. Implemented.
+- Add barter-specific NPC roles: guard, thief, beggar, traveler, plunderer, snitch, guild official. Implemented baseline from original flags.
+- Add offer-quality audio reactions. Implemented with dialogue audio channel hooks.
+- Add detailed debug breakdown for balancing. Implemented through deal-intelligence value lines; dedicated tuning UI remains future polish.
 
 Acceptance:
 
@@ -447,18 +498,20 @@ Acceptance:
 
 ### V2.3 Finish Inventory And Item Interaction
 
+Status: mostly implemented.
+
 Goal: make every important item category useful, inspectable, and manageable.
 
 Tasks:
 
-- Add item notes and persistent item highlights.
-- Add quest-needed markers in inventory and barter panels.
+- Add item notes and persistent item highlights. Implemented.
+- Add quest-needed markers in inventory and barter panels. Implemented in shared inventory panels.
 - Add item comparison popovers.
-- Add readable book/letter viewer.
-- Add image viewer for maps and paintings.
-- Add special item handlers for maps, deeds, Myth cards, storage, and permits.
+- Add readable book/letter viewer. Implemented baseline.
+- Add image/inspection viewer for maps and paintings. Implemented baseline.
+- Add special item handlers for maps, deeds, Myth cards, storage, and permits. Implemented baseline inspection and mechanical hooks.
 - Add bulk actions: protect all, reveal all, clear offer, move exact stack sets.
-- Add item search that works from the inventory screen, not only a placeholder filter page.
+- Add item search that works from the inventory screen, not only a placeholder filter page. Implemented.
 
 Acceptance:
 
@@ -467,14 +520,16 @@ Acceptance:
 
 ### V2.4 Deepen Travel, Law, And Smuggling
 
+Status: mostly implemented.
+
 Goal: turn route planning and contraband into a strategic layer.
 
 Tasks:
 
-- Add stallage/market fee charging.
-- Add route risk previews using theft, law, toll, distance, value, and concealment.
-- Add guard inspection odds instead of automatic first illegal stack confiscation.
-- Add bribes, forged permits, and active evasion choices.
+- Add stallage/market fee charging. Implemented.
+- Add route risk previews using theft, law, toll, distance, value, and concealment. Implemented.
+- Add guard inspection odds instead of automatic first illegal stack confiscation. Implemented.
+- Add bribes, permits, and active evasion choices. Implemented baseline.
 - Add concealment quality and hidden-compartment upgrades.
 - Add black market customer hooks.
 - Add snitch behavior and reputation penalties.
@@ -489,17 +544,19 @@ Acceptance:
 
 ### V2.5 Build The Real Dialogue And Quest Runtime
 
+Status: implemented baseline.
+
 Goal: move from contextual generated dialogue to authored stateful conversations and quests.
 
 Tasks:
 
-- Extract or define dialogue graph nodes with typed response choices.
-- Add current dialogue node state per active conversation.
-- Add typed callback registry for safe quest/story effects.
+- Extract or define dialogue graph nodes with typed response choices. Implemented.
+- Add current dialogue node state per active conversation. Implemented.
+- Add typed callback registry for safe quest/story effects. Implemented.
 - Add quest rewards: items, coins, unlocks, discounts, reputation, and flags. First pass copper rewards implemented.
 - Add quest objective checking against inventory, market, day, and NPC relation state. Inventory objective checking implemented.
-- Add quest completion transactions through barter.
-- Add quest failure and expiry.
+- Add quest completion transactions through barter. Implemented.
+- Add quest failure and expiry. Implemented for authored deadlines.
 - Add journal tabs: active quests, completed, rumors, markets, NPCs, items, notes.
 - Add quest item highlighting across inventory, trade, and item detail.
 
@@ -511,7 +568,7 @@ Acceptance:
 
 ### V2.6 Add Contracts And Notice Board Jobs
 
-Status: first pass implemented.
+Status: implemented baseline.
 
 Goal: ensure every market offers useful repeatable work.
 
@@ -522,7 +579,7 @@ Tasks:
 - Add contract difficulty tiers. First pass includes low/medium/high risk.
 - Add contract tracking and pinning. First pass includes accepted/completed contract state.
 - Add generated rewards based on distance, risk, rarity, and urgency. First pass includes copper rewards from route and risk data.
-- Add contract failure consequences.
+- Add contract failure consequences. Implemented with expiry and copper penalties.
 
 Acceptance:
 
@@ -531,17 +588,19 @@ Acceptance:
 
 ### V2.7 Make Events Playable
 
+Status: implemented baseline.
+
 Goal: convert event previews into playable activities.
 
 Tasks:
 
-- Add event sessions for market events.
-- Add event demand/supply modifiers before and during events.
-- Add event banners in market, travel, and journal views.
-- Add auctions with lots, bidder behavior, reserve prices, bid/pass, and results.
-- Add drafts with pick order, scouting, confirm pick, and item transfer.
-- Add horse racing with entries, odds, advice, betting, results, and payouts.
-- Add event preparation hints from NPC dialogue and rumors.
+- Add event sessions for market events. Implemented for auctions, drafts, races, and Myth.
+- Add event demand/supply modifiers before and during events. Implemented.
+- Add event banners in market and journal views. Implemented.
+- Add auctions with lots, bidder behavior, reserve limits, bid/pass, tells, and results. Implemented.
+- Add drafts with generated rounds, rival picks, confirm pick, and item transfer. Implemented baseline.
+- Add horse racing with entries, form, odds, betting, results, and payouts. Implemented.
+- Add event preparation hints from NPC dialogue and rumors. Implemented baseline.
 
 Acceptance:
 
@@ -550,15 +609,17 @@ Acceptance:
 
 ### V2.8 Build Myth As A Full Side Game
 
+Status: playable baseline.
+
 Goal: make Myth a polished optional game loop, not just an item tag.
 
 Tasks:
 
-- Build pure Myth rules module.
-- Add card definitions, decks, hand, board, turn state, and win conditions.
-- Add quick-play against NPCs.
-- Add wagers, prizes, and relationship effects.
-- Add tournaments linked to event calendar.
+- Build pure Myth rules module. Implemented.
+- Add card definitions, archetype decks, hands, rounds, turn state, and win conditions. Implemented.
+- Add quick-play against NPCs. Implemented through the Warg Bay event.
+- Add wagers and prizes. Implemented; relationship effects remain.
+- Add tournaments linked to event calendar. Implemented baseline.
 - Add card collection and deck management.
 - Add AI personalities for cautious, aggressive, collector, gambler, and expert players.
 
@@ -568,16 +629,18 @@ Acceptance:
 
 ### V2.9 Add Long-Term Progression
 
+Status: implemented baseline.
+
 Goal: give the late game strategic depth beyond hand trading.
 
 Tasks:
 
-- Add warehouses per major market.
-- Add company state, staff, agents, and route history.
-- Add shipments with risk/reward outcomes.
-- Add passive routes only after manual route mastery.
-- Add banking, loans, repayment, and debt consequences.
-- Add faction and kingdom reputation.
+- Add warehouses per market. Implemented.
+- Add company state and shipment history. Implemented; staff/agents remain.
+- Add shipments with risk/reward outcomes. Implemented.
+- Add passive routes. Implemented as one active company shipment at a time.
+- Add banking, loans, repayment, and debt consequences. Implemented baseline.
+- Add faction and kingdom reputation. Implemented as shipment destination standing.
 - Add permits, guild seals, tax breaks, fines, and political consequences.
 - Add rival merchants with route plans, stock pressure, event participation, and relationship states.
 
@@ -588,16 +651,18 @@ Acceptance:
 
 ### V2.10 Dynamic Market Simulation
 
+Status: implemented baseline.
+
 Goal: make the economy replayable and reactive.
 
 Tasks:
 
-- Add supply/demand drift by market, day, season, and event.
-- Add scarcity after player buyouts.
-- Add rumors before major price shifts.
+- Add supply/demand drift by market, day, trade, and event. Implemented; seasonal modeling remains.
+- Add scarcity after player buyouts. Implemented.
+- Add rumors around major price shifts. Implemented.
 - Add regional production chains.
 - Add rival merchant impact on scarcity and price.
-- Add market recovery over time.
+- Add market recovery over time. Implemented.
 - Add balancing tools to inspect price drift and outliers.
 
 Acceptance:
@@ -607,12 +672,14 @@ Acceptance:
 
 ### V2.11 Polish, Balance, And Release
 
+Status: in progress.
+
 Goal: make the game stable, readable, balanced, and shippable.
 
 Tasks:
 
 - Balance travel costs, stallage, theft, guard odds, barter thresholds, and rewards.
-- Add separate audio channels for UI, dialogue, ambient, events, and minigames.
+- Add separate audio channels for UI, dialogue, ambient, events, and minigames. Implemented infrastructure; real asset coverage and settings controls remain.
 - Add animation polish for trade, travel, dialogue, events, and inventory actions.
 - Add broken asset scans for portraits, items, backdrops, routes, and UI parts.
 - Add save import/export compatibility checks.
@@ -627,12 +694,12 @@ Acceptance:
 
 ## V2 Immediate Next Steps
 
-1. Add fair-match random chance and safety-net/gift behavior.
-2. Add original role-specific NPC behavior: guard, thief, beggar, traveler, plunderer, snitch, guild president.
-3. Add contract completion requirements and failure consequences.
-4. Add route risk previews with guard odds, theft odds, illegal-goods exposure, tolls, and cargo value.
-5. Add event banners and demand/supply modifiers.
-6. Start playable auction event sessions.
+1. Run a complete manual playthrough covering trade, travel, contracts, every playable event, Myth, company progression, saves, and failure recovery.
+2. Add focused UI tests for events, company actions, inventory notes/readers, and dialogue graph navigation.
+3. Add black-market customers, concealment upgrades, packhorse upkeep, route history, and rival merchants.
+4. Expand Myth collection/deck management and opponent personalities.
+5. Add balancing dashboards for barter, event payouts, market drift, travel risk, loans, and shipments.
+6. Complete animation/audio asset coverage, bundle splitting, desktop packaging, and release QA.
 
 ## Current Sprint - V2.1 Completion
 
