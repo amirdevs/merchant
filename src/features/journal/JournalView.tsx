@@ -1,4 +1,5 @@
-import { BookOpen, CheckCircle2, ScrollText } from "lucide-react";
+import { BookOpen, Building2, CheckCircle2, Map, Menu, PackageSearch, ScrollText, Store } from "lucide-react";
+import type { GameView } from "@/app/types";
 import { currentKingdom, currentMarket, kingdoms, marketplaces, type GameState } from "@/lib/game";
 import { items } from "@/lib/game";
 import { marketEventPreviews } from "@/lib/events";
@@ -14,11 +15,12 @@ type QuestStatus = GameState["questStates"][string];
 type JournalViewProps = {
   state: GameState;
   onBack: () => void;
+  onNavigate: (view: GameView) => void;
   onSetQuestStatus: (marketIndex: number, status: QuestStatus) => void;
   onSetContractStatus: (contractId: string, status: GameState["contractStates"][string]) => void;
 };
 
-export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStatus }: JournalViewProps) {
+export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSetContractStatus }: JournalViewProps) {
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
   const questMarkets = marketplaces.filter((nextMarket) => nextMarket.quest);
@@ -40,6 +42,13 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
 
   return (
     <ScreenFrame title="Journal" eyebrow="Quests, Notices, Rumors" backdrop={uiAssets.backplates.marketTown} overlay="light">
+      <nav className="mb-2 flex flex-wrap justify-end gap-2 pt-7">
+        <Button size="sm" onClick={onBack}><Store size={15} /> Stall</Button>
+        <Button size="sm" variant="secondary" onClick={() => onNavigate("travel")}><Map size={15} /> Map</Button>
+        <Button size="sm" variant="secondary" onClick={() => onNavigate("inventory")}><PackageSearch size={15} /> Cargo</Button>
+        <Button size="sm" variant="secondary" onClick={() => onNavigate("company")}><Building2 size={15} /> Company</Button>
+        <Button size="sm" subtle onClick={() => onNavigate("system")}><Menu size={15} /> Menu</Button>
+      </nav>
       <div className="grid flex-1 gap-4 xl:grid-cols-[minmax(0,1fr)_420px]">
         <Panel title={<span className="inline-flex items-center gap-2"><ScrollText size={18} /> Notice Board</span>} variant="parchment">
           <div className="mb-4 grid grid-cols-3 gap-2">
