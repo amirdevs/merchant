@@ -10,7 +10,7 @@ import { uiAssets } from "@/lib/ui-assets";
 import { routeRiskPreview } from "@/lib/travel-risk";
 import type { TravelStrategy } from "@/lib/travel-risk";
 import { masteryRiskReduction, routeKey, routeMasteryLevel, routeProfitSummary, routeTravelConditions } from "@/lib/caravan";
-import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
+import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
 export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult, onToggleRouteBookmark, onSetRouteNote, onBuySupplies }: { state: GameState; onTravel: (marketIndex: number, strategy?: TravelStrategy) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void; onToggleRouteBookmark: (marketIndex: number) => void; onSetRouteNote: (routeId: string, note: string) => void; onBuySupplies: (quantity?: number) => void }) {
   const [pendingDestination, setPendingDestination] = useState<number | null>(null);
@@ -39,9 +39,9 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
   const requestTravel = (marketIndex: number) => setPendingDestination(marketIndex);
 
   return (
-    <ScreenFrame title="Travel Map" eyebrow="Market Planner" backdrop={uiAssets.backplates.travelMap} overlay="light">
-      <div className="grid flex-1 gap-4 xl:grid-cols-[1.2fr_380px]">
-        <div className="relative min-h-[65vh] overflow-hidden rounded-lg border-2 border-[#7f5b2a] bg-cover bg-center shadow-2xl shadow-black/40" style={{ backgroundImage: `linear-gradient(rgba(255,244,210,.08), rgba(44,25,9,.12)), url("${uiAssets.backplates.travelMap}")` }}>
+    <ScreenFrame title="Travel Map" eyebrow="Market Planner" backdrop={uiAssets.backplates.travelMap} overlay="light" contentClassName="h-full min-h-0 p-2 lg:p-3">
+      <div className="grid min-h-0 flex-1 gap-3 xl:grid-cols-[minmax(0,1.2fr)_380px]">
+        <div className="relative min-h-0 overflow-hidden rounded-lg border-2 border-[#7f5b2a] bg-cover bg-center shadow-2xl shadow-black/40" style={{ backgroundImage: `linear-gradient(rgba(255,244,210,.08), rgba(44,25,9,.12)), url("${uiAssets.backplates.travelMap}")` }}>
           <div className="absolute left-[5%] top-[5%] rounded-md border-2 border-[#7f5b2a] bg-[#f2ddb1]/92 p-3 text-[#26170a] shadow-xl">
             <span className="text-[0.65rem] uppercase tracking-[0.22em] text-[#75501f]">Current</span>
             <strong className="block font-display text-2xl">{market.name}</strong>
@@ -61,13 +61,10 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
               </button>
             );
           })}
-          <div className="absolute bottom-4 left-4">
-            <TitleRibbon size="sm">Routes / Demand / Risk</TitleRibbon>
-          </div>
         </div>
 
-        <aside className="grid content-start gap-4">
-          <Panel title="Selected Destination" variant="parchment">
+        <aside className="grid min-h-0 grid-rows-[auto_minmax(0,1fr)_auto] content-start gap-3 overflow-hidden">
+          <Panel title="Selected Destination" variant="parchment" dense>
             <div className="grid grid-cols-2 gap-2">
               <StatChip label="Market" value={market.name} icon={uiAssets.map.currentLocationMarker} />
               <StatChip label="Risk" value="Normal" />
@@ -83,8 +80,8 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
             </div>
             <div className="mt-3 flex flex-wrap gap-2"><Button onClick={onEnterMarket}><MapPinned size={16} /> Enter Market</Button><Button variant="secondary" onClick={() => onBuySupplies(6)}>Buy Supplies</Button><Button subtle onClick={onOpenJournal}><BookOpen size={16} /> Journal</Button><Button subtle disabled>Skip Day</Button></div>
           </Panel>
-          <Panel title="Route Ledger" variant="parchment">
-            <div className="grid gap-2">
+          <Panel title="Route Ledger" variant="parchment" dense className="min-h-0">
+            <div className="grid max-h-[calc(100dvh-25rem)] min-h-0 gap-2 overflow-auto pr-1">
               {market.connections.map((connection) => {
                 const destination = marketplaces[connection.marketplaceIndex];
                 const destinationKingdom = kingdoms[destination.kingdomIndex];
@@ -117,8 +114,8 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
               })}
             </div>
           </Panel>
-          <Panel title="Recent Journeys" variant="parchment">
-            <div className="grid max-h-48 gap-2 overflow-auto">
+          <Panel title="Recent Journeys" variant="parchment" dense>
+            <div className="grid max-h-36 gap-2 overflow-auto pr-1">
               {state.caravan.routeHistory.slice(0, 6).map((entry) => (
                 <div className="rounded-sm border border-[#9a7138]/55 bg-[#fff6d7]/45 p-2" key={entry.id}>
                   <LedgerRow title={`${marketplaces[entry.fromMarketIndex].name} to ${marketplaces[entry.toMarketIndex].name}`} subtitle={`Day ${entry.dayDeparted}-${entry.dayArrived} / cargo ${money(entry.cargoValue)} / cost ${money(entry.tolls + entry.stallage)} / ${entry.weather || "clear"} / ${entry.roadQuality || "road"} / supplies ${entry.suppliesUsed || 0} / morale ${entry.moraleChange && entry.moraleChange > 0 ? "+" : ""}${entry.moraleChange || 0} / ${entry.strategy}`} trailing={<span className="text-xs font-bold">{entry.incidents.length ? `${entry.incidents.length} incident` : "Clear"}</span>} />
