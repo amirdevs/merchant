@@ -73,6 +73,7 @@ export type MerchantActions = {
   repairPackhorses: () => void;
   upgradeConcealment: () => void;
   toggleRouteBookmark: (toMarketIndex: number) => void;
+  setRouteNote: (routeId: string, note: string) => void;
   buyPermit: (forged?: boolean) => void;
   toggleMythDeckCard: (cardId: string) => void;
   selectCharacter: (next: Character) => void;

@@ -11,6 +11,7 @@ export type RouteHistoryEntry = {
   cargoValue: number;
   incidents: string[];
   success: boolean;
+  note?: string;
 };
 
 export type CaravanState = {
@@ -52,6 +53,35 @@ export function recordRoute(caravan: CaravanState, entry: RouteHistoryEntry) {
     const key = routeKey(entry.fromMarketIndex, entry.toMarketIndex);
     caravan.routeMastery[key] = (caravan.routeMastery[key] || 0) + 1;
   }
+}
+
+export function setRouteNote(caravan: CaravanState, routeId: string, note: string) {
+  const entry = caravan.routeHistory.find((route) => route.id === routeId);
+  if (!entry) return false;
+  entry.note = note.slice(0, 240);
+  return true;
+}
+
+export function routeProfitSummary(caravan: CaravanState, fromMarketIndex: number, toMarketIndex: number) {
+  const matches = caravan.routeHistory.filter((entry) => entry.fromMarketIndex === fromMarketIndex && entry.toMarketIndex === toMarketIndex);
+  if (!matches.length) return null;
+  const totals = matches.reduce(
+    (summary, entry) => {
+      summary.trips += 1;
+      summary.cost += entry.tolls + entry.stallage;
+      summary.cargoValue += entry.cargoValue;
+      summary.incidents += entry.incidents.length;
+      return summary;
+    },
+    { trips: 0, cost: 0, cargoValue: 0, incidents: 0 }
+  );
+  return {
+    trips: totals.trips,
+    averageCost: Math.round(totals.cost / totals.trips),
+    averageCargoValue: Math.round(totals.cargoValue / totals.trips),
+    averageNetExposure: Math.round((totals.cargoValue - totals.cost) / totals.trips),
+    incidentRate: Math.round((totals.incidents / totals.trips) * 100),
+  };
 }
 
 export function applyPackhorseTravelWear(caravan: CaravanState, packAnimals: number, days: number, overloaded: boolean) {

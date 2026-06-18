@@ -258,7 +258,7 @@ Acceptance:
 
 ### 6. Inventory Quality Of Life
 
-Status: mostly implemented.
+Status: implemented baseline.
 
 Goal: make large inventories usable.
 
@@ -649,7 +649,7 @@ Tasks:
 - Add black market customer hooks.
 - Add snitch behavior and reputation penalties.
 - Add packhorse care, injury, upkeep, and upgrades.
-- Add route ledger history: cost, incidents, profit, and travel notes.
+- Add route ledger history: cost, incidents, profit, and travel notes. Implemented with route history, average route comparison, incidents, and editable route notes.
 
 Acceptance:
 
@@ -815,11 +815,11 @@ Desktop packaging is out of scope for V3. Work should remain focused on the Reac
 
 Status: implemented baseline.
 
-- Add persistent route history with costs, incidents, cargo value, outcome, and notes. Implemented except custom notes.
+- Add persistent route history with costs, incidents, cargo value, outcome, and notes. Implemented.
 - Add route mastery levels and perks after repeated successful travel. Implemented with inspection/theft reduction.
 - Add packhorse condition, travel wear, repair, and upgrades. Condition/wear/repair implemented; injuries and specialized upgrades remain.
 - Add hidden compartments and concealment-quality upgrades. Implemented with three levels.
-- Add route bookmarks and preferred-route comparisons. Bookmarks implemented; detailed profit comparison remains.
+- Add route bookmarks and preferred-route comparisons. Implemented with bookmarks and route average comparison.
 - Add journey supplies, weather, terrain, and caravan morale.
 
 ### V3.2 Underworld, Law, And Politics

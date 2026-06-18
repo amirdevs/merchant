@@ -54,7 +54,7 @@ import {
   withdrawWarehouse as retrieveFromWarehouse,
 } from "@/lib/company";
 import { createDraftSession, pickDraftItem as resolveDraftPick } from "@/lib/draft";
-import { repairPackhorses as repairCaravanPackhorses, toggleRouteBookmark as toggleCaravanRouteBookmark, upgradeConcealment as upgradeCaravanConcealment } from "@/lib/caravan";
+import { repairPackhorses as repairCaravanPackhorses, setRouteNote as updateCaravanRouteNote, toggleRouteBookmark as toggleCaravanRouteBookmark, upgradeConcealment as upgradeCaravanConcealment } from "@/lib/caravan";
 import { issuePermit } from "@/lib/law";
 import { advanceRivals } from "@/lib/rivals";
 
@@ -660,6 +660,13 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function setRouteNote(routeId: string, note: string) {
+    update((draft) => {
+      const updated = updateCaravanRouteNote(draft.caravan, routeId, note);
+      draft.message = updated ? "Route note updated." : "Route note could not be found.";
+    });
+  }
+
   function buyPermit(forged = false) {
     update((draft) => {
       const kingdom = currentKingdom(draft);
@@ -876,6 +883,7 @@ export function useMerchantController(): MerchantController {
       repairPackhorses,
       upgradeConcealment,
       toggleRouteBookmark,
+      setRouteNote,
       buyPermit,
       toggleMythDeckCard,
       selectCharacter,

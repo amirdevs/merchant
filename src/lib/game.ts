@@ -368,6 +368,7 @@ export function completeTrade(state: GameState) {
   const nextCharacter = selectedCharacter(next);
   if (!nextCharacter) return state;
   const relation = ensureRelation(next.npcRelations, nextCharacter);
+  const offeredIllegalStacks = next.playerInventory.filter((entry) => entry.offerQuantity > 0 && items[entry.itemIndex].tags.some((tag) => currentKingdom(next).illegalItemTags?.includes(tag)));
   const block = roleTradeBlock({
     character: nextCharacter,
     relation,
@@ -378,6 +379,12 @@ export function completeTrade(state: GameState) {
   });
   if (block) {
     relation.mood -= 1;
+    if (offeredIllegalStacks.length && npcRoles(nextCharacter).includes("snitch")) {
+      adjustKingdomHeat(next.law, currentKingdom(next).index, 8 + offeredIllegalStacks.length * 4);
+      relation.trust -= 1;
+      next.message = `${block} Heat rises in ${currentKingdom(next).name}.`;
+      return next;
+    }
     next.message = block;
     return next;
   }

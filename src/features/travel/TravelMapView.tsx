@@ -9,10 +9,10 @@ import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { routeRiskPreview } from "@/lib/travel-risk";
 import type { TravelStrategy } from "@/lib/travel-risk";
-import { masteryRiskReduction, routeKey, routeMasteryLevel } from "@/lib/caravan";
+import { masteryRiskReduction, routeKey, routeMasteryLevel, routeProfitSummary } from "@/lib/caravan";
 import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
 
-export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult, onToggleRouteBookmark }: { state: GameState; onTravel: (marketIndex: number, strategy?: TravelStrategy) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void; onToggleRouteBookmark: (marketIndex: number) => void }) {
+export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult, onToggleRouteBookmark, onSetRouteNote }: { state: GameState; onTravel: (marketIndex: number, strategy?: TravelStrategy) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void; onToggleRouteBookmark: (marketIndex: number) => void; onSetRouteNote: (routeId: string, note: string) => void }) {
   const [pendingDestination, setPendingDestination] = useState<number | null>(null);
   const [strategy, setStrategy] = useState<TravelStrategy>("comply");
   const market = marketplaces[state.marketIndex];
@@ -98,11 +98,12 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
                 });
                 const trips = state.caravan.routeMastery[routeKey(market.index, destination.index)] || 0;
                 const bookmarked = state.caravan.bookmarkedRoutes.includes(routeKey(market.index, destination.index));
+                const summary = routeProfitSummary(state.caravan, market.index, destination.index);
                 return (
                   <div className="grid grid-cols-[1fr_auto] gap-2" key={destination.index}>
                     <LedgerRow
                       title={destination.name}
-                      subtitle={`Toll ${money(connection.tolls)} + stallage ${money(destination.stallage)} / guard ${risk.guardInspectionPercent}% / theft ${risk.theftPercent}% / mastery ${routeMasteryLevel(trips)}${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""}`}
+                      subtitle={`Toll ${money(connection.tolls)} + stallage ${money(destination.stallage)} / guard ${risk.guardInspectionPercent}% / theft ${risk.theftPercent}% / mastery ${routeMasteryLevel(trips)}${summary ? ` / avg cost ${money(summary.averageCost)} / incident ${summary.incidentRate}%` : ""}${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""}`}
                       trailing={<span className="text-sm font-bold uppercase text-[#75501f]">{connection.travelDays}d / {risk.level}</span>}
                       onClick={() => requestTravel(destination.index)}
                     />
@@ -115,7 +116,19 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
           <Panel title="Recent Journeys" variant="parchment">
             <div className="grid max-h-48 gap-2 overflow-auto">
               {state.caravan.routeHistory.slice(0, 6).map((entry) => (
-                <LedgerRow key={entry.id} title={`${marketplaces[entry.fromMarketIndex].name} to ${marketplaces[entry.toMarketIndex].name}`} subtitle={`Day ${entry.dayDeparted}-${entry.dayArrived} / cargo ${money(entry.cargoValue)} / ${entry.strategy}`} trailing={<span className="text-xs font-bold">{entry.incidents.length ? `${entry.incidents.length} incident` : "Clear"}</span>} />
+                <div className="rounded-sm border border-[#9a7138]/55 bg-[#fff6d7]/45 p-2" key={entry.id}>
+                  <LedgerRow title={`${marketplaces[entry.fromMarketIndex].name} to ${marketplaces[entry.toMarketIndex].name}`} subtitle={`Day ${entry.dayDeparted}-${entry.dayArrived} / cargo ${money(entry.cargoValue)} / cost ${money(entry.tolls + entry.stallage)} / ${entry.strategy}`} trailing={<span className="text-xs font-bold">{entry.incidents.length ? `${entry.incidents.length} incident` : "Clear"}</span>} />
+                  <label className="mt-2 block text-xs font-black uppercase tracking-wide text-[#75501f]">
+                    Route Note
+                    <input
+                      className="mt-1 w-full rounded-sm border border-[#9a7138]/50 bg-[#fff8df] px-2 py-1 text-sm normal-case text-[#26170a]"
+                      maxLength={240}
+                      value={entry.note || ""}
+                      onChange={(event) => onSetRouteNote(entry.id, event.target.value)}
+                      placeholder="Best cargo, guard behavior, road condition..."
+                    />
+                  </label>
+                </div>
               ))}
             </div>
           </Panel>
