@@ -67,10 +67,10 @@ export function GameShell({ controller, activeView, uiPreferences, children }: G
   useEffect(() => {
     if (isTitleArea || !controller.state.message) return;
     if (toast.isActive("game-message")) {
-      toast.update("game-message", { render: controller.state.message, autoClose: 4000 });
+      toast.update("game-message", { render: controller.state.message, autoClose: 4000, icon: false });
       return;
     }
-    toast(controller.state.message, { toastId: "game-message" });
+    toast(controller.state.message, { toastId: "game-message", icon: false });
   }, [controller.state.message, isTitleArea]);
 
   return (
@@ -86,7 +86,22 @@ export function GameShell({ controller, activeView, uiPreferences, children }: G
       <div className="mx-auto flex h-full min-h-0 flex-col p-0">
         <div className="relative z-10 flex min-h-0 flex-1">{children}</div>
       </div>
-      <ToastContainer position="bottom-left" autoClose={4000} closeOnClick newestOnTop pauseOnFocusLoss={false} pauseOnHover theme="dark" limit={3} />
+      <ToastContainer
+        position="bottom-left"
+        autoClose={4000}
+        closeButton={false}
+        closeOnClick
+        draggable={false}
+        newestOnTop
+        pauseOnFocusLoss={false}
+        pauseOnHover
+        theme="light"
+        limit={3}
+        className="merchant-toast-container"
+        toastClassName="merchant-toast"
+        bodyClassName="merchant-toast-body"
+        progressClassName="merchant-toast-progress"
+      />
     </main>
   );
 }
