@@ -1,13 +1,17 @@
 import type { ReactNode } from "react";
 import { Building2, Map, Menu, PackageSearch, ScrollText, Users } from "lucide-react";
 import type { Character, Marketplace } from "@/data/types";
+import type { GameState } from "@/lib/game";
+import { eventBiases, eventIsActive, nextEventDay } from "@/lib/events";
 import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import type { GameView } from "@/app/types";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
-export function MarketHubView({ market, people, onNavigate, onSelectCustomer }: { market: Marketplace; people: Character[]; onNavigate: (view: GameView) => void; onSelectCustomer: (person: Character) => void; onUnavailable: (message: string) => void }) {
+export function MarketHubView({ state, market, people, onNavigate, onSelectCustomer }: { state: GameState; market: Marketplace; people: Character[]; onNavigate: (view: GameView) => void; onSelectCustomer: (person: Character) => void; onUnavailable: (message: string) => void }) {
   const featuredPeople = people.slice(0, 5);
+  const eventActive = eventIsActive(market, state.day);
+  const activeBiases = eventBiases(market, state.day);
 
   return (
     <ScreenFrame backdrop={uiAssets.backplates.marketTown} overlay="light" contentClassName="p-2 lg:p-3">
@@ -18,7 +22,13 @@ export function MarketHubView({ market, people, onNavigate, onSelectCustomer }: 
           backgroundPosition: "center top",
         }}
       >
-        <div className="absolute left-4 top-4 w-[25rem] max-w-[42vw]">
+        {market.event?.name ? (
+          <div className={eventActive ? "absolute inset-x-0 top-0 z-10 border-b-2 border-[#d0a65a] bg-[#1f5960]/95 px-4 py-2 text-center font-black text-[#fff8d8] shadow-xl" : "absolute inset-x-0 top-0 z-10 border-b border-[#9a7138] bg-[#fff6d7]/92 px-4 py-2 text-center font-bold text-[#3b260f] shadow"}>
+            {eventActive ? `${market.event.name} is active today` : `${market.event.name} returns on day ${nextEventDay(market, state.day)}`}
+            {activeBiases.length ? ` / Demand: ${activeBiases.map((bias) => `${bias.tag} +${bias.percent}%`).join(", ")}` : ""}
+          </div>
+        ) : null}
+        <div className={`absolute left-4 w-[25rem] max-w-[42vw] ${market.event?.name ? "top-14" : "top-4"}`}>
           <Panel className="p-5" title="Market Status" variant="parchment">
             <h1 className="font-display text-5xl leading-none text-[#2b1a0b]">{market.name}</h1>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#7b5726]">Coastal Trade Hub</p>

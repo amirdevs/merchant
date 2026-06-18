@@ -106,7 +106,7 @@ export function App() {
       case "travel":
         return <TravelMapView state={controller.state} onEnterMarket={() => navigate("market")} onOpenJournal={() => navigate("journal")} onTravel={controller.actions.travel} onClearTravelResult={controller.actions.clearTravelResult} />;
       case "market":
-        return <MarketHubView market={controller.market} people={controller.people} onNavigate={navigate} onSelectCustomer={(person) => { controller.actions.selectCharacter(person); navigate("barter"); }} onUnavailable={controller.actions.setMessage} />;
+        return <MarketHubView state={controller.state} market={controller.market} people={controller.people} onNavigate={navigate} onSelectCustomer={(person) => { controller.actions.selectCharacter(person); navigate("barter"); }} onUnavailable={controller.actions.setMessage} />;
       case "customers":
         return <CustomersView state={controller.state} people={controller.people} selected={controller.character} onSelect={controller.actions.selectCharacter} onNext={controller.actions.nextCustomer} onNavigate={navigate} onSpeak={controller.actions.speakWith} />;
       case "journal":

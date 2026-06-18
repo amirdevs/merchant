@@ -7,6 +7,7 @@ import type { Character, InventoryEntry, Item, Kingdom, Marketplace, ObtainableI
 import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
 import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
+import { eventBiases } from "./events";
 import { addInventory, clearOffers, moveOffer, transferOffers, visibleQuantity } from "./inventory";
 import { applyModPacks } from "./mods";
 import {
@@ -167,13 +168,14 @@ export function currentKingdom(state: GameState) {
 }
 
 export function offerValue(inventory: InventoryEntry[], character: Character | null, perspective: TradePerspective, state?: GameState) {
+  const market = state ? currentMarket(state) : undefined;
   return valueOffer({
     inventory,
     items,
     character,
     perspective,
     profession: character?.professionSlug ? professions[character.professionSlug] : undefined,
-    marketplace: state ? currentMarket(state) : undefined,
+    marketplace: market ? { ...market, bias: [...(market.bias || []), ...eventBiases(market, state?.day || 1)] } : undefined,
     kingdom: state ? currentKingdom(state) : undefined,
     offersMade: state?.offersMade || 0,
   });

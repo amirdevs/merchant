@@ -95,6 +95,13 @@ export type Marketplace = {
     frequency?: string | null;
     characterName?: string | null;
     scene?: string | null;
+    datetime?: {
+      day?: number;
+      week?: number;
+      season?: number;
+      year?: number;
+    } | null;
+    data?: Record<string, unknown>;
   } | null;
   quest?: {
     name: string;

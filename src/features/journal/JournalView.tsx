@@ -122,7 +122,7 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
                     key={`${event.marketName}-${event.name}`}
                     title={event.name}
                     subtitle={`${event.marketName} / ${event.frequency}${event.characterName ? ` / ${event.characterName}` : ""}`}
-                    trailing={<span className="text-sm font-bold text-[#75501f]">Day {event.nextDay}</span>}
+                    trailing={<span className={event.active ? "text-sm font-black text-[#1f6f38]" : "text-sm font-bold text-[#75501f]"}>{event.active ? "Active" : `Day ${event.nextDay}`}</span>}
                   />
                 ))}
               </div>
