@@ -11,6 +11,13 @@ export type MarketRumor = {
   reliability: "reliable" | "exaggerated" | "stale" | "false";
 };
 
+const seasonalBiases: Array<{ name: string; biases: Bias[]; report: string }> = [
+  { name: "Spring", biases: [{ tag: "food", percent: -8 }, { tag: "tools", percent: 6 }, { tag: "cloth", percent: 4 }], report: "Spring harvest prep cheapens fresh food while tools and cloth move quickly." },
+  { name: "Summer", biases: [{ tag: "food", percent: 5 }, { tag: "luxury", percent: 7 }, { tag: "water", percent: 8 }], report: "Summer travel raises demand for food, water, and luxuries." },
+  { name: "Autumn", biases: [{ tag: "food", percent: -10 }, { tag: "storage", percent: 8 }, { tag: "wood", percent: 5 }], report: "Autumn harvests flood food markets while storage and wood gain value." },
+  { name: "Winter", biases: [{ tag: "food", percent: 12 }, { tag: "cloth", percent: 10 }, { tag: "fuel", percent: 10 }], report: "Winter tightens food and warm-goods supply across the roads." },
+];
+
 function marketState(simulation: MarketSimulation, marketIndex: number, day: number) {
   const key = String(marketIndex);
   simulation[key] ??= { tagShifts: {}, lastUpdatedDay: day };
@@ -70,6 +77,17 @@ export function simulatedMarketBiases(simulation: MarketSimulation, market: Mark
     .sort((left, right) => Math.abs(right[1]) - Math.abs(left[1]))
     .slice(0, 12)
     .map(([tag, percent]) => ({ tag, percent }));
+}
+
+export function seasonalMarketBiases(day: number): Bias[] {
+  if (day <= 1) return [];
+  const seasonIndex = Math.floor(Math.max(0, day - 1) / 28) % seasonalBiases.length;
+  return seasonalBiases[seasonIndex].biases;
+}
+
+export function seasonalMarketReport(day: number) {
+  const seasonIndex = Math.floor(Math.max(0, day - 1) / 28) % seasonalBiases.length;
+  return seasonalBiases[seasonIndex];
 }
 
 export function marketRumors(simulation: MarketSimulation, market: Marketplace, day: number) {

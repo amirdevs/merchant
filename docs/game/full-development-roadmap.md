@@ -840,7 +840,7 @@ Status: implemented baseline.
 - Add named rival merchants with wealth, personality, and routes. Implemented; cargo manifests remain.
 - Let rivals buy out stock and affect scarcity. Implemented; event and contract participation remain.
 - Add regional production chains and commodity dependencies.
-- Add seasonal production, shortages, disasters, and recovery.
+- Add seasonal production, shortages, disasters, and recovery. Seasonal production modifiers implemented; disasters remain.
 - Add route competition, price history, route profitability, and economic reports.
 - Add balancing inspectors for extreme prices and infinite-profit loops.
 
@@ -913,7 +913,7 @@ Status: planned.
 - Add seasonal production cycles, festivals, harvests, shortages, disasters, recovery periods, and temporary route opportunities.
 - Add market price history, route profitability reports, and discovered trade-route comparisons.
 - Add rival merchant competition that reacts to profitable routes and can drain stock before the player arrives.
-- Add economy reports that explain why a price is rising or falling instead of showing only the final number.
+- Add economy reports that explain why a price is rising or falling instead of showing only the final number. Seasonal economy report implemented in the journal.
 - Add balance checks for infinite-profit loops, extreme price drift, and economy states that become too punishing.
 
 ### V4.4 Rival Merchants And Competitive World

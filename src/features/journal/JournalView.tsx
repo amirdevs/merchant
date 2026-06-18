@@ -6,7 +6,7 @@ import { contractDeadline, contractItemProgress, generatedContracts, resolveCont
 import { questCanComplete, questItemProgress, questReward } from "@/lib/quests";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { uiAssets } from "@/lib/ui-assets";
-import { marketRumorLedger } from "@/lib/market-simulation";
+import { marketRumorLedger, seasonalMarketReport } from "@/lib/market-simulation";
 import { createBalanceReport } from "@/lib/balance";
 
 type QuestStatus = GameState["questStates"][string];
@@ -35,6 +35,7 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
   const currentQuestReady = questCanComplete(market, state.playerInventory, items);
   const currentQuestReward = questReward(market, items);
   const dynamicRumors = marketRumorLedger(state.marketSimulation, market, state.day);
+  const season = seasonalMarketReport(state.day);
   const balance = createBalanceReport(state);
 
   return (
@@ -154,6 +155,17 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
                 <div className={warning.severity === "danger" ? "rounded-sm border border-[#8d271f]/55 bg-[#fff6d7]/70 p-2 text-sm text-[#8d271f]" : warning.severity === "warning" ? "rounded-sm border border-[#b98b37]/60 bg-[#fff6d7]/70 p-2 text-sm text-[#75501f]" : "rounded-sm border border-[#1f5960]/40 bg-[#fff6d7]/70 p-2 text-sm text-[#1f5960]"} key={warning.label}>
                   <strong className="block">{warning.label}</strong>{warning.detail}
                 </div>
+              ))}
+            </div>
+          </Panel>
+          <Panel title="Economy Report" variant="parchment">
+            <strong className="block font-display text-2xl text-[#26170a]">{season.name}</strong>
+            <p className="mt-1 text-sm font-bold text-[#3b260f]">{season.report}</p>
+            <div className="mt-3 grid gap-1">
+              {season.biases.map((bias) => (
+                <span className={bias.percent >= 0 ? "rounded-sm border border-[#1f5960]/40 bg-[#fff6d7]/70 px-2 py-1 text-sm font-bold text-[#1f5960]" : "rounded-sm border border-[#8d271f]/40 bg-[#fff6d7]/70 px-2 py-1 text-sm font-bold text-[#8d271f]"} key={bias.tag}>
+                  {bias.tag} {bias.percent > 0 ? "+" : ""}{bias.percent}%
+                </span>
               ))}
             </div>
           </Panel>

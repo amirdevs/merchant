@@ -8,7 +8,7 @@ import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
 import type { AuctionSession } from "./auction";
 import type { RaceResult } from "./racing";
 import { createMythProgression, type MythProgression, type MythSession } from "./myth";
-import { advanceMarketSimulation, recordMarketTrade, simulatedMarketBiases, type MarketSimulation } from "./market-simulation";
+import { advanceMarketSimulation, recordMarketTrade, seasonalMarketBiases, simulatedMarketBiases, type MarketSimulation } from "./market-simulation";
 import { createCompanyState, settleShipments, type CompanyState } from "./company";
 import type { DraftSession } from "./draft";
 import { applyPackhorseTravelWear, createCaravanState, masteryRiskReduction, recordRoute, routeKey, type CaravanState } from "./caravan";
@@ -233,7 +233,7 @@ export function offerValue(inventory: InventoryEntry[], character: Character | n
     character,
     perspective,
     profession: character?.professionSlug ? professions[character.professionSlug] : undefined,
-    marketplace: market ? { ...market, bias: [...(market.bias || []), ...eventBiases(market, state?.day || 1), ...simulatedMarketBiases(state?.marketSimulation || {}, market, state?.day || 1)] } : undefined,
+    marketplace: market ? { ...market, bias: [...(market.bias || []), ...seasonalMarketBiases(state?.day || 1), ...eventBiases(market, state?.day || 1), ...simulatedMarketBiases(state?.marketSimulation || {}, market, state?.day || 1)] } : undefined,
     kingdom: state ? currentKingdom(state) : undefined,
     offersMade: state?.offersMade || 0,
   });
