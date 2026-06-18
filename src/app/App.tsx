@@ -5,6 +5,7 @@ import { useMerchantController } from "@/app/hooks/useMerchantController";
 import type { GameView, MerchantProfile, UiPreferences } from "@/app/types";
 import { HelpModal } from "@/components/HelpModal";
 import { CustomersView } from "@/features/customers/CustomersView";
+import { CompanyView } from "@/features/company/CompanyView";
 import { EventView } from "@/features/events/EventView";
 import { InventoryFilterView } from "@/features/inventory/InventoryFilterView";
 import { InventoryManagementView } from "@/features/inventory/InventoryManagementView";
@@ -45,6 +46,7 @@ const gameViews: GameView[] = [
   "customers",
   "journal",
   "event",
+  "company",
   "barter",
   "inventory",
   "inventory-filter",
@@ -115,6 +117,8 @@ export function App() {
         return <JournalView state={controller.state} onBack={() => navigate("market")} onSetQuestStatus={controller.actions.setQuestStatus} onSetContractStatus={controller.actions.setContractStatus} />;
       case "event":
         return <EventView state={controller.state} onBack={() => navigate("market")} onAdvanceDay={controller.actions.advanceDay} onStartAuction={controller.actions.startAuction} onBidAuction={controller.actions.bidAuction} onPassAuction={controller.actions.passAuction} onCloseAuction={controller.actions.closeAuction} onRunHorseRace={controller.actions.runHorseRace} onStartMythGame={controller.actions.startMythGame} onPlayMythCard={controller.actions.playMythCard} onCloseMythGame={controller.actions.closeMythGame} />;
+      case "company":
+        return <CompanyView state={controller.state} onBack={() => navigate("market")} onOpenWarehouse={controller.actions.openWarehouse} onDepositWarehouse={controller.actions.depositWarehouse} onWithdrawWarehouse={controller.actions.withdrawWarehouse} onBankDeposit={controller.actions.bankDeposit} onBankWithdraw={controller.actions.bankWithdraw} onTakeLoan={controller.actions.takeLoan} onRepayLoan={controller.actions.repayLoan} onStartShipment={controller.actions.startShipment} />;
       case "barter":
         return <BarterConversationView state={controller.state} character={controller.character} playerOffer={controller.playerOffer} characterOffer={controller.characterOffer} message={controller.state.message} onMovePlayer={controller.actions.movePlayer} onMoveCharacter={controller.actions.moveCharacter} onSetPlayerOfferQuantity={controller.actions.setPlayerOfferQuantity} onSetCharacterOfferQuantity={controller.actions.setCharacterOfferQuantity} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onTrade={controller.actions.trade} onAskPrice={controller.actions.askPrice} onAskOffer={controller.actions.askOffer} onClearOffers={controller.actions.clearTradeOffers} onUndoOfferChange={controller.actions.undoLastOfferChange} onGoodbye={() => { controller.actions.goodbye(); navigate("customers"); }} onHelp={() => controller.actions.setHelpOpen(true)} onSpeak={controller.actions.speakWith} />;
       case "inventory":

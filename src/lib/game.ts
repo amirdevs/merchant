@@ -9,6 +9,7 @@ import type { AuctionSession } from "./auction";
 import type { RaceResult } from "./racing";
 import type { MythSession } from "./myth";
 import { advanceMarketSimulation, recordMarketTrade, simulatedMarketBiases, type MarketSimulation } from "./market-simulation";
+import { createCompanyState, settleShipments, type CompanyState } from "./company";
 import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { eventBiases } from "./events";
@@ -56,6 +57,7 @@ export type GameState = {
   raceResult: RaceResult | null;
   mythSession: MythSession | null;
   marketSimulation: MarketSimulation;
+  company: CompanyState;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -162,6 +164,7 @@ export function newGame(): GameState {
     raceResult: null,
     mythSession: null,
     marketSimulation: {},
+    company: createCompanyState(),
     dialogueLog: [],
     travelResult: null,
   };
@@ -455,6 +458,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
   state.marketIndex = toMarketIndex;
   state.day += route.travelDays || 1;
   advanceMarketSimulation(state.marketSimulation, state.day);
+  const settledShipments = settleShipments(state.company, state.day);
   const expiredContracts = expireContracts({
     states: state.contractStates,
     acceptedDays: state.contractAcceptedDays,
@@ -493,7 +497,9 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
     arrivalDay: state.day,
     events: riskEvents.map((event) => event.message),
   };
-  state.message = expiredQuests.length
+  state.message = settledShipments.length
+    ? `Arrived in ${marketplaces[toMarketIndex].name}. Company shipment results: ${settledShipments.map((shipment) => shipment.status).join(", ")}.`
+    : expiredQuests.length
     ? `Arrived in ${marketplaces[toMarketIndex].name}. ${expiredQuests.map((market) => market.quest?.name).join(", ")} failed after missing the deadline.`
     : expiredContracts.length
     ? `Arrived in ${marketplaces[toMarketIndex].name}. ${expiredContracts.length} contract${expiredContracts.length === 1 ? "" : "s"} expired on the road; up to ${failurePenalty} copper was claimed in penalties.`

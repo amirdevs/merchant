@@ -17,6 +17,7 @@ export type GameView =
   | "customers"
   | "journal"
   | "event"
+  | "company"
   | "barter"
   | "inventory"
   | "inventory-filter"
@@ -57,6 +58,14 @@ export type MerchantActions = {
   startMythGame: () => void;
   playMythCard: (cardId: string) => void;
   closeMythGame: () => void;
+  openWarehouse: () => void;
+  depositWarehouse: (itemIndex: number, quantity: number) => void;
+  withdrawWarehouse: (itemIndex: number, quantity: number) => void;
+  bankDeposit: (amount: number) => void;
+  bankWithdraw: (amount: number) => void;
+  takeLoan: () => void;
+  repayLoan: () => void;
+  startShipment: (toMarketIndex: number) => void;
   selectCharacter: (next: Character) => void;
   nextCustomer: () => void;
   movePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;

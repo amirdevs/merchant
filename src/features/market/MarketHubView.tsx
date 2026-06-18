@@ -76,6 +76,7 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
             <MarketCommand icon={<PackageSearch size={34} />} label="Inventory" onClick={() => onNavigate("inventory")} />
             <MarketCommand icon={<Users size={34} />} label="Customers" onClick={() => onNavigate("customers")} />
             <MarketCommand icon={<ScrollText size={34} />} label="Notice Board" onClick={() => onNavigate("journal")} />
+            <MarketCommand icon={<Building2 size={34} />} label="Company" onClick={() => onNavigate("company")} />
             {market.event?.name ? <MarketCommand icon={<Gavel size={34} />} label="Event" onClick={() => onNavigate("event")} /> : null}
             <MarketCommand icon={<Menu size={34} />} label="Menu" onClick={() => onNavigate("system")} />
           </div>

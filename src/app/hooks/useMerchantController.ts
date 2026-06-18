@@ -42,6 +42,15 @@ import type { TravelStrategy } from "@/lib/travel-risk";
 import { runHorseRace as calculateHorseRace } from "@/lib/racing";
 import { playMythCard as resolveMythCard, startMythGame as createMythGame } from "@/lib/myth";
 import { advanceMarketSimulation } from "@/lib/market-simulation";
+import {
+  createShipment,
+  depositWarehouse as storeInWarehouse,
+  openWarehouse as createWarehouse,
+  repayLoan as repayCompanyLoan,
+  settleShipments,
+  takeLoan as takeCompanyLoan,
+  withdrawWarehouse as retrieveFromWarehouse,
+} from "@/lib/company";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -317,7 +326,10 @@ export function useMerchantController(): MerchantController {
       const penalty = expiredContracts.reduce((total, contract) => total + contract.failurePenaltyCopper, 0);
       if (penalty) spendCopperToll(draft.playerInventory, items, penalty);
       const failures = [...expiredContracts.map((contract) => contract.title), ...expiredQuests.map((market) => market.quest?.name || "Quest")];
-      draft.message = failures.length
+      const settled = settleShipments(draft.company, draft.day);
+      draft.message = settled.length
+        ? `Day ${draft.day}. Shipment results: ${settled.map((shipment) => shipment.status).join(", ")}.`
+        : failures.length
         ? `Day ${draft.day}. Failed deadlines: ${failures.join(", ")}${penalty ? `. Up to ${penalty} copper paid in penalties.` : "."}`
         : `A day passes. It is now day ${draft.day}.`;
     });
@@ -452,6 +464,97 @@ export function useMerchantController(): MerchantController {
     update((draft) => {
       draft.mythSession = null;
       draft.message = "You leave the Myth table.";
+    });
+  }
+
+  function openWarehouse() {
+    update((draft) => {
+      if (draft.company.warehouses[String(draft.marketIndex)]) {
+        draft.message = "Your company already has a warehouse here.";
+        return;
+      }
+      const cost = 100;
+      if (!spendCopperToll(draft.playerInventory, items, cost)) {
+        draft.message = `Opening a warehouse costs ${cost} copper.`;
+        return;
+      }
+      createWarehouse(draft.company, draft.marketIndex);
+      draft.message = `Opened a company warehouse in ${currentMarket(draft).name}.`;
+    });
+  }
+
+  function depositWarehouse(itemIndex: number, quantity: number) {
+    update((draft) => {
+      const ok = storeInWarehouse(draft.company, draft.marketIndex, draft.playerInventory, itemIndex, quantity);
+      draft.message = ok ? `Stored ${quantity} ${items[itemIndex]?.name || "item"}.` : "Could not store that cargo.";
+    });
+  }
+
+  function withdrawWarehouse(itemIndex: number, quantity: number) {
+    update((draft) => {
+      const ok = retrieveFromWarehouse(draft.company, draft.marketIndex, draft.playerInventory, itemIndex, quantity);
+      draft.message = ok ? `Withdrew ${quantity} ${items[itemIndex]?.name || "item"}.` : "Could not withdraw that cargo.";
+    });
+  }
+
+  function bankDeposit(amount: number) {
+    update((draft) => {
+      const safeAmount = Math.max(1, Math.floor(amount));
+      if (!spendCopperToll(draft.playerInventory, items, safeAmount)) {
+        draft.message = `You do not have ${safeAmount} copper to deposit.`;
+        return;
+      }
+      draft.company.bankCopper += safeAmount;
+      draft.company.founded = true;
+      draft.message = `Deposited ${safeAmount} copper into the company account.`;
+    });
+  }
+
+  function bankWithdraw(amount: number) {
+    update((draft) => {
+      const safeAmount = Math.max(1, Math.floor(amount));
+      if (draft.company.bankCopper < safeAmount) {
+        draft.message = `The company account does not hold ${safeAmount} copper.`;
+        return;
+      }
+      draft.company.bankCopper -= safeAmount;
+      addInventory(draft.playerInventory, itemIndexByName("copper coins"), safeAmount);
+      draft.message = `Withdrew ${safeAmount} copper from the company account.`;
+    });
+  }
+
+  function takeLoan() {
+    update((draft) => {
+      const amount = takeCompanyLoan(draft.company, 100);
+      draft.message = amount ? `Loan approved: ${amount} copper deposited, ${draft.company.loanBalance} due.` : "Repay the existing loan before borrowing again.";
+    });
+  }
+
+  function repayLoan() {
+    update((draft) => {
+      draft.message = repayCompanyLoan(draft.company) ? "The company loan is fully repaid." : "The company account cannot cover the loan balance.";
+    });
+  }
+
+  function startShipment(toMarketIndex: number) {
+    update((draft) => {
+      const route = currentMarket(draft).connections.find((connection) => connection.marketplaceIndex === toMarketIndex);
+      if (!route) {
+        draft.message = "No direct company route reaches that market.";
+        return;
+      }
+      const estimated = Math.max(20, route.tolls * 4 + route.travelDays * 3);
+      if (draft.company.bankCopper < estimated) {
+        draft.message = `The company account needs at least ${estimated} copper to fund this shipment.`;
+        return;
+      }
+      const shipment = createShipment(draft.company, draft.marketIndex, toMarketIndex, draft.day, route.travelDays, route.tolls);
+      if (!shipment) {
+        draft.message = "Only one passive shipment can run at a time.";
+        return;
+      }
+      draft.company.bankCopper -= shipment.cost;
+      draft.message = `Shipment dispatched to ${marketplaces[toMarketIndex].name}; due day ${shipment.dueDay}.`;
     });
   }
 
@@ -624,6 +727,14 @@ export function useMerchantController(): MerchantController {
       startMythGame,
       playMythCard,
       closeMythGame,
+      openWarehouse,
+      depositWarehouse,
+      withdrawWarehouse,
+      bankDeposit,
+      bankWithdraw,
+      takeLoan,
+      repayLoan,
+      startShipment,
       selectCharacter,
       nextCustomer,
       movePlayer,
