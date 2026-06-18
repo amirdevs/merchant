@@ -7,6 +7,7 @@ import { questCanComplete, questItemProgress, questReward } from "@/lib/quests";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { uiAssets } from "@/lib/ui-assets";
 import { marketRumors } from "@/lib/market-simulation";
+import { createBalanceReport } from "@/lib/balance";
 
 type QuestStatus = GameState["questStates"][string];
 
@@ -34,6 +35,7 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
   const currentQuestReady = questCanComplete(market, state.playerInventory, items);
   const currentQuestReward = questReward(market, items);
   const dynamicRumors = marketRumors(state.marketSimulation, market, state.day);
+  const balance = createBalanceReport(state);
 
   return (
     <ScreenFrame title="Journal" eyebrow="Quests, Notices, Rumors" backdrop={uiAssets.backplates.marketTown} overlay="light">
@@ -138,6 +140,21 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
                 <LedgerRow key={rival.id} title={rival.name} subtitle={`${rival.personality} / ${marketplaces[rival.marketIndex]?.name || "on the road"} / ${rival.favoriteTags.join(", ") || "mixed goods"}`} trailing={<span className="text-sm font-bold text-[#75501f]">{rival.wealth} wealth</span>} />
               ))}
               {state.rivals.activityLog.slice(0, 5).map((activity, index) => <p className="rounded-sm border border-[#9a7138]/45 bg-[#fff6d7]/55 p-2 text-sm text-[#3b260f]" key={`${index}-${activity}`}>{activity}</p>)}
+            </div>
+          </Panel>
+          <Panel title="Balance Inspector" variant="parchment">
+            <div className="grid grid-cols-2 gap-2">
+              <StatChip label="Cargo Value" value={balance.playerCargoValue} />
+              <StatChip label="Company Wealth" value={balance.companyWealth} />
+              <StatChip label="Max Drift" value={`${balance.maximumMarketShift}%`} />
+              <StatChip label="Max Heat" value={balance.maximumHeat} />
+            </div>
+            <div className="mt-3 grid gap-2">
+              {balance.warnings.map((warning) => (
+                <div className={warning.severity === "danger" ? "rounded-sm border border-[#8d271f]/55 bg-[#fff6d7]/70 p-2 text-sm text-[#8d271f]" : warning.severity === "warning" ? "rounded-sm border border-[#b98b37]/60 bg-[#fff6d7]/70 p-2 text-sm text-[#75501f]" : "rounded-sm border border-[#1f5960]/40 bg-[#fff6d7]/70 p-2 text-sm text-[#1f5960]"} key={warning.label}>
+                  <strong className="block">{warning.label}</strong>{warning.detail}
+                </div>
+              ))}
             </div>
           </Panel>
           <Panel title={<span className="inline-flex items-center gap-2"><BookOpen size={18} /> Rumor Ledger</span>} variant="parchment">
