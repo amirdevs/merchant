@@ -60,7 +60,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
   return (
     <ScreenFrame className="h-full max-h-full" backdrop={uiAssets.backplates.tradeConversation} overlay="dark" contentClassName="h-full min-h-0 p-2">
       <h1 className="sr-only">Barter / Conversation</h1>
-      <div className="grid min-h-0 flex-1 gap-2 xl:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.9fr)_minmax(0,1.15fr)]">
+      <div className="grid min-h-0 flex-1 gap-2 xl:grid-cols-[minmax(0,0.95fr)_minmax(360px,1.15fr)_minmax(0,0.95fr)]">
         <div className="flex min-h-0 flex-col gap-2">
           <InventoryPanel className="min-h-0 flex-[0.75] [&>div:last-child]:h-[calc(100%-3.25rem)]" bodyClassName="h-full max-h-none overflow-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" title="NPC Offer" owner="character" mode="offer" variant="compact" panelVariant="wood" inventory={character?.inventory || []} illegalTags={illegalTags} onMove={(entry, amount) => onMoveCharacter(entry, amount, true)} onMoveAll={(entry) => onMoveCharacter(entry, "none", true)} onSetOfferQuantity={onSetCharacterOfferQuantity} />
           <InventoryPanel className="min-h-0 flex-[1.25] [&>div:last-child]:h-[calc(100%-3.25rem)]" bodyClassName="h-full max-h-none overflow-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" title="NPC Stock" owner="character" variant="compact" panelVariant="wood" inventory={character?.inventory || []} illegalTags={illegalTags} onMove={(entry, amount) => onMoveCharacter(entry, amount)} onMoveAll={(entry) => onMoveCharacter(entry, "all")} onSetOfferQuantity={onSetCharacterOfferQuantity} />

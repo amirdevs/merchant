@@ -65,7 +65,7 @@ export function GameShell({ controller, activeView, uiPreferences, children }: G
 
   return (
     <main
-      className="relative min-h-dvh overflow-hidden bg-ink bg-cover bg-center text-parchment transition-[filter] duration-1000"
+      className="relative h-dvh min-h-dvh overflow-hidden bg-ink bg-cover bg-center text-parchment transition-[filter] duration-1000"
       style={{ backgroundImage: `linear-gradient(90deg, rgba(15,9,5,.82), rgba(15,9,5,.18), rgba(15,9,5,.78)), url("${backgroundImage}")` }}
       data-view={activeView}
       data-ui-scale={uiPreferences.uiScale}
@@ -73,7 +73,7 @@ export function GameShell({ controller, activeView, uiPreferences, children }: G
       {!isTitleArea ? (
         <div className="pointer-events-none absolute inset-0 z-0 transition-all duration-1000" style={{ backgroundImage: lighting.overlay, filter: lighting.filter }} aria-hidden="true" />
       ) : null}
-      <div className="mx-auto flex min-h-dvh flex-col p-2 lg:p-3">
+      <div className="mx-auto flex h-full min-h-0 flex-col p-2 lg:p-3">
         <div className="relative z-10 flex min-h-0 flex-1">{children}</div>
         {!isTitleArea && controller.state.message ? (
           <div className="pointer-events-none fixed bottom-3 left-3 z-50 max-w-xl rounded-sm border-2 border-[#b98b37]/80 bg-[#fff6d7]/95 px-4 py-2 text-sm font-bold text-[#2b1a0b] shadow-2xl shadow-black/40">
