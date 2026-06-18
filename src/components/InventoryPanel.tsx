@@ -51,6 +51,7 @@ type InventoryDragData = {
 };
 
 const dragType = "application/x-merchant-inventory-item";
+const dragFallbackType = "text/plain";
 const hoverCardWidth = 220;
 const hoverCardHeight = 286;
 
@@ -135,12 +136,16 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
   }
 
   function onDragStart(event: DragEvent<HTMLElement>, entry: InventoryEntry) {
+    clearHoverTimers();
+    setHoverCard(null);
+    const payload = JSON.stringify(dragData(entry));
     event.dataTransfer.effectAllowed = "move";
-    event.dataTransfer.setData(dragType, JSON.stringify(dragData(entry)));
+    event.dataTransfer.setData(dragType, payload);
+    event.dataTransfer.setData(dragFallbackType, payload);
   }
 
   function onDrop(event: DragEvent<HTMLElement>) {
-    const raw = event.dataTransfer.getData(dragType);
+    const raw = event.dataTransfer.getData(dragType) || event.dataTransfer.getData(dragFallbackType);
     if (!raw) return;
     event.preventDefault();
     try {
@@ -163,7 +168,26 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
   }
 
   function onDragOver(event: DragEvent<HTMLElement>) {
-    if (event.dataTransfer.types.includes(dragType)) event.preventDefault();
+    if (event.dataTransfer.types.includes(dragType) || event.dataTransfer.types.includes(dragFallbackType)) {
+      event.preventDefault();
+      event.dataTransfer.dropEffect = "move";
+    }
+  }
+
+  function handleItemClick(event: MouseEvent<HTMLElement>, entry: InventoryEntry) {
+    if (event.button !== 0) return;
+    onMove(entry, moveAmountFromInput(event, mode));
+  }
+
+  function handleItemContextMenu(event: MouseEvent<HTMLElement>, entry: InventoryEntry) {
+    event.preventDefault();
+    onMoveAll(entry);
+  }
+
+  function handleItemAuxClick(event: MouseEvent<HTMLElement>, entry: InventoryEntry) {
+    if (event.button !== 1) return;
+    event.preventDefault();
+    onMove(entry, "half");
   }
 
   function clearHoverTimers() {
@@ -251,27 +275,20 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                   selected={(entry.protected || entry.highlighted) && mode !== "offer"}
                   draggable
                   onDragStart={(event) => onDragStart(event, entry)}
-                  onClick={(event) => onMove(entry, moveAmountFromInput(event, mode))}
+                  onClick={(event) => handleItemClick(event, entry)}
                   onKeyDown={(event) => {
                     if (event.key === "Enter" || event.key === " ") {
                       event.preventDefault();
                       onMove(entry, moveAmountFromInput(event, mode));
                     }
                   }}
-                  onContextMenu={(event) => {
-                    event.preventDefault();
-                    onMoveAll(entry);
-                  }}
-                  onAuxClick={(event) => {
-                    if (event.button !== 1) return;
-                    event.preventDefault();
-                    onMove(entry, "half");
-                  }}
+                  onContextMenu={(event) => handleItemContextMenu(event, entry)}
+                  onAuxClick={(event) => handleItemAuxClick(event, entry)}
                   onDoubleClick={(event) => {
                     event.preventDefault();
                     onMoveAll(entry);
                   }}
-                  aria-label={`${item?.name || `Item ${entry.itemIndex}`}. Left click moves one. Shift moves half. Alt moves ten. Right click moves all or clears.`}
+                  aria-label={`${item?.name || `Item ${entry.itemIndex}`}. Left click moves one. Right click moves all or clears. Middle click splits half. Shift-left moves half. Alt-left moves ten. Drag between stock and offer.`}
                 />
                 {allowProtect && onToggleProtect && mode !== "offer" ? (
                   <button
@@ -344,27 +361,20 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                   ) : null}
                 </span>
               }
-              onClick={(event) => onMove(entry, moveAmountFromInput(event, mode))}
+              onClick={(event) => handleItemClick(event, entry)}
               onKeyDown={(event) => {
                 if (event.key === "Enter" || event.key === " ") {
                   event.preventDefault();
                   onMove(entry, moveAmountFromInput(event, mode));
                 }
               }}
-              onContextMenu={(event) => {
-                event.preventDefault();
-                onMoveAll(entry);
-              }}
-              onAuxClick={(event) => {
-                if (event.button !== 1) return;
-                event.preventDefault();
-                onMove(entry, "half");
-              }}
+              onContextMenu={(event) => handleItemContextMenu(event, entry)}
+              onAuxClick={(event) => handleItemAuxClick(event, entry)}
               onDoubleClick={(event) => {
                 event.preventDefault();
                 onMoveAll(entry);
               }}
-              aria-label={`${item?.name || `Item ${entry.itemIndex}`}. Left click moves one. Shift moves half. Alt moves ten. Right click moves all or clears.`}
+              aria-label={`${item?.name || `Item ${entry.itemIndex}`}. Left click moves one. Right click moves all or clears. Middle click splits half. Shift-left moves half. Alt-left moves ten. Drag between stock and offer.`}
               draggable
               onDragStart={(event) => onDragStart(event, entry)}
             />
