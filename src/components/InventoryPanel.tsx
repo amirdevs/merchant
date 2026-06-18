@@ -21,6 +21,7 @@ type InventoryPanelProps = {
   panelVariant?: "parchment" | "wood" | "dark";
   allowProtect?: boolean;
   illegalTags?: string[];
+  questItemIndexes?: Set<number>;
   onMove: (entry: InventoryEntry, amount: MoveAmount) => void;
   onMoveAll: (entry: InventoryEntry) => void;
   onSetOfferQuantity?: (entry: InventoryEntry, quantity: number) => void;
@@ -41,7 +42,7 @@ function moveAmountFromInput(event: MouseEvent | KeyboardEvent, mode: InventoryP
   return mode === "offer" ? -1 : 1;
 }
 
-export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, illegalTags = [], onMove, onMoveAll, onSetOfferQuantity, onToggleProtect }: InventoryPanelProps) {
+export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, illegalTags = [], questItemIndexes, onMove, onMoveAll, onSetOfferQuantity, onToggleProtect }: InventoryPanelProps) {
   const rows = inventory.filter((entry) => quantityFor(entry, mode) > 0);
   const isGrid = variant === "compact" || variant === "management";
   const darkPanel = panelVariant === "wood" || panelVariant === "dark";
@@ -74,7 +75,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
             const item = itemFor(entry);
             const shownQuantity = quantityFor(entry, mode);
             const icon = itemIconAsset(item?.iconFile);
-            const marker = item && itemIsIllegal(item, illegalTags) ? "illegal" : item?.unique ? "rare" : entry.protected && mode !== "offer" ? "protected" : undefined;
+            const marker = item && itemIsIllegal(item, illegalTags) ? "illegal" : questItemIndexes?.has(entry.itemIndex) ? "quest" : item?.unique ? "rare" : entry.protected && mode !== "offer" ? "protected" : undefined;
 
             return (
               <div
@@ -95,7 +96,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
                   imageSrc={icon}
                   marker={marker}
                   quantity={shownQuantity}
-                  selected={entry.protected && mode !== "offer"}
+                  selected={(entry.protected || entry.highlighted) && mode !== "offer"}
                   onClick={(event) => onMove(entry, moveAmountFromInput(event, mode))}
                   onKeyDown={(event) => {
                     if (event.key === "Enter" || event.key === " ") {
@@ -127,6 +128,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
                     Hidden
                   </span>
                 ) : null}
+                {entry.highlighted && mode !== "offer" ? <span className="absolute bottom-16 left-1 rounded-full border border-[#d0a65a] bg-[#5a3715]/90 px-1.5 py-0.5 text-[0.56rem] font-black uppercase text-[#fff3bd]">Marked</span> : null}
                 <div
                   className={cn(
                     "mt-1 truncate rounded-sm border px-1.5 py-0.5 text-center text-[0.72rem] font-black leading-tight shadow-sm",
@@ -161,16 +163,16 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
           const item = itemFor(entry);
           const shownQuantity = quantityFor(entry, mode);
           const icon = itemIconAsset(item?.iconFile);
-          const marker = item && itemIsIllegal(item, illegalTags) ? "illegal" : item?.unique ? "rare" : entry.protected && mode !== "offer" ? "protected" : undefined;
+          const marker = item && itemIsIllegal(item, illegalTags) ? "illegal" : questItemIndexes?.has(entry.itemIndex) ? "quest" : item?.unique ? "rare" : entry.protected && mode !== "offer" ? "protected" : undefined;
 
           return (
             <LedgerRow
               key={`${panelTitle}-${entry.itemIndex}`}
               className="text-[#2a1a0c]"
-              selected={entry.protected && mode !== "offer"}
+              selected={(entry.protected || entry.highlighted) && mode !== "offer"}
               leading={
                 <span className="relative">
-                  <ItemSlot className="w-12" imageSrc={icon} marker={marker} selected={entry.protected && mode !== "offer"} />
+                  <ItemSlot className="w-12" imageSrc={icon} marker={marker} selected={(entry.protected || entry.highlighted) && mode !== "offer"} />
                   {entry.conceal && mode !== "offer" ? <span className="absolute -bottom-0.5 left-0 rounded-sm bg-[#102f34] px-1 text-[0.55rem] font-black uppercase text-[#dffcff]">Hidden</span> : null}
                 </span>
               }

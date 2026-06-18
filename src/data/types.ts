@@ -19,6 +19,8 @@ export type InventoryEntry = {
   offerQuantity: number;
   protected?: boolean;
   conceal?: boolean;
+  highlighted?: boolean;
+  note?: string;
 };
 
 export type Bias = {

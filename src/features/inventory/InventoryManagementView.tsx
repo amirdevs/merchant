@@ -4,13 +4,14 @@ import type { InventoryEntry } from "@/data/types";
 import type { GameState } from "@/lib/game";
 import type { MoveAmount } from "@/lib/inventory";
 import { itemIconAsset } from "@/lib/assets";
-import { currentKingdom, items, visibleQuantity } from "@/lib/game";
+import { currentKingdom, items, marketplaces, visibleQuantity } from "@/lib/game";
 import { money } from "@/lib/format";
 import { inventoryTotals } from "@/lib/economy";
 import { uiAssets } from "@/lib/ui-assets";
 import { InventoryPanel } from "@/components/InventoryPanel";
 import { Button, ItemSlot, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { cn } from "@/lib/cn";
+import { itemIsQuestNeeded } from "@/lib/quests";
 
 type InventoryManagementViewProps = {
   state: GameState;
@@ -19,7 +20,7 @@ type InventoryManagementViewProps = {
   onSetPlayerOfferQuantity?: (entry: InventoryEntry, quantity: number) => void;
   onTogglePlayerProtect: (entry: InventoryEntry) => void;
   onOpenFilter: () => void;
-  onOpenItemDetail: () => void;
+  onOpenItemDetail: (entry: InventoryEntry) => void;
   onUnavailable: (message: string) => void;
 };
 
@@ -37,6 +38,7 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
     const saved = localStorage.getItem(FILTER_KEY);
     return saved ? (JSON.parse(saved).sortBy as InventorySort) || "Value" : "Value";
   });
+  const [search, setSearch] = useState("");
   const illegalTags = currentKingdom(state).illegalItemTags || [];
   const carriedEntries = state.playerInventory.filter((entry) => visibleQuantity(entry) > 0);
   const filteredEntries = useMemo(() => {
@@ -49,8 +51,16 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
       if (category === "Luxuries") return tags.some((tag) => ["jewelry", "gem", "luxury", "art", "rare"].includes(tag)) || item.loafValue >= 250;
       return tags.some((tag) => ["quest", "map", "deed"].includes(tag)) || item.unique;
     };
+    const normalizedSearch = search.trim().toLowerCase();
     return carriedEntries
       .filter(matchesCategory)
+      .filter((entry) => {
+        if (!normalizedSearch) return true;
+        const item = items[entry.itemIndex];
+        return item.name.toLowerCase().includes(normalizedSearch)
+          || item.tags.some((tag) => tag.toLowerCase().includes(normalizedSearch))
+          || entry.note?.toLowerCase().includes(normalizedSearch);
+      })
       .sort((left, right) => {
         const leftItem = items[left.itemIndex];
         const rightItem = items[right.itemIndex];
@@ -59,10 +69,11 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
         if (sortBy === "Weight") return rightItem.weight - leftItem.weight;
         return rightItem.loafValue - leftItem.loafValue;
       });
-  }, [carriedEntries, category, sortBy]);
+  }, [carriedEntries, category, search, sortBy]);
   const totals = inventoryTotals(state.playerInventory, items);
-  const selected = filteredEntries[0] || carriedEntries[0];
+  const selected = filteredEntries.find((entry) => entry.itemIndex === state.selectedItemIndex) || filteredEntries[0] || carriedEntries[0];
   const selectedItem = selected ? items[selected.itemIndex] : null;
+  const questItemIndexes = new Set(carriedEntries.filter((entry) => itemIsQuestNeeded(items[entry.itemIndex], marketplaces, state.questStates)).map((entry) => entry.itemIndex));
 
   useEffect(() => {
     localStorage.setItem(FILTER_KEY, JSON.stringify({ category, sortBy }));
@@ -88,10 +99,11 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
                 <Button key={nextCategory} variant={category === nextCategory ? "primary" : "secondary"} onClick={() => setCategory(nextCategory)}>{nextCategory}</Button>
               ))}
             </div>
-            <button className="flex min-h-11 w-56 items-center gap-3 rounded-sm border border-[#b98b37]/65 bg-[#fff6d7]/65 px-4 text-left text-[#3b260f]" type="button" onClick={onOpenFilter}>
+            <label className="flex min-h-11 w-64 items-center gap-3 rounded-sm border border-[#b98b37]/65 bg-[#fff6d7]/65 px-4 text-left text-[#3b260f]">
               <Search size={24} />
-              <span className="text-base text-[#725331]">Search items...</span>
-            </button>
+              <input className="min-w-0 flex-1 bg-transparent text-base text-[#26170a] outline-none placeholder:text-[#725331]" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search name, tag, note..." />
+              <button className="text-xs font-black uppercase text-[#75501f]" type="button" onClick={onOpenFilter}>More</button>
+            </label>
             <button
               className="flex min-h-11 w-52 items-center justify-between gap-3 rounded-sm border border-[#b98b37]/65 bg-[#fff6d7]/65 px-4 text-left text-base text-[#3b260f]"
               type="button"
@@ -104,7 +116,7 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
               <Grid3X3 size={22} />
             </button>
           </div>
-          <InventoryPanel title="Cargo" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} illegalTags={illegalTags} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onSetOfferQuantity={onSetPlayerOfferQuantity} onToggleProtect={onTogglePlayerProtect} allowProtect />
+          <InventoryPanel title="Cargo" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} illegalTags={illegalTags} questItemIndexes={questItemIndexes} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onSetOfferQuantity={onSetPlayerOfferQuantity} onToggleProtect={onTogglePlayerProtect} allowProtect />
           <div className="mt-4 grid gap-3 md:grid-cols-5">
             <StatChip label="Carry" value={`${totals.weight} / ${totals.carryCapacity}`} icon={uiAssets.hud.weight} />
             <StatChip label="Pull" value={`${totals.size} / ${totals.sizeCapacity}`} icon={uiAssets.hud.inventory} />
@@ -140,7 +152,8 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
                   <StatChip label="Weight" value={selectedItem.weight} />
                   <StatChip label="Size" value={selectedItem.size} />
                 </dl>
-                <div className="mt-5 grid grid-cols-2 gap-2"><Button size="lg" onClick={() => onMovePlayer(selected, 1)}>Add to Offer</Button><Button size="lg" variant="secondary" onClick={() => onTogglePlayerProtect(selected)}>{selected.protected ? "Unprotect" : "Protect"}</Button><Button className="col-span-2" size="lg" variant="secondary" onClick={onOpenItemDetail}>More</Button></div>
+                {selected.note ? <p className="mt-3 rounded-sm border border-[#9a7138]/50 bg-[#fff6d7]/55 p-2 text-sm text-[#3b260f]">{selected.note}</p> : null}
+                <div className="mt-5 grid grid-cols-2 gap-2"><Button size="lg" onClick={() => onMovePlayer(selected, 1)}>Add to Offer</Button><Button size="lg" variant="secondary" onClick={() => onTogglePlayerProtect(selected)}>{selected.protected ? "Unprotect" : "Protect"}</Button><Button className="col-span-2" size="lg" variant="secondary" onClick={() => onOpenItemDetail(selected)}>More</Button></div>
               </>
             ) : <p>No item selected for {category}.</p>}
           </Panel>

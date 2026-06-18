@@ -20,6 +20,14 @@ function itemMatchesQuestToken(item: Item, token: string) {
   );
 }
 
+export function itemIsQuestNeeded(item: Item, markets: Marketplace[], questStates: Record<string, string>) {
+  return markets.some((market) => {
+    const status = questStates[String(market.index)] || "offered";
+    if (status === "finished" || status === "failed") return false;
+    return (market.quest?.questItems || []).some((token) => itemMatchesQuestToken(item, token));
+  });
+}
+
 export function questItemProgress(market: Marketplace, inventory: InventoryEntry[], items: Item[]): QuestItemProgress[] {
   const required = market.quest?.questItems || [];
   return required.map((token) => {

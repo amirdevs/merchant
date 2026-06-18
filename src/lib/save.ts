@@ -35,6 +35,7 @@ function isGameState(value: unknown): value is GameState {
   if (!candidate.contractStates || typeof candidate.contractStates !== "object") candidate.contractStates = {};
   if (!candidate.contractAcceptedDays || typeof candidate.contractAcceptedDays !== "object") candidate.contractAcceptedDays = {};
   if (!("auctionSession" in candidate)) candidate.auctionSession = null;
+  if (!("selectedItemIndex" in candidate)) candidate.selectedItemIndex = null;
   if (!Array.isArray(candidate.dialogueLog)) candidate.dialogueLog = [];
   if (!("travelResult" in candidate)) candidate.travelResult = null;
   return true;

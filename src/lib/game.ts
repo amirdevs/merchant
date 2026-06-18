@@ -45,6 +45,7 @@ export type GameState = {
   contractStates: ContractStates;
   contractAcceptedDays: ContractAcceptedDays;
   auctionSession: AuctionSession | null;
+  selectedItemIndex: number | null;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -144,6 +145,7 @@ export function newGame(): GameState {
     contractStates: {},
     contractAcceptedDays: {},
     auctionSession: null,
+    selectedItemIndex: null,
     dialogueLog: [],
     travelResult: null,
   };

@@ -173,6 +173,32 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function selectItem(entry: InventoryEntry) {
+    update((draft) => {
+      draft.selectedItemIndex = entry.itemIndex;
+    });
+  }
+
+  function toggleItemHighlight(entry: InventoryEntry) {
+    update((draft) => {
+      const actual = draft.playerInventory.find((item) => item.itemIndex === entry.itemIndex);
+      if (!actual) return;
+      actual.highlighted = !actual.highlighted;
+      draft.selectedItemIndex = actual.itemIndex;
+      draft.message = actual.highlighted ? `${items[actual.itemIndex].name} highlighted.` : `${items[actual.itemIndex].name} highlight removed.`;
+    });
+  }
+
+  function setItemNote(entry: InventoryEntry, note: string) {
+    update((draft) => {
+      const actual = draft.playerInventory.find((item) => item.itemIndex === entry.itemIndex);
+      if (!actual) return;
+      actual.note = note.slice(0, 500);
+      draft.selectedItemIndex = actual.itemIndex;
+      draft.message = `Updated note for ${items[actual.itemIndex].name}.`;
+    });
+  }
+
   function setMessage(message: string) {
     update((draft) => {
       draft.message = message;
@@ -497,6 +523,9 @@ export function useMerchantController(): MerchantController {
       setCharacterOfferQuantity,
       togglePlayerProtect,
       togglePlayerConceal,
+      selectItem,
+      toggleItemHighlight,
+      setItemNote,
       clearTradeOffers,
       undoLastOfferChange,
       askPrice,
