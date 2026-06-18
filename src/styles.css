@@ -25,6 +25,8 @@ html,
 body,
 #root {
   min-height: 100%;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -39,6 +41,13 @@ input,
 select,
 textarea {
   font: inherit;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 * {
