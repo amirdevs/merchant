@@ -41,7 +41,7 @@ import { coinQuantity, spendCopperToll } from "@/lib/economy";
 import { addInventory } from "@/lib/inventory";
 import type { TravelStrategy } from "@/lib/travel-risk";
 import { runHorseRace as calculateHorseRace } from "@/lib/racing";
-import { playMythCard as resolveMythCard, startMythGame as createMythGame } from "@/lib/myth";
+import { activeMythDeck, addMythCard, mythDeck, playMythCard as resolveMythCard, startMythGame as createMythGame, toggleMythDeckCard as toggleProgressionDeckCard } from "@/lib/myth";
 import { advanceMarketSimulation } from "@/lib/market-simulation";
 import {
   createShipment,
@@ -447,6 +447,7 @@ export function useMerchantController(): MerchantController {
         day: draft.day,
         wager: entryFee,
         prize,
+        playerDeck: activeMythDeck(draft.mythProgression),
       });
       draft.message = draft.mythSession.message;
     });
@@ -461,9 +462,14 @@ export function useMerchantController(): MerchantController {
       }
       const wasActive = session.status === "active";
       draft.message = resolveMythCard(session, cardId);
-      if (wasActive && session.status === "player-won" && session.prize > 0) {
-        addInventory(draft.playerInventory, itemIndexByName("copper coins"), session.prize);
-        draft.message += ` Tournament prize: ${session.prize} copper.`;
+      if (wasActive && session.status === "player-won") {
+        if (session.prize > 0) addInventory(draft.playerInventory, itemIndexByName("copper coins"), session.prize);
+        draft.mythProgression.wins += 1;
+        const rewardCard = mythDeck(session.opponentArchetype, `${draft.day}:reward`)[0];
+        const owned = addMythCard(draft.mythProgression, rewardCard);
+        draft.message += ` Tournament prize: ${session.prize} copper and ${owned.name}.`;
+      } else if (wasActive && session.status === "opponent-won") {
+        draft.mythProgression.losses += 1;
       }
     });
   }
@@ -654,6 +660,13 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function toggleMythDeckCard(cardId: string) {
+    update((draft) => {
+      const changed = toggleProgressionDeckCard(draft.mythProgression, cardId);
+      draft.message = changed ? `Myth deck updated: ${draft.mythProgression.activeDeckIds.length} cards.` : "Myth decks require 5 to 12 owned cards.";
+    });
+  }
+
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
@@ -839,6 +852,7 @@ export function useMerchantController(): MerchantController {
       upgradeConcealment,
       toggleRouteBookmark,
       buyPermit,
+      toggleMythDeckCard,
       selectCharacter,
       nextCustomer,
       movePlayer,

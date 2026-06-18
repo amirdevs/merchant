@@ -26,9 +26,10 @@ type EventViewProps = {
   onStartDraft: () => void;
   onPickDraftItem: (itemIndex: number) => void;
   onCloseDraft: () => void;
+  onToggleMythDeckCard: (cardId: string) => void;
 };
 
-export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAuction, onPassAuction, onCloseAuction, onRunHorseRace, onStartMythGame, onPlayMythCard, onCloseMythGame, onStartDraft, onPickDraftItem, onCloseDraft }: EventViewProps) {
+export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAuction, onPassAuction, onCloseAuction, onRunHorseRace, onStartMythGame, onPlayMythCard, onCloseMythGame, onStartDraft, onPickDraftItem, onCloseDraft, onToggleMythDeckCard }: EventViewProps) {
   const market = currentMarket(state);
   const active = eventIsActive(market, state.day);
   const session = state.auctionSession;
@@ -107,6 +108,27 @@ export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAu
                       <Button variant="secondary" onClick={onCloseMythGame}>Close Match</Button>
                     </div>
                   )}
+                </div>
+              ) : null}
+              {isMyth && !mythSession ? (
+                <div className="grid gap-3 rounded-sm border border-[#9a7138]/55 bg-[#fff6d7]/55 p-4">
+                  <div className="grid grid-cols-4 gap-2">
+                    <StatChip label="Owned" value={state.mythProgression.collection.length} />
+                    <StatChip label="Deck" value={state.mythProgression.activeDeckIds.length} />
+                    <StatChip label="Wins" value={state.mythProgression.wins} />
+                    <StatChip label="Losses" value={state.mythProgression.losses} />
+                  </div>
+                  <div className="grid max-h-52 grid-cols-2 gap-2 overflow-auto md:grid-cols-4">
+                    {state.mythProgression.collection.map((card) => {
+                      const activeCard = state.mythProgression.activeDeckIds.includes(card.id);
+                      return (
+                        <button className={`rounded-sm border p-2 text-left ${activeCard ? "border-[#1f5960] bg-[#1f5960]/15" : "border-[#9a7138]/50 bg-[#fff8df]/60"}`} key={card.id} type="button" onClick={() => onToggleMythDeckCard(card.id)}>
+                          <strong className="block">{card.name}</strong>
+                          <span className="text-xs">{card.suit} / power {card.power} / rarity {card.rarity}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
               ) : null}
               {isDraft && draftSession ? (

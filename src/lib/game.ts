@@ -7,7 +7,7 @@ import type { Character, InventoryEntry, Item, Kingdom, Marketplace, ObtainableI
 import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
 import type { AuctionSession } from "./auction";
 import type { RaceResult } from "./racing";
-import type { MythSession } from "./myth";
+import { createMythProgression, type MythProgression, type MythSession } from "./myth";
 import { advanceMarketSimulation, recordMarketTrade, simulatedMarketBiases, type MarketSimulation } from "./market-simulation";
 import { createCompanyState, settleShipments, type CompanyState } from "./company";
 import type { DraftSession } from "./draft";
@@ -61,6 +61,7 @@ export type GameState = {
   dialogueNodes: Record<string, DialogueNodeId>;
   raceResult: RaceResult | null;
   mythSession: MythSession | null;
+  mythProgression: MythProgression;
   marketSimulation: MarketSimulation;
   company: CompanyState;
   draftSession: DraftSession | null;
@@ -172,6 +173,7 @@ export function newGame(): GameState {
     dialogueNodes: {},
     raceResult: null,
     mythSession: null,
+    mythProgression: createMythProgression(),
     marketSimulation: {},
     company: createCompanyState(),
     draftSession: null,

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { compareMythCards, mythDeck, playMythCard, startMythGame } from "./myth";
+import { activeMythDeck, compareMythCards, createMythProgression, mythDeck, playMythCard, startMythGame, toggleMythDeckCard } from "./myth";
 
 describe("Myth card game", () => {
   it("builds stable archetype decks", () => {
@@ -9,9 +9,21 @@ describe("Myth card game", () => {
 
   it("applies suit counters in addition to card power", () => {
     expect(compareMythCards(
-      { id: "1", name: "Harvest", suit: "harvest", power: 4 },
-      { id: "2", name: "Wild", suit: "wild", power: 6 }
+      { id: "1", name: "Harvest", suit: "harvest", power: 4, rarity: 1 },
+      { id: "2", name: "Wild", suit: "wild", power: 6, rarity: 1 }
     )).toBe("player");
+  });
+
+  it("persists a valid player collection and editable deck", () => {
+    const progression = createMythProgression();
+    const removed = progression.activeDeckIds[0];
+    expect(toggleMythDeckCard(progression, removed)).toBe(true);
+    expect(activeMythDeck(progression)).toHaveLength(7);
+  });
+
+  it("assigns different opponent personalities", () => {
+    expect(startMythGame({ opponentName: "A", opponentArchetype: "randomWild", day: 1 }).aiPersonality).toBe("gambler");
+    expect(startMythGame({ opponentName: "B", opponentArchetype: "preyPredator", day: 1 }).aiPersonality).toBe("aggressive");
   });
 
   it("plays a complete deterministic match", () => {
