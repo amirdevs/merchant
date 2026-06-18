@@ -22,7 +22,8 @@ export type DialogueAction =
   | "topics-trade"
   | "topics-world"
   | "topics-work"
-  | "back";
+  | "back"
+  | "secret";
 
 export type DialogueNodeId = "root" | "personal" | "trade" | "world" | "work";
 export type DialogueEffect = "accept-local-quest";
@@ -76,6 +77,13 @@ function relationshipReply(character: Character, relation: NpcRelation | null | 
   const tradeLine = relation.trades ? `${relation.trades} completed trade${relation.trades === 1 ? "" : "s"}` : "no completed trades";
   const failedLine = relation.failedOffers ? `${relation.failedOffers} recent failed offer${relation.failedOffers === 1 ? "" : "s"}` : "no recent failed offers";
   return `${character.name} remembers ${tradeLine} and ${failedLine}. Trust ${relation.trust}, mood ${relation.mood}, patience ${relation.patience}.`;
+}
+
+function secretReply(character: Character, context: DialogueContext) {
+  const secrets = context.relation?.secretsUnlocked || [];
+  if (secrets.includes("underworld-contact")) return `${character.name} names a discreet intermediary who watches for contraband and forged papers after sunset.`;
+  if (secrets.includes("trusted-route")) return `${character.name} shares a favored route: repeat journeys become safer as landmarks, patrols, and reliable stops become familiar.`;
+  return `${character.name} is not ready to share anything private yet.`;
 }
 
 function routeReply(context: DialogueContext) {
@@ -205,8 +213,16 @@ export function dialogueChoices(character: Character, context: DialogueContext =
       tone: "friendly",
     },
   ];
+  if (context.relation?.secretsUnlocked?.length) {
+    choices.splice(4, 0, {
+      id: "secret",
+      label: "You said you trusted me. What are you hiding?",
+      reply: secretReply(character, context),
+      tone: "gossip",
+    });
+  }
   const back: DialogueChoice = { id: "back", label: "Back to main topics.", reply: `${character.name} waits for your next question.`, nextNode: "root", tone: "friendly" };
-  if (node === "personal") return choices.filter((choice) => ["who", "custom", "relationship"].includes(choice.id)).concat(back);
+  if (node === "personal") return choices.filter((choice) => ["who", "custom", "relationship", "secret"].includes(choice.id)).concat(back);
   if (node === "trade") return choices.filter((choice) => ["preference", "stock", "haggle", "ask-price", "ask-offer", "barter"].includes(choice.id)).concat(back);
   if (node === "world") return choices.filter((choice) => ["market-demand", "market-discounts", "route-gossip", "local-law", "risk"].includes(choice.id)).concat(back);
   if (node === "work") {

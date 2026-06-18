@@ -6,6 +6,10 @@ export type NpcRelation = {
   patience: number;
   failedOffers: number;
   trades: number;
+  gifts: number;
+  illegalDeals: number;
+  favors: number;
+  secretsUnlocked: string[];
 };
 
 export type NpcRelations = Record<string, NpcRelation>;
@@ -23,6 +27,10 @@ export function createNpcRelation(character: Character): NpcRelation {
     patience: startingPatience(character),
     failedOffers: 0,
     trades: 0,
+    gifts: 0,
+    illegalDeals: 0,
+    favors: 0,
+    secretsUnlocked: [],
   };
 }
 
@@ -34,6 +42,10 @@ export function relationFor(relations: NpcRelations | undefined, character: Char
 export function ensureRelation(relations: NpcRelations, character: Character) {
   const key = String(character.index);
   relations[key] ??= createNpcRelation(character);
+  relations[key].gifts ??= 0;
+  relations[key].illegalDeals ??= 0;
+  relations[key].favors ??= 0;
+  relations[key].secretsUnlocked ??= [];
   return relations[key];
 }
 

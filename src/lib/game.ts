@@ -418,7 +418,15 @@ export function completeTrade(state: GameState) {
   if (illegalTradeStacks.length && npcRoles(nextCharacter).includes("thief")) {
     adjustKingdomHeat(next.law, currentKingdom(next).index, 4 + illegalTradeStacks.length * 2);
     next.law.blackMarketReputation = Math.min(20, next.law.blackMarketReputation + 1);
+    relation.illegalDeals += 1;
   }
+  if (playerValue > 0 && characterValue <= 0) {
+    relation.gifts += 1;
+    relation.favors += playerValue >= 50 ? 2 : 1;
+  }
+  if (appraisal === "great_deal") relation.favors += 1;
+  if (relation.trust >= 4 && !relation.secretsUnlocked.includes("trusted-route")) relation.secretsUnlocked.push("trusted-route");
+  if (relation.illegalDeals >= 2 && !relation.secretsUnlocked.includes("underworld-contact")) relation.secretsUnlocked.push("underworld-contact");
   let questMessage = "";
   if (completesQuest && marketQuest.quest) {
     const reward = questReward(marketQuest, items);

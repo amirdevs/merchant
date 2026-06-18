@@ -10,7 +10,7 @@ import {
 } from "./npc-behavior";
 import type { NpcRelation } from "./reputation";
 
-const relation: NpcRelation = { trust: 0, mood: 0, patience: 5, failedOffers: 0, trades: 0 };
+const relation: NpcRelation = { trust: 0, mood: 0, patience: 5, failedOffers: 0, trades: 0, gifts: 0, illegalDeals: 0, favors: 0, secretsUnlocked: [] };
 
 function character(overrides: Partial<Character> = {}): Character {
   return {

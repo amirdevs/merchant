@@ -63,6 +63,8 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
                 <StatChip label="Trade style" value="Preference hint" />
                 <StatChip label="Likes" value="Known tags" />
                 <StatChip label="Dislikes" value="Known tags" />
+                <StatChip label="Favors" value={selectedRelation?.favors || 0} />
+                <StatChip label="Secrets" value={selectedRelation?.secretsUnlocked?.length || 0} />
               </dl>
               <div className="mt-3 grid grid-cols-2 gap-2 text-sm text-[#3b260f]">
                 {(selected.obtainableItems || []).slice(0, 4).map((pool) => <span key={pool.tag} className="rounded border border-[#9a7138]/45 bg-[#fff6d7]/55 px-2 py-1">{pool.tag}</span>)}
