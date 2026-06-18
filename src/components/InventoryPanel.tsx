@@ -426,9 +426,9 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
         </div>
       ) : null}
       {noticeEntry && noticeItem && notice ? (
-        <ModalShell title="Item Notice" onClick={() => setNoticeEntry(null)}>
+        <ModalShell title="Item Details & Actions" panelClassName="max-w-4xl" onClick={() => setNoticeEntry(null)}>
           <div className="grid gap-4 text-[#2a1a0c]" onClick={(event) => event.stopPropagation()}>
-            <div className="grid gap-4 md:grid-cols-[180px_1fr]">
+            <div className="grid gap-4 md:grid-cols-[200px_1fr]">
               <div className="grid place-items-center rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/70 p-4">
                 <ItemSlot className="w-32" imageSrc={itemIconAsset(noticeItem.iconFile)} quantity={quantityFor(noticeEntry, mode)} marker={itemIsIllegal(noticeItem, illegalTags) ? "illegal" : noticeItem.unique ? "rare" : undefined} selected={noticeEntry.protected || noticeEntry.highlighted} />
               </div>
@@ -441,6 +441,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
             <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
               <StatChip label="Quantity" value={quantityFor(noticeEntry, mode)} />
               <StatChip label="Base Value" value={money(noticeItem.loafValue)} />
+              <StatChip label="Total Value" value={money(noticeItem.loafValue * quantityFor(noticeEntry, mode))} />
               <StatChip label="Size" value={noticeItem.size} />
               <StatChip label="Weight" value={noticeItem.weight} />
               <StatChip label="Rarity" value={noticeItem.rarity || 1} />
@@ -454,8 +455,22 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                 {notice.handling.map((line) => <span key={line}>{line}</span>)}
               </div>
             </div>
+            <div className="rounded-sm border border-[#9a7138]/45 bg-[#fff6d7]/70 p-3">
+              <strong className="block font-display text-2xl text-[#26170a]">{mode === "offer" ? "Offer Actions" : "Item Actions"}</strong>
+              <p className="mt-1 text-sm text-[#725331]">
+                {mode === "offer" ? "Return this item from the offer to its owner's stock." : "Move this item into the current offer."}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <Button onClick={() => onMove(noticeEntry, mode === "offer" ? -1 : 1)}>{mode === "offer" ? "Remove One" : "Offer One"}</Button>
+                <Button variant="secondary" onClick={() => onMove(noticeEntry, "half")}>{mode === "offer" ? "Remove Half" : "Offer Half"}</Button>
+                <Button variant="secondary" onClick={() => onMoveAll(noticeEntry)}>{mode === "offer" ? "Clear Item" : "Offer All"}</Button>
+                {allowProtect && onToggleProtect && mode !== "offer" ? (
+                  <Button subtle onClick={() => onToggleProtect(noticeEntry)}>{noticeEntry.protected ? "Unprotect" : "Protect"}</Button>
+                ) : null}
+              </div>
+            </div>
             <div className="flex justify-end">
-              <Button onClick={() => setNoticeEntry(null)}>Close</Button>
+              <Button variant="secondary" onClick={() => setNoticeEntry(null)}>Close</Button>
             </div>
           </div>
         </ModalShell>
