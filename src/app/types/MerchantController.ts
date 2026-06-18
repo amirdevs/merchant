@@ -53,6 +53,7 @@ export type MerchantActions = {
   bidAuction: () => void;
   passAuction: () => void;
   closeAuction: () => void;
+  runHorseRace: (horseName: string, wager: number) => void;
   selectCharacter: (next: Character) => void;
   nextCustomer: () => void;
   movePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;

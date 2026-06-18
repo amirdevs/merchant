@@ -39,6 +39,7 @@ import { eventIsActive } from "@/lib/events";
 import { coinQuantity, spendCopperToll } from "@/lib/economy";
 import { addInventory } from "@/lib/inventory";
 import type { TravelStrategy } from "@/lib/travel-risk";
+import { runHorseRace as calculateHorseRace } from "@/lib/racing";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -376,6 +377,32 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function runHorseRace(horseName: string, wager: number) {
+    update((draft) => {
+      const current = currentMarket(draft);
+      if (!current.event?.name?.toLowerCase().includes("horse race") || !eventIsActive(current, draft.day)) {
+        draft.message = "The horse race is not active here today.";
+        return;
+      }
+      const safeWager = Math.max(1, Math.floor(wager));
+      if (!spendCopperToll(draft.playerInventory, items, safeWager)) {
+        draft.message = `You need ${safeWager} copper for that wager.`;
+        return;
+      }
+      const result = calculateHorseRace(current, horseName, safeWager, draft.day);
+      if (!result) {
+        addInventory(draft.playerInventory, itemIndexByName("copper coins"), safeWager);
+        draft.message = "That horse could not be entered.";
+        return;
+      }
+      if (result.payout) addInventory(draft.playerInventory, itemIndexByName("copper coins"), result.payout);
+      draft.raceResult = result;
+      draft.message = result.placement === 1
+        ? `${horseName} wins. Payout: ${result.payout} copper.`
+        : `${horseName} finished in place ${result.placement}. The wager was lost.`;
+    });
+  }
+
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
@@ -541,6 +568,7 @@ export function useMerchantController(): MerchantController {
       bidAuction,
       passAuction,
       closeAuction,
+      runHorseRace,
       selectCharacter,
       nextCustomer,
       movePlayer,

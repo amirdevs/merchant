@@ -1,10 +1,12 @@
 import { CalendarDays, Gavel, HandCoins, StepForward } from "lucide-react";
+import { useState } from "react";
 import type { GameState } from "@/lib/game";
 import { currentMarket, items } from "@/lib/game";
 import { currentAuctionLot, nextAuctionBid, rivalTell } from "@/lib/auction";
 import { eventBiases, eventIsActive, nextEventDay } from "@/lib/events";
 import { coinQuantity } from "@/lib/economy";
 import { money } from "@/lib/format";
+import { raceEntries } from "@/lib/racing";
 import { uiAssets } from "@/lib/ui-assets";
 import { Button, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
@@ -16,9 +18,10 @@ type EventViewProps = {
   onBidAuction: () => void;
   onPassAuction: () => void;
   onCloseAuction: () => void;
+  onRunHorseRace: (horseName: string, wager: number) => void;
 };
 
-export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAuction, onPassAuction, onCloseAuction }: EventViewProps) {
+export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAuction, onPassAuction, onCloseAuction, onRunHorseRace }: EventViewProps) {
   const market = currentMarket(state);
   const active = eventIsActive(market, state.day);
   const session = state.auctionSession;
@@ -26,6 +29,10 @@ export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAu
   const biases = eventBiases(market, state.day);
   const copper = coinQuantity(state.playerInventory, items, "copper coins");
   const isAuction = Boolean(market.event?.name?.toLowerCase().includes("auction"));
+  const isRace = Boolean(market.event?.name?.toLowerCase().includes("horse race"));
+  const horses = raceEntries(market);
+  const [selectedHorse, setSelectedHorse] = useState(horses[0]?.name || "");
+  const [wager, setWager] = useState(10);
 
   return (
     <ScreenFrame title={market.event?.name || "Market Events"} eyebrow={`${market.name} / Day ${state.day}`} backdrop={uiAssets.backplates.marketTown} overlay="light">
@@ -37,10 +44,31 @@ export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAu
               <p className="text-lg">{active ? `${market.event.name} is open today.` : `${market.event.name} returns on day ${nextEventDay(market, state.day)}.`}</p>
               {biases.length ? <p className="font-bold text-[#75501f]">Event demand: {biases.map((bias) => `${bias.tag} +${bias.percent}%`).join(", ")}</p> : null}
               <div className="flex flex-wrap gap-2">
-                {isAuction ? <Button disabled={!active} onClick={onStartAuction}><Gavel size={16} /> Enter Auction</Button> : <Button disabled>Playable session coming in its dedicated event module</Button>}
+                {isAuction ? <Button disabled={!active} onClick={onStartAuction}><Gavel size={16} /> Enter Auction</Button> : null}
                 <Button variant="secondary" onClick={onAdvanceDay}><CalendarDays size={16} /> Wait One Day</Button>
                 <Button subtle onClick={onBack}>Back</Button>
               </div>
+              {isRace && horses.length ? (
+                <div className="grid gap-3 rounded-sm border-2 border-[#9a7138]/60 bg-[#fff6d7]/60 p-4">
+                  <div className="grid gap-2 md:grid-cols-2">
+                    {horses.map((horse) => (
+                      <button key={horse.name} className={`rounded-sm border p-3 text-left ${selectedHorse === horse.name ? "border-[#1f5960] bg-[#1f5960]/15" : "border-[#9a7138]/50 bg-[#fff8df]/60"}`} type="button" onClick={() => setSelectedHorse(horse.name)}>
+                        <strong className="block">{horse.name}</strong>
+                        <span className="text-sm">Form {horse.form.toFixed(1)} / pays {horse.odds}x</span>
+                      </button>
+                    ))}
+                  </div>
+                  <label className="flex items-center gap-2 font-bold">Wager<input className="w-28 rounded-sm border border-[#9a7138]/60 bg-[#fff8df] px-2 py-1" min={1} type="number" value={wager} onChange={(event) => setWager(Number(event.target.value))} /> copper</label>
+                  <Button disabled={!active || !selectedHorse} onClick={() => onRunHorseRace(selectedHorse, wager)}>Run Race</Button>
+                  {state.raceResult?.marketIndex === market.index ? (
+                    <div className="rounded-sm border border-[#1f5960]/40 bg-[#fff8df]/70 p-3">
+                      <strong>{state.raceResult.horseName} placed {state.raceResult.placement}.</strong>
+                      <p>Payout: {state.raceResult.payout} copper.</p>
+                      <p className="text-sm">Finish: {state.raceResult.finishOrder.join(" / ")}</p>
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
             </div>
           ) : null}
           {session ? (

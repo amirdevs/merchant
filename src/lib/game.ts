@@ -6,6 +6,7 @@ import professionsJson from "../data/generated/professions.json";
 import type { Character, InventoryEntry, Item, Kingdom, Marketplace, ObtainableItem, Profession } from "../data/types";
 import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
 import type { AuctionSession } from "./auction";
+import type { RaceResult } from "./racing";
 import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { eventBiases } from "./events";
@@ -50,6 +51,7 @@ export type GameState = {
   auctionSession: AuctionSession | null;
   selectedItemIndex: number | null;
   dialogueNodes: Record<string, DialogueNodeId>;
+  raceResult: RaceResult | null;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -153,6 +155,7 @@ export function newGame(): GameState {
     auctionSession: null,
     selectedItemIndex: null,
     dialogueNodes: {},
+    raceResult: null,
     dialogueLog: [],
     travelResult: null,
   };
