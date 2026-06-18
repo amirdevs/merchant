@@ -83,7 +83,7 @@ export function GameShell({ controller, activeView, uiPreferences, children }: G
       {!isTitleArea ? (
         <div className="pointer-events-none absolute inset-0 z-0 transition-all duration-1000" style={{ backgroundImage: lighting.overlay, filter: lighting.filter }} aria-hidden="true" />
       ) : null}
-      <div className="mx-auto flex h-full min-h-0 flex-col p-2 lg:p-3">
+      <div className="mx-auto flex h-full min-h-0 flex-col p-0">
         <div className="relative z-10 flex min-h-0 flex-1">{children}</div>
       </div>
       <ToastContainer position="bottom-left" autoClose={4000} closeOnClick newestOnTop pauseOnFocusLoss={false} pauseOnHover theme="dark" limit={3} />

@@ -1,7 +1,6 @@
 import type { CSSProperties, HTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/cn";
 import { uiAssets } from "@/lib/ui-assets";
-import { TitleRibbon } from "./TitleRibbon";
 
 type ScreenFrameProps = HTMLAttributes<HTMLElement> & {
   backdrop?: string;
@@ -36,20 +35,14 @@ export function ScreenFrame({ backdrop, title, eyebrow, children, className, con
       style={frameStyle}
       {...props}
     >
-      <div className="pointer-events-none absolute inset-1 rounded-sm border border-[#f0c56e]/45" />
-      <img className="pointer-events-none absolute left-2 top-2 z-20 h-14 w-14 object-contain opacity-90" src={uiAssets.core.cornerOrnamentLeft} alt="" />
-      <img className="pointer-events-none absolute right-2 top-2 z-20 h-14 w-14 scale-x-[-1] object-contain opacity-90" src={uiAssets.core.cornerOrnamentRight} alt="" />
-      <img className="pointer-events-none absolute bottom-2 left-2 z-20 h-14 w-14 scale-y-[-1] object-contain opacity-80" src={uiAssets.core.cornerOrnamentLeft} alt="" />
-      <img className="pointer-events-none absolute bottom-2 right-2 z-20 h-14 w-14 scale-[-1] object-contain opacity-80" src={uiAssets.core.cornerOrnamentRight} alt="" />
+      <div className="pointer-events-none absolute inset-1 rounded-sm border border-[#f0c56e]/35" />
+      {title || eyebrow ? (
+        <div className="pointer-events-none absolute left-4 top-3 z-20 flex max-w-[calc(100%-2rem)] items-baseline gap-2 truncate text-[#fff1b9] drop-shadow-[0_2px_2px_rgba(0,0,0,.8)]">
+          {title ? <span className="font-display text-lg leading-none">{title}</span> : null}
+          {eyebrow ? <span className="truncate text-[0.58rem] font-black uppercase tracking-[0.22em] text-[#f5cf78]">{eyebrow}</span> : null}
+        </div>
+      ) : null}
       <div className={cn("relative z-10 flex min-h-full flex-col p-3 lg:p-4", contentClassName)}>
-        {title || eyebrow ? (
-          <header className="mb-3 flex items-center justify-center">
-            <div className="text-center">
-              {eyebrow ? <div className="mb-1 text-[0.65rem] uppercase tracking-[0.24em] text-[#f8d98a] drop-shadow">{eyebrow}</div> : null}
-              {title ? <TitleRibbon size="md">{title}</TitleRibbon> : null}
-            </div>
-          </header>
-        ) : null}
         {children}
       </div>
     </section>
