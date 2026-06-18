@@ -22,6 +22,8 @@ type InventoryPanelProps = {
   allowProtect?: boolean;
   illegalTags?: string[];
   questItemIndexes?: Set<number>;
+  className?: string;
+  bodyClassName?: string;
   onMove: (entry: InventoryEntry, amount: MoveAmount) => void;
   onMoveAll: (entry: InventoryEntry) => void;
   onSetOfferQuantity?: (entry: InventoryEntry, quantity: number) => void;
@@ -97,7 +99,7 @@ function itemNotice(item: Item, entry: InventoryEntry, illegalTags: string[]) {
   };
 }
 
-export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, illegalTags = [], questItemIndexes, onMove, onMoveAll, onToggleProtect }: InventoryPanelProps) {
+export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, illegalTags = [], questItemIndexes, className, bodyClassName, onMove, onMoveAll, onToggleProtect }: InventoryPanelProps) {
   const rows = inventory.filter((entry) => quantityFor(entry, mode) > 0);
   const isGrid = variant === "compact" || variant === "management";
   const darkPanel = panelVariant === "wood" || panelVariant === "dark";
@@ -153,6 +155,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
 
   return (
     <Panel
+      className={className}
       variant={panelVariant}
       dense={variant === "compact"}
       title={
@@ -175,7 +178,8 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
               : "border-[#9a7138]/55 bg-[#fff6d7]/35 shadow-[#6c4418]/20",
             dropStatus === "valid" && "ring-2 ring-[#9ce277] ring-offset-2 ring-offset-[#2a1809]",
             dropStatus === "invalid" && "animate-pulse ring-2 ring-[#d5523f] ring-offset-2 ring-offset-[#2a1809]",
-            variant === "compact" ? "max-h-56" : "max-h-[67vh]"
+            variant === "compact" ? "max-h-56" : "max-h-[67vh]",
+            bodyClassName
           )}
           onDragOver={onDragOver}
           onDrop={onDrop}
@@ -291,7 +295,8 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
         className={cn(
           "grid max-h-[360px] gap-2 overflow-auto pr-1",
           dropStatus === "valid" && "rounded-sm ring-2 ring-[#9ce277]",
-          dropStatus === "invalid" && "animate-pulse rounded-sm ring-2 ring-[#d5523f]"
+          dropStatus === "invalid" && "animate-pulse rounded-sm ring-2 ring-[#d5523f]",
+          bodyClassName
         )}
         onDragOver={onDragOver}
         onDrop={onDrop}
