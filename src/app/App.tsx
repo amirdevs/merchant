@@ -63,7 +63,8 @@ const gameViews: GameView[] = [
   "item-detail",
 ];
 const passiveClockViews = new Set<GameView>(["market", "barter", "travel", "journal", "inventory", "inventory-filter", "item-detail", "company", "event", "customers"]);
-const sceneOverlayViews = new Set<GameView>(["customers", "journal", "inventory", "inventory-filter", "item-detail", "system"]);
+const sceneOverlayViews = new Set<GameView>(["customers", "journal", "inventory", "inventory-filter", "item-detail"]);
+const titleViews = new Set<GameView>(["main-menu", "new-profile", "load-game", "settings"]);
 
 function SceneLoading() {
   return (
@@ -78,6 +79,7 @@ function SceneLoading() {
 
 function initialView(): GameView {
   const view = new URLSearchParams(window.location.search).get("view");
+  if (view === "system") return "main-menu";
   return gameViews.includes(view as GameView) ? (view as GameView) : "main-menu";
 }
 
@@ -88,6 +90,7 @@ export function App() {
   const [uiPreferences, setUiPreferences] = useState<UiPreferences>(defaultUiPreferences);
   const [saveSeen, setSaveSeen] = useState(() => Boolean(loadGame()));
   const [packupSaveDay, setPackupSaveDay] = useState<number | null>(null);
+  const [systemMenuOpen, setSystemMenuOpen] = useState(false);
   const advanceTimeRef = useRef(controller.actions.advanceTime);
 
   const hasSave = useMemo(() => saveSeen || Boolean(loadGame()), [saveSeen, controller.state.day]);
@@ -115,7 +118,31 @@ export function App() {
     return () => window.clearInterval(timer);
   }, [activeView]);
 
+  useEffect(() => {
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      if (controller.helpOpen) {
+        controller.actions.setHelpOpen(false);
+        return;
+      }
+      if (systemMenuOpen) {
+        setSystemMenuOpen(false);
+        return;
+      }
+      if (!titleViews.has(activeView)) setSystemMenuOpen(true);
+    }
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [activeView, controller.actions, controller.helpOpen, systemMenuOpen]);
+
   function navigate(view: GameView) {
+    if (view === "system") {
+      setSystemMenuOpen(true);
+      return;
+    }
+    setSystemMenuOpen(false);
     setActiveView(view);
   }
 
@@ -163,8 +190,6 @@ export function App() {
         return <SaveLoadView state={controller.state} merchantProfile={merchantProfile} saveSlots={controller.saveSlots} importInputRef={controller.importInputRef} onBack={() => navigate("main-menu")} onSave={saveCurrent} onLoad={loadCurrent} onExport={controller.actions.exportSave} onImport={(file, slot) => void controller.actions.importSave(file, slot)} onDelete={(slot) => { controller.actions.deleteSave(slot); setSaveSeen(false); }} onUnavailable={controller.actions.setMessage} />;
       case "settings":
         return <SettingsView soundOn={controller.soundOn} uiPreferences={uiPreferences} onToggleSound={controller.actions.toggleAudio} onChangePreferences={setUiPreferences} onBack={() => navigate("main-menu")} />;
-      case "system":
-        return <SystemMenuView onResume={() => navigate("market")} onLoadGame={() => navigate("load-game")} onSettings={() => navigate("settings")} onMainMenu={() => navigate("main-menu")} onSave={saveCurrent} onExport={controller.actions.exportSave} onNewGame={startFresh} />;
       case "travel":
         return <TravelMapView state={controller.state} onEnterMarket={() => navigate("market")} onOpenJournal={() => navigate("journal")} onTravel={controller.actions.travel} onClearTravelResult={controller.actions.clearTravelResult} onToggleRouteBookmark={controller.actions.toggleRouteBookmark} onSetRouteNote={controller.actions.setRouteNote} onBuySupplies={controller.actions.buyCaravanSupplies} />;
       case "market":
@@ -192,7 +217,7 @@ export function App() {
 
   return (
     <AppErrorBoundary>
-      <GameShell controller={controller} activeView={activeView} merchantProfile={merchantProfile} uiPreferences={uiPreferences} onNavigate={navigate}>
+      <GameShell controller={controller} activeView={activeView} uiPreferences={uiPreferences}>
         <Suspense fallback={<SceneLoading />}>
           {sceneOverlayViews.has(activeView) ? (
             <div className="relative flex min-h-0 flex-1">
@@ -201,6 +226,19 @@ export function App() {
               <div className="relative z-30 flex min-h-0 flex-1 p-2 lg:p-4">{view}</div>
             </div>
           ) : view}
+          {systemMenuOpen ? (
+            <SystemMenuView
+              controller={controller}
+              merchantProfile={merchantProfile}
+              onResume={() => setSystemMenuOpen(false)}
+              onLoadGame={() => navigate("load-game")}
+              onSettings={() => navigate("settings")}
+              onMainMenu={() => navigate("main-menu")}
+              onSave={saveCurrent}
+              onExport={controller.actions.exportSave}
+              onNewGame={startFresh}
+            />
+          ) : null}
         </Suspense>
         {controller.helpOpen ? <HelpModal onClose={() => controller.actions.setHelpOpen(false)} /> : null}
       </GameShell>
