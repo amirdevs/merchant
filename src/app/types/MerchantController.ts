@@ -14,6 +14,7 @@ export type GameView =
   | "market"
   | "customers"
   | "journal"
+  | "event"
   | "barter"
   | "inventory"
   | "inventory-filter"
@@ -45,6 +46,11 @@ export type MerchantActions = {
   speakWith: (character: Character, topic: string, reply: string) => void;
   setQuestStatus: (marketIndex: number, status: GameState["questStates"][string]) => void;
   setContractStatus: (contractId: string, status: GameState["contractStates"][string]) => void;
+  advanceDay: () => void;
+  startAuction: () => void;
+  bidAuction: () => void;
+  passAuction: () => void;
+  closeAuction: () => void;
   selectCharacter: (next: Character) => void;
   nextCustomer: () => void;
   movePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;

@@ -5,6 +5,7 @@ import { useMerchantController } from "@/app/hooks/useMerchantController";
 import type { GameView, MerchantProfile, UiPreferences } from "@/app/types";
 import { HelpModal } from "@/components/HelpModal";
 import { CustomersView } from "@/features/customers/CustomersView";
+import { EventView } from "@/features/events/EventView";
 import { InventoryFilterView } from "@/features/inventory/InventoryFilterView";
 import { InventoryManagementView } from "@/features/inventory/InventoryManagementView";
 import { ItemDetailView } from "@/features/inventory/ItemDetailView";
@@ -43,6 +44,7 @@ const gameViews: GameView[] = [
   "market",
   "customers",
   "journal",
+  "event",
   "barter",
   "inventory",
   "inventory-filter",
@@ -111,6 +113,8 @@ export function App() {
         return <CustomersView state={controller.state} people={controller.people} selected={controller.character} onSelect={controller.actions.selectCharacter} onNext={controller.actions.nextCustomer} onNavigate={navigate} onSpeak={controller.actions.speakWith} />;
       case "journal":
         return <JournalView state={controller.state} onBack={() => navigate("market")} onSetQuestStatus={controller.actions.setQuestStatus} onSetContractStatus={controller.actions.setContractStatus} />;
+      case "event":
+        return <EventView state={controller.state} onBack={() => navigate("market")} onAdvanceDay={controller.actions.advanceDay} onStartAuction={controller.actions.startAuction} onBidAuction={controller.actions.bidAuction} onPassAuction={controller.actions.passAuction} onCloseAuction={controller.actions.closeAuction} />;
       case "barter":
         return <BarterConversationView state={controller.state} character={controller.character} playerOffer={controller.playerOffer} characterOffer={controller.characterOffer} message={controller.state.message} onMovePlayer={controller.actions.movePlayer} onMoveCharacter={controller.actions.moveCharacter} onSetPlayerOfferQuantity={controller.actions.setPlayerOfferQuantity} onSetCharacterOfferQuantity={controller.actions.setCharacterOfferQuantity} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onTrade={controller.actions.trade} onAskPrice={controller.actions.askPrice} onAskOffer={controller.actions.askOffer} onClearOffers={controller.actions.clearTradeOffers} onUndoOfferChange={controller.actions.undoLastOfferChange} onGoodbye={() => { controller.actions.goodbye(); navigate("customers"); }} onHelp={() => controller.actions.setHelpOpen(true)} onSpeak={controller.actions.speakWith} />;
       case "inventory":

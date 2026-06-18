@@ -32,6 +32,10 @@ import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled 
 import type { MerchantController } from "@/app/types/MerchantController";
 import { listSaveSlots } from "@/lib/save";
 import { completeContract, resolveContract } from "@/lib/contracts";
+import { createAuctionSession, passAuctionLot, placeAuctionBid } from "@/lib/auction";
+import { eventIsActive } from "@/lib/events";
+import { coinQuantity, spendCopperToll } from "@/lib/economy";
+import { addInventory } from "@/lib/inventory";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -256,6 +260,70 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function advanceDay() {
+    update((draft) => {
+      draft.day += 1;
+      draft.message = `A day passes. It is now day ${draft.day}.`;
+    });
+  }
+
+  function startAuction() {
+    update((draft) => {
+      const current = currentMarket(draft);
+      if (!current.event?.name?.toLowerCase().includes("auction")) {
+        draft.message = "There is no auction scheduled in this market.";
+        return;
+      }
+      if (!eventIsActive(current, draft.day)) {
+        draft.message = `${current.event.name} is not active today.`;
+        return;
+      }
+      const deposit = typeof current.event.data?.depositAmount === "number" ? current.event.data.depositAmount : 0;
+      if (!spendCopperToll(draft.playerInventory, items, deposit)) {
+        draft.message = `You need ${deposit} copper for the auction deposit.`;
+        return;
+      }
+      draft.auctionSession = createAuctionSession(current, items, draft.day);
+      draft.message = deposit > 0 ? `Paid ${deposit} copper deposit. The auction begins.` : "The auction begins.";
+    });
+  }
+
+  function bidAuction() {
+    update((draft) => {
+      const session = draft.auctionSession;
+      if (!session) {
+        draft.message = "Start an auction session first.";
+        return;
+      }
+      const copper = coinQuantity(draft.playerInventory, items, "copper coins");
+      const result = placeAuctionBid(session, copper);
+      if (result.outcome === "won" && result.lot) {
+        spendCopperToll(draft.playerInventory, items, result.cost);
+        addInventory(draft.playerInventory, result.lot.itemIndex, result.lot.quantity);
+        draft.message = `${result.message} Added ${items[result.lot.itemIndex].name} to inventory.`;
+        return;
+      }
+      draft.message = result.message;
+    });
+  }
+
+  function passAuction() {
+    update((draft) => {
+      if (!draft.auctionSession) {
+        draft.message = "Start an auction session first.";
+        return;
+      }
+      draft.message = passAuctionLot(draft.auctionSession);
+    });
+  }
+
+  function closeAuction() {
+    update((draft) => {
+      draft.auctionSession = null;
+      draft.message = "You leave the auction floor.";
+    });
+  }
+
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
@@ -416,6 +484,11 @@ export function useMerchantController(): MerchantController {
       speakWith,
       setQuestStatus,
       setContractStatus,
+      advanceDay,
+      startAuction,
+      bidAuction,
+      passAuction,
+      closeAuction,
       selectCharacter,
       nextCustomer,
       movePlayer,
