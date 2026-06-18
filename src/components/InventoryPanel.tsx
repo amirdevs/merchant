@@ -1,5 +1,5 @@
 import { useRef, useState, type DragEvent, type KeyboardEvent, type MouseEvent } from "react";
-import { Lock } from "lucide-react";
+import { Lock, MousePointer2 } from "lucide-react";
 import type { InventoryEntry, Item } from "@/data/types";
 import { itemIconAsset } from "@/lib/assets";
 import { items, kingdoms } from "@/lib/game";
@@ -63,6 +63,11 @@ type HoverCardState = {
   top: number;
 };
 
+type MouseGuideState = {
+  left: number;
+  top: number;
+};
+
 function cargoSummary(rows: InventoryEntry[], mode: InventoryPanelMode) {
   return rows.reduce(
     (totals, entry) => {
@@ -119,6 +124,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
   const [dropStatus, setDropStatus] = useState<"idle" | "valid" | "invalid">("idle");
   const [noticeEntry, setNoticeEntry] = useState<InventoryEntry | null>(null);
   const [hoverCard, setHoverCard] = useState<HoverCardState | null>(null);
+  const [mouseGuide, setMouseGuide] = useState<MouseGuideState | null>(null);
   const dropTimerRef = useRef<number | null>(null);
   const hoverTimerRef = useRef<number | null>(null);
   const hoverCloseTimerRef = useRef<number | null>(null);
@@ -138,6 +144,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
   function onDragStart(event: DragEvent<HTMLElement>, entry: InventoryEntry) {
     clearHoverTimers();
     setHoverCard(null);
+    setMouseGuide(null);
     const payload = JSON.stringify(dragData(entry));
     event.dataTransfer.effectAllowed = "move";
     event.dataTransfer.setData(dragType, payload);
@@ -197,19 +204,32 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
 
   function openHoverCard(event: MouseEvent<HTMLElement>, entry: InventoryEntry, item: Item, icon?: string) {
     clearHoverTimers();
+    showMouseGuide(event);
     const rect = event.currentTarget.getBoundingClientRect();
     const left = Math.min(Math.max(rect.left + rect.width / 2 - hoverCardWidth / 2, 8), window.innerWidth - hoverCardWidth - 8);
     const belowTop = rect.bottom + 8;
     const top = belowTop + hoverCardHeight > window.innerHeight ? Math.max(8, rect.top - hoverCardHeight - 8) : belowTop;
 
     hoverTimerRef.current = window.setTimeout(() => {
+      setMouseGuide(null);
       setHoverCard({ entry, item, icon, left, top });
     }, 1000);
   }
 
   function scheduleCloseHoverCard() {
     if (hoverTimerRef.current) window.clearTimeout(hoverTimerRef.current);
+    setMouseGuide(null);
     hoverCloseTimerRef.current = window.setTimeout(() => setHoverCard(null), 140);
+  }
+
+  function showMouseGuide(event: MouseEvent<HTMLElement>) {
+    if (!Number.isFinite(event.clientX) || !Number.isFinite(event.clientY)) return;
+    const guideWidth = 196;
+    const guideHeight = 32;
+    setMouseGuide({
+      left: Math.min(event.clientX + 14, window.innerWidth - guideWidth - 8),
+      top: Math.min(event.clientY + 14, window.innerHeight - guideHeight - 8),
+    });
   }
 
   return (
@@ -261,6 +281,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                 onMouseEnter={(event) => {
                   if (item) openHoverCard(event, entry, item, icon);
                 }}
+                onMouseMove={showMouseGuide}
                 onMouseLeave={scheduleCloseHoverCard}
                 onFocus={(event) => {
                   if (item) openHoverCard(event, entry, item, icon);
@@ -362,6 +383,9 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                 </span>
               }
               onClick={(event) => handleItemClick(event, entry)}
+              onMouseEnter={showMouseGuide}
+              onMouseMove={showMouseGuide}
+              onMouseLeave={scheduleCloseHoverCard}
               onKeyDown={(event) => {
                 if (event.key === "Enter" || event.key === " ") {
                   event.preventDefault();
@@ -382,6 +406,17 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
         }) : <div className="border border-[#9a7138]/45 bg-[#fff6d7]/40 p-3 text-sm text-[#725331]">No visible items here.</div>}
       </div>
       )}
+      {mouseGuide && !hoverCard && !noticeEntry ? (
+        <div
+          className="pointer-events-none fixed z-[65] flex items-center gap-1 rounded-sm border border-[#d0a65a]/80 bg-[#160d05]/95 px-1.5 py-1 text-[0.62rem] font-black uppercase text-[#fff3bd] shadow-xl shadow-black/50"
+          style={{ left: mouseGuide.left, top: mouseGuide.top }}
+          aria-hidden="true"
+        >
+          <MouseAction button="L" action={mode === "offer" ? "Remove 1" : "Offer 1"} />
+          <MouseAction button="M" action="Half" />
+          <MouseAction button="R" action={mode === "offer" ? "Clear" : "All"} />
+        </div>
+      ) : null}
       {hoverCard ? (
         <div
           className="fixed z-[70] w-[220px] rounded-sm border-2 border-[#7f5b2a] bg-[#e5c07c] p-2 text-center text-[0.68rem] font-bold leading-snug text-[#2a1a0c] shadow-2xl shadow-black/45"
@@ -476,5 +511,15 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
         </ModalShell>
       ) : null}
     </Panel>
+  );
+}
+
+function MouseAction({ button, action }: { button: string; action: string }) {
+  return (
+    <span className="flex items-center gap-0.5 whitespace-nowrap">
+      <MousePointer2 size={11} />
+      <strong className="text-[#ffd975]">{button}</strong>
+      <span>{action}</span>
+    </span>
   );
 }
