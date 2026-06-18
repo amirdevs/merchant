@@ -43,6 +43,22 @@ export type Character = {
   isMerchant: boolean;
   isPlunderer?: boolean;
   isTraveler?: boolean;
+  isBeggar?: boolean;
+  isSnitch?: boolean;
+  vote?: string | null;
+  mythDeck?: unknown;
+  mythDefeated?: boolean;
+  companyJob?: {
+    timeInWeeks: number;
+    riskPercent: number;
+    costInGold: number;
+    storageTag: string;
+    rewardAmount: number;
+    rewardItem: string;
+    rewardLabel: string;
+    rewardText: string;
+    kingdomIndex: number | null;
+  } | null;
   marketplaceIndex: number;
   marketplaces?: number[];
   maxObtainValue: number;

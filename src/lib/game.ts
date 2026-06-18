@@ -9,6 +9,14 @@ import type { ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { addInventory, clearOffers, moveOffer, transferOffers, visibleQuantity } from "./inventory";
 import { applyModPacks } from "./mods";
+import {
+  deterministicTradeRoll,
+  fairMatchChance,
+  npcBudgetMultiplier,
+  roleReactionSuffix,
+  roleTradeBlock,
+  safetyNetGiftAllowed,
+} from "./npc-behavior";
 import { charactersAtMarket, nextCustomerIndex, selectedCharacter } from "./npc-flow";
 import { ensureRelation, type NpcRelations, reactionText, startingPatience, ultimatumActive } from "./reputation";
 import { deleteGameSave, importGame, loadGame, saveGame, serializeGame } from "./save";
@@ -218,7 +226,7 @@ export function autoAskPrice(state: GameState, character: Character) {
 export function autoAskOffer(state: GameState, character: Character) {
   const playerValue = offerValue(state.playerInventory, character, "player", state);
   if (playerValue <= 0) return "Select some of your goods first, then ask what they will offer.";
-  const budget = npcTradeBudget(character);
+  const budget = npcTradeBudget(character, state);
   if (budget <= 0) return `${character.name} cannot afford to make an offer.`;
 
   clearOffers(character.inventory);
@@ -267,8 +275,9 @@ export function autoAskOffer(state: GameState, character: Character) {
   return `${character.name} cannot match that offer with their stock.`;
 }
 
-export function npcTradeBudget(character: Character) {
-  return Math.max(0, character.maxObtainValue || 0);
+export function npcTradeBudget(character: Character, state?: GameState) {
+  const relation = state ? ensureRelation(state.npcRelations, character) : null;
+  return Math.max(0, Math.floor((character.maxObtainValue || 0) * npcBudgetMultiplier(character, relation)));
 }
 
 function preferenceHint(character: Character) {
@@ -286,19 +295,43 @@ export function completeTrade(state: GameState) {
   if (!character) return state;
   const playerValue = offerValue(state.playerInventory, character, "player", state);
   const characterValue = offerValue(character.inventory, character, "character", state);
-  const budget = npcTradeBudget(character);
+  const budget = npcTradeBudget(character, state);
   if (characterValue > budget) {
     return {
       ...state,
       message: `${character.name} cannot afford that much from their stock.`,
     };
   }
-  const appraisal = appraiseOffer(playerValue, characterValue, character);
-  if (!["great_deal", "good_deal", "fair_deal"].includes(appraisal)) {
-    const next = clone(state);
-    const nextCharacter = selectedCharacter(next);
-    if (!nextCharacter) return state;
-    const relation = ensureRelation(next.npcRelations, nextCharacter);
+  const next = clone(state);
+  const nextCharacter = selectedCharacter(next);
+  if (!nextCharacter) return state;
+  const relation = ensureRelation(next.npcRelations, nextCharacter);
+  const block = roleTradeBlock({
+    character: nextCharacter,
+    relation,
+    playerInventory: next.playerInventory,
+    items,
+    illegalTags: currentKingdom(next).illegalItemTags || [],
+    characterValue,
+  });
+  if (block) {
+    relation.mood -= 1;
+    next.message = block;
+    return next;
+  }
+
+  if (playerValue <= 0 && characterValue <= 0) {
+    next.message = "Place goods on at least one side before proposing the trade.";
+    return next;
+  }
+
+  const playerCargoValue = next.playerInventory.reduce((total, entry) => total + items[entry.itemIndex].loafValue * entry.quantity, 0);
+  const npcGift = playerValue <= 0 && safetyNetGiftAllowed(nextCharacter, relation, playerCargoValue, characterValue);
+  let appraisal = appraiseOffer(playerValue, characterValue, nextCharacter);
+  const fairChance = fairMatchChance(nextCharacter, relation, playerValue, characterValue);
+  const fairMatch = appraisal === "close" && deterministicTradeRoll(next.day, nextCharacter.index, next.offersMade) < fairChance;
+
+  if (!["great_deal", "good_deal", "fair_deal"].includes(appraisal) && !fairMatch && !npcGift) {
     relation.failedOffers += 1;
     relation.patience -= 1;
     relation.mood += appraisal === "close" ? -1 : appraisal === "reaching" ? -2 : -3;
@@ -317,9 +350,7 @@ export function completeTrade(state: GameState) {
     return next;
   }
 
-  const next = clone(state);
-  const nextCharacter = next.characters[character.index];
-  const relation = ensureRelation(next.npcRelations, nextCharacter);
+  if (fairMatch) appraisal = "fair_deal";
   relation.trades += 1;
   relation.failedOffers = 0;
   relation.patience = startingPatience(nextCharacter);
@@ -327,10 +358,18 @@ export function completeTrade(state: GameState) {
   relation.trust += appraisal === "great_deal" ? 2 : 1;
   transferOffers(next.playerInventory, nextCharacter.inventory);
   transferOffers(nextCharacter.inventory, next.playerInventory);
+  const giftMessage = npcGift
+    ? `${nextCharacter.name} offers a small safety-net gift to keep you trading.`
+    : playerValue > 0 && characterValue <= 0
+      ? `${nextCharacter.name} accepts your gift.`
+      : fairMatch
+        ? `${nextCharacter.name} accepts the near-fair offer after a moment of thought.`
+        : reactionText(appraisal, character);
+  const suffix = roleReactionSuffix(nextCharacter);
   return {
     ...next,
     offersMade: 0,
-    message: reactionText(appraisal, character),
+    message: `${giftMessage}${suffix ? ` ${suffix}` : ""}`,
   };
 }
 

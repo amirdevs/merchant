@@ -5,6 +5,7 @@ import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/l
 import { moodLabel, patienceLabel, relationFor, trustLabel, ultimatumActive } from "@/lib/reputation";
 import { buildDealHints } from "@/lib/deal-intelligence";
 import { dialogueChoices } from "@/lib/dialogue";
+import { roleLabel } from "@/lib/npc-behavior";
 import type { MoveAmount } from "@/lib/inventory";
 import { portraitAsset } from "@/lib/assets";
 import { money } from "@/lib/format";
@@ -73,6 +74,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
                 <div>
                   <h1 className="text-center font-display text-4xl text-[#26170a] lg:text-left">{character.name}</h1>
                   <p className="text-center font-bold text-[#75501f] lg:text-left">{character.profession}</p>
+                  <p className="text-center text-xs font-black uppercase text-[#75501f] lg:text-left">{roleLabel(character)}</p>
                   <dl className="mt-3 grid grid-cols-3 gap-2">
                     <StatChip label="Mood" value={moodLabel(relation)} icon={uiAssets.town.moodPositive} tone={relation && relation.mood <= -2 ? "danger" : "parchment"} />
                     <StatChip label="Trust" value={trustLabel(relation)} icon={uiAssets.town.relationshipBadge} />
