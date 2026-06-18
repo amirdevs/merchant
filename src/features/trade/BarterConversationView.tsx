@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { Handshake, HelpCircle } from "lucide-react";
+import { Handshake, HelpCircle, MessageCircle, X } from "lucide-react";
 import type { Character, InventoryEntry } from "@/data/types";
 import { currentKingdom, currentMarket, items, marketplaces, type GameState } from "@/lib/game";
 import { moodLabel, patienceLabel, relationFor, trustLabel, ultimatumActive } from "@/lib/reputation";
@@ -11,7 +11,7 @@ import { itemIconAsset, portraitAsset } from "@/lib/assets";
 import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { InventoryPanel } from "@/components/InventoryPanel";
-import { Button, ModalShell, Panel, ScreenFrame, StatChip } from "@/components/ui";
+import { Button, IconButton, ModalShell, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
 type BarterConversationViewProps = {
   state: GameState;
@@ -124,43 +124,51 @@ export function BarterConversationView({ state, character, playerOffer, characte
               </div>
               <div className="mt-2 grid grid-cols-4 gap-1.5"><Button size="sm" variant="secondary" onClick={onAskPrice}>Ask Price</Button><Button size="sm" variant="secondary" onClick={onAskOffer}>Ask Offer</Button><Button size="sm" onClick={onTrade}><Handshake size={14} /> Accept</Button><Button size="sm" variant="secondary" onClick={onUndoOfferChange}>Undo</Button><Button size="sm" variant="secondary" onClick={onClearOffers}>Clear</Button><Button size="sm" subtle onClick={onGoodbye}>Goodbye</Button><Button className="col-span-2" size="sm" subtle onClick={onHelp}><HelpCircle size={14} /> Help</Button></div>
               {conversationOpen ? (
-                <ModalShell title={character.name} panelClassName="max-w-5xl" onClick={() => setConversationOpen(false)}>
-                  <div className="grid gap-4 text-[#3b260f]" onClick={(event) => event.stopPropagation()}>
-                    <div className="grid gap-5 lg:grid-cols-[20rem_1fr]">
+                <ModalShell panelClassName="relative max-h-[94dvh] max-w-6xl overflow-hidden p-3 lg:p-4" onClick={() => setConversationOpen(false)}>
+                  <IconButton className="absolute right-3 top-3 z-20" type="button" onClick={() => setConversationOpen(false)} aria-label="Close conversation"><X size={18} /></IconButton>
+                  <div className="grid min-h-0 gap-3 text-[#3b260f]" onClick={(event) => event.stopPropagation()}>
+                    <div className="grid min-h-0 gap-4 md:grid-cols-[15rem_minmax(0,1fr)] lg:grid-cols-[17rem_minmax(0,1fr)]">
                       <div
-                        className="mx-auto grid aspect-[4/5] max-h-[22rem] place-items-center overflow-hidden rounded-sm border-2 border-[#b98b37]/80 bg-[#f2ddb1] p-2 text-[#26170a] shadow-xl shadow-[#6c4418]/25"
+                        className="relative mx-auto grid aspect-[4/5] w-full max-w-[17rem] place-items-center overflow-hidden rounded-sm border-2 border-[#b98b37]/80 bg-[#f2ddb1] p-2 text-[#26170a] shadow-xl shadow-[#6c4418]/25"
                         style={{
                           backgroundImage: `linear-gradient(180deg, rgba(255,246,217,.10), rgba(0,0,0,.08)), url("${uiAssets.town.portraitFrameSelected}")`,
                           backgroundSize: "100% 100%",
                         }}
                       >
-                        {character.portraitFile ? <img className="h-full w-full rounded object-cover" src={portraitAsset(character.portraitFile)} alt="" /> : null}
+                        {character.portraitFile ? <img className="h-full w-full rounded object-cover object-top" src={portraitAsset(character.portraitFile)} alt="" /> : null}
+                        <div className="absolute inset-x-2 bottom-2 bg-[#160d05]/90 px-3 py-2 text-center text-[#fff3bd] shadow-lg">
+                          <strong className="block truncate font-display text-xl">{character.name}</strong>
+                          <span className="block truncate text-[0.65rem] font-black uppercase tracking-wide text-[#e8d39d]">{character.profession} / {roleLabel(character)}</span>
+                        </div>
                       </div>
-                      <div>
-                        <h2 className="font-display text-5xl text-[#26170a]">{character.name}</h2>
-                        <p className="mt-1 font-bold text-[#75501f]">{character.profession}</p>
-                        <p className="text-xs font-black uppercase text-[#75501f]">{roleLabel(character)}</p>
-                        <dl className="mt-4 grid grid-cols-3 gap-2">
+                      <div className="flex min-h-0 flex-col gap-3 pr-10">
+                        <header>
+                          <span className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-[#75501f]"><MessageCircle size={15} /> Conversation</span>
+                          <h2 className="mt-1 font-display text-4xl leading-none text-[#26170a]">{character.name}</h2>
+                        </header>
+                        <div className="relative rounded-sm border-2 border-[#9a7138]/65 bg-[#fff8df]/90 px-5 py-4 text-lg leading-relaxed text-[#3b260f] shadow-inner shadow-[#6c4418]/15 before:absolute before:-left-3 before:top-8 before:h-5 before:w-5 before:rotate-45 before:border-b-2 before:border-l-2 before:border-[#9a7138]/65 before:bg-[#fff8df]">
+                          {message}
+                        </div>
+                        <dl className="grid grid-cols-3 gap-2">
                           <StatChip label="Mood" value={moodLabel(relation)} icon={uiAssets.town.moodPositive} tone={relation && relation.mood <= -2 ? "danger" : "parchment"} />
                           <StatChip label="Trust" value={trustLabel(relation)} icon={uiAssets.town.relationshipBadge} />
                           <StatChip label="Patience" value={patienceLabel(relation)} icon={uiAssets.town.tradeStyleBadge} tone={relation && relation.patience <= 2 ? "danger" : "parchment"} />
                         </dl>
-                        <p className="mt-4 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/65 p-4 text-lg leading-snug text-[#3b260f] shadow-inner shadow-[#6c4418]/15">{message}</p>
-                        <div className={`mt-3 rounded-sm border px-3 py-2 text-sm font-black uppercase tracking-wide ${dealReaction.className}`}>
+                        <div className={`rounded-sm border px-3 py-2 text-sm font-black uppercase tracking-wide ${dealReaction.className}`}>
                           {dealReaction.label}: {dealReaction.text}
                         </div>
-                        {ultimatumActive(relation) ? <p className="mt-2 rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/80 p-2 text-sm font-black uppercase tracking-wide text-[#8d271f]">Final offer warning</p> : null}
+                        {ultimatumActive(relation) ? <p className="rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/80 p-2 text-sm font-black uppercase tracking-wide text-[#8d271f]">Final offer warning</p> : null}
                       </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="border-t border-[#9a7138]/55 pt-3">
+                      <span className="mb-2 block text-xs font-black uppercase tracking-[0.18em] text-[#75501f]">Your Response</span>
+                      <div className="grid grid-cols-2 gap-2">
                       {choices.map((choice) => (
                         <ResponseLine key={choice.id} onClick={() => chooseDialogue(choice)}>
                           {choice.label}
                         </ResponseLine>
                       ))}
-                    </div>
-                    <div className="flex justify-end">
-                      <Button variant="secondary" onClick={() => setConversationOpen(false)}>Close</Button>
+                      </div>
                     </div>
                   </div>
                 </ModalShell>
@@ -246,8 +254,9 @@ function OfferPile({ title, inventory }: { title: string; inventory: InventoryEn
 
 function ResponseLine({ children, onClick }: { children: ReactNode; onClick: () => void }) {
   return (
-    <button className="rounded-sm border border-[#b98b37]/55 bg-[#fff6d7]/60 px-4 py-3 text-left text-base shadow-inner shadow-[#6c4418]/10 hover:bg-[#fff1c6]" type="button" onClick={onClick}>
-      {children}
+    <button className="group flex min-h-11 items-center gap-3 rounded-sm border border-[#b98b37]/55 bg-[#fff6d7]/70 px-4 py-2 text-left text-base shadow-inner shadow-[#6c4418]/10 transition hover:border-[#1f5960] hover:bg-[#fff1c6]" type="button" onClick={onClick}>
+      <span className="text-[#9a7138] transition group-hover:text-[#1f5960]">›</span>
+      <span>{children}</span>
     </button>
   );
 }
