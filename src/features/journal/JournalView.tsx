@@ -6,7 +6,7 @@ import { contractDeadline, contractItemProgress, generatedContracts, resolveCont
 import { questCanComplete, questItemProgress, questReward } from "@/lib/quests";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { uiAssets } from "@/lib/ui-assets";
-import { marketRumors } from "@/lib/market-simulation";
+import { marketRumorLedger } from "@/lib/market-simulation";
 import { createBalanceReport } from "@/lib/balance";
 
 type QuestStatus = GameState["questStates"][string];
@@ -34,7 +34,7 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
   const currentQuestProgress = questItemProgress(market, state.playerInventory, items);
   const currentQuestReady = questCanComplete(market, state.playerInventory, items);
   const currentQuestReward = questReward(market, items);
-  const dynamicRumors = marketRumors(state.marketSimulation, market, state.day);
+  const dynamicRumors = marketRumorLedger(state.marketSimulation, market, state.day);
   const balance = createBalanceReport(state);
 
   return (
@@ -160,7 +160,19 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
           <Panel title={<span className="inline-flex items-center gap-2"><BookOpen size={18} /> Rumor Ledger</span>} variant="parchment">
             {dynamicRumors.length ? (
               <div className="mb-3 grid gap-2">
-                {dynamicRumors.map((rumor) => <div className="rounded-sm border border-[#1f5960]/40 bg-[#fff6d7]/70 p-3 text-sm font-bold text-[#1f5960]" key={rumor}>{rumor}</div>)}
+                {dynamicRumors.map((rumor) => (
+                  <div
+                    className={rumor.reliability === "false"
+                      ? "rounded-sm border border-[#8d271f]/40 bg-[#fff6d7]/70 p-3 text-sm font-bold text-[#8d271f]"
+                      : rumor.reliability === "exaggerated"
+                        ? "rounded-sm border border-[#b98b37]/60 bg-[#fff6d7]/70 p-3 text-sm font-bold text-[#75501f]"
+                        : "rounded-sm border border-[#1f5960]/40 bg-[#fff6d7]/70 p-3 text-sm font-bold text-[#1f5960]"}
+                    key={rumor.text}
+                  >
+                    <span className="mr-2 rounded-full border border-current px-2 py-0.5 text-[0.62rem] uppercase tracking-wide">{rumor.reliability}</span>
+                    {rumor.text}
+                  </div>
+                ))}
               </div>
             ) : null}
             {notes.length ? (

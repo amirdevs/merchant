@@ -6,6 +6,10 @@ export type SimulatedMarket = {
 };
 
 export type MarketSimulation = Record<string, SimulatedMarket>;
+export type MarketRumor = {
+  text: string;
+  reliability: "reliable" | "exaggerated" | "stale" | "false";
+};
 
 function marketState(simulation: MarketSimulation, marketIndex: number, day: number) {
   const key = String(marketIndex);
@@ -69,10 +73,40 @@ export function simulatedMarketBiases(simulation: MarketSimulation, market: Mark
 }
 
 export function marketRumors(simulation: MarketSimulation, market: Marketplace, day: number) {
-  return simulatedMarketBiases(simulation, market, day)
+  return marketRumorLedger(simulation, market, day).map((rumor) => rumor.text);
+}
+
+function rumorRoll(marketIndex: number, day: number, salt: number) {
+  let value = ((marketIndex + 1) * 1103515245 + (day + 11) * 12345 + salt * 2654435761) >>> 0;
+  value ^= value >>> 13;
+  return (value >>> 0) / 4294967296;
+}
+
+export function marketRumorLedger(simulation: MarketSimulation, market: Marketplace, day: number): MarketRumor[] {
+  const realRumors = simulatedMarketBiases(simulation, market, day)
     .filter((bias) => Math.abs(bias.percent) >= 10)
     .slice(0, 4)
-    .map((bias) => bias.percent > 0
-      ? `${bias.tag} is becoming scarce in ${market.name}; prices are climbing.`
-      : `${bias.tag} is flooding ${market.name}; buyers are paying less.`);
+    .map<MarketRumor>((bias, index) => {
+      const roll = rumorRoll(market.index, day, index);
+      const reliability: MarketRumor["reliability"] = roll > 0.82 ? "exaggerated" : roll > 0.68 ? "stale" : "reliable";
+      const direction = bias.percent > 0 ? "scarce" : "flooding";
+      const text = reliability === "exaggerated"
+        ? `${bias.tag} is supposedly impossible to find in ${market.name}; prices may be overhyped.`
+        : reliability === "stale"
+          ? `Old road talk says ${bias.tag} was ${direction} in ${market.name}; verify before betting the wagon.`
+          : bias.percent > 0
+            ? `${bias.tag} is becoming scarce in ${market.name}; prices are climbing.`
+            : `${bias.tag} is flooding ${market.name}; buyers are paying less.`;
+      return { text, reliability };
+    });
+
+  if (realRumors.length >= 3) return realRumors;
+
+  const bias = market.bias?.[Math.floor(rumorRoll(market.index, day, 99) * (market.bias?.length || 1))];
+  if (!bias) return realRumors;
+  const falseDirection = bias.percent > 0 ? "cheap" : "scarce";
+  return realRumors.concat({
+    reliability: "false",
+    text: `A dockhand claims ${bias.tag} is ${falseDirection} in ${market.name}, but the story smells planted.`,
+  }).slice(0, 4);
 }

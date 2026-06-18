@@ -862,7 +862,7 @@ Status: in progress.
 - Expand every authored quest into multi-stage objectives and consequences.
 - Add dialogue conditions based on quests, relations, inventory, laws, events, and factions.
 - Add NPC memories, secrets, favors, rivalries, introductions, and follow-up conversations. Gifts, illegal deals, favors, and unlockable secrets implemented; rivalries and larger arcs remain.
-- Add rumors that can be true, outdated, exaggerated, or deliberately false.
+- Add rumors that can be true, outdated, exaggerated, or deliberately false. Implemented baseline in the journal rumor ledger.
 - Add character-specific gifts, betrayals, rescues, recruitment, and long-term arcs.
 - Add more repeatable contract families and chained contracts.
 
