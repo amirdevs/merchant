@@ -51,6 +51,16 @@ type InventoryDragData = {
 };
 
 const dragType = "application/x-merchant-inventory-item";
+const hoverCardWidth = 220;
+const hoverCardHeight = 286;
+
+type HoverCardState = {
+  entry: InventoryEntry;
+  item: Item;
+  icon?: string;
+  left: number;
+  top: number;
+};
 
 function cargoSummary(rows: InventoryEntry[], mode: InventoryPanelMode) {
   return rows.reduce(
@@ -107,7 +117,10 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
   const totals = cargoSummary(rows, mode);
   const [dropStatus, setDropStatus] = useState<"idle" | "valid" | "invalid">("idle");
   const [noticeEntry, setNoticeEntry] = useState<InventoryEntry | null>(null);
+  const [hoverCard, setHoverCard] = useState<HoverCardState | null>(null);
   const dropTimerRef = useRef<number | null>(null);
+  const hoverTimerRef = useRef<number | null>(null);
+  const hoverCloseTimerRef = useRef<number | null>(null);
   const noticeItem = noticeEntry ? itemFor(noticeEntry) : null;
   const notice = noticeEntry && noticeItem ? itemNotice(noticeItem, noticeEntry, illegalTags) : null;
 
@@ -151,6 +164,28 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
 
   function onDragOver(event: DragEvent<HTMLElement>) {
     if (event.dataTransfer.types.includes(dragType)) event.preventDefault();
+  }
+
+  function clearHoverTimers() {
+    if (hoverTimerRef.current) window.clearTimeout(hoverTimerRef.current);
+    if (hoverCloseTimerRef.current) window.clearTimeout(hoverCloseTimerRef.current);
+  }
+
+  function openHoverCard(event: MouseEvent<HTMLElement>, entry: InventoryEntry, item: Item, icon?: string) {
+    clearHoverTimers();
+    const rect = event.currentTarget.getBoundingClientRect();
+    const left = Math.min(Math.max(rect.left + rect.width / 2 - hoverCardWidth / 2, 8), window.innerWidth - hoverCardWidth - 8);
+    const belowTop = rect.bottom + 8;
+    const top = belowTop + hoverCardHeight > window.innerHeight ? Math.max(8, rect.top - hoverCardHeight - 8) : belowTop;
+
+    hoverTimerRef.current = window.setTimeout(() => {
+      setHoverCard({ entry, item, icon, left, top });
+    }, 1000);
+  }
+
+  function scheduleCloseHoverCard() {
+    if (hoverTimerRef.current) window.clearTimeout(hoverTimerRef.current);
+    hoverCloseTimerRef.current = window.setTimeout(() => setHoverCard(null), 140);
   }
 
   return (
@@ -199,6 +234,14 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                   physicalClass(item?.size, item?.weight, variant),
                   darkPanel ? "text-[#fff8d8]" : "text-[#201207]"
                 )}
+                onMouseEnter={(event) => {
+                  if (item) openHoverCard(event, entry, item, icon);
+                }}
+                onMouseLeave={scheduleCloseHoverCard}
+                onFocus={(event) => {
+                  if (item) openHoverCard(event, entry, item, icon);
+                }}
+                onBlur={scheduleCloseHoverCard}
               >
                 <ItemSlot
                   className={cn("mx-auto", slotSizeClass(item?.size, item?.weight, variant))}
@@ -249,44 +292,6 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                   </span>
                 ) : null}
                 {entry.highlighted && mode !== "offer" ? <span className="absolute bottom-16 left-1 rounded-full border border-[#d0a65a] bg-[#5a3715]/90 px-1.5 py-0.5 text-[0.56rem] font-black uppercase text-[#fff3bd]">Marked</span> : null}
-                {item ? (
-                  <div
-                    className={cn(
-                      "pointer-events-none absolute inset-x-1 top-1 z-30 rounded-sm border p-2 text-center text-[0.68rem] font-bold leading-snug opacity-0 shadow-xl transition delay-1000 duration-150 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100",
-                      darkPanel ? "border-[#d0a65a]/70 bg-[#1b1007]/95 text-[#fff3bd]" : "border-[#9a7138]/70 bg-[#f1d49a]/95 text-[#2a1a0c]"
-                    )}
-                  >
-                    <div className={cn("mb-1 grid min-h-14 place-items-center rounded-sm px-2 py-1", darkPanel ? "bg-black/45" : "bg-[#3f3f3f] text-white")}>
-                      {icon ? <img className="h-5 w-5 object-contain" src={icon} alt="" /> : null}
-                      <strong className="block max-w-full truncate text-sm leading-tight">{item.name}</strong>
-                    </div>
-                    <div className="grid gap-1">
-                      <div className="grid grid-cols-[1fr_3rem] items-center gap-1">
-                        <span className={cn("rounded-sm px-2 py-1 text-sm text-white", darkPanel ? "bg-[#315b86]" : "bg-[#436d9c]")}>Size:</span>
-                        <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-sm text-[#2a1a0c]">{item.size}</span>
-                      </div>
-                      <div className="grid grid-cols-[1fr_3rem] items-center gap-1">
-                        <span className={cn("rounded-sm px-2 py-1 text-sm text-white", darkPanel ? "bg-[#3d8754]" : "bg-[#5aa76a]")}>Weight:</span>
-                        <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-sm text-[#2a1a0c]">{item.weight}</span>
-                      </div>
-                    </div>
-                    <div className="mt-1 flex flex-wrap justify-center gap-1">
-                      {item.tags.slice(0, 3).map((tag) => <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-[#2a1a0c]" key={tag}>{title(tag)}</span>)}
-                    </div>
-                    {entry.protected || entry.conceal ? <span className="block text-[#1f5960]">{entry.protected ? "Protected" : ""}{entry.protected && entry.conceal ? " / " : ""}{entry.conceal ? "Concealed" : ""}</span> : null}
-                    <Button
-                      className="mt-2 w-full justify-center px-2 py-1 text-xs"
-                      type="button"
-                      variant="secondary"
-                      onClick={(event) => {
-                        event.stopPropagation();
-                        setNoticeEntry(entry);
-                      }}
-                    >
-                      Notice
-                    </Button>
-                  </div>
-                ) : null}
               </div>
             );
           }) : <div className="w-full border border-[#9a7138]/45 bg-[#fff6d7]/40 p-3 text-sm text-[#725331]">No visible items here.</div>}
@@ -367,6 +372,49 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
         }) : <div className="border border-[#9a7138]/45 bg-[#fff6d7]/40 p-3 text-sm text-[#725331]">No visible items here.</div>}
       </div>
       )}
+      {hoverCard ? (
+        <div
+          className="fixed z-[70] w-[220px] rounded-sm border-2 border-[#7f5b2a] bg-[#e5c07c] p-2 text-center text-[0.68rem] font-bold leading-snug text-[#2a1a0c] shadow-2xl shadow-black/45"
+          style={{
+            left: hoverCard.left,
+            top: hoverCard.top,
+            backgroundImage: "linear-gradient(180deg, rgba(255,246,195,.9), rgba(209,151,76,.88))",
+          }}
+          onMouseEnter={clearHoverTimers}
+          onMouseLeave={scheduleCloseHoverCard}
+        >
+          <div className="mb-2 grid min-h-20 place-items-center rounded-sm bg-[#3f3f3f] px-2 py-2 text-white shadow-inner shadow-black/35">
+            {hoverCard.icon ? <img className="h-8 w-8 object-contain drop-shadow" src={hoverCard.icon} alt="" /> : null}
+            <strong className="block max-w-full truncate text-lg leading-tight">{hoverCard.item.name}</strong>
+          </div>
+          <div className="grid gap-1">
+            <div className="grid grid-cols-[1fr_3.5rem] items-center gap-1">
+              <span className="rounded-sm bg-[#436d9c] px-2 py-1 text-base text-white shadow">Size:</span>
+              <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-base text-[#2a1a0c]">{hoverCard.item.size}</span>
+            </div>
+            <div className="grid grid-cols-[1fr_3.5rem] items-center gap-1">
+              <span className="rounded-sm bg-[#5aa76a] px-2 py-1 text-base text-white shadow">Weight:</span>
+              <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-base text-[#2a1a0c]">{hoverCard.item.weight}</span>
+            </div>
+          </div>
+          <div className="mt-2 flex flex-wrap justify-center gap-1">
+            {hoverCard.item.tags.slice(0, 3).map((tag) => <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-sm text-[#2a1a0c]" key={tag}>{title(tag)}</span>)}
+          </div>
+          {hoverCard.entry.protected || hoverCard.entry.conceal ? <span className="mt-1 block text-[#1f5960]">{hoverCard.entry.protected ? "Protected" : ""}{hoverCard.entry.protected && hoverCard.entry.conceal ? " / " : ""}{hoverCard.entry.conceal ? "Concealed" : ""}</span> : null}
+          <Button
+            className="mt-2 w-full justify-center px-2 py-1 text-xs"
+            type="button"
+            variant="secondary"
+            onClick={(event) => {
+              event.stopPropagation();
+              setNoticeEntry(hoverCard.entry);
+              setHoverCard(null);
+            }}
+          >
+            Notice
+          </Button>
+        </div>
+      ) : null}
       {noticeEntry && noticeItem && notice ? (
         <ModalShell title="Item Notice" onClick={() => setNoticeEntry(null)}>
           <div className="grid gap-4 text-[#2a1a0c]" onClick={(event) => event.stopPropagation()}>
