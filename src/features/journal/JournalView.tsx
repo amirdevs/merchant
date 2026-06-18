@@ -132,6 +132,14 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
               <p className="text-[#3b260f]">No market events are recorded yet.</p>
             )}
           </Panel>
+          <Panel title="Rival Merchants" variant="parchment">
+            <div className="grid max-h-56 gap-2 overflow-auto">
+              {state.rivals.merchants.map((rival) => (
+                <LedgerRow key={rival.id} title={rival.name} subtitle={`${rival.personality} / ${marketplaces[rival.marketIndex]?.name || "on the road"} / ${rival.favoriteTags.join(", ") || "mixed goods"}`} trailing={<span className="text-sm font-bold text-[#75501f]">{rival.wealth} wealth</span>} />
+              ))}
+              {state.rivals.activityLog.slice(0, 5).map((activity, index) => <p className="rounded-sm border border-[#9a7138]/45 bg-[#fff6d7]/55 p-2 text-sm text-[#3b260f]" key={`${index}-${activity}`}>{activity}</p>)}
+            </div>
+          </Panel>
           <Panel title={<span className="inline-flex items-center gap-2"><BookOpen size={18} /> Rumor Ledger</span>} variant="parchment">
             {dynamicRumors.length ? (
               <div className="mb-3 grid gap-2">

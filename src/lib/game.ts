@@ -14,6 +14,7 @@ import type { DraftSession } from "./draft";
 import { applyPackhorseTravelWear, createCaravanState, masteryRiskReduction, recordRoute, routeKey, type CaravanState } from "./caravan";
 import { activePermit, adjustKingdomHeat, coolLawHeat, createLawState, kingdomHeat, permitInspectionMultiplier, type LawState } from "./law";
 import { npcRoles } from "./npc-behavior";
+import { advanceRivals, createRivalState, type RivalState } from "./rivals";
 import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { eventBiases } from "./events";
@@ -65,6 +66,7 @@ export type GameState = {
   draftSession: DraftSession | null;
   caravan: CaravanState;
   law: LawState;
+  rivals: RivalState;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -175,6 +177,7 @@ export function newGame(): GameState {
     draftSession: null,
     caravan: createCaravanState(),
     law: createLawState(),
+    rivals: createRivalState(characters),
     dialogueLog: [],
     travelResult: null,
   };
@@ -479,6 +482,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
   state.day += route.travelDays || 1;
   coolLawHeat(state.law, route.travelDays || 1);
   advanceMarketSimulation(state.marketSimulation, state.day);
+  const rivalActivities = advanceRivals({ rivals: state.rivals, simulation: state.marketSimulation, markets: marketplaces, items, day: state.day });
   const settledShipments = settleShipments(state.company, state.day);
   const expiredContracts = expireContracts({
     states: state.contractStates,
@@ -539,7 +543,9 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
     arrivalDay: state.day,
     events: riskEvents.map((event) => event.message),
   };
-  state.message = settledShipments.length
+  state.message = rivalActivities.length
+    ? `Arrived in ${marketplaces[toMarketIndex].name}. ${rivalActivities[0]}`
+    : settledShipments.length
     ? `Arrived in ${marketplaces[toMarketIndex].name}. Company shipment results: ${settledShipments.map((shipment) => shipment.status).join(", ")}.`
     : expiredQuests.length
     ? `Arrived in ${marketplaces[toMarketIndex].name}. ${expiredQuests.map((market) => market.quest?.name).join(", ")} failed after missing the deadline.`

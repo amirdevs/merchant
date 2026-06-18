@@ -55,6 +55,7 @@ import {
 import { createDraftSession, pickDraftItem as resolveDraftPick } from "@/lib/draft";
 import { repairPackhorses as repairCaravanPackhorses, toggleRouteBookmark as toggleCaravanRouteBookmark, upgradeConcealment as upgradeCaravanConcealment } from "@/lib/caravan";
 import { issuePermit } from "@/lib/law";
+import { advanceRivals } from "@/lib/rivals";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -314,6 +315,7 @@ export function useMerchantController(): MerchantController {
     update((draft) => {
       draft.day += 1;
       advanceMarketSimulation(draft.marketSimulation, draft.day);
+      const rivalActivities = advanceRivals({ rivals: draft.rivals, simulation: draft.marketSimulation, markets: marketplaces, items, day: draft.day });
       const expiredContracts = expireContracts({
         states: draft.contractStates,
         acceptedDays: draft.contractAcceptedDays,
@@ -331,7 +333,9 @@ export function useMerchantController(): MerchantController {
       if (penalty) spendCopperToll(draft.playerInventory, items, penalty);
       const failures = [...expiredContracts.map((contract) => contract.title), ...expiredQuests.map((market) => market.quest?.name || "Quest")];
       const settled = settleShipments(draft.company, draft.day);
-      draft.message = settled.length
+      draft.message = rivalActivities.length
+        ? `Day ${draft.day}. ${rivalActivities[0]}`
+        : settled.length
         ? `Day ${draft.day}. Shipment results: ${settled.map((shipment) => shipment.status).join(", ")}.`
         : failures.length
         ? `Day ${draft.day}. Failed deadlines: ${failures.join(", ")}${penalty ? `. Up to ${penalty} copper paid in penalties.` : "."}`
