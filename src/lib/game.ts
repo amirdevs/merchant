@@ -413,6 +413,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number) {
     destination: marketplaces[toMarketIndex],
     kingdom: currentKingdom(state),
     day: state.day,
+    travelDays: route.travelDays || 1,
   });
   state.travelResult = {
     fromMarketName,

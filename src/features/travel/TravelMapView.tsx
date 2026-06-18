@@ -7,6 +7,7 @@ import { canPayCopperToll, inventoryTotals } from "@/lib/economy";
 import { inventoryIllegalEntries } from "@/lib/legal";
 import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
+import { routeRiskPreview } from "@/lib/travel-risk";
 import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
 
 export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult }: { state: GameState; onTravel: (marketIndex: number) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void }) {
@@ -19,6 +20,16 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
   const pendingMarket = pendingDestination === null ? null : marketplaces[pendingDestination];
   const pendingKingdom = pendingMarket ? kingdoms[pendingMarket.kingdomIndex] : null;
   const pendingIllegal = pendingKingdom ? inventoryIllegalEntries(state.playerInventory, items, pendingKingdom.illegalItemTags || []) : [];
+  const pendingRisk = pendingRoute && pendingMarket
+    ? routeRiskPreview({
+      inventory: state.playerInventory,
+      items,
+      destination: pendingMarket,
+      kingdom: pendingKingdom || undefined,
+      days: pendingRoute.travelDays,
+      tolls: pendingRoute.tolls,
+    })
+    : null;
   const requestTravel = (marketIndex: number) => setPendingDestination(marketIndex);
 
   return (
@@ -70,12 +81,20 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
                 const destination = marketplaces[connection.marketplaceIndex];
                 const destinationKingdom = kingdoms[destination.kingdomIndex];
                 const destinationIllegal = inventoryIllegalEntries(state.playerInventory, items, destinationKingdom?.illegalItemTags || []);
+                const risk = routeRiskPreview({
+                  inventory: state.playerInventory,
+                  items,
+                  destination,
+                  kingdom: destinationKingdom,
+                  days: connection.travelDays,
+                  tolls: connection.tolls,
+                });
                 return (
                   <LedgerRow
                     key={destination.index}
                     title={destination.name}
-                    subtitle={`Toll ${money(connection.tolls)} copper / ${canPayCopperToll(state.playerInventory, items, connection.tolls) ? "payable" : "need copper"}${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""} / route asset ${routeAsset(connection.routeFile) ? "linked" : "pending"}`}
-                    trailing={<span className="text-sm font-bold text-[#75501f]">{connection.travelDays}d</span>}
+                    subtitle={`Toll ${money(connection.tolls)} / guard ${risk.guardInspectionPercent}% / theft ${risk.theftPercent}%${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""} / cargo ${money(risk.cargoValue)}`}
+                    trailing={<span className="text-sm font-bold uppercase text-[#75501f]">{connection.travelDays}d / {risk.level}</span>}
                     onClick={() => requestTravel(destination.index)}
                   />
                 );
@@ -93,6 +112,10 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
               <StatChip label="Toll" value={money(pendingRoute.tolls)} icon={uiAssets.hud.goldCoin} />
               <StatChip label="Capacity" value={cargo.canTravel ? "Safe" : "Over"} tone={cargo.canTravel ? "parchment" : "danger"} />
               <StatChip label="Pack Animals" value={cargo.packAnimals} />
+              {pendingRisk ? <StatChip label="Route Risk" value={pendingRisk.level} tone={pendingRisk.level === "high" || pendingRisk.level === "severe" ? "danger" : "parchment"} /> : null}
+              {pendingRisk ? <StatChip label="Guard Check" value={`${pendingRisk.guardInspectionPercent}%`} /> : null}
+              {pendingRisk ? <StatChip label="Theft" value={`${pendingRisk.theftPercent}%`} /> : null}
+              {pendingRisk ? <StatChip label="Cargo Value" value={money(pendingRisk.cargoValue)} /> : null}
               <StatChip label="Copper" value={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls) ? "Ready" : "Short"} tone={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls) ? "parchment" : "danger"} />
             </div>
             {pendingIllegal.length ? <div className="rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/70 p-3 font-bold text-[#8d271f]">Destination law warning: {pendingIllegal.length} illegal stack{pendingIllegal.length === 1 ? "" : "s"} in cargo.</div> : null}

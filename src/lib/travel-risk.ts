@@ -1,6 +1,7 @@
 import type { InventoryEntry, Item, Kingdom, Marketplace } from "@/data/types";
 import { visibleQuantity } from "./inventory";
 import { itemIsIllegal } from "./legal";
+import { inventoryTotals } from "./economy";
 
 export type TravelRiskEvent = {
   kind: "inspection" | "theft";
@@ -11,6 +12,50 @@ function seededRisk(seed: number) {
   let value = seed || 1;
   value = (value * 1664525 + 1013904223) >>> 0;
   return value / 4294967296;
+}
+
+export type RouteRiskPreview = {
+  guardInspectionPercent: number;
+  theftPercent: number;
+  illegalStacks: number;
+  exposedIllegalStacks: number;
+  concealedIllegalStacks: number;
+  cargoValue: number;
+  tolls: number;
+  days: number;
+  level: "low" | "medium" | "high" | "severe";
+};
+
+export function routeRiskPreview(options: {
+  inventory: InventoryEntry[];
+  items: Item[];
+  destination: Marketplace;
+  kingdom: Kingdom | undefined;
+  days: number;
+  tolls: number;
+}): RouteRiskPreview {
+  const { inventory, items, destination, kingdom, days, tolls } = options;
+  const illegalEntries = inventory.filter((entry) => visibleQuantity(entry) > 0 && itemIsIllegal(items[entry.itemIndex], kingdom?.illegalItemTags || []));
+  const exposedIllegalStacks = illegalEntries.filter((entry) => !entry.conceal).length;
+  const concealedIllegalStacks = illegalEntries.length - exposedIllegalStacks;
+  const guardInspectionPercent = illegalEntries.length
+    ? Math.min(95, 12 + days * 2 + exposedIllegalStacks * 28 + concealedIllegalStacks * 8)
+    : Math.min(20, 3 + days);
+  const theftPercent = Math.max(0, Math.min(100, destination.theft?.percent || 0));
+  const cargoValue = inventoryTotals(inventory, items).value;
+  const combined = guardInspectionPercent + theftPercent + Math.min(25, cargoValue / 500);
+  const level = combined >= 100 ? "severe" : combined >= 65 ? "high" : combined >= 30 ? "medium" : "low";
+  return {
+    guardInspectionPercent,
+    theftPercent,
+    illegalStacks: illegalEntries.length,
+    exposedIllegalStacks,
+    concealedIllegalStacks,
+    cargoValue,
+    tolls,
+    days,
+    level,
+  };
 }
 
 function removeQuantity(entry: InventoryEntry, quantity: number) {
@@ -30,27 +75,35 @@ export function applyTravelRisks(options: {
   destination: Marketplace;
   kingdom: Kingdom | undefined;
   day: number;
+  travelDays?: number;
+  inspectionRoll?: number;
+  theftRoll?: number;
 }) {
-  const { inventory, items, destination, kingdom, day } = options;
+  const { inventory, items, destination, kingdom, day, travelDays = 1 } = options;
   const events: TravelRiskEvent[] = [];
+  const preview = routeRiskPreview({ inventory, items, destination, kingdom, days: travelDays, tolls: 0 });
   const illegalTags = kingdom?.illegalItemTags || [];
-  const illegalEntry = inventory.find((entry) => {
-    const item = items[entry.itemIndex];
-    return visibleQuantity(entry) > 0 && !entry.conceal && itemIsIllegal(item, illegalTags);
-  });
+  const illegalEntry = inventory
+    .filter((entry) => {
+      const item = items[entry.itemIndex];
+      return visibleQuantity(entry) > 0 && itemIsIllegal(item, illegalTags);
+    })
+    .sort((left, right) => Number(left.conceal) - Number(right.conceal))[0];
 
-  if (illegalEntry) {
+  const inspectionRoll = options.inspectionRoll ?? seededRisk((destination.index + 1) * 6151 + day * 173);
+  if (illegalEntry && inspectionRoll * 100 < preview.guardInspectionPercent) {
     const item = items[illegalEntry.itemIndex];
     const taken = Math.min(visibleQuantity(illegalEntry), Math.max(1, Math.ceil(visibleQuantity(illegalEntry) / 2)));
     removeQuantity(illegalEntry, taken);
     events.push({
       kind: "inspection",
-      message: `Guards inspected your cargo and confiscated ${taken} ${item.name}. Concealed goods are harder to spot.`,
+      message: `Guards inspected your cargo and confiscated ${taken} ${item.name}${illegalEntry.conceal ? " from a concealed compartment" : ""}. Concealment lowers risk but cannot remove it.`,
     });
   }
 
   const theft = destination.theft;
-  if (theft && seededRisk((destination.index + 1) * 8191 + day * 131) * 100 < theft.percent) {
+  const theftRoll = options.theftRoll ?? seededRisk((destination.index + 1) * 8191 + day * 131);
+  if (theft && theftRoll * 100 < theft.percent) {
     const candidates = inventory
       .filter((entry) => {
         const item = items[entry.itemIndex];
