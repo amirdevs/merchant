@@ -7,7 +7,7 @@ import { money, title } from "@/lib/format";
 import { type MoveAmount, visibleQuantity } from "@/lib/inventory";
 import { itemIsIllegal } from "@/lib/legal";
 import { cn } from "@/lib/cn";
-import { Button, ItemSlot, LedgerRow, ModalShell, Panel, StatChip } from "@/components/ui";
+import { Button, ItemSlot, LedgerRow, ModalShell, Panel, Portal, StatChip } from "@/components/ui";
 
 type InventoryPanelMode = "stock" | "offer";
 
@@ -407,58 +407,62 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
       </div>
       )}
       {mouseGuide && !hoverCard && !noticeEntry ? (
-        <div
-          className="pointer-events-none fixed z-[65] flex items-center gap-1 rounded-sm border border-[#d0a65a]/80 bg-[#160d05]/95 px-1.5 py-1 text-[0.62rem] font-black uppercase text-[#fff3bd] shadow-xl shadow-black/50"
-          style={{ left: mouseGuide.left, top: mouseGuide.top }}
-          aria-hidden="true"
-        >
-          <MouseAction button="L" action={mode === "offer" ? "Remove 1" : "Offer 1"} />
-          <MouseAction button="M" action="Half" />
-          <MouseAction button="R" action={mode === "offer" ? "Clear" : "All"} />
-        </div>
+        <Portal>
+          <div
+            className="pointer-events-none fixed z-[800] flex items-center gap-1 rounded-sm border border-[#d0a65a]/80 bg-[#160d05]/95 px-1.5 py-1 text-[0.62rem] font-black uppercase text-[#fff3bd] shadow-xl shadow-black/50"
+            style={{ left: mouseGuide.left, top: mouseGuide.top }}
+            aria-hidden="true"
+          >
+            <MouseAction button="L" action={mode === "offer" ? "Remove 1" : "Offer 1"} />
+            <MouseAction button="M" action="Half" />
+            <MouseAction button="R" action={mode === "offer" ? "Clear" : "All"} />
+          </div>
+        </Portal>
       ) : null}
       {hoverCard ? (
-        <div
-          className="fixed z-[70] w-[220px] rounded-sm border-2 border-[#7f5b2a] bg-[#e5c07c] p-2 text-center text-[0.68rem] font-bold leading-snug text-[#2a1a0c] shadow-2xl shadow-black/45"
-          style={{
-            left: hoverCard.left,
-            top: hoverCard.top,
-            backgroundImage: "linear-gradient(180deg, rgba(255,246,195,.9), rgba(209,151,76,.88))",
-          }}
-          onMouseEnter={clearHoverTimers}
-          onMouseLeave={scheduleCloseHoverCard}
-        >
-          <div className="mb-2 grid min-h-20 place-items-center rounded-sm bg-[#3f3f3f] px-2 py-2 text-white shadow-inner shadow-black/35">
-            {hoverCard.icon ? <img className="h-8 w-8 object-contain drop-shadow" src={hoverCard.icon} alt="" /> : null}
-            <strong className="block max-w-full truncate text-lg leading-tight">{hoverCard.item.name}</strong>
-          </div>
-          <div className="grid gap-1">
-            <div className="grid grid-cols-[1fr_3.5rem] items-center gap-1">
-              <span className="rounded-sm bg-[#436d9c] px-2 py-1 text-base text-white shadow">Size:</span>
-              <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-base text-[#2a1a0c]">{hoverCard.item.size}</span>
-            </div>
-            <div className="grid grid-cols-[1fr_3.5rem] items-center gap-1">
-              <span className="rounded-sm bg-[#5aa76a] px-2 py-1 text-base text-white shadow">Weight:</span>
-              <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-base text-[#2a1a0c]">{hoverCard.item.weight}</span>
-            </div>
-          </div>
-          <div className="mt-2 flex flex-wrap justify-center gap-1">
-            {hoverCard.item.tags.slice(0, 3).map((tag) => <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-sm text-[#2a1a0c]" key={tag}>{title(tag)}</span>)}
-          </div>
-          {hoverCard.entry.protected || hoverCard.entry.conceal ? <span className="mt-1 block text-[#1f5960]">{hoverCard.entry.protected ? "Protected" : ""}{hoverCard.entry.protected && hoverCard.entry.conceal ? " / " : ""}{hoverCard.entry.conceal ? "Concealed" : ""}</span> : null}
-          <Button
-            className="mt-2 w-full justify-center px-2 py-1 text-xs"
-            type="button"
-            variant="secondary"
-            onClick={(event) => {
-              event.stopPropagation();
-              setNoticeEntry(hoverCard.entry);
-              setHoverCard(null);
+        <Portal>
+          <div
+            className="fixed z-[900] w-[220px] rounded-sm border-2 border-[#7f5b2a] bg-[#e5c07c] p-2 text-center text-[0.68rem] font-bold leading-snug text-[#2a1a0c] shadow-2xl shadow-black/45"
+            style={{
+              left: hoverCard.left,
+              top: hoverCard.top,
+              backgroundImage: "linear-gradient(180deg, rgba(255,246,195,.9), rgba(209,151,76,.88))",
             }}
+            onMouseEnter={clearHoverTimers}
+            onMouseLeave={scheduleCloseHoverCard}
           >
-            Notice
-          </Button>
-        </div>
+            <div className="mb-2 grid min-h-20 place-items-center rounded-sm bg-[#3f3f3f] px-2 py-2 text-white shadow-inner shadow-black/35">
+              {hoverCard.icon ? <img className="h-8 w-8 object-contain drop-shadow" src={hoverCard.icon} alt="" /> : null}
+              <strong className="block max-w-full truncate text-lg leading-tight">{hoverCard.item.name}</strong>
+            </div>
+            <div className="grid gap-1">
+              <div className="grid grid-cols-[1fr_3.5rem] items-center gap-1">
+                <span className="rounded-sm bg-[#436d9c] px-2 py-1 text-base text-white shadow">Size:</span>
+                <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-base text-[#2a1a0c]">{hoverCard.item.size}</span>
+              </div>
+              <div className="grid grid-cols-[1fr_3.5rem] items-center gap-1">
+                <span className="rounded-sm bg-[#5aa76a] px-2 py-1 text-base text-white shadow">Weight:</span>
+                <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-base text-[#2a1a0c]">{hoverCard.item.weight}</span>
+              </div>
+            </div>
+            <div className="mt-2 flex flex-wrap justify-center gap-1">
+              {hoverCard.item.tags.slice(0, 3).map((tag) => <span className="rounded-sm border border-[#7f5b2a] bg-[#fff8df] px-2 py-1 text-sm text-[#2a1a0c]" key={tag}>{title(tag)}</span>)}
+            </div>
+            {hoverCard.entry.protected || hoverCard.entry.conceal ? <span className="mt-1 block text-[#1f5960]">{hoverCard.entry.protected ? "Protected" : ""}{hoverCard.entry.protected && hoverCard.entry.conceal ? " / " : ""}{hoverCard.entry.conceal ? "Concealed" : ""}</span> : null}
+            <Button
+              className="mt-2 w-full justify-center px-2 py-1 text-xs"
+              type="button"
+              variant="secondary"
+              onClick={(event) => {
+                event.stopPropagation();
+                setNoticeEntry(hoverCard.entry);
+                setHoverCard(null);
+              }}
+            >
+              Notice
+            </Button>
+          </div>
+        </Portal>
       ) : null}
       {noticeEntry && noticeItem && notice ? (
         <ModalShell title="Item Details & Actions" panelClassName="max-w-4xl" onClick={() => setNoticeEntry(null)}>

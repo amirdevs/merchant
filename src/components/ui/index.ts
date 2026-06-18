@@ -6,6 +6,7 @@ export { LedgerRow } from "./LedgerRow";
 export { ModalShell } from "./ModalShell";
 export { Muted } from "./Muted";
 export { Panel } from "./Panel";
+export { Portal } from "./Portal";
 export { ScreenFrame } from "./ScreenFrame";
 export { StatChip } from "./StatChip";
 export { TabButton } from "./TabButton";
