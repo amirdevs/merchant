@@ -8,10 +8,12 @@ import { inventoryIllegalEntries } from "@/lib/legal";
 import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { routeRiskPreview } from "@/lib/travel-risk";
+import type { TravelStrategy } from "@/lib/travel-risk";
 import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
 
-export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult }: { state: GameState; onTravel: (marketIndex: number) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void }) {
+export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult }: { state: GameState; onTravel: (marketIndex: number, strategy?: TravelStrategy) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void }) {
   const [pendingDestination, setPendingDestination] = useState<number | null>(null);
+  const [strategy, setStrategy] = useState<TravelStrategy>("comply");
   const market = marketplaces[state.marketIndex];
   const cargo = inventoryTotals(state.playerInventory, items);
   const currentKingdom = kingdoms[market.kingdomIndex];
@@ -93,7 +95,7 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
                   <LedgerRow
                     key={destination.index}
                     title={destination.name}
-                    subtitle={`Toll ${money(connection.tolls)} / guard ${risk.guardInspectionPercent}% / theft ${risk.theftPercent}%${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""} / cargo ${money(risk.cargoValue)}`}
+                    subtitle={`Toll ${money(connection.tolls)} + stallage ${money(destination.stallage)} / guard ${risk.guardInspectionPercent}% / theft ${risk.theftPercent}%${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""} / cargo ${money(risk.cargoValue)}`}
                     trailing={<span className="text-sm font-bold uppercase text-[#75501f]">{connection.travelDays}d / {risk.level}</span>}
                     onClick={() => requestTravel(destination.index)}
                   />
@@ -110,18 +112,28 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
             <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
               <StatChip label="Days" value={pendingRoute.travelDays} />
               <StatChip label="Toll" value={money(pendingRoute.tolls)} icon={uiAssets.hud.goldCoin} />
+              <StatChip label="Stallage" value={money(pendingMarket.stallage)} icon={uiAssets.hud.goldCoin} />
               <StatChip label="Capacity" value={cargo.canTravel ? "Safe" : "Over"} tone={cargo.canTravel ? "parchment" : "danger"} />
               <StatChip label="Pack Animals" value={cargo.packAnimals} />
               {pendingRisk ? <StatChip label="Route Risk" value={pendingRisk.level} tone={pendingRisk.level === "high" || pendingRisk.level === "severe" ? "danger" : "parchment"} /> : null}
               {pendingRisk ? <StatChip label="Guard Check" value={`${pendingRisk.guardInspectionPercent}%`} /> : null}
               {pendingRisk ? <StatChip label="Theft" value={`${pendingRisk.theftPercent}%`} /> : null}
               {pendingRisk ? <StatChip label="Cargo Value" value={money(pendingRisk.cargoValue)} /> : null}
-              <StatChip label="Copper" value={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls) ? "Ready" : "Short"} tone={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls) ? "parchment" : "danger"} />
+              <StatChip label="Copper" value={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls + pendingMarket.stallage) ? "Ready" : "Short"} tone={canPayCopperToll(state.playerInventory, items, pendingRoute.tolls + pendingMarket.stallage) ? "parchment" : "danger"} />
             </div>
             {pendingIllegal.length ? <div className="rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/70 p-3 font-bold text-[#8d271f]">Destination law warning: {pendingIllegal.length} illegal stack{pendingIllegal.length === 1 ? "" : "s"} in cargo.</div> : null}
+            {pendingIllegal.length ? (
+              <div className="grid grid-cols-3 gap-2">
+                {(["comply", "bribe", "evade"] as TravelStrategy[]).map((option) => (
+                  <Button key={option} variant={strategy === option ? "primary" : "secondary"} onClick={() => setStrategy(option)}>
+                    {option === "bribe" ? "Bribe (12)" : option === "evade" ? "Evade" : "Comply"}
+                  </Button>
+                ))}
+              </div>
+            ) : null}
             <div className="flex justify-end gap-2">
               <Button variant="secondary" onClick={() => setPendingDestination(null)}>Cancel</Button>
-              <Button onClick={() => { const next = pendingDestination; setPendingDestination(null); if (next !== null) onTravel(next); }}>Travel</Button>
+              <Button onClick={() => { const next = pendingDestination; setPendingDestination(null); if (next !== null) onTravel(next, strategy); }}>Travel</Button>
             </div>
           </div>
         </ModalShell>
@@ -133,6 +145,7 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
             <div className="grid grid-cols-3 gap-2">
               <StatChip label="Days" value={state.travelResult.days} />
               <StatChip label="Toll Paid" value={money(state.travelResult.tolls)} icon={uiAssets.hud.goldCoin} />
+              <StatChip label="Stallage" value={money(state.travelResult.stallage)} icon={uiAssets.hud.goldCoin} />
               <StatChip label="Day" value={state.travelResult.arrivalDay} />
             </div>
             {state.travelResult.events.length ? (

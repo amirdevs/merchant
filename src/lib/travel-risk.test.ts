@@ -79,6 +79,22 @@ describe("travel risks", () => {
     expect(inventory[0].quantity).toBe(2);
   });
 
+  it("supports bribe, permit, and evasion inspection strategies", () => {
+    const bribed: InventoryEntry[] = [{ itemIndex: 0, quantity: 5, offerQuantity: 0 }];
+    const bribeEvents = applyTravelRisks({ inventory: bribed, items, destination: market(), kingdom, day: 1, inspectionRoll: 0.2, strategy: "bribe" });
+    expect(bribeEvents[0].kind).toBe("bribe");
+    expect(bribed[0].quantity).toBe(5);
+
+    const permitted: InventoryEntry[] = [{ itemIndex: 0, quantity: 5, offerQuantity: 0 }];
+    applyTravelRisks({ inventory: permitted, items, destination: market(), kingdom, day: 1, inspectionRoll: 0.3, hasPermit: true });
+    expect(permitted[0].quantity).toBe(5);
+
+    const evasion: InventoryEntry[] = [{ itemIndex: 0, quantity: 5, offerQuantity: 0 }];
+    const evasionEvents = applyTravelRisks({ inventory: evasion, items, destination: market(), kingdom, day: 1, inspectionRoll: 0, strategy: "evade" });
+    expect(evasionEvents[0].kind).toBe("evasion");
+    expect(evasion).toHaveLength(0);
+  });
+
   it("steals eligible unprotected goods and ignores protected goods", () => {
     const inventory: InventoryEntry[] = [
       { itemIndex: 1, quantity: 3, offerQuantity: 0, protected: true },

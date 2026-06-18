@@ -4,6 +4,7 @@ import type { GameState } from "@/lib/game";
 import type { MoveAmount } from "@/lib/inventory";
 import type { SaveSlotSummary } from "@/lib/save";
 import type { DialogueEffect, DialogueNodeId } from "@/lib/dialogue";
+import type { TravelStrategy } from "@/lib/travel-risk";
 
 export type GameView =
   | "main-menu"
@@ -69,7 +70,7 @@ export type MerchantActions = {
   askOffer: () => void;
   goodbye: () => void;
   trade: () => void;
-  travel: (toMarketIndex: number) => void;
+  travel: (toMarketIndex: number, strategy?: TravelStrategy) => void;
   clearTravelResult: () => void;
   deleteSave: (slot?: number) => void;
 };

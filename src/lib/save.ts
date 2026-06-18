@@ -40,6 +40,7 @@ function isGameState(value: unknown): value is GameState {
   if (!candidate.dialogueNodes || typeof candidate.dialogueNodes !== "object") candidate.dialogueNodes = {};
   if (!Array.isArray(candidate.dialogueLog)) candidate.dialogueLog = [];
   if (!("travelResult" in candidate)) candidate.travelResult = null;
+  if (candidate.travelResult && typeof candidate.travelResult.stallage !== "number") candidate.travelResult.stallage = 0;
   return true;
 }
 

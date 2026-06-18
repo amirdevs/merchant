@@ -4,9 +4,11 @@ import { itemIsIllegal } from "./legal";
 import { inventoryTotals } from "./economy";
 
 export type TravelRiskEvent = {
-  kind: "inspection" | "theft";
+  kind: "inspection" | "theft" | "bribe" | "evasion";
   message: string;
 };
+
+export type TravelStrategy = "comply" | "bribe" | "evade";
 
 function seededRisk(seed: number) {
   let value = seed || 1;
@@ -78,8 +80,10 @@ export function applyTravelRisks(options: {
   travelDays?: number;
   inspectionRoll?: number;
   theftRoll?: number;
+  strategy?: TravelStrategy;
+  hasPermit?: boolean;
 }) {
-  const { inventory, items, destination, kingdom, day, travelDays = 1 } = options;
+  const { inventory, items, destination, kingdom, day, travelDays = 1, strategy = "comply", hasPermit = false } = options;
   const events: TravelRiskEvent[] = [];
   const preview = routeRiskPreview({ inventory, items, destination, kingdom, days: travelDays, tolls: 0 });
   const illegalTags = kingdom?.illegalItemTags || [];
@@ -91,14 +95,25 @@ export function applyTravelRisks(options: {
     .sort((left, right) => Number(left.conceal) - Number(right.conceal))[0];
 
   const inspectionRoll = options.inspectionRoll ?? seededRisk((destination.index + 1) * 6151 + day * 173);
-  if (illegalEntry && inspectionRoll * 100 < preview.guardInspectionPercent) {
+  const strategyMultiplier = strategy === "bribe" ? 0.25 : strategy === "evade" ? 0.6 : 1;
+  const permitMultiplier = hasPermit ? 0.45 : 1;
+  const inspectionPercent = preview.guardInspectionPercent * strategyMultiplier * permitMultiplier;
+  if (illegalEntry && inspectionRoll * 100 < inspectionPercent) {
     const item = items[illegalEntry.itemIndex];
-    const taken = Math.min(visibleQuantity(illegalEntry), Math.max(1, Math.ceil(visibleQuantity(illegalEntry) / 2)));
+    const taken = strategy === "evade"
+      ? visibleQuantity(illegalEntry)
+      : Math.min(visibleQuantity(illegalEntry), Math.max(1, Math.ceil(visibleQuantity(illegalEntry) / 2)));
     removeQuantity(illegalEntry, taken);
     events.push({
-      kind: "inspection",
-      message: `Guards inspected your cargo and confiscated ${taken} ${item.name}${illegalEntry.conceal ? " from a concealed compartment" : ""}. Concealment lowers risk but cannot remove it.`,
+      kind: strategy === "evade" ? "evasion" : "inspection",
+      message: strategy === "evade"
+        ? `Your evasion failed. Guards confiscated all ${taken} ${item.name} from the stack.`
+        : `Guards inspected your cargo and confiscated ${taken} ${item.name}${illegalEntry.conceal ? " from a concealed compartment" : ""}. Concealment lowers risk but cannot remove it.`,
     });
+  } else if (illegalEntry && strategy === "bribe") {
+    events.push({ kind: "bribe", message: "A discreet payment steered the inspection away from your cargo." });
+  } else if (illegalEntry && strategy === "evade") {
+    events.push({ kind: "evasion", message: "You avoided the inspection route without drawing pursuit." });
   }
 
   const theft = destination.theft;

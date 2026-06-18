@@ -20,12 +20,13 @@ describe("travel execution", () => {
     expect(travelled).toBe(true);
     expect(state.marketIndex).toBe(route.marketplaceIndex);
     expect(state.day).toBe(1 + route.travelDays);
-    expect(copperEntry(state)?.quantity).toBe(copperBefore - route.tolls);
+    expect(copperEntry(state)?.quantity).toBe(copperBefore - route.tolls - marketplaces[route.marketplaceIndex].stallage);
     expect(state.travelResult).toMatchObject({
       fromMarketName: marketplaces[0].name,
       toMarketName: marketplaces[route.marketplaceIndex].name,
       days: route.travelDays,
       tolls: route.tolls,
+      stallage: marketplaces[route.marketplaceIndex].stallage,
       arrivalDay: state.day,
     });
   });

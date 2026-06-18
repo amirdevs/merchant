@@ -38,6 +38,7 @@ import { createAuctionSession, passAuctionLot, placeAuctionBid } from "@/lib/auc
 import { eventIsActive } from "@/lib/events";
 import { coinQuantity, spendCopperToll } from "@/lib/economy";
 import { addInventory } from "@/lib/inventory";
+import type { TravelStrategy } from "@/lib/travel-risk";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -459,10 +460,10 @@ export function useMerchantController(): MerchantController {
     });
   }
 
-  function travel(toMarketIndex: number) {
+  function travel(toMarketIndex: number, strategy: TravelStrategy = "comply") {
     playUiSound("map");
     update((draft) => {
-      travelToMarket(draft, toMarketIndex);
+      travelToMarket(draft, toMarketIndex, strategy);
     });
   }
 

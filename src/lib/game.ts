@@ -23,7 +23,7 @@ import {
 import { charactersAtMarket, nextCustomerIndex, selectedCharacter } from "./npc-flow";
 import { ensureRelation, type NpcRelations, reactionText, startingPatience, ultimatumActive } from "./reputation";
 import { deleteGameSave, importGame, loadGame, saveGame, serializeGame } from "./save";
-import { applyTravelRisks } from "./travel-risk";
+import { applyTravelRisks, routeRiskPreview, type TravelStrategy } from "./travel-risk";
 import { expireQuests, questOfferCanComplete, questReward } from "./quests";
 
 export const items = itemsJson as Item[];
@@ -63,6 +63,7 @@ export type GameState = {
     toMarketName: string;
     days: number;
     tolls: number;
+    stallage: number;
     arrivalDay: number;
     events: string[];
   } | null;
@@ -400,7 +401,7 @@ export function completeTrade(state: GameState) {
   };
 }
 
-export function travelToMarket(state: GameState, toMarketIndex: number) {
+export function travelToMarket(state: GameState, toMarketIndex: number, strategy: TravelStrategy = "comply") {
   const route = currentMarket(state).connections.find((connection) => connection.marketplaceIndex === toMarketIndex);
   if (!route) {
     state.message = "No known route connects these markets.";
@@ -413,13 +414,25 @@ export function travelToMarket(state: GameState, toMarketIndex: number) {
     return false;
   }
 
-  if (!canPayCopperToll(state.playerInventory, items, route.tolls)) {
-    state.message = `You need ${route.tolls} copper coins for the route toll.`;
+  const stallage = marketplaces[toMarketIndex].stallage || 0;
+  const destinationKingdom = kingdoms[marketplaces[toMarketIndex].kingdomIndex];
+  const riskPreview = routeRiskPreview({
+    inventory: state.playerInventory,
+    items,
+    destination: marketplaces[toMarketIndex],
+    kingdom: destinationKingdom,
+    days: route.travelDays || 1,
+    tolls: route.tolls,
+  });
+  const bribeCost = strategy === "bribe" && riskPreview.illegalStacks > 0 ? 12 : 0;
+  const totalCost = route.tolls + stallage + bribeCost;
+  if (!canPayCopperToll(state.playerInventory, items, totalCost)) {
+    state.message = `You need ${totalCost} copper coins for tolls, stallage${bribeCost ? ", and the planned bribe" : ""}.`;
     return false;
   }
 
   const fromMarketName = currentMarket(state).name;
-  spendCopperToll(state.playerInventory, items, route.tolls);
+  spendCopperToll(state.playerInventory, items, totalCost);
   state.marketIndex = toMarketIndex;
   state.day += route.travelDays || 1;
   const expiredContracts = expireContracts({
@@ -445,12 +458,18 @@ export function travelToMarket(state: GameState, toMarketIndex: number) {
     kingdom: currentKingdom(state),
     day: state.day,
     travelDays: route.travelDays || 1,
+    strategy,
+    hasPermit: state.playerInventory.some((entry) => {
+      const item = items[entry.itemIndex];
+      return visibleQuantity(entry) > 0 && (item.tags.some((tag) => tag.toLowerCase().includes("permit")) || item.name.toLowerCase().includes("permit"));
+    }),
   });
   state.travelResult = {
     fromMarketName,
     toMarketName: marketplaces[toMarketIndex].name,
     days: route.travelDays || 1,
     tolls: route.tolls,
+    stallage,
     arrivalDay: state.day,
     events: riskEvents.map((event) => event.message),
   };
@@ -460,7 +479,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number) {
     ? `Arrived in ${marketplaces[toMarketIndex].name}. ${expiredContracts.length} contract${expiredContracts.length === 1 ? "" : "s"} expired on the road; up to ${failurePenalty} copper was claimed in penalties.`
     : riskEvents.length
     ? `Arrived in ${marketplaces[toMarketIndex].name}. ${riskEvents[0].message}`
-    : `Paid ${route.tolls} copper toll and arrived in ${marketplaces[toMarketIndex].name}.`;
+    : `Paid ${route.tolls} copper toll and ${stallage} stallage${bribeCost ? ` plus ${bribeCost} for discretion` : ""}, then arrived in ${marketplaces[toMarketIndex].name}.`;
   return true;
 }
 
