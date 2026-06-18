@@ -11,6 +11,7 @@ import {
   deleteGameSave,
   importGame,
   items,
+  kingdoms,
   loadGame,
   loadMods,
   marketplaces,
@@ -30,6 +31,7 @@ import { customerIntro } from "@/lib/dialogue";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "@/lib/audio";
 import type { MerchantController } from "@/app/types/MerchantController";
 import { listSaveSlots } from "@/lib/save";
+import { completeContract, resolveContract } from "@/lib/contracts";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -224,8 +226,33 @@ export function useMerchantController(): MerchantController {
 
   function setContractStatus(contractId: string, status: GameState["contractStates"][string]) {
     update((draft) => {
+      const contract = resolveContract(contractId, marketplaces, kingdoms);
+      if (!contract) {
+        draft.message = "That contract is no longer available.";
+        return;
+      }
+      if (status === "accepted") {
+        draft.contractStates[contractId] = "accepted";
+        draft.contractAcceptedDays[contractId] = draft.day;
+        draft.message = `${contract.title} accepted. Deadline: day ${draft.day + contract.daysLimit}.`;
+        return;
+      }
+      if (status === "completed") {
+        const result = completeContract({
+          contract,
+          status: draft.contractStates[contractId] || "available",
+          acceptedDay: draft.contractAcceptedDays[contractId],
+          currentDay: draft.day,
+          currentMarketIndex: draft.marketIndex,
+          inventory: draft.playerInventory,
+          items,
+        });
+        draft.contractStates[contractId] = result.ok ? "completed" : result.expired ? "failed" : draft.contractStates[contractId] || "available";
+        draft.message = result.message;
+        return;
+      }
       draft.contractStates[contractId] = status;
-      draft.message = `Contract ${status}: ${contractId.split(":").slice(1).join(" / ")}.`;
+      draft.message = `${contract.title}: ${status}.`;
     });
   }
 

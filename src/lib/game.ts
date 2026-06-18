@@ -5,7 +5,7 @@ import marketplacesJson from "../data/generated/marketplaces.json";
 import professionsJson from "../data/generated/professions.json";
 import type { Character, InventoryEntry, Item, Kingdom, Marketplace, ObtainableItem, Profession } from "../data/types";
 import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
-import type { ContractStates } from "./contracts";
+import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { addInventory, clearOffers, moveOffer, transferOffers, visibleQuantity } from "./inventory";
 import { applyModPacks } from "./mods";
@@ -41,6 +41,7 @@ export type GameState = {
   npcRelations: NpcRelations;
   questStates: Record<string, "unseen" | "offered" | "accepted" | "ready" | "finished" | "failed">;
   contractStates: ContractStates;
+  contractAcceptedDays: ContractAcceptedDays;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -138,6 +139,7 @@ export function newGame(): GameState {
     npcRelations: {},
     questStates: {},
     contractStates: {},
+    contractAcceptedDays: {},
     dialogueLog: [],
     travelResult: null,
   };
@@ -395,6 +397,15 @@ export function travelToMarket(state: GameState, toMarketIndex: number) {
   spendCopperToll(state.playerInventory, items, route.tolls);
   state.marketIndex = toMarketIndex;
   state.day += route.travelDays || 1;
+  const expiredContracts = expireContracts({
+    states: state.contractStates,
+    acceptedDays: state.contractAcceptedDays,
+    currentDay: state.day,
+    markets: marketplaces,
+    kingdoms,
+  });
+  const failurePenalty = expiredContracts.reduce((total, contract) => total + contract.failurePenaltyCopper, 0);
+  if (failurePenalty > 0) spendCopperToll(state.playerInventory, items, failurePenalty);
   state.selectedCharacterIndex = null;
   const riskEvents = applyTravelRisks({
     inventory: state.playerInventory,
@@ -411,7 +422,9 @@ export function travelToMarket(state: GameState, toMarketIndex: number) {
     arrivalDay: state.day,
     events: riskEvents.map((event) => event.message),
   };
-  state.message = riskEvents.length
+  state.message = expiredContracts.length
+    ? `Arrived in ${marketplaces[toMarketIndex].name}. ${expiredContracts.length} contract${expiredContracts.length === 1 ? "" : "s"} expired on the road; up to ${failurePenalty} copper was claimed in penalties.`
+    : riskEvents.length
     ? `Arrived in ${marketplaces[toMarketIndex].name}. ${riskEvents[0].message}`
     : `Paid ${route.tolls} copper toll and arrived in ${marketplaces[toMarketIndex].name}.`;
   return true;

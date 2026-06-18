@@ -1,8 +1,8 @@
 import { BookOpen, CheckCircle2, ScrollText } from "lucide-react";
-import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
+import { currentKingdom, currentMarket, kingdoms, marketplaces, type GameState } from "@/lib/game";
 import { items } from "@/lib/game";
 import { marketEventPreviews } from "@/lib/events";
-import { generatedContracts } from "@/lib/contracts";
+import { contractDeadline, contractItemProgress, generatedContracts, resolveContract } from "@/lib/contracts";
 import { questCanComplete, questItemProgress, questReward } from "@/lib/quests";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { uiAssets } from "@/lib/ui-assets";
@@ -23,7 +23,12 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
   const currentStatus: QuestStatus = state.questStates[String(market.index)] || (market.quest ? "offered" : "unseen");
   const notes = state.dialogueLog.slice(0, 12);
   const eventPreviews = marketEventPreviews(marketplaces, state.day).slice(0, 8);
-  const contracts = generatedContracts(market, marketplaces, kingdom);
+  const localContracts = generatedContracts(market, marketplaces, kingdom);
+  const trackedContracts = Object.entries(state.contractStates)
+    .filter(([, status]) => status === "accepted")
+    .map(([contractId]) => resolveContract(contractId, marketplaces, kingdoms))
+    .filter((contract): contract is NonNullable<typeof contract> => Boolean(contract));
+  const contracts = [...localContracts, ...trackedContracts.filter((tracked) => !localContracts.some((local) => local.id === tracked.id))];
   const currentQuestProgress = questItemProgress(market, state.playerInventory, items);
   const currentQuestReady = questCanComplete(market, state.playerInventory, items);
   const currentQuestReward = questReward(market, items);
@@ -86,6 +91,8 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
             <div className="grid max-h-72 gap-2 overflow-auto pr-1">
               {contracts.map((contract) => {
                 const status = state.contractStates[contract.id] || "available";
+                const deadline = contractDeadline(contract, state.contractAcceptedDays[contract.id]);
+                const progress = contractItemProgress(contract, state.playerInventory, items);
                 return (
                   <div className="rounded-sm border border-[#9a7138]/50 bg-[#fff6d7]/55 p-3 text-sm text-[#3b260f]" key={contract.id}>
                     <div className="flex items-start justify-between gap-2">
@@ -97,6 +104,8 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
                     </div>
                     <div className="mt-2 flex flex-wrap items-center gap-2">
                       <span className="font-bold text-[#75501f]">{contract.rewardCopper} copper / {contract.daysLimit}d / {contract.risk} risk</span>
+                      {deadline !== null ? <span className={state.day > deadline ? "font-bold text-[#8d271f]" : "font-bold text-[#1f5960]"}>Deadline day {deadline}</span> : null}
+                      {progress.required > 0 ? <span className="font-bold text-[#75501f]">Cargo {contract.requiresConcealment ? progress.concealed : progress.held}/{progress.required}</span> : null}
                       <Button disabled={status !== "available"} size="sm" onClick={() => onSetContractStatus(contract.id, "accepted")}>Accept</Button>
                       <Button disabled={status !== "accepted"} size="sm" variant="secondary" onClick={() => onSetContractStatus(contract.id, "completed")}>Complete</Button>
                     </div>
