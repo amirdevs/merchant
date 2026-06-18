@@ -670,11 +670,11 @@ Acceptance:
 - Trade routes are not solved forever.
 - Market conditions create new opportunities and risks across a playthrough.
 
-### V2.11 Polish, Balance, And Release
+### V2.11 Polish, Balance, And React Completion
 
 Status: in progress.
 
-Goal: make the game stable, readable, balanced, and shippable.
+Goal: make the React game stable, readable, balanced, and complete enough for repeated full playthroughs.
 
 Tasks:
 
@@ -684,13 +684,85 @@ Tasks:
 - Add broken asset scans for portraits, items, backdrops, routes, and UI parts.
 - Add save import/export compatibility checks.
 - Add full-play manual smoke script.
-- Add packaging/release build checklist.
+- Desktop packaging is explicitly deferred until the user requests it.
 - Add final UX pass for all buttons, disabled states, tooltips, and error states.
 
 Acceptance:
 
 - A new player can start, trade, travel, complete jobs, save/load, and recover from errors without developer help.
-- Release builds are reproducible and verified.
+- React production builds are reproducible and verified.
+
+## Roadmap V3 - Gameplay Expansion
+
+Desktop packaging is out of scope for V3. Work should remain focused on the React game, its mechanics, content, balance, assets, and browser-side quality.
+
+### V3.1 Caravan And Route Mastery
+
+Status: in progress.
+
+- Add persistent route history with costs, incidents, cargo value, outcome, and notes.
+- Add route mastery levels and perks after repeated successful travel.
+- Add packhorse condition, upkeep, injury, rest, repair, and upgrades.
+- Add hidden compartments and concealment-quality upgrades.
+- Add route bookmarks and preferred-route comparisons.
+- Add journey supplies, weather, terrain, and caravan morale.
+
+### V3.2 Underworld, Law, And Politics
+
+Status: planned.
+
+- Add black-market customers and contraband-only inventories.
+- Add forged permits with quality, expiry, detection, and confiscation risk.
+- Add kingdom heat/wanted levels and cooldown over time.
+- Add fines, jail alternatives, informants, snitches, and legal favors.
+- Add guild permits, tax discounts, trade licenses, and restricted markets.
+- Add elections, votes, faction choices, and consequences.
+
+### V3.3 Rival Merchants And Regional Economy
+
+Status: planned.
+
+- Add named rival merchants with wealth, cargo, personality, and routes.
+- Let rivals buy out stock, affect scarcity, attend events, and complete contracts.
+- Add regional production chains and commodity dependencies.
+- Add seasonal production, shortages, disasters, and recovery.
+- Add route competition, price history, route profitability, and economic reports.
+- Add balancing inspectors for extreme prices and infinite-profit loops.
+
+### V3.4 Myth Collection And Competitive Play
+
+Status: planned.
+
+- Add a persistent Myth card collection and owned quantities.
+- Add deck builder, deck validation, saved decks, and card filters.
+- Add card rarity, special abilities, status effects, and board positions.
+- Add cautious, aggressive, collector, gambler, and expert AI.
+- Add casual matches, ranked opponents, wagers, tournaments, trophies, and rewards.
+- Connect Myth outcomes to NPC relationships, quests, and events.
+
+### V3.5 Story, Dialogue, And World Content
+
+Status: planned.
+
+- Expand every authored quest into multi-stage objectives and consequences.
+- Add dialogue conditions based on quests, relations, inventory, laws, events, and factions.
+- Add NPC memories, secrets, favors, rivalries, introductions, and follow-up conversations.
+- Add rumors that can be true, outdated, exaggerated, or deliberately false.
+- Add character-specific gifts, betrayals, rescues, recruitment, and long-term arcs.
+- Add more repeatable contract families and chained contracts.
+
+### V3.6 React Quality, Balance, And Presentation
+
+Status: planned.
+
+- Add focused UI tests for events, company, inventory, dialogue, travel, and saves.
+- Add a repeatable full-play smoke checklist and automated core-loop scenario.
+- Add developer balance views for barter, travel, events, market drift, and progression.
+- Add button-state, keyboard, tooltip, overflow, and error-state review.
+- Add animation polish and full audio asset/channel controls.
+- Add broken-asset scans and missing-content reports.
+- Split large React bundles and lazy-load major screens where useful.
+- Keep desktop packaging deferred.
 
 ## V2 Immediate Next Steps
 
@@ -699,7 +771,7 @@ Acceptance:
 3. Add black-market customers, concealment upgrades, packhorse upkeep, route history, and rival merchants.
 4. Expand Myth collection/deck management and opponent personalities.
 5. Add balancing dashboards for barter, event payouts, market drift, travel risk, loans, and shipments.
-6. Complete animation/audio asset coverage, bundle splitting, desktop packaging, and release QA.
+6. Complete animation/audio asset coverage, bundle splitting, and React-side QA. Desktop packaging remains deferred.
 
 ## Current Sprint - V2.1 Completion
 
