@@ -1,13 +1,13 @@
 import type { ReactNode } from "react";
 import { Handshake, HelpCircle, Scale } from "lucide-react";
 import type { Character, InventoryEntry } from "@/data/types";
-import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
+import { currentKingdom, currentMarket, items, marketplaces, type GameState } from "@/lib/game";
 import { moodLabel, patienceLabel, relationFor, trustLabel, ultimatumActive } from "@/lib/reputation";
 import { buildDealHints } from "@/lib/deal-intelligence";
 import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
 import { roleLabel } from "@/lib/npc-behavior";
 import type { MoveAmount } from "@/lib/inventory";
-import { portraitAsset } from "@/lib/assets";
+import { itemIconAsset, portraitAsset } from "@/lib/assets";
 import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { InventoryPanel } from "@/components/InventoryPanel";
@@ -48,6 +48,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
     day: state.day,
   }, dialogueNode) : [];
   const recentNotes = character ? state.dialogueLog.filter((entry) => entry.characterIndex === character.index).slice(0, 3) : [];
+  const dealReaction = reactionForAdvantage(advantage, playerOffer, characterOffer);
 
   return (
     <ScreenFrame title="Barter / Conversation" eyebrow="Main Screen" backdrop={uiAssets.backplates.tradeConversation} overlay="dark" contentClassName="p-2 lg:p-3">
@@ -82,6 +83,9 @@ export function BarterConversationView({ state, character, playerOffer, characte
                     <StatChip label="Patience" value={patienceLabel(relation)} icon={uiAssets.town.tradeStyleBadge} tone={relation && relation.patience <= 2 ? "danger" : "parchment"} />
                   </dl>
                   <p className="mt-3 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/65 p-4 text-lg leading-snug text-[#3b260f] shadow-inner shadow-[#6c4418]/15">{message}</p>
+                  <div className={`mt-3 rounded-sm border px-3 py-2 text-sm font-black uppercase tracking-wide ${dealReaction.className}`}>
+                    {dealReaction.label}: {dealReaction.text}
+                  </div>
                   {ultimatumActive(relation) ? <p className="mt-2 rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/80 p-2 text-sm font-black uppercase tracking-wide text-[#8d271f]">Final offer warning</p> : null}
                 </div>
               </div>
@@ -119,9 +123,13 @@ export function BarterConversationView({ state, character, playerOffer, characte
                   </div>
                 ) : null}
                 <div className="mt-3 h-3 rounded-full border border-[#7f5b2a]/55 bg-[#7f5b2a]/35">
-                  <span className="block h-full w-1/2 rounded-full bg-gradient-to-r from-[#1f5960] via-[#d5a641] to-[#8d271f]" />
+                  <span className="block h-full rounded-full bg-gradient-to-r from-[#8d271f] via-[#d5a641] to-[#1f6f38] transition-all duration-500" style={{ width: `${dealReaction.balancePercent}%` }} />
                 </div>
                 <div className="mt-1 text-center text-sm">Your Advantage <strong className={advantage >= 0 ? "text-[#1f6f38]" : "text-[#8d271f]"}>{advantage >= 0 ? "+" : ""}{money(advantage)}</strong></div>
+                <div className="mt-4 grid gap-3 md:grid-cols-2">
+                  <OfferPile title="They Put Forward" inventory={character.inventory} />
+                  <OfferPile title="You Put Forward" inventory={state.playerInventory} />
+                </div>
               </div>
               <div className="mt-4 grid grid-cols-3 gap-2 lg:grid-cols-7"><Button size="lg" variant="secondary" onClick={onAskPrice}>Ask Price</Button><Button size="lg" variant="secondary" onClick={onAskOffer}>Ask Offer</Button><Button size="lg" onClick={onTrade}><Handshake size={16} /> Accept</Button><Button size="lg" variant="secondary" onClick={onUndoOfferChange}>Undo</Button><Button size="lg" variant="secondary" onClick={onClearOffers}>Clear</Button><Button size="lg" subtle onClick={onGoodbye}>Goodbye</Button><Button size="lg" subtle onClick={onHelp}><HelpCircle size={16} /> Help</Button></div>
             </div>
@@ -148,6 +156,72 @@ export function BarterConversationView({ state, character, playerOffer, characte
         </div>
       </div>
     </ScreenFrame>
+  );
+}
+
+function reactionForAdvantage(advantage: number, playerOffer: number, characterOffer: number) {
+  if (playerOffer <= 0 && characterOffer <= 0) {
+    return {
+      label: "Empty Table",
+      text: "They wait for something worth discussing.",
+      className: "border-[#9a7138]/60 bg-[#fff6d7]/70 text-[#75501f]",
+      balancePercent: 50,
+    };
+  }
+  if (advantage >= 250) {
+    return {
+      label: "Delighted",
+      text: "This looks generous enough to soften their stance.",
+      className: "border-[#2d7f42]/70 bg-[#e8ffd8]/80 text-[#1f6f38]",
+      balancePercent: 92,
+    };
+  }
+  if (advantage >= 0) {
+    return {
+      label: "Tempted",
+      text: "The scale is leaning your way.",
+      className: "border-[#6c9f38]/70 bg-[#f1ffd8]/80 text-[#426f1f]",
+      balancePercent: 68,
+    };
+  }
+  if (advantage > -200) {
+    return {
+      label: "Unconvinced",
+      text: "They see a gap but might keep talking.",
+      className: "border-[#d0a65a]/70 bg-[#fff3c6]/80 text-[#7b5726]",
+      balancePercent: 38,
+    };
+  }
+  return {
+    label: "Insulted",
+    text: "The offer looks lopsided and risks their patience.",
+    className: "border-[#8d271f]/70 bg-[#ffe1d7]/85 text-[#8d271f]",
+    balancePercent: 14,
+  };
+}
+
+function OfferPile({ title, inventory }: { title: string; inventory: InventoryEntry[] }) {
+  const offered = inventory.filter((entry) => entry.offerQuantity > 0).slice(0, 5);
+
+  return (
+    <div className="min-h-24 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/55 p-2 shadow-inner shadow-[#6c4418]/15">
+      <strong className="block text-xs uppercase tracking-wide text-[#75501f]">{title}</strong>
+      {offered.length ? (
+        <div className="mt-2 flex min-h-14 flex-wrap items-end gap-1.5">
+          {offered.map((entry) => {
+            const item = items[entry.itemIndex];
+            return (
+              <span className="relative grid h-14 w-14 place-items-center rounded-sm border border-[#c89d55]/70 bg-[#f5e1b7]/80 p-1 shadow" key={`${title}-${entry.itemIndex}`} title={item?.name || `Item ${entry.itemIndex}`}>
+                <img className="max-h-10 max-w-10 object-contain drop-shadow" src={itemIconAsset(item?.iconFile)} alt="" />
+                <span className="absolute -bottom-1 -right-1 rounded-full border border-[#5a3b18] bg-[#fff2bd] px-1.5 text-[0.65rem] font-black text-[#160d05]">x{entry.offerQuantity}</span>
+              </span>
+            );
+          })}
+        </div>
+      ) : (
+        <p className="mt-2 text-sm font-semibold text-[#725331]">Nothing on this side yet.</p>
+      )}
+    </div>
   );
 }
 

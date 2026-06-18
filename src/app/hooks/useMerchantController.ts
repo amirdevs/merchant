@@ -23,6 +23,7 @@ import {
   selectedCharacter,
   serializeGame,
   travelToMarket,
+  advanceGameClock,
   type GameState,
 } from "@/lib/game";
 import { setOfferQuantity, type MoveAmount } from "@/lib/inventory";
@@ -127,6 +128,7 @@ export function useMerchantController(): MerchantController {
   function nextCustomer() {
     playUiSound("menu_click");
     update((draft) => {
+      advanceGameClock(draft, 15);
       const nextIndex = nextCustomerIndex(draft);
       if (nextIndex === null) return;
       const next = draft.characters[nextIndex];
@@ -138,6 +140,7 @@ export function useMerchantController(): MerchantController {
   function movePlayer(entry: InventoryEntry, amount: MoveAmount, isOfferPanel = false) {
     playItemSound("page");
     update((draft) => {
+      advanceGameClock(draft, 1);
       rememberOfferSnapshot(draft);
       const actual = draft.playerInventory.find((item) => item.itemIndex === entry.itemIndex);
       if (actual) moveOffer(actual, amount, isOfferPanel);
@@ -147,6 +150,7 @@ export function useMerchantController(): MerchantController {
   function moveCharacter(entry: InventoryEntry, amount: MoveAmount, isOfferPanel = false) {
     playItemSound("page");
     update((draft) => {
+      advanceGameClock(draft, 1);
       rememberOfferSnapshot(draft);
       const current = selectedCharacter(draft);
       const actual = current?.inventory.find((item) => item.itemIndex === entry.itemIndex);
@@ -314,6 +318,7 @@ export function useMerchantController(): MerchantController {
   function advanceDay() {
     update((draft) => {
       draft.day += 1;
+      draft.timeOfDayMinutes = 8 * 60;
       advanceMarketSimulation(draft.marketSimulation, draft.day);
       const rivalActivities = advanceRivals({ rivals: draft.rivals, simulation: draft.marketSimulation, markets: marketplaces, items, day: draft.day });
       const expiredContracts = expireContracts({
@@ -340,6 +345,18 @@ export function useMerchantController(): MerchantController {
         : failures.length
         ? `Day ${draft.day}. Failed deadlines: ${failures.join(", ")}${penalty ? `. Up to ${penalty} copper paid in penalties.` : "."}`
         : `A day passes. It is now day ${draft.day}.`;
+    });
+  }
+
+  function advanceTime(minutes: number) {
+    update((draft) => {
+      const beforeDay = draft.day;
+      const daysElapsed = advanceGameClock(draft, minutes);
+      if (daysElapsed > 0) {
+        advanceMarketSimulation(draft.marketSimulation, draft.day);
+        settleShipments(draft.company, draft.day);
+        draft.message = beforeDay === draft.day ? draft.message : `The hours pass. It is now day ${draft.day}.`;
+      }
     });
   }
 
@@ -698,6 +715,7 @@ export function useMerchantController(): MerchantController {
   function askPrice() {
     playUiSound("menu_click");
     update((draft) => {
+      advanceGameClock(draft, 5);
       const current = selectedCharacter(draft);
       if (!current) {
         draft.message = "Choose a customer before asking for a price.";
@@ -711,6 +729,7 @@ export function useMerchantController(): MerchantController {
   function askOffer() {
     playUiSound("menu_click");
     update((draft) => {
+      advanceGameClock(draft, 8);
       const current = selectedCharacter(draft);
       if (!current) {
         draft.message = "Choose a customer before asking for an offer.";
@@ -724,6 +743,7 @@ export function useMerchantController(): MerchantController {
   function goodbye() {
     playUiSound("menu_click");
     update((draft) => {
+      advanceGameClock(draft, 5);
       clearOffers(draft.playerInventory);
       const current = selectedCharacter(draft);
       if (current) clearOffers(current.inventory);
@@ -736,7 +756,11 @@ export function useMerchantController(): MerchantController {
   function trade() {
     playUiSound("trade");
     if (character) playOfferReaction(appraiseOffer(playerOffer, characterOffer, character));
-    setState((current) => completeTrade(current));
+    setState((current) => {
+      const next = completeTrade(current);
+      advanceGameClock(next, 20);
+      return next;
+    });
   }
 
   function refreshSaveSlots() {
@@ -829,6 +853,7 @@ export function useMerchantController(): MerchantController {
       setQuestStatus,
       setContractStatus,
       advanceDay,
+      advanceTime,
       startAuction,
       bidAuction,
       passAuction,

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { CircleHelp, Cog, Volume2, VolumeX } from "lucide-react";
 import { backdropAsset, townAsset } from "@/lib/assets";
 import { inventoryTotals } from "@/lib/economy";
@@ -9,9 +9,6 @@ import type { GameView, MerchantController, MerchantProfile, UiPreferences } fro
 import { HudResource, IconButton, Muted } from "@/components/ui";
 
 const titleViews = new Set<GameView>(["main-menu", "new-profile", "load-game", "settings"]);
-const gameDayMinutes = 24 * 60;
-const gameMinutesPerRealSecond = 1;
-
 type GameShellProps = {
   controller: MerchantController;
   activeView: GameView;
@@ -21,10 +18,8 @@ type GameShellProps = {
   children: ReactNode;
 };
 
-function clockFor(now: number) {
-  const startAtEight = 8 * 60;
-  const elapsedGameMinutes = Math.floor((now / 1000) * gameMinutesPerRealSecond);
-  const totalMinutes = (startAtEight + elapsedGameMinutes) % gameDayMinutes;
+function clockFor(timeOfDayMinutes: number) {
+  const totalMinutes = ((Math.floor(timeOfDayMinutes) % 1440) + 1440) % 1440;
   const hour = Math.floor(totalMinutes / 60);
   const minute = totalMinutes % 60;
   const label = `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
@@ -71,17 +66,11 @@ function lightingFor(hour: number, minute: number) {
 }
 
 export function GameShell({ controller, activeView, merchantProfile, uiPreferences, onNavigate, children }: GameShellProps) {
-  const [now, setNow] = useState(() => Date.now());
   const isTitleArea = titleViews.has(activeView);
   const cargo = inventoryTotals(controller.state.playerInventory, items);
   const backgroundImage = isTitleArea ? townAsset(controller.market.townsquareFile) : backdropAsset(controller.market.backdropFile);
-  const clock = useMemo(() => clockFor(now), [now]);
-  const lighting = useMemo(() => lightingFor(clock.hour, clock.minute), [clock.hour, clock.minute]);
-
-  useEffect(() => {
-    const timer = window.setInterval(() => setNow(Date.now()), 15000);
-    return () => window.clearInterval(timer);
-  }, []);
+  const clock = clockFor(controller.state.timeOfDayMinutes);
+  const lighting = lightingFor(clock.hour, clock.minute);
 
   return (
     <main

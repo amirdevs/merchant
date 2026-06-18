@@ -50,6 +50,7 @@ export type MerchantActions = {
   setQuestStatus: (marketIndex: number, status: GameState["questStates"][string]) => void;
   setContractStatus: (contractId: string, status: GameState["contractStates"][string]) => void;
   advanceDay: () => void;
+  advanceTime: (minutes: number) => void;
   startAuction: () => void;
   bidAuction: () => void;
   passAuction: () => void;

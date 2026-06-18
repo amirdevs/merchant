@@ -1,4 +1,4 @@
-import type { DragEvent, KeyboardEvent, MouseEvent } from "react";
+import { useRef, useState, type DragEvent, type KeyboardEvent, type MouseEvent } from "react";
 import { Lock } from "lucide-react";
 import type { InventoryEntry } from "@/data/types";
 import { itemIconAsset } from "@/lib/assets";
@@ -93,6 +93,14 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
   const darkPanel = panelVariant === "wood" || panelVariant === "dark";
   const ownerId = owner || panelTitle;
   const totals = cargoSummary(rows, mode);
+  const [dropStatus, setDropStatus] = useState<"idle" | "valid" | "invalid">("idle");
+  const dropTimerRef = useRef<number | null>(null);
+
+  function flashDropStatus(nextStatus: "valid" | "invalid") {
+    if (dropTimerRef.current) window.clearTimeout(dropTimerRef.current);
+    setDropStatus(nextStatus);
+    dropTimerRef.current = window.setTimeout(() => setDropStatus("idle"), 650);
+  }
 
   function dragData(entry: InventoryEntry): InventoryDragData {
     return { owner: ownerId, mode, itemIndex: entry.itemIndex };
@@ -109,11 +117,19 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
     event.preventDefault();
     try {
       const dragged = JSON.parse(raw) as InventoryDragData;
-      if (dragged.owner !== ownerId || dragged.mode === mode) return;
+      if (dragged.owner !== ownerId || dragged.mode === mode) {
+        flashDropStatus("invalid");
+        return;
+      }
       const entry = inventory.find((item) => item.itemIndex === dragged.itemIndex);
-      if (!entry) return;
+      if (!entry) {
+        flashDropStatus("invalid");
+        return;
+      }
       onMove(entry, mode === "offer" ? 1 : -1);
+      flashDropStatus("valid");
     } catch {
+      flashDropStatus("invalid");
       return;
     }
   }
@@ -144,6 +160,8 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
             darkPanel
               ? "border-[#d0a65a]/35 bg-black/25 shadow-black/35"
               : "border-[#9a7138]/55 bg-[#fff6d7]/35 shadow-[#6c4418]/20",
+            dropStatus === "valid" && "ring-2 ring-[#9ce277] ring-offset-2 ring-offset-[#2a1809]",
+            dropStatus === "invalid" && "animate-pulse ring-2 ring-[#d5523f] ring-offset-2 ring-offset-[#2a1809]",
             variant === "compact" ? "max-h-56 auto-rows-[minmax(8rem,auto)] grid-cols-3 gap-1.5 sm:grid-cols-4" : "max-h-[67vh] auto-rows-[minmax(12rem,auto)] grid-cols-4 gap-3 sm:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"
           )}
           onDragOver={onDragOver}
@@ -186,6 +204,15 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                     }
                   }}
                   onContextMenu={(event) => {
+                    event.preventDefault();
+                    onMoveAll(entry);
+                  }}
+                  onAuxClick={(event) => {
+                    if (event.button !== 1) return;
+                    event.preventDefault();
+                    onMove(entry, "half");
+                  }}
+                  onDoubleClick={(event) => {
                     event.preventDefault();
                     onMoveAll(entry);
                   }}
@@ -245,7 +272,15 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
           }) : <div className="col-span-full border border-[#9a7138]/45 bg-[#fff6d7]/40 p-3 text-sm text-[#725331]">No visible items here.</div>}
         </div>
       ) : (
-      <div className="grid max-h-[360px] gap-2 overflow-auto pr-1" onDragOver={onDragOver} onDrop={onDrop}>
+      <div
+        className={cn(
+          "grid max-h-[360px] gap-2 overflow-auto pr-1",
+          dropStatus === "valid" && "rounded-sm ring-2 ring-[#9ce277]",
+          dropStatus === "invalid" && "animate-pulse rounded-sm ring-2 ring-[#d5523f]"
+        )}
+        onDragOver={onDragOver}
+        onDrop={onDrop}
+      >
         {rows.length ? rows.map((entry) => {
           const item = itemFor(entry);
           const shownQuantity = quantityFor(entry, mode);
@@ -305,6 +340,15 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                 }
               }}
               onContextMenu={(event) => {
+                event.preventDefault();
+                onMoveAll(entry);
+              }}
+              onAuxClick={(event) => {
+                if (event.button !== 1) return;
+                event.preventDefault();
+                onMove(entry, "half");
+              }}
+              onDoubleClick={(event) => {
                 event.preventDefault();
                 onMoveAll(entry);
               }}

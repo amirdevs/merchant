@@ -39,7 +39,7 @@ Release-hardening work still remains:
 
 ## High Priority V0 - Game Feel And Original-Style Flow
 
-Status: in progress, with the first game-scene baseline implemented.
+Status: implemented baseline; polish, content depth, and animation quality remain.
 
 This priority sits above the numbered feature phases. The current React build has many useful mechanics, but it still reads too much like a website because navigation is always visible, several systems are exposed as independent pages, and the trading table lacks tactile movement. The next major UI/mechanics pass should make the app feel like a standalone game: one scene at a time, contextual exits, physical inventory interactions, animated feedback, and customers arriving at the player's stall.
 
@@ -62,85 +62,85 @@ Confirmed original-game reference notes:
 
 ### V0.1 Replace Website Navigation With Game Scenes
 
-Status: implemented baseline; scene overlays and transitions remain.
+Status: implemented baseline; richer transitions remain.
 
 - Remove the always-visible top-level page navigation as the primary game movement model. Implemented by removing primary nav buttons from the game shell.
 - Make the default in-run screen a location scene: town square, market stall, road map, company office, event hall, or pause menu. Market stall baseline implemented.
 - Show only actions that make sense from the current place instead of exposing every system all the time. Implemented on the market stall baseline.
 - Keep the HUD compact: day, money/value, cargo weight, cargo size, current town, and urgent status only. Implemented in the game shell baseline.
-- Move secondary information into in-world overlays such as ledgers, books, cargo bags, notices, and stamped documents.
-- Use illustrated backgrounds, carved frames, parchment panels, scene hotspots, and animated transitions so each screen reads as a game space rather than a web page.
-- Add a visible time-of-day clock and dynamic scene lighting so the player can read morning, afternoon, dusk, and night at a glance. First-pass HUD clock and lighting overlay implemented; persistent gameplay time remains.
+- Move secondary information into in-world overlays such as ledgers, books, cargo bags, notices, and stamped documents. Baseline implemented for roster, journal, cargo, item detail, filters, and system menu overlays.
+- Use illustrated backgrounds, carved frames, parchment panels, scene hotspots, and animated transitions so each screen reads as a game space rather than a web page. Baseline implemented; major transition animation remains polish.
+- Add a visible time-of-day clock and dynamic scene lighting so the player can read morning, afternoon, dusk, and night at a glance. Persistent gameplay time, HUD clock, passive time tick, action time costs, and lighting overlay implemented.
 
 ### V0.2 Original-Style Customer Flow
 
-Status: implemented baseline; richer arrival presentation remains.
+Status: implemented baseline; richer authored arrival presentation remains.
 
 - Stop treating customer selection as a global directory that the player freely browses for barter. Implemented on the market hub.
 - Make customers come to the player's stall one at a time, using a controlled queue influenced by market, profession, day, events, rumors, quests, heat, reputation, and random chance. Baseline queue uses existing customer rotation.
 - Let the player call for the next customer, dismiss a customer, or leave the stall for town actions. Implemented with stall actions and Goodbye returning to the stall.
 - Keep special NPCs accessible through contextual scenes when appropriate: quest meetings, company office, event halls, black-market contacts, and story encounters.
-- Convert the current customers page into a behind-the-scenes roster/dossier or journal overlay, not the main barter entry point.
+- Convert the current customers page into a behind-the-scenes roster/dossier or journal overlay, not the main barter entry point. Implemented as an in-scene overlay.
 - Add visible arrival presentation: portrait slide-in, name/profession banner, short greeting, mood, relationship memory, and reason for visiting.
 
 ### V0.3 Contextual Scene Map
 
-Status: planned.
+Status: implemented baseline.
 
-- `Market` becomes the town square and player stall hub.
-- `Barter` becomes the focused trade table reached when a customer arrives.
-- `Travel` becomes the road/map gate reached from the town square or route exit.
-- `Company` becomes a physical office/warehouse/bank scene, not a generic management page.
-- `Event` appears only when the current town has an active event or invitation.
-- `Inventory`, `Journal`, `Item Detail`, and filters become overlays or sheets opened from relevant scenes.
-- `Settings`, `Save`, `Load`, and `System` live inside a pause/menu layer, not normal town navigation.
+- `Market` becomes the town square and player stall hub. Implemented.
+- `Barter` becomes the focused trade table reached when a customer arrives. Implemented.
+- `Travel` becomes the road/map gate reached from the town square or route exit. Implemented baseline through Map and Packup actions.
+- `Company` becomes a physical office/warehouse/bank scene, not a generic management page. Existing scene remains the entry point; deeper physical room dressing remains polish.
+- `Event` appears only when the current town has an active event or invitation. Implemented on the stall command bar.
+- `Inventory`, `Journal`, `Item Detail`, and filters become overlays or sheets opened from relevant scenes. Implemented baseline.
+- `Settings`, `Save`, `Load`, and `System` live inside a pause/menu layer, not normal town navigation. System menu implemented as an in-scene overlay; title/load/settings still exist for out-of-run flows.
 - Keep expanded systems such as rivals, permits, Myth, contracts, route mastery, and balance tools, but surface them through scene objects and ledgers instead of persistent nav buttons.
 
 ### V0.4 Weight, Size, And Physical Cargo
 
-Status: in progress, with visual inventory baseline implemented.
+Status: implemented baseline; deeper physical simulation remains.
 
 - Upgrade item capacity from simple totals into a true weight-plus-size model inspired by the original game.
 - Give items display classes for both dimensions: tiny, small, medium, bulky, huge, and heavy/super-heavy variants where needed. First-pass classes use current size/weight values.
 - Make inventory visuals reflect size: larger cards, slot spans, bundle/pile art, or denser stack presentation depending on item class. First-pass grid spans and slot sizes implemented.
-- Use weight for travel speed, route danger, packhorse strain, theft risk, guard suspicion, racing/event eligibility, and fatigue.
-- Use size for bag/cargo space, packhorse/cart upgrades, hiding difficulty, storage limits, fragile goods, and trade-table space.
-- Add item feedback based on physicality: heavy thuds, coin clinks, paper rustles, glass clinks, magic shimmer, food handling, and bundle movement.
+- Use weight for travel speed, route danger, packhorse strain, theft risk, guard suspicion, racing/event eligibility, and fatigue. Existing travel/capacity risk hooks use weight; deeper event-specific use remains.
+- Use size for bag/cargo space, packhorse/cart upgrades, hiding difficulty, storage limits, fragile goods, and trade-table space. Existing capacity and visual slot spans use size; deeper hiding/storage rules remain.
+- Add item feedback based on physicality: heavy thuds, coin clinks, paper rustles, glass clinks, magic shimmer, food handling, and bundle movement. First-pass visual physicality implemented; detailed audio categories remain polish.
 
 ### V0.5 Drag-And-Drop Trading Table
 
-Status: implemented baseline; quantity splitting and animations remain.
+Status: implemented baseline; accepted-trade transfer animation remains.
 
 - Let the player drag items from their inventory to their offer side. Implemented for matching player panels.
 - Let the player drag items from the customer's inventory to the customer's offer side. Implemented for matching NPC panels.
 - Let dragged items return from offer zones back into inventory. Implemented for matching owner panels.
-- Add stack quantity controls after dropping stackable goods.
-- Add fast interactions for repeated trading: right-click quick move, double-click move, split stack, protect/conceal toggle, and clear side.
-- Make invalid drops bounce or shake with a clear reason: too heavy, no room, protected, concealed, customer refuses, not enough quantity, or illegal risk.
+- Add stack quantity controls after dropping stackable goods. Implemented with existing exact offer quantity inputs on offer-capable panels.
+- Add fast interactions for repeated trading: right-click quick move, double-click move, split stack, protect/conceal toggle, and clear side. Implemented baseline with right-click all, double-click all, middle-click half, existing protect/conceal actions, and clear side.
+- Make invalid drops bounce or shake with a clear reason: too heavy, no room, protected, concealed, customer refuses, not enough quantity, or illegal risk. Implemented baseline with accepted/invalid drop feedback; detailed reason text remains polish.
 - Animate accepted trades by moving goods and coins across the table before updating inventories.
 
 ### V0.6 Barter Table Life And Feedback
 
-Status: planned.
+Status: implemented baseline; portrait expression sets and full animation remain.
 
-- Add NPC portrait reactions for pleased, tempted, neutral, annoyed, suspicious, insulted, and ready-to-deal states.
-- Animate offer value and fairness changes instead of instantly changing numbers.
-- Show physical item piles, coin stacks, seals, or labels on the table so offers feel tangible.
-- Make Ask Price, Ask Offer, haggle, gift, ultimatum, accept, and reject actions produce short dialogue beats and visual feedback.
+- Add NPC portrait reactions for pleased, tempted, neutral, annoyed, suspicious, insulted, and ready-to-deal states. Implemented as deal-quality reaction states; portrait expression art remains.
+- Animate offer value and fairness changes instead of instantly changing numbers. Implemented baseline with animated balance bar.
+- Show physical item piles, coin stacks, seals, or labels on the table so offers feel tangible. Implemented baseline with visible offer piles.
+- Make Ask Price, Ask Offer, haggle, gift, ultimatum, accept, and reject actions produce short dialogue beats and visual feedback. Existing messages plus deal reaction panel implemented baseline.
 - Add table effects for important moments: coin sparkle, parchment stamp, refusal shake, suspicious glare, almost-deal glow, and trade-complete flourish.
 - Add small idle motion and audio loops so the barter screen does not feel frozen while the player thinks.
 
 ### V0.7 Scene Animation And Presentation
 
-Status: planned.
+Status: implemented baseline; full transition/reward animation remains.
 
 - Add page-turn, curtain, slide, wagon-route, fade, and stamp transitions for major scene changes.
 - Add typewriter/dialogue reveal with optional faster text speed.
-- Add inventory pickup/drop animation, stack split animation, and item-detail reveal.
+- Add inventory pickup/drop animation, stack split animation, and item-detail reveal. Drop feedback and split interaction implemented baseline; richer animation remains.
 - Add travel route drawing, wagon movement, incident cards, toll payment, and arrival reveal.
 - Add reward animations for coins, goods, quest completion, contracts, and rare finds.
-- Add tasteful error feedback with motion and sound instead of relying only on toast text.
-- Upgrade the first-pass day/night presentation into a persistent gameplay clock with time costs for bartering, waiting, packup, travel departure, shop/event schedules, and per-market lighting palettes.
+- Add tasteful error feedback with motion and sound instead of relying only on toast text. Invalid drop motion feedback implemented baseline; broader error feedback remains.
+- Upgrade the first-pass day/night presentation into a persistent gameplay clock with time costs for bartering, waiting, packup, travel departure, shop/event schedules, and per-market lighting palettes. Persistent clock, time costs, and lighting implemented baseline; per-market bespoke palettes and schedules remain.
 
 ### V0.8 Suggested Build Order
 

@@ -1,4 +1,4 @@
-import type { GameState } from "./game";
+import { MARKET_OPEN_MINUTES, type GameState } from "./game";
 import { createCompanyState } from "./company";
 import { createCaravanState } from "./caravan";
 import { createLawState } from "./law";
@@ -34,6 +34,7 @@ function isGameState(value: unknown): value is GameState {
       Array.isArray(candidate.characters) &&
       Array.isArray(candidate.playerInventory)
   )) return false;
+  if (typeof candidate.timeOfDayMinutes !== "number") candidate.timeOfDayMinutes = MARKET_OPEN_MINUTES;
   if (typeof candidate.offersMade !== "number") candidate.offersMade = 0;
   if (!candidate.npcRelations || typeof candidate.npcRelations !== "object") candidate.npcRelations = {};
   if (!candidate.questStates || typeof candidate.questStates !== "object") candidate.questStates = {};

@@ -39,6 +39,9 @@ export const items = itemsJson as Item[];
 export const kingdoms = kingdomsJson as Kingdom[];
 export const marketplaces = marketplacesJson as Marketplace[];
 export const professions = professionsJson as Record<string, Profession>;
+export const GAME_DAY_MINUTES = 24 * 60;
+export const MARKET_OPEN_MINUTES = 8 * 60;
+export const MARKET_CLOSE_MINUTES = 20 * 60;
 
 const baseCharacters = charactersJson as Character[];
 let modsLoaded = false;
@@ -46,6 +49,7 @@ let modsLoaded = false;
 export type GameState = {
   marketIndex: number;
   day: number;
+  timeOfDayMinutes: number;
   selectedCharacterIndex: number | null;
   characters: Character[];
   playerInventory: InventoryEntry[];
@@ -97,6 +101,20 @@ function seeded(seed: number) {
     value = (value * 1664525 + 1013904223) >>> 0;
     return value / 4294967296;
   };
+}
+
+export function normalizeTimeOfDay(minutes: number) {
+  const safeMinutes = Number.isFinite(minutes) ? Math.floor(minutes) : MARKET_OPEN_MINUTES;
+  return ((safeMinutes % GAME_DAY_MINUTES) + GAME_DAY_MINUTES) % GAME_DAY_MINUTES;
+}
+
+export function advanceGameClock(state: Pick<GameState, "day" | "timeOfDayMinutes">, minutes: number) {
+  const current = normalizeTimeOfDay(state.timeOfDayMinutes);
+  const nextTotal = current + Math.max(0, Math.floor(minutes));
+  const daysElapsed = Math.floor(nextTotal / GAME_DAY_MINUTES);
+  state.timeOfDayMinutes = normalizeTimeOfDay(nextTotal);
+  state.day += daysElapsed;
+  return daysElapsed;
 }
 
 export function benfordsQuantity(min: number, max: number, roll: () => number) {
@@ -158,6 +176,7 @@ export function newGame(): GameState {
   return {
     marketIndex: 0,
     day: 1,
+    timeOfDayMinutes: MARKET_OPEN_MINUTES,
     selectedCharacterIndex: null,
     characters,
     playerInventory,
@@ -490,6 +509,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
   spendCopperToll(state.playerInventory, items, totalCost);
   state.marketIndex = toMarketIndex;
   state.day += route.travelDays || 1;
+  state.timeOfDayMinutes = normalizeTimeOfDay(MARKET_OPEN_MINUTES + Math.min(8 * 60, (route.travelDays || 1) * 90));
   coolLawHeat(state.law, route.travelDays || 1);
   advanceMarketSimulation(state.marketSimulation, state.day);
   const rivalActivities = advanceRivals({ rivals: state.rivals, simulation: state.marketSimulation, markets: marketplaces, items, day: state.day });

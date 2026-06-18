@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { GameShell } from "@/app/components";
 import { AppErrorBoundary } from "@/app/components/AppErrorBoundary";
 import { useMerchantController } from "@/app/hooks/useMerchantController";
@@ -52,6 +52,8 @@ const gameViews: GameView[] = [
   "inventory-filter",
   "item-detail",
 ];
+const passiveClockViews = new Set<GameView>(["market", "barter", "travel", "journal", "inventory", "inventory-filter", "item-detail", "company", "event", "customers"]);
+const sceneOverlayViews = new Set<GameView>(["customers", "journal", "inventory", "inventory-filter", "item-detail", "system"]);
 
 function initialView(): GameView {
   const view = new URLSearchParams(window.location.search).get("view");
@@ -65,6 +67,7 @@ export function App() {
   const [uiPreferences, setUiPreferences] = useState<UiPreferences>(defaultUiPreferences);
   const [saveSeen, setSaveSeen] = useState(() => Boolean(loadGame()));
   const [packupSaveDay, setPackupSaveDay] = useState<number | null>(null);
+  const advanceTimeRef = useRef(controller.actions.advanceTime);
 
   const hasSave = useMemo(() => saveSeen || Boolean(loadGame()), [saveSeen, controller.state.day]);
   const currentCustomerIsHere = controller.character ? controller.people.some((person) => person.index === controller.character?.index) : false;
@@ -80,6 +83,16 @@ export function App() {
     setSaveSeen(true);
     setPackupSaveDay(null);
   }, [controller.state.day, controller.actions, packupSaveDay]);
+
+  useEffect(() => {
+    advanceTimeRef.current = controller.actions.advanceTime;
+  }, [controller.actions.advanceTime]);
+
+  useEffect(() => {
+    if (!passiveClockViews.has(activeView)) return;
+    const timer = window.setInterval(() => advanceTimeRef.current(5), 15000);
+    return () => window.clearInterval(timer);
+  }, [activeView]);
 
   function navigate(view: GameView) {
     setActiveView(view);
@@ -115,6 +128,10 @@ export function App() {
     setActiveView("travel");
   }
 
+  function renderMarketScene() {
+    return <MarketHubView state={controller.state} market={controller.market} people={controller.people} onNavigate={navigate} onSelectCustomer={(person) => { controller.actions.selectCharacter(person); navigate("barter"); }} onNextCustomer={controller.actions.nextCustomer} onPackup={packupForMap} onUnavailable={controller.actions.setMessage} />;
+  }
+
   const view = (() => {
     switch (activeView) {
       case "main-menu":
@@ -130,7 +147,7 @@ export function App() {
       case "travel":
         return <TravelMapView state={controller.state} onEnterMarket={() => navigate("market")} onOpenJournal={() => navigate("journal")} onTravel={controller.actions.travel} onClearTravelResult={controller.actions.clearTravelResult} onToggleRouteBookmark={controller.actions.toggleRouteBookmark} />;
       case "market":
-        return <MarketHubView state={controller.state} market={controller.market} people={controller.people} onNavigate={navigate} onSelectCustomer={(person) => { controller.actions.selectCharacter(person); navigate("barter"); }} onNextCustomer={controller.actions.nextCustomer} onPackup={packupForMap} onUnavailable={controller.actions.setMessage} />;
+        return renderMarketScene();
       case "customers":
         return <CustomersView state={controller.state} people={controller.people} selected={controller.character} onSelect={controller.actions.selectCharacter} onNext={controller.actions.nextCustomer} onNavigate={navigate} onSpeak={controller.actions.speakWith} />;
       case "journal":
@@ -155,7 +172,13 @@ export function App() {
   return (
     <AppErrorBoundary>
       <GameShell controller={controller} activeView={activeView} merchantProfile={merchantProfile} uiPreferences={uiPreferences} onNavigate={navigate}>
-        {view}
+        {sceneOverlayViews.has(activeView) ? (
+          <div className="relative flex min-h-0 flex-1">
+            <div className="pointer-events-none absolute inset-0 opacity-55 blur-[1px] saturate-75">{renderMarketScene()}</div>
+            <div className="absolute inset-0 z-20 bg-black/45" />
+            <div className="relative z-30 flex min-h-0 flex-1 p-2 lg:p-4">{view}</div>
+          </div>
+        ) : view}
         {controller.helpOpen ? <HelpModal onClose={() => controller.actions.setHelpOpen(false)} /> : null}
       </GameShell>
     </AppErrorBoundary>
