@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Banknote, Building2, PackageOpen, ShipWheel } from "lucide-react";
+import { Banknote, Building2, PackageOpen, ShieldCheck, ShipWheel, Wrench } from "lucide-react";
 import type { GameState } from "@/lib/game";
 import { currentMarket, items, marketplaces, visibleQuantity } from "@/lib/game";
 import { coinQuantity } from "@/lib/economy";
@@ -18,9 +18,11 @@ type CompanyViewProps = {
   onTakeLoan: () => void;
   onRepayLoan: () => void;
   onStartShipment: (marketIndex: number) => void;
+  onRepairPackhorses: () => void;
+  onUpgradeConcealment: () => void;
 };
 
-export function CompanyView({ state, onBack, onOpenWarehouse, onDepositWarehouse, onWithdrawWarehouse, onBankDeposit, onBankWithdraw, onTakeLoan, onRepayLoan, onStartShipment }: CompanyViewProps) {
+export function CompanyView({ state, onBack, onOpenWarehouse, onDepositWarehouse, onWithdrawWarehouse, onBankDeposit, onBankWithdraw, onTakeLoan, onRepayLoan, onStartShipment, onRepairPackhorses, onUpgradeConcealment }: CompanyViewProps) {
   const market = currentMarket(state);
   const warehouse = state.company.warehouses[String(market.index)];
   const [amount, setAmount] = useState(25);
@@ -57,6 +59,18 @@ export function CompanyView({ state, onBack, onOpenWarehouse, onDepositWarehouse
         </Panel>
 
         <aside className="grid content-start gap-4">
+          <Panel title="Caravan Workshop" variant="parchment">
+            <div className="grid grid-cols-2 gap-2">
+              <StatChip label="Horse Condition" value={`${state.caravan.packhorseCondition}%`} tone={state.caravan.packhorseCondition < 40 ? "danger" : "parchment"} />
+              <StatChip label="Hidden Compartments" value={`Level ${state.caravan.concealmentLevel}`} />
+              <StatChip label="Routes Logged" value={state.caravan.routeHistory.length} />
+              <StatChip label="Mastered Routes" value={Object.values(state.caravan.routeMastery).filter((trips) => trips >= 3).length} />
+            </div>
+            <div className="mt-3 grid grid-cols-2 gap-2">
+              <Button onClick={onRepairPackhorses}><Wrench size={16} /> Care</Button>
+              <Button variant="secondary" onClick={onUpgradeConcealment}><ShieldCheck size={16} /> Upgrade</Button>
+            </div>
+          </Panel>
           <Panel title={<span className="inline-flex items-center gap-2"><Banknote size={18} /> Bank and Loans</span>} variant="parchment">
             <div className="grid grid-cols-3 gap-2">
               <StatChip label="Purse" value={money(copper)} />

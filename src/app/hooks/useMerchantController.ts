@@ -53,6 +53,7 @@ import {
   withdrawWarehouse as retrieveFromWarehouse,
 } from "@/lib/company";
 import { createDraftSession, pickDraftItem as resolveDraftPick } from "@/lib/draft";
+import { repairPackhorses as repairCaravanPackhorses, toggleRouteBookmark as toggleCaravanRouteBookmark, upgradeConcealment as upgradeCaravanConcealment } from "@/lib/caravan";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -591,6 +592,46 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function repairPackhorses() {
+    update((draft) => {
+      const missing = 100 - draft.caravan.packhorseCondition;
+      if (missing <= 0) {
+        draft.message = "Your packhorses are already in excellent condition.";
+        return;
+      }
+      const cost = Math.max(1, Math.ceil(missing / 4));
+      if (!spendCopperToll(draft.playerInventory, items, cost)) {
+        draft.message = `Packhorse care costs ${cost} copper.`;
+        return;
+      }
+      const repaired = repairCaravanPackhorses(draft.caravan, missing);
+      draft.message = `Restored ${repaired} packhorse condition for ${cost} copper.`;
+    });
+  }
+
+  function upgradeConcealment() {
+    update((draft) => {
+      const cost = 75 * (draft.caravan.concealmentLevel + 1);
+      if (draft.caravan.concealmentLevel >= 3) {
+        draft.message = "Your hidden compartments are already fully upgraded.";
+        return;
+      }
+      if (!spendCopperToll(draft.playerInventory, items, cost)) {
+        draft.message = `The next concealment upgrade costs ${cost} copper.`;
+        return;
+      }
+      upgradeCaravanConcealment(draft.caravan);
+      draft.message = `Hidden compartments upgraded to level ${draft.caravan.concealmentLevel}.`;
+    });
+  }
+
+  function toggleRouteBookmark(toMarketIndex: number) {
+    update((draft) => {
+      const added = toggleCaravanRouteBookmark(draft.caravan, draft.marketIndex, toMarketIndex);
+      draft.message = `${marketplaces[toMarketIndex].name} route ${added ? "bookmarked" : "removed from bookmarks"}.`;
+    });
+  }
+
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
@@ -772,6 +813,9 @@ export function useMerchantController(): MerchantController {
       startDraft,
       pickDraftItem,
       closeDraft,
+      repairPackhorses,
+      upgradeConcealment,
+      toggleRouteBookmark,
       selectCharacter,
       nextCustomer,
       movePlayer,

@@ -11,6 +11,7 @@ import type { MythSession } from "./myth";
 import { advanceMarketSimulation, recordMarketTrade, simulatedMarketBiases, type MarketSimulation } from "./market-simulation";
 import { createCompanyState, settleShipments, type CompanyState } from "./company";
 import type { DraftSession } from "./draft";
+import { applyPackhorseTravelWear, createCaravanState, masteryRiskReduction, recordRoute, routeKey, type CaravanState } from "./caravan";
 import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { eventBiases } from "./events";
@@ -60,6 +61,7 @@ export type GameState = {
   marketSimulation: MarketSimulation;
   company: CompanyState;
   draftSession: DraftSession | null;
+  caravan: CaravanState;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -168,6 +170,7 @@ export function newGame(): GameState {
     marketSimulation: {},
     company: createCompanyState(),
     draftSession: null,
+    caravan: createCaravanState(),
     dialogueLog: [],
     travelResult: null,
   };
@@ -441,6 +444,8 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
 
   const stallage = marketplaces[toMarketIndex].stallage || 0;
   const destinationKingdom = kingdoms[marketplaces[toMarketIndex].kingdomIndex];
+  const fromMarketIndex = state.marketIndex;
+  const masteryTrips = state.caravan.routeMastery[routeKey(fromMarketIndex, toMarketIndex)] || 0;
   const riskPreview = routeRiskPreview({
     inventory: state.playerInventory,
     items,
@@ -448,6 +453,8 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
     kingdom: destinationKingdom,
     days: route.travelDays || 1,
     tolls: route.tolls,
+    concealmentLevel: state.caravan.concealmentLevel,
+    masteryReduction: masteryRiskReduction(masteryTrips),
   });
   const bribeCost = strategy === "bribe" && riskPreview.illegalStacks > 0 ? 12 : 0;
   const totalCost = route.tolls + stallage + bribeCost;
@@ -457,6 +464,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
   }
 
   const fromMarketName = currentMarket(state).name;
+  const departedDay = state.day;
   spendCopperToll(state.playerInventory, items, totalCost);
   state.marketIndex = toMarketIndex;
   state.day += route.travelDays || 1;
@@ -490,6 +498,23 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
       const item = items[entry.itemIndex];
       return visibleQuantity(entry) > 0 && (item.tags.some((tag) => tag.toLowerCase().includes("permit")) || item.name.toLowerCase().includes("permit"));
     }),
+    concealmentLevel: state.caravan.concealmentLevel,
+    masteryReduction: masteryRiskReduction(masteryTrips),
+  });
+  const wear = applyPackhorseTravelWear(state.caravan, cargo.packAnimals, route.travelDays || 1, !cargo.canTravel);
+  recordRoute(state.caravan, {
+    id: `${fromMarketIndex}:${toMarketIndex}:${departedDay}`,
+    dayDeparted: departedDay,
+    dayArrived: state.day,
+    fromMarketIndex,
+    toMarketIndex,
+    days: route.travelDays || 1,
+    tolls: route.tolls,
+    stallage,
+    strategy,
+    cargoValue: riskPreview.cargoValue,
+    incidents: riskEvents.map((event) => event.message),
+    success: true,
   });
   state.travelResult = {
     fromMarketName,
@@ -508,7 +533,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
     ? `Arrived in ${marketplaces[toMarketIndex].name}. ${expiredContracts.length} contract${expiredContracts.length === 1 ? "" : "s"} expired on the road; up to ${failurePenalty} copper was claimed in penalties.`
     : riskEvents.length
     ? `Arrived in ${marketplaces[toMarketIndex].name}. ${riskEvents[0].message}`
-    : `Paid ${route.tolls} copper toll and ${stallage} stallage${bribeCost ? ` plus ${bribeCost} for discretion` : ""}, then arrived in ${marketplaces[toMarketIndex].name}.`;
+    : `Paid ${route.tolls} copper toll and ${stallage} stallage${bribeCost ? ` plus ${bribeCost} for discretion` : ""}, then arrived in ${marketplaces[toMarketIndex].name}.${wear ? ` Packhorse condition lost ${wear}.` : ""}`;
   return true;
 }
 

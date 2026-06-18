@@ -1,5 +1,6 @@
 import type { GameState } from "./game";
 import { createCompanyState } from "./company";
+import { createCaravanState } from "./caravan";
 
 export const SAVE_VERSION = 1;
 const SAVE_KEY = "merchant-react-save";
@@ -44,6 +45,7 @@ function isGameState(value: unknown): value is GameState {
   if (!candidate.marketSimulation || typeof candidate.marketSimulation !== "object") candidate.marketSimulation = {};
   if (!candidate.company || typeof candidate.company !== "object") candidate.company = createCompanyState();
   if (!("draftSession" in candidate)) candidate.draftSession = null;
+  if (!candidate.caravan || typeof candidate.caravan !== "object") candidate.caravan = createCaravanState();
   if (!Array.isArray(candidate.dialogueLog)) candidate.dialogueLog = [];
   if (!("travelResult" in candidate)) candidate.travelResult = null;
   if (candidate.travelResult && typeof candidate.travelResult.stallage !== "number") candidate.travelResult.stallage = 0;

@@ -35,15 +35,18 @@ export function routeRiskPreview(options: {
   kingdom: Kingdom | undefined;
   days: number;
   tolls: number;
+  concealmentLevel?: number;
+  masteryReduction?: number;
 }): RouteRiskPreview {
-  const { inventory, items, destination, kingdom, days, tolls } = options;
+  const { inventory, items, destination, kingdom, days, tolls, concealmentLevel = 0, masteryReduction = 0 } = options;
   const illegalEntries = inventory.filter((entry) => visibleQuantity(entry) > 0 && itemIsIllegal(items[entry.itemIndex], kingdom?.illegalItemTags || []));
   const exposedIllegalStacks = illegalEntries.filter((entry) => !entry.conceal).length;
   const concealedIllegalStacks = illegalEntries.length - exposedIllegalStacks;
-  const guardInspectionPercent = illegalEntries.length
+  const baseGuardInspectionPercent = illegalEntries.length
     ? Math.min(95, 12 + days * 2 + exposedIllegalStacks * 28 + concealedIllegalStacks * 8)
     : Math.min(20, 3 + days);
-  const theftPercent = Math.max(0, Math.min(100, destination.theft?.percent || 0));
+  const guardInspectionPercent = Math.max(0, baseGuardInspectionPercent - concealmentLevel * 8 - masteryReduction);
+  const theftPercent = Math.max(0, Math.min(100, (destination.theft?.percent || 0) - masteryReduction));
   const cargoValue = inventoryTotals(inventory, items).value;
   const combined = guardInspectionPercent + theftPercent + Math.min(25, cargoValue / 500);
   const level = combined >= 100 ? "severe" : combined >= 65 ? "high" : combined >= 30 ? "medium" : "low";
@@ -82,10 +85,12 @@ export function applyTravelRisks(options: {
   theftRoll?: number;
   strategy?: TravelStrategy;
   hasPermit?: boolean;
+  concealmentLevel?: number;
+  masteryReduction?: number;
 }) {
-  const { inventory, items, destination, kingdom, day, travelDays = 1, strategy = "comply", hasPermit = false } = options;
+  const { inventory, items, destination, kingdom, day, travelDays = 1, strategy = "comply", hasPermit = false, concealmentLevel = 0, masteryReduction = 0 } = options;
   const events: TravelRiskEvent[] = [];
-  const preview = routeRiskPreview({ inventory, items, destination, kingdom, days: travelDays, tolls: 0 });
+  const preview = routeRiskPreview({ inventory, items, destination, kingdom, days: travelDays, tolls: 0, concealmentLevel, masteryReduction });
   const illegalTags = kingdom?.illegalItemTags || [];
   const illegalEntry = inventory
     .filter((entry) => {

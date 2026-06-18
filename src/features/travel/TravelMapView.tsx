@@ -1,4 +1,4 @@
-import { BookOpen, MapPinned, Route } from "lucide-react";
+import { BookOpen, Bookmark, MapPinned, Route } from "lucide-react";
 import { useState } from "react";
 import type { GameState } from "@/lib/game";
 import { items, kingdoms, marketplaces } from "@/lib/game";
@@ -9,9 +9,10 @@ import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { routeRiskPreview } from "@/lib/travel-risk";
 import type { TravelStrategy } from "@/lib/travel-risk";
+import { masteryRiskReduction, routeKey, routeMasteryLevel } from "@/lib/caravan";
 import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, StatChip, TitleRibbon } from "@/components/ui";
 
-export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult }: { state: GameState; onTravel: (marketIndex: number, strategy?: TravelStrategy) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void }) {
+export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult, onToggleRouteBookmark }: { state: GameState; onTravel: (marketIndex: number, strategy?: TravelStrategy) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void; onToggleRouteBookmark: (marketIndex: number) => void }) {
   const [pendingDestination, setPendingDestination] = useState<number | null>(null);
   const [strategy, setStrategy] = useState<TravelStrategy>("comply");
   const market = marketplaces[state.marketIndex];
@@ -30,6 +31,8 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
       kingdom: pendingKingdom || undefined,
       days: pendingRoute.travelDays,
       tolls: pendingRoute.tolls,
+      concealmentLevel: state.caravan.concealmentLevel,
+      masteryReduction: masteryRiskReduction(state.caravan.routeMastery[routeKey(market.index, pendingMarket.index)] || 0),
     })
     : null;
   const requestTravel = (marketIndex: number) => setPendingDestination(marketIndex);
@@ -90,17 +93,30 @@ export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, o
                   kingdom: destinationKingdom,
                   days: connection.travelDays,
                   tolls: connection.tolls,
+                  concealmentLevel: state.caravan.concealmentLevel,
+                  masteryReduction: masteryRiskReduction(state.caravan.routeMastery[routeKey(market.index, destination.index)] || 0),
                 });
+                const trips = state.caravan.routeMastery[routeKey(market.index, destination.index)] || 0;
+                const bookmarked = state.caravan.bookmarkedRoutes.includes(routeKey(market.index, destination.index));
                 return (
-                  <LedgerRow
-                    key={destination.index}
-                    title={destination.name}
-                    subtitle={`Toll ${money(connection.tolls)} + stallage ${money(destination.stallage)} / guard ${risk.guardInspectionPercent}% / theft ${risk.theftPercent}%${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""} / cargo ${money(risk.cargoValue)}`}
-                    trailing={<span className="text-sm font-bold uppercase text-[#75501f]">{connection.travelDays}d / {risk.level}</span>}
-                    onClick={() => requestTravel(destination.index)}
-                  />
+                  <div className="grid grid-cols-[1fr_auto] gap-2" key={destination.index}>
+                    <LedgerRow
+                      title={destination.name}
+                      subtitle={`Toll ${money(connection.tolls)} + stallage ${money(destination.stallage)} / guard ${risk.guardInspectionPercent}% / theft ${risk.theftPercent}% / mastery ${routeMasteryLevel(trips)}${destinationIllegal.length ? ` / ${destinationIllegal.length} illegal stack${destinationIllegal.length === 1 ? "" : "s"}` : ""}`}
+                      trailing={<span className="text-sm font-bold uppercase text-[#75501f]">{connection.travelDays}d / {risk.level}</span>}
+                      onClick={() => requestTravel(destination.index)}
+                    />
+                    <Button size="sm" variant={bookmarked ? "primary" : "secondary"} onClick={() => onToggleRouteBookmark(destination.index)}><Bookmark size={15} /></Button>
+                  </div>
                 );
               })}
+            </div>
+          </Panel>
+          <Panel title="Recent Journeys" variant="parchment">
+            <div className="grid max-h-48 gap-2 overflow-auto">
+              {state.caravan.routeHistory.slice(0, 6).map((entry) => (
+                <LedgerRow key={entry.id} title={`${marketplaces[entry.fromMarketIndex].name} to ${marketplaces[entry.toMarketIndex].name}`} subtitle={`Day ${entry.dayDeparted}-${entry.dayArrived} / cargo ${money(entry.cargoValue)} / ${entry.strategy}`} trailing={<span className="text-xs font-bold">{entry.incidents.length ? `${entry.incidents.length} incident` : "Clear"}</span>} />
+              ))}
             </div>
           </Panel>
         </aside>
