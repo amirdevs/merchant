@@ -6,6 +6,7 @@ import { contractDeadline, contractItemProgress, generatedContracts, resolveCont
 import { questCanComplete, questItemProgress, questReward } from "@/lib/quests";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { uiAssets } from "@/lib/ui-assets";
+import { marketRumors } from "@/lib/market-simulation";
 
 type QuestStatus = GameState["questStates"][string];
 
@@ -32,6 +33,7 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
   const currentQuestProgress = questItemProgress(market, state.playerInventory, items);
   const currentQuestReady = questCanComplete(market, state.playerInventory, items);
   const currentQuestReward = questReward(market, items);
+  const dynamicRumors = marketRumors(state.marketSimulation, market, state.day);
 
   return (
     <ScreenFrame title="Journal" eyebrow="Quests, Notices, Rumors" backdrop={uiAssets.backplates.marketTown} overlay="light">
@@ -131,6 +133,11 @@ export function JournalView({ state, onBack, onSetQuestStatus, onSetContractStat
             )}
           </Panel>
           <Panel title={<span className="inline-flex items-center gap-2"><BookOpen size={18} /> Rumor Ledger</span>} variant="parchment">
+            {dynamicRumors.length ? (
+              <div className="mb-3 grid gap-2">
+                {dynamicRumors.map((rumor) => <div className="rounded-sm border border-[#1f5960]/40 bg-[#fff6d7]/70 p-3 text-sm font-bold text-[#1f5960]" key={rumor}>{rumor}</div>)}
+              </div>
+            ) : null}
             {notes.length ? (
               <div className="grid max-h-[62vh] gap-2 overflow-auto pr-1">
                 {notes.map((note) => (

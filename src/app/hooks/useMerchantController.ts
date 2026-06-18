@@ -41,6 +41,7 @@ import { addInventory } from "@/lib/inventory";
 import type { TravelStrategy } from "@/lib/travel-risk";
 import { runHorseRace as calculateHorseRace } from "@/lib/racing";
 import { playMythCard as resolveMythCard, startMythGame as createMythGame } from "@/lib/myth";
+import { advanceMarketSimulation } from "@/lib/market-simulation";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -299,6 +300,7 @@ export function useMerchantController(): MerchantController {
   function advanceDay() {
     update((draft) => {
       draft.day += 1;
+      advanceMarketSimulation(draft.marketSimulation, draft.day);
       const expiredContracts = expireContracts({
         states: draft.contractStates,
         acceptedDays: draft.contractAcceptedDays,

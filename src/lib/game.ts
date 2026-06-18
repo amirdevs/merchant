@@ -8,6 +8,7 @@ import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
 import type { AuctionSession } from "./auction";
 import type { RaceResult } from "./racing";
 import type { MythSession } from "./myth";
+import { advanceMarketSimulation, recordMarketTrade, simulatedMarketBiases, type MarketSimulation } from "./market-simulation";
 import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { eventBiases } from "./events";
@@ -54,6 +55,7 @@ export type GameState = {
   dialogueNodes: Record<string, DialogueNodeId>;
   raceResult: RaceResult | null;
   mythSession: MythSession | null;
+  marketSimulation: MarketSimulation;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -159,6 +161,7 @@ export function newGame(): GameState {
     dialogueNodes: {},
     raceResult: null,
     mythSession: null,
+    marketSimulation: {},
     dialogueLog: [],
     travelResult: null,
   };
@@ -193,7 +196,7 @@ export function offerValue(inventory: InventoryEntry[], character: Character | n
     character,
     perspective,
     profession: character?.professionSlug ? professions[character.professionSlug] : undefined,
-    marketplace: market ? { ...market, bias: [...(market.bias || []), ...eventBiases(market, state?.day || 1)] } : undefined,
+    marketplace: market ? { ...market, bias: [...(market.bias || []), ...eventBiases(market, state?.day || 1), ...simulatedMarketBiases(state?.marketSimulation || {}, market, state?.day || 1)] } : undefined,
     kingdom: state ? currentKingdom(state) : undefined,
     offersMade: state?.offersMade || 0,
   });
@@ -349,6 +352,8 @@ export function completeTrade(state: GameState) {
 
   const playerCargoValue = next.playerInventory.reduce((total, entry) => total + items[entry.itemIndex].loafValue * entry.quantity, 0);
   const npcGift = playerValue <= 0 && safetyNetGiftAllowed(nextCharacter, relation, playerCargoValue, characterValue);
+  const playerSold = next.playerInventory.filter((entry) => entry.offerQuantity > 0).map((entry) => ({ ...entry }));
+  const playerBought = nextCharacter.inventory.filter((entry) => entry.offerQuantity > 0).map((entry) => ({ ...entry }));
   const marketQuest = currentMarket(next);
   const completesQuest = next.questStates[String(marketQuest.index)] === "accepted"
     && questOfferCanComplete(marketQuest, next.playerInventory, items);
@@ -383,6 +388,14 @@ export function completeTrade(state: GameState) {
   relation.trust += appraisal === "great_deal" ? 2 : 1;
   transferOffers(next.playerInventory, nextCharacter.inventory);
   transferOffers(nextCharacter.inventory, next.playerInventory);
+  recordMarketTrade({
+    simulation: next.marketSimulation,
+    marketIndex: next.marketIndex,
+    day: next.day,
+    playerSold,
+    playerBought,
+    items,
+  });
   let questMessage = "";
   if (completesQuest && marketQuest.quest) {
     const reward = questReward(marketQuest, items);
@@ -441,6 +454,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
   spendCopperToll(state.playerInventory, items, totalCost);
   state.marketIndex = toMarketIndex;
   state.day += route.travelDays || 1;
+  advanceMarketSimulation(state.marketSimulation, state.day);
   const expiredContracts = expireContracts({
     states: state.contractStates,
     acceptedDays: state.contractAcceptedDays,
