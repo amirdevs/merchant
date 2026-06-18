@@ -79,6 +79,13 @@ export function hagglingBias(character: Character, baseValue: number, perspectiv
   return percentage(baseValue, percent);
 }
 
+export function illegalRiskBias(item: Item, baseValue: number, illegalTags: string[] = [], blackMarket = false, heat = 0) {
+  if (!illegalTags.some((tag) => item.tags.includes(tag))) return 0;
+  const heatPremium = Math.min(30, Math.max(0, heat) * 0.25);
+  const percent = blackMarket ? 20 + heatPremium : -45 - heatPremium;
+  return percentage(baseValue, percent);
+}
+
 export function valueOffer(options: {
   inventory: InventoryEntry[];
   items: Item[];
@@ -90,6 +97,9 @@ export function valueOffer(options: {
   difficulty?: number;
   biasMagnitude?: number;
   ultimatum?: boolean;
+  illegalTags?: string[];
+  blackMarket?: boolean;
+  heat?: number;
   perspective: TradePerspective;
 }) {
   return valueOfferBreakdown(options).total;
@@ -106,9 +116,12 @@ export function valueOfferBreakdown(options: {
   difficulty?: number;
   biasMagnitude?: number;
   ultimatum?: boolean;
+  illegalTags?: string[];
+  blackMarket?: boolean;
+  heat?: number;
   perspective: TradePerspective;
 }) {
-  const { inventory, items, character, profession, marketplace, kingdom, offersMade = 0, difficulty = 0, biasMagnitude = DEFAULT_BIAS_MAGNITUDE, ultimatum, perspective } = options;
+  const { inventory, items, character, profession, marketplace, kingdom, offersMade = 0, difficulty = 0, biasMagnitude = DEFAULT_BIAS_MAGNITUDE, ultimatum, illegalTags = [], blackMarket = false, heat = 0, perspective } = options;
   const lines: OfferValueLine[] = [];
   const total = inventory.reduce((sum, entry) => {
     if (entry.offerQuantity <= 0) return sum;
@@ -119,6 +132,7 @@ export function valueOfferBreakdown(options: {
       { label: "Market demand", amount: marketplaceBias(marketplace, item, baseValue, biasMagnitude) },
       { label: "Kingdom demand", amount: kingdomBias(kingdom, item, baseValue, biasMagnitude) },
       { label: "Imported goods", amount: exoticBias(kingdom?.index, item, baseValue) },
+      { label: blackMarket ? "Underworld risk premium" : "Illegal risk discount", amount: illegalRiskBias(item, baseValue, illegalTags, blackMarket, heat) },
     ];
 
     if (character) {

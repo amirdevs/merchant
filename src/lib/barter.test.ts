@@ -6,6 +6,7 @@ const items: Item[] = [
   { index: 0, name: "local bread", tags: ["food"], loafValue: 10, size: 1, weight: 1, kingdomIndex: 0 },
   { index: 1, name: "foreign silk", tags: ["cloth", "luxury"], loafValue: 100, size: 2, weight: 1, kingdomIndex: 1 },
   { index: 2, name: "iron nails", tags: ["tools"], loafValue: 5, size: 1, weight: 1, kingdomIndex: 0 },
+  { index: 3, name: "moon idol", tags: ["relic", "contraband"], loafValue: 100, size: 1, weight: 1, kingdomIndex: 0 },
 ];
 
 const character: Character = {
@@ -105,6 +106,34 @@ describe("barter valuation", () => {
     });
 
     expect(value).toBe(98);
+  });
+
+  it("discounts illegal goods in normal trade", () => {
+    const value = valueOffer({
+      inventory: offer(3, 1),
+      items,
+      character,
+      kingdom,
+      illegalTags: ["contraband"],
+      perspective: "player",
+    });
+
+    expect(value).toBe(45);
+  });
+
+  it("adds a heat-sensitive premium for black-market trade", () => {
+    const value = valueOffer({
+      inventory: offer(3, 1),
+      items,
+      character,
+      kingdom,
+      illegalTags: ["contraband"],
+      blackMarket: true,
+      heat: 40,
+      perspective: "player",
+    });
+
+    expect(value).toBe(120);
   });
 
   it.each([

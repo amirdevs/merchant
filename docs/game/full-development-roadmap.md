@@ -896,9 +896,9 @@ Status: planned.
 
 ### V4.2 Black Market, Law, And Politics Depth
 
-Status: planned.
+Status: in progress.
 
-- Add dedicated black-market inventories with contraband-only stock, rare stolen goods, forged documents, and risk-adjusted prices. Baseline contraband stock implemented for eligible thief contacts; rare stolen goods and risk-adjusted pricing remain.
+- Add dedicated black-market inventories with contraband-only stock, rare stolen goods, forged documents, and risk-adjusted prices. Baseline contraband stock and risk-adjusted illegal pricing implemented; rare stolen goods remain.
 - Add informants, snitches, jail alternatives, confiscation negotiations, legal favors, and quiet ways to reduce heat.
 - Add guild permits, tax discounts, trade licenses, restricted market access, and kingdom-specific exemptions.
 - Add elections, faction votes, local politics, guild disputes, and consequences that change taxes, laws, prices, and route safety.

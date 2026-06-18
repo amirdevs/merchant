@@ -227,6 +227,9 @@ export function currentKingdom(state: GameState) {
 
 export function offerValue(inventory: InventoryEntry[], character: Character | null, perspective: TradePerspective, state?: GameState) {
   const market = state ? currentMarket(state) : undefined;
+  const kingdom = state ? currentKingdom(state) : undefined;
+  const relation = state && character ? ensureRelation(state.npcRelations, character) : null;
+  const blackMarket = Boolean(state && character && canUseBlackMarket(state.law, relation?.trust || 0, npcRoles(character).includes("thief")));
   return valueOffer({
     inventory,
     items,
@@ -234,8 +237,11 @@ export function offerValue(inventory: InventoryEntry[], character: Character | n
     perspective,
     profession: character?.professionSlug ? professions[character.professionSlug] : undefined,
     marketplace: market ? { ...market, bias: [...(market.bias || []), ...seasonalMarketBiases(state?.day || 1), ...eventBiases(market, state?.day || 1), ...simulatedMarketBiases(state?.marketSimulation || {}, market, state?.day || 1)] } : undefined,
-    kingdom: state ? currentKingdom(state) : undefined,
+    kingdom,
     offersMade: state?.offersMade || 0,
+    illegalTags: kingdom?.illegalItemTags || [],
+    blackMarket,
+    heat: state && kingdom ? kingdomHeat(state.law, kingdom.index) : 0,
   });
 }
 

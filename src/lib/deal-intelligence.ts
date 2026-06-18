@@ -2,6 +2,9 @@ import type { Character } from "@/data/types";
 import { valueOfferBreakdown, type OfferValueLine } from "./barter";
 import { currentKingdom, currentMarket, items, professions, type GameState } from "./game";
 import { money } from "./format";
+import { canUseBlackMarket, kingdomHeat } from "./law";
+import { npcRoles } from "./npc-behavior";
+import { ensureRelation } from "./reputation";
 
 export type DealHint = {
   label: string;
@@ -19,13 +22,19 @@ function strongestAdjustments(lines: OfferValueLine[]) {
 export function buildDealHints(state: GameState, character: Character | null, playerOffer: number, characterOffer: number) {
   if (!character) return [];
   const profession = character.professionSlug ? professions[character.professionSlug] : undefined;
+  const kingdom = currentKingdom(state);
+  const relation = ensureRelation(state.npcRelations, character);
+  const blackMarket = canUseBlackMarket(state.law, relation.trust, npcRoles(character).includes("thief"));
   const shared = {
     items,
     character,
     profession,
     marketplace: currentMarket(state),
-    kingdom: currentKingdom(state),
+    kingdom,
     offersMade: state.offersMade,
+    illegalTags: kingdom.illegalItemTags || [],
+    blackMarket,
+    heat: kingdomHeat(state.law, kingdom.index),
   };
   const player = valueOfferBreakdown({ ...shared, inventory: state.playerInventory, perspective: "player" });
   const npc = valueOfferBreakdown({ ...shared, inventory: character.inventory, perspective: "character" });
