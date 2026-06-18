@@ -17,6 +17,7 @@ export function TradeWorkspace({ controller }: { controller: MerchantController 
           <>
             <InventoryPanel
               title={`${character.name}'s Offer`}
+              owner="character"
               mode="offer"
               inventory={character.inventory}
               onMove={(entry, amount) => actions.moveCharacter(entry, amount, true)}
@@ -24,6 +25,7 @@ export function TradeWorkspace({ controller }: { controller: MerchantController 
             />
             <InventoryPanel
               title={`${character.name}'s Stock`}
+              owner="character"
               inventory={character.inventory}
               onMove={(entry, amount) => actions.moveCharacter(entry, amount)}
               onMoveAll={(entry) => actions.moveCharacter(entry, "all")}
@@ -61,6 +63,7 @@ export function TradeWorkspace({ controller }: { controller: MerchantController 
       <aside className="grid min-w-0 content-start gap-3">
         <InventoryPanel
           title="Your Offer"
+          owner="player"
           mode="offer"
           inventory={state.playerInventory}
           onMove={(entry, amount) => actions.movePlayer(entry, amount, true)}
@@ -68,6 +71,7 @@ export function TradeWorkspace({ controller }: { controller: MerchantController 
         />
         <InventoryPanel
           title="Your Inventory"
+          owner="player"
           inventory={state.playerInventory}
           onMove={(entry, amount) => actions.movePlayer(entry, amount)}
           onMoveAll={(entry) => actions.movePlayer(entry, "all")}

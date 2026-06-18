@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { GameShell } from "@/app/components";
 import { AppErrorBoundary } from "@/app/components/AppErrorBoundary";
 import { useMerchantController } from "@/app/hooks/useMerchantController";
@@ -64,8 +64,22 @@ export function App() {
   const [merchantProfile, setMerchantProfile] = useState<MerchantProfile>(defaultMerchantProfile);
   const [uiPreferences, setUiPreferences] = useState<UiPreferences>(defaultUiPreferences);
   const [saveSeen, setSaveSeen] = useState(() => Boolean(loadGame()));
+  const [packupSaveDay, setPackupSaveDay] = useState<number | null>(null);
 
   const hasSave = useMemo(() => saveSeen || Boolean(loadGame()), [saveSeen, controller.state.day]);
+  const currentCustomerIsHere = controller.character ? controller.people.some((person) => person.index === controller.character?.index) : false;
+
+  useEffect(() => {
+    if (activeView !== "market" || currentCustomerIsHere || !controller.people.length) return;
+    controller.actions.selectCharacter(controller.people[0]);
+  }, [activeView, currentCustomerIsHere, controller.people, controller.actions]);
+
+  useEffect(() => {
+    if (packupSaveDay === null || controller.state.day < packupSaveDay) return;
+    controller.actions.saveGame(0);
+    setSaveSeen(true);
+    setPackupSaveDay(null);
+  }, [controller.state.day, controller.actions, packupSaveDay]);
 
   function navigate(view: GameView) {
     setActiveView(view);
@@ -95,6 +109,12 @@ export function App() {
     setActiveView("new-profile");
   }
 
+  function packupForMap() {
+    setPackupSaveDay(controller.state.day + 1);
+    controller.actions.advanceDay();
+    setActiveView("travel");
+  }
+
   const view = (() => {
     switch (activeView) {
       case "main-menu":
@@ -110,7 +130,7 @@ export function App() {
       case "travel":
         return <TravelMapView state={controller.state} onEnterMarket={() => navigate("market")} onOpenJournal={() => navigate("journal")} onTravel={controller.actions.travel} onClearTravelResult={controller.actions.clearTravelResult} onToggleRouteBookmark={controller.actions.toggleRouteBookmark} />;
       case "market":
-        return <MarketHubView state={controller.state} market={controller.market} people={controller.people} onNavigate={navigate} onSelectCustomer={(person) => { controller.actions.selectCharacter(person); navigate("barter"); }} onUnavailable={controller.actions.setMessage} />;
+        return <MarketHubView state={controller.state} market={controller.market} people={controller.people} onNavigate={navigate} onSelectCustomer={(person) => { controller.actions.selectCharacter(person); navigate("barter"); }} onNextCustomer={controller.actions.nextCustomer} onPackup={packupForMap} onUnavailable={controller.actions.setMessage} />;
       case "customers":
         return <CustomersView state={controller.state} people={controller.people} selected={controller.character} onSelect={controller.actions.selectCharacter} onNext={controller.actions.nextCustomer} onNavigate={navigate} onSpeak={controller.actions.speakWith} />;
       case "journal":
@@ -120,7 +140,7 @@ export function App() {
       case "company":
         return <CompanyView state={controller.state} onBack={() => navigate("market")} onOpenWarehouse={controller.actions.openWarehouse} onDepositWarehouse={controller.actions.depositWarehouse} onWithdrawWarehouse={controller.actions.withdrawWarehouse} onBankDeposit={controller.actions.bankDeposit} onBankWithdraw={controller.actions.bankWithdraw} onTakeLoan={controller.actions.takeLoan} onRepayLoan={controller.actions.repayLoan} onStartShipment={controller.actions.startShipment} onRepairPackhorses={controller.actions.repairPackhorses} onUpgradeConcealment={controller.actions.upgradeConcealment} onBuyPermit={controller.actions.buyPermit} />;
       case "barter":
-        return <BarterConversationView state={controller.state} character={controller.character} playerOffer={controller.playerOffer} characterOffer={controller.characterOffer} message={controller.state.message} onMovePlayer={controller.actions.movePlayer} onMoveCharacter={controller.actions.moveCharacter} onSetPlayerOfferQuantity={controller.actions.setPlayerOfferQuantity} onSetCharacterOfferQuantity={controller.actions.setCharacterOfferQuantity} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onTrade={controller.actions.trade} onAskPrice={controller.actions.askPrice} onAskOffer={controller.actions.askOffer} onClearOffers={controller.actions.clearTradeOffers} onUndoOfferChange={controller.actions.undoLastOfferChange} onGoodbye={() => { controller.actions.goodbye(); navigate("customers"); }} onHelp={() => controller.actions.setHelpOpen(true)} onSpeak={controller.actions.speakWith} />;
+        return <BarterConversationView state={controller.state} character={controller.character} playerOffer={controller.playerOffer} characterOffer={controller.characterOffer} message={controller.state.message} onMovePlayer={controller.actions.movePlayer} onMoveCharacter={controller.actions.moveCharacter} onSetPlayerOfferQuantity={controller.actions.setPlayerOfferQuantity} onSetCharacterOfferQuantity={controller.actions.setCharacterOfferQuantity} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onTrade={controller.actions.trade} onAskPrice={controller.actions.askPrice} onAskOffer={controller.actions.askOffer} onClearOffers={controller.actions.clearTradeOffers} onUndoOfferChange={controller.actions.undoLastOfferChange} onGoodbye={() => { controller.actions.goodbye(); navigate("market"); }} onHelp={() => controller.actions.setHelpOpen(true)} onSpeak={controller.actions.speakWith} />;
       case "inventory":
         return <InventoryManagementView state={controller.state} playerOffer={controller.playerOffer} onMovePlayer={controller.actions.movePlayer} onSetPlayerOfferQuantity={controller.actions.setPlayerOfferQuantity} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onOpenFilter={() => navigate("inventory-filter")} onOpenItemDetail={(entry) => { controller.actions.selectItem(entry); navigate("item-detail"); }} onUnavailable={controller.actions.setMessage} />;
       case "inventory-filter":

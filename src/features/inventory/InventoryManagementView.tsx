@@ -116,7 +116,7 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
               <Grid3X3 size={22} />
             </button>
           </div>
-          <InventoryPanel title="Cargo" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} illegalTags={illegalTags} questItemIndexes={questItemIndexes} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onSetOfferQuantity={onSetPlayerOfferQuantity} onToggleProtect={onTogglePlayerProtect} allowProtect />
+          <InventoryPanel title="Cargo" owner="player" subtitle="Quantities, value, protection, legality, quest and highlight markers." inventory={filteredEntries} illegalTags={illegalTags} questItemIndexes={questItemIndexes} variant="management" onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onSetOfferQuantity={onSetPlayerOfferQuantity} onToggleProtect={onTogglePlayerProtect} allowProtect />
           <div className="mt-4 grid gap-3 md:grid-cols-5">
             <StatChip label="Carry" value={`${totals.weight} / ${totals.carryCapacity}`} icon={uiAssets.hud.weight} />
             <StatChip label="Pull" value={`${totals.size} / ${totals.sizeCapacity}`} icon={uiAssets.hud.inventory} />
@@ -157,7 +157,7 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
               </>
             ) : <p>No item selected for {category}.</p>}
           </Panel>
-          <InventoryPanel title="Current Offer" mode="offer" variant="compact" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} onSetOfferQuantity={onSetPlayerOfferQuantity} />
+          <InventoryPanel title="Current Offer" owner="player" mode="offer" variant="compact" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} onSetOfferQuantity={onSetPlayerOfferQuantity} />
         </aside>
       </div>
     </ScreenFrame>

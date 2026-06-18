@@ -37,6 +37,121 @@ Release-hardening work still remains:
 - Add event presentation polish, animation, real audio asset coverage, balancing tools, and manual full-play QA.
 - Split the main JavaScript bundle and complete desktop packaging/release checks.
 
+## High Priority V0 - Game Feel And Original-Style Flow
+
+Status: in progress, with the first game-scene baseline implemented.
+
+This priority sits above the numbered feature phases. The current React build has many useful mechanics, but it still reads too much like a website because navigation is always visible, several systems are exposed as independent pages, and the trading table lacks tactile movement. The next major UI/mechanics pass should make the app feel like a standalone game: one scene at a time, contextual exits, physical inventory interactions, animated feedback, and customers arriving at the player's stall.
+
+Confirmed original-game reference notes:
+
+- The original opens and plays as full-screen scenes, not as a website shell.
+- It does not show persistent global navigation during normal play.
+- Barter starts with a customer arriving at the player's stall, not from freely browsing a customer directory.
+- After a customer leaves, the core stall actions are `Next Customer`, `Journal`, and `Packup`.
+- `Packup` ends the trading day, saves, and moves the player to the map/day layer.
+- Inventory and journal are in-scene panels or overlays, not normal pages.
+- Barter has two-sided inventory, offer, and concealed panels.
+- `Size` and `Weight` are shown separately and both matter.
+- Large cargo such as horses, carts, crates, and bulky objects occupies larger visual inventory cells.
+- Trading supports click and drag movement: left-click one, right-click all, middle-click split.
+- Ask Offer creates a concrete counteroffer, then the player accepts or cancels.
+- NPCs comment on deal quality, so accepted/rejected trade feedback should describe how good or bad the deal was.
+- The travel map is a single parchment scene with town hotspots, route drawing, route cost, arrival days, law/quest information, and contextual actions.
+- The remake should have a readable day/night cycle: a top-screen clock, gradual lighting changes across backgrounds, and different sun/moon ambience by time of day.
+
+### V0.1 Replace Website Navigation With Game Scenes
+
+Status: implemented baseline; scene overlays and transitions remain.
+
+- Remove the always-visible top-level page navigation as the primary game movement model. Implemented by removing primary nav buttons from the game shell.
+- Make the default in-run screen a location scene: town square, market stall, road map, company office, event hall, or pause menu. Market stall baseline implemented.
+- Show only actions that make sense from the current place instead of exposing every system all the time. Implemented on the market stall baseline.
+- Keep the HUD compact: day, money/value, cargo weight, cargo size, current town, and urgent status only. Implemented in the game shell baseline.
+- Move secondary information into in-world overlays such as ledgers, books, cargo bags, notices, and stamped documents.
+- Use illustrated backgrounds, carved frames, parchment panels, scene hotspots, and animated transitions so each screen reads as a game space rather than a web page.
+- Add a visible time-of-day clock and dynamic scene lighting so the player can read morning, afternoon, dusk, and night at a glance. First-pass HUD clock and lighting overlay implemented; persistent gameplay time remains.
+
+### V0.2 Original-Style Customer Flow
+
+Status: implemented baseline; richer arrival presentation remains.
+
+- Stop treating customer selection as a global directory that the player freely browses for barter. Implemented on the market hub.
+- Make customers come to the player's stall one at a time, using a controlled queue influenced by market, profession, day, events, rumors, quests, heat, reputation, and random chance. Baseline queue uses existing customer rotation.
+- Let the player call for the next customer, dismiss a customer, or leave the stall for town actions. Implemented with stall actions and Goodbye returning to the stall.
+- Keep special NPCs accessible through contextual scenes when appropriate: quest meetings, company office, event halls, black-market contacts, and story encounters.
+- Convert the current customers page into a behind-the-scenes roster/dossier or journal overlay, not the main barter entry point.
+- Add visible arrival presentation: portrait slide-in, name/profession banner, short greeting, mood, relationship memory, and reason for visiting.
+
+### V0.3 Contextual Scene Map
+
+Status: planned.
+
+- `Market` becomes the town square and player stall hub.
+- `Barter` becomes the focused trade table reached when a customer arrives.
+- `Travel` becomes the road/map gate reached from the town square or route exit.
+- `Company` becomes a physical office/warehouse/bank scene, not a generic management page.
+- `Event` appears only when the current town has an active event or invitation.
+- `Inventory`, `Journal`, `Item Detail`, and filters become overlays or sheets opened from relevant scenes.
+- `Settings`, `Save`, `Load`, and `System` live inside a pause/menu layer, not normal town navigation.
+- Keep expanded systems such as rivals, permits, Myth, contracts, route mastery, and balance tools, but surface them through scene objects and ledgers instead of persistent nav buttons.
+
+### V0.4 Weight, Size, And Physical Cargo
+
+Status: in progress, with visual inventory baseline implemented.
+
+- Upgrade item capacity from simple totals into a true weight-plus-size model inspired by the original game.
+- Give items display classes for both dimensions: tiny, small, medium, bulky, huge, and heavy/super-heavy variants where needed. First-pass classes use current size/weight values.
+- Make inventory visuals reflect size: larger cards, slot spans, bundle/pile art, or denser stack presentation depending on item class. First-pass grid spans and slot sizes implemented.
+- Use weight for travel speed, route danger, packhorse strain, theft risk, guard suspicion, racing/event eligibility, and fatigue.
+- Use size for bag/cargo space, packhorse/cart upgrades, hiding difficulty, storage limits, fragile goods, and trade-table space.
+- Add item feedback based on physicality: heavy thuds, coin clinks, paper rustles, glass clinks, magic shimmer, food handling, and bundle movement.
+
+### V0.5 Drag-And-Drop Trading Table
+
+Status: implemented baseline; quantity splitting and animations remain.
+
+- Let the player drag items from their inventory to their offer side. Implemented for matching player panels.
+- Let the player drag items from the customer's inventory to the customer's offer side. Implemented for matching NPC panels.
+- Let dragged items return from offer zones back into inventory. Implemented for matching owner panels.
+- Add stack quantity controls after dropping stackable goods.
+- Add fast interactions for repeated trading: right-click quick move, double-click move, split stack, protect/conceal toggle, and clear side.
+- Make invalid drops bounce or shake with a clear reason: too heavy, no room, protected, concealed, customer refuses, not enough quantity, or illegal risk.
+- Animate accepted trades by moving goods and coins across the table before updating inventories.
+
+### V0.6 Barter Table Life And Feedback
+
+Status: planned.
+
+- Add NPC portrait reactions for pleased, tempted, neutral, annoyed, suspicious, insulted, and ready-to-deal states.
+- Animate offer value and fairness changes instead of instantly changing numbers.
+- Show physical item piles, coin stacks, seals, or labels on the table so offers feel tangible.
+- Make Ask Price, Ask Offer, haggle, gift, ultimatum, accept, and reject actions produce short dialogue beats and visual feedback.
+- Add table effects for important moments: coin sparkle, parchment stamp, refusal shake, suspicious glare, almost-deal glow, and trade-complete flourish.
+- Add small idle motion and audio loops so the barter screen does not feel frozen while the player thinks.
+
+### V0.7 Scene Animation And Presentation
+
+Status: planned.
+
+- Add page-turn, curtain, slide, wagon-route, fade, and stamp transitions for major scene changes.
+- Add typewriter/dialogue reveal with optional faster text speed.
+- Add inventory pickup/drop animation, stack split animation, and item-detail reveal.
+- Add travel route drawing, wagon movement, incident cards, toll payment, and arrival reveal.
+- Add reward animations for coins, goods, quest completion, contracts, and rare finds.
+- Add tasteful error feedback with motion and sound instead of relying only on toast text.
+- Upgrade the first-pass day/night presentation into a persistent gameplay clock with time costs for bartering, waiting, packup, travel departure, shop/event schedules, and per-market lighting palettes.
+
+### V0.8 Suggested Build Order
+
+1. Replace global navigation with the scene shell and contextual exits.
+2. Implement customer arrival queue and make barter start from the player's stall.
+3. Convert customers, inventory, journal, filters, and item detail into overlays or ledgers.
+4. Implement true weight/size classes and visible physical cargo differences.
+5. Add drag-and-drop trading table interactions.
+6. Add barter reactions, table motion, item movement, sounds, and deal animations.
+7. Add scene transitions, travel presentation, reward effects, and error feedback.
+
 ## Phase 1 - Foundations
 
 ### 1. Economy, Capacity, And Travel Costs
@@ -763,6 +878,98 @@ Status: in progress.
 - Add broken-asset scans and missing-content reports.
 - Split large React bundles and lazy-load major screens where useful.
 - Keep desktop packaging deferred.
+
+## Roadmap V4 - Content Depth And Replayability
+
+Desktop packaging remains out of scope for V4. This phase is about making the React game feel deeper, less predictable, and more replayable after the current V3 baselines.
+
+### V4.1 Story And Dialogue Expansion
+
+Status: planned.
+
+- Turn major authored quests into multi-stage arcs with branching outcomes, follow-up dialogue, and visible world consequences.
+- Add NPC rivalries, introductions, alliances, betrayals, rescues, recruitment, and recurring personal requests.
+- Expand NPC memories so characters remember gifts, insults, illegal deals, failed promises, successful favors, and important trades across the whole run.
+- Add false, outdated, exaggerated, and faction-planted rumors so information itself becomes a trade good.
+- Add character-specific gift preferences, secret unlocks, and long-term loyalty rewards.
+- Add chained contracts that start as ordinary jobs and escalate into story, law, underworld, or rival-merchant consequences.
+
+### V4.2 Black Market, Law, And Politics Depth
+
+Status: planned.
+
+- Add dedicated black-market inventories with contraband-only stock, rare stolen goods, forged documents, and risk-adjusted prices.
+- Add informants, snitches, jail alternatives, confiscation negotiations, legal favors, and quiet ways to reduce heat.
+- Add guild permits, tax discounts, trade licenses, restricted market access, and kingdom-specific exemptions.
+- Add elections, faction votes, local politics, guild disputes, and consequences that change taxes, laws, prices, and route safety.
+- Add underworld reputation tiers with new contacts, better illegal prices, worse guard attention, and betrayal risk.
+- Add smuggling missions that require route planning, concealment upgrades, permits, and trusted contacts.
+
+### V4.3 Regional Economy And Production Chains
+
+Status: planned.
+
+- Add regional production chains where raw goods, tools, food, luxury goods, and magical materials affect each other's prices.
+- Add seasonal production cycles, festivals, harvests, shortages, disasters, recovery periods, and temporary route opportunities.
+- Add market price history, route profitability reports, and discovered trade-route comparisons.
+- Add rival merchant competition that reacts to profitable routes and can drain stock before the player arrives.
+- Add economy reports that explain why a price is rising or falling instead of showing only the final number.
+- Add balance checks for infinite-profit loops, extreme price drift, and economy states that become too punishing.
+
+### V4.4 Rival Merchants And Competitive World
+
+Status: planned.
+
+- Give rivals cargo manifests, preferred commodities, route habits, cash reserves, debt pressure, and changing strategies.
+- Let rivals participate in auctions, contracts, events, black-market deals, and regional shortages.
+- Add direct rivalry actions: undercutting, buying out key stock, bidding wars, rumor spreading, sabotage, and cooperation offers.
+- Add rival relationship states such as respectful competitor, bitter enemy, business partner, and secret underworld associate.
+- Add rival journals, arrival rumors, and market notices so the player can track and counter them.
+- Add late-game rival arcs where major competitors become recurring campaign threats or allies.
+
+### V4.5 Caravan, Travel, And Route Mastery Depth
+
+Status: planned.
+
+- Add journey supplies, weather, terrain, road quality, caravan morale, and route-specific hazards.
+- Add packhorse injuries, fatigue, special tack, armored packs, silent harnesses, cooling crates, and fragile-cargo protection.
+- Add custom route notes, player bookmarks, known incident history, and best-profit route comparison.
+- Add specialized caravan upgrades for legal trade, smuggling, luxury delivery, fragile goods, magical goods, and bulk cargo.
+- Add route events that branch from current cargo, heat, permits, rival activity, weather, and NPC relationships.
+- Add travel contracts where speed, risk management, cargo condition, and secrecy matter as much as arrival.
+
+### V4.6 Myth Competitive And Collection Depth
+
+Status: planned.
+
+- Add saved deck presets, card filters, rarity filters, sort modes, and quick deck validation.
+- Add ranked play, wagers, tournaments, seasonal cups, trophies, and named champions.
+- Add deeper card abilities with status effects, board positions, counters, combo cards, and faction synergies.
+- Connect Myth wins, losses, wagers, and tournament results to NPC relationships and story opportunities.
+- Add collectible card rewards through quests, rivals, auctions, black markets, and special events.
+- Add AI opponent profiles with visible habits the player can learn and exploit.
+
+### V4.7 React Quality, Presentation, And Tools
+
+Status: planned.
+
+- Add screen-level UI tests for travel, company, events, inventory, dialogue, journal, Myth, and save/load flows.
+- Add a manual full-play smoke checklist covering a complete merchant run from new game through late-game systems.
+- Add broken asset scans for portraits, item art, UI parts, backdrops, audio, and event images.
+- Add button-state, disabled-state, tooltip, keyboard, overflow, and error-state review across every screen.
+- Add animation polish for trade offers, accepted deals, rejected offers, travel results, event rewards, Myth turns, and inventory actions.
+- Add full audio settings with separate channel controls for UI, dialogue, ambient, events, minigames, and offer reactions.
+- Split large React bundles and lazy-load major screens where it helps browser performance.
+
+### V4 Suggested Build Order
+
+1. Black-market inventories and smuggling missions, because they connect trading, law, travel, and NPC trust.
+2. Route notes, route profitability, weather, supplies, and caravan injuries, because travel should become a core strategic layer.
+3. Regional production chains and seasonal economy events, because they make trade routes change across long runs.
+4. Rival cargo manifests and rival participation in auctions, contracts, and profitable routes.
+5. Myth deck presets, ranked matches, tournaments, and NPC-linked rewards.
+6. Multi-stage NPC arcs, false rumors, chained contracts, rescues, betrayals, and recruitable allies.
+7. Screen-level QA, asset scans, animation polish, audio settings, and bundle splitting.
 
 ## V2 Immediate Next Steps
 

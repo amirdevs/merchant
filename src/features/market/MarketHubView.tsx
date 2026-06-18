@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Building2, Gavel, Map, Menu, PackageSearch, ScrollText, Users } from "lucide-react";
+import { Building2, Gavel, Handshake, Map, Menu, PackageSearch, ScrollText, UserRoundPlus } from "lucide-react";
 import type { Character, Marketplace } from "@/data/types";
 import type { GameState } from "@/lib/game";
 import { eventBiases, eventIsActive, nextEventDay } from "@/lib/events";
@@ -8,8 +8,9 @@ import { uiAssets } from "@/lib/ui-assets";
 import type { GameView } from "@/app/types";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
-export function MarketHubView({ state, market, people, onNavigate, onSelectCustomer }: { state: GameState; market: Marketplace; people: Character[]; onNavigate: (view: GameView) => void; onSelectCustomer: (person: Character) => void; onUnavailable: (message: string) => void }) {
-  const featuredPeople = people.slice(0, 5);
+export function MarketHubView({ state, market, people, onNavigate, onSelectCustomer, onNextCustomer, onPackup }: { state: GameState; market: Marketplace; people: Character[]; onNavigate: (view: GameView) => void; onSelectCustomer: (person: Character) => void; onNextCustomer: () => void; onPackup: () => void; onUnavailable: (message: string) => void }) {
+  const currentCustomer = people.find((person) => person.index === state.selectedCharacterIndex) || people[0];
+  const waitingPeople = people.filter((person) => person.index !== currentCustomer?.index).slice(0, 3);
   const eventActive = eventIsActive(market, state.day);
   const activeBiases = eventBiases(market, state.day);
 
@@ -44,22 +45,42 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
           </Panel>
         </div>
 
-        <div className="absolute right-4 top-auto bottom-24 w-[26rem] max-w-[38vw]">
-          <Panel className="p-4" title="Notable Customers" variant="parchment">
-            <div className="grid gap-2">
-              {featuredPeople.map((person, index) => (
-                <LedgerRow
-                  key={person.index}
-                  className="py-2"
-                  selected={index === 0}
-                  title={person.name}
-                  subtitle={person.profession}
-                  trailing={<span className="text-[0.68rem] font-bold uppercase tracking-wide text-[#75501f]">Normal</span>}
-                  onClick={() => onSelectCustomer(person)}
-                />
-              ))}
-            </div>
-            <Button className="mt-3 w-full" onClick={() => onNavigate("customers")}>View All</Button>
+        <div className="absolute right-4 top-auto bottom-24 w-[28rem] max-w-[40vw]">
+          <Panel className="p-4" title="At Your Stall" variant="parchment">
+            {currentCustomer ? (
+              <div className="grid gap-3">
+                <div className="rounded-sm border-2 border-[#c89d55] bg-[#fff4c5]/85 p-3 shadow-inner">
+                  <p className="text-[0.68rem] font-black uppercase tracking-[0.18em] text-[#7b5726]">Current Customer</p>
+                  <h2 className="font-display text-3xl leading-none text-[#2b1a0b]">{currentCustomer.name}</h2>
+                  <p className="text-sm font-bold text-[#5b3b17]">{currentCustomer.profession}</p>
+                  <p className="mt-2 text-sm leading-snug text-[#3b260f]">
+                    {currentCustomer.isMerchant ? "A trader studies your shelves and waits for terms." : "They step up to the counter, watching your hands and the goods on display."}
+                  </p>
+                </div>
+                <Button size="lg" onClick={() => onSelectCustomer(currentCustomer)}>
+                  <Handshake size={18} /> Barter With Customer
+                </Button>
+                <Button size="lg" variant="secondary" onClick={onNextCustomer}>
+                  <UserRoundPlus size={18} /> Next Customer
+                </Button>
+                {waitingPeople.length ? (
+                  <div className="grid gap-1.5">
+                    {waitingPeople.map((person) => (
+                      <LedgerRow
+                        key={person.index}
+                        className="py-1.5"
+                        title={person.name}
+                        subtitle={person.profession}
+                        trailing={<span className="text-[0.62rem] font-bold uppercase tracking-wide text-[#75501f]">Waiting</span>}
+                        onClick={() => onSelectCustomer(person)}
+                      />
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            ) : (
+              <div className="rounded-sm border border-[#9a7138]/45 bg-[#fff6d7]/55 p-3 text-sm font-bold text-[#5b3b17]">No customers are at the stall right now.</div>
+            )}
           </Panel>
         </div>
 
@@ -71,11 +92,12 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
               backgroundSize: "cover",
             }}
           >
-            <MarketCommand icon={<Building2 size={34} />} label="Trade" onClick={() => onNavigate("barter")} />
+            <MarketCommand icon={<UserRoundPlus size={34} />} label="Next Customer" onClick={onNextCustomer} />
+            <MarketCommand icon={<Handshake size={34} />} label="Barter" onClick={() => currentCustomer && onSelectCustomer(currentCustomer)} />
+            <MarketCommand icon={<ScrollText size={34} />} label="Journal" onClick={() => onNavigate("journal")} />
+            <MarketCommand icon={<Map size={34} />} label="Packup" onClick={onPackup} />
             <MarketCommand icon={<Map size={34} />} label="Map" onClick={() => onNavigate("travel")} />
-            <MarketCommand icon={<PackageSearch size={34} />} label="Inventory" onClick={() => onNavigate("inventory")} />
-            <MarketCommand icon={<Users size={34} />} label="Customers" onClick={() => onNavigate("customers")} />
-            <MarketCommand icon={<ScrollText size={34} />} label="Notice Board" onClick={() => onNavigate("journal")} />
+            <MarketCommand icon={<PackageSearch size={34} />} label="Cargo" onClick={() => onNavigate("inventory")} />
             <MarketCommand icon={<Building2 size={34} />} label="Company" onClick={() => onNavigate("company")} />
             {market.event?.name ? <MarketCommand icon={<Gavel size={34} />} label="Event" onClick={() => onNavigate("event")} /> : null}
             <MarketCommand icon={<Menu size={34} />} label="Menu" onClick={() => onNavigate("system")} />

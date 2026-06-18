@@ -1,4 +1,4 @@
-import type { KeyboardEvent, MouseEvent } from "react";
+import type { DragEvent, KeyboardEvent, MouseEvent } from "react";
 import { Lock } from "lucide-react";
 import type { InventoryEntry } from "@/data/types";
 import { itemIconAsset } from "@/lib/assets";
@@ -16,6 +16,7 @@ type InventoryPanelProps = {
   title: string;
   subtitle?: string;
   inventory: InventoryEntry[];
+  owner?: string;
   mode?: InventoryPanelMode;
   variant?: "default" | "compact" | "management";
   panelVariant?: "parchment" | "wood" | "dark";
@@ -42,10 +43,84 @@ function moveAmountFromInput(event: MouseEvent | KeyboardEvent, mode: InventoryP
   return mode === "offer" ? -1 : 1;
 }
 
-export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, illegalTags = [], questItemIndexes, onMove, onMoveAll, onSetOfferQuantity, onToggleProtect }: InventoryPanelProps) {
+type InventoryDragData = {
+  owner: string;
+  mode: InventoryPanelMode;
+  itemIndex: number;
+};
+
+const dragType = "application/x-merchant-inventory-item";
+
+function cargoSummary(rows: InventoryEntry[], mode: InventoryPanelMode) {
+  return rows.reduce(
+    (totals, entry) => {
+      const item = itemFor(entry);
+      const count = quantityFor(entry, mode);
+      if (!item || count <= 0) return totals;
+      totals.size += item.size * count;
+      totals.weight += item.weight * count;
+      return totals;
+    },
+    { size: 0, weight: 0 }
+  );
+}
+
+function physicalClass(itemSize = 0, itemWeight = 0, variant: InventoryPanelProps["variant"]) {
+  const bulk = itemSize + itemWeight;
+  if (variant === "compact") {
+    if (bulk >= 20 || itemSize >= 14 || itemWeight >= 14) return "col-span-2 row-span-2 min-h-44";
+    if (bulk >= 10 || itemSize >= 8 || itemWeight >= 8) return "col-span-2 min-h-36";
+    return "min-h-32";
+  }
+  if (variant === "management") {
+    if (bulk >= 26 || itemSize >= 18 || itemWeight >= 18) return "col-span-2 row-span-2 min-h-64";
+    if (bulk >= 12 || itemSize >= 8 || itemWeight >= 8) return "col-span-2 min-h-56";
+    return "min-h-48";
+  }
+  return "";
+}
+
+function slotSizeClass(itemSize = 0, itemWeight = 0, variant: InventoryPanelProps["variant"]) {
+  const bulk = itemSize + itemWeight;
+  if (variant === "compact") return bulk >= 20 ? "w-24" : bulk >= 10 ? "w-20" : "w-14";
+  if (variant === "management") return bulk >= 26 ? "w-32" : bulk >= 12 ? "w-28" : "w-20 xl:w-24";
+  return "w-20 xl:w-24";
+}
+
+export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, illegalTags = [], questItemIndexes, onMove, onMoveAll, onSetOfferQuantity, onToggleProtect }: InventoryPanelProps) {
   const rows = inventory.filter((entry) => quantityFor(entry, mode) > 0);
   const isGrid = variant === "compact" || variant === "management";
   const darkPanel = panelVariant === "wood" || panelVariant === "dark";
+  const ownerId = owner || panelTitle;
+  const totals = cargoSummary(rows, mode);
+
+  function dragData(entry: InventoryEntry): InventoryDragData {
+    return { owner: ownerId, mode, itemIndex: entry.itemIndex };
+  }
+
+  function onDragStart(event: DragEvent<HTMLElement>, entry: InventoryEntry) {
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData(dragType, JSON.stringify(dragData(entry)));
+  }
+
+  function onDrop(event: DragEvent<HTMLElement>) {
+    const raw = event.dataTransfer.getData(dragType);
+    if (!raw) return;
+    event.preventDefault();
+    try {
+      const dragged = JSON.parse(raw) as InventoryDragData;
+      if (dragged.owner !== ownerId || dragged.mode === mode) return;
+      const entry = inventory.find((item) => item.itemIndex === dragged.itemIndex);
+      if (!entry) return;
+      onMove(entry, mode === "offer" ? 1 : -1);
+    } catch {
+      return;
+    }
+  }
+
+  function onDragOver(event: DragEvent<HTMLElement>) {
+    if (event.dataTransfer.types.includes(dragType)) event.preventDefault();
+  }
 
   return (
     <Panel
@@ -56,6 +131,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
           <span>
             <span className="block">{panelTitle}</span>
             {subtitle ? <span className="mt-1 block text-xs font-normal leading-snug text-[#e8d39d]">{subtitle}</span> : null}
+            <span className="mt-1 block text-[0.68rem] font-black uppercase tracking-wide text-[#e8d39d]">Size {totals.size} / Weight {totals.weight}</span>
           </span>
           <span className="shrink-0 text-xs text-[#e8d39d]">{rows.length}</span>
         </span>
@@ -68,8 +144,10 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
             darkPanel
               ? "border-[#d0a65a]/35 bg-black/25 shadow-black/35"
               : "border-[#9a7138]/55 bg-[#fff6d7]/35 shadow-[#6c4418]/20",
-            variant === "compact" ? "max-h-56 grid-cols-3 gap-1.5 sm:grid-cols-4" : "max-h-[67vh] grid-cols-4 gap-3 sm:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"
+            variant === "compact" ? "max-h-56 auto-rows-[minmax(8rem,auto)] grid-cols-3 gap-1.5 sm:grid-cols-4" : "max-h-[67vh] auto-rows-[minmax(12rem,auto)] grid-cols-4 gap-3 sm:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7"
           )}
+          onDragOver={onDragOver}
+          onDrop={onDrop}
         >
           {rows.length ? rows.map((entry) => {
             const item = itemFor(entry);
@@ -82,6 +160,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
                 key={`${panelTitle}-${entry.itemIndex}`}
                 className={cn(
                   "group relative min-w-0 rounded-sm border-2 p-1.5 shadow-sm transition hover:-translate-y-0.5 hover:brightness-105",
+                  physicalClass(item?.size, item?.weight, variant),
                   darkPanel
                     ? "border-[#d0a65a]/65 bg-[#120b05]/85 text-[#fff8d8] shadow-black/25"
                     : "border-[#c89d55]/65 bg-[#f5e1b7]/80 text-[#201207] shadow-[#6c4418]/15"
@@ -92,11 +171,13 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
                 }}
               >
                 <ItemSlot
-                  className={cn("mx-auto", variant === "compact" ? "w-14" : "w-20 xl:w-24")}
+                  className={cn("mx-auto", slotSizeClass(item?.size, item?.weight, variant))}
                   imageSrc={icon}
                   marker={marker}
                   quantity={shownQuantity}
                   selected={(entry.protected || entry.highlighted) && mode !== "offer"}
+                  draggable
+                  onDragStart={(event) => onDragStart(event, entry)}
                   onClick={(event) => onMove(entry, moveAmountFromInput(event, mode))}
                   onKeyDown={(event) => {
                     if (event.key === "Enter" || event.key === " ") {
@@ -139,6 +220,12 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
                   {item?.name || `Item ${entry.itemIndex}`}
                 </div>
                 {item ? <RarityStars rarity={item.rarity || 1} dark={darkPanel} /> : null}
+                {item ? (
+                  <div className={cn("mt-1 grid grid-cols-2 gap-1 text-center text-[0.58rem] font-black uppercase", darkPanel ? "text-[#ffe6a0]" : "text-[#6a451a]")}>
+                    <span className="rounded-sm bg-black/15 px-1 py-0.5">S {item.size}</span>
+                    <span className="rounded-sm bg-black/15 px-1 py-0.5">W {item.weight}</span>
+                  </div>
+                ) : null}
                 {onSetOfferQuantity ? (
                   <label className={cn("mt-1 flex items-center justify-center gap-1 rounded-sm border px-1 py-0.5 text-[0.65rem] font-black", darkPanel ? "border-[#d0a65a]/35 bg-black/35 text-[#ffe6a0]" : "border-[#9a7138]/45 bg-[#fff4c5]/70 text-[#5a3917]")}>
                     Offer
@@ -158,7 +245,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
           }) : <div className="col-span-full border border-[#9a7138]/45 bg-[#fff6d7]/40 p-3 text-sm text-[#725331]">No visible items here.</div>}
         </div>
       ) : (
-      <div className="grid max-h-[360px] gap-2 overflow-auto pr-1">
+      <div className="grid max-h-[360px] gap-2 overflow-auto pr-1" onDragOver={onDragOver} onDrop={onDrop}>
         {rows.length ? rows.map((entry) => {
           const item = itemFor(entry);
           const shownQuantity = quantityFor(entry, mode);
@@ -222,6 +309,8 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, mode = 
                 onMoveAll(entry);
               }}
               aria-label={`${item?.name || `Item ${entry.itemIndex}`}. Left click moves one. Shift moves half. Alt moves ten. Right click moves all or clears.`}
+              draggable
+              onDragStart={(event) => onDragStart(event, entry)}
             />
           );
         }) : <div className="border border-[#9a7138]/45 bg-[#fff6d7]/40 p-3 text-sm text-[#725331]">No visible items here.</div>}
