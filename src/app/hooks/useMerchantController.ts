@@ -55,8 +55,10 @@ import {
 } from "@/lib/company";
 import { createDraftSession, pickDraftItem as resolveDraftPick } from "@/lib/draft";
 import { repairPackhorses as repairCaravanPackhorses, setRouteNote as updateCaravanRouteNote, toggleRouteBookmark as toggleCaravanRouteBookmark, upgradeConcealment as upgradeCaravanConcealment } from "@/lib/caravan";
-import { issuePermit } from "@/lib/law";
+import { canUseBlackMarket, issuePermit } from "@/lib/law";
 import { advanceRivals } from "@/lib/rivals";
+import { npcRoles } from "@/lib/npc-behavior";
+import { ensureRelation } from "@/lib/reputation";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -117,11 +119,31 @@ export function useMerchantController(): MerchantController {
     }
   }
 
+  function seedBlackMarketStock(draft: GameState, character: Character) {
+    const actual = draft.characters[character.index];
+    if (!actual || !npcRoles(actual).includes("thief")) return false;
+    const relation = ensureRelation(draft.npcRelations, actual);
+    if (!canUseBlackMarket(draft.law, relation.trust, true)) return false;
+    const illegalTags = currentKingdom(draft).illegalItemTags || [];
+    if (!illegalTags.length) return false;
+    const alreadyHasContraband = actual.inventory.some((entry) => {
+      const item = items[entry.itemIndex];
+      return item?.tags.some((tag) => illegalTags.includes(tag));
+    });
+    if (alreadyHasContraband) return false;
+    const candidates = items
+      .filter((item) => !item.unique && item.loafValue <= Math.max(25, actual.maxObtainValue) && item.tags.some((tag) => illegalTags.includes(tag)))
+      .slice(0, 3);
+    for (const item of candidates) addInventory(actual.inventory, item.index, 1, 0, true);
+    return candidates.length > 0;
+  }
+
   function selectCharacter(next: Character) {
     playUiSound("menu_click");
     update((draft) => {
+      const seeded = seedBlackMarketStock(draft, next);
       draft.selectedCharacterIndex = next.index;
-      draft.message = customerIntro(next);
+      draft.message = seeded ? `${next.name} quietly opens a hidden tray of contraband.` : customerIntro(next);
     });
   }
 
@@ -132,8 +154,9 @@ export function useMerchantController(): MerchantController {
       const nextIndex = nextCustomerIndex(draft);
       if (nextIndex === null) return;
       const next = draft.characters[nextIndex];
+      const seeded = seedBlackMarketStock(draft, next);
       draft.selectedCharacterIndex = next.index;
-      draft.message = customerIntro(next);
+      draft.message = seeded ? `${next.name} quietly opens a hidden tray of contraband.` : customerIntro(next);
     });
   }
 

@@ -826,7 +826,7 @@ Status: implemented baseline.
 
 Status: implemented baseline.
 
-- Add black-market customers and contraband-only inventories. Underworld access and NPC labels implemented; dedicated inventories remain.
+- Add black-market customers and contraband-only inventories. Implemented baseline with underworld access, NPC labels, and seeded concealed contraband stock for thief contacts.
 - Add forged permits with quality, expiry, detection, and confiscation risk. Quality/expiry/risk implemented.
 - Add kingdom heat/wanted levels and cooldown over time. Implemented.
 - Add fines, jail alternatives, informants, snitches, and legal favors.
@@ -898,7 +898,7 @@ Status: planned.
 
 Status: planned.
 
-- Add dedicated black-market inventories with contraband-only stock, rare stolen goods, forged documents, and risk-adjusted prices.
+- Add dedicated black-market inventories with contraband-only stock, rare stolen goods, forged documents, and risk-adjusted prices. Baseline contraband stock implemented for eligible thief contacts; rare stolen goods and risk-adjusted pricing remain.
 - Add informants, snitches, jail alternatives, confiscation negotiations, legal favors, and quiet ways to reduce heat.
 - Add guild permits, tax discounts, trade licenses, restricted market access, and kingdom-specific exemptions.
 - Add elections, faction votes, local politics, guild disputes, and consequences that change taxes, laws, prices, and route safety.
