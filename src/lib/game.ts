@@ -12,7 +12,7 @@ import { advanceMarketSimulation, recordMarketTrade, seasonalMarketBiases, simul
 import { createCompanyState, settleShipments, type CompanyState } from "./company";
 import type { DraftSession } from "./draft";
 import { applyPackhorseTravelWear, applyTravelConditions, createCaravanState, masteryRiskReduction, recordRoute, routeKey, routeTravelConditions, type CaravanState } from "./caravan";
-import { activePermit, adjustKingdomHeat, coolLawHeat, createLawState, kingdomHeat, permitInspectionMultiplier, type LawState } from "./law";
+import { activePermit, adjustKingdomHeat, canUseBlackMarket, coolLawHeat, createLawState, kingdomHeat, permitInspectionMultiplier, type LawState } from "./law";
 import { npcRoles } from "./npc-behavior";
 import { advanceRivals, createRivalState, type RivalState } from "./rivals";
 import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
