@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { activeMythDeck, compareMythCards, createMythProgression, mythDeck, playMythCard, startMythGame, toggleMythDeckCard } from "./myth";
+import { activeMythDeck, compareMythCards, createMythProgression, ensureMythProgression, filterMythCards, loadMythDeckPreset, mythDeck, playMythCard, saveMythDeckPreset, startMythGame, toggleMythDeckCard } from "./myth";
 
 describe("Myth card game", () => {
   it("builds stable archetype decks", () => {
@@ -19,6 +19,24 @@ describe("Myth card game", () => {
     const removed = progression.activeDeckIds[0];
     expect(toggleMythDeckCard(progression, removed)).toBe(true);
     expect(activeMythDeck(progression)).toHaveLength(7);
+  });
+
+  it("saves and loads deck presets", () => {
+    const progression = createMythProgression();
+    const original = [...progression.activeDeckIds];
+    const preset = saveMythDeckPreset(progression, "Counter Table");
+    expect(preset?.cardIds).toEqual(original);
+
+    toggleMythDeckCard(progression, original[0]);
+    expect(loadMythDeckPreset(progression, preset?.id || "")).toBe(true);
+    expect(progression.activeDeckIds).toEqual(original);
+  });
+
+  it("migrates old progressions and filters collections", () => {
+    const progression = createMythProgression();
+    const migrated = ensureMythProgression({ ...progression, deckPresets: undefined as never });
+    expect(migrated.deckPresets.length).toBeGreaterThan(0);
+    expect(filterMythCards(migrated.collection, { rarity: 4, sort: "power" }).every((card) => card.rarity === 4)).toBe(true);
   });
 
   it("assigns different opponent personalities", () => {

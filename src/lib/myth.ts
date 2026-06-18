@@ -14,9 +14,22 @@ export type MythAiPersonality = "cautious" | "aggressive" | "collector" | "gambl
 export type MythProgression = {
   collection: MythCard[];
   activeDeckIds: string[];
+  deckPresets: MythDeckPreset[];
   trophies: string[];
   wins: number;
   losses: number;
+};
+
+export type MythDeckPreset = {
+  id: string;
+  name: string;
+  cardIds: string[];
+};
+
+export type MythCardFilter = {
+  suit?: MythSuit | "all";
+  rarity?: MythCard["rarity"] | "all";
+  sort?: "name" | "power" | "rarity" | "suit";
 };
 
 export type MythRound = {
@@ -88,14 +101,48 @@ function drawHand(deck: MythCard[], count = 5) {
 
 export function createMythProgression(): MythProgression {
   const collection = mythDeck("balancedMerchant", "starter");
-  return { collection, activeDeckIds: collection.slice(0, 8).map((card) => card.id), trophies: [], wins: 0, losses: 0 };
+  const activeDeckIds = collection.slice(0, 8).map((card) => card.id);
+  return {
+    collection,
+    activeDeckIds,
+    deckPresets: [{ id: "starter", name: "Starter Table", cardIds: [...activeDeckIds] }],
+    trophies: [],
+    wins: 0,
+    losses: 0,
+  };
 }
 
 export function activeMythDeck(progression: MythProgression) {
   return progression.activeDeckIds.map((id) => progression.collection.find((card) => card.id === id)).filter((card): card is MythCard => Boolean(card));
 }
 
+export function ensureMythProgression(progression: MythProgression): MythProgression {
+  if (!Array.isArray(progression.collection)) progression.collection = [];
+  if (!Array.isArray(progression.activeDeckIds)) progression.activeDeckIds = [];
+  if (!Array.isArray(progression.deckPresets)) progression.deckPresets = [];
+  if (!Array.isArray(progression.trophies)) progression.trophies = [];
+  if (typeof progression.wins !== "number") progression.wins = 0;
+  if (typeof progression.losses !== "number") progression.losses = 0;
+  progression.activeDeckIds = progression.activeDeckIds.filter((id) => progression.collection.some((card) => card.id === id)).slice(0, 12);
+  if (progression.activeDeckIds.length < 5) {
+    progression.activeDeckIds = progression.collection.slice(0, Math.min(8, progression.collection.length)).map((card) => card.id);
+  }
+  progression.deckPresets = progression.deckPresets
+    .filter((preset) => preset && typeof preset.id === "string" && Array.isArray(preset.cardIds))
+    .map((preset) => ({
+      ...preset,
+      name: preset.name || "Saved Deck",
+      cardIds: preset.cardIds.filter((id) => progression.collection.some((card) => card.id === id)).slice(0, 12),
+    }))
+    .filter((preset) => preset.cardIds.length >= 5);
+  if (!progression.deckPresets.length && progression.activeDeckIds.length >= 5) {
+    progression.deckPresets.push({ id: "starter", name: "Starter Table", cardIds: [...progression.activeDeckIds] });
+  }
+  return progression;
+}
+
 export function toggleMythDeckCard(progression: MythProgression, cardId: string) {
+  ensureMythProgression(progression);
   const index = progression.activeDeckIds.indexOf(cardId);
   if (index >= 0) {
     if (progression.activeDeckIds.length <= 5) return false;
@@ -107,7 +154,40 @@ export function toggleMythDeckCard(progression: MythProgression, cardId: string)
   return true;
 }
 
+export function saveMythDeckPreset(progression: MythProgression, name = "Saved Table") {
+  ensureMythProgression(progression);
+  if (progression.activeDeckIds.length < 5 || progression.activeDeckIds.length > 12) return null;
+  const id = `deck-${progression.deckPresets.length + 1}-${progression.activeDeckIds.join("-").length}`;
+  const preset = { id, name, cardIds: [...progression.activeDeckIds] };
+  progression.deckPresets = [preset, ...progression.deckPresets.filter((deck) => deck.cardIds.join("|") !== preset.cardIds.join("|"))].slice(0, 6);
+  return preset;
+}
+
+export function loadMythDeckPreset(progression: MythProgression, presetId: string) {
+  ensureMythProgression(progression);
+  const preset = progression.deckPresets.find((deck) => deck.id === presetId);
+  if (!preset || preset.cardIds.length < 5) return false;
+  progression.activeDeckIds = preset.cardIds.filter((id) => progression.collection.some((card) => card.id === id)).slice(0, 12);
+  return progression.activeDeckIds.length >= 5;
+}
+
+export function filterMythCards(collection: MythCard[], filter: MythCardFilter = {}) {
+  const filtered = collection.filter((card) => {
+    const suitOk = !filter.suit || filter.suit === "all" || card.suit === filter.suit;
+    const rarityOk = !filter.rarity || filter.rarity === "all" || card.rarity === filter.rarity;
+    return suitOk && rarityOk;
+  });
+  const sort = filter.sort || "name";
+  return filtered.sort((left, right) => {
+    if (sort === "power") return right.power - left.power || left.name.localeCompare(right.name);
+    if (sort === "rarity") return right.rarity - left.rarity || right.power - left.power;
+    if (sort === "suit") return left.suit.localeCompare(right.suit) || left.name.localeCompare(right.name);
+    return left.name.localeCompare(right.name);
+  });
+}
+
 export function addMythCard(progression: MythProgression, card: MythCard) {
+  ensureMythProgression(progression);
   const copy = { ...card, id: `${card.id}:owned:${progression.collection.length}` };
   progression.collection.push(copy);
   return copy;

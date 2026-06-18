@@ -42,7 +42,7 @@ import { coinQuantity, spendCopperToll } from "@/lib/economy";
 import { addInventory } from "@/lib/inventory";
 import type { TravelStrategy } from "@/lib/travel-risk";
 import { runHorseRace as calculateHorseRace } from "@/lib/racing";
-import { activeMythDeck, addMythCard, mythDeck, playMythCard as resolveMythCard, startMythGame as createMythGame, toggleMythDeckCard as toggleProgressionDeckCard } from "@/lib/myth";
+import { activeMythDeck, addMythCard, loadMythDeckPreset as loadProgressionDeckPreset, mythDeck, playMythCard as resolveMythCard, saveMythDeckPreset as saveProgressionDeckPreset, startMythGame as createMythGame, toggleMythDeckCard as toggleProgressionDeckCard } from "@/lib/myth";
 import { advanceMarketSimulation } from "@/lib/market-simulation";
 import {
   createShipment,
@@ -714,6 +714,20 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function saveMythDeckPreset() {
+    update((draft) => {
+      const preset = saveProgressionDeckPreset(draft.mythProgression, `Table ${draft.mythProgression.deckPresets.length + 1}`);
+      draft.message = preset ? `Saved Myth deck preset: ${preset.name}.` : "Myth decks require 5 to 12 owned cards before saving.";
+    });
+  }
+
+  function loadMythDeckPreset(presetId: string) {
+    update((draft) => {
+      const loaded = loadProgressionDeckPreset(draft.mythProgression, presetId);
+      draft.message = loaded ? `Loaded Myth deck: ${draft.mythProgression.activeDeckIds.length} cards.` : "That Myth deck preset is no longer valid.";
+    });
+  }
+
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
@@ -909,6 +923,8 @@ export function useMerchantController(): MerchantController {
       setRouteNote,
       buyPermit,
       toggleMythDeckCard,
+      saveMythDeckPreset,
+      loadMythDeckPreset,
       selectCharacter,
       nextCustomer,
       movePlayer,

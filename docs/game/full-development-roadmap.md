@@ -849,7 +849,7 @@ Status: implemented baseline.
 Status: implemented baseline.
 
 - Add a persistent Myth card collection and owned cards. Implemented.
-- Add deck builder and validation. Implemented for one active 5-12 card deck; saved deck presets and filters remain.
+- Add deck builder and validation. Implemented with one active 5-12 card deck, saved presets, suit filters, rarity filters, and sort modes.
 - Add card rarity and special abilities. Implemented baseline; status effects and board positions remain.
 - Add cautious, aggressive, collector, gambler, and expert AI. Implemented.
 - Add casual matches, ranked opponents, wagers, tournaments, trophies, and rewards.
@@ -940,9 +940,9 @@ Status: planned.
 
 ### V4.6 Myth Competitive And Collection Depth
 
-Status: planned.
+Status: in progress.
 
-- Add saved deck presets, card filters, rarity filters, sort modes, and quick deck validation.
+- Add saved deck presets, card filters, rarity filters, sort modes, and quick deck validation. Implemented baseline; deeper UX polish remains.
 - Add ranked play, wagers, tournaments, seasonal cups, trophies, and named champions.
 - Add deeper card abilities with status effects, board positions, counters, combo cards, and faction synergies.
 - Connect Myth wins, losses, wagers, and tournament results to NPC relationships and story opportunities.

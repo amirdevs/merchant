@@ -3,7 +3,7 @@ import { createCompanyState } from "./company";
 import { createCaravanState } from "./caravan";
 import { createLawState } from "./law";
 import { createRivalState } from "./rivals";
-import { createMythProgression } from "./myth";
+import { createMythProgression, ensureMythProgression } from "./myth";
 
 export const SAVE_VERSION = 1;
 const SAVE_KEY = "merchant-react-save";
@@ -47,6 +47,7 @@ function isGameState(value: unknown): value is GameState {
   if (!("raceResult" in candidate)) candidate.raceResult = null;
   if (!("mythSession" in candidate)) candidate.mythSession = null;
   if (!candidate.mythProgression || typeof candidate.mythProgression !== "object") candidate.mythProgression = createMythProgression();
+  else candidate.mythProgression = ensureMythProgression(candidate.mythProgression);
   if (!candidate.marketSimulation || typeof candidate.marketSimulation !== "object") candidate.marketSimulation = {};
   if (!candidate.company || typeof candidate.company !== "object") candidate.company = createCompanyState();
   if (!("draftSession" in candidate)) candidate.draftSession = null;

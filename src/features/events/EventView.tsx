@@ -8,6 +8,7 @@ import { coinQuantity } from "@/lib/economy";
 import { money } from "@/lib/format";
 import { raceEntries } from "@/lib/racing";
 import { currentDraftRound } from "@/lib/draft";
+import { filterMythCards, type MythCardFilter, type MythSuit } from "@/lib/myth";
 import { uiAssets } from "@/lib/ui-assets";
 import { Button, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
@@ -27,9 +28,11 @@ type EventViewProps = {
   onPickDraftItem: (itemIndex: number) => void;
   onCloseDraft: () => void;
   onToggleMythDeckCard: (cardId: string) => void;
+  onSaveMythDeckPreset: () => void;
+  onLoadMythDeckPreset: (presetId: string) => void;
 };
 
-export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAuction, onPassAuction, onCloseAuction, onRunHorseRace, onStartMythGame, onPlayMythCard, onCloseMythGame, onStartDraft, onPickDraftItem, onCloseDraft, onToggleMythDeckCard }: EventViewProps) {
+export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAuction, onPassAuction, onCloseAuction, onRunHorseRace, onStartMythGame, onPlayMythCard, onCloseMythGame, onStartDraft, onPickDraftItem, onCloseDraft, onToggleMythDeckCard, onSaveMythDeckPreset, onLoadMythDeckPreset }: EventViewProps) {
   const market = currentMarket(state);
   const active = eventIsActive(market, state.day);
   const session = state.auctionSession;
@@ -46,6 +49,10 @@ export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAu
   const horses = raceEntries(market);
   const [selectedHorse, setSelectedHorse] = useState(horses[0]?.name || "");
   const [wager, setWager] = useState(10);
+  const [mythSuitFilter, setMythSuitFilter] = useState<MythCardFilter["suit"]>("all");
+  const [mythRarityFilter, setMythRarityFilter] = useState<MythCardFilter["rarity"]>("all");
+  const [mythSort, setMythSort] = useState<MythCardFilter["sort"]>("name");
+  const mythCards = filterMythCards(state.mythProgression.collection, { suit: mythSuitFilter, rarity: mythRarityFilter, sort: mythSort });
 
   return (
     <ScreenFrame title={market.event?.name || "Market Events"} eyebrow={`${market.name} / Day ${state.day}`} backdrop={uiAssets.backplates.marketTown} overlay="light">
@@ -118,8 +125,50 @@ export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAu
                     <StatChip label="Wins" value={state.mythProgression.wins} />
                     <StatChip label="Losses" value={state.mythProgression.losses} />
                   </div>
+                  <div className="grid gap-2 rounded-sm border border-[#9a7138]/40 bg-[#fff8df]/65 p-3 md:grid-cols-[1fr_1fr_1fr_auto]">
+                    <label className="grid gap-1 text-xs font-black uppercase text-[#75501f]">
+                      Suit
+                      <select className="rounded-sm border border-[#9a7138]/60 bg-[#fff8df] px-2 py-1 text-sm font-bold normal-case text-[#26170a]" value={mythSuitFilter} onChange={(event) => setMythSuitFilter(event.target.value as MythSuit | "all")}>
+                        <option value="all">All suits</option>
+                        <option value="wild">Wild</option>
+                        <option value="harvest">Harvest</option>
+                        <option value="prey">Prey</option>
+                        <option value="predator">Predator</option>
+                        <option value="arcane">Arcane</option>
+                      </select>
+                    </label>
+                    <label className="grid gap-1 text-xs font-black uppercase text-[#75501f]">
+                      Rarity
+                      <select className="rounded-sm border border-[#9a7138]/60 bg-[#fff8df] px-2 py-1 text-sm font-bold normal-case text-[#26170a]" value={mythRarityFilter} onChange={(event) => setMythRarityFilter(event.target.value === "all" ? "all" : Number(event.target.value) as MythCardFilter["rarity"])}>
+                        <option value="all">All rarities</option>
+                        <option value="1">Rarity 1</option>
+                        <option value="2">Rarity 2</option>
+                        <option value="3">Rarity 3</option>
+                        <option value="4">Rarity 4</option>
+                      </select>
+                    </label>
+                    <label className="grid gap-1 text-xs font-black uppercase text-[#75501f]">
+                      Sort
+                      <select className="rounded-sm border border-[#9a7138]/60 bg-[#fff8df] px-2 py-1 text-sm font-bold normal-case text-[#26170a]" value={mythSort} onChange={(event) => setMythSort(event.target.value as MythCardFilter["sort"])}>
+                        <option value="name">Name</option>
+                        <option value="power">Power</option>
+                        <option value="rarity">Rarity</option>
+                        <option value="suit">Suit</option>
+                      </select>
+                    </label>
+                    <Button variant="secondary" onClick={onSaveMythDeckPreset}>Save Deck</Button>
+                  </div>
+                  {state.mythProgression.deckPresets.length ? (
+                    <div className="flex flex-wrap gap-2">
+                      {state.mythProgression.deckPresets.map((preset) => (
+                        <button className="rounded-sm border border-[#1f5960]/45 bg-[#e3f0d0] px-3 py-2 text-sm font-black text-[#1f3f34] shadow-sm hover:bg-[#cfe4b3]" key={preset.id} type="button" onClick={() => onLoadMythDeckPreset(preset.id)}>
+                          {preset.name} / {preset.cardIds.length}
+                        </button>
+                      ))}
+                    </div>
+                  ) : null}
                   <div className="grid max-h-52 grid-cols-2 gap-2 overflow-auto md:grid-cols-4">
-                    {state.mythProgression.collection.map((card) => {
+                    {mythCards.map((card) => {
                       const activeCard = state.mythProgression.activeDeckIds.includes(card.id);
                       return (
                         <button className={`rounded-sm border p-2 text-left ${activeCard ? "border-[#1f5960] bg-[#1f5960]/15" : "border-[#9a7138]/50 bg-[#fff8df]/60"}`} key={card.id} type="button" onClick={() => onToggleMythDeckCard(card.id)}>
