@@ -1,6 +1,5 @@
 import type { HTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/cn";
-import { uiAssets } from "@/lib/ui-assets";
 
 type StatChipProps = HTMLAttributes<HTMLDivElement> & {
   label: ReactNode;
@@ -11,29 +10,24 @@ type StatChipProps = HTMLAttributes<HTMLDivElement> & {
 
 export function StatChip({ className, icon, label, value, tone = "parchment", style, ...props }: StatChipProps) {
   const isParchment = tone === "parchment";
-  const texture = tone === "teal" ? uiAssets.core.statusBarFrameTeal : tone === "danger" ? uiAssets.core.buttonDangerRed : uiAssets.inventory.valueComparisonPlaque;
 
   return (
     <div
       className={cn(
         "inline-grid min-h-12 grid-cols-[auto_minmax(0,1fr)] items-center gap-2 rounded-sm border-2 px-3 py-2 shadow-md shadow-black/30",
         "ring-1 ring-white/10",
-        isParchment ? "border-[#9a7138]/85 text-[#201207]" : "border-[#d0a65a]/75 text-[#fff8d8]",
+        tone === "danger"
+          ? "border-[#8d271f]/75 bg-[#f4d7b0] text-[#5a1410]"
+          : tone === "teal"
+            ? "border-[#d0a65a]/75 bg-[#1f5960] text-[#fff8d8]"
+            : "border-[#9a7138]/85 bg-[#f0d49a] text-[#201207]",
         className
       )}
-      style={{
-        ...style,
-        backgroundImage: `linear-gradient(180deg, rgba(255,255,255,.45), rgba(255,238,190,.24)), url("${texture}")`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100% 100%",
-      }}
+      style={style}
       {...props}
     >
       {icon ? (
-        <span
-          className="grid h-8 w-8 place-items-center bg-contain bg-center bg-no-repeat"
-          style={{ backgroundImage: `url("${uiAssets.core.circularEmblemHolder}")` }}
-        >
+        <span className={cn("grid h-8 w-8 place-items-center rounded-full border", isParchment ? "border-[#9a7138]/55 bg-[#fff6d7]/55" : "border-[#d0a65a]/55 bg-black/20")}>
           <img className="h-5 w-5 object-contain drop-shadow" src={icon} alt="" />
         </span>
       ) : null}

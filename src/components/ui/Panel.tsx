@@ -54,14 +54,9 @@ export function Panel({ children, className, title, variant = "parchment", dense
       {title ? (
         <h2
           className={cn(
-            "relative z-10 -mt-1 mb-3 inline-flex min-h-10 max-w-full items-center bg-cover bg-center px-6 py-1.5 font-display text-lg leading-tight",
-            "drop-shadow-[0_1px_1px_rgba(0,0,0,.75)]",
+            "relative z-10 -mt-1 mb-3 inline-flex min-h-10 max-w-full items-center rounded-sm border border-[#b98b37]/60 bg-[#1f5960] px-4 py-1.5 font-display text-lg leading-tight shadow-md shadow-black/25",
             surface.title
           )}
-          style={{
-            backgroundImage: `linear-gradient(180deg, rgba(255,255,255,.14), rgba(0,0,0,.18)), url("${uiAssets.core.pageTitlePlaqueTeal}")`,
-            backgroundSize: "100% 100%",
-          }}
         >
           {title}
         </h2>

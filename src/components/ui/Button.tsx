@@ -1,6 +1,5 @@
-import type { ButtonHTMLAttributes, CSSProperties } from "react";
+import type { ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/cn";
-import { uiAssets } from "@/lib/ui-assets";
 
 type ButtonVariant = "primary" | "secondary" | "danger" | "ghost" | "success";
 type ButtonSize = "sm" | "md" | "lg";
@@ -12,19 +11,11 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const variantClass: Record<ButtonVariant, string> = {
-  primary: "border-[#d6ad57]/85 text-[#fff8d8] shadow-lg shadow-black/35 hover:brightness-110",
-  secondary: "border-[#9a7138]/85 text-[#201207] shadow-md shadow-black/25 hover:brightness-105",
-  danger: "border-[#f1b06f]/80 text-[#fff8e2] shadow-lg shadow-black/35 hover:brightness-110",
-  ghost: "border-[#b98b37]/70 text-[#fff1c4] shadow-sm shadow-black/25 hover:border-brass hover:text-white",
-  success: "border-[#d6ad57]/85 text-[#fff8d8] shadow-lg shadow-black/35 hover:brightness-110",
-};
-
-const variantAsset: Record<ButtonVariant, string> = {
-  primary: uiAssets.core.buttonPrimaryTeal,
-  secondary: uiAssets.core.buttonSecondaryParchment,
-  danger: uiAssets.core.buttonDangerRed,
-  ghost: uiAssets.core.buttonDisabledDark,
-  success: uiAssets.core.buttonPrimaryTeal,
+  primary: "border-[#d6ad57]/85 bg-[#1f5960] text-[#fff8d8] shadow-lg shadow-black/25 hover:bg-[#276b73]",
+  secondary: "border-[#9a7138]/85 bg-[#f0d49a] text-[#201207] shadow-md shadow-black/20 hover:bg-[#f6dfa9]",
+  danger: "border-[#f1b06f]/80 bg-[#8d271f] text-[#fff8e2] shadow-lg shadow-black/25 hover:bg-[#a93228]",
+  ghost: "border-[#b98b37]/70 bg-[#2a1a0c]/70 text-[#fff1c4] shadow-sm shadow-black/20 hover:border-brass hover:bg-[#3b260f] hover:text-white",
+  success: "border-[#d6ad57]/85 bg-[#2f7743] text-[#fff8d8] shadow-lg shadow-black/25 hover:bg-[#38894f]",
 };
 
 const sizeClass: Record<ButtonSize, string> = {
@@ -35,11 +26,6 @@ const sizeClass: Record<ButtonSize, string> = {
 
 export function Button({ className, variant = "primary", size = "md", subtle, style, ...props }: ButtonProps) {
   const resolvedVariant = subtle ? "ghost" : variant;
-  const buttonStyle: CSSProperties = {
-    ...style,
-    backgroundImage: `linear-gradient(180deg, rgba(255,255,255,.22), rgba(0,0,0,.34)), url("${variantAsset[resolvedVariant]}")`,
-    backgroundSize: "100% 100%",
-  };
 
   return (
     <button
@@ -52,7 +38,7 @@ export function Button({ className, variant = "primary", size = "md", subtle, st
         variantClass[resolvedVariant],
         className
       )}
-      style={buttonStyle}
+      style={style}
       {...props}
     />
   );
