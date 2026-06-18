@@ -698,32 +698,32 @@ Desktop packaging is out of scope for V3. Work should remain focused on the Reac
 
 ### V3.1 Caravan And Route Mastery
 
-Status: in progress.
+Status: implemented baseline.
 
-- Add persistent route history with costs, incidents, cargo value, outcome, and notes.
-- Add route mastery levels and perks after repeated successful travel.
-- Add packhorse condition, upkeep, injury, rest, repair, and upgrades.
-- Add hidden compartments and concealment-quality upgrades.
-- Add route bookmarks and preferred-route comparisons.
+- Add persistent route history with costs, incidents, cargo value, outcome, and notes. Implemented except custom notes.
+- Add route mastery levels and perks after repeated successful travel. Implemented with inspection/theft reduction.
+- Add packhorse condition, travel wear, repair, and upgrades. Condition/wear/repair implemented; injuries and specialized upgrades remain.
+- Add hidden compartments and concealment-quality upgrades. Implemented with three levels.
+- Add route bookmarks and preferred-route comparisons. Bookmarks implemented; detailed profit comparison remains.
 - Add journey supplies, weather, terrain, and caravan morale.
 
 ### V3.2 Underworld, Law, And Politics
 
-Status: planned.
+Status: implemented baseline.
 
-- Add black-market customers and contraband-only inventories.
-- Add forged permits with quality, expiry, detection, and confiscation risk.
-- Add kingdom heat/wanted levels and cooldown over time.
+- Add black-market customers and contraband-only inventories. Underworld access and NPC labels implemented; dedicated inventories remain.
+- Add forged permits with quality, expiry, detection, and confiscation risk. Quality/expiry/risk implemented.
+- Add kingdom heat/wanted levels and cooldown over time. Implemented.
 - Add fines, jail alternatives, informants, snitches, and legal favors.
 - Add guild permits, tax discounts, trade licenses, and restricted markets.
 - Add elections, votes, faction choices, and consequences.
 
 ### V3.3 Rival Merchants And Regional Economy
 
-Status: planned.
+Status: implemented baseline.
 
-- Add named rival merchants with wealth, cargo, personality, and routes.
-- Let rivals buy out stock, affect scarcity, attend events, and complete contracts.
+- Add named rival merchants with wealth, personality, and routes. Implemented; cargo manifests remain.
+- Let rivals buy out stock and affect scarcity. Implemented; event and contract participation remain.
 - Add regional production chains and commodity dependencies.
 - Add seasonal production, shortages, disasters, and recovery.
 - Add route competition, price history, route profitability, and economic reports.
@@ -731,33 +731,33 @@ Status: planned.
 
 ### V3.4 Myth Collection And Competitive Play
 
-Status: planned.
+Status: implemented baseline.
 
-- Add a persistent Myth card collection and owned quantities.
-- Add deck builder, deck validation, saved decks, and card filters.
-- Add card rarity, special abilities, status effects, and board positions.
-- Add cautious, aggressive, collector, gambler, and expert AI.
+- Add a persistent Myth card collection and owned cards. Implemented.
+- Add deck builder and validation. Implemented for one active 5-12 card deck; saved deck presets and filters remain.
+- Add card rarity and special abilities. Implemented baseline; status effects and board positions remain.
+- Add cautious, aggressive, collector, gambler, and expert AI. Implemented.
 - Add casual matches, ranked opponents, wagers, tournaments, trophies, and rewards.
 - Connect Myth outcomes to NPC relationships, quests, and events.
 
 ### V3.5 Story, Dialogue, And World Content
 
-Status: planned.
+Status: in progress.
 
 - Expand every authored quest into multi-stage objectives and consequences.
 - Add dialogue conditions based on quests, relations, inventory, laws, events, and factions.
-- Add NPC memories, secrets, favors, rivalries, introductions, and follow-up conversations.
+- Add NPC memories, secrets, favors, rivalries, introductions, and follow-up conversations. Gifts, illegal deals, favors, and unlockable secrets implemented; rivalries and larger arcs remain.
 - Add rumors that can be true, outdated, exaggerated, or deliberately false.
 - Add character-specific gifts, betrayals, rescues, recruitment, and long-term arcs.
 - Add more repeatable contract families and chained contracts.
 
 ### V3.6 React Quality, Balance, And Presentation
 
-Status: planned.
+Status: in progress.
 
-- Add focused UI tests for events, company, inventory, dialogue, travel, and saves.
-- Add a repeatable full-play smoke checklist and automated core-loop scenario.
-- Add developer balance views for barter, travel, events, market drift, and progression.
+- Add focused UI tests for events, company, inventory, dialogue, travel, and saves. Core logic and barter UI coverage implemented; more screen-level coverage remains.
+- Add a repeatable full-play smoke checklist and automated core-loop scenario. Automated cross-system scenario implemented; manual checklist remains.
+- Add developer balance views for barter, travel, events, market drift, and progression. Journal balance inspector implemented for major economy/progression outliers.
 - Add button-state, keyboard, tooltip, overflow, and error-state review.
 - Add animation polish and full audio asset/channel controls.
 - Add broken-asset scans and missing-content reports.
