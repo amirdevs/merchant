@@ -3,6 +3,7 @@ import type { Character, InventoryEntry, Marketplace } from "@/data/types";
 import type { GameState } from "@/lib/game";
 import type { MoveAmount } from "@/lib/inventory";
 import type { SaveSlotSummary } from "@/lib/save";
+import type { DialogueEffect, DialogueNodeId } from "@/lib/dialogue";
 
 export type GameView =
   | "main-menu"
@@ -43,7 +44,7 @@ export type MerchantActions = {
   importSave: (file: File | undefined, slot?: number) => Promise<void>;
   toggleAudio: () => void;
   setMessage: (message: string) => void;
-  speakWith: (character: Character, topic: string, reply: string) => void;
+  speakWith: (character: Character, topic: string, reply: string, nextNode?: DialogueNodeId, effect?: DialogueEffect) => void;
   setQuestStatus: (marketIndex: number, status: GameState["questStates"][string]) => void;
   setContractStatus: (contractId: string, status: GameState["contractStates"][string]) => void;
   advanceDay: () => void;

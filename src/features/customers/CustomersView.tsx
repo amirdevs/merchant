@@ -1,14 +1,14 @@
 import { MessageSquare, Search, UserRound } from "lucide-react";
 import type { Character } from "@/data/types";
 import { portraitAsset } from "@/lib/assets";
-import { dialogueChoices } from "@/lib/dialogue";
+import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { relationFor } from "@/lib/reputation";
 import { uiAssets } from "@/lib/ui-assets";
 import type { GameView } from "@/app/types";
 import { Button, Panel, ScreenFrame, StatChip, TabButton } from "@/components/ui";
 
-export function CustomersView({ state, people, selected, onSelect, onNext, onNavigate, onSpeak }: { state: GameState; people: Character[]; selected: Character | null; onSelect: (person: Character) => void; onNext: () => void; onNavigate: (view: GameView) => void; onSpeak: (character: Character, topic: string, reply: string) => void }) {
+export function CustomersView({ state, people, selected, onSelect, onNext, onNavigate, onSpeak }: { state: GameState; people: Character[]; selected: Character | null; onSelect: (person: Character) => void; onNext: () => void; onNavigate: (view: GameView) => void; onSpeak: (character: Character, topic: string, reply: string, nextNode?: DialogueNodeId, effect?: DialogueEffect) => void }) {
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
   const selectedRelation = relationFor(state.npcRelations, selected);
@@ -65,8 +65,8 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
               </div>
               <p className="mt-3 rounded-md border border-[#9a7138]/60 bg-[#fff6d7]/45 p-3 text-sm text-[#3b260f]">{selected.dialogue?.who || selected.dialogue?.customReply || "A market customer waiting to bargain."}</p>
               <div className="mt-4 grid max-h-80 gap-2 overflow-auto pr-1">
-                {dialogueChoices(selected, { market, markets: marketplaces, kingdom, relation: selectedRelation, day: state.day }).filter((choice) => !["ask-price", "ask-offer", "barter", "goodbye"].includes(choice.id)).map((choice) => (
-                  <Button key={choice.id} subtle onClick={() => onSpeak(selected, choice.label, choice.reply)}><MessageSquare size={16} /> {choice.label}</Button>
+                {dialogueChoices(selected, { market, markets: marketplaces, kingdom, relation: selectedRelation, day: state.day }, state.dialogueNodes[String(selected.index)] || "root").filter((choice) => !["ask-price", "ask-offer", "barter", "goodbye"].includes(choice.id)).map((choice) => (
+                  <Button key={`${state.dialogueNodes[String(selected.index)] || "root"}-${choice.id}`} subtle onClick={() => onSpeak(selected, choice.label, choice.reply, choice.nextNode, choice.effect)}><MessageSquare size={16} /> {choice.label}</Button>
                 ))}
                 <div className="flex flex-wrap gap-2"><Button onClick={() => onNavigate("barter")}>Trade</Button><Button subtle onClick={onNext}>Next Customer</Button></div>
               </div>

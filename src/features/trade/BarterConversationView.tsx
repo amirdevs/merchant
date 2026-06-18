@@ -4,7 +4,7 @@ import type { Character, InventoryEntry } from "@/data/types";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { moodLabel, patienceLabel, relationFor, trustLabel, ultimatumActive } from "@/lib/reputation";
 import { buildDealHints } from "@/lib/deal-intelligence";
-import { dialogueChoices } from "@/lib/dialogue";
+import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
 import { roleLabel } from "@/lib/npc-behavior";
 import type { MoveAmount } from "@/lib/inventory";
 import { portraitAsset } from "@/lib/assets";
@@ -31,7 +31,7 @@ type BarterConversationViewProps = {
   onUndoOfferChange: () => void;
   onGoodbye: () => void;
   onHelp: () => void;
-  onSpeak: (character: Character, topic: string, reply: string) => void;
+  onSpeak: (character: Character, topic: string, reply: string, nextNode?: DialogueNodeId, effect?: DialogueEffect) => void;
 };
 
 export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onSetPlayerOfferQuantity, onSetCharacterOfferQuantity, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onUndoOfferChange, onGoodbye, onHelp, onSpeak }: BarterConversationViewProps) {
@@ -39,13 +39,14 @@ export function BarterConversationView({ state, character, playerOffer, characte
   const illegalTags = currentKingdom(state).illegalItemTags || [];
   const relation = relationFor(state.npcRelations, character);
   const dealHints = buildDealHints(state, character, playerOffer, characterOffer);
+  const dialogueNode = character ? state.dialogueNodes[String(character.index)] || "root" : "root";
   const choices = character ? dialogueChoices(character, {
     market: currentMarket(state),
     markets: marketplaces,
     kingdom: currentKingdom(state),
     relation,
     day: state.day,
-  }) : [];
+  }, dialogueNode) : [];
   const recentNotes = character ? state.dialogueLog.filter((entry) => entry.characterIndex === character.index).slice(0, 3) : [];
 
   return (
@@ -92,7 +93,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
                       if (choice.id === "ask-price") onAskPrice();
                       else if (choice.id === "ask-offer" || choice.id === "barter") onAskOffer();
                       else if (choice.id === "goodbye") onGoodbye();
-                      else if (character) onSpeak(character, choice.label, choice.reply);
+                      else if (character) onSpeak(character, choice.label, choice.reply, choice.nextNode, choice.effect);
                     }}
                   >
                     {choice.label}

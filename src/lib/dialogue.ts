@@ -17,13 +17,23 @@ export type DialogueAction =
   | "ask-price"
   | "ask-offer"
   | "barter"
-  | "goodbye";
+  | "goodbye"
+  | "topics-personal"
+  | "topics-trade"
+  | "topics-world"
+  | "topics-work"
+  | "back";
+
+export type DialogueNodeId = "root" | "personal" | "trade" | "world" | "work";
+export type DialogueEffect = "accept-local-quest";
 
 export type DialogueChoice = {
   id: DialogueAction;
   label: string;
   reply: string;
   tone?: "friendly" | "business" | "warning" | "gossip";
+  nextNode?: DialogueNodeId;
+  effect?: DialogueEffect;
 };
 
 export type DialogueContext = {
@@ -100,10 +110,10 @@ function haggleReply(character: Character, relation: NpcRelation | null | undefi
   return `${character.name} is ${character.frugalPercent}% frugal and haggles at ${character.hagglePercent || 0}%. Close offers keep the conversation alive; insulting ones damage trust. ${pressure}`;
 }
 
-export function dialogueChoices(character: Character, context: DialogueContext = {}): DialogueChoice[] {
+export function dialogueChoices(character: Character, context: DialogueContext = {}, node: DialogueNodeId = "root"): DialogueChoice[] {
   const marketName = context.market?.name || "this market";
   const day = context.day ? `day ${context.day}` : "today";
-  return [
+  const choices: DialogueChoice[] = [
     {
       id: "who",
       label: "Who are you?",
@@ -194,5 +204,37 @@ export function dialogueChoices(character: Character, context: DialogueContext =
       reply: `${character.name} nods farewell.`,
       tone: "friendly",
     },
+  ];
+  const back: DialogueChoice = { id: "back", label: "Back to main topics.", reply: `${character.name} waits for your next question.`, nextNode: "root", tone: "friendly" };
+  if (node === "personal") return choices.filter((choice) => ["who", "custom", "relationship"].includes(choice.id)).concat(back);
+  if (node === "trade") return choices.filter((choice) => ["preference", "stock", "haggle", "ask-price", "ask-offer", "barter"].includes(choice.id)).concat(back);
+  if (node === "world") return choices.filter((choice) => ["market-demand", "market-discounts", "route-gossip", "local-law", "risk"].includes(choice.id)).concat(back);
+  if (node === "work") {
+    const workChoices: DialogueChoice[] = [];
+    if (context.market?.quest) {
+      workChoices.push({
+        id: "custom",
+        label: `Tell me about ${context.market.quest.name}.`,
+        reply: context.market.quest.todo || `${character.name} points you toward the local notice board.`,
+        effect: "accept-local-quest",
+        tone: "business",
+      });
+    }
+    workChoices.push({
+      id: "route-gossip",
+      label: "Any paid work or useful rumors?",
+      reply: `Check the ${marketName} notice board for timed contracts. ${routeReply(context)}`,
+      tone: "gossip",
+    });
+    return workChoices.concat(back);
+  }
+  return [
+    choices[0],
+    choices[2],
+    { id: "topics-personal", label: "Let us talk about you.", reply: `${character.name} opens up cautiously.`, nextNode: "personal", tone: "friendly" },
+    { id: "topics-trade", label: "Tell me about your trading.", reply: `${character.name} turns the conversation toward goods and prices.`, nextNode: "trade", tone: "business" },
+    { id: "topics-world", label: "What is happening in the world?", reply: `${character.name} shares local news and road gossip.`, nextNode: "world", tone: "gossip" },
+    { id: "topics-work", label: "Do you know of any work?", reply: `${character.name} considers the notices and rumors around ${marketName}.`, nextNode: "work", tone: "business" },
+    ...choices.filter((choice) => ["ask-price", "ask-offer", "barter", "goodbye"].includes(choice.id)),
   ];
 }

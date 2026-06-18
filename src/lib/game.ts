@@ -9,6 +9,7 @@ import type { AuctionSession } from "./auction";
 import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { eventBiases } from "./events";
+import type { DialogueNodeId } from "./dialogue";
 import { addInventory, clearOffers, moveOffer, transferOffers, visibleQuantity } from "./inventory";
 import { applyModPacks } from "./mods";
 import {
@@ -46,6 +47,7 @@ export type GameState = {
   contractAcceptedDays: ContractAcceptedDays;
   auctionSession: AuctionSession | null;
   selectedItemIndex: number | null;
+  dialogueNodes: Record<string, DialogueNodeId>;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -146,6 +148,7 @@ export function newGame(): GameState {
     contractAcceptedDays: {},
     auctionSession: null,
     selectedItemIndex: null,
+    dialogueNodes: {},
     dialogueLog: [],
     travelResult: null,
   };

@@ -28,6 +28,8 @@ import {
 import { setOfferQuantity, type MoveAmount } from "@/lib/inventory";
 import { questCanComplete, questReward } from "@/lib/quests";
 import { customerIntro } from "@/lib/dialogue";
+import type { DialogueEffect, DialogueNodeId } from "@/lib/dialogue";
+import { applyDialogueEffect } from "@/lib/dialogue-runtime";
 import { audioEnabled, playAmbient, playItemSound, playUiSound, setAudioEnabled } from "@/lib/audio";
 import type { MerchantController } from "@/app/types/MerchantController";
 import { listSaveSlots } from "@/lib/save";
@@ -205,10 +207,12 @@ export function useMerchantController(): MerchantController {
     });
   }
 
-  function speakWith(character: Character, topic: string, reply: string) {
+  function speakWith(character: Character, topic: string, reply: string, nextNode?: DialogueNodeId, effect?: DialogueEffect) {
     playUiSound("menu_click");
     update((draft) => {
-      draft.message = reply;
+      if (nextNode) draft.dialogueNodes[String(character.index)] = nextNode;
+      const effectMessage = applyDialogueEffect(draft, character, effect);
+      draft.message = effectMessage ? `${reply} ${effectMessage}` : reply;
       draft.dialogueLog = [
         {
           day: draft.day,
@@ -216,7 +220,7 @@ export function useMerchantController(): MerchantController {
           characterName: character.name,
           marketIndex: draft.marketIndex,
           topic,
-          note: reply,
+          note: effectMessage ? `${reply} ${effectMessage}` : reply,
         },
         ...(draft.dialogueLog || []).filter((entry) => !(entry.characterIndex === character.index && entry.topic === topic && entry.note === reply)),
       ].slice(0, 80);
