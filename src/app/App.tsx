@@ -33,6 +33,15 @@ const defaultUiPreferences: UiPreferences = {
   textSpeed: 45,
   compactMode: false,
   decorativeMotion: true,
+  audioVolumes: {
+    music: 80,
+    ambient: 50,
+    dialogue: 80,
+    ui: 75,
+    items: 70,
+    events: 80,
+    minigames: 80,
+  },
 };
 
 const gameViews: GameView[] = [

@@ -2,11 +2,12 @@ import { mediaAsset } from "./assets";
 
 let enabled = true;
 let ambient: HTMLAudioElement | null = null;
-export type AudioChannel = "ui" | "dialogue" | "ambient" | "events" | "minigames" | "items";
+export type AudioChannel = "ui" | "dialogue" | "ambient" | "music" | "events" | "minigames" | "items";
 const channelVolumes: Record<AudioChannel, number> = {
   ui: 0.75,
   dialogue: 0.8,
   ambient: 0.5,
+  music: 0.8,
   events: 0.8,
   minigames: 0.8,
   items: 0.7,

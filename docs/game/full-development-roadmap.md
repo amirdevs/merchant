@@ -794,7 +794,7 @@ Goal: make the React game stable, readable, balanced, and complete enough for re
 Tasks:
 
 - Balance travel costs, stallage, theft, guard odds, barter thresholds, and rewards.
-- Add separate audio channels for UI, dialogue, ambient, events, and minigames. Implemented infrastructure; real asset coverage and settings controls remain.
+- Add separate audio channels for UI, dialogue, ambient, music, events, minigames, and items. Implemented with settings controls; real asset coverage remains.
 - Add animation polish for trade, travel, dialogue, events, and inventory actions.
 - Add broken asset scans for portraits, items, backdrops, routes, and UI parts. Implemented with `pnpm audit:assets`.
 - Add save import/export compatibility checks.
@@ -874,7 +874,7 @@ Status: in progress.
 - Add a repeatable full-play smoke checklist and automated core-loop scenario. Automated cross-system scenario implemented; manual checklist remains.
 - Add developer balance views for barter, travel, events, market drift, and progression. Journal balance inspector implemented for major economy/progression outliers.
 - Add button-state, keyboard, tooltip, overflow, and error-state review.
-- Add animation polish and full audio asset/channel controls.
+- Add animation polish and full audio asset/channel controls. Channel controls implemented; animation and real asset coverage remain.
 - Add broken-asset scans and missing-content reports. Implemented baseline with `pnpm audit:assets`; deeper content reports remain.
 - Split large React bundles and lazy-load major screens where useful.
 - Keep desktop packaging deferred.

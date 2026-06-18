@@ -35,6 +35,15 @@ export type UiPreferences = {
   textSpeed: number;
   compactMode: boolean;
   decorativeMotion: boolean;
+  audioVolumes: {
+    music: number;
+    ambient: number;
+    dialogue: number;
+    ui: number;
+    items: number;
+    events: number;
+    minigames: number;
+  };
 };
 
 export type MerchantActions = {

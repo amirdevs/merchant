@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { UiPreferences } from "@/app/types";
+import { setAudioChannelVolume, type AudioChannel } from "@/lib/audio";
 import { uiAssets } from "@/lib/ui-assets";
 import { Button, Panel, ScreenFrame, TabButton } from "@/components/ui";
 
@@ -17,7 +18,25 @@ export function SettingsView({ soundOn, uiPreferences, onToggleSound, onChangePr
   const [theftEnabled, setTheftEnabled] = useState(false);
   const [highlightItems, setHighlightItems] = useState(true);
   const [largeFocusRings, setLargeFocusRings] = useState(true);
-  const resetDefaults = () => onChangePreferences({ uiScale: 100, textSpeed: 45, compactMode: false, decorativeMotion: true });
+  const resetDefaults = () => onChangePreferences({
+    uiScale: 100,
+    textSpeed: 45,
+    compactMode: false,
+    decorativeMotion: true,
+    audioVolumes: {
+      music: 80,
+      ambient: 50,
+      dialogue: 80,
+      ui: 75,
+      items: 70,
+      events: 80,
+      minigames: 80,
+    },
+  });
+  const setVolume = (key: keyof UiPreferences["audioVolumes"], channel: AudioChannel, value: number) => {
+    setAudioChannelVolume(channel, value / 100);
+    onChangePreferences({ ...uiPreferences, audioVolumes: { ...uiPreferences.audioVolumes, [key]: value } });
+  };
   const toggleFullscreen = () => {
     if (document.fullscreenElement) {
       void document.exitFullscreen();
@@ -42,11 +61,13 @@ export function SettingsView({ soundOn, uiPreferences, onToggleSound, onChangePr
         <div className="grid gap-5 xl:grid-cols-3">
           <Panel title="Audio" variant="parchment">
             <Toggle label="Sound master" active={soundOn} onClick={onToggleSound} />
-            <Range label="Music volume" value={80} min={0} max={100} onChange={() => undefined} />
-            <Range label="Ambience volume" value={70} min={0} max={100} onChange={() => undefined} />
-            <Range label="Voices volume" value={60} min={0} max={100} onChange={() => undefined} />
-            <Range label="UI sounds volume" value={75} min={0} max={100} onChange={() => undefined} />
-            <Range label="Item sounds volume" value={65} min={0} max={100} onChange={() => undefined} />
+            <Range label="Music volume" value={uiPreferences.audioVolumes.music} min={0} max={100} onChange={(value) => setVolume("music", "music", value)} />
+            <Range label="Ambience volume" value={uiPreferences.audioVolumes.ambient} min={0} max={100} onChange={(value) => setVolume("ambient", "ambient", value)} />
+            <Range label="Voices volume" value={uiPreferences.audioVolumes.dialogue} min={0} max={100} onChange={(value) => setVolume("dialogue", "dialogue", value)} />
+            <Range label="UI sounds volume" value={uiPreferences.audioVolumes.ui} min={0} max={100} onChange={(value) => setVolume("ui", "ui", value)} />
+            <Range label="Item sounds volume" value={uiPreferences.audioVolumes.items} min={0} max={100} onChange={(value) => setVolume("items", "items", value)} />
+            <Range label="Event sounds volume" value={uiPreferences.audioVolumes.events} min={0} max={100} onChange={(value) => setVolume("events", "events", value)} />
+            <Range label="Minigames volume" value={uiPreferences.audioVolumes.minigames} min={0} max={100} onChange={(value) => setVolume("minigames", "minigames", value)} />
           </Panel>
           <Panel title="Display" variant="parchment">
             <Range label="UI scale" value={uiPreferences.uiScale} min={80} max={125} onChange={(value) => onChangePreferences({ ...uiPreferences, uiScale: value })} />
