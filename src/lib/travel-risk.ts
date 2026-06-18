@@ -85,10 +85,12 @@ export function applyTravelRisks(options: {
   theftRoll?: number;
   strategy?: TravelStrategy;
   hasPermit?: boolean;
+  permitMultiplier?: number;
+  heat?: number;
   concealmentLevel?: number;
   masteryReduction?: number;
 }) {
-  const { inventory, items, destination, kingdom, day, travelDays = 1, strategy = "comply", hasPermit = false, concealmentLevel = 0, masteryReduction = 0 } = options;
+  const { inventory, items, destination, kingdom, day, travelDays = 1, strategy = "comply", hasPermit = false, permitMultiplier = 0.45, heat = 0, concealmentLevel = 0, masteryReduction = 0 } = options;
   const events: TravelRiskEvent[] = [];
   const preview = routeRiskPreview({ inventory, items, destination, kingdom, days: travelDays, tolls: 0, concealmentLevel, masteryReduction });
   const illegalTags = kingdom?.illegalItemTags || [];
@@ -101,8 +103,8 @@ export function applyTravelRisks(options: {
 
   const inspectionRoll = options.inspectionRoll ?? seededRisk((destination.index + 1) * 6151 + day * 173);
   const strategyMultiplier = strategy === "bribe" ? 0.25 : strategy === "evade" ? 0.6 : 1;
-  const permitMultiplier = hasPermit ? 0.45 : 1;
-  const inspectionPercent = preview.guardInspectionPercent * strategyMultiplier * permitMultiplier;
+  const permitFactor = hasPermit ? permitMultiplier : 1;
+  const inspectionPercent = Math.min(100, preview.guardInspectionPercent * strategyMultiplier * permitFactor + heat * 0.35);
   if (illegalEntry && inspectionRoll * 100 < inspectionPercent) {
     const item = items[illegalEntry.itemIndex];
     const taken = strategy === "evade"

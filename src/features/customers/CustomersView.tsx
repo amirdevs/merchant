@@ -5,6 +5,8 @@ import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { relationFor } from "@/lib/reputation";
 import { uiAssets } from "@/lib/ui-assets";
+import { canUseBlackMarket } from "@/lib/law";
+import { npcRoles } from "@/lib/npc-behavior";
 import type { GameView } from "@/app/types";
 import { Button, Panel, ScreenFrame, StatChip, TabButton } from "@/components/ui";
 
@@ -43,7 +45,9 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
                 <span className="truncate text-[#725331]">{person.dialogue?.preference || person.dialogue?.customQuestion || "No notes"}</span>
                 <span>{person.bias.filter((bias) => bias.percent > 0).length || "-"}</span>
                 <span>{person.inventory.length || "-"}</span>
-                <span className="rounded-full border border-[#9a7138]/60 bg-[#fff6d7]/70 px-2 py-1 text-center text-[0.68rem] font-bold uppercase tracking-wide text-[#75501f]">Normal</span>
+                <span className="rounded-full border border-[#9a7138]/60 bg-[#fff6d7]/70 px-2 py-1 text-center text-[0.68rem] font-bold uppercase tracking-wide text-[#75501f]">
+                  {canUseBlackMarket(state.law, relationFor(state.npcRelations, person)?.trust || 0, npcRoles(person).includes("thief")) ? "Black Market" : "Normal"}
+                </span>
               </button>
             ))}
           </div>

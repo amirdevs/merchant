@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { Banknote, Building2, PackageOpen, ShieldCheck, ShipWheel, Wrench } from "lucide-react";
+import { BadgeCheck, Banknote, Building2, PackageOpen, ShieldCheck, ShipWheel, Wrench } from "lucide-react";
 import type { GameState } from "@/lib/game";
 import { currentMarket, items, marketplaces, visibleQuantity } from "@/lib/game";
 import { coinQuantity } from "@/lib/economy";
 import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
+import { currentKingdom } from "@/lib/game";
+import { activePermit, kingdomHeat } from "@/lib/law";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
 type CompanyViewProps = {
@@ -20,14 +22,17 @@ type CompanyViewProps = {
   onStartShipment: (marketIndex: number) => void;
   onRepairPackhorses: () => void;
   onUpgradeConcealment: () => void;
+  onBuyPermit: (forged?: boolean) => void;
 };
 
-export function CompanyView({ state, onBack, onOpenWarehouse, onDepositWarehouse, onWithdrawWarehouse, onBankDeposit, onBankWithdraw, onTakeLoan, onRepayLoan, onStartShipment, onRepairPackhorses, onUpgradeConcealment }: CompanyViewProps) {
+export function CompanyView({ state, onBack, onOpenWarehouse, onDepositWarehouse, onWithdrawWarehouse, onBankDeposit, onBankWithdraw, onTakeLoan, onRepayLoan, onStartShipment, onRepairPackhorses, onUpgradeConcealment, onBuyPermit }: CompanyViewProps) {
   const market = currentMarket(state);
   const warehouse = state.company.warehouses[String(market.index)];
   const [amount, setAmount] = useState(25);
   const copper = coinQuantity(state.playerInventory, items, "copper coins");
   const activeShipment = state.company.shipments.find((shipment) => shipment.status === "active");
+  const kingdom = currentKingdom(state);
+  const permit = activePermit(state.law, kingdom.index, state.day);
 
   return (
     <ScreenFrame title="Merchant Company" eyebrow={state.company.name} backdrop={uiAssets.backplates.warehouseInventory} overlay="dark">
@@ -69,6 +74,18 @@ export function CompanyView({ state, onBack, onOpenWarehouse, onDepositWarehouse
             <div className="mt-3 grid grid-cols-2 gap-2">
               <Button onClick={onRepairPackhorses}><Wrench size={16} /> Care</Button>
               <Button variant="secondary" onClick={onUpgradeConcealment}><ShieldCheck size={16} /> Upgrade</Button>
+            </div>
+          </Panel>
+          <Panel title={<span className="inline-flex items-center gap-2"><BadgeCheck size={18} /> Law and Permits</span>} variant="parchment">
+            <div className="grid grid-cols-3 gap-2">
+              <StatChip label="Kingdom Heat" value={kingdomHeat(state.law, kingdom.index)} tone={kingdomHeat(state.law, kingdom.index) >= 40 ? "danger" : "parchment"} />
+              <StatChip label="Permit" value={permit ? (permit.forged ? "Forged" : "Official") : "None"} />
+              <StatChip label="Underworld" value={state.law.blackMarketReputation} />
+            </div>
+            {permit ? <p className="mt-2 text-sm font-bold text-[#1f5960]">Valid through day {permit.expiresDay}, quality {permit.quality}.</p> : null}
+            <div className="mt-3 grid grid-cols-2 gap-2">
+              <Button onClick={() => onBuyPermit(false)}>Official Permit</Button>
+              <Button variant="secondary" disabled={state.law.blackMarketReputation < 2} onClick={() => onBuyPermit(true)}>Forged Permit</Button>
             </div>
           </Panel>
           <Panel title={<span className="inline-flex items-center gap-2"><Banknote size={18} /> Bank and Loans</span>} variant="parchment">

@@ -12,6 +12,8 @@ import { advanceMarketSimulation, recordMarketTrade, simulatedMarketBiases, type
 import { createCompanyState, settleShipments, type CompanyState } from "./company";
 import type { DraftSession } from "./draft";
 import { applyPackhorseTravelWear, createCaravanState, masteryRiskReduction, recordRoute, routeKey, type CaravanState } from "./caravan";
+import { activePermit, adjustKingdomHeat, coolLawHeat, createLawState, kingdomHeat, permitInspectionMultiplier, type LawState } from "./law";
+import { npcRoles } from "./npc-behavior";
 import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { eventBiases } from "./events";
@@ -62,6 +64,7 @@ export type GameState = {
   company: CompanyState;
   draftSession: DraftSession | null;
   caravan: CaravanState;
+  law: LawState;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -171,6 +174,7 @@ export function newGame(): GameState {
     company: createCompanyState(),
     draftSession: null,
     caravan: createCaravanState(),
+    law: createLawState(),
     dialogueLog: [],
     travelResult: null,
   };
@@ -363,6 +367,7 @@ export function completeTrade(state: GameState) {
   const npcGift = playerValue <= 0 && safetyNetGiftAllowed(nextCharacter, relation, playerCargoValue, characterValue);
   const playerSold = next.playerInventory.filter((entry) => entry.offerQuantity > 0).map((entry) => ({ ...entry }));
   const playerBought = nextCharacter.inventory.filter((entry) => entry.offerQuantity > 0).map((entry) => ({ ...entry }));
+  const illegalTradeStacks = playerSold.filter((entry) => items[entry.itemIndex].tags.some((tag) => currentKingdom(next).illegalItemTags?.includes(tag)));
   const marketQuest = currentMarket(next);
   const completesQuest = next.questStates[String(marketQuest.index)] === "accepted"
     && questOfferCanComplete(marketQuest, next.playerInventory, items);
@@ -405,6 +410,10 @@ export function completeTrade(state: GameState) {
     playerBought,
     items,
   });
+  if (illegalTradeStacks.length && npcRoles(nextCharacter).includes("thief")) {
+    adjustKingdomHeat(next.law, currentKingdom(next).index, 4 + illegalTradeStacks.length * 2);
+    next.law.blackMarketReputation = Math.min(20, next.law.blackMarketReputation + 1);
+  }
   let questMessage = "";
   if (completesQuest && marketQuest.quest) {
     const reward = questReward(marketQuest, items);
@@ -468,6 +477,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
   spendCopperToll(state.playerInventory, items, totalCost);
   state.marketIndex = toMarketIndex;
   state.day += route.travelDays || 1;
+  coolLawHeat(state.law, route.travelDays || 1);
   advanceMarketSimulation(state.marketSimulation, state.day);
   const settledShipments = settleShipments(state.company, state.day);
   const expiredContracts = expireContracts({
@@ -497,10 +507,14 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
     hasPermit: state.playerInventory.some((entry) => {
       const item = items[entry.itemIndex];
       return visibleQuantity(entry) > 0 && (item.tags.some((tag) => tag.toLowerCase().includes("permit")) || item.name.toLowerCase().includes("permit"));
-    }),
+    }) || Boolean(activePermit(state.law, destinationKingdom.index, state.day)),
+    permitMultiplier: permitInspectionMultiplier(activePermit(state.law, destinationKingdom.index, state.day)),
+    heat: kingdomHeat(state.law, destinationKingdom.index),
     concealmentLevel: state.caravan.concealmentLevel,
     masteryReduction: masteryRiskReduction(masteryTrips),
   });
+  if (riskEvents.some((event) => event.kind === "inspection")) adjustKingdomHeat(state.law, destinationKingdom.index, 12);
+  if (strategy === "evade") adjustKingdomHeat(state.law, destinationKingdom.index, riskEvents.some((event) => event.kind === "evasion" && event.message.includes("failed")) ? 18 : 6);
   const wear = applyPackhorseTravelWear(state.caravan, cargo.packAnimals, route.travelDays || 1, !cargo.canTravel);
   recordRoute(state.caravan, {
     id: `${fromMarketIndex}:${toMarketIndex}:${departedDay}`,

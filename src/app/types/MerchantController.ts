@@ -72,6 +72,7 @@ export type MerchantActions = {
   repairPackhorses: () => void;
   upgradeConcealment: () => void;
   toggleRouteBookmark: (toMarketIndex: number) => void;
+  buyPermit: (forged?: boolean) => void;
   selectCharacter: (next: Character) => void;
   nextCustomer: () => void;
   movePlayer: (entry: InventoryEntry, amount: MoveAmount, isOfferPanel?: boolean) => void;

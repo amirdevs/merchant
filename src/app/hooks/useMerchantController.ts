@@ -54,6 +54,7 @@ import {
 } from "@/lib/company";
 import { createDraftSession, pickDraftItem as resolveDraftPick } from "@/lib/draft";
 import { repairPackhorses as repairCaravanPackhorses, toggleRouteBookmark as toggleCaravanRouteBookmark, upgradeConcealment as upgradeCaravanConcealment } from "@/lib/caravan";
+import { issuePermit } from "@/lib/law";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -632,6 +633,23 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function buyPermit(forged = false) {
+    update((draft) => {
+      const kingdom = currentKingdom(draft);
+      if (forged && draft.law.blackMarketReputation < 2) {
+        draft.message = "You need more underworld reputation to find a forged permit.";
+        return;
+      }
+      const cost = forged ? 45 : 90;
+      if (!spendCopperToll(draft.playerInventory, items, cost)) {
+        draft.message = `${forged ? "A forged" : "An official"} permit costs ${cost} copper.`;
+        return;
+      }
+      const permit = issuePermit(draft.law, kingdom.index, draft.day, forged ? 1 : 3, forged);
+      draft.message = `${forged ? "Forged" : "Official"} ${kingdom.name} permit acquired through day ${permit.expiresDay}.`;
+    });
+  }
+
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
@@ -816,6 +834,7 @@ export function useMerchantController(): MerchantController {
       repairPackhorses,
       upgradeConcealment,
       toggleRouteBookmark,
+      buyPermit,
       selectCharacter,
       nextCustomer,
       movePlayer,
