@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { Handshake, HelpCircle } from "lucide-react";
 import type { Character, InventoryEntry } from "@/data/types";
 import { currentKingdom, currentMarket, items, marketplaces, type GameState } from "@/lib/game";
@@ -11,7 +11,7 @@ import { itemIconAsset, portraitAsset } from "@/lib/assets";
 import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { InventoryPanel } from "@/components/InventoryPanel";
-import { Button, Panel, ScreenFrame, StatChip } from "@/components/ui";
+import { Button, ModalShell, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
 type BarterConversationViewProps = {
   state: GameState;
@@ -35,6 +35,7 @@ type BarterConversationViewProps = {
 };
 
 export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onSetPlayerOfferQuantity, onSetCharacterOfferQuantity, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onUndoOfferChange, onGoodbye, onHelp, onSpeak }: BarterConversationViewProps) {
+  const [conversationOpen, setConversationOpen] = useState(false);
   const advantage = playerOffer - characterOffer;
   const illegalTags = currentKingdom(state).illegalItemTags || [];
   const relation = relationFor(state.npcRelations, character);
@@ -49,6 +50,12 @@ export function BarterConversationView({ state, character, playerOffer, characte
   }, dialogueNode) : [];
   const recentNotes = character ? state.dialogueLog.filter((entry) => entry.characterIndex === character.index).slice(0, 3) : [];
   const dealReaction = reactionForAdvantage(advantage, playerOffer, characterOffer);
+  const chooseDialogue = (choice: ReturnType<typeof dialogueChoices>[number]) => {
+    if (choice.id === "ask-price") onAskPrice();
+    else if (choice.id === "ask-offer" || choice.id === "barter") onAskOffer();
+    else if (choice.id === "goodbye") onGoodbye();
+    else if (character) onSpeak(character, choice.label, choice.reply, choice.nextNode, choice.effect);
+  };
 
   return (
     <ScreenFrame className="h-full max-h-full" backdrop={uiAssets.backplates.tradeConversation} overlay="dark" contentClassName="h-full min-h-0 p-2">
@@ -62,48 +69,24 @@ export function BarterConversationView({ state, character, playerOffer, characte
         <Panel className="min-h-0 p-3 [&>div:last-child]:h-[calc(100%-3.25rem)]" title={character ? character.name : "Conversation"} variant="parchment">
           {character ? (
             <div className="flex h-full min-h-0 flex-col">
-              <div className="grid min-h-0 gap-3 lg:grid-cols-[minmax(140px,0.62fr)_1fr]">
-                <div className="min-h-0">
-                  <div
-                    className="mx-auto grid aspect-[4/5] max-h-[15rem] place-items-center overflow-hidden rounded-sm border-2 border-[#b98b37]/80 bg-[#f2ddb1] p-2 text-[#26170a] shadow-xl shadow-[#6c4418]/25"
-                    style={{
-                      backgroundImage: `linear-gradient(180deg, rgba(255,246,217,.10), rgba(0,0,0,.08)), url("${uiAssets.town.portraitFrameSelected}")`,
-                      backgroundSize: "100% 100%",
-                    }}
-                  >
+              <div className="grid gap-2 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/55 p-2 shadow-inner shadow-[#6c4418]/15">
+                <div className="flex items-center gap-3">
+                  <div className="grid h-16 w-14 shrink-0 place-items-center overflow-hidden rounded-sm border border-[#b98b37]/80 bg-[#f2ddb1] p-1">
                     {character.portraitFile ? <img className="h-full w-full rounded object-cover" src={portraitAsset(character.portraitFile)} alt="" /> : null}
                   </div>
-                </div>
-                <div>
-                  <h1 className="text-center font-display text-3xl text-[#26170a] lg:text-left">{character.name}</h1>
-                  <p className="text-center font-bold text-[#75501f] lg:text-left">{character.profession}</p>
-                  <p className="text-center text-xs font-black uppercase text-[#75501f] lg:text-left">{roleLabel(character)}</p>
-                  <dl className="mt-2 grid grid-cols-3 gap-1.5">
-                    <StatChip label="Mood" value={moodLabel(relation)} icon={uiAssets.town.moodPositive} tone={relation && relation.mood <= -2 ? "danger" : "parchment"} />
-                    <StatChip label="Trust" value={trustLabel(relation)} icon={uiAssets.town.relationshipBadge} />
-                    <StatChip label="Patience" value={patienceLabel(relation)} icon={uiAssets.town.tradeStyleBadge} tone={relation && relation.patience <= 2 ? "danger" : "parchment"} />
-                  </dl>
-                  <p className="mt-2 line-clamp-3 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/65 p-3 text-base leading-snug text-[#3b260f] shadow-inner shadow-[#6c4418]/15">{message}</p>
-                  <div className={`mt-2 rounded-sm border px-3 py-2 text-xs font-black uppercase tracking-wide ${dealReaction.className}`}>
-                    {dealReaction.label}: {dealReaction.text}
+                  <div className="min-w-0 flex-1">
+                    <h1 className="truncate font-display text-2xl text-[#26170a]">{character.name}</h1>
+                    <p className="truncate text-sm font-bold text-[#75501f]">{character.profession}</p>
+                    <p className="truncate text-[0.68rem] font-black uppercase text-[#75501f]">{roleLabel(character)}</p>
                   </div>
-                  {ultimatumActive(relation) ? <p className="mt-2 rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/80 p-2 text-sm font-black uppercase tracking-wide text-[#8d271f]">Final offer warning</p> : null}
                 </div>
-              </div>
-              <div className="mt-2 grid grid-cols-2 gap-1.5 text-[#3b260f]">
-                {choices.map((choice) => (
-                  <ResponseLine
-                    key={choice.id}
-                    onClick={() => {
-                      if (choice.id === "ask-price") onAskPrice();
-                      else if (choice.id === "ask-offer" || choice.id === "barter") onAskOffer();
-                      else if (choice.id === "goodbye") onGoodbye();
-                      else if (character) onSpeak(character, choice.label, choice.reply, choice.nextNode, choice.effect);
-                    }}
-                  >
-                    {choice.label}
-                  </ResponseLine>
-                ))}
+                <dl className="grid grid-cols-3 gap-1.5">
+                  <StatChip label="Mood" value={moodLabel(relation)} icon={uiAssets.town.moodPositive} tone={relation && relation.mood <= -2 ? "danger" : "parchment"} />
+                  <StatChip label="Trust" value={trustLabel(relation)} icon={uiAssets.town.relationshipBadge} />
+                  <StatChip label="Patience" value={patienceLabel(relation)} icon={uiAssets.town.tradeStyleBadge} tone={relation && relation.patience <= 2 ? "danger" : "parchment"} />
+                </dl>
+                <p className="line-clamp-2 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/65 p-2 text-sm leading-snug text-[#3b260f]">{message}</p>
+                <Button className="w-full justify-center" size="sm" variant="secondary" onClick={() => setConversationOpen(true)}>Talk With {character.name}</Button>
               </div>
               <div
                 className="mt-2 min-h-0 rounded-sm border border-[#9a7138]/60 p-3 text-[#3b260f] shadow-inner shadow-[#6c4418]/20"
@@ -144,6 +127,48 @@ export function BarterConversationView({ state, character, playerOffer, characte
                 ) : null}
               </div>
               <div className="mt-2 grid grid-cols-4 gap-1.5"><Button size="sm" variant="secondary" onClick={onAskPrice}>Ask Price</Button><Button size="sm" variant="secondary" onClick={onAskOffer}>Ask Offer</Button><Button size="sm" onClick={onTrade}><Handshake size={14} /> Accept</Button><Button size="sm" variant="secondary" onClick={onUndoOfferChange}>Undo</Button><Button size="sm" variant="secondary" onClick={onClearOffers}>Clear</Button><Button size="sm" subtle onClick={onGoodbye}>Goodbye</Button><Button className="col-span-2" size="sm" subtle onClick={onHelp}><HelpCircle size={14} /> Help</Button></div>
+              {conversationOpen ? (
+                <ModalShell title={character.name} panelClassName="max-w-5xl" onClick={() => setConversationOpen(false)}>
+                  <div className="grid gap-4 text-[#3b260f]" onClick={(event) => event.stopPropagation()}>
+                    <div className="grid gap-5 lg:grid-cols-[20rem_1fr]">
+                      <div
+                        className="mx-auto grid aspect-[4/5] max-h-[22rem] place-items-center overflow-hidden rounded-sm border-2 border-[#b98b37]/80 bg-[#f2ddb1] p-2 text-[#26170a] shadow-xl shadow-[#6c4418]/25"
+                        style={{
+                          backgroundImage: `linear-gradient(180deg, rgba(255,246,217,.10), rgba(0,0,0,.08)), url("${uiAssets.town.portraitFrameSelected}")`,
+                          backgroundSize: "100% 100%",
+                        }}
+                      >
+                        {character.portraitFile ? <img className="h-full w-full rounded object-cover" src={portraitAsset(character.portraitFile)} alt="" /> : null}
+                      </div>
+                      <div>
+                        <h2 className="font-display text-5xl text-[#26170a]">{character.name}</h2>
+                        <p className="mt-1 font-bold text-[#75501f]">{character.profession}</p>
+                        <p className="text-xs font-black uppercase text-[#75501f]">{roleLabel(character)}</p>
+                        <dl className="mt-4 grid grid-cols-3 gap-2">
+                          <StatChip label="Mood" value={moodLabel(relation)} icon={uiAssets.town.moodPositive} tone={relation && relation.mood <= -2 ? "danger" : "parchment"} />
+                          <StatChip label="Trust" value={trustLabel(relation)} icon={uiAssets.town.relationshipBadge} />
+                          <StatChip label="Patience" value={patienceLabel(relation)} icon={uiAssets.town.tradeStyleBadge} tone={relation && relation.patience <= 2 ? "danger" : "parchment"} />
+                        </dl>
+                        <p className="mt-4 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/65 p-4 text-lg leading-snug text-[#3b260f] shadow-inner shadow-[#6c4418]/15">{message}</p>
+                        <div className={`mt-3 rounded-sm border px-3 py-2 text-sm font-black uppercase tracking-wide ${dealReaction.className}`}>
+                          {dealReaction.label}: {dealReaction.text}
+                        </div>
+                        {ultimatumActive(relation) ? <p className="mt-2 rounded-sm border border-[#8d271f]/60 bg-[#fff6d7]/80 p-2 text-sm font-black uppercase tracking-wide text-[#8d271f]">Final offer warning</p> : null}
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      {choices.map((choice) => (
+                        <ResponseLine key={choice.id} onClick={() => chooseDialogue(choice)}>
+                          {choice.label}
+                        </ResponseLine>
+                      ))}
+                    </div>
+                    <div className="flex justify-end">
+                      <Button variant="secondary" onClick={() => setConversationOpen(false)}>Close</Button>
+                    </div>
+                  </div>
+                </ModalShell>
+              ) : null}
             </div>
           ) : <div className="grid min-h-[26rem] place-items-center rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/55 p-8 text-center text-xl text-[#725331]">Choose a customer first.</div>}
         </Panel>

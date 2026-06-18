@@ -5,10 +5,11 @@ import { Panel } from "./Panel";
 
 type ModalShellProps = HTMLAttributes<HTMLDivElement> & {
   title?: ReactNode;
+  panelClassName?: string;
   children: ReactNode;
 };
 
-export function ModalShell({ className, children, title, ...props }: ModalShellProps) {
+export function ModalShell({ className, children, title, panelClassName, ...props }: ModalShellProps) {
   return (
     <div
       className={cn("fixed inset-0 z-50 grid place-items-center bg-black/55 p-4 backdrop-blur-[1px]", className)}
@@ -18,7 +19,7 @@ export function ModalShell({ className, children, title, ...props }: ModalShellP
       }}
       {...props}
     >
-      <Panel className="w-full max-w-3xl" title={title} variant="parchment">
+      <Panel className={cn("w-full max-w-3xl", panelClassName)} title={title} variant="parchment">
         {children}
       </Panel>
     </div>
