@@ -796,7 +796,7 @@ Tasks:
 - Balance travel costs, stallage, theft, guard odds, barter thresholds, and rewards.
 - Add separate audio channels for UI, dialogue, ambient, events, and minigames. Implemented infrastructure; real asset coverage and settings controls remain.
 - Add animation polish for trade, travel, dialogue, events, and inventory actions.
-- Add broken asset scans for portraits, items, backdrops, routes, and UI parts.
+- Add broken asset scans for portraits, items, backdrops, routes, and UI parts. Implemented with `pnpm audit:assets`.
 - Add save import/export compatibility checks.
 - Add full-play manual smoke script.
 - Desktop packaging is explicitly deferred until the user requests it.
@@ -875,7 +875,7 @@ Status: in progress.
 - Add developer balance views for barter, travel, events, market drift, and progression. Journal balance inspector implemented for major economy/progression outliers.
 - Add button-state, keyboard, tooltip, overflow, and error-state review.
 - Add animation polish and full audio asset/channel controls.
-- Add broken-asset scans and missing-content reports.
+- Add broken-asset scans and missing-content reports. Implemented baseline with `pnpm audit:assets`; deeper content reports remain.
 - Split large React bundles and lazy-load major screens where useful.
 - Keep desktop packaging deferred.
 
