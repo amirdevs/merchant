@@ -7,6 +7,7 @@ import type { Character, InventoryEntry, Item, Kingdom, Marketplace, ObtainableI
 import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
 import type { AuctionSession } from "./auction";
 import type { RaceResult } from "./racing";
+import type { MythSession } from "./myth";
 import { expireContracts, type ContractAcceptedDays, type ContractStates } from "./contracts";
 import { canPayCopperToll, inventoryTotals, spendCopperToll } from "./economy";
 import { eventBiases } from "./events";
@@ -52,6 +53,7 @@ export type GameState = {
   selectedItemIndex: number | null;
   dialogueNodes: Record<string, DialogueNodeId>;
   raceResult: RaceResult | null;
+  mythSession: MythSession | null;
   dialogueLog: Array<{
     day: number;
     characterIndex: number;
@@ -156,6 +158,7 @@ export function newGame(): GameState {
     selectedItemIndex: null,
     dialogueNodes: {},
     raceResult: null,
+    mythSession: null,
     dialogueLog: [],
     travelResult: null,
   };

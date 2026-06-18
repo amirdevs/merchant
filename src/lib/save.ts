@@ -39,6 +39,7 @@ function isGameState(value: unknown): value is GameState {
   if (!("selectedItemIndex" in candidate)) candidate.selectedItemIndex = null;
   if (!candidate.dialogueNodes || typeof candidate.dialogueNodes !== "object") candidate.dialogueNodes = {};
   if (!("raceResult" in candidate)) candidate.raceResult = null;
+  if (!("mythSession" in candidate)) candidate.mythSession = null;
   if (!Array.isArray(candidate.dialogueLog)) candidate.dialogueLog = [];
   if (!("travelResult" in candidate)) candidate.travelResult = null;
   if (candidate.travelResult && typeof candidate.travelResult.stallage !== "number") candidate.travelResult.stallage = 0;

@@ -40,6 +40,7 @@ import { coinQuantity, spendCopperToll } from "@/lib/economy";
 import { addInventory } from "@/lib/inventory";
 import type { TravelStrategy } from "@/lib/travel-risk";
 import { runHorseRace as calculateHorseRace } from "@/lib/racing";
+import { playMythCard as resolveMythCard, startMythGame as createMythGame } from "@/lib/myth";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());
@@ -403,6 +404,55 @@ export function useMerchantController(): MerchantController {
     });
   }
 
+  function startMythGame() {
+    update((draft) => {
+      const current = currentMarket(draft);
+      if (!current.event?.name?.toLowerCase().includes("card game") || !eventIsActive(current, draft.day)) {
+        draft.message = "The Myth tables are not active here today.";
+        return;
+      }
+      const entryFee = typeof current.event.data?.entryFeeAmount === "number" ? current.event.data.entryFeeAmount : 0;
+      const prize = typeof current.event.data?.prizeAmount === "number" ? current.event.data.prizeAmount : 0;
+      if (!spendCopperToll(draft.playerInventory, items, entryFee)) {
+        draft.message = `You need ${entryFee} copper for the Myth entry fee.`;
+        return;
+      }
+      const opponent = draft.characters.find((character) => character.marketplaceIndex === current.index && character.mythDeck)
+        || draft.characters.find((character) => character.mythDeck);
+      draft.mythSession = createMythGame({
+        opponentName: opponent?.name || current.event.characterName || "Tournament Rival",
+        opponentArchetype: typeof opponent?.mythDeck === "string" ? opponent.mythDeck : "randomWild",
+        day: draft.day,
+        wager: entryFee,
+        prize,
+      });
+      draft.message = draft.mythSession.message;
+    });
+  }
+
+  function playMythCard(cardId: string) {
+    update((draft) => {
+      const session = draft.mythSession;
+      if (!session) {
+        draft.message = "Start a Myth match first.";
+        return;
+      }
+      const wasActive = session.status === "active";
+      draft.message = resolveMythCard(session, cardId);
+      if (wasActive && session.status === "player-won" && session.prize > 0) {
+        addInventory(draft.playerInventory, itemIndexByName("copper coins"), session.prize);
+        draft.message += ` Tournament prize: ${session.prize} copper.`;
+      }
+    });
+  }
+
+  function closeMythGame() {
+    update((draft) => {
+      draft.mythSession = null;
+      draft.message = "You leave the Myth table.";
+    });
+  }
+
   function clearTradeOffers() {
     playUiSound("pack_closed");
     update((draft) => {
@@ -569,6 +619,9 @@ export function useMerchantController(): MerchantController {
       passAuction,
       closeAuction,
       runHorseRace,
+      startMythGame,
+      playMythCard,
+      closeMythGame,
       selectCharacter,
       nextCustomer,
       movePlayer,

@@ -19,9 +19,12 @@ type EventViewProps = {
   onPassAuction: () => void;
   onCloseAuction: () => void;
   onRunHorseRace: (horseName: string, wager: number) => void;
+  onStartMythGame: () => void;
+  onPlayMythCard: (cardId: string) => void;
+  onCloseMythGame: () => void;
 };
 
-export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAuction, onPassAuction, onCloseAuction, onRunHorseRace }: EventViewProps) {
+export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAuction, onPassAuction, onCloseAuction, onRunHorseRace, onStartMythGame, onPlayMythCard, onCloseMythGame }: EventViewProps) {
   const market = currentMarket(state);
   const active = eventIsActive(market, state.day);
   const session = state.auctionSession;
@@ -30,6 +33,8 @@ export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAu
   const copper = coinQuantity(state.playerInventory, items, "copper coins");
   const isAuction = Boolean(market.event?.name?.toLowerCase().includes("auction"));
   const isRace = Boolean(market.event?.name?.toLowerCase().includes("horse race"));
+  const isMyth = Boolean(market.event?.name?.toLowerCase().includes("card game"));
+  const mythSession = state.mythSession;
   const horses = raceEntries(market);
   const [selectedHorse, setSelectedHorse] = useState(horses[0]?.name || "");
   const [wager, setWager] = useState(10);
@@ -45,6 +50,7 @@ export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAu
               {biases.length ? <p className="font-bold text-[#75501f]">Event demand: {biases.map((bias) => `${bias.tag} +${bias.percent}%`).join(", ")}</p> : null}
               <div className="flex flex-wrap gap-2">
                 {isAuction ? <Button disabled={!active} onClick={onStartAuction}><Gavel size={16} /> Enter Auction</Button> : null}
+                {isMyth && !mythSession ? <Button disabled={!active} onClick={onStartMythGame}>Enter Myth Tournament</Button> : null}
                 <Button variant="secondary" onClick={onAdvanceDay}><CalendarDays size={16} /> Wait One Day</Button>
                 <Button subtle onClick={onBack}>Back</Button>
               </div>
@@ -67,6 +73,32 @@ export function EventView({ state, onBack, onAdvanceDay, onStartAuction, onBidAu
                       <p className="text-sm">Finish: {state.raceResult.finishOrder.join(" / ")}</p>
                     </div>
                   ) : null}
+                </div>
+              ) : null}
+              {isMyth && mythSession ? (
+                <div className="grid gap-3 rounded-sm border-2 border-[#1f5960]/55 bg-[#fff6d7]/65 p-4">
+                  <div className="grid grid-cols-3 gap-2">
+                    <StatChip label="Opponent" value={mythSession.opponentName} />
+                    <StatChip label="Score" value={`${mythSession.playerPoints}-${mythSession.opponentPoints}`} />
+                    <StatChip label="Prize" value={mythSession.prize} icon={uiAssets.hud.goldCoin} />
+                  </div>
+                  <p className="font-bold text-[#3b260f]">{mythSession.message}</p>
+                  {mythSession.status === "active" ? (
+                    <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
+                      {mythSession.playerHand.map((card) => (
+                        <button className="min-h-32 rounded-sm border-2 border-[#9a7138]/65 bg-[#fff8df] p-3 text-center text-[#26170a] shadow hover:-translate-y-0.5" key={card.id} type="button" onClick={() => onPlayMythCard(card.id)}>
+                          <strong className="block font-display text-xl">{card.name}</strong>
+                          <span className="mt-2 block text-xs font-black uppercase text-[#75501f]">{card.suit}</span>
+                          <span className="mt-2 block text-3xl font-black">{card.power}</span>
+                        </button>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="grid gap-2">
+                      {mythSession.rounds.map((round, index) => <p className="rounded-sm border border-[#9a7138]/45 bg-[#fff8df]/70 p-2 text-sm" key={`${round.playerCard.id}-${index}`}>Round {index + 1}: {round.playerCard.name} vs {round.opponentCard.name} / {round.winner}</p>)}
+                      <Button variant="secondary" onClick={onCloseMythGame}>Close Match</Button>
+                    </div>
+                  )}
                 </div>
               ) : null}
             </div>
