@@ -172,13 +172,13 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
       {isGrid ? (
         <div
           className={cn(
-            "flex flex-wrap content-start items-start gap-1 overflow-auto rounded-md border p-1 shadow-inner",
+            "flex flex-wrap content-start items-start rounded-md border shadow-inner",
+            variant === "compact" ? "h-full min-h-0 gap-px overflow-hidden p-px" : "max-h-[67vh] gap-1 overflow-auto p-1",
             darkPanel
               ? "border-[#d0a65a]/35 bg-black/25 shadow-black/35"
               : "border-[#9a7138]/55 bg-[#fff6d7]/35 shadow-[#6c4418]/20",
             dropStatus === "valid" && "ring-2 ring-[#9ce277] ring-offset-2 ring-offset-[#2a1809]",
             dropStatus === "invalid" && "animate-pulse ring-2 ring-[#d5523f] ring-offset-2 ring-offset-[#2a1809]",
-            variant === "compact" ? "max-h-56" : "max-h-[67vh]",
             bodyClassName
           )}
           onDragOver={onDragOver}
@@ -194,7 +194,8 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
               <div
                 key={`${panelTitle}-${entry.itemIndex}`}
                 className={cn(
-                  "group relative grid min-w-0 place-items-center rounded-sm p-1.5 transition hover:-translate-y-0.5 hover:brightness-105",
+                  "group relative grid min-w-0 place-items-center rounded-sm transition hover:-translate-y-0.5 hover:brightness-105",
+                  variant === "compact" ? "p-0" : "p-1.5",
                   physicalClass(item?.size, item?.weight, variant),
                   darkPanel ? "text-[#fff8d8]" : "text-[#201207]"
                 )}
