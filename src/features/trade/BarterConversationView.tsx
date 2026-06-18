@@ -90,10 +90,6 @@ export function BarterConversationView({ state, character, playerOffer, characte
               </div>
               <div
                 className="mt-2 min-h-0 rounded-sm border border-[#9a7138]/60 p-3 text-[#3b260f] shadow-inner shadow-[#6c4418]/20"
-                style={{
-                  backgroundImage: `linear-gradient(180deg, rgba(255,255,255,.16), rgba(0,0,0,.06)), url("${uiAssets.inventory.valueBalancePanel}")`,
-                  backgroundSize: "100% 100%",
-                }}
               >
                 <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 text-center">
                   <div><span className="block text-xs text-[#75501f]">Their Offer Value</span><strong className="font-display text-xl">{money(characterOffer)}</strong></div>
