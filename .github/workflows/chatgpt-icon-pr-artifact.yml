@@ -1,0 +1,41 @@
+name: ChatGPT Icon Artifact PR
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chatgpt-icon-tools
+      - name: Package icon prompts and sheets
+        run: |
+          set -euxo pipefail
+          mkdir -p _out/docs/assets
+          cp -a docs/assets/icon-prompts _out/docs/assets/icon-prompts
+          cp -a docs/assets/icon-sheets _out/docs/assets/icon-sheets
+          find _out/docs/assets/icon-prompts -maxdepth 1 -type f -name 'items-*.json' | sort > _out/prompts.txt
+          find _out/docs/assets/icon-sheets -maxdepth 1 -type f \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.webp' \) | sort > _out/sheets.txt
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('_out')
+          manifest={
+            'prompt_count': len((root/'prompts.txt').read_text().splitlines()),
+            'sheet_count': len((root/'sheets.txt').read_text().splitlines()),
+            'sheets': (root/'sheets.txt').read_text().splitlines(),
+          }
+          (root/'ARTIFACT_MANIFEST.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
+          PY
+          zip -r chatgpt-icon-artifact.zip _out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chatgpt-icon-artifact
+          path: chatgpt-icon-artifact.zip
+          retention-days: 3
