@@ -54,10 +54,12 @@ Steam and online systems are not included.
 
 Project documentation lives under `docs/`.
 
-- Gameplay roadmap and parity: `docs/game/roadmap-and-parity.md`
+- Docs index: `docs/README.md`
+- Current roadmap: `docs/game/roadmap.md`
+- Game logic parity: `docs/game/game-logic-parity.md`
 - UI/UX brief: `docs/game/ui-ux-brief.md`
 - Current UI reference images: `docs/ui_parts/`
-- UI regeneration backlog and prompts: `docs/ui-regeneration/`
-- Older UI wireframes, not a current visual target: `docs/game/core-ui-wireframes.md`
-- Asset pipeline: `docs/assets/asset-pipeline.md`
+- Trading and NPC stock system: `docs/systems/trading-and-stock.md`
+- Profession stock audit: `docs/systems/profession-stock-audit.md`
+- Item icon pipeline: `docs/assets/item-icon-pipeline.md`
 - Technical notes: `docs/development/technical-notes.md`

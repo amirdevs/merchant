@@ -7,7 +7,7 @@ Original reference currently inspected:
 - `D:\game\fun games\merchant of the six kingdoms\Merchant.of.the.Six.Kingdoms.v6.3\.codex-inspect\renderer.js`
 - Previously extracted manifest path is stale: `D:/game/merchant_of_the_six_kingdoms/.orig-work/app/dist/electron/renderer.js`
 
-Use `docs/game/roadmap-and-parity.md` for broad product roadmap. Use this file for implementation-level game mechanics.
+Use `docs/game/roadmap.md` for the broad product roadmap. Use this file for implementation-level game mechanics.
 
 ## Current Logic Implemented
 

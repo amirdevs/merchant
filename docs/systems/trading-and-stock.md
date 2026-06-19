@@ -1,6 +1,8 @@
 # Trading and NPC Stock System
 
-This document describes the current barter loop, customer behavior, NPC stock configuration, restocking, and the intended extension points.
+This document is the canonical spec for the current barter loop, customer behavior, NPC stock configuration, restocking, and intended extension points.
+
+Use `profession-stock-audit.md` as the detailed balance appendix for profession-specific stock problems and recommended archetype work.
 
 ## Core Trading Loop
 
@@ -130,6 +132,49 @@ Current archetypes:
 - royal;
 - traveler;
 - salvage.
+
+## Profession Stock Audit Summary
+
+The current balancing standard is that every trading NPC should generally have four layers of stock:
+
+1. Money reserve appropriate to stock tier.
+2. Profession essentials that define the NPC immediately.
+3. Raw materials or consumables required by that profession.
+4. Small general stock such as food, supplies, storage, or household items.
+
+High-priority profession fixes from the audit:
+
+- Blacksmiths: more ore, ingots, tools, and repair stock; fewer finished weapons and armor as the dominant stock.
+- Fletchers: arrows, bows, wood, and fletching support goods instead of broad weapon catalogs.
+- Miners: ore, coal, rocks, gems, carts, and pack animals instead of blacksmith stock.
+- Barkeeps: drinks, food, barrels, glassware, household goods, and stronger coin reserves.
+- Bards: music, games, books, and art first; traveler stock second.
+- Farmers: bulk produce, grains, seeds, and animals.
+- Butchers: bulk meat and spices as the dominant goods.
+- Toolmakers: tools and materials instead of blacksmith weapons and armor.
+
+Recommended reusable archetypes still worth adding or tuning:
+
+- `alchemy-ingredients`
+- `bard`
+- `barkeep`
+- `butcher`
+- `cook`
+- `farmer`
+- `fletcher`
+- `hunter`
+- `miner`
+- `quartermaster`
+- `toolmaker`
+- `fashion`
+- `military`
+- `curiosities`
+- `containers`
+- `raw-materials`
+- `prepared-food`
+- `heraldry`
+
+The detailed profession-by-profession notes live in `profession-stock-audit.md`.
 
 An archetype can configure:
 
