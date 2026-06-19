@@ -17,7 +17,7 @@ const overlayStyle = {
   dark: "linear-gradient(90deg, rgba(10,6,3,.82), rgba(10,6,3,.38), rgba(10,6,3,.82))",
 };
 
-export function ScreenFrame({ backdrop, title, eyebrow, children, className, contentClassName, overlay = "medium", style, ...props }: ScreenFrameProps) {
+export function ScreenFrame({ backdrop, title, eyebrow: _eyebrow, children, className, contentClassName, overlay = "medium", style, ...props }: ScreenFrameProps) {
   const frameStyle = {
     ...style,
     backgroundImage: `${overlayStyle[overlay]}, url("${backdrop || uiAssets.backplates.marketTown}")`,
@@ -34,14 +34,9 @@ export function ScreenFrame({ backdrop, title, eyebrow, children, className, con
       )}
       style={frameStyle}
       {...props}
+      aria-label={typeof title === "string" ? title : props["aria-label"]}
     >
       <div className="pointer-events-none absolute inset-1 rounded-sm border border-[#f0c56e]/35" />
-      {title || eyebrow ? (
-        <div className="pointer-events-none absolute left-4 top-3 z-20 flex max-w-[calc(100%-2rem)] items-baseline gap-2 truncate text-[#fff1b9] drop-shadow-[0_2px_2px_rgba(0,0,0,.8)]">
-          {title ? <span className="font-display text-lg leading-none">{title}</span> : null}
-          {eyebrow ? <span className="truncate text-[0.58rem] font-black uppercase tracking-[0.22em] text-[#f5cf78]">{eyebrow}</span> : null}
-        </div>
-      ) : null}
       <div className={cn("relative z-10 flex min-h-full flex-col p-3 lg:p-4", contentClassName)}>
         {children}
       </div>
