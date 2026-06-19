@@ -3,7 +3,7 @@ import { cn } from "@/lib/cn";
 import { uiAssets } from "@/lib/ui-assets";
 
 type ScreenFrameProps = HTMLAttributes<HTMLElement> & {
-  backdrop?: string;
+  backdrop?: string | null;
   title?: ReactNode;
   eyebrow?: ReactNode;
   children: ReactNode;
@@ -20,7 +20,7 @@ const overlayStyle = {
 export function ScreenFrame({ backdrop, title, eyebrow: _eyebrow, children, className, contentClassName, overlay = "medium", style, ...props }: ScreenFrameProps) {
   const frameStyle = {
     ...style,
-    backgroundImage: `${overlayStyle[overlay]}, url("${backdrop || uiAssets.backplates.marketTown}")`,
+    backgroundImage: backdrop === null ? overlayStyle[overlay] : `${overlayStyle[overlay]}, url("${backdrop || uiAssets.backplates.marketTown}")`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   } as CSSProperties;

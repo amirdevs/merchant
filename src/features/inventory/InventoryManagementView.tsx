@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
-import { BookOpen, Box, Eye, Grid3X3, PackageCheck, PackageSearch, Search, Shield, ShieldCheck, Star, XCircle } from "lucide-react";
+import { BookOpen, Box, Building2, Eye, Grid3X3, Map, Menu, PackageCheck, PackageSearch, Search, Shield, ShieldCheck, Star, Store, XCircle } from "lucide-react";
 import type { InventoryEntry } from "@/data/types";
+import type { GameView } from "@/app/types";
 import type { GameState } from "@/lib/game";
 import type { MoveAmount } from "@/lib/inventory";
 import { itemIconAsset } from "@/lib/assets";
@@ -22,6 +23,7 @@ type InventoryManagementViewProps = {
   onTogglePlayerConceal: (entry: InventoryEntry) => void;
   onOpenFilter: () => void;
   onOpenItemDetail: (entry: InventoryEntry) => void;
+  onNavigate: (view: GameView) => void;
   onUnavailable: (message: string) => void;
 };
 
@@ -30,7 +32,7 @@ type InventorySort = "Value" | "Name" | "Quantity" | "Weight";
 
 const FILTER_KEY = "merchant-inventory-filters";
 
-export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQuantity, onTogglePlayerProtect, onTogglePlayerConceal, onOpenFilter, onOpenItemDetail, onUnavailable }: InventoryManagementViewProps) {
+export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQuantity, onTogglePlayerProtect, onTogglePlayerConceal, onOpenFilter, onOpenItemDetail, onNavigate, onUnavailable }: InventoryManagementViewProps) {
   const [category, setCategory] = useState<InventoryCategory>(() => {
     const saved = localStorage.getItem(FILTER_KEY);
     return saved ? (JSON.parse(saved).category as InventoryCategory) || "All" : "All";
@@ -129,10 +131,16 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
   }
 
   return (
-    <ScreenFrame title="Inventory Management" eyebrow="Cargo Ledger" backdrop={uiAssets.backplates.warehouseInventory} overlay="dark" contentClassName="p-2 lg:p-3">
+    <ScreenFrame title="Inventory Management" eyebrow="Cargo Ledger" backdrop={null} overlay="dark" contentClassName="p-2 lg:p-3">
       <div className="grid flex-1 gap-3 xl:grid-cols-[140px_minmax(0,1fr)_360px]">
         <aside className="rounded-sm border-2 border-[#b98b37] p-2 shadow-2xl shadow-black/40" style={{ backgroundImage: `linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.34)), url("${uiAssets.nineSlice.textureWoodDark}")` }}>
           <div className="grid gap-3">
+            <InventoryNavButton icon={<Store size={28} />} label="Stall" onClick={() => onNavigate("market")} />
+            <InventoryNavButton icon={<Map size={28} />} label="Map" onClick={() => onNavigate("travel")} />
+            <InventoryNavButton icon={<BookOpen size={28} />} label="Journal" onClick={() => onNavigate("journal")} />
+            <InventoryNavButton icon={<Building2 size={28} />} label="Company" onClick={() => onNavigate("company")} />
+            <InventoryNavButton icon={<Menu size={28} />} label="Menu" onClick={() => onNavigate("system")} />
+            <div className="my-1 h-px bg-[#d7ad55]/45" />
             <InventoryTab active icon={<PackageSearch size={30} />} label="Inventory" />
             <InventoryTab icon={<BookOpen size={30} />} label="Catalogs" />
             <InventoryTab icon={<Shield size={30} />} label="Equipment" />
@@ -216,6 +224,19 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
         </aside>
       </div>
     </ScreenFrame>
+  );
+}
+
+function InventoryNavButton({ icon, label, onClick }: { icon: ReactNode; label: string; onClick: () => void }) {
+  return (
+    <button
+      className="grid min-h-14 place-items-center gap-0.5 rounded-sm border border-[#d7ad55]/80 bg-[#123f45] px-2 py-2 font-display text-base font-bold text-[#fff8d8] shadow-md shadow-black/30 transition hover:-translate-y-0.5 hover:brightness-110 [text-shadow:0_1px_2px_rgba(0,0,0,.85)]"
+      type="button"
+      onClick={onClick}
+    >
+      <span className="text-[#ffd975]">{icon}</span>
+      <span className="leading-none">{label}</span>
+    </button>
   );
 }
 
