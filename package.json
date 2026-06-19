@@ -11,6 +11,8 @@
     "test:barter": "vitest run src/lib/barter.test.ts",
     "audit:data": "node scripts/audit-data.cjs",
     "audit:assets": "node scripts/audit-assets.cjs",
+    "audit:stock": "node scripts/audit-stock.cjs",
+    "review:stock": "node scripts/review-stock.cjs",
     "rewrite:item-catalog": "node scripts/rewrite-item-catalog.cjs",
     "enrich:item-catalog": "node scripts/enrich-item-catalog.cjs",
     "generate:icon-prompts": "node scripts/generate-icon-prompts.cjs",
