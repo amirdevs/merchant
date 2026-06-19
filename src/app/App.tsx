@@ -94,12 +94,17 @@ export function App() {
   const advanceTimeRef = useRef(controller.actions.advanceTime);
 
   const hasSave = useMemo(() => saveSeen || Boolean(loadGame()), [saveSeen, controller.state.day]);
-  const currentCustomerIsHere = controller.character ? controller.people.some((person) => person.index === controller.character?.index) : false;
+  const hasWaitingCustomer = useMemo(() => {
+    const seenToday = controller.state.customerQueueDay === controller.state.day
+      ? new Set(controller.state.seenCharacterIndexes)
+      : new Set<number>();
+    return controller.people.some((person) => !seenToday.has(person.index));
+  }, [controller.people, controller.state.customerQueueDay, controller.state.day, controller.state.seenCharacterIndexes]);
 
   useEffect(() => {
-    if (activeView !== "market" || currentCustomerIsHere || !controller.people.length) return;
-    controller.actions.selectCharacter(controller.people[0]);
-  }, [activeView, currentCustomerIsHere, controller.people, controller.actions]);
+    if (activeView !== "market" || controller.character || !hasWaitingCustomer) return;
+    controller.actions.nextCustomer();
+  }, [activeView, controller.actions, controller.character, hasWaitingCustomer]);
 
   useEffect(() => {
     if (packupSaveDay === null || controller.state.day < packupSaveDay) return;
@@ -205,7 +210,7 @@ export function App() {
       case "barter":
         return <BarterConversationView state={controller.state} character={controller.character} playerOffer={controller.playerOffer} characterOffer={controller.characterOffer} message={controller.state.message} onMovePlayer={controller.actions.movePlayer} onMoveCharacter={controller.actions.moveCharacter} onSetPlayerOfferQuantity={controller.actions.setPlayerOfferQuantity} onSetCharacterOfferQuantity={controller.actions.setCharacterOfferQuantity} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onTrade={controller.actions.trade} onAskPrice={controller.actions.askPrice} onAskOffer={controller.actions.askOffer} onClearOffers={controller.actions.clearTradeOffers} onUndoOfferChange={controller.actions.undoLastOfferChange} onGoodbye={() => { controller.actions.goodbye(); navigate("market"); }} onHelp={() => controller.actions.setHelpOpen(true)} onSpeak={controller.actions.speakWith} />;
       case "inventory":
-        return <InventoryManagementView state={controller.state} playerOffer={controller.playerOffer} onMovePlayer={controller.actions.movePlayer} onSetPlayerOfferQuantity={controller.actions.setPlayerOfferQuantity} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onTogglePlayerConceal={controller.actions.togglePlayerConceal} onOpenFilter={() => navigate("inventory-filter")} onOpenItemDetail={(entry) => { controller.actions.selectItem(entry); navigate("item-detail"); }} onUnavailable={controller.actions.setMessage} />;
+        return <InventoryManagementView state={controller.state} playerOffer={controller.playerOffer} onMovePlayer={controller.actions.movePlayer} onSetPlayerOfferQuantity={controller.actions.setPlayerOfferQuantity} onTogglePlayerProtect={controller.actions.togglePlayerProtect} onTogglePlayerConceal={controller.actions.togglePlayerConceal} onOpenFilter={() => navigate("inventory-filter")} onOpenItemDetail={(entry) => { controller.actions.selectItem(entry); navigate("item-detail"); }} onNavigate={navigate} onUnavailable={controller.actions.setMessage} />;
       case "inventory-filter":
         return <InventoryFilterView state={controller.state} onBack={() => navigate("inventory")} />;
       case "item-detail":

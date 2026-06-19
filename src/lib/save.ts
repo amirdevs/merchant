@@ -35,6 +35,8 @@ function isGameState(value: unknown): value is GameState {
       Array.isArray(candidate.playerInventory)
   )) return false;
   if (typeof candidate.timeOfDayMinutes !== "number") candidate.timeOfDayMinutes = MARKET_OPEN_MINUTES;
+  if (typeof candidate.customerQueueDay !== "number") candidate.customerQueueDay = candidate.day;
+  if (!Array.isArray(candidate.seenCharacterIndexes)) candidate.seenCharacterIndexes = [];
   if (typeof candidate.offersMade !== "number") candidate.offersMade = 0;
   if (!candidate.npcRelations || typeof candidate.npcRelations !== "object") candidate.npcRelations = {};
   if (!candidate.questStates || typeof candidate.questStates !== "object") candidate.questStates = {};

@@ -9,8 +9,9 @@ import type { GameView } from "@/app/types";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
 export function MarketHubView({ state, market, people, onNavigate, onSelectCustomer, onNextCustomer, onPackup }: { state: GameState; market: Marketplace; people: Character[]; onNavigate: (view: GameView) => void; onSelectCustomer: (person: Character) => void; onNextCustomer: () => void; onPackup: () => void; onUnavailable: (message: string) => void }) {
-  const currentCustomer = people.find((person) => person.index === state.selectedCharacterIndex) || people[0];
-  const waitingPeople = people.filter((person) => person.index !== currentCustomer?.index).slice(0, 3);
+  const currentCustomer = people.find((person) => person.index === state.selectedCharacterIndex) || null;
+  const seenToday = state.customerQueueDay === state.day ? new Set(state.seenCharacterIndexes || []) : new Set<number>();
+  const waitingPeople = people.filter((person) => person.index !== currentCustomer?.index && !seenToday.has(person.index)).slice(0, 3);
   const eventActive = eventIsActive(market, state.day);
   const activeBiases = eventBiases(market, state.day);
 
@@ -79,7 +80,16 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
                 ) : null}
               </div>
             ) : (
-              <div className="rounded-sm border border-[#9a7138]/45 bg-[#fff6d7]/55 p-3 text-sm font-bold text-[#5b3b17]">No customers are at the stall right now.</div>
+              <div className="grid gap-3">
+                <div className="rounded-sm border border-[#9a7138]/45 bg-[#fff6d7]/55 p-3 text-sm font-bold text-[#5b3b17]">
+                  {waitingPeople.length ? "The counter is clear. Call the next customer when you are ready." : "No more customers are waiting at the stall today."}
+                </div>
+                {waitingPeople.length ? (
+                  <Button size="lg" variant="secondary" onClick={onNextCustomer}>
+                    <UserRoundPlus size={18} /> Next Customer
+                  </Button>
+                ) : null}
+              </div>
             )}
           </Panel>
         </div>
