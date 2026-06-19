@@ -1,0 +1,64 @@
+name: ChatGPT Icon Sheet Artifact
+
+on:
+  push:
+    branches:
+      - chatgpt-icon-tools
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  OUT_DIR: _chatgpt-icon-artifact
+
+jobs:
+  package-icon-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: chatgpt-icon-tools
+
+      - name: Show target files
+        run: |
+          set -euxo pipefail
+          echo "Prompt configs:"
+          find docs/assets/icon-prompts -maxdepth 1 -type f -name 'items-*.json' | sort | wc -l
+          echo "Icon sheets:"
+          find docs/assets/icon-sheets -maxdepth 1 -type f \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.webp' \) | sort | wc -l
+          find docs/assets/icon-sheets -maxdepth 1 -type f \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.webp' \) | sort > icon-sheet-file-list.txt
+          cat icon-sheet-file-list.txt
+
+      - name: Package prompts and full sheets
+        run: |
+          set -euxo pipefail
+          rm -rf "$OUT_DIR"
+          mkdir -p "$OUT_DIR/docs/assets"
+          cp -a docs/assets/icon-prompts "$OUT_DIR/docs/assets/icon-prompts"
+          cp -a docs/assets/icon-sheets "$OUT_DIR/docs/assets/icon-sheets"
+          cp icon-sheet-file-list.txt "$OUT_DIR/icon-sheet-file-list.txt"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path('_chatgpt-icon-artifact')
+          prompts = sorted((root/'docs/assets/icon-prompts').glob('items-*.json'))
+          sheets = sorted([p for p in (root/'docs/assets/icon-sheets').iterdir() if p.suffix.lower() in {'.png','.jpg','.jpeg','.webp'}])
+          manifest = {
+              'prompt_count': len(prompts),
+              'sheet_count': len(sheets),
+              'prompts': [p.name for p in prompts],
+              'sheets': [p.name for p in sheets],
+          }
+          (root/'ARTIFACT_MANIFEST.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
+          PY
+          zip -r chatgpt-icon-artifact.zip "$OUT_DIR"
+
+      - name: Upload icon asset artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: chatgpt-icon-artifact
+          path: chatgpt-icon-artifact.zip
+          if-no-files-found: error
+          retention-days: 3
