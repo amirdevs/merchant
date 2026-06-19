@@ -1,0 +1,30 @@
+name: ChatGPT Icon Artifact Sparse
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chatgpt-icon-tools
+          sparse-checkout: |
+            docs/assets/icon-prompts
+            docs/assets/icon-sheets
+          fetch-depth: 1
+      - run: |
+          mkdir -p _out/docs/assets
+          cp -a docs/assets/icon-prompts _out/docs/assets/icon-prompts
+          cp -a docs/assets/icon-sheets _out/docs/assets/icon-sheets
+          zip -r chatgpt-icon-artifact.zip _out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chatgpt-icon-artifact-sparse
+          path: chatgpt-icon-artifact.zip
+          retention-days: 3
