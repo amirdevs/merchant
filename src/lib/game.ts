@@ -34,6 +34,9 @@ import { ensureRelation, type NpcRelations, reactionText, startingPatience, ulti
 import { deleteGameSave, importGame, loadGame, saveGame, serializeGame } from "./save";
 import { applyTravelRisks, routeRiskPreview, type TravelStrategy } from "./travel-risk";
 import { expireQuests, questOfferCanComplete, questReward } from "./quests";
+import { stockArchetypes } from "../data/stock/archetypes";
+import type { StockArchetype, WeightedArchetype } from "../data/stock/types";
+import { resolvedStockSettings } from "./stock-profiles";
 
 export const items = itemsJson as Item[];
 export const kingdoms = kingdomsJson as Kingdom[];
@@ -44,6 +47,11 @@ export const MARKET_OPEN_MINUTES = 8 * 60;
 export const MARKET_CLOSE_MINUTES = 20 * 60;
 
 const baseCharacters = charactersJson as Character[];
+const stockItemRecords = items.map((item) => ({
+  item,
+  name: item.name.toLowerCase().replace(/[_-]+/g, " ").trim(),
+  tags: item.tags.map((tag) => tag.toLowerCase().replace(/[_-]+/g, " ").trim()),
+}));
 let modsLoaded = false;
 
 export type GameState = {
@@ -51,6 +59,8 @@ export type GameState = {
   day: number;
   timeOfDayMinutes: number;
   selectedCharacterIndex: number | null;
+  customerQueueDay: number;
+  seenCharacterIndexes: number[];
   characters: Character[];
   playerInventory: InventoryEntry[];
   message: string;
@@ -127,43 +137,165 @@ export function benfordsQuantity(min: number, max: number, roll: () => number) {
 }
 
 function itemMatchesPool(item: Item, pool: ObtainableItem) {
-  const tag = pool.tag.toLowerCase();
-  return item.name.toLowerCase() === tag || item.tags.some((itemTag) => itemTag.toLowerCase() === tag);
+  const tag = normalizeStockToken(pool.tag);
+  return normalizeStockToken(item.name) === tag || item.tags.some((itemTag) => normalizeStockToken(itemTag) === tag);
 }
 
-function quantityFor(pool: ObtainableItem, item: Item, roll: () => number) {
+function quantityFor(pool: ObtainableItem, item: Item, roll: () => number, multiplier = 1) {
   const min = Math.max(0, Math.floor(pool.quantityMin || 0));
   const max = Math.max(min, Math.floor(pool.quantityMax || 1));
   let quantity = benfordsQuantity(min, max, roll);
   if (quantity <= 0 && max > 0) quantity = 1;
   if (item.loafValue > 1000) quantity = Math.min(quantity, 1);
-  return Math.max(0, quantity);
+  return Math.max(0, Math.round(quantity * multiplier));
 }
 
-export function generateInventory(character: Character) {
-  const roll = seeded((character.index + 1) * 7919);
-  const inventory: InventoryEntry[] = [];
+function normalizeStockToken(value: string) {
+  return value.toLowerCase().replace(/[_-]+/g, " ").trim();
+}
+
+function weightedArchetypeTags(archetypes: WeightedArchetype[]) {
+  const weights = new Map<string, number>();
+  const configs: StockArchetype[] = [];
+  for (const entry of archetypes) {
+    const config = stockArchetypes[entry.id];
+    configs.push(config);
+    for (const [tag, weight] of Object.entries(config.weightedTags)) {
+      const normalized = normalizeStockToken(tag);
+      weights.set(normalized, (weights.get(normalized) || 0) + weight * (entry.weight ?? 1));
+    }
+  }
+  return { weights, configs };
+}
+
+function itemStockWeight(record: (typeof stockItemRecords)[number], weights: Map<string, number>) {
+  let weight = weights.get(record.name) || 0;
+  for (const tag of record.tags) weight += weights.get(tag) || 0;
+  return weight;
+}
+
+function weightedPick<T>(entries: Array<{ value: T; weight: number }>, roll: () => number) {
+  const total = entries.reduce((sum, entry) => sum + Math.max(0, entry.weight), 0);
+  if (total <= 0) return null;
+  let target = roll() * total;
+  for (const entry of entries) {
+    target -= Math.max(0, entry.weight);
+    if (target <= 0) return entry.value;
+  }
+  return entries[entries.length - 1]?.value ?? null;
+}
+
+function quantityPoolFor(item: Item, pools: ObtainableItem[]) {
+  return pools.find((pool) => itemMatchesPool(item, pool)) || {
+    tag: item.tags[0] || item.name,
+    quantityMin: item.loafValue >= 1000 ? 1 : item.loafValue >= 100 ? 1 : 2,
+    quantityMax: item.loafValue >= 1000 ? 1 : item.loafValue >= 100 ? 4 : 12,
+  };
+}
+
+export function generateInventory(character: Character, day = 1) {
+  const settings = resolvedStockSettings(character, day);
+  if (settings.maxStacks <= 0) return [];
+  const roll = seeded((character.index + 1) * 7919 + Math.max(1, day) * 104729 + (settings.profile.stockSeed || 0));
   const professionPools = character.professionSlug ? professions[character.professionSlug]?.obtainableItems || [] : [];
-  const pools = [...(character.obtainableItems || []), ...professionPools].slice(0, 10);
-  for (const pool of pools) {
-    const matches = items.filter((item) => {
-      if (item.unique) return false;
-      if (item.loafValue > character.maxObtainValue) return false;
-      if (character.excludedObtainItems?.some((tag) => item.tags.includes(tag) || item.name === tag)) return false;
-      return itemMatchesPool(item, pool);
-    });
-    if (!matches.length) continue;
-    const item = matches[Math.floor(roll() * matches.length)];
-    addInventory(inventory, item.index, quantityFor(pool, item, roll));
-    if (inventory.length >= 12) break;
+  const pools = [...(character.obtainableItems || []), ...professionPools].slice(0, 16);
+  const { weights, configs } = weightedArchetypeTags(settings.profile.archetypes);
+  for (const pool of pools) weights.set(normalizeStockToken(pool.tag), (weights.get(normalizeStockToken(pool.tag)) || 0) + 4);
+
+  const forbidden = new Set([
+    ...(character.excludedObtainItems || []),
+    ...(settings.profile.forbiddenTags || []),
+    ...configs.flatMap((config) => config.forbiddenTags || []),
+  ].map(normalizeStockToken));
+  const minValue = Math.max(settings.profile.minValue || 0, ...configs.map((config) => config.minValue || 0));
+  const configuredMax = Math.min(...[settings.profile.maxValue, ...configs.map((config) => config.maxValue)].filter((value): value is number => typeof value === "number"));
+  const maxValue = Math.min(character.maxObtainValue, Number.isFinite(configuredMax) ? configuredMax : character.maxObtainValue);
+  const targetStacks = Math.min(items.length, settings.minStacks + Math.floor(roll() * (settings.maxStacks - settings.minStacks + 1)));
+  const rarityBias = Math.max(0, ...configs.map((config) => config.rarityBias || 0));
+  const localityBias = Math.max(0, ...configs.map((config) => config.localityBias || 0));
+  const marketKingdomIndex = marketplaces[character.marketplaceIndex]?.kingdomIndex;
+  const candidates = stockItemRecords.flatMap((record) => {
+    const { item } = record;
+    if (item.unique || item.loafValue < minValue || item.loafValue > maxValue) return [];
+    if (forbidden.has(record.name) || record.tags.some((tag) => forbidden.has(tag))) return [];
+    const baseWeight = itemStockWeight(record, weights);
+    if (baseWeight <= 0) return [];
+    const localBonus = item.kingdomIndex === marketKingdomIndex ? 1 + localityBias : 1;
+    const rarityPenalty = item.rarity && item.rarity > 2 && roll() > settings.tier.rareItemChance + rarityBias ? 0.15 : 1;
+    return [{ item, record, weight: baseWeight * localBonus * rarityPenalty }];
+  });
+  const inventory: InventoryEntry[] = [];
+  const guaranteedTags = [
+    ...(settings.profile.guaranteedTags || []),
+    ...configs.flatMap((config) => config.guaranteedTags || []),
+  ].map(normalizeStockToken);
+
+  for (const guaranteedTag of guaranteedTags) {
+    if (inventory.length >= targetStacks) break;
+    const guaranteed = candidates.filter((candidate) =>
+      candidate.record.name === guaranteedTag ||
+      candidate.record.tags.some((tag) => tag === guaranteedTag)
+    );
+    const selected = guaranteed[Math.floor(roll() * guaranteed.length)];
+    if (!selected) continue;
+    candidates.splice(candidates.findIndex((candidate) => candidate.item.index === selected.item.index), 1);
+    const pool = quantityPoolFor(selected.item, pools);
+    const multiplier = selected.record.tags.includes("coins")
+      ? settings.coinMultiplier
+      : settings.quantityMultiplier;
+    addInventory(inventory, selected.item.index, quantityFor(pool, selected.item, roll, multiplier));
+  }
+
+  while (inventory.length < targetStacks && candidates.length) {
+    const selected = weightedPick(candidates.map((candidate) => ({ value: candidate, weight: candidate.weight })), roll);
+    if (!selected) break;
+    candidates.splice(candidates.findIndex((candidate) => candidate.item.index === selected.item.index), 1);
+    const pool = quantityPoolFor(selected.item, pools);
+    const multiplier = selected.record.tags.includes("coins")
+      ? settings.coinMultiplier
+      : settings.quantityMultiplier;
+    addInventory(inventory, selected.item.index, quantityFor(pool, selected.item, roll, multiplier));
   }
   return inventory;
+}
+
+function shouldRestock(character: Character, day: number, reason: "day" | "arrival") {
+  const settings = resolvedStockSettings(character, day);
+  const lastDay = character.stockLastRestockDay || 1;
+  if (settings.restockMode === "never") return false;
+  if (settings.restockMode === "on-arrival") return reason === "arrival";
+  if (settings.restockMode === "weekly") return day - lastDay >= 7;
+  if (settings.restockMode === "interval") return day - lastDay >= Math.max(1, settings.restockDays);
+  return day > lastDay;
+}
+
+function mergeRestockedInventory(current: InventoryEntry[], generated: InventoryEntry[], rate: number) {
+  if (rate >= 1) return generated;
+  const merged: InventoryEntry[] = [];
+  const indexes = new Set([...current.map((entry) => entry.itemIndex), ...generated.map((entry) => entry.itemIndex)]);
+  for (const itemIndex of indexes) {
+    const oldQuantity = current.find((entry) => entry.itemIndex === itemIndex)?.quantity || 0;
+    const newQuantity = generated.find((entry) => entry.itemIndex === itemIndex)?.quantity || 0;
+    const quantity = Math.max(0, Math.round(oldQuantity * (1 - rate) + newQuantity * rate));
+    if (quantity > 0) merged.push({ itemIndex, quantity, offerQuantity: 0 });
+  }
+  return merged;
+}
+
+export function restockNpcInventories(state: Pick<GameState, "characters" | "day">, reason: "day" | "arrival" = "day") {
+  for (const character of state.characters) {
+    if (!character.isActive || character.isPlunderer || !shouldRestock(character, state.day, reason)) continue;
+    const settings = resolvedStockSettings(character, state.day);
+    character.inventory = mergeRestockedInventory(character.inventory, generateInventory(character, state.day), settings.restockRate);
+    character.stockLastRestockDay = state.day;
+  }
 }
 
 export function newGame(): GameState {
   const characters = clone(baseCharacters).map((character) => ({
     ...character,
-    inventory: generateInventory(character),
+    inventory: generateInventory(character, 1),
+    stockLastRestockDay: 1,
   }));
 
   const playerInventory: InventoryEntry[] = [];
@@ -178,6 +310,8 @@ export function newGame(): GameState {
     day: 1,
     timeOfDayMinutes: MARKET_OPEN_MINUTES,
     selectedCharacterIndex: null,
+    customerQueueDay: 1,
+    seenCharacterIndexes: [],
     characters,
     playerInventory,
     message: "A new ledger begins in Boone.",
@@ -421,6 +555,7 @@ export function completeTrade(state: GameState) {
       clearOffers(next.playerInventory);
       clearOffers(nextCharacter.inventory);
       next.offersMade += 1;
+      next.seenCharacterIndexes = Array.from(new Set([...(next.seenCharacterIndexes || []), nextCharacter.index]));
       next.selectedCharacterIndex = null;
       next.message = `${character.name} has lost patience and leaves the table.`;
       return next;
@@ -524,6 +659,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
   spendCopperToll(state.playerInventory, items, totalCost);
   state.marketIndex = toMarketIndex;
   state.day += route.travelDays || 1;
+  restockNpcInventories(state, "arrival");
   state.timeOfDayMinutes = normalizeTimeOfDay(MARKET_OPEN_MINUTES + Math.min(8 * 60, (route.travelDays || 1) * 90));
   coolLawHeat(state.law, route.travelDays || 1);
   advanceMarketSimulation(state.marketSimulation, state.day);
@@ -545,6 +681,8 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
   const failurePenalty = expiredContracts.reduce((total, contract) => total + contract.failurePenaltyCopper, 0);
   if (failurePenalty > 0) spendCopperToll(state.playerInventory, items, failurePenalty);
   state.selectedCharacterIndex = null;
+  state.customerQueueDay = state.day;
+  state.seenCharacterIndexes = [];
   const riskEvents = applyTravelRisks({
     inventory: state.playerInventory,
     items,

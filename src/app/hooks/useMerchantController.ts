@@ -22,10 +22,12 @@ import {
   saveGame,
   selectedCharacter,
   serializeGame,
+  restockNpcInventories,
   travelToMarket,
   advanceGameClock,
   type GameState,
 } from "@/lib/game";
+import { markCustomerSeen, resetCustomerQueueForDay } from "@/lib/npc-flow";
 import { setOfferQuantity, type MoveAmount } from "@/lib/inventory";
 import { expireQuests, questCanComplete, questReward } from "@/lib/quests";
 import { customerIntro } from "@/lib/dialogue";
@@ -150,9 +152,14 @@ export function useMerchantController(): MerchantController {
   function nextCustomer() {
     playUiSound("menu_click");
     update((draft) => {
+      markCustomerSeen(draft, draft.selectedCharacterIndex);
       advanceGameClock(draft, 15);
       const nextIndex = nextCustomerIndex(draft);
-      if (nextIndex === null) return;
+      if (nextIndex === null) {
+        draft.selectedCharacterIndex = null;
+        draft.message = "No more customers are waiting at your stall today. Pack up or check your ledgers.";
+        return;
+      }
       const next = draft.characters[nextIndex];
       const seeded = seedBlackMarketStock(draft, next);
       draft.selectedCharacterIndex = next.index;
@@ -342,6 +349,9 @@ export function useMerchantController(): MerchantController {
     update((draft) => {
       draft.day += 1;
       draft.timeOfDayMinutes = 8 * 60;
+      restockNpcInventories(draft);
+      resetCustomerQueueForDay(draft);
+      draft.selectedCharacterIndex = null;
       advanceMarketSimulation(draft.marketSimulation, draft.day);
       const rivalActivities = advanceRivals({ rivals: draft.rivals, simulation: draft.marketSimulation, markets: marketplaces, items, day: draft.day });
       const expiredContracts = expireContracts({
@@ -376,6 +386,9 @@ export function useMerchantController(): MerchantController {
       const beforeDay = draft.day;
       const daysElapsed = advanceGameClock(draft, minutes);
       if (daysElapsed > 0) {
+        restockNpcInventories(draft);
+        resetCustomerQueueForDay(draft);
+        draft.selectedCharacterIndex = null;
         advanceMarketSimulation(draft.marketSimulation, draft.day);
         settleShipments(draft.company, draft.day);
         draft.message = beforeDay === draft.day ? draft.message : `The hours pass. It is now day ${draft.day}.`;
@@ -800,9 +813,10 @@ export function useMerchantController(): MerchantController {
   function goodbye() {
     playUiSound("menu_click");
     update((draft) => {
+      const current = selectedCharacter(draft);
+      markCustomerSeen(draft, current?.index);
       advanceGameClock(draft, 5);
       clearOffers(draft.playerInventory);
-      const current = selectedCharacter(draft);
       if (current) clearOffers(current.inventory);
       draft.selectedCharacterIndex = null;
       draft.offersMade = 0;

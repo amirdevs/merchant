@@ -62,7 +62,9 @@ export type Character = {
     kingdomIndex: number | null;
   } | null;
   marketplaceIndex: number;
+  dayAvailable?: number | null;
   marketplaces?: number[];
+  stockLastRestockDay?: number;
   maxObtainValue: number;
   frugalPercent: number;
   hagglePercent?: number;

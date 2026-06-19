@@ -1,0 +1,88 @@
+export type StockTierId =
+  | "empty"
+  | "pocket"
+  | "sparse"
+  | "light"
+  | "modest"
+  | "standard"
+  | "stocked"
+  | "large"
+  | "wholesale"
+  | "grand";
+
+export type StockArchetypeId =
+  | "general"
+  | "food"
+  | "baker"
+  | "fisher"
+  | "livestock"
+  | "blacksmith"
+  | "weapons"
+  | "armor"
+  | "fabrics"
+  | "leather"
+  | "carpenter"
+  | "tools"
+  | "alchemist"
+  | "healer"
+  | "magic"
+  | "books"
+  | "art"
+  | "jewelry"
+  | "luxury"
+  | "maritime"
+  | "contraband"
+  | "religious"
+  | "royal"
+  | "traveler"
+  | "salvage";
+
+export type StockRestockMode = "daily" | "interval" | "weekly" | "on-arrival" | "never";
+
+export type StockTier = {
+  minStacks: number;
+  maxStacks: number;
+  quantityMultiplier: number;
+  coinMultiplier: number;
+  rareItemChance: number;
+  restockMode: StockRestockMode;
+  restockDays: number;
+  restockRate: number;
+  progressionScaling: number;
+};
+
+export type StockArchetype = {
+  weightedTags: Record<string, number>;
+  forbiddenTags?: string[];
+  minValue?: number;
+  maxValue?: number;
+  localityBias?: number;
+  rarityBias?: number;
+  guaranteedTags?: string[];
+};
+
+export type WeightedArchetype = {
+  id: StockArchetypeId;
+  weight?: number;
+};
+
+export type StockProfile = {
+  tier: StockTierId;
+  archetypes: WeightedArchetype[];
+  stackModifier?: number;
+  quantityMultiplier?: number;
+  coinMultiplier?: number;
+  minValue?: number;
+  maxValue?: number;
+  forbiddenTags?: string[];
+  guaranteedTags?: string[];
+  restockMode?: StockRestockMode;
+  restockDays?: number;
+  restockRate?: number;
+  progressionScaling?: number;
+  stockSeed?: number;
+};
+
+export type StockProfileOverride = Partial<Omit<StockProfile, "archetypes">> & {
+  archetypes?: WeightedArchetype[];
+};
