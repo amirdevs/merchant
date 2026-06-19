@@ -15,8 +15,13 @@ function slugify(value) {
 }
 
 function hasAny(item, tokens) {
-  const haystack = [item.name, ...(item.tags || [])].map(normalize);
-  return tokens.some((token) => haystack.some((value) => value === token || value.includes(token)));
+  const name = normalize(item.name);
+  const tags = (item.tags || []).map(normalize);
+  return tokens.some((token) => {
+    const normalized = normalize(token);
+    if (tags.includes(normalized)) return true;
+    return new RegExp(`(^|\\b)${normalized.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(\\b|$)`).test(name);
+  });
 }
 
 function firstMatchingTag(item, tokens) {
@@ -25,38 +30,38 @@ function firstMatchingTag(item, tokens) {
 
 const familyRules = [
   ["currency", ["coins", "gold coins", "silver coins", "copper coins"]],
+  ["weapon", ["weapons", "swords", "axes", "spears", "bows", "daggers", "maces", "flails", "clubs", "crossbows", "arrows", "sword stones", "war hammers"]],
+  ["armor", ["armor", "platemail", "shields", "helmets", "guantlets", "gauntlets", "leggings", "dragon armor", "scale mail", "scalemail", "mail"]],
+  ["luxury", ["jewlery", "jewelry", "rings", "necklaces", "amulets", "crowns"]],
   ["document", ["deeds", "company stake", "contract", "license", "map", "maps"]],
   ["book", ["books", "history", "educational", "stories", "compendiums"]],
-  ["food", ["food", "bread", "cheese", "dairy"]],
-  ["drink", ["drinks", "wine", "beer", "ale", "tea"]],
   ["spice", ["spices", "salt", "sugar"]],
   ["grain", ["grains", "seeds"]],
-  ["produce", ["fruit", "veggies", "plants", "flowers", "mushrooms", "leafs", "botanicals"]],
+  ["produce", ["fruit", "fruits", "veggies", "plants", "flowers", "mushrooms", "leafs", "leaves", "botanicals"]],
   ["meat", ["meat"]],
-  ["seafood", ["seafood", "aquatics"]],
+  ["seafood", ["seafood", "fish"]],
+  ["drink", ["drinks", "wine", "beer", "ale", "tea"]],
+  ["alchemy", ["alchemy", "potions", "solutions", "aromatics", "remedies", "poisons"]],
+  ["magic", ["magic", "wands", "runes", "glyph stones", "scepters", "alphabet stones", "staffs"]],
+  ["religion", ["religious", "religion", "candles"]],
+  ["maritime", ["maritime", "seafood", "aquatics"]],
+  ["travel", ["travel", "pack_animals", "packhorses"]],
+  ["food", ["food", "bread", "cheese", "dairy", "desserts"]],
   ["livestock", ["livestock", "packhorses"]],
   ["animal_goods", ["animals", "beasts", "dragon hides", "dragon scales", "bones", "feathers"]],
   ["wood", ["wood", "doors"]],
-  ["stone", ["rocks", "statues"]],
+  ["stone", ["rocks", "stone"]],
   ["ore", ["ore"]],
   ["metal", ["ingots", "iron", "copper", "silver", "gold"]],
   ["gem", ["gems", "crystals"]],
   ["textile", ["fabrics", "linen", "silk", "thread", "clothes", "robes", "cloaks", "hats", "shoes", "gloves"]],
   ["leather", ["leather", "whips"]],
-  ["tool", ["tools", "supplies", "keys"]],
-  ["weapon", ["weapons", "swords", "axes", "spears", "bows", "daggers", "maces", "flails", "clubs", "crossbows", "arrows", "sword stones"]],
-  ["armor", ["armor", "platemail", "shields", "helmets", "guantlets", "leggings", "dragon armor"]],
-  ["alchemy", ["alchemy", "potions", "solutions", "aromatics", "remedies", "poisons"]],
-  ["magic", ["magic", "wands", "runes", "glyph stones", "scepters", "alphabet stones", "staffs"]],
-  ["religion", ["religious", "candles"]],
-  ["art", ["paintings", "paints", "pottery", "glass", "coat of arms"]],
+  ["tool", ["tools", "keys"]],
+  ["art", ["paintings", "paints", "pottery", "glass", "coat of arms", "statues"]],
   ["music", ["music"]],
   ["game", ["games", "cards"]],
   ["household", ["household", "furniture", "tableware"]],
   ["container", ["storage", "chests"]],
-  ["travel", ["supplies", "packhorses"]],
-  ["maritime", ["seafood", "aquatics"]],
-  ["luxury", ["jewlery", "rings", "necklaces", "amulets", "crowns"]],
   ["contraband", ["poisons", "masks"]],
   ["curio", ["myth"]],
 ];

@@ -1,0 +1,446 @@
+{
+  "batch": {
+    "firstGlobalSlot": 5001,
+    "lastGlobalSlot": 5006,
+    "slotCount": 6,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. consecrated salt (many)\n2. painted prayer bead (one)\n3. small brass idol (one)\n4. festival wreath (one)\n5. memorial card (one)\n6. silvered prayer pin (one)",
+  "order": [
+    "1. consecrated salt (many)",
+    "2. painted prayer bead (one)",
+    "3. small brass idol (one)",
+    "4. festival wreath (one)",
+    "5. memorial card (one)",
+    "6. silvered prayer pin (one)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 5001,
+      "itemIndex": 2200,
+      "itemNumber": 2201,
+      "itemName": "consecrated salt",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "religion",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "religion",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/consecrated_salt.png",
+      "output": "public/game-assets/items/spice/consecrated_salt_many.png",
+      "prompt": "Create a very abundant quantity of consecrated salt, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: consecrated salt. Family: spice. Subfamily: religion. Trade role: ingredient. Bulk profile: sack. Category cues: spice, religion, ingredient, common, sack, preserved, religion, spice, ingredient, crafted, common, dry, bulk_trade, plant. It should read clearly in a small inventory tile.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 5002,
+      "itemIndex": 2201,
+      "itemNumber": 2202,
+      "itemName": "painted prayer bead",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "religion",
+        "luxury"
+      ],
+      "family": "religion",
+      "subfamily": "luxury",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "blessed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "blessed"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "religion/painted_prayer_bead.png",
+      "output": "public/game-assets/items/religion/painted_prayer_bead.png",
+      "prompt": "Create exactly one clear painted prayer bead, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: painted prayer bead. Family: religion. Subfamily: luxury. Trade role: luxury. Bulk profile: single. Category cues: religion, luxury, luxury, common, single, none, religion, luxury, blessed, common, blessed, bulk_trade, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 5003,
+      "itemIndex": 2202,
+      "itemNumber": 2203,
+      "itemName": "small brass idol",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "religion",
+        "art",
+        "luxury"
+      ],
+      "family": "religion",
+      "subfamily": "art",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "blessed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "blessed"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "religion/small_brass_idol.png",
+      "output": "public/game-assets/items/religion/small_brass_idol.png",
+      "prompt": "Create exactly one clear small brass idol, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: small brass idol. Family: religion. Subfamily: art. Trade role: luxury. Bulk profile: single. Category cues: religion, art, luxury, common, single, none, religion, art, luxury, blessed, common, blessed, bulk_trade, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 5004,
+      "itemIndex": 2203,
+      "itemNumber": 2204,
+      "itemName": "festival wreath",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "religion",
+        "produce",
+        "luxury"
+      ],
+      "family": "religion",
+      "subfamily": "produce",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "blessed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "blessed"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "religion/festival_wreath.png",
+      "output": "public/game-assets/items/religion/festival_wreath.png",
+      "prompt": "Create exactly one clear festival wreath, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: festival wreath. Family: religion. Subfamily: produce. Trade role: luxury. Bulk profile: single. Category cues: religion, produce, luxury, common, single, none, religion, produce, luxury, blessed, common, blessed, bulk_trade, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 5005,
+      "itemIndex": 2204,
+      "itemNumber": 2205,
+      "itemName": "memorial card",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "religion",
+        "document",
+        "luxury"
+      ],
+      "family": "religion",
+      "subfamily": "document",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "blessed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "blessed"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "religion/memorial_card.png",
+      "output": "public/game-assets/items/religion/memorial_card.png",
+      "prompt": "Create exactly one clear memorial card, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: memorial card. Family: religion. Subfamily: document. Trade role: luxury. Bulk profile: single. Category cues: religion, document, luxury, common, single, none, religion, document, luxury, blessed, common, blessed, bulk_trade, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 5006,
+      "itemIndex": 2205,
+      "itemNumber": 2206,
+      "itemName": "silvered prayer pin",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "religion",
+        "luxury"
+      ],
+      "family": "religion",
+      "subfamily": "luxury",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "blessed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "blessed"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "religion/silvered_prayer_pin.png",
+      "output": "public/game-assets/items/religion/silvered_prayer_pin.png",
+      "prompt": "Create exactly one clear silvered prayer pin, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: silvered prayer pin. Family: religion. Subfamily: luxury. Trade role: luxury. Bulk profile: single. Category cues: religion, luxury, luxury, common, single, none, religion, luxury, blessed, common, blessed, bulk_trade, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    }
+  ]
+}

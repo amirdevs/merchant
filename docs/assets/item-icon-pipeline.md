@@ -20,12 +20,12 @@ Run `pnpm audit:data` after changing data or prompt-generation scripts.
 ## Current Prompt Batch Shape
 
 - Source data: `src/data/generated/items.json`.
-- Current item count: 1,972.
-- Current output slots: 4,678 after `one`, `few`, and `many` variants.
-- Config count: 94 normal JSON files.
+- Current item count: 2,206.
+- Current output slots: 5,006 after `one`, `few`, and `many` variants.
+- Config count: 101 normal JSON files.
 - Normal sheet layout: strict 10 columns by 5 rows.
 - Normal sheet size: 50 image slots.
-- Final sheet contains 28 slots.
+- Final sheet contains 6 slots.
 - Read order: left to right, top to bottom.
 - Variant decisions come from item `forms`, `family`, `tradeRole`, `bulkProfile`, and `categoryAxes` metadata.
 
