@@ -1,5 +1,5 @@
-import { useRef, useState, type DragEvent, type KeyboardEvent, type MouseEvent } from "react";
-import { Lock } from "lucide-react";
+import { useMemo, useRef, useState, type DragEvent, type KeyboardEvent, type MouseEvent } from "react";
+import { ArrowDownAZ, Lock, Search } from "lucide-react";
 import type { InventoryEntry, Item } from "@/data/types";
 import { itemIconAsset } from "@/lib/assets";
 import { items, kingdoms } from "@/lib/game";
@@ -10,6 +10,7 @@ import { cn } from "@/lib/cn";
 import { Button, ItemSlot, LedgerRow, ModalShell, Panel, Portal, StatChip } from "@/components/ui";
 
 type InventoryPanelMode = "stock" | "offer";
+type InventoryPanelSort = "merchant" | "name" | "category" | "quantity" | "value" | "total-value" | "rarity" | "size" | "weight";
 
 type InventoryPanelProps = {
   title: string;
@@ -36,6 +37,25 @@ function itemFor(entry: InventoryEntry) {
 
 function quantityFor(entry: InventoryEntry, mode: InventoryPanelMode) {
   return mode === "offer" ? entry.offerQuantity : visibleQuantity(entry);
+}
+
+function merchantSortRank(item: Item | undefined, entry: InventoryEntry, questItemIndexes?: Set<number>) {
+  if (!item) return 99;
+  const tags = new Set(item.tags.map((tag) => tag.toLowerCase()));
+  const name = item.name.toLowerCase();
+  if (tags.has("coins") || /\b(copper|silver|gold) coins?\b/.test(name)) return 0;
+  if (tags.has("jewlery") || tags.has("gems") || tags.has("crystals") || tags.has("rings") || tags.has("necklaces") || tags.has("amulets")) return 1;
+  if (questItemIndexes?.has(entry.itemIndex) || item.unique) return 2;
+  if (tags.has("magic") || tags.has("potions") || tags.has("remedies") || tags.has("alchemy")) return 3;
+  if (tags.has("weapons")) return 4;
+  if (tags.has("armor") || tags.has("clothes")) return 5;
+  if (tags.has("tools") || tags.has("supplies")) return 6;
+  if (tags.has("ore") || tags.has("ingots") || tags.has("wood") || tags.has("fabrics") || tags.has("materials")) return 7;
+  if (tags.has("food") || tags.has("drinks")) return 8;
+  if (tags.has("animals") || tags.has("livestock") || tags.has("packhorses") || tags.has("carts")) return 9;
+  if (tags.has("books") || tags.has("maps") || tags.has("paintings") || tags.has("statues") || tags.has("art")) return 10;
+  if (tags.has("furniture") || tags.has("storage") || tags.has("household")) return 11;
+  return 12;
 }
 
 function moveAmountFromInput(event: MouseEvent | KeyboardEvent, mode: InventoryPanelMode): MoveAmount {
@@ -130,11 +150,14 @@ function itemNotice(item: Item, entry: InventoryEntry, illegalTags: string[]) {
 }
 
 export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, mode = "stock", variant = "default", panelVariant = "parchment", allowProtect = false, illegalTags = [], questItemIndexes, className, bodyClassName, onMove, onMoveAll, onToggleProtect }: InventoryPanelProps) {
-  const rows = inventory.filter((entry) => quantityFor(entry, mode) > 0);
+  const visibleRows = inventory.filter((entry) => quantityFor(entry, mode) > 0);
   const isGrid = variant === "compact" || variant === "management";
   const darkPanel = panelVariant === "wood" || panelVariant === "dark";
   const ownerId = owner || panelTitle;
-  const totals = cargoSummary(rows, mode);
+  const totals = cargoSummary(visibleRows, mode);
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("all");
+  const [sortBy, setSortBy] = useState<InventoryPanelSort>("merchant");
   const [dropStatus, setDropStatus] = useState<"idle" | "valid" | "invalid">("idle");
   const [noticeEntry, setNoticeEntry] = useState<InventoryEntry | null>(null);
   const [hoverCard, setHoverCard] = useState<HoverCardState | null>(null);
@@ -146,6 +169,49 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
   const previousCursorRef = useRef("");
   const noticeItem = noticeEntry ? itemFor(noticeEntry) : null;
   const notice = noticeEntry && noticeItem ? itemNotice(noticeItem, noticeEntry, illegalTags) : null;
+  const categories = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const entry of visibleRows) {
+      const primaryTag = itemFor(entry)?.tags[0];
+      if (primaryTag) counts.set(primaryTag, (counts.get(primaryTag) || 0) + 1);
+    }
+    return [...counts.entries()]
+      .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
+      .slice(0, variant === "compact" ? 6 : 10)
+      .map(([tag]) => tag);
+  }, [inventory, mode, variant]);
+  const normalizedQuery = query.trim().toLowerCase();
+  const rows = visibleRows
+    .filter((entry) => {
+      const item = itemFor(entry);
+      if (!item) return false;
+      if (category !== "all" && item.tags[0] !== category) return false;
+      return !normalizedQuery || item.name.toLowerCase().includes(normalizedQuery) || item.tags.some((tag) => tag.toLowerCase().includes(normalizedQuery));
+    })
+    .sort((left, right) => {
+      const leftItem = itemFor(left);
+      const rightItem = itemFor(right);
+      if (sortBy === "merchant") {
+        const rankDifference = merchantSortRank(leftItem, left, questItemIndexes) - merchantSortRank(rightItem, right, questItemIndexes);
+        if (rankDifference) return rankDifference;
+        const rarityDifference = (rightItem?.rarity || 0) - (leftItem?.rarity || 0);
+        if (rarityDifference) return rarityDifference;
+        const valueDifference = (rightItem?.loafValue || 0) - (leftItem?.loafValue || 0);
+        if (valueDifference) return valueDifference;
+        return (leftItem?.name || "").localeCompare(rightItem?.name || "");
+      }
+      if (sortBy === "category") {
+        const categoryDifference = (leftItem?.tags[0] || "other").localeCompare(rightItem?.tags[0] || "other");
+        return categoryDifference || (leftItem?.name || "").localeCompare(rightItem?.name || "");
+      }
+      if (sortBy === "quantity") return quantityFor(right, mode) - quantityFor(left, mode);
+      if (sortBy === "value") return (rightItem?.loafValue || 0) - (leftItem?.loafValue || 0);
+      if (sortBy === "total-value") return (rightItem?.loafValue || 0) * quantityFor(right, mode) - (leftItem?.loafValue || 0) * quantityFor(left, mode);
+      if (sortBy === "rarity") return (rightItem?.rarity || 0) - (leftItem?.rarity || 0) || (rightItem?.loafValue || 0) - (leftItem?.loafValue || 0);
+      if (sortBy === "size") return (rightItem?.size || 0) - (leftItem?.size || 0) || (rightItem?.weight || 0) - (leftItem?.weight || 0);
+      if (sortBy === "weight") return (rightItem?.weight || 0) - (leftItem?.weight || 0) || (rightItem?.size || 0) - (leftItem?.size || 0);
+      return (leftItem?.name || "").localeCompare(rightItem?.name || "");
+    });
 
   function flashDropStatus(nextStatus: "valid" | "invalid") {
     if (dropTimerRef.current) window.clearTimeout(dropTimerRef.current);
@@ -318,17 +384,66 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
 
   return (
     <Panel
-      className={className}
+      className={cn("flex min-h-0 flex-col", className)}
       variant={panelVariant}
       dense={variant === "compact"}
+      titleClassName="w-full shrink-0 flex-col items-stretch px-2.5 py-2"
+      contentClassName="min-h-0 flex-1"
       title={
-        <span className="flex items-start justify-between gap-2">
-          <span>
-            <span className="block">{panelTitle}</span>
-            {subtitle ? <span className="mt-1 block text-xs font-normal leading-snug text-[#e8d39d]">{subtitle}</span> : null}
-            <span className="mt-1 block text-[0.68rem] font-black uppercase tracking-wide text-[#e8d39d]">Size {totals.size} / Weight {totals.weight}</span>
+        <span className="grid w-full gap-1.5">
+          <span className="flex min-w-0 items-center gap-2">
+            <span className="min-w-0 flex-1">
+              <span className="block truncate">{panelTitle}</span>
+              {subtitle ? <span className="block truncate text-[0.65rem] font-normal text-[#e8d39d]">{subtitle}</span> : null}
+              <span className="block text-[0.62rem] font-black uppercase tracking-wide text-[#e8d39d]">Size {totals.size} / Weight {totals.weight} / {rows.length} of {visibleRows.length}</span>
+            </span>
+            <label className="relative min-w-0 flex-1 font-sans text-xs">
+              <Search className="pointer-events-none absolute left-2 top-1/2 -translate-y-1/2 text-[#75501f]" size={13} />
+              <input
+                className="h-8 w-full rounded-sm border border-[#9a7138]/80 bg-[#fff6d7] pl-7 pr-2 text-[#26170a] outline-none placeholder:text-[#8a6a42] focus:border-[#d6ad57]"
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="Search"
+                aria-label={`Search ${panelTitle}`}
+              />
+            </label>
+            <label className="relative shrink-0 font-sans text-xs">
+              <ArrowDownAZ className="pointer-events-none absolute left-2 top-1/2 -translate-y-1/2 text-[#75501f]" size={13} />
+              <select
+                className="h-8 appearance-none rounded-sm border border-[#9a7138]/80 bg-[#fff6d7] pl-7 pr-6 font-bold text-[#26170a] outline-none focus:border-[#d6ad57]"
+                value={sortBy}
+                onChange={(event) => setSortBy(event.target.value as InventoryPanelSort)}
+                aria-label={`Sort ${panelTitle}`}
+              >
+                <option value="merchant">Merchant</option>
+                <option value="name">Name</option>
+                <option value="category">Category</option>
+                <option value="quantity">Count</option>
+                <option value="value">Unit Value</option>
+                <option value="total-value">Stack Value</option>
+                <option value="rarity">Rarity</option>
+                <option value="size">Size</option>
+                <option value="weight">Weight</option>
+              </select>
+            </label>
           </span>
-          <span className="shrink-0 text-xs text-[#e8d39d]">{rows.length}</span>
+          <span className="flex w-full gap-1 overflow-x-auto pb-0.5 font-sans [scrollbar-width:thin]">
+            {["all", ...categories].map((tag) => (
+              <button
+                className={cn(
+                  "shrink-0 rounded-full border px-2 py-0.5 text-[0.58rem] font-black uppercase tracking-wide transition",
+                  category === tag
+                    ? "border-[#ffe08a] bg-[#d6ad57] text-[#26170a]"
+                    : "border-[#d6ad57]/55 bg-[#163f44]/80 text-[#fff3bd] hover:border-[#ffe08a]"
+                )}
+                type="button"
+                onClick={() => setCategory(tag)}
+                key={tag}
+              >
+                {tag === "all" ? "All" : title(tag)}
+              </button>
+            ))}
+          </span>
         </span>
       }
     >
@@ -336,7 +451,9 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
         <div
           className={cn(
             "flex flex-wrap content-start items-start rounded-md border shadow-inner",
-            variant === "compact" ? "h-full min-h-0 gap-1 overflow-hidden p-1" : "max-h-[67vh] gap-2 overflow-auto p-2",
+            variant === "compact"
+              ? "h-full min-h-0 gap-1 overflow-x-hidden overflow-y-auto overscroll-contain p-1 [scrollbar-color:#b98b37_transparent] [scrollbar-width:thin]"
+              : "max-h-[67vh] gap-2 overflow-x-hidden overflow-y-auto overscroll-contain p-2 [scrollbar-color:#b98b37_transparent] [scrollbar-width:thin]",
             darkPanel
               ? "border-[#d0a65a]/35 bg-black/25 shadow-black/35"
               : "border-[#9a7138]/55 bg-[#fff6d7]/35 shadow-[#6c4418]/20",
@@ -422,7 +539,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
       ) : (
       <div
         className={cn(
-          "grid max-h-[360px] gap-2 overflow-auto pr-1",
+          "grid max-h-[360px] gap-2 overflow-x-hidden overflow-y-auto overscroll-contain pr-1 [scrollbar-color:#b98b37_transparent] [scrollbar-width:thin]",
           dropStatus === "valid" && "cursor-move",
           dropStatus === "valid" && "rounded-sm ring-2 ring-[#9ce277]",
           dropStatus === "invalid" && "animate-pulse rounded-sm ring-2 ring-[#d5523f]",

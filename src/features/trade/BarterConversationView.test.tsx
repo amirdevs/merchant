@@ -36,7 +36,7 @@ describe("BarterConversationView", () => {
     expect(html).toContain("Barter / Conversation");
     expect(html).toContain("Ask Price");
     expect(html).toContain("Ask Offer");
-    expect(html).toContain("Accept");
+    expect(html).toContain("Offer");
     expect(html).toContain("Morning");
     expect(html).toContain('draggable="true"');
     expect(html).toContain("Left click moves one");

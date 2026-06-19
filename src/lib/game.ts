@@ -193,6 +193,28 @@ function quantityPoolFor(item: Item, pools: ObtainableItem[]) {
   };
 }
 
+function archetypeQuantityMultiplier(item: Item, configs: StockArchetype[]) {
+  const tokens = new Set([normalizeStockToken(item.name), ...item.tags.map(normalizeStockToken)]);
+  let multiplier = 1;
+  for (const config of configs) {
+    for (const [token, configuredMultiplier] of Object.entries(config.quantityMultipliers || {})) {
+      if (tokens.has(normalizeStockToken(token))) multiplier = Math.max(multiplier, configuredMultiplier);
+    }
+  }
+  return multiplier;
+}
+
+function archetypeMinimumQuantity(item: Item, configs: StockArchetype[]) {
+  const tokens = new Set([normalizeStockToken(item.name), ...item.tags.map(normalizeStockToken)]);
+  let minimum = 0;
+  for (const config of configs) {
+    for (const [token, configuredMinimum] of Object.entries(config.minimumQuantities || {})) {
+      if (tokens.has(normalizeStockToken(token))) minimum = Math.max(minimum, configuredMinimum);
+    }
+  }
+  return minimum;
+}
+
 export function generateInventory(character: Character, day = 1) {
   const settings = resolvedStockSettings(character, day);
   if (settings.maxStacks <= 0) return [];
@@ -207,9 +229,8 @@ export function generateInventory(character: Character, day = 1) {
     ...(settings.profile.forbiddenTags || []),
     ...configs.flatMap((config) => config.forbiddenTags || []),
   ].map(normalizeStockToken));
-  const minValue = Math.max(settings.profile.minValue || 0, ...configs.map((config) => config.minValue || 0));
-  const configuredMax = Math.min(...[settings.profile.maxValue, ...configs.map((config) => config.maxValue)].filter((value): value is number => typeof value === "number"));
-  const maxValue = Math.min(character.maxObtainValue, Number.isFinite(configuredMax) ? configuredMax : character.maxObtainValue);
+  const minValue = settings.profile.minValue || 0;
+  const maxValue = Math.min(character.maxObtainValue, settings.profile.maxValue ?? character.maxObtainValue);
   const targetStacks = Math.min(items.length, settings.minStacks + Math.floor(roll() * (settings.maxStacks - settings.minStacks + 1)));
   const rarityBias = Math.max(0, ...configs.map((config) => config.rarityBias || 0));
   const localityBias = Math.max(0, ...configs.map((config) => config.localityBias || 0));
@@ -225,7 +246,13 @@ export function generateInventory(character: Character, day = 1) {
     return [{ item, record, weight: baseWeight * localBonus * rarityPenalty }];
   });
   const inventory: InventoryEntry[] = [];
+  const tierCoinGuarantees = settings.minStacks >= 29
+    ? ["copper coins", "silver coins", "gold coins"]
+    : settings.minStacks >= 15
+      ? ["copper coins", "silver coins"]
+      : ["copper coins"];
   const guaranteedTags = [
+    ...tierCoinGuarantees,
     ...(settings.profile.guaranteedTags || []),
     ...configs.flatMap((config) => config.guaranteedTags || []),
   ].map(normalizeStockToken);
@@ -242,8 +269,11 @@ export function generateInventory(character: Character, day = 1) {
     const pool = quantityPoolFor(selected.item, pools);
     const multiplier = selected.record.tags.includes("coins")
       ? settings.coinMultiplier
-      : settings.quantityMultiplier;
-    addInventory(inventory, selected.item.index, quantityFor(pool, selected.item, roll, multiplier));
+      : settings.quantityMultiplier * archetypeQuantityMultiplier(selected.item, configs);
+    addInventory(inventory, selected.item.index, Math.max(
+      archetypeMinimumQuantity(selected.item, configs),
+      quantityFor(pool, selected.item, roll, multiplier)
+    ));
   }
 
   while (inventory.length < targetStacks && candidates.length) {
@@ -253,8 +283,11 @@ export function generateInventory(character: Character, day = 1) {
     const pool = quantityPoolFor(selected.item, pools);
     const multiplier = selected.record.tags.includes("coins")
       ? settings.coinMultiplier
-      : settings.quantityMultiplier;
-    addInventory(inventory, selected.item.index, quantityFor(pool, selected.item, roll, multiplier));
+      : settings.quantityMultiplier * archetypeQuantityMultiplier(selected.item, configs);
+    addInventory(inventory, selected.item.index, Math.max(
+      archetypeMinimumQuantity(selected.item, configs),
+      quantityFor(pool, selected.item, roll, multiplier)
+    ));
   }
   return inventory;
 }

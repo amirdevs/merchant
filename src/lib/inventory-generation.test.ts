@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { benfordsQuantity, generateInventory, newGame, restockNpcInventories } from "./game";
+import { benfordsQuantity, generateInventory, items, newGame, restockNpcInventories } from "./game";
 import { resolveStockProfile, resolvedStockSettings } from "./stock-profiles";
 
 describe("inventory generation", () => {
@@ -35,6 +35,25 @@ describe("inventory generation", () => {
     expect(resolveStockProfile(merchant!).archetypes.map((entry) => entry.id)).toContain("general");
     expect(resolveStockProfile(baker!).archetypes.map((entry) => entry.id)).toContain("baker");
     expect(resolvedStockSettings(merchant!, 20).maxStacks).toBeGreaterThan(resolvedStockSettings(baker!, 20).maxStacks);
+  });
+
+  it("gives profession specialists general goods and tier-appropriate money", () => {
+    const state = newGame();
+    const blacksmith = state.characters.find((character) => character.name === "George Smith")!;
+    const stock = generateInventory(blacksmith, 2);
+    const stockItems = stock.map((entry) => entry.itemIndex);
+    const names = stockItems.map((itemIndex) => items[itemIndex].name.toLowerCase());
+    const tags = stockItems.flatMap((itemIndex) => items[itemIndex].tags);
+    const ingotQuantity = stock
+      .filter((entry) => items[entry.itemIndex].tags.includes("ingots"))
+      .reduce((total, entry) => total + entry.quantity, 0);
+
+    expect(names).toEqual(expect.arrayContaining(["copper coins", "silver coins", "gold coins"]));
+    expect(tags.some((tag) => tag === "food" || tag === "supplies")).toBe(true);
+    expect(tags.some((tag) => tag === "weapons" || tag === "armor" || tag === "tools")).toBe(true);
+    expect(tags).toContain("ingots");
+    expect(tags).toContain("ore");
+    expect(ingotQuantity).toBeGreaterThan(10);
   });
 
   it("refreshes NPC stock deterministically for each day", () => {

@@ -6,6 +6,8 @@ type PanelProps = Omit<HTMLAttributes<HTMLElement>, "title"> & {
   title?: ReactNode;
   variant?: "parchment" | "wood" | "dark";
   dense?: boolean;
+  titleClassName?: string;
+  contentClassName?: string;
 };
 
 const panelSurface: Record<NonNullable<PanelProps["variant"]>, { className: string; texture: string; muted: string; title: string }> = {
@@ -29,7 +31,7 @@ const panelSurface: Record<NonNullable<PanelProps["variant"]>, { className: stri
   },
 };
 
-export function Panel({ children, className, title, variant = "parchment", dense, style, ...props }: PanelProps) {
+export function Panel({ children, className, title, variant = "parchment", dense, titleClassName, contentClassName, style, ...props }: PanelProps) {
   const surface = panelSurface[variant];
   const panelStyle = {
     ...style,
@@ -55,13 +57,14 @@ export function Panel({ children, className, title, variant = "parchment", dense
         <h2
           className={cn(
             "relative z-10 -mt-1 mb-3 inline-flex min-h-10 max-w-full items-center rounded-sm border border-[#b98b37]/60 bg-[#1f5960] px-4 py-1.5 font-display text-lg leading-tight shadow-md shadow-black/25",
-            surface.title
+            surface.title,
+            titleClassName
           )}
         >
           {title}
         </h2>
       ) : null}
-      <div className="relative z-10">{children}</div>
+      <div className={cn("relative z-10", contentClassName)}>{children}</div>
     </section>
   );
 }

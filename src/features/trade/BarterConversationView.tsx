@@ -33,7 +33,7 @@ type BarterConversationViewProps = {
   onSpeak: (character: Character, topic: string, reply: string, nextNode?: DialogueNodeId, effect?: DialogueEffect) => void;
 };
 
-export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onSetPlayerOfferQuantity, onSetCharacterOfferQuantity, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onUndoOfferChange, onGoodbye, onHelp, onSpeak }: BarterConversationViewProps) {
+export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onSetPlayerOfferQuantity, onSetCharacterOfferQuantity, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onGoodbye, onHelp, onSpeak }: BarterConversationViewProps) {
   const [conversationOpen, setConversationOpen] = useState(false);
   const advantage = playerOffer - characterOffer;
   const market = currentMarket(state);
@@ -62,8 +62,8 @@ export function BarterConversationView({ state, character, playerOffer, characte
       <h1 className="sr-only">Barter / Conversation</h1>
       <div className="grid min-h-0 flex-1 gap-2 xl:grid-cols-[minmax(0,0.95fr)_minmax(360px,1.15fr)_minmax(0,0.95fr)]">
         <div className="flex min-h-0 flex-col gap-2">
-          <InventoryPanel className="min-h-0 flex-[0.75] [&>div:last-child]:h-[calc(100%-3.25rem)]" bodyClassName="h-full max-h-none overflow-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" title="NPC Offer" owner="character" mode="offer" variant="compact" panelVariant="wood" inventory={character?.inventory || []} illegalTags={illegalTags} onMove={(entry, amount) => onMoveCharacter(entry, amount, true)} onMoveAll={(entry) => onMoveCharacter(entry, "none", true)} onSetOfferQuantity={onSetCharacterOfferQuantity} />
-          <InventoryPanel className="min-h-0 flex-[1.25] [&>div:last-child]:h-[calc(100%-3.25rem)]" bodyClassName="h-full max-h-none overflow-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" title="NPC Stock" owner="character" variant="compact" panelVariant="wood" inventory={character?.inventory || []} illegalTags={illegalTags} onMove={(entry, amount) => onMoveCharacter(entry, amount)} onMoveAll={(entry) => onMoveCharacter(entry, "all")} onSetOfferQuantity={onSetCharacterOfferQuantity} />
+          <InventoryPanel className="min-h-0 flex-[0.75]" bodyClassName="h-full max-h-none" title="NPC Offer" owner="character" mode="offer" variant="compact" panelVariant="wood" inventory={character?.inventory || []} illegalTags={illegalTags} onMove={(entry, amount) => onMoveCharacter(entry, amount, true)} onMoveAll={(entry) => onMoveCharacter(entry, "none", true)} onSetOfferQuantity={onSetCharacterOfferQuantity} />
+          <InventoryPanel className="min-h-0 flex-[1.25]" bodyClassName="h-full max-h-none" title="NPC Stock" owner="character" variant="compact" panelVariant="wood" inventory={character?.inventory || []} illegalTags={illegalTags} onMove={(entry, amount) => onMoveCharacter(entry, amount)} onMoveAll={(entry) => onMoveCharacter(entry, "all")} onSetOfferQuantity={onSetCharacterOfferQuantity} />
         </div>
 
         <section
@@ -116,7 +116,14 @@ export function BarterConversationView({ state, character, playerOffer, characte
 
                 {recentNotes.length ? <p className="mt-1 line-clamp-1 text-center text-xs text-[#725331]">Last note: {recentNotes[0].note}</p> : null}
 
-                <div className="mt-2 grid grid-cols-4 gap-1.5"><Button size="sm" variant="secondary" onClick={onAskPrice}>Ask Price</Button><Button size="sm" variant="secondary" onClick={onAskOffer}>Ask Offer</Button><Button size="sm" onClick={onTrade}><Handshake size={14} /> Accept</Button><Button size="sm" variant="secondary" onClick={onUndoOfferChange}>Undo</Button><Button size="sm" variant="secondary" onClick={onClearOffers}>Clear</Button><Button size="sm" subtle onClick={onGoodbye}>Goodbye</Button><Button className="col-span-2" size="sm" subtle onClick={onHelp}><HelpCircle size={14} /> Help</Button></div>
+                <div className="mt-2 grid grid-cols-6 gap-1.5">
+                  <Button className="col-span-2" size="sm" variant="secondary" onClick={onAskPrice}>Ask Price</Button>
+                  <Button className="col-span-2" size="sm" variant="secondary" onClick={onAskOffer}>Ask Offer</Button>
+                  <Button className="col-span-1" size="sm" variant="secondary" onClick={onClearOffers}>Clear</Button>
+                  <Button className="col-span-1 px-2" size="sm" subtle onClick={onHelp} aria-label="Help"><HelpCircle size={14} /></Button>
+                  <Button className="col-span-3 min-h-12 text-base" onClick={onTrade}><Handshake size={17} /> Offer</Button>
+                  <Button className="col-span-3 min-h-12 text-base" subtle onClick={onGoodbye}>Goodbye</Button>
+                </div>
               </div>
               {conversationOpen ? (
                 <ModalShell panelClassName="relative max-h-[94dvh] max-w-6xl overflow-hidden p-3 lg:p-4" onClick={() => setConversationOpen(false)}>
@@ -172,8 +179,8 @@ export function BarterConversationView({ state, character, playerOffer, characte
         </section>
 
         <div className="flex min-h-0 flex-col gap-2">
-          <InventoryPanel className="min-h-0 flex-[0.75] [&>div:last-child]:h-[calc(100%-3.25rem)]" bodyClassName="h-full max-h-none overflow-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" title="Your Offer" owner="player" mode="offer" variant="compact" panelVariant="wood" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} onSetOfferQuantity={onSetPlayerOfferQuantity} />
-          <InventoryPanel className="min-h-0 flex-[1.25] [&>div:last-child]:h-[calc(100%-3.25rem)]" bodyClassName="h-full max-h-none overflow-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" title="Your Inventory" owner="player" variant="compact" panelVariant="wood" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onSetOfferQuantity={onSetPlayerOfferQuantity} onToggleProtect={onTogglePlayerProtect} allowProtect />
+          <InventoryPanel className="min-h-0 flex-[0.75]" bodyClassName="h-full max-h-none" title="Your Offer" owner="player" mode="offer" variant="compact" panelVariant="wood" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount, true)} onMoveAll={(entry) => onMovePlayer(entry, "none", true)} onSetOfferQuantity={onSetPlayerOfferQuantity} />
+          <InventoryPanel className="min-h-0 flex-[1.25]" bodyClassName="h-full max-h-none" title="Your Inventory" owner="player" variant="compact" panelVariant="wood" inventory={state.playerInventory} illegalTags={illegalTags} onMove={(entry, amount) => onMovePlayer(entry, amount)} onMoveAll={(entry) => onMovePlayer(entry, "all")} onSetOfferQuantity={onSetPlayerOfferQuantity} onToggleProtect={onTogglePlayerProtect} allowProtect />
         </div>
       </div>
     </ScreenFrame>

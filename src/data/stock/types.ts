@@ -53,6 +53,8 @@ export type StockTier = {
 
 export type StockArchetype = {
   weightedTags: Record<string, number>;
+  quantityMultipliers?: Record<string, number>;
+  minimumQuantities?: Record<string, number>;
   forbiddenTags?: string[];
   minValue?: number;
   maxValue?: number;

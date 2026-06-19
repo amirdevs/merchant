@@ -1,5 +1,10 @@
 import type { StockProfile, StockProfileOverride } from "./types";
 
+export const universalStockBaseline = {
+  archetypeWeight: 0.2,
+  guaranteedTags: ["supplies", "food"],
+};
+
 export const fallbackStockProfile: StockProfile = {
   tier: "light",
   archetypes: [{ id: "general", weight: 1 }],

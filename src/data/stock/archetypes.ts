@@ -6,7 +6,12 @@ export const stockArchetypes: Record<StockArchetypeId, StockArchetype> = {
   baker: { weightedTags: { bread: 10, grains: 6, food: 4, dairy: 3, spices: 2, tools: 1 }, guaranteedTags: ["bread"] },
   fisher: { weightedTags: { seafood: 10, aquatics: 6, food: 3, tools: 2, storage: 1 }, guaranteedTags: ["seafood"] },
   livestock: { weightedTags: { livestock: 10, animals: 6, packhorses: 4, food: 2, storage: 1 } },
-  blacksmith: { weightedTags: { tools: 8, ingots: 7, ore: 5, weapons: 4, armor: 4, household: 2 }, guaranteedTags: ["tools"] },
+  blacksmith: {
+    weightedTags: { ingots: 14, ore: 11, tools: 8, weapons: 4, armor: 3, household: 2 },
+    quantityMultipliers: { ingots: 1.75, ore: 1.5, "iron ingot": 2 },
+    minimumQuantities: { ingots: 12, ore: 8, "iron ingot": 20 },
+    guaranteedTags: ["ingots", "ore", "iron ingot", "tools"],
+  },
   weapons: { weightedTags: { weapons: 10, swords: 6, axes: 5, spears: 4, bows: 4, daggers: 3, maces: 3 }, minValue: 8 },
   armor: { weightedTags: { armor: 10, platemail: 5, shields: 5, helmets: 4, guantlets: 2, leggings: 2 }, minValue: 8 },
   fabrics: { weightedTags: { fabrics: 10, clothes: 7, thread: 5, linen: 4, silk: 4, dresses: 3, robes: 3, cloaks: 2 } },

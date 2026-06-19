@@ -1,5 +1,5 @@
 import type { Character } from "@/data/types";
-import { characterStockOverrides, fallbackStockProfile, merchantFallbackProfile, professionStockProfiles } from "@/data/stock/profiles";
+import { characterStockOverrides, fallbackStockProfile, merchantFallbackProfile, professionStockProfiles, universalStockBaseline } from "@/data/stock/profiles";
 import { stockTiers } from "@/data/stock/tiers";
 import type { StockProfile, StockProfileOverride, StockTierId } from "@/data/stock/types";
 
@@ -27,7 +27,15 @@ export function resolveStockProfile(character: Character): StockProfile {
   // `isMerchant` is only a commercial-capacity default. It does not choose item types.
   if (character.isMerchant) profile = { ...profile, tier: atLeastTier(profile.tier, "stocked") };
 
-  return mergeProfile(profile, characterStockOverrides[character.name]);
+  profile = mergeProfile(profile, characterStockOverrides[character.name]);
+  const hasGeneral = profile.archetypes.some((entry) => entry.id === "general");
+  return {
+    ...profile,
+    archetypes: hasGeneral
+      ? profile.archetypes
+      : [...profile.archetypes, { id: "general", weight: universalStockBaseline.archetypeWeight }],
+    guaranteedTags: [...new Set([...(profile.guaranteedTags || []), ...universalStockBaseline.guaranteedTags])],
+  };
 }
 
 export function resolvedStockSettings(character: Character, day: number) {
