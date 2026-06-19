@@ -223,7 +223,7 @@ export function dialogueChoices(character: Character, context: DialogueContext =
   }
   const back: DialogueChoice = { id: "back", label: "Back to main topics.", reply: `${character.name} waits for your next question.`, nextNode: "root", tone: "friendly" };
   if (node === "personal") return choices.filter((choice) => ["who", "custom", "relationship", "secret"].includes(choice.id)).concat(back);
-  if (node === "trade") return choices.filter((choice) => ["preference", "stock", "haggle", "ask-price", "ask-offer", "barter"].includes(choice.id)).concat(back);
+  if (node === "trade") return choices.filter((choice) => ["preference", "stock", "haggle"].includes(choice.id)).concat(back);
   if (node === "world") return choices.filter((choice) => ["market-demand", "market-discounts", "route-gossip", "local-law", "risk"].includes(choice.id)).concat(back);
   if (node === "work") {
     const workChoices: DialogueChoice[] = [];
@@ -245,12 +245,10 @@ export function dialogueChoices(character: Character, context: DialogueContext =
     return workChoices.concat(back);
   }
   return [
-    choices[0],
-    choices[2],
     { id: "topics-personal", label: "Let us talk about you.", reply: `${character.name} opens up cautiously.`, nextNode: "personal", tone: "friendly" },
     { id: "topics-trade", label: "Tell me about your trading.", reply: `${character.name} turns the conversation toward goods and prices.`, nextNode: "trade", tone: "business" },
     { id: "topics-world", label: "What is happening in the world?", reply: `${character.name} shares local news and road gossip.`, nextNode: "world", tone: "gossip" },
     { id: "topics-work", label: "Do you know of any work?", reply: `${character.name} considers the notices and rumors around ${marketName}.`, nextNode: "work", tone: "business" },
-    ...choices.filter((choice) => ["ask-price", "ask-offer", "barter", "goodbye"].includes(choice.id)),
+    ...choices.filter((choice) => choice.id === "goodbye"),
   ];
 }
