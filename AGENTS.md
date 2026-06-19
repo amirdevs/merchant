@@ -107,6 +107,8 @@ Current worktree may be very dirty because the user is intentionally deleting/re
 
 Run `pnpm audit:data` after data/script prompt changes. This has been passing.
 
+Use `pnpm build` and `pnpm test` only when the change has meaningful compile/runtime risk, when targeted validation is unavailable, or when the user explicitly asks. Do not run them automatically after small, localized edits; they produce excessive output and consume too much context.
+
 ## UI Architecture Rules
 
 - Tailwind CSS is the default styling system. Use Tailwind utility classes directly in components for layout, spacing, typography, state styling, and responsive behavior.
