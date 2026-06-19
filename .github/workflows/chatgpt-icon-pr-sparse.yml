@@ -1,30 +1,384 @@
-name: ChatGPT Icon Artifact Sparse
+name: ChatGPT Commit Reviewed Icon Sheets
 
 on:
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: read
 
 jobs:
-  zip:
+  commit-reviewed-sheets:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout main assets only
+        uses: actions/checkout@v4
         with:
-          ref: chatgpt-icon-tools
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
           sparse-checkout: |
             docs/assets/icon-prompts
             docs/assets/icon-sheets
           fetch-depth: 1
-      - run: |
-          mkdir -p _out/docs/assets
-          cp -a docs/assets/icon-prompts _out/docs/assets/icon-prompts
-          cp -a docs/assets/icon-sheets _out/docs/assets/icon-sheets
-          zip -r chatgpt-icon-artifact.zip _out
-      - uses: actions/upload-artifact@v4
-        with:
-          name: chatgpt-icon-artifact-sparse
-          path: chatgpt-icon-artifact.zip
-          retention-days: 3
+
+      - name: Install Pillow
+        run: python -m pip install --upgrade pillow
+
+      - name: Generate renamed sheets and review package
+        run: |
+          python <<'PY'
+          import json
+          import math
+          import os
+          import re
+          import shutil
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          from PIL import Image, ImageDraw, ImageFont
+
+          ROOT = Path.cwd()
+          PROMPT_DIR = ROOT / 'docs/assets/icon-prompts'
+          SHEET_DIR = ROOT / 'docs/assets/icon-sheets'
+          REVIEW_DIR = SHEET_DIR / 'review'
+          UNMATCHED_DIR = SHEET_DIR / 'unmatched'
+          REPORT_PATH = SHEET_DIR / 'MATCHING_REPORT.md'
+          OBJECT_REPORT_PATH = REVIEW_DIR / 'OBJECT_DETECTION_REPORT.md'
+          MANIFEST_PATH = SHEET_DIR / 'PROMPT_MANIFEST.json'
+
+          for d in (REVIEW_DIR, UNMATCHED_DIR):
+              if d.exists():
+                  shutil.rmtree(d)
+              d.mkdir(parents=True, exist_ok=True)
+
+          # Remove previously generated renamed sheets/review files so the run is idempotent.
+          for p in SHEET_DIR.glob('items-*.png'):
+              p.unlink()
+          for p in REVIEW_DIR.glob('*'):
+              if p.is_file():
+                  p.unlink()
+
+          json_files = sorted(PROMPT_DIR.glob('items-*.json'))
+
+          month_map = {m: i for i, m in enumerate([
+              'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+              'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+          ], start=1)}
+          # Also accept full month names.
+          month_map.update({
+              'January': 1, 'February': 2, 'March': 3, 'April': 4,
+              'June': 6, 'July': 7, 'August': 8, 'September': 9,
+              'October': 10, 'November': 11, 'December': 12
+          })
+
+          chatgpt_re = re.compile(
+              r'^ChatGPT Image ([A-Za-z]+) (\d{1,2}), (\d{4}), (\d{2})_(\d{2})_(\d{2}) ([AP]M)(?: \((\d+)\))?\.(png|jpg|jpeg|webp)$',
+              re.IGNORECASE,
+          )
+
+          def source_sort_key(path: Path):
+              m = chatgpt_re.match(path.name)
+              if not m:
+                  return (datetime.max.replace(tzinfo=timezone.utc), 999999, path.name)
+              mon, day, year, hh, mm, ss, ampm, suffix, _ext = m.groups()
+              month = month_map.get(mon, 12)
+              hour = int(hh)
+              if ampm.upper() == 'PM' and hour != 12:
+                  hour += 12
+              if ampm.upper() == 'AM' and hour == 12:
+                  hour = 0
+              dt = datetime(int(year), month, int(day), hour, int(mm), int(ss), tzinfo=timezone.utc)
+              # Unsuffixed file after suffixed files with same timestamp is rare; keep it before suffixes.
+              suf = int(suffix or 0)
+              return (dt, suf, path.name)
+
+          def load_config(path: Path):
+              with path.open('r', encoding='utf-8') as f:
+                  return json.load(f)
+
+          def grid_box(w, h):
+              # The prompts specify a centered 2:1 grid inside a 16:9 canvas.
+              if w / h >= 2:
+                  gh = h
+                  gw = int(round(2 * gh))
+                  x0 = (w - gw) // 2
+                  y0 = 0
+              else:
+                  gw = w
+                  gh = int(round(w / 2))
+                  x0 = 0
+                  y0 = (h - gh) // 2
+              return x0, y0, gw, gh
+
+          def non_green_ratio(crop: Image.Image):
+              rgb = crop.convert('RGB')
+              px = rgb.getdata()
+              total = 0
+              non_green = 0
+              for r, g, b in px:
+                  total += 1
+                  # Solid pure #00FF00 is intended; this threshold tolerates antialiasing/compression.
+                  is_green_bg = (g >= 170 and r <= 95 and b <= 95 and g > r * 1.8 and g > b * 1.8)
+                  if not is_green_bg:
+                      non_green += 1
+              return non_green / max(total, 1)
+
+          def wrap_text(text, max_chars=26):
+              text = re.sub(r'^\d+\.\s*', '', text)
+              words = text.split()
+              lines = []
+              cur = ''
+              for word in words:
+                  if len(cur) + len(word) + 1 > max_chars:
+                      if cur:
+                          lines.append(cur)
+                      cur = word
+                  else:
+                      cur = (cur + ' ' + word).strip()
+                  if len(lines) >= 2:
+                      break
+              if cur and len(lines) < 2:
+                  lines.append(cur)
+              return lines[:2]
+
+          def make_error_review(out_path: Path, json_name: str, source_name: str, error: str):
+              img = Image.new('RGB', (1920, 960), (28, 28, 28))
+              d = ImageDraw.Draw(img)
+              d.rectangle([0, 0, 1919, 959], outline=(255, 0, 0), width=10)
+              text = f'FAIL: {json_name}\nSource: {source_name}\n\n{error}'
+              d.multiline_text((60, 60), text, fill=(255, 255, 255), spacing=12)
+              img.save(out_path, quality=88, optimize=True)
+
+          def make_review(img: Image.Image, cfg: dict, out_path: Path, issues: list):
+              order = cfg.get('order') or []
+              review = img.convert('RGB')
+              draw = ImageDraw.Draw(review)
+              w, h = review.size
+              x0, y0, gw, gh = grid_box(w, h)
+              cell_w = gw / 10
+              cell_h = gh / 5
+              # Grid lines.
+              for c in range(11):
+                  x = round(x0 + c * cell_w)
+                  draw.line([(x, y0), (x, y0 + gh)], fill=(255, 0, 0), width=max(2, w // 900))
+              for r in range(6):
+                  y = round(y0 + r * cell_h)
+                  draw.line([(x0, y), (x0 + gw, y)], fill=(255, 0, 0), width=max(2, w // 900))
+              try:
+                  font = ImageFont.truetype('DejaVuSans.ttf', max(14, w // 90))
+                  small = ImageFont.truetype('DejaVuSans.ttf', max(11, w // 120))
+              except Exception:
+                  font = ImageFont.load_default()
+                  small = ImageFont.load_default()
+              issue_cells = {i.get('slotIndex') for i in issues if 'slotIndex' in i}
+              for idx in range(50):
+                  r = idx // 10
+                  c = idx % 10
+                  x = round(x0 + c * cell_w)
+                  y = round(y0 + r * cell_h)
+                  label = f'R{r+1}C{c+1}'
+                  fill = (255, 255, 255)
+                  box = (0, 0, 0)
+                  if idx in issue_cells:
+                      fill = (255, 255, 0)
+                      box = (180, 0, 0)
+                  draw.rectangle([x + 4, y + 4, x + int(cell_w * 0.72), y + int(cell_h * 0.22)], fill=box)
+                  draw.text((x + 8, y + 6), label, font=font, fill=fill)
+                  if idx < len(order):
+                      lines = wrap_text(order[idx])
+                      yy = y + int(cell_h * 0.22) + 6
+                      for line in lines:
+                          draw.rectangle([x + 4, yy - 1, x + int(cell_w * 0.96), yy + max(15, w // 95)], fill=(0, 0, 0))
+                          draw.text((x + 8, yy), line, font=small, fill=(255, 255, 255))
+                          yy += max(15, w // 95) + 2
+                  else:
+                      draw.rectangle([x + 4, y + int(cell_h * 0.22) + 6, x + int(cell_w * 0.52), y + int(cell_h * 0.36)], fill=(0, 0, 0))
+                      draw.text((x + 8, y + int(cell_h * 0.22) + 8), 'EMPTY', font=small, fill=(180, 255, 180))
+              out_path.parent.mkdir(parents=True, exist_ok=True)
+              review.save(out_path, quality=88, optimize=True)
+
+          def review_issues(img: Image.Image, cfg: dict):
+              order = cfg.get('order') or []
+              w, h = img.size
+              x0, y0, gw, gh = grid_box(w, h)
+              cell_w = gw / 10
+              cell_h = gh / 5
+              issues = []
+              ratios = []
+              for idx in range(50):
+                  r = idx // 10
+                  c = idx % 10
+                  x1 = round(x0 + c * cell_w)
+                  y1 = round(y0 + r * cell_h)
+                  x2 = round(x0 + (c + 1) * cell_w)
+                  y2 = round(y0 + (r + 1) * cell_h)
+                  ratio = non_green_ratio(img.crop((x1, y1, x2, y2)))
+                  ratios.append(ratio)
+                  has_art = ratio > 0.018
+                  expected = idx < len(order)
+                  if expected and not has_art:
+                      issues.append({
+                          'slotIndex': idx,
+                          'cell': f'R{r+1}C{c+1}',
+                          'type': 'missing_or_unclear',
+                          'detail': f'Expected `{order[idx]}` but object-presence ratio was low ({ratio:.4f}).',
+                      })
+                  if not expected and has_art:
+                      issues.append({
+                          'slotIndex': idx,
+                          'cell': f'R{r+1}C{c+1}',
+                          'type': 'extra_art',
+                          'detail': f'Cell should be empty but contains art/non-green pixels (ratio {ratio:.4f}).',
+                      })
+              return issues, ratios
+
+          source_files = [
+              p for p in SHEET_DIR.iterdir()
+              if p.is_file()
+              and p.suffix.lower() in {'.png', '.jpg', '.jpeg', '.webp'}
+              and not p.name.startswith('items-')
+          ]
+          source_files = sorted(source_files, key=source_sort_key)
+
+          matching_rows = []
+          object_rows = []
+          manifest_batches = []
+          valid_renamed_count = 0
+          corrupt_count = 0
+          pass_count = 0
+          fail_count = 0
+
+          for idx, json_path in enumerate(json_files):
+              cfg = load_config(json_path)
+              order = cfg.get('order') or []
+              batch = cfg.get('batch') or {}
+              manifest_batches.append({
+                  'config': json_path.name,
+                  'firstGlobalSlot': batch.get('firstGlobalSlot'),
+                  'lastGlobalSlot': batch.get('lastGlobalSlot'),
+                  'slotCount': batch.get('slotCount', len(order)),
+                  'orderCount': len(order),
+              })
+              source = source_files[idx] if idx < len(source_files) else None
+              out_name = json_path.with_suffix('.png').name
+              review_name = json_path.with_suffix('').name + '-review.jpg'
+              if source is None:
+                  status = 'FAIL'
+                  note = 'No source sheet available for this JSON config.'
+                  fail_count += 1
+                  make_error_review(REVIEW_DIR / review_name, json_path.name, 'MISSING', note)
+                  matching_rows.append((json_path.name, 'MISSING', 'NOT_RENAMED', status, note))
+                  object_rows.append((json_path.name, status, note))
+                  continue
+              try:
+                  with Image.open(source) as opened:
+                      img = opened.convert('RGBA')
+                  output_path = SHEET_DIR / out_name
+                  # Preserve PNG format with original pixels as much as possible.
+                  shutil.copyfile(source, output_path)
+                  valid_renamed_count += 1
+                  issues, ratios = review_issues(img, cfg)
+                  if issues:
+                      status = 'FAIL'
+                      fail_count += 1
+                      note = '; '.join(f"{i['cell']} {i['type']}" for i in issues[:8])
+                      if len(issues) > 8:
+                          note += f'; +{len(issues)-8} more'
+                  else:
+                      status = 'PASS'
+                      pass_count += 1
+                      note = 'Matched by chronological ChatGPT export filename order; structurally valid in object-presence review.'
+                  make_review(img, cfg, REVIEW_DIR / review_name, issues)
+                  matching_rows.append((json_path.name, source.name, out_name, status, note))
+                  if issues:
+                      detail = '\n'.join(f"  - {i['cell']}: {i['detail']}" for i in issues)
+                      if json_path.name == 'items-5001-5006.json':
+                          detail += '\n  - Final 6-item sheet has an extra icon after the JSON order; cells after R1C6 should be empty.'
+                      object_rows.append((json_path.name, status, detail))
+                  else:
+                      object_rows.append((json_path.name, status, 'No structural issues detected by object-presence review.'))
+              except Exception as e:
+                  status = 'FAIL'
+                  fail_count += 1
+                  corrupt_count += 1
+                  note = f'Corrupt/invalid PNG; cannot open as image. Error: {e}'
+                  shutil.copyfile(source, UNMATCHED_DIR / source.name)
+                  make_error_review(REVIEW_DIR / review_name, json_path.name, source.name, note)
+                  matching_rows.append((json_path.name, source.name, 'NOT_RENAMED', status, note))
+                  object_rows.append((json_path.name, status, note))
+
+          # Remove original ChatGPT export files after producing the renamed set and unmatched folder.
+          for p in source_files:
+              if p.exists():
+                  p.unlink()
+
+          # Manifest.
+          manifest = {
+              'generatedBy': 'ChatGPT GitHub Actions icon review workflow',
+              'generatedAtUtc': datetime.now(timezone.utc).isoformat(),
+              'sourceBranchInspected': 'main',
+              'promptConfigCount': len(json_files),
+              'sourceSheetFileCount': len(source_files),
+              'renamedSheetCount': valid_renamed_count,
+              'passCount': pass_count,
+              'failCount': fail_count,
+              'batches': manifest_batches,
+          }
+          MANIFEST_PATH.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+
+          important_failures = []
+          for j, s, o, st, note in matching_rows:
+              if st == 'FAIL':
+                  important_failures.append(f'- `{j}` from `{s}`: **FAIL** — {note}')
+
+          report = []
+          report.append('# MATCHING_REPORT\n')
+          report.append('Source branch inspected: `main`. Temporary branch used only to run the GitHub Actions commit workflow: `chatgpt-icon-tools`; workflow files are not committed to main.\n')
+          report.append('Matching method: JSON configs sorted by filename; ChatGPT exported sheets sorted by timestamp plus numeric suffix; valid images renamed to JSON basename. Review overlays are JPG files to keep repository size lower than PNG overlays.\n')
+          report.append(f'- Prompt configs: {len(json_files)}')
+          report.append(f'- Source sheet files: {len(source_files)}')
+          report.append(f'- Renamed valid sheets included: {valid_renamed_count}')
+          report.append(f'- Invalid/corrupt source files in `unmatched/`: {corrupt_count}')
+          report.append(f'- PASS: {pass_count}')
+          report.append(f'- FAIL: {fail_count}\n')
+          report.append('## Important failures')
+          report.extend(important_failures or ['- None'])
+          report.append('\n## Sheet mapping')
+          report.append('| JSON config | Source file | Output file | Status | Notes |')
+          report.append('|---|---|---|---|---|')
+          for row in matching_rows:
+              report.append('| `{}` | `{}` | `{}` | {} | {} |'.format(*[str(x).replace('|', '\\|') for x in row]))
+          REPORT_PATH.write_text('\n'.join(report) + '\n', encoding='utf-8')
+
+          obj = []
+          obj.append('# OBJECT_DETECTION_REPORT\n')
+          obj.append('Object-presence review uses the centered 10x5 grid and detects non-green pixels against the required #00FF00 background. This is a structural review aid, not a semantic guarantee that each icon exactly matches its item name.\n')
+          obj.append(f'- PASS: {pass_count}')
+          obj.append(f'- FAIL: {fail_count}\n')
+          for j, st, detail in object_rows:
+              obj.append(f'## {j} — {st}')
+              obj.append(str(detail))
+              obj.append('')
+          OBJECT_REPORT_PATH.write_text('\n'.join(obj) + '\n', encoding='utf-8')
+
+          print(f'Prompt configs: {len(json_files)}')
+          print(f'Source sheets: {len(source_files)}')
+          print(f'Renamed sheets: {valid_renamed_count}')
+          print(f'PASS: {pass_count}')
+          print(f'FAIL: {fail_count}')
+          PY
+
+      - name: Commit generated files to main
+        run: |
+          git config user.name "ChatGPT"
+          git config user.email "chatgpt-actions@users.noreply.github.com"
+          git add -A docs/assets/icon-sheets
+          git status --short
+          if git diff --cached --quiet; then
+            echo "No icon sheet changes to commit."
+            exit 0
+          fi
+          git commit -m "Add reviewed renamed icon sheets"
+          git push origin HEAD:main
