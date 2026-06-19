@@ -37,6 +37,7 @@ import { expireQuests, questOfferCanComplete, questReward } from "./quests";
 import { stockArchetypes } from "../data/stock/archetypes";
 import type { StockArchetype, WeightedArchetype } from "../data/stock/types";
 import { resolvedStockSettings } from "./stock-profiles";
+import { itemCatalogTokens, itemMatchesCatalogToken, normalizeItemToken } from "./item-catalog";
 
 export const items = itemsJson as Item[];
 export const kingdoms = kingdomsJson as Kingdom[];
@@ -49,8 +50,8 @@ export const MARKET_CLOSE_MINUTES = 20 * 60;
 const baseCharacters = charactersJson as Character[];
 const stockItemRecords = items.map((item) => ({
   item,
-  name: item.name.toLowerCase().replace(/[_-]+/g, " ").trim(),
-  tags: item.tags.map((tag) => tag.toLowerCase().replace(/[_-]+/g, " ").trim()),
+  name: normalizeStockToken(item.name),
+  tags: [...itemCatalogTokens(item)],
 }));
 let modsLoaded = false;
 
@@ -138,7 +139,7 @@ export function benfordsQuantity(min: number, max: number, roll: () => number) {
 
 function itemMatchesPool(item: Item, pool: ObtainableItem) {
   const tag = normalizeStockToken(pool.tag);
-  return normalizeStockToken(item.name) === tag || item.tags.some((itemTag) => normalizeStockToken(itemTag) === tag);
+  return itemMatchesCatalogToken(item, tag);
 }
 
 function quantityFor(pool: ObtainableItem, item: Item, roll: () => number, multiplier = 1) {
@@ -151,7 +152,7 @@ function quantityFor(pool: ObtainableItem, item: Item, roll: () => number, multi
 }
 
 function normalizeStockToken(value: string) {
-  return value.toLowerCase().replace(/[_-]+/g, " ").trim();
+  return normalizeItemToken(value);
 }
 
 function weightedArchetypeTags(archetypes: WeightedArchetype[]) {
@@ -194,7 +195,7 @@ function quantityPoolFor(item: Item, pools: ObtainableItem[]) {
 }
 
 function archetypeQuantityMultiplier(item: Item, configs: StockArchetype[]) {
-  const tokens = new Set([normalizeStockToken(item.name), ...item.tags.map(normalizeStockToken)]);
+  const tokens = itemCatalogTokens(item);
   let multiplier = 1;
   for (const config of configs) {
     for (const [token, configuredMultiplier] of Object.entries(config.quantityMultipliers || {})) {
@@ -205,7 +206,7 @@ function archetypeQuantityMultiplier(item: Item, configs: StockArchetype[]) {
 }
 
 function archetypeMinimumQuantity(item: Item, configs: StockArchetype[]) {
-  const tokens = new Set([normalizeStockToken(item.name), ...item.tags.map(normalizeStockToken)]);
+  const tokens = itemCatalogTokens(item);
   let minimum = 0;
   for (const config of configs) {
     for (const [token, configuredMinimum] of Object.entries(config.minimumQuantities || {})) {
@@ -267,7 +268,7 @@ export function generateInventory(character: Character, day = 1) {
     if (!selected) continue;
     candidates.splice(candidates.findIndex((candidate) => candidate.item.index === selected.item.index), 1);
     const pool = quantityPoolFor(selected.item, pools);
-    const multiplier = selected.record.tags.includes("coins")
+    const multiplier = selected.record.tags.includes("coins") || selected.record.tags.includes("currency")
       ? settings.coinMultiplier
       : settings.quantityMultiplier * archetypeQuantityMultiplier(selected.item, configs);
     addInventory(inventory, selected.item.index, Math.max(
@@ -281,7 +282,7 @@ export function generateInventory(character: Character, day = 1) {
     if (!selected) break;
     candidates.splice(candidates.findIndex((candidate) => candidate.item.index === selected.item.index), 1);
     const pool = quantityPoolFor(selected.item, pools);
-    const multiplier = selected.record.tags.includes("coins")
+    const multiplier = selected.record.tags.includes("coins") || selected.record.tags.includes("currency")
       ? settings.coinMultiplier
       : settings.quantityMultiplier * archetypeQuantityMultiplier(selected.item, configs);
     addInventory(inventory, selected.item.index, Math.max(
@@ -414,7 +415,7 @@ export function offerValue(inventory: InventoryEntry[], character: Character | n
 
 export function preferencePercent(character: Character, item: Item) {
   return (character.bias || []).reduce((total, bias) => {
-    if (item.name === bias.tag || item.tags.includes(bias.tag)) return total + bias.percent;
+    if (itemMatchesCatalogToken(item, bias.tag)) return total + bias.percent;
     return total;
   }, 0);
 }
@@ -425,7 +426,7 @@ function itemPreferenceScore(state: GameState, character: Character, itemIndex: 
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
   const scoreBias = (biases: Array<{ tag: string; percent: number }> = []) =>
-    biases.reduce((total, bias) => item.tags.includes(bias.tag) || item.name.toLowerCase() === bias.tag.toLowerCase() ? total + bias.percent : total, 0);
+    biases.reduce((total, bias) => itemMatchesCatalogToken(item, bias.tag) ? total + bias.percent : total, 0);
   const exotic = item.kingdomIndex !== null && item.kingdomIndex !== kingdom?.index ? 20 : 0;
   return preferencePercent(character, item) + scoreBias(profession?.bias) + scoreBias(market.bias) + scoreBias(kingdom?.bias) + exotic;
 }
@@ -444,7 +445,7 @@ export function autoAskPrice(state: GameState, character: Character) {
 
   for (const entry of candidates) {
     const item = items[entry.itemIndex];
-    if (item.tags.includes("packhorses") || item.tags.includes("storage") || item.tags.includes("cards")) continue;
+    if (itemMatchesCatalogToken(item, "packhorses") || itemMatchesCatalogToken(item, "storage") || itemMatchesCatalogToken(item, "cards")) continue;
     if (item.loafValue > characterValue) continue;
     while (entry.offerQuantity < entry.quantity) {
       entry.offerQuantity++;
@@ -474,7 +475,7 @@ export function autoAskOffer(state: GameState, character: Character) {
 
   for (const entry of candidates) {
     const item = items[entry.itemIndex];
-    if (item.tags.includes("masks")) continue;
+    if (itemMatchesCatalogToken(item, "masks")) continue;
     if (item.loafValue > playerValue) continue;
     while (entry.offerQuantity < entry.quantity) {
       entry.offerQuantity++;
@@ -541,7 +542,7 @@ export function completeTrade(state: GameState) {
   const nextCharacter = selectedCharacter(next);
   if (!nextCharacter) return state;
   const relation = ensureRelation(next.npcRelations, nextCharacter);
-  const offeredIllegalStacks = next.playerInventory.filter((entry) => entry.offerQuantity > 0 && items[entry.itemIndex].tags.some((tag) => currentKingdom(next).illegalItemTags?.includes(tag)));
+  const offeredIllegalStacks = next.playerInventory.filter((entry) => entry.offerQuantity > 0 && (currentKingdom(next).illegalItemTags || []).some((tag) => itemMatchesCatalogToken(items[entry.itemIndex], tag)));
   const block = roleTradeBlock({
     character: nextCharacter,
     relation,
@@ -571,7 +572,7 @@ export function completeTrade(state: GameState) {
   const npcGift = playerValue <= 0 && safetyNetGiftAllowed(nextCharacter, relation, playerCargoValue, characterValue);
   const playerSold = next.playerInventory.filter((entry) => entry.offerQuantity > 0).map((entry) => ({ ...entry }));
   const playerBought = nextCharacter.inventory.filter((entry) => entry.offerQuantity > 0).map((entry) => ({ ...entry }));
-  const illegalTradeStacks = playerSold.filter((entry) => items[entry.itemIndex].tags.some((tag) => currentKingdom(next).illegalItemTags?.includes(tag)));
+  const illegalTradeStacks = playerSold.filter((entry) => (currentKingdom(next).illegalItemTags || []).some((tag) => itemMatchesCatalogToken(items[entry.itemIndex], tag)));
   const marketQuest = currentMarket(next);
   const completesQuest = next.questStates[String(marketQuest.index)] === "accepted"
     && questOfferCanComplete(marketQuest, next.playerInventory, items);
@@ -726,7 +727,7 @@ export function travelToMarket(state: GameState, toMarketIndex: number, strategy
     strategy,
     hasPermit: state.playerInventory.some((entry) => {
       const item = items[entry.itemIndex];
-      return visibleQuantity(entry) > 0 && (item.tags.some((tag) => tag.toLowerCase().includes("permit")) || item.name.toLowerCase().includes("permit"));
+      return visibleQuantity(entry) > 0 && [...itemCatalogTokens(item)].some((token) => token.includes("permit"));
     }) || Boolean(activePermit(state.law, destinationKingdom.index, state.day)),
     permitMultiplier: permitInspectionMultiplier(activePermit(state.law, destinationKingdom.index, state.day)),
     heat: kingdomHeat(state.law, destinationKingdom.index),

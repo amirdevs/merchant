@@ -1,4 +1,5 @@
 import type { InventoryEntry, Item, Kingdom, Marketplace } from "@/data/types";
+import { itemMatchesCatalogToken } from "./item-catalog";
 import { addInventory, visibleQuantity } from "./inventory";
 
 export type ContractKind = "delivery" | "procurement" | "smuggling" | "race" | "auction" | "rumor";
@@ -24,8 +25,7 @@ export type ContractStates = Record<string, ContractStatus>;
 export type ContractAcceptedDays = Record<string, number>;
 
 function itemMatchesTag(item: Item, tag: string) {
-  const normalized = tag.toLowerCase();
-  return item.name.toLowerCase() === normalized || item.tags.some((itemTag) => itemTag.toLowerCase() === normalized);
+  return itemMatchesCatalogToken(item, tag);
 }
 
 export function generatedContracts(market: Marketplace, markets: Marketplace[], kingdom?: Kingdom): Contract[] {

@@ -1,4 +1,5 @@
 import type { InventoryEntry, Item } from "@/data/types";
+import { itemMatchesCatalogToken } from "@/lib/item-catalog";
 import { visibleQuantity } from "@/lib/inventory";
 
 export const BASE_CARRY_CAPACITY = 200;
@@ -36,8 +37,8 @@ export function inventoryTotals(inventory: InventoryEntry[], items: Item[]): Inv
       totals.size += item.size * count;
       totals.carryCapacity += (item.carry || 0) * count;
       totals.sizeCapacity += (item.pull || 0) * count;
-      if (item.tags.includes("packhorses")) totals.packAnimals += count;
-      if (item.tags.includes("storage")) totals.storageItems += count;
+      if (itemMatchesCatalogToken(item, "packhorses") || itemMatchesCatalogToken(item, "pack_animal")) totals.packAnimals += count;
+      if (itemMatchesCatalogToken(item, "storage") || itemMatchesCatalogToken(item, "container")) totals.storageItems += count;
       totals.overWeight = Math.max(0, totals.weight - totals.carryCapacity);
       totals.overSize = Math.max(0, totals.size - totals.sizeCapacity);
       totals.canTravel = totals.overWeight <= 0 && totals.overSize <= 0;

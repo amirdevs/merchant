@@ -1,0 +1,3639 @@
+{
+  "batch": {
+    "firstGlobalSlot": 3351,
+    "lastGlobalSlot": 3400,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. legendary painting of western princess (one)\n2. drums (one)\n3. drums (few)\n4. drums (many)\n5. flute (one)\n6. harp (one)\n7. harp (few)\n8. harp (many)\n9. lute (one)\n10. lute (few)\n11. lute (many)\n12. trumpet (one)\n13. trumpet (few)\n14. trumpet (many)\n15. violin (one)\n16. violin (few)\n17. violin (many)\n18. black paint (one)\n19. blue paint (one)\n20. brown paint (one)\n21. crimson paint (one)\n22. green paint (one)\n23. lime paint (one)\n24. orange paint (one)\n25. pink paint (one)\n26. red paint (one)\n27. teal paint (one)\n28. teal paint (few)\n29. teal paint (many)\n30. white paint (one)\n31. yellow paint (one)\n32. myth tournament trophy (one)\n33. rare enchanted tengu statue (one)\n34. large angel statue (one)\n35. large angel statue (few)\n36. large angel statue (many)\n37. archer statue (one)\n38. archer statue (few)\n39. archer statue (many)\n40. broken statue (one)\n41. broken statue (few)\n42. broken statue (many)\n43. small cat statue (one)\n44. small cat statue (few)\n45. small cat statue (many)\n46. large centaur statue (one)\n47. large centaur statue (few)\n48. large centaur statue (many)\n49. sacrifice statue (one)\n50. sacrifice statue (few)",
+  "order": [
+    "1. legendary painting of western princess (one)",
+    "2. drums (one)",
+    "3. drums (few)",
+    "4. drums (many)",
+    "5. flute (one)",
+    "6. harp (one)",
+    "7. harp (few)",
+    "8. harp (many)",
+    "9. lute (one)",
+    "10. lute (few)",
+    "11. lute (many)",
+    "12. trumpet (one)",
+    "13. trumpet (few)",
+    "14. trumpet (many)",
+    "15. violin (one)",
+    "16. violin (few)",
+    "17. violin (many)",
+    "18. black paint (one)",
+    "19. blue paint (one)",
+    "20. brown paint (one)",
+    "21. crimson paint (one)",
+    "22. green paint (one)",
+    "23. lime paint (one)",
+    "24. orange paint (one)",
+    "25. pink paint (one)",
+    "26. red paint (one)",
+    "27. teal paint (one)",
+    "28. teal paint (few)",
+    "29. teal paint (many)",
+    "30. white paint (one)",
+    "31. yellow paint (one)",
+    "32. myth tournament trophy (one)",
+    "33. rare enchanted tengu statue (one)",
+    "34. large angel statue (one)",
+    "35. large angel statue (few)",
+    "36. large angel statue (many)",
+    "37. archer statue (one)",
+    "38. archer statue (few)",
+    "39. archer statue (many)",
+    "40. broken statue (one)",
+    "41. broken statue (few)",
+    "42. broken statue (many)",
+    "43. small cat statue (one)",
+    "44. small cat statue (few)",
+    "45. small cat statue (many)",
+    "46. large centaur statue (one)",
+    "47. large centaur statue (few)",
+    "48. large centaur statue (many)",
+    "49. sacrifice statue (one)",
+    "50. sacrifice statue (few)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 3351,
+      "itemIndex": 1426,
+      "itemNumber": 1427,
+      "itemName": "legendary painting of western princess",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paintings",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paintings",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 30,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paintings/legendary_painting_of_western_princess.png",
+      "output": "public/game-assets/items/paintings/legendary_painting_of_western_princess.png",
+      "prompt": "Create exactly one clear painting of western princess, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: legendary painting of western princess. Family: art. Subfamily: paintings. Trade role: luxury. Bulk profile: crate. Category cues: art, paintings, luxury, legendary, crate, none, paintings, art, luxury, crafted, common, fine, masterwork, fragile. It should feel medium-sized.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 3352,
+      "itemIndex": 1427,
+      "itemNumber": 1428,
+      "itemName": "drums",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 4,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/drums.png",
+      "output": "public/game-assets/items/music/drums.png",
+      "prompt": "Create exactly one clear drums, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: drums. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 3353,
+      "itemIndex": 1427,
+      "itemNumber": 1428,
+      "itemName": "drums",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 4,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/drums.png",
+      "output": "public/game-assets/items/music/drums_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated drums, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: drums. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 3354,
+      "itemIndex": 1427,
+      "itemNumber": 1428,
+      "itemName": "drums",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 4,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/drums.png",
+      "output": "public/game-assets/items/music/drums_many.png",
+      "prompt": "Create a very abundant quantity of drums, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: drums. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 3355,
+      "itemIndex": 1428,
+      "itemNumber": 1429,
+      "itemName": "flute",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 2,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/flute.png",
+      "output": "public/game-assets/items/music/flute.png",
+      "prompt": "Create exactly one clear flute, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: flute. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: single. Category cues: music, music, luxury, common, single, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 3356,
+      "itemIndex": 1429,
+      "itemNumber": 1430,
+      "itemName": "harp",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 6,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/harp.png",
+      "output": "public/game-assets/items/music/harp.png",
+      "prompt": "Create exactly one clear harp, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: harp. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 3357,
+      "itemIndex": 1429,
+      "itemNumber": 1430,
+      "itemName": "harp",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 6,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/harp.png",
+      "output": "public/game-assets/items/music/harp_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated harp, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: harp. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 3358,
+      "itemIndex": 1429,
+      "itemNumber": 1430,
+      "itemName": "harp",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 6,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/harp.png",
+      "output": "public/game-assets/items/music/harp_many.png",
+      "prompt": "Create a very abundant quantity of harp, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: harp. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 3359,
+      "itemIndex": 1430,
+      "itemNumber": 1431,
+      "itemName": "lute",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/lute.png",
+      "output": "public/game-assets/items/music/lute.png",
+      "prompt": "Create exactly one clear lute, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: lute. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 3360,
+      "itemIndex": 1430,
+      "itemNumber": 1431,
+      "itemName": "lute",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/lute.png",
+      "output": "public/game-assets/items/music/lute_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated lute, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: lute. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 3361,
+      "itemIndex": 1430,
+      "itemNumber": 1431,
+      "itemName": "lute",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/lute.png",
+      "output": "public/game-assets/items/music/lute_many.png",
+      "prompt": "Create a very abundant quantity of lute, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: lute. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 3362,
+      "itemIndex": 1431,
+      "itemNumber": 1432,
+      "itemName": "trumpet",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/trumpet.png",
+      "output": "public/game-assets/items/music/trumpet.png",
+      "prompt": "Create exactly one clear trumpet, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: trumpet. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 3363,
+      "itemIndex": 1431,
+      "itemNumber": 1432,
+      "itemName": "trumpet",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/trumpet.png",
+      "output": "public/game-assets/items/music/trumpet_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated trumpet, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: trumpet. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 3364,
+      "itemIndex": 1431,
+      "itemNumber": 1432,
+      "itemName": "trumpet",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/trumpet.png",
+      "output": "public/game-assets/items/music/trumpet_many.png",
+      "prompt": "Create a very abundant quantity of trumpet, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: trumpet. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, common, crate, none, music, luxury, crafted, common, noble_luxury, finished_good, ordinary, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 3365,
+      "itemIndex": 1432,
+      "itemNumber": 1433,
+      "itemName": "violin",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/violin.png",
+      "output": "public/game-assets/items/music/violin.png",
+      "prompt": "Create exactly one clear violin, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: violin. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, uncommon, crate, none, music, luxury, crafted, common, fine, noble_luxury, finished_good, ordinary. It should feel medium-sized.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 3366,
+      "itemIndex": 1432,
+      "itemNumber": 1433,
+      "itemName": "violin",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/violin.png",
+      "output": "public/game-assets/items/music/violin_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated violin, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: violin. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, uncommon, crate, none, music, luxury, crafted, common, fine, noble_luxury, finished_good, ordinary. It should feel medium-sized.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 3367,
+      "itemIndex": 1432,
+      "itemNumber": 1433,
+      "itemName": "violin",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "music",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "music/violin.png",
+      "output": "public/game-assets/items/music/violin_many.png",
+      "prompt": "Create a very abundant quantity of violin, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: violin. Family: music. Subfamily: music. Trade role: luxury. Bulk profile: crate. Category cues: music, music, luxury, uncommon, crate, none, music, luxury, crafted, common, fine, noble_luxury, finished_good, ordinary. It should feel medium-sized.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 3368,
+      "itemIndex": 1433,
+      "itemNumber": 1434,
+      "itemName": "black paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paints",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paints",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/black_paint.png",
+      "output": "public/game-assets/items/paints/black_paint.png",
+      "prompt": "Create exactly one clear black paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: black paint. Family: art. Subfamily: paints. Trade role: luxury. Bulk profile: single. Category cues: art, paints, luxury, common, single, none, paints, art, luxury, crafted, common, fragile, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 3369,
+      "itemIndex": 1434,
+      "itemNumber": 1435,
+      "itemName": "blue paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paints",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paints",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/blue_paint.png",
+      "output": "public/game-assets/items/paints/blue_paint.png",
+      "prompt": "Create exactly one clear blue paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: blue paint. Family: art. Subfamily: paints. Trade role: luxury. Bulk profile: single. Category cues: art, paints, luxury, common, single, none, paints, art, luxury, crafted, common, fragile, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 3370,
+      "itemIndex": 1435,
+      "itemNumber": 1436,
+      "itemName": "brown paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paints",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paints",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/brown_paint.png",
+      "output": "public/game-assets/items/paints/brown_paint.png",
+      "prompt": "Create exactly one clear brown paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: brown paint. Family: art. Subfamily: paints. Trade role: luxury. Bulk profile: single. Category cues: art, paints, luxury, common, single, none, paints, art, luxury, crafted, common, fragile, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 3371,
+      "itemIndex": 1436,
+      "itemNumber": 1437,
+      "itemName": "crimson paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paints",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paints",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/crimson_paint.png",
+      "output": "public/game-assets/items/paints/crimson_paint.png",
+      "prompt": "Create exactly one clear crimson paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: crimson paint. Family: art. Subfamily: paints. Trade role: luxury. Bulk profile: single. Category cues: art, paints, luxury, common, single, none, paints, art, luxury, crafted, common, fragile, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 3372,
+      "itemIndex": 1437,
+      "itemNumber": 1438,
+      "itemName": "green paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paints",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paints",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/green_paint.png",
+      "output": "public/game-assets/items/paints/green_paint.png",
+      "prompt": "Create exactly one clear green paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: green paint. Family: art. Subfamily: paints. Trade role: luxury. Bulk profile: single. Category cues: art, paints, luxury, common, single, none, paints, art, luxury, crafted, common, fragile, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 3373,
+      "itemIndex": 1438,
+      "itemNumber": 1439,
+      "itemName": "lime paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paints",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paints",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/lime_paint.png",
+      "output": "public/game-assets/items/paints/lime_paint.png",
+      "prompt": "Create exactly one clear lime paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: lime paint. Family: art. Subfamily: paints. Trade role: luxury. Bulk profile: single. Category cues: art, paints, luxury, common, single, none, paints, art, luxury, crafted, common, fragile, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 3374,
+      "itemIndex": 1439,
+      "itemNumber": 1440,
+      "itemName": "orange paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paints",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paints",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/orange_paint.png",
+      "output": "public/game-assets/items/paints/orange_paint.png",
+      "prompt": "Create exactly one clear orange paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: orange paint. Family: art. Subfamily: paints. Trade role: luxury. Bulk profile: single. Category cues: art, paints, luxury, common, single, none, paints, art, luxury, crafted, common, fragile, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 3375,
+      "itemIndex": 1440,
+      "itemNumber": 1441,
+      "itemName": "pink paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paints",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paints",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/pink_paint.png",
+      "output": "public/game-assets/items/paints/pink_paint.png",
+      "prompt": "Create exactly one clear pink paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: pink paint. Family: art. Subfamily: paints. Trade role: luxury. Bulk profile: single. Category cues: art, paints, luxury, common, single, none, paints, art, luxury, crafted, common, fragile, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 3376,
+      "itemIndex": 1441,
+      "itemNumber": 1442,
+      "itemName": "red paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paints",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paints",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/red_paint.png",
+      "output": "public/game-assets/items/paints/red_paint.png",
+      "prompt": "Create exactly one clear red paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: red paint. Family: art. Subfamily: paints. Trade role: luxury. Bulk profile: single. Category cues: art, paints, luxury, common, single, none, paints, art, luxury, crafted, common, fragile, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 3377,
+      "itemIndex": 1442,
+      "itemNumber": 1443,
+      "itemName": "teal paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "paints",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "paints",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/teal_paint.png",
+      "output": "public/game-assets/items/paints/teal_paint.png",
+      "prompt": "Create exactly one clear teal paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: teal paint. Family: drink. Subfamily: paints. Trade role: finished. Bulk profile: bottle. Category cues: drink, paints, finished, common, bottle, expires, paints, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 3378,
+      "itemIndex": 1442,
+      "itemNumber": 1443,
+      "itemName": "teal paint",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "paints",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "paints",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/teal_paint.png",
+      "output": "public/game-assets/items/paints/teal_paint_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated teal paint, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: teal paint. Family: drink. Subfamily: paints. Trade role: finished. Bulk profile: bottle. Category cues: drink, paints, finished, common, bottle, expires, paints, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 3379,
+      "itemIndex": 1442,
+      "itemNumber": 1443,
+      "itemName": "teal paint",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "paints",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "paints",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/teal_paint.png",
+      "output": "public/game-assets/items/paints/teal_paint_many.png",
+      "prompt": "Create a very abundant quantity of teal paint, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: teal paint. Family: drink. Subfamily: paints. Trade role: finished. Bulk profile: bottle. Category cues: drink, paints, finished, common, bottle, expires, paints, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 3380,
+      "itemIndex": 1443,
+      "itemNumber": 1444,
+      "itemName": "white paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paints",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paints",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/white_paint.png",
+      "output": "public/game-assets/items/paints/white_paint.png",
+      "prompt": "Create exactly one clear white paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: white paint. Family: art. Subfamily: paints. Trade role: luxury. Bulk profile: single. Category cues: art, paints, luxury, common, single, none, paints, art, luxury, crafted, common, fragile, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 3381,
+      "itemIndex": 1444,
+      "itemNumber": 1445,
+      "itemName": "yellow paint",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "paints",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "paints",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "paints/yellow_paint.png",
+      "output": "public/game-assets/items/paints/yellow_paint.png",
+      "prompt": "Create exactly one clear yellow paint, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: yellow paint. Family: art. Subfamily: paints. Trade role: luxury. Bulk profile: single. Category cues: art, paints, luxury, common, single, none, paints, art, luxury, crafted, common, fragile, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 3382,
+      "itemIndex": 1445,
+      "itemNumber": 1446,
+      "itemName": "myth tournament trophy",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "licensed"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "unique",
+      "qualityBands": [
+        "common",
+        "antique"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 2,
+      "rarity": 1,
+      "unique": true,
+      "iconFile": "statues/myth_tournament_trophy.png",
+      "output": "public/game-assets/items/statues/myth_tournament_trophy.png",
+      "prompt": "Create exactly one clear myth tournament trophy, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: myth tournament trophy. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, unique, crate, none, statues, stone, raw, mined, common, antique, craft_supply, raw_material. It should feel medium-sized.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 3383,
+      "itemIndex": 1446,
+      "itemNumber": 1447,
+      "itemName": "rare enchanted tengu statue",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "statues",
+        "magic",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 50,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/rare_enchanted_tengu_statue.png",
+      "output": "public/game-assets/items/statues/rare_enchanted_tengu_statue.png",
+      "prompt": "Create exactly one clear enchanted tengu statue, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: rare enchanted tengu statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, legendary, crate, none, statues, magic, stone, raw, mined, common, fine, masterwork. It should feel physically large and heavy.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 3384,
+      "itemIndex": 1447,
+      "itemNumber": 1448,
+      "itemName": "large angel statue",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/large_angel_statue.png",
+      "output": "public/game-assets/items/statues/large_angel_statue.png",
+      "prompt": "Create exactly one clear large angel statue, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large angel statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 3385,
+      "itemIndex": 1447,
+      "itemNumber": 1448,
+      "itemName": "large angel statue",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/large_angel_statue.png",
+      "output": "public/game-assets/items/statues/large_angel_statue_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large angel statue, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large angel statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 3386,
+      "itemIndex": 1447,
+      "itemNumber": 1448,
+      "itemName": "large angel statue",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/large_angel_statue.png",
+      "output": "public/game-assets/items/statues/large_angel_statue_many.png",
+      "prompt": "Create a very abundant quantity of large angel statue, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large angel statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 3387,
+      "itemIndex": 1448,
+      "itemNumber": 1449,
+      "itemName": "archer statue",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/archer_statue.png",
+      "output": "public/game-assets/items/statues/archer_statue.png",
+      "prompt": "Create exactly one clear archer statue, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: archer statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 3388,
+      "itemIndex": 1448,
+      "itemNumber": 1449,
+      "itemName": "archer statue",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/archer_statue.png",
+      "output": "public/game-assets/items/statues/archer_statue_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated archer statue, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: archer statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 3389,
+      "itemIndex": 1448,
+      "itemNumber": 1449,
+      "itemName": "archer statue",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/archer_statue.png",
+      "output": "public/game-assets/items/statues/archer_statue_many.png",
+      "prompt": "Create a very abundant quantity of archer statue, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: archer statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 3390,
+      "itemIndex": 1449,
+      "itemNumber": 1450,
+      "itemName": "broken statue",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 30,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/broken_statue.png",
+      "output": "public/game-assets/items/statues/broken_statue.png",
+      "prompt": "Create exactly one clear broken statue, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: broken statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 3391,
+      "itemIndex": 1449,
+      "itemNumber": 1450,
+      "itemName": "broken statue",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 30,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/broken_statue.png",
+      "output": "public/game-assets/items/statues/broken_statue_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated broken statue, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: broken statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 3392,
+      "itemIndex": 1449,
+      "itemNumber": 1450,
+      "itemName": "broken statue",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 30,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/broken_statue.png",
+      "output": "public/game-assets/items/statues/broken_statue_many.png",
+      "prompt": "Create a very abundant quantity of broken statue, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: broken statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 3393,
+      "itemIndex": 1450,
+      "itemNumber": 1451,
+      "itemName": "small cat statue",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 10,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/small_cat_statue.png",
+      "output": "public/game-assets/items/statues/small_cat_statue.png",
+      "prompt": "Create exactly one clear small cat statue, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: small cat statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 3394,
+      "itemIndex": 1450,
+      "itemNumber": 1451,
+      "itemName": "small cat statue",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 10,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/small_cat_statue.png",
+      "output": "public/game-assets/items/statues/small_cat_statue_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated small cat statue, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: small cat statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 3395,
+      "itemIndex": 1450,
+      "itemNumber": 1451,
+      "itemName": "small cat statue",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 10,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/small_cat_statue.png",
+      "output": "public/game-assets/items/statues/small_cat_statue_many.png",
+      "prompt": "Create a very abundant quantity of small cat statue, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: small cat statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 3396,
+      "itemIndex": 1451,
+      "itemNumber": 1452,
+      "itemName": "large centaur statue",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/large_centaur_statue.png",
+      "output": "public/game-assets/items/statues/large_centaur_statue.png",
+      "prompt": "Create exactly one clear large centaur statue, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large centaur statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 3397,
+      "itemIndex": 1451,
+      "itemNumber": 1452,
+      "itemName": "large centaur statue",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/large_centaur_statue.png",
+      "output": "public/game-assets/items/statues/large_centaur_statue_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large centaur statue, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large centaur statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 3398,
+      "itemIndex": 1451,
+      "itemNumber": 1452,
+      "itemName": "large centaur statue",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/large_centaur_statue.png",
+      "output": "public/game-assets/items/statues/large_centaur_statue_many.png",
+      "prompt": "Create a very abundant quantity of large centaur statue, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large centaur statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 3399,
+      "itemIndex": 1452,
+      "itemNumber": 1453,
+      "itemName": "sacrifice statue",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/sacrifice_statue.png",
+      "output": "public/game-assets/items/statues/sacrifice_statue.png",
+      "prompt": "Create exactly one clear sacrifice statue, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: sacrifice statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 3400,
+      "itemIndex": 1452,
+      "itemNumber": 1453,
+      "itemName": "sacrifice statue",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "statues",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "statues",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "statues/sacrifice_statue.png",
+      "output": "public/game-assets/items/statues/sacrifice_statue_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated sacrifice statue, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: sacrifice statue. Family: stone. Subfamily: statues. Trade role: raw. Bulk profile: crate. Category cues: stone, statues, raw, common, crate, none, statues, stone, raw, mined, common, craft_supply, raw_material, ordinary. It should feel medium-sized.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

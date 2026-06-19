@@ -1,8 +1,34 @@
 export type Item = {
   index: number;
+  id?: string;
   name: string;
+  displayName?: string;
   iconFile?: string | null;
   tags: string[];
+  family?: string;
+  subfamily?: string;
+  categoryAxes?: Partial<Record<
+    | "material"
+    | "productionStage"
+    | "freshness"
+    | "legalSocial"
+    | "marketBehavior"
+    | "storageHandling"
+    | "artVariant"
+    | "featureHooks",
+    string[]
+  >>;
+  forms?: string[];
+  professionUses?: string[];
+  regions?: string[];
+  sources?: string[];
+  tradeRole?: string;
+  rarityBand?: string;
+  qualityBands?: string[];
+  bulkProfile?: string;
+  storageNeeds?: string[];
+  decayProfile?: string;
+  marketBehavior?: string[];
   loafValue: number;
   size: number;
   weight: number;

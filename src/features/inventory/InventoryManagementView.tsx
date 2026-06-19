@@ -13,6 +13,8 @@ import { InventoryPanel } from "@/components/InventoryPanel";
 import { Button, ItemSlot, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { itemIsQuestNeeded } from "@/lib/quests";
+import { itemCatalogTokens, itemMatchesCatalogToken } from "@/lib/item-catalog";
+import { itemIsIllegal } from "@/lib/legal";
 
 type InventoryManagementViewProps = {
   state: GameState;
@@ -47,12 +49,11 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
   const filteredEntries = useMemo(() => {
     const matchesCategory = (entry: InventoryEntry) => {
       const item = items[entry.itemIndex];
-      const tags = item.tags.map((tag) => tag.toLowerCase());
       if (category === "All") return true;
       if (category === "Goods") return true;
-      if (category === "Materials") return tags.some((tag) => ["wood", "metal", "cloth", "leather", "stone"].includes(tag));
-      if (category === "Luxuries") return tags.some((tag) => ["jewelry", "gem", "luxury", "art", "rare"].includes(tag)) || item.loafValue >= 250;
-      return tags.some((tag) => ["quest", "map", "deed"].includes(tag)) || item.unique;
+      if (category === "Materials") return ["wood", "metal", "cloth", "leather", "stone", "raw_material", "craft_supply"].some((token) => itemMatchesCatalogToken(item, token));
+      if (category === "Luxuries") return ["jewelry", "gem", "luxury", "art", "rare", "noble_luxury"].some((token) => itemMatchesCatalogToken(item, token)) || item.loafValue >= 250;
+      return ["quest", "map", "deed", "document"].some((token) => itemMatchesCatalogToken(item, token)) || item.unique;
     };
     const normalizedSearch = search.trim().toLowerCase();
     return carriedEntries
@@ -61,7 +62,7 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
         if (!normalizedSearch) return true;
         const item = items[entry.itemIndex];
         return item.name.toLowerCase().includes(normalizedSearch)
-          || item.tags.some((tag) => tag.toLowerCase().includes(normalizedSearch))
+          || [...itemCatalogTokens(item)].some((token) => token.includes(normalizedSearch))
           || entry.note?.toLowerCase().includes(normalizedSearch);
       })
       .sort((left, right) => {
@@ -205,7 +206,7 @@ export function InventoryManagementView({ state, onMovePlayer, onSetPlayerOfferQ
                     backgroundSize: "100% 100%",
                   }}
                 >
-                  <ItemSlot className="w-48" imageSrc={itemIconAsset(selectedItem.iconFile)} selected marker={selectedItem.tags.some((tag) => illegalTags.includes(tag)) ? "illegal" : selectedItem.unique ? "rare" : undefined} />
+                  <ItemSlot className="w-48" imageSrc={itemIconAsset(selectedItem.iconFile)} selected marker={itemIsIllegal(selectedItem, illegalTags) ? "illegal" : selectedItem.unique ? "rare" : undefined} />
                 </div>
                 <h2 className="mt-4 font-display text-3xl text-[#26170a]">{selectedItem.name}</h2>
                 <p className="text-sm text-[#725331]">{selectedItem.tags.join(" / ")}</p>

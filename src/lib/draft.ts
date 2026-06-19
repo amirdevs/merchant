@@ -1,4 +1,5 @@
 import type { Item, Marketplace } from "@/data/types";
+import { itemMatchesCatalogToken } from "@/lib/item-catalog";
 
 export type DraftRound = {
   choices: number[];
@@ -27,7 +28,7 @@ function seeded(seed: number) {
 
 export function createDraftSession(market: Marketplace, items: Item[], day: number): DraftSession {
   const roll = seeded((market.index + 1) * 3571 + day * 101);
-  const candidates = items.filter((item) => !item.unique && item.loafValue >= 5 && item.loafValue <= 300 && (item.tags.includes("magic") || item.tags.includes("cards") || item.rarity && item.rarity >= 2));
+  const candidates = items.filter((item) => !item.unique && item.loafValue >= 5 && item.loafValue <= 300 && (itemMatchesCatalogToken(item, "magic") || itemMatchesCatalogToken(item, "cards") || item.rarity && item.rarity >= 2));
   const pool = candidates.length >= 15 ? candidates : items.filter((item) => !item.unique && item.loafValue >= 5 && item.loafValue <= 300);
   const used = new Set<number>();
   const rounds: DraftRound[] = [];

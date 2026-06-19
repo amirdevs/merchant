@@ -7,6 +7,7 @@ import { money, title } from "@/lib/format";
 import { type MoveAmount, visibleQuantity } from "@/lib/inventory";
 import { itemIsIllegal } from "@/lib/legal";
 import { cn } from "@/lib/cn";
+import { itemCatalogTokens, itemMatchesCatalogToken } from "@/lib/item-catalog";
 import { Button, ItemSlot, LedgerRow, ModalShell, Panel, Portal, StatChip } from "@/components/ui";
 
 type InventoryPanelMode = "stock" | "offer";
@@ -41,20 +42,20 @@ function quantityFor(entry: InventoryEntry, mode: InventoryPanelMode) {
 
 function merchantSortRank(item: Item | undefined, entry: InventoryEntry, questItemIndexes?: Set<number>) {
   if (!item) return 99;
-  const tags = new Set(item.tags.map((tag) => tag.toLowerCase()));
+  const has = (token: string) => itemMatchesCatalogToken(item, token);
   const name = item.name.toLowerCase();
-  if (tags.has("coins") || /\b(copper|silver|gold) coins?\b/.test(name)) return 0;
-  if (tags.has("jewlery") || tags.has("gems") || tags.has("crystals") || tags.has("rings") || tags.has("necklaces") || tags.has("amulets")) return 1;
+  if (has("coins") || has("currency") || /\b(copper|silver|gold) coins?\b/.test(name)) return 0;
+  if (has("jewlery") || has("gems") || has("crystals") || has("rings") || has("necklaces") || has("amulets") || has("luxury")) return 1;
   if (questItemIndexes?.has(entry.itemIndex) || item.unique) return 2;
-  if (tags.has("magic") || tags.has("potions") || tags.has("remedies") || tags.has("alchemy")) return 3;
-  if (tags.has("weapons")) return 4;
-  if (tags.has("armor") || tags.has("clothes")) return 5;
-  if (tags.has("tools") || tags.has("supplies")) return 6;
-  if (tags.has("ore") || tags.has("ingots") || tags.has("wood") || tags.has("fabrics") || tags.has("materials")) return 7;
-  if (tags.has("food") || tags.has("drinks")) return 8;
-  if (tags.has("animals") || tags.has("livestock") || tags.has("packhorses") || tags.has("carts")) return 9;
-  if (tags.has("books") || tags.has("maps") || tags.has("paintings") || tags.has("statues") || tags.has("art")) return 10;
-  if (tags.has("furniture") || tags.has("storage") || tags.has("household")) return 11;
+  if (has("magic") || has("potions") || has("remedies") || has("alchemy")) return 3;
+  if (has("weapons") || has("weapon")) return 4;
+  if (has("armor") || has("clothes") || has("textile")) return 5;
+  if (has("tools") || has("tool") || has("supplies")) return 6;
+  if (has("ore") || has("ingots") || has("wood") || has("fabrics") || has("materials") || has("raw_material") || has("craft_supply")) return 7;
+  if (has("food") || has("drinks") || has("daily_staple")) return 8;
+  if (has("animals") || has("livestock") || has("packhorses") || has("carts") || has("animal")) return 9;
+  if (has("books") || has("maps") || has("paintings") || has("statues") || has("art") || has("document")) return 10;
+  if (has("furniture") || has("storage") || has("household") || has("container")) return 11;
   return 12;
 }
 
@@ -186,7 +187,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
       const item = itemFor(entry);
       if (!item) return false;
       if (category !== "all" && item.tags[0] !== category) return false;
-      return !normalizedQuery || item.name.toLowerCase().includes(normalizedQuery) || item.tags.some((tag) => tag.toLowerCase().includes(normalizedQuery));
+      return !normalizedQuery || item.name.toLowerCase().includes(normalizedQuery) || [...itemCatalogTokens(item)].some((token) => token.includes(normalizedQuery));
     })
     .sort((left, right) => {
       const leftItem = itemFor(left);

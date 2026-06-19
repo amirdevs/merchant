@@ -1,4 +1,5 @@
 import type { InventoryEntry, Item, Marketplace } from "@/data/types";
+import { itemMatchesCatalogToken } from "./item-catalog";
 import { visibleQuantity } from "./inventory";
 
 export type QuestItemProgress = {
@@ -14,8 +15,7 @@ function normalize(value: string) {
 function itemMatchesQuestToken(item: Item, token: string) {
   const normalized = normalize(token);
   return (
-    normalize(item.name) === normalized ||
-    item.tags.some((tag) => normalize(tag) === normalized) ||
+    itemMatchesCatalogToken(item, normalized) ||
     Boolean(item.iconFile && normalize(item.iconFile).includes(normalized))
   );
 }

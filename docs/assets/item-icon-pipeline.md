@@ -11,6 +11,7 @@ This document tracks the current item icon generation pipeline.
 ## Scripts
 
 - `pnpm generate:icon-prompts`: regenerates prompt configs from generated item data.
+- `pnpm enrich:item-catalog`: regenerates item taxonomy, category axes, forms, and metadata before prompt generation.
 - `pnpm rename:item-icons`: legacy rename utility.
 - `scripts/crop-icon-sheet.ps1`: cropper for generated icon sheets.
 
@@ -20,12 +21,13 @@ Run `pnpm audit:data` after changing data or prompt-generation scripts.
 
 - Source data: `src/data/generated/items.json`.
 - Current item count: 1,972.
-- Current output slots: 2,672 after `one`, `few`, and `many` variants.
-- Config count: 54 normal JSON files.
+- Current output slots: 4,678 after `one`, `few`, and `many` variants.
+- Config count: 94 normal JSON files.
 - Normal sheet layout: strict 10 columns by 5 rows.
 - Normal sheet size: 50 image slots.
-- Final sheet may contain fewer than 50 slots.
+- Final sheet contains 28 slots.
 - Read order: left to right, top to bottom.
+- Variant decisions come from item `forms`, `family`, `tradeRole`, `bulkProfile`, and `categoryAxes` metadata.
 
 Use each config file's `generationPrompt` field when generating images.
 

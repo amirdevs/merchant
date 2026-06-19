@@ -1,4 +1,5 @@
 import type { InventoryEntry, Item, Kingdom } from "@/data/types";
+import { itemMatchesCatalogToken } from "@/lib/item-catalog";
 import { visibleQuantity } from "@/lib/inventory";
 
 export function illegalTagsForKingdom(kingdom: Pick<Kingdom, "illegalItemTags"> | undefined) {
@@ -6,7 +7,7 @@ export function illegalTagsForKingdom(kingdom: Pick<Kingdom, "illegalItemTags"> 
 }
 
 export function itemIsIllegal(item: Item, illegalTags: string[]) {
-  return illegalTags.some((tag) => item.tags.includes(tag));
+  return illegalTags.some((tag) => itemMatchesCatalogToken(item, tag));
 }
 
 export function inventoryIllegalEntries(inventory: InventoryEntry[], items: Item[], illegalTags: string[]) {

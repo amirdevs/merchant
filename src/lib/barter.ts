@@ -1,4 +1,5 @@
 import type { Bias, Character, InventoryEntry, Item, Marketplace, Profession } from "../data/types";
+import { itemMatchesCatalogToken } from "./item-catalog";
 
 export type TradePerspective = "player" | "character";
 export type ValueAdjustment = {
@@ -21,7 +22,7 @@ const HAGGLE_DECREASE_MULTIPLIER = 2;
 const DEFAULT_BIAS_MAGNITUDE = 1;
 
 function matchesBias(item: Item, bias: Bias) {
-  return item.name === bias.tag || item.tags.includes(bias.tag);
+  return itemMatchesCatalogToken(item, bias.tag);
 }
 
 function percentage(value: number, percent: number) {
@@ -80,7 +81,7 @@ export function hagglingBias(character: Character, baseValue: number, perspectiv
 }
 
 export function illegalRiskBias(item: Item, baseValue: number, illegalTags: string[] = [], blackMarket = false, heat = 0) {
-  if (!illegalTags.some((tag) => item.tags.includes(tag))) return 0;
+  if (!illegalTags.some((tag) => itemMatchesCatalogToken(item, tag))) return 0;
   const heatPremium = Math.min(30, Math.max(0, heat) * 0.25);
   const percent = blackMarket ? 20 + heatPremium : -45 - heatPremium;
   return percentage(baseValue, percent);

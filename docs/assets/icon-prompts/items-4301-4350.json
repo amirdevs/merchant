@@ -1,0 +1,3991 @@
+{
+  "batch": {
+    "firstGlobalSlot": 4301,
+    "lastGlobalSlot": 4350,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. simple trident (one)\n2. simple trident (few)\n3. simple trident (many)\n4. small glaive (one)\n5. small glaive (few)\n6. small glaive (many)\n7. small lajatang (one)\n8. small lajatang (few)\n9. small lajatang (many)\n10. cheap spear (one)\n11. cheap spear (few)\n12. cheap spear (many)\n13. legendary spear of kai (one)\n14. expensive spear (one)\n15. expensive spear (few)\n16. expensive spear (many)\n17. ceremonial spear with gems (one)\n18. ceremonial spear with gems (few)\n19. ceremonial spear with gems (many)\n20. uncommon short spear of reaching (one)\n21. uncommon short spear of reaching (few)\n22. uncommon short spear of reaching (many)\n23. strong splitting spear (one)\n24. strong splitting spear (few)\n25. strong splitting spear (many)\n26. spiked halberd (one)\n27. spiked halberd (few)\n28. spiked halberd (many)\n29. fancy long bardiche (one)\n30. fancy long bardiche (few)\n31. fancy long bardiche (many)\n32. strong halberd (one)\n33. strong halberd (few)\n34. strong halberd (many)\n35. strong spear (one)\n36. strong spear (few)\n37. strong spear (many)\n38. strong spiked halberd (one)\n39. strong spiked halberd (few)\n40. strong spiked halberd (many)\n41. rare trident of moonlight (one)\n42. legendary holy trident of electricity (one)\n43. legendary arc blade (one)\n44. cheap bardiche (one)\n45. cheap bardiche (few)\n46. cheap bardiche (many)\n47. legendary solid gold claymore (one)\n48. bloodbane (one)\n49. bloodbane (few)\n50. bloodbane (many)",
+  "order": [
+    "1. simple trident (one)",
+    "2. simple trident (few)",
+    "3. simple trident (many)",
+    "4. small glaive (one)",
+    "5. small glaive (few)",
+    "6. small glaive (many)",
+    "7. small lajatang (one)",
+    "8. small lajatang (few)",
+    "9. small lajatang (many)",
+    "10. cheap spear (one)",
+    "11. cheap spear (few)",
+    "12. cheap spear (many)",
+    "13. legendary spear of kai (one)",
+    "14. expensive spear (one)",
+    "15. expensive spear (few)",
+    "16. expensive spear (many)",
+    "17. ceremonial spear with gems (one)",
+    "18. ceremonial spear with gems (few)",
+    "19. ceremonial spear with gems (many)",
+    "20. uncommon short spear of reaching (one)",
+    "21. uncommon short spear of reaching (few)",
+    "22. uncommon short spear of reaching (many)",
+    "23. strong splitting spear (one)",
+    "24. strong splitting spear (few)",
+    "25. strong splitting spear (many)",
+    "26. spiked halberd (one)",
+    "27. spiked halberd (few)",
+    "28. spiked halberd (many)",
+    "29. fancy long bardiche (one)",
+    "30. fancy long bardiche (few)",
+    "31. fancy long bardiche (many)",
+    "32. strong halberd (one)",
+    "33. strong halberd (few)",
+    "34. strong halberd (many)",
+    "35. strong spear (one)",
+    "36. strong spear (few)",
+    "37. strong spear (many)",
+    "38. strong spiked halberd (one)",
+    "39. strong spiked halberd (few)",
+    "40. strong spiked halberd (many)",
+    "41. rare trident of moonlight (one)",
+    "42. legendary holy trident of electricity (one)",
+    "43. legendary arc blade (one)",
+    "44. cheap bardiche (one)",
+    "45. cheap bardiche (few)",
+    "46. cheap bardiche (many)",
+    "47. legendary solid gold claymore (one)",
+    "48. bloodbane (one)",
+    "49. bloodbane (few)",
+    "50. bloodbane (many)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 4301,
+      "itemIndex": 1812,
+      "itemNumber": 1813,
+      "itemName": "simple trident",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/simple_trident.png",
+      "output": "public/game-assets/items/weapons/spears/simple_trident.png",
+      "prompt": "Create exactly one clear simple trident, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: simple trident. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 4302,
+      "itemIndex": 1812,
+      "itemNumber": 1813,
+      "itemName": "simple trident",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/simple_trident.png",
+      "output": "public/game-assets/items/weapons/spears/simple_trident_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated simple trident, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: simple trident. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 4303,
+      "itemIndex": 1812,
+      "itemNumber": 1813,
+      "itemName": "simple trident",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/simple_trident.png",
+      "output": "public/game-assets/items/weapons/spears/simple_trident_many.png",
+      "prompt": "Create a very abundant quantity of simple trident, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: simple trident. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 4304,
+      "itemIndex": 1813,
+      "itemNumber": 1814,
+      "itemName": "small glaive",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/small_glaive.png",
+      "output": "public/game-assets/items/weapons/spears/small_glaive.png",
+      "prompt": "Create exactly one clear small glaive, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: small glaive. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 4305,
+      "itemIndex": 1813,
+      "itemNumber": 1814,
+      "itemName": "small glaive",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/small_glaive.png",
+      "output": "public/game-assets/items/weapons/spears/small_glaive_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated small glaive, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: small glaive. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 4306,
+      "itemIndex": 1813,
+      "itemNumber": 1814,
+      "itemName": "small glaive",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/small_glaive.png",
+      "output": "public/game-assets/items/weapons/spears/small_glaive_many.png",
+      "prompt": "Create a very abundant quantity of small glaive, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: small glaive. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 4307,
+      "itemIndex": 1814,
+      "itemNumber": 1815,
+      "itemName": "small lajatang",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/small_lajatang.png",
+      "output": "public/game-assets/items/weapons/spears/small_lajatang.png",
+      "prompt": "Create exactly one clear small lajatang, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: small lajatang. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 4308,
+      "itemIndex": 1814,
+      "itemNumber": 1815,
+      "itemName": "small lajatang",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/small_lajatang.png",
+      "output": "public/game-assets/items/weapons/spears/small_lajatang_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated small lajatang, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: small lajatang. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 4309,
+      "itemIndex": 1814,
+      "itemNumber": 1815,
+      "itemName": "small lajatang",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/small_lajatang.png",
+      "output": "public/game-assets/items/weapons/spears/small_lajatang_many.png",
+      "prompt": "Create a very abundant quantity of small lajatang, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: small lajatang. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 4310,
+      "itemIndex": 1815,
+      "itemNumber": 1816,
+      "itemName": "cheap spear",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/cheap_spear.png",
+      "output": "public/game-assets/items/weapons/spears/cheap_spear.png",
+      "prompt": "Create exactly one clear spear, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: cheap spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 4311,
+      "itemIndex": 1815,
+      "itemNumber": 1816,
+      "itemName": "cheap spear",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/cheap_spear.png",
+      "output": "public/game-assets/items/weapons/spears/cheap_spear_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated spear, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: cheap spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 4312,
+      "itemIndex": 1815,
+      "itemNumber": 1816,
+      "itemName": "cheap spear",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/cheap_spear.png",
+      "output": "public/game-assets/items/weapons/spears/cheap_spear_many.png",
+      "prompt": "Create a very abundant quantity of spear, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: cheap spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 4313,
+      "itemIndex": 1816,
+      "itemNumber": 1817,
+      "itemName": "legendary spear of kai",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous",
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/legendary_spear_of_kai.png",
+      "output": "public/game-assets/items/weapons/spears/legendary_spear_of_kai.png",
+      "prompt": "Create exactly one clear spear of kai, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: legendary spear of kai. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, legendary, rack, rusts, weapons, spears, weapon, equipment, crafted, common, fine, masterwork. It should feel medium-sized.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 4314,
+      "itemIndex": 1817,
+      "itemNumber": 1818,
+      "itemName": "expensive spear",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/expensive_spear.png",
+      "output": "public/game-assets/items/weapons/spears/expensive_spear.png",
+      "prompt": "Create exactly one clear expensive spear, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: expensive spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 4315,
+      "itemIndex": 1817,
+      "itemNumber": 1818,
+      "itemName": "expensive spear",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/expensive_spear.png",
+      "output": "public/game-assets/items/weapons/spears/expensive_spear_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated expensive spear, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: expensive spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 4316,
+      "itemIndex": 1817,
+      "itemNumber": 1818,
+      "itemName": "expensive spear",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/expensive_spear.png",
+      "output": "public/game-assets/items/weapons/spears/expensive_spear_many.png",
+      "prompt": "Create a very abundant quantity of expensive spear, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: expensive spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 4317,
+      "itemIndex": 1818,
+      "itemNumber": 1819,
+      "itemName": "ceremonial spear with gems",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "gem",
+        "raw"
+      ],
+      "family": "gem",
+      "subfamily": "spears",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/ceremonial_spear_with_gems.png",
+      "output": "public/game-assets/items/weapons/spears/ceremonial_spear_with_gems.png",
+      "prompt": "Create exactly one clear ceremonial spear with gems, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ceremonial spear with gems. Family: gem. Subfamily: spears. Trade role: raw. Bulk profile: crate. Category cues: gem, spears, raw, rare, crate, none, weapons, spears, gem, raw, mined, common, fine, masterwork. It should feel medium-sized.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 4318,
+      "itemIndex": 1818,
+      "itemNumber": 1819,
+      "itemName": "ceremonial spear with gems",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "gem",
+        "raw"
+      ],
+      "family": "gem",
+      "subfamily": "spears",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/ceremonial_spear_with_gems.png",
+      "output": "public/game-assets/items/weapons/spears/ceremonial_spear_with_gems_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ceremonial spear with gems, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ceremonial spear with gems. Family: gem. Subfamily: spears. Trade role: raw. Bulk profile: crate. Category cues: gem, spears, raw, rare, crate, none, weapons, spears, gem, raw, mined, common, fine, masterwork. It should feel medium-sized.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 4319,
+      "itemIndex": 1818,
+      "itemNumber": 1819,
+      "itemName": "ceremonial spear with gems",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "gem",
+        "raw"
+      ],
+      "family": "gem",
+      "subfamily": "spears",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/ceremonial_spear_with_gems.png",
+      "output": "public/game-assets/items/weapons/spears/ceremonial_spear_with_gems_many.png",
+      "prompt": "Create a very abundant quantity of ceremonial spear with gems, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ceremonial spear with gems. Family: gem. Subfamily: spears. Trade role: raw. Bulk profile: crate. Category cues: gem, spears, raw, rare, crate, none, weapons, spears, gem, raw, mined, common, fine, masterwork. It should feel medium-sized.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 4320,
+      "itemIndex": 1819,
+      "itemNumber": 1820,
+      "itemName": "uncommon short spear of reaching",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/uncommon_short_spear_of_reaching.png",
+      "output": "public/game-assets/items/weapons/spears/uncommon_short_spear_of_reaching.png",
+      "prompt": "Create exactly one clear short spear of reaching, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: uncommon short spear of reaching. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, uncommon, rack, rusts, weapons, spears, weapon, equipment, crafted, common, fine, hazardous. It should feel medium-sized.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 4321,
+      "itemIndex": 1819,
+      "itemNumber": 1820,
+      "itemName": "uncommon short spear of reaching",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/uncommon_short_spear_of_reaching.png",
+      "output": "public/game-assets/items/weapons/spears/uncommon_short_spear_of_reaching_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated short spear of reaching, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: uncommon short spear of reaching. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, uncommon, rack, rusts, weapons, spears, weapon, equipment, crafted, common, fine, hazardous. It should feel medium-sized.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 4322,
+      "itemIndex": 1819,
+      "itemNumber": 1820,
+      "itemName": "uncommon short spear of reaching",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/uncommon_short_spear_of_reaching.png",
+      "output": "public/game-assets/items/weapons/spears/uncommon_short_spear_of_reaching_many.png",
+      "prompt": "Create a very abundant quantity of short spear of reaching, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: uncommon short spear of reaching. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, uncommon, rack, rusts, weapons, spears, weapon, equipment, crafted, common, fine, hazardous. It should feel medium-sized.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 4323,
+      "itemIndex": 1820,
+      "itemNumber": 1821,
+      "itemName": "strong splitting spear",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous",
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_splitting_spear.png",
+      "output": "public/game-assets/items/weapons/spears/strong_splitting_spear.png",
+      "prompt": "Create exactly one clear strong splitting spear, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: strong splitting spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, uncommon, rack, rusts, weapons, spears, weapon, equipment, crafted, common, fine, hazardous. It should feel medium-sized.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 4324,
+      "itemIndex": 1820,
+      "itemNumber": 1821,
+      "itemName": "strong splitting spear",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous",
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_splitting_spear.png",
+      "output": "public/game-assets/items/weapons/spears/strong_splitting_spear_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated strong splitting spear, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: strong splitting spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, uncommon, rack, rusts, weapons, spears, weapon, equipment, crafted, common, fine, hazardous. It should feel medium-sized.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 4325,
+      "itemIndex": 1820,
+      "itemNumber": 1821,
+      "itemName": "strong splitting spear",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous",
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_splitting_spear.png",
+      "output": "public/game-assets/items/weapons/spears/strong_splitting_spear_many.png",
+      "prompt": "Create a very abundant quantity of strong splitting spear, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: strong splitting spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, uncommon, rack, rusts, weapons, spears, weapon, equipment, crafted, common, fine, hazardous. It should feel medium-sized.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 4326,
+      "itemIndex": 1821,
+      "itemNumber": 1822,
+      "itemName": "spiked halberd",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/spiked_halberd.png",
+      "output": "public/game-assets/items/weapons/spears/spiked_halberd.png",
+      "prompt": "Create exactly one clear spiked halberd, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: spiked halberd. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 4327,
+      "itemIndex": 1821,
+      "itemNumber": 1822,
+      "itemName": "spiked halberd",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/spiked_halberd.png",
+      "output": "public/game-assets/items/weapons/spears/spiked_halberd_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated spiked halberd, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: spiked halberd. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 4328,
+      "itemIndex": 1821,
+      "itemNumber": 1822,
+      "itemName": "spiked halberd",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/spiked_halberd.png",
+      "output": "public/game-assets/items/weapons/spears/spiked_halberd_many.png",
+      "prompt": "Create a very abundant quantity of spiked halberd, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: spiked halberd. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 4329,
+      "itemIndex": 1822,
+      "itemNumber": 1823,
+      "itemName": "fancy long bardiche",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/fancy_long_bardiche.png",
+      "output": "public/game-assets/items/weapons/spears/fancy_long_bardiche.png",
+      "prompt": "Create exactly one clear fancy long bardiche, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fancy long bardiche. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 4330,
+      "itemIndex": 1822,
+      "itemNumber": 1823,
+      "itemName": "fancy long bardiche",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/fancy_long_bardiche.png",
+      "output": "public/game-assets/items/weapons/spears/fancy_long_bardiche_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated fancy long bardiche, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: fancy long bardiche. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 4331,
+      "itemIndex": 1822,
+      "itemNumber": 1823,
+      "itemName": "fancy long bardiche",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/fancy_long_bardiche.png",
+      "output": "public/game-assets/items/weapons/spears/fancy_long_bardiche_many.png",
+      "prompt": "Create a very abundant quantity of fancy long bardiche, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: fancy long bardiche. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 4332,
+      "itemIndex": 1823,
+      "itemNumber": 1824,
+      "itemName": "strong halberd",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_halberd.png",
+      "output": "public/game-assets/items/weapons/spears/strong_halberd.png",
+      "prompt": "Create exactly one clear strong halberd, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: strong halberd. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 4333,
+      "itemIndex": 1823,
+      "itemNumber": 1824,
+      "itemName": "strong halberd",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_halberd.png",
+      "output": "public/game-assets/items/weapons/spears/strong_halberd_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated strong halberd, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: strong halberd. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 4334,
+      "itemIndex": 1823,
+      "itemNumber": 1824,
+      "itemName": "strong halberd",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_halberd.png",
+      "output": "public/game-assets/items/weapons/spears/strong_halberd_many.png",
+      "prompt": "Create a very abundant quantity of strong halberd, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: strong halberd. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 4335,
+      "itemIndex": 1824,
+      "itemNumber": 1825,
+      "itemName": "strong spear",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_spear_1824.png",
+      "output": "public/game-assets/items/weapons/spears/strong_spear_1824.png",
+      "prompt": "Create exactly one clear strong spear, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: strong spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 4336,
+      "itemIndex": 1824,
+      "itemNumber": 1825,
+      "itemName": "strong spear",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_spear_1824.png",
+      "output": "public/game-assets/items/weapons/spears/strong_spear_1824_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated strong spear, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: strong spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 4337,
+      "itemIndex": 1824,
+      "itemNumber": 1825,
+      "itemName": "strong spear",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_spear_1824.png",
+      "output": "public/game-assets/items/weapons/spears/strong_spear_1824_many.png",
+      "prompt": "Create a very abundant quantity of strong spear, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: strong spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 4338,
+      "itemIndex": 1825,
+      "itemNumber": 1826,
+      "itemName": "strong spiked halberd",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_spiked_halberd.png",
+      "output": "public/game-assets/items/weapons/spears/strong_spiked_halberd.png",
+      "prompt": "Create exactly one clear strong spiked halberd, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: strong spiked halberd. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, uncommon, rack, rusts, weapons, spears, weapon, equipment, crafted, common, fine, hazardous. It should feel medium-sized.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 4339,
+      "itemIndex": 1825,
+      "itemNumber": 1826,
+      "itemName": "strong spiked halberd",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_spiked_halberd.png",
+      "output": "public/game-assets/items/weapons/spears/strong_spiked_halberd_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated strong spiked halberd, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: strong spiked halberd. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, uncommon, rack, rusts, weapons, spears, weapon, equipment, crafted, common, fine, hazardous. It should feel medium-sized.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 4340,
+      "itemIndex": 1825,
+      "itemNumber": 1826,
+      "itemName": "strong spiked halberd",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/strong_spiked_halberd.png",
+      "output": "public/game-assets/items/weapons/spears/strong_spiked_halberd_many.png",
+      "prompt": "Create a very abundant quantity of strong spiked halberd, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: strong spiked halberd. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, uncommon, rack, rusts, weapons, spears, weapon, equipment, crafted, common, fine, hazardous. It should feel medium-sized.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 4341,
+      "itemIndex": 1826,
+      "itemNumber": 1827,
+      "itemName": "rare trident of moonlight",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous",
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/rare_trident_of_moonlight.png",
+      "output": "public/game-assets/items/weapons/spears/rare_trident_of_moonlight.png",
+      "prompt": "Create exactly one clear trident of moonlight, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: rare trident of moonlight. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, rare, rack, rusts, weapons, spears, weapon, equipment, crafted, common, fine, masterwork. It should feel medium-sized.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 4342,
+      "itemIndex": 1827,
+      "itemNumber": 1828,
+      "itemName": "legendary holy trident of electricity",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "weapons",
+        "spears",
+        "magic",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous",
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/spears/legendary_holy_trident_of_electricity.png",
+      "output": "public/game-assets/items/weapons/spears/legendary_holy_trident_of_electricity.png",
+      "prompt": "Create exactly one clear holy trident of electricity, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: legendary holy trident of electricity. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, legendary, rack, rusts, weapons, spears, magic, weapon, equipment, crafted, common, fine. It should feel medium-sized.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 4343,
+      "itemIndex": 1828,
+      "itemNumber": 1829,
+      "itemName": "legendary arc blade",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "weapons",
+        "swords",
+        "magic",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "swords",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous",
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/swords/legendary_arc_blade.png",
+      "output": "public/game-assets/items/weapons/swords/legendary_arc_blade.png",
+      "prompt": "Create exactly one clear arc blade, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: legendary arc blade. Family: weapon. Subfamily: swords. Trade role: equipment. Bulk profile: rack. Category cues: weapon, swords, equipment, legendary, rack, rusts, weapons, swords, magic, weapon, equipment, crafted, common, fine. It should feel medium-sized.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 4344,
+      "itemIndex": 1829,
+      "itemNumber": 1830,
+      "itemName": "cheap bardiche",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/swords/cheap_bardiche.png",
+      "output": "public/game-assets/items/weapons/swords/cheap_bardiche.png",
+      "prompt": "Create exactly one clear bardiche, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: cheap bardiche. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 4345,
+      "itemIndex": 1829,
+      "itemNumber": 1830,
+      "itemName": "cheap bardiche",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/swords/cheap_bardiche.png",
+      "output": "public/game-assets/items/weapons/swords/cheap_bardiche_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bardiche, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: cheap bardiche. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 4346,
+      "itemIndex": 1829,
+      "itemNumber": 1830,
+      "itemName": "cheap bardiche",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "spears",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/swords/cheap_bardiche.png",
+      "output": "public/game-assets/items/weapons/swords/cheap_bardiche_many.png",
+      "prompt": "Create a very abundant quantity of bardiche, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: cheap bardiche. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapons, spears, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 4347,
+      "itemIndex": 1830,
+      "itemNumber": 1831,
+      "itemName": "legendary solid gold claymore",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "weapons",
+        "swords",
+        "gold",
+        "ore",
+        "raw"
+      ],
+      "family": "ore",
+      "subfamily": "swords",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "gold"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/swords/legendary_solid_gold_claymore.png",
+      "output": "public/game-assets/items/weapons/swords/legendary_solid_gold_claymore.png",
+      "prompt": "Create exactly one clear solid gold claymore, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: legendary solid gold claymore. Family: ore. Subfamily: swords. Trade role: raw. Bulk profile: sack. Category cues: ore, swords, raw, legendary, sack, none, weapons, swords, gold, ore, raw, mined, common, fine. It should feel medium-sized.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 4348,
+      "itemIndex": 1831,
+      "itemNumber": 1832,
+      "itemName": "bloodbane",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "swords",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "swords",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/swords/bloodbane.png",
+      "output": "public/game-assets/items/weapons/swords/bloodbane.png",
+      "prompt": "Create exactly one clear bloodbane, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: bloodbane. Family: weapon. Subfamily: swords. Trade role: equipment. Bulk profile: rack. Category cues: weapon, swords, equipment, common, rack, rusts, weapons, swords, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 4349,
+      "itemIndex": 1831,
+      "itemNumber": 1832,
+      "itemName": "bloodbane",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "swords",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "swords",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/swords/bloodbane.png",
+      "output": "public/game-assets/items/weapons/swords/bloodbane_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bloodbane, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: bloodbane. Family: weapon. Subfamily: swords. Trade role: equipment. Bulk profile: rack. Category cues: weapon, swords, equipment, common, rack, rusts, weapons, swords, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 4350,
+      "itemIndex": 1831,
+      "itemNumber": 1832,
+      "itemName": "bloodbane",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapons",
+        "swords",
+        "weapon",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "swords",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapons/swords/bloodbane.png",
+      "output": "public/game-assets/items/weapons/swords/bloodbane_many.png",
+      "prompt": "Create a very abundant quantity of bloodbane, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: bloodbane. Family: weapon. Subfamily: swords. Trade role: equipment. Bulk profile: rack. Category cues: weapon, swords, equipment, common, rack, rusts, weapons, swords, weapon, equipment, crafted, common, hazardous, war_good. It should feel medium-sized.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

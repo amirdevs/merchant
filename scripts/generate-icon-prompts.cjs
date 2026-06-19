@@ -24,24 +24,30 @@ const sheetPrompt = [
   "Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
 ].join(" ");
 
-function isCoin(item) {
-  return ["gold coins", "silver coins", "copper coins"].includes(item.name);
+function categoryValues(item) {
+  return [
+    item.family,
+    item.subfamily,
+    item.tradeRole,
+    item.rarityBand,
+    item.bulkProfile,
+    item.decayProfile,
+    ...(item.tags || []),
+    ...(item.sources || []),
+    ...(item.qualityBands || []),
+    ...(item.storageNeeds || []),
+    ...(item.marketBehavior || []),
+    ...Object.values(item.categoryAxes || {}).flat(),
+  ].filter(Boolean);
 }
 
 function variantReason(item) {
   if (item.unique) return null;
-  const iconFile = item.iconFile || "";
-  if (isCoin(item)) return "coin stack";
-  if ((item.tags || []).includes("food")) return "food quantity";
-  if (/^storage\/(barrels|crates|sacks)\//.test(iconFile)) return "container fill";
-  if (/^supplies\/(ingots|ore|rocks)\//.test(iconFile)) return "raw material pile";
-  if (/^fabrics\/(fibers|threads|linen|silk)\//.test(iconFile)) return "fabric bundle";
-  if (/^alchemy\/(potions|poison|remedies|solutions|aromatic)\//.test(iconFile)) return "alchemy group";
-  if (/^drinks\//.test(iconFile)) return "drink group";
-  if (/^paints\//.test(iconFile)) return "paint group";
-  if (/^weapons\/arrows\//.test(iconFile)) return "arrow bundle";
-  if (/^botanicals\/(seeds|leafs)\//.test(iconFile)) return "botanical bundle";
-  if (/^jewlery\/(gems|crystals)\//.test(iconFile)) return "gem crystal group";
+  const forms = item.forms || [];
+  if (!(forms.includes("few") && forms.includes("many"))) return null;
+  if (item.family === "currency") return "coin stack";
+  if (item.bulkProfile) return `${item.bulkProfile} quantity`;
+  if (item.family) return `${item.family} quantity`;
   return null;
 }
 
@@ -70,8 +76,8 @@ function sizeCue(item) {
 
 function promptFor(item, variant, reason) {
   const baseName = cleanedName(item);
-  const tags = (item.tags || []).slice(0, 6).join(", ");
-  const shared = `Item: ${item.name}. Category tags: ${tags}. ${sizeCue(item)}${rarityCue(item)}`;
+  const categories = categoryValues(item).slice(0, 14).join(", ");
+  const shared = `Item: ${item.displayName || item.name}. Family: ${item.family || "uncategorized"}. Subfamily: ${item.subfamily || "uncategorized"}. Trade role: ${item.tradeRole || "unspecified"}. Bulk profile: ${item.bulkProfile || "single"}. Category cues: ${categories}. ${sizeCue(item)}${rarityCue(item)}`;
 
   if (variant === "single") {
     return `Create exactly one clear ${baseName}, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. ${shared}`;
@@ -122,6 +128,18 @@ for (const item of items) {
       variantPolicy: reason ? "single_few_many" : "single",
       variantReason: reason,
       tags: item.tags || [],
+      family: item.family,
+      subfamily: item.subfamily,
+      tradeRole: item.tradeRole,
+      categoryAxes: item.categoryAxes || {},
+      forms: item.forms || ["one"],
+      sources: item.sources || [],
+      rarityBand: item.rarityBand,
+      qualityBands: item.qualityBands || [],
+      bulkProfile: item.bulkProfile,
+      storageNeeds: item.storageNeeds || [],
+      decayProfile: item.decayProfile,
+      marketBehavior: item.marketBehavior || [],
       size: item.size,
       weight: item.weight,
       rarity: item.rarity,

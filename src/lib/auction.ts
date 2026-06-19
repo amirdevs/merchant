@@ -1,4 +1,5 @@
 import type { Item, Marketplace } from "@/data/types";
+import { itemMatchesCatalogToken } from "@/lib/item-catalog";
 
 export type AuctionLot = {
   id: string;
@@ -33,7 +34,8 @@ function isAuctionCandidate(item: Item) {
   return !item.unique
     && item.loafValue >= 2
     && item.loafValue <= 400
-    && !item.tags.includes("coins")
+    && !itemMatchesCatalogToken(item, "currency")
+    && !itemMatchesCatalogToken(item, "coins")
     && !item.name.toLowerCase().includes("coin");
 }
 
