@@ -1,5 +1,5 @@
 import { useRef, useState, type DragEvent, type KeyboardEvent, type MouseEvent } from "react";
-import { Lock, MousePointer2 } from "lucide-react";
+import { Lock } from "lucide-react";
 import type { InventoryEntry, Item } from "@/data/types";
 import { itemIconAsset } from "@/lib/assets";
 import { items, kingdoms } from "@/lib/game";
@@ -83,9 +83,23 @@ function cargoSummary(rows: InventoryEntry[], mode: InventoryPanelMode) {
 }
 
 function physicalClass(itemSize = 0, itemWeight = 0, variant: InventoryPanelProps["variant"]) {
-  void itemSize;
-  void itemWeight;
-  void variant;
+  const bulk = itemSize + itemWeight;
+  const heavy = itemWeight >= 12;
+
+  if (variant === "compact") {
+    if (bulk >= 30) return "basis-[7rem] min-h-[6.25rem] items-end";
+    if (bulk >= 20 || heavy) return "basis-[6rem] min-h-[5.5rem] items-end";
+    if (bulk >= 10) return "basis-[5rem] min-h-[4.75rem]";
+    return "basis-[4rem] min-h-[4.25rem]";
+  }
+
+  if (variant === "management") {
+    if (bulk >= 30) return "basis-[9rem] min-h-[9rem]";
+    if (bulk >= 20 || heavy) return "basis-[8rem] min-h-[8rem]";
+    if (bulk >= 10) return "basis-[7rem] min-h-[7rem]";
+    return "basis-[5.5rem] min-h-[6rem]";
+  }
+
   return "";
 }
 
@@ -128,6 +142,8 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
   const dropTimerRef = useRef<number | null>(null);
   const hoverTimerRef = useRef<number | null>(null);
   const hoverCloseTimerRef = useRef<number | null>(null);
+  const dragPreviewRef = useRef<HTMLElement | null>(null);
+  const previousCursorRef = useRef("");
   const noticeItem = noticeEntry ? itemFor(noticeEntry) : null;
   const notice = noticeEntry && noticeItem ? itemNotice(noticeItem, noticeEntry, illegalTags) : null;
 
@@ -141,7 +157,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
     return { owner: ownerId, mode, itemIndex: entry.itemIndex };
   }
 
-  function onDragStart(event: DragEvent<HTMLElement>, entry: InventoryEntry) {
+  function onDragStart(event: DragEvent<HTMLElement>, entry: InventoryEntry, item?: Item, icon?: string) {
     clearHoverTimers();
     setHoverCard(null);
     setMouseGuide(null);
@@ -149,6 +165,65 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
     event.dataTransfer.effectAllowed = "move";
     event.dataTransfer.setData(dragType, payload);
     event.dataTransfer.setData(dragFallbackType, payload);
+
+    const preview = document.createElement("div");
+    preview.style.cssText = [
+      "position:fixed",
+      "left:-1000px",
+      "top:-1000px",
+      "width:220px",
+      "min-height:170px",
+      "display:grid",
+      "place-items:center",
+      "padding:14px 14px 36px",
+      "border:3px solid #d6aa50",
+      "border-radius:18px",
+      "background:radial-gradient(circle at 50% 35%,#fff7cc 0%,#d7a957 52%,#4a2910 100%)",
+      "box-shadow:0 18px 36px rgba(0,0,0,.48),inset 0 0 0 3px rgba(82,45,14,.65)",
+      "color:#2a1708",
+      "font-family:Georgia,serif",
+      "pointer-events:none",
+      "transform:rotate(-2deg)",
+    ].join(";");
+    preview.setAttribute("aria-hidden", "true");
+
+    if (icon) {
+      const image = document.createElement("img");
+      image.src = icon;
+      image.alt = "";
+      image.style.cssText = "width:88px;height:88px;object-fit:contain;filter:drop-shadow(0 8px 7px rgba(0,0,0,.4));";
+      preview.appendChild(image);
+    }
+
+    const label = document.createElement("strong");
+    label.textContent = item?.name || `Item ${entry.itemIndex}`;
+    label.style.cssText = "max-width:190px;white-space:normal;overflow-wrap:anywhere;font-size:15px;line-height:1.15;text-align:center;";
+    preview.appendChild(label);
+
+    const quantity = document.createElement("span");
+    quantity.textContent = `Full stack ×${quantityFor(entry, mode)}`;
+    quantity.style.cssText = "position:absolute;right:-10px;top:-10px;padding:5px 9px;border:2px solid #5a3415;border-radius:999px;background:#fff1a8;font:900 13px system-ui;color:#281507;box-shadow:0 4px 10px rgba(0,0,0,.35);";
+    preview.appendChild(quantity);
+
+    const dragHint = document.createElement("span");
+    dragHint.textContent = "✥ Move stack";
+    dragHint.style.cssText = "position:absolute;left:9px;bottom:7px;padding:3px 6px;border-radius:6px;background:rgba(42,23,8,.88);font:800 10px system-ui;text-transform:uppercase;letter-spacing:.04em;color:#fff1b5;";
+    preview.appendChild(dragHint);
+
+    document.body.appendChild(preview);
+    dragPreviewRef.current = preview;
+    event.dataTransfer.setDragImage(preview, 110, 180);
+
+    previousCursorRef.current = document.documentElement.style.cursor;
+    document.documentElement.style.cursor = "grabbing";
+  }
+
+  function onDragEnd() {
+    document.documentElement.style.cursor = previousCursorRef.current;
+    previousCursorRef.current = "";
+    dragPreviewRef.current?.remove();
+    dragPreviewRef.current = null;
+    setDropStatus("idle");
   }
 
   function onDrop(event: DragEvent<HTMLElement>) {
@@ -166,7 +241,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
         flashDropStatus("invalid");
         return;
       }
-      onMove(entry, mode === "offer" ? 1 : -1);
+      onMove(entry, mode === "offer" ? entry.quantity : -entry.quantity);
       flashDropStatus("valid");
     } catch {
       flashDropStatus("invalid");
@@ -183,17 +258,26 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
 
   function handleItemClick(event: MouseEvent<HTMLElement>, entry: InventoryEntry) {
     if (event.button !== 0) return;
+    clearHoverTimers();
+    setHoverCard(null);
+    setMouseGuide(null);
     onMove(entry, moveAmountFromInput(event, mode));
   }
 
   function handleItemContextMenu(event: MouseEvent<HTMLElement>, entry: InventoryEntry) {
     event.preventDefault();
+    clearHoverTimers();
+    setHoverCard(null);
+    setMouseGuide(null);
     onMoveAll(entry);
   }
 
   function handleItemAuxClick(event: MouseEvent<HTMLElement>, entry: InventoryEntry) {
     if (event.button !== 1) return;
     event.preventDefault();
+    clearHoverTimers();
+    setHoverCard(null);
+    setMouseGuide(null);
     onMove(entry, "half");
   }
 
@@ -252,10 +336,11 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
         <div
           className={cn(
             "flex flex-wrap content-start items-start rounded-md border shadow-inner",
-            variant === "compact" ? "h-full min-h-0 gap-px overflow-hidden p-px" : "max-h-[67vh] gap-1 overflow-auto p-1",
+            variant === "compact" ? "h-full min-h-0 gap-1 overflow-hidden p-1" : "max-h-[67vh] gap-2 overflow-auto p-2",
             darkPanel
               ? "border-[#d0a65a]/35 bg-black/25 shadow-black/35"
               : "border-[#9a7138]/55 bg-[#fff6d7]/35 shadow-[#6c4418]/20",
+            dropStatus === "valid" && "cursor-move",
             dropStatus === "valid" && "ring-2 ring-[#9ce277] ring-offset-2 ring-offset-[#2a1809]",
             dropStatus === "invalid" && "animate-pulse ring-2 ring-[#d5523f] ring-offset-2 ring-offset-[#2a1809]",
             bodyClassName
@@ -295,7 +380,8 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                   quantity={shownQuantity}
                   selected={(entry.protected || entry.highlighted) && mode !== "offer"}
                   draggable
-                  onDragStart={(event) => onDragStart(event, entry)}
+                  onDragStart={(event) => onDragStart(event, entry, item, icon)}
+                  onDragEnd={onDragEnd}
                   onClick={(event) => handleItemClick(event, entry)}
                   onKeyDown={(event) => {
                     if (event.key === "Enter" || event.key === " ") {
@@ -307,13 +393,12 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
                   onAuxClick={(event) => handleItemAuxClick(event, entry)}
                   onDoubleClick={(event) => {
                     event.preventDefault();
-                    onMoveAll(entry);
                   }}
                   aria-label={`${item?.name || `Item ${entry.itemIndex}`}. Left click moves one. Right click moves all or clears. Middle click splits half. Shift-left moves half. Alt-left moves ten. Drag between stock and offer.`}
                 />
                 {allowProtect && onToggleProtect && mode !== "offer" ? (
                   <button
-                    className="absolute right-1 top-1 grid h-5 w-5 place-items-center rounded-full border border-[#5a3b18] bg-[#f1dcae] text-[#2a1a0c] opacity-0 shadow transition group-hover:opacity-100 focus-visible:opacity-100"
+                    className="absolute left-1 top-1 grid h-5 w-5 place-items-center rounded-full border border-[#5a3b18] bg-[#f1dcae] text-[#2a1a0c] opacity-0 shadow transition group-hover:opacity-100 focus-visible:opacity-100"
                     type="button"
                     onClick={(event) => {
                       event.stopPropagation();
@@ -338,6 +423,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
       <div
         className={cn(
           "grid max-h-[360px] gap-2 overflow-auto pr-1",
+          dropStatus === "valid" && "cursor-move",
           dropStatus === "valid" && "rounded-sm ring-2 ring-[#9ce277]",
           dropStatus === "invalid" && "animate-pulse rounded-sm ring-2 ring-[#d5523f]",
           bodyClassName
@@ -354,7 +440,7 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
           return (
             <LedgerRow
               key={`${panelTitle}-${entry.itemIndex}`}
-              className="text-[#2a1a0c]"
+              className="text-[#2a1a0c] transition duration-150"
               selected={(entry.protected || entry.highlighted) && mode !== "offer"}
               leading={
                 <span className="relative">
@@ -396,11 +482,11 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
               onAuxClick={(event) => handleItemAuxClick(event, entry)}
               onDoubleClick={(event) => {
                 event.preventDefault();
-                onMoveAll(entry);
               }}
               aria-label={`${item?.name || `Item ${entry.itemIndex}`}. Left click moves one. Right click moves all or clears. Middle click splits half. Shift-left moves half. Alt-left moves ten. Drag between stock and offer.`}
               draggable
-              onDragStart={(event) => onDragStart(event, entry)}
+              onDragStart={(event) => onDragStart(event, entry, item, icon)}
+              onDragEnd={onDragEnd}
             />
           );
         }) : <div className="border border-[#9a7138]/45 bg-[#fff6d7]/40 p-3 text-sm text-[#725331]">No visible items here.</div>}
@@ -519,10 +605,15 @@ export function InventoryPanel({ title: panelTitle, subtitle, inventory, owner, 
 }
 
 function MouseAction({ button, action }: { button: string; action: string }) {
+  const activeButton = button === "L" ? "left" : button === "M" ? "middle" : "right";
+
   return (
     <span className="flex items-center gap-0.5 whitespace-nowrap">
-      <MousePointer2 size={11} />
-      <strong className="text-[#ffd975]">{button}</strong>
+      <span className="grid h-4 w-3 grid-cols-2 grid-rows-[6px_1fr] overflow-hidden rounded-t-full rounded-b-md border border-[#fff3bd]/75" aria-hidden="true">
+        <span className={cn("border-b border-r border-[#fff3bd]/45", activeButton === "left" && "bg-[#ffd975]")} />
+        <span className={cn("border-b border-[#fff3bd]/45", activeButton === "right" && "bg-[#ffd975]")} />
+        <span className={cn("col-span-2", activeButton === "middle" && "bg-[#ffd975]")} />
+      </span>
       <span>{action}</span>
     </span>
   );
