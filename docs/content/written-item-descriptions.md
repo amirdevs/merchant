@@ -5,8 +5,8 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
 ## Scope
 
 - Actual game items in `src/data/generated/items.json`: **2206**
-- Hand-written static entries completed in this branch: **442**
-- Remaining items to write: **1764**
+- Hand-written static entries completed in this branch: **492**
+- Remaining items to write: **1714**
 - Completed batches:
   - **items 0–43**: currency, the Sunwake Harbor share, Painted Coast annals, local chronicles, primers, almanacs, and practical directories.
   - **items 44–91**: Crowncards books, magic/luck books, battle reports, trade essays, field guides, letters, and first gem items.
@@ -17,6 +17,7 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
   - **items 292–341**: giant insects, moths, hive queens/workers, hounds, wolves, bats, rats, bears, megafauna, reptiles, and snakes.
   - **items 342–391**: remaining snakes and worms, farm animals, small birds, horse barding, dragon armors, gauntlets, war gloves, and first helmets.
   - **items 392–441**: helmets, mail shirts, plate armor, leather armor, named faction armor, exotic breastplates, iron boots, and the shield of Pearlgate.
+  - **items 442–491**: named shields, bucklers, banners, an empty book, flowers, rare botanicals, and first mushrooms.
 
 ## Files
 
@@ -29,6 +30,8 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
 - `src/data/generated/item-written-descriptions-0342-0391.json` contains authored entries 342–391.
 - `src/data/generated/item-written-descriptions-0392-0416.json` contains authored entries 392–416.
 - `src/data/generated/item-written-descriptions-0417-0441.json` contains authored entries 417–441.
+- `src/data/generated/item-written-descriptions-0442-0466.json` contains authored entries 442–466.
+- `src/data/generated/item-written-descriptions-0467-0491.json` contains authored entries 467–491.
 - `src/lib/item-static-description.ts` reads the stored copy first and only falls back if an entry is missing.
 
 ## Writing standard
