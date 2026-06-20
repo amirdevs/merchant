@@ -16,6 +16,7 @@ jobs:
       - name: Checkout prompt files only
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.head_ref || github.ref_name }}
           fetch-depth: 1
           lfs: false
           sparse-checkout: |
@@ -85,7 +86,6 @@ jobs:
                       missing.append(f'prompt_missing_{bit}')
               if missing:
                   failures.append((loc, ', '.join(missing)))
-              # soft warning: very repetitive prompt cues without family/subfamily specificity
               if len(set(tags)) != len(tags):
                   warnings.append((loc, 'duplicate_tags'))
 
@@ -175,5 +175,5 @@ jobs:
             echo "No audit report changes"
           else
             git commit -m "Add item description audit report"
-            git push
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
           fi
