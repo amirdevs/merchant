@@ -1,0 +1,515 @@
+name: ChatGPT Production Clean LFS Icons
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-lfs-icons:
+    if: github.event_name == 'workflow_dispatch' || github.head_ref == 'chatgpt-final-icons-lfs-clean'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout PR branch with full asset tree
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 1
+          lfs: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .gitattributes
+            .github/workflows/chatgpt-final-icons-lfs-clean.yml
+            docs/assets/icon-prompts
+            docs/assets/icon-sheets
+            public/game-assets/items
+
+      - name: Install Git LFS
+        shell: bash
+        run: |
+          set -euo pipefail
+          git lfs install --local
+          git lfs track 'public/game-assets/items/**/*.png'
+          git lfs track 'docs/assets/icon-sheets/**/*.png'
+          git lfs track 'docs/assets/icon-sheets/**/*.jpg'
+          git lfs track 'docs/assets/icon-sheets/**/*.jpeg'
+          cat .gitattributes
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install image dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pillow numpy opencv-python-headless
+
+      - name: Generate clean 4X transparent item icons and trace docs
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Production clean replacement: remove all old final icon files first.
+          rm -rf public/game-assets/items
+          mkdir -p public/game-assets/items
+
+          python - <<'PY'
+          import csv
+          import json
+          import os
+          import shutil
+          import textwrap
+          from pathlib import Path
+
+          import cv2
+          import numpy as np
+          from PIL import Image, ImageDraw, ImageFont
+
+          ROOT = Path.cwd()
+          PROMPT_DIR = ROOT / 'docs/assets/icon-prompts'
+          SHEET_DIR = ROOT / 'docs/assets/icon-sheets'
+          OUT_ROOT = ROOT / 'public/game-assets/items'
+
+          SAFE_DIR = SHEET_DIR / 'safe-crop'
+          GREEN_DIR = SHEET_DIR / 'green-cleanup'
+          UPSCALE_DIR = SHEET_DIR / 'upscale-4x-clean'
+          QA_DIR = UPSCALE_DIR / 'qa-boards'
+
+          # Keep source sheets, matching reports, object review, semantic review, and manual logs.
+          # Only regenerate the final crop/cleanup/upscale trace folders.
+          for p in [SAFE_DIR, GREEN_DIR, UPSCALE_DIR]:
+              if p.exists():
+                  shutil.rmtree(p)
+              p.mkdir(parents=True, exist_ok=True)
+          QA_DIR.mkdir(parents=True, exist_ok=True)
+          OUT_ROOT.mkdir(parents=True, exist_ok=True)
+
+          def green_candidate(rgb: np.ndarray) -> np.ndarray:
+              r = rgb[..., 0].astype(np.int16)
+              g = rgb[..., 1].astype(np.int16)
+              b = rgb[..., 2].astype(np.int16)
+              max_rb = np.maximum(r, b)
+              return (g > 120) & ((g - r) > 38) & ((g - b) > 38) & (g > (max_rb * 1.18 + 8))
+
+          def pure_green_candidate(rgb: np.ndarray) -> np.ndarray:
+              r = rgb[..., 0].astype(np.int16)
+              g = rgb[..., 1].astype(np.int16)
+              b = rgb[..., 2].astype(np.int16)
+              return (g > 160) & (r < 80) & (b < 80) & ((g - r) > 90) & ((g - b) > 90)
+
+          def edge_connected(mask: np.ndarray) -> np.ndarray:
+              if mask.size == 0:
+                  return mask
+              h, w = mask.shape
+              flood = np.zeros((h + 2, w + 2), np.uint8)
+              img = mask.astype(np.uint8)
+              seeds = []
+              xs = np.where(img[0, :] > 0)[0]
+              seeds += [(int(x), 0) for x in xs]
+              xs = np.where(img[h-1, :] > 0)[0]
+              seeds += [(int(x), h-1) for x in xs]
+              ys = np.where(img[:, 0] > 0)[0]
+              seeds += [(0, int(y)) for y in ys]
+              ys = np.where(img[:, w-1] > 0)[0]
+              seeds += [(w-1, int(y)) for y in ys]
+              for sx, sy in seeds:
+                  if img[sy, sx] > 0:
+                      cv2.floodFill(img, flood, (sx, sy), 2)
+              return img == 2
+
+          def remove_screen_green(rgba: np.ndarray) -> np.ndarray:
+              out = rgba.copy()
+              rgb = out[..., :3]
+              a = out[..., 3]
+              gmask = green_candidate(rgb)
+              pmask = pure_green_candidate(rgb)
+              remove = pmask.copy()
+              edge_path = gmask | (a < 8)
+              connected = edge_connected(edge_path)
+              remove |= (connected & gmask)
+              remove |= (gmask & (a < 90))
+              out[remove, 3] = 0
+              fringe = gmask & (out[..., 3] < 180)
+              out[fringe, 3] = np.minimum(out[fringe, 3], 32)
+              out[out[..., 3] == 0, :3] = 0
+              return out
+
+          def foreground_from_patch(patch: Image.Image):
+              arr = np.array(patch.convert('RGBA'))
+              rgb = arr[..., :3]
+              alpha = arr[..., 3]
+              bg_seed = edge_connected(green_candidate(rgb) | pure_green_candidate(rgb) | (alpha < 4))
+              fg = (alpha > 4) & (~bg_seed)
+              fg_u8 = fg.astype(np.uint8)
+              kernel = np.ones((3,3), np.uint8)
+              fg_u8 = cv2.morphologyEx(fg_u8, cv2.MORPH_OPEN, kernel, iterations=1)
+              return arr, fg_u8.astype(bool)
+
+          def select_components(fg: np.ndarray, cell_rect_in_patch):
+              x0, y0, x1, y1 = cell_rect_in_patch
+              n, labels, stats, centroids = cv2.connectedComponentsWithStats(fg.astype(np.uint8), 8)
+              keep = np.zeros_like(fg, dtype=bool)
+              kept = 0
+              total_area = 0
+              for lab in range(1, n):
+                  x, y, ww, hh, area = stats[lab]
+                  if area < 12:
+                      continue
+                  cx, cy = centroids[lab]
+                  comp = (labels == lab)
+                  inside_cell = (x0 <= cx <= x1 and y0 <= cy <= y1)
+                  ox0, oy0 = max(x, x0), max(y, y0)
+                  ox1, oy1 = min(x + ww, x1), min(y + hh, y1)
+                  overlap_area = int(comp[oy0:oy1, ox0:ox1].sum()) if ox1 > ox0 and oy1 > oy0 else 0
+                  overlap_frac = overlap_area / max(1, int(area))
+                  bbox_center_inside = (x0 <= x + ww/2 <= x1 and y0 <= y + hh/2 <= y1)
+                  if inside_cell or bbox_center_inside or overlap_frac >= 0.22:
+                      keep |= comp
+                      kept += 1
+                      total_area += int(area)
+              if kept == 0:
+                  keep[y0:y1, x0:x1] = fg[y0:y1, x0:x1]
+              kernel = np.ones((3,3), np.uint8)
+              keep_u8 = cv2.morphologyEx(keep.astype(np.uint8), cv2.MORPH_CLOSE, kernel, iterations=1)
+              return keep_u8.astype(bool), kept, total_area
+
+          def bbox_from_mask(mask: np.ndarray):
+              ys, xs = np.where(mask)
+              if len(xs) == 0:
+                  return None
+              return int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1
+
+          def make_icon(sheet_img: Image.Image, slot: dict, cols: int = 10, rows: int = 5):
+              W, H = sheet_img.size
+              row = int(slot.get('row', 1)) - 1
+              col = int(slot.get('column', 1)) - 1
+              x0 = int(round(col * W / cols)); x1 = int(round((col + 1) * W / cols))
+              y0 = int(round(row * H / rows)); y1 = int(round((row + 1) * H / rows))
+              cw = x1 - x0; ch = y1 - y0
+              ex = int(round(cw * 0.28)); ey = int(round(ch * 0.28))
+              px0, py0 = max(0, x0 - ex), max(0, y0 - ey)
+              px1, py1 = min(W, x1 + ex), min(H, y1 + ey)
+              patch = sheet_img.crop((px0, py0, px1, py1)).convert('RGBA')
+              arr, fg = foreground_from_patch(patch)
+              cell_rect = (x0 - px0, y0 - py0, x1 - px0, y1 - py0)
+              keep, kept_count, kept_area = select_components(fg, cell_rect)
+              bbox = bbox_from_mask(keep)
+              warnings = []
+              if bbox is None:
+                  warnings.append('fallback_empty_mask')
+                  patch2 = sheet_img.crop((x0, y0, x1, y1)).convert('RGBA')
+                  arr, fg = foreground_from_patch(patch2)
+                  keep = fg
+                  bbox = bbox_from_mask(keep)
+                  if bbox is None:
+                      blank = Image.new('RGBA', (1024, 1024), (0,0,0,0))
+                      return blank, {'status':'FAIL','warnings':'empty_mask','margin_1024':0,'components':0,'kept_area':0,'green_pixels':0}
+              bx0, by0, bx1, by1 = bbox
+              pad = max(8, int(round(max(bx1-bx0, by1-by0) * 0.08)))
+              bx0 = max(0, bx0 - pad); by0 = max(0, by0 - pad)
+              bx1 = min(arr.shape[1], bx1 + pad); by1 = min(arr.shape[0], by1 + pad)
+              crop_arr = arr[by0:by1, bx0:bx1].copy()
+              crop_mask = keep[by0:by1, bx0:bx1]
+              crop_arr[..., 3] = np.where(crop_mask, crop_arr[..., 3], 0).astype(np.uint8)
+              crop_arr = remove_screen_green(crop_arr)
+              crop = Image.fromarray(crop_arr, 'RGBA')
+              alpha = np.array(crop)[...,3]
+              bb = bbox_from_mask(alpha > 0)
+              if bb:
+                  crop = crop.crop(bb)
+              canvas256 = Image.new('RGBA', (256, 256), (0,0,0,0))
+              if crop.width > 0 and crop.height > 0:
+                  max_dim = 226
+                  scale = min(max_dim / crop.width, max_dim / crop.height)
+                  nw = max(1, int(round(crop.width * scale)))
+                  nh = max(1, int(round(crop.height * scale)))
+                  resized = crop.resize((nw, nh), Image.Resampling.LANCZOS)
+                  canvas256.alpha_composite(resized, ((256-nw)//2, (256-nh)//2))
+              arr256 = remove_screen_green(np.array(canvas256))
+              icon = Image.fromarray(arr256, 'RGBA').resize((1024, 1024), Image.Resampling.LANCZOS)
+              arr4 = remove_screen_green(np.array(icon))
+              icon = Image.fromarray(arr4, 'RGBA')
+
+              a = np.array(icon)[...,3]
+              ys, xs = np.where(a > 0)
+              if len(xs) == 0:
+                  status = 'FAIL'; margin = 0; warnings.append('empty_after_cleanup')
+              else:
+                  margin = int(min(xs.min(), ys.min(), 1023-xs.max(), 1023-ys.max()))
+                  status = 'PASS'
+                  if margin < 32:
+                      warnings.append('low_margin')
+              rgba = np.array(icon.convert('RGBA'))
+              rgb = rgba[..., :3]
+              aa = rgba[..., 3]
+              green_pixels = int((pure_green_candidate(rgb) & (aa > 0)).sum())
+              if green_pixels > 0:
+                  warnings.append('screen_green_residue')
+                  status = 'WARN' if status == 'PASS' else status
+              kbb = bbox_from_mask(keep)
+              if kbb:
+                  kx0, ky0, kx1, ky1 = kbb
+                  cx0, cy0, cx1, cy1 = cell_rect
+                  if kx0 < cx0 or ky0 < cy0 or kx1 > cx1 or ky1 > cy1:
+                      warnings.append('source_crossed_nominal_cell')
+              return icon, {
+                  'status': status,
+                  'warnings': ';'.join(sorted(set(warnings))),
+                  'margin_1024': margin,
+                  'components': int(kept_count),
+                  'kept_area': int(kept_area),
+                  'green_pixels': green_pixels,
+              }
+
+          def load_font(size=13):
+              for p in ['/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf','/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf']:
+                  if Path(p).exists():
+                      return ImageFont.truetype(p, size)
+              return ImageFont.load_default()
+
+          def make_qa_board(sheet_name, items):
+              thumb = 128; label_h = 44; cols = 10; rows = 5
+              board = Image.new('RGB', (cols*thumb, rows*(thumb+label_h)), (245,245,245))
+              draw = ImageDraw.Draw(board)
+              font = load_font(12); small = load_font(10)
+              for i, rec in enumerate(items):
+                  r, c = divmod(i, cols); x = c*thumb; y = r*(thumb+label_h)
+                  draw.rectangle([x, y, x+thumb-1, y+thumb-1], fill=(230,230,230), outline=(180,180,180))
+                  icon = Image.open(rec['output_path']).convert('RGBA').resize((112,112), Image.Resampling.LANCZOS)
+                  board.paste(icon, (x+8,y+8), icon)
+                  draw.text((x+3, y+thumb+2), f'R{rec["row"]}C{rec["column"]} {rec["status"]}', fill=(0,0,0), font=font)
+                  draw.text((x+3, y+thumb+20), rec['filename'][-38:], fill=(40,40,40), font=small)
+              out = QA_DIR / f'{sheet_name}-qa.jpg'
+              board.save(out, quality=88, optimize=True)
+              return out
+
+          configs = sorted(PROMPT_DIR.glob('items-*.json'))
+          all_records = []
+          summary_rows = []
+          total_icons = 0
+          fail_count = 0
+          warn_count = 0
+          sheet_count = 0
+
+          for cfg_path in configs:
+              cfg = json.loads(cfg_path.read_text(encoding='utf-8'))
+              base = cfg_path.stem
+              sheet_path = SHEET_DIR / f'{base}.png'
+              if not sheet_path.exists():
+                  summary_rows.append({'sheet': base, 'status': 'FAIL', 'icons': 0, 'note': 'missing sheet png'})
+                  fail_count += 1
+                  continue
+              sheet_count += 1
+              sheet = Image.open(sheet_path).convert('RGBA')
+              slots = cfg.get('slots', [])
+              cols = int(cfg.get('grid', {}).get('columns', 10))
+              rows = int(cfg.get('grid', {}).get('rows', 5))
+              sheet_records = []
+              sheet_fail = 0
+              sheet_warn = 0
+              for slot in slots:
+                  icon, meta = make_icon(sheet, slot, cols, rows)
+                  rel_out = slot['output']
+                  out_path = ROOT / rel_out
+                  out_path.parent.mkdir(parents=True, exist_ok=True)
+                  icon.save(out_path, optimize=True)
+                  total_icons += 1
+                  if meta['status'] == 'FAIL':
+                      fail_count += 1; sheet_fail += 1
+                  elif meta['status'] == 'WARN':
+                      warn_count += 1; sheet_warn += 1
+                  rec = {
+                      'sheet': base,
+                      'globalSlot': slot.get('globalSlot'),
+                      'row': slot.get('row'),
+                      'column': slot.get('column'),
+                      'itemName': slot.get('itemName'),
+                      'variant': slot.get('variant'),
+                      'output': rel_out,
+                      'output_path': str(out_path),
+                      'filename': Path(rel_out).name,
+                      **meta,
+                  }
+                  all_records.append(rec)
+                  sheet_records.append(rec)
+              qa = make_qa_board(base, sheet_records)
+              status = 'PASS' if sheet_fail == 0 else 'FAIL'
+              summary_rows.append({'sheet': base, 'status': status, 'icons': len(slots), 'note': f'qa={qa.relative_to(ROOT)}; sheet_fail={sheet_fail}; sheet_warn={sheet_warn}'})
+
+          cells_csv = SAFE_DIR / 'SAFE_CROP_CELLS.csv'
+          with cells_csv.open('w', newline='', encoding='utf-8') as f:
+              writer = csv.DictWriter(f, fieldnames=['sheet','globalSlot','row','column','itemName','variant','output','status','warnings','margin_1024','components','kept_area','green_pixels'])
+              writer.writeheader()
+              for rec in all_records:
+                  writer.writerow({k: rec.get(k, '') for k in writer.fieldnames})
+
+          summary_csv = SAFE_DIR / 'SAFE_CROP_SUMMARY.csv'
+          with summary_csv.open('w', newline='', encoding='utf-8') as f:
+              writer = csv.DictWriter(f, fieldnames=['sheet','status','icons','note'])
+              writer.writeheader(); writer.writerows(summary_rows)
+
+          green_csv = GREEN_DIR / 'GREEN_CLEANUP_FINAL_INSPECTION.csv'
+          with green_csv.open('w', newline='', encoding='utf-8') as f:
+              writer = csv.DictWriter(f, fieldnames=['output','status','warnings','margin_1024','green_pixels'])
+              writer.writeheader()
+              for rec in all_records:
+                  writer.writerow({k: rec.get(k, '') for k in ['output','status','warnings','margin_1024','green_pixels']})
+
+          upscale_csv = UPSCALE_DIR / 'UPSCALE_4X_INSPECTION.csv'
+          with upscale_csv.open('w', newline='', encoding='utf-8') as f:
+              writer = csv.DictWriter(f, fieldnames=['output','width','height','status','warnings','margin_1024','green_pixels'])
+              writer.writeheader()
+              for rec in all_records:
+                  writer.writerow({'output': rec['output'], 'width': 1024, 'height': 1024, 'status': rec['status'], 'warnings': rec['warnings'], 'margin_1024': rec['margin_1024'], 'green_pixels': rec['green_pixels']})
+
+          with (UPSCALE_DIR / 'UPSCALE_4X_INSPECTION.jsonl').open('w', encoding='utf-8') as f:
+              for rec in all_records:
+                  r = dict(rec); r.pop('output_path', None)
+                  f.write(json.dumps(r, ensure_ascii=False) + '\n')
+
+          boards = sorted(QA_DIR.glob('*.jpg'))
+          html = ['<!doctype html><meta charset="utf-8"><title>4X Clean Icon QA</title>', '<h1>4X Clean Icon QA Boards</h1>', f'<p>Sheets: {sheet_count}; icons: {total_icons}; failed crops: {fail_count}; warnings: {warn_count}</p>']
+          for b in boards:
+              rel = b.relative_to(UPSCALE_DIR).as_posix()
+              html.append(f"<h2>{b.stem}</h2><img src='{rel}' style='max-width:100%;height:auto;border:1px solid #ccc'>")
+          (UPSCALE_DIR / 'UPSCALE_4X_QA_INDEX.html').write_text('\n'.join(html), encoding='utf-8')
+
+          (UPSCALE_DIR / 'UPSCALE_4X_REPORT.md').write_text(textwrap.dedent(f'''# Final 4X Green-Free Icon Generation Report
+
+          Generated by the production-clean ChatGPT GitHub Actions workflow from current `main` icon sheets and JSON prompt configs.
+
+          ## Result
+
+          - Prompt sheets processed: {sheet_count}
+          - Icons written: {total_icons}
+          - Output size: 1024x1024 PNG
+          - Background: transparent
+          - Failed crops: {fail_count}
+          - Warning crops: {warn_count}
+          - QA boards: {len(boards)}
+
+          ## Production-clean guarantees
+
+          - `public/game-assets/items/` was deleted before generation, so old/extra icon files are not retained.
+          - Image assets are tracked by Git LFS through `.gitattributes`.
+          - Temporary workflow files are removed from the final generated branch commit before merge.
+
+          ## Output paths
+
+          - Icons: `public/game-assets/items/`
+          - Safe crop trace: `docs/assets/icon-sheets/safe-crop/`
+          - Green cleanup trace: `docs/assets/icon-sheets/green-cleanup/`
+          - 4X inspection and QA boards: `docs/assets/icon-sheets/upscale-4x-clean/`
+
+          ## Notes
+
+          This pipeline uses object-aware foreground isolation from the green source sheets instead of exact grid-only cropping. That protects items whose source art crosses nominal cell borders and reduces neighbor contamination.
+
+          Green screen removal is edge-connected/chroma-aware to avoid destroying real green item art such as herbs, vines, poison, and magic effects.
+          '''), encoding='utf-8')
+
+          (SAFE_DIR / 'CROPPING_REPORT.md').write_text(textwrap.dedent(f'''# Safe Crop Report
+
+          - Sheets processed: {sheet_count}
+          - Icons written: {total_icons}
+          - Failed crops: {fail_count}
+          - Warning crops: {warn_count}
+          - Output size before upscale: generated internally at 256x256 then upscaled to 1024x1024
+          - Method: object-aware crop from sheet cell context; neighbor components removed by component/cell-overlap rules.
+
+          See `SAFE_CROP_CELLS.csv` and `SAFE_CROP_SUMMARY.csv`.
+          '''), encoding='utf-8')
+
+          (GREEN_DIR / 'GREEN_CLEANUP_REPORT.md').write_text(textwrap.dedent(f'''# Green Cleanup Report
+
+          - Icons inspected: {total_icons}
+          - Strong screen-green removal: edge-connected chroma mask plus pure-green cleanup
+          - Failed/empty outputs: {fail_count}
+          - Warning outputs: {warn_count}
+          - Output: transparent PNG files in `public/game-assets/items/`
+
+          See `GREEN_CLEANUP_FINAL_INSPECTION.csv`.
+          '''), encoding='utf-8')
+
+          print(f'Generated {total_icons} icons from {sheet_count} sheets; failed={fail_count}; warnings={warn_count}')
+          if total_icons != 5006:
+              raise SystemExit(f'Expected 5006 icons, got {total_icons}')
+          if sheet_count != 101:
+              raise SystemExit(f'Expected 101 sheets, got {sheet_count}')
+          if fail_count:
+              raise SystemExit('Generated files, but fail_count is non-zero; inspect reports.')
+          PY
+
+      - name: Verify generated output and LFS staging
+        shell: bash
+        run: |
+          set -euo pipefail
+          icon_count="$(find public/game-assets/items -type f -name '*.png' | wc -l | tr -d ' ')"
+          qa_count="$(find docs/assets/icon-sheets/upscale-4x-clean/qa-boards -type f -name '*-qa.jpg' | wc -l | tr -d ' ')"
+          echo "icon_count=$icon_count"
+          echo "qa_count=$qa_count"
+          test "$icon_count" = "5006"
+          test "$qa_count" = "101"
+          test -f docs/assets/icon-sheets/upscale-4x-clean/UPSCALE_4X_REPORT.md
+          test -f docs/assets/icon-sheets/green-cleanup/GREEN_CLEANUP_REPORT.md
+          test -f docs/assets/icon-sheets/safe-crop/CROPPING_REPORT.md
+
+      - name: Commit production-clean generated files to PR branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "ChatGPT Asset Pipeline"
+          git config user.email "chatgpt-assets@users.noreply.github.com"
+          git lfs install --local
+          git lfs track 'public/game-assets/items/**/*.png'
+          git lfs track 'docs/assets/icon-sheets/**/*.png'
+          git lfs track 'docs/assets/icon-sheets/**/*.jpg'
+          git lfs track 'docs/assets/icon-sheets/**/*.jpeg'
+
+          # Remove this temporary workflow before committing generated state.
+          rm -f .github/workflows/chatgpt-final-icons-lfs-clean.yml
+
+          # Convert existing sheet/review images in the checked-out tree to LFS pointers.
+          git add .gitattributes
+          git add --renormalize docs/assets/icon-sheets || true
+          git add -A docs/assets/icon-sheets/safe-crop docs/assets/icon-sheets/green-cleanup docs/assets/icon-sheets/upscale-4x-clean .github/workflows/chatgpt-final-icons-lfs-clean.yml
+          if ! git diff --cached --quiet; then
+            git commit -m "Add LFS-tracked icon sheets and QA trace docs"
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
+          fi
+
+          # Commit generated final icons in directory batches to avoid oversized single pushes.
+          shopt -s nullglob
+          for dir in public/game-assets/items/*; do
+            if [ -d "$dir" ]; then
+              git add -A "$dir"
+              if ! git diff --cached --quiet; then
+                name="$(basename "$dir")"
+                git commit -m "Add LFS-tracked final 4x item icons: ${name}"
+                git lfs ls-files "$dir" | head || true
+                git push origin HEAD:${{ github.head_ref || github.ref_name }}
+              fi
+            fi
+          done
+
+          git add -A public/game-assets/items
+          if ! git diff --cached --quiet; then
+            git commit -m "Add remaining LFS-tracked final 4x item icons"
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
+          fi
+
+          lfs_count="$(git lfs ls-files | wc -l | tr -d ' ')"
+          echo "lfs_count=$lfs_count"
+          if [ "$lfs_count" -lt 5006 ]; then
+            echo "Expected at least 5006 LFS-tracked image files, got $lfs_count" >&2
+            exit 1
+          fi
+
+          echo "Production-clean generated branch commits are pushed."
