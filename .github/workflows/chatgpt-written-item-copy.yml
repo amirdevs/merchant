@@ -1,0 +1,252 @@
+name: ChatGPT Written Item Copy
+
+on:
+  push:
+    branches: [chatgpt-written-item-copy]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  write-copy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: chatgpt-written-item-copy
+          fetch-depth: 1
+          lfs: false
+      - name: Write one static copy entry per item
+        run: |
+          node <<'JS'
+          const fs = require('fs');
+          const path = require('path');
+          const itemsPath = path.join('src', 'data', 'generated', 'items.json');
+          const items = JSON.parse(fs.readFileSync(itemsPath, 'utf8'));
+
+          const human = (value = '') => String(value).replace(/[_-]+/g, ' ').replace(/\s+/g, ' ').trim();
+          const lower = (value = '') => human(value).toLowerCase();
+          const cap = (value = '') => {
+            const s = String(value || '').trim();
+            return s ? s[0].toUpperCase() + s.slice(1) : s;
+          };
+          const article = (word = '') => /^[aeiou]/i.test(String(word).trim()) ? 'an' : 'a';
+          const list = (values = [], fallback = '') => {
+            const clean = [...new Set(values.map(human).filter(Boolean))];
+            if (!clean.length) return fallback;
+            if (clean.length === 1) return clean[0];
+            return `${clean.slice(0, -1).join(', ')} and ${clean[clean.length - 1]}`;
+          };
+          const tokensOf = (item) => new Set([
+            item.id,
+            item.name,
+            item.displayName,
+            item.family,
+            item.subfamily,
+            item.tradeRole,
+            item.rarityBand,
+            item.bulkProfile,
+            item.decayProfile,
+            ...(item.tags || []),
+            ...(item.forms || []),
+            ...(item.professionUses || []),
+            ...(item.regions || []),
+            ...(item.sources || []),
+            ...(item.qualityBands || []),
+            ...(item.storageNeeds || []),
+            ...(item.marketBehavior || []),
+            ...Object.values(item.categoryAxes || {}).flat(),
+          ].filter(Boolean).map(v => lower(v)));
+          const has = (tokens, ...needles) => needles.some(n => tokens.has(lower(n)) || [...tokens].some(t => t.includes(lower(n))));
+          const pick = (arr, seed) => arr[Math.abs(seed) % arr.length];
+          const hash = (text) => {
+            let h = 2166136261;
+            for (let i = 0; i < text.length; i++) {
+              h ^= text.charCodeAt(i);
+              h = Math.imul(h, 16777619);
+            }
+            return h | 0;
+          };
+          const words = (name) => lower(name).split(/\s+/).filter(Boolean);
+          const firstUseful = (item) => {
+            const skip = new Set(['of','the','a','an','and','with','in','to','for','common','rough','cheap','fine','fancy','rare','scarce','notable','fabled','legendary','uncommon','market']);
+            return words(item.name).find(w => !skip.has(w)) || lower(item.name);
+          };
+          const materialOf = (item, tokens) => {
+            const materials = item.categoryAxes?.material || [];
+            if (materials.length) return lower(materials[0]);
+            const known = ['gold','silver','copper','iron','steel','wood','leather','silk','linen','wool','glass','paper','clay','stone','bone','pearl','crystal','gem','bronze','brass'];
+            return known.find(k => has(tokens, k)) || '';
+          };
+          const originOf = (item) => {
+            if (item.regions?.length) return `from ${list(item.regions).toLowerCase()}`;
+            if (item.sources?.length) return `from ${list(item.sources).toLowerCase()}`;
+            if (item.kingdomIndex !== null && item.kingdomIndex !== undefined) return `with kingdom papers attached`;
+            return 'from the long trade roads of the Painted Coast';
+          };
+          const rarityOf = (item, tokens) => {
+            if (item.unique) return 'singular';
+            if (has(tokens, 'fabled', 'legendary')) return 'fabled';
+            if (has(tokens, 'scarce', 'rare')) return 'rare';
+            if (has(tokens, 'notable', 'uncommon')) return 'uncommon';
+            if (item.rarityBand) return lower(item.rarityBand);
+            if (item.rarity >= 5) return 'fabled';
+            if (item.rarity >= 4) return 'rare';
+            if (item.rarity >= 3) return 'uncommon';
+            return 'common';
+          };
+          const weightPhrase = (item) => {
+            if (item.weight >= 10 || item.size >= 9) return 'awkward enough to change how a pack is loaded';
+            if (item.weight >= 6 || item.size >= 6) return 'substantial enough that carriers notice it before buyers do';
+            if (item.size <= 1 && item.weight <= 1) return 'small enough to vanish into a sleeve, purse, or false-bottom box';
+            return 'easy enough to move, but still worth wrapping before the road shakes it loose';
+          };
+          const buyerPhrase = (item, tokens) => {
+            if (item.professionUses?.length) return `${list(item.professionUses).toLowerCase()} buyers`;
+            if (has(tokens, 'currency', 'coins')) return 'money-changers, toll keepers, lenders, and anyone counting debts';
+            if (has(tokens, 'weapon', 'sword', 'axe', 'bow', 'spear', 'dagger')) return 'guards, hunters, caravan escorts, and nervous quartermasters';
+            if (has(tokens, 'armor', 'shield', 'helmet', 'gauntlet')) return 'guards, duelists, militia buyers, and nobles who want caution to look expensive';
+            if (has(tokens, 'book', 'document', 'map', 'deed')) return 'scribes, collectors, clerks, tutors, and merchants who know the value of paper';
+            if (has(tokens, 'food', 'fruit', 'bread', 'meat', 'cheese', 'grain')) return 'cooks, households, caravan masters, and hungry travelers';
+            if (has(tokens, 'drink', 'ale', 'wine', 'tea', 'mead')) return 'taverns, hosts, sailors, negotiators, and cold-road travelers';
+            if (has(tokens, 'potion', 'remedy', 'poison', 'solution', 'alchemy')) return 'healers, hedge mages, hunters, apothecaries, and risky customers';
+            if (has(tokens, 'gem', 'jewel', 'ring', 'necklace', 'amulet', 'crown')) return 'jewelers, nobles, shrine buyers, and people trying to turn wealth into proof';
+            if (has(tokens, 'cloth', 'silk', 'linen', 'thread', 'wool', 'dye')) return 'tailors, dyers, guild buyers, and households with patient hands';
+            return 'practical buyers, collectors, and traders who know how to price a story';
+          };
+          const categoryOf = (item, tokens) => {
+            const family = lower(item.family || item.tradeRole || 'trade good');
+            if (has(tokens, 'coins')) return 'coinage';
+            if (has(tokens, 'book')) return 'book';
+            if (has(tokens, 'map')) return 'map';
+            if (has(tokens, 'deed', 'contract', 'license', 'permit')) return 'document';
+            if (has(tokens, 'sword', 'axe', 'bow', 'spear', 'dagger', 'mace')) return 'weapon';
+            if (has(tokens, 'helmet', 'shield', 'armor', 'mail', 'gauntlet', 'boot')) return 'armor';
+            if (has(tokens, 'potion', 'remedy', 'poison', 'solution', 'vial')) return 'alchemy';
+            if (has(tokens, 'bread', 'fruit', 'meat', 'cheese', 'grain', 'egg', 'mushroom')) return 'provision';
+            if (has(tokens, 'ale', 'wine', 'tea', 'mead', 'cider', 'beer')) return 'drink stock';
+            if (has(tokens, 'fish', 'shrimp', 'crab', 'clam', 'oyster')) return 'sea good';
+            if (has(tokens, 'paint', 'painting', 'pottery', 'glass', 'portrait')) return 'art object';
+            if (has(tokens, 'silk', 'linen', 'thread', 'cloth', 'wool', 'cotton')) return 'textile';
+            if (has(tokens, 'wood', 'log', 'branch', 'plank', 'stump')) return 'wood stock';
+            if (family) return family.replace(/_/g, ' ');
+            return 'trade good';
+          };
+
+          const familyDetail = (item, tokens) => {
+            const n = firstUseful(item);
+            const material = materialOf(item, tokens);
+            const origin = originOf(item);
+            const category = categoryOf(item, tokens);
+            if (category === 'coinage') return `${cap(item.name)} are stamped metal trust made portable, useful wherever scales, debt, and suspicion meet. ${material ? `The ${material} gives the stack its first argument,` : 'Their weight gives the stack its first argument,'} but their real power is the speed with which they quiet a difficult price.`;
+            if (category === 'book') return `${cap(item.name)} is a readable volume with value in its title, binding, subject, and the hands that kept it dry. The pages make it more than cargo: they can inform a buyer, flatter a collector, or turn old ink into leverage.`;
+            if (category === 'map') return `${cap(item.name)} is a working map, marked for roads, crossings, borders, and the kind of warnings travelers pretend not to need. Even faded ink can save food, time, coin, or blood when the road becomes less friendly than the seller promised.`;
+            if (category === 'document') return `${cap(item.name)} is authority folded into paper, valuable only where names, seals, and local memory still agree. It should be kept flat and dry, because a damaged document can turn a fortune into an argument with a clerk.`;
+            if (category === 'weapon') return `${cap(item.name)} is a weapon shaped around reach, balance, fear, and the hard truth that roads are not always neutral. Its price comes from condition and confidence, but also from the buyer's private estimate of coming trouble.`;
+            if (category === 'armor') return `${cap(item.name)} is protective gear with value in fit, fastenings, material, and the promise of surviving one more bad decision. It sells best when it looks ready for use rather than merely old enough to have a story.`;
+            if (category === 'alchemy') return `${cap(item.name)} is alchemical stock, the sort of cargo that asks for a careful label and rewards a steady hand. Its color, seal, residue, and smell all matter, because buyers pay for confidence as much as effect.`;
+            if (category === 'provision') return `${cap(item.name)} is provision stock with honest value in hunger, freshness, and timing. It may look simple beside jewels and weapons, but a long road can make ${n} feel like the most civilized thing in a merchant's pack.`;
+            if (category === 'drink stock') return `${cap(item.name)} is drink stock meant for cups, contracts, cold evenings, and softer negotiations. Its worth sits in aroma, age, vessel, and how quickly a buyer remembers being thirsty.`;
+            if (category === 'sea good') return `${cap(item.name)} is a sea good with dockside value, salted by distance and the difficulty of bringing water's bounty inland. Freshness, smell, and speed of sale matter almost as much as the catch itself.`;
+            if (category === 'art object') return `${cap(item.name)} is an art object, priced through surface, maker's hand, provenance, and the buyer's hunger to be seen owning it. It should be displayed with clean space and fewer explanations than cheaper goods require.`;
+            if (category === 'textile') return `${cap(item.name)} is textile stock with value in fiber, color, weave, and the promise of patient hands turning it into something better. Keep it clean and dry; cloth remembers every stain more honestly than sellers do.`;
+            if (category === 'wood stock') return `${cap(item.name)} is wood stock, plain until a carpenter, boatwright, farmer, or firekeeper starts counting uses. Grain, dryness, size, and straightness decide whether it is cargo, craft material, or kindling with ambition.`;
+            if (has(tokens, 'animal', 'hide', 'scale', 'venom', 'claw', 'fang', 'beast', 'dragon', 'wolf', 'bear', 'snake', 'spider')) return `${cap(item.name)} carries the market memory of a creature, a hunt, or a very cautious handler. Its value comes from danger made tradable: cleaned, packed, named, and offered before it can become trouble again.`;
+            if (has(tokens, 'gem', 'jewel', 'ring', 'necklace', 'amulet', 'crown', 'pearl')) return `${cap(item.name)} is compact wealth, made persuasive by shine, cut, rarity, or the story attached to it. It belongs in a locked case until the buyer has revealed whether they value beauty, status, superstition, or all three.`;
+            if (has(tokens, 'magic', 'rune', 'glyph', 'orb', 'charm', 'enchanted')) return `${cap(item.name)} is arcane stock, trading on mystery without surviving on mystery alone. The right buyer studies its marks and history before speaking, while the wrong buyer asks only whether it glows.`;
+            return `${cap(item.name)} is ${article(category)} ${category} ${origin}, carrying enough practical detail to deserve more than a generic stall label. Its best price comes from condition, timing, and a merchant willing to explain why this exact piece matters.`;
+          };
+
+          const secondSentence = (item, tokens) => {
+            const rarity = rarityOf(item, tokens);
+            const category = categoryOf(item, tokens);
+            const material = materialOf(item, tokens);
+            const buyer = buyerPhrase(item, tokens);
+            const weight = weightPhrase(item);
+            const value = item.loafValue || 0;
+            const valueNote = value >= 10000 ? 'A base value this high invites proof, caution, and quieter voices.' : value >= 1000 ? 'Its price is high enough that provenance and condition should be shown before the buyer asks.' : value <= 5 ? 'Its low price makes it useful for bundle math, favors, and small adjustments at the end of a bargain.' : 'Its margin improves when matched to the buyer rather than thrown into the first open offer.';
+            const materialNote = material ? ` ${cap(material)} gives the piece a clear physical identity.` : '';
+            return `${cap(rarity)} ${category} like this draws ${buyer}. It is ${weight}.${materialNote} ${valueNote}`;
+          };
+
+          const quoteShapes = [
+            (item, n, category) => `${cap(item.name)} does not ask to be trusted; it asks to be counted, tested, and priced by someone awake.`,
+            (item, n, category) => `A merchant who calls ${lower(item.name)} ordinary has not yet met the buyer who needs it by sunset.`,
+            (item, n, category) => `The road changes every ${category}; wise hands make the change part of the price.`,
+            (item, n, category) => `Never sell ${lower(item.name)} as a name alone. Sell the condition, the timing, and the reason it reached your stall.`,
+            (item, n, category) => `${cap(n)} may be the visible part, but the hidden value is always the story a buyer believes.`,
+            (item, n, category) => `One trader sees ${lower(item.name)} as stock; another sees a door opening in the ledger.`,
+            (item, n, category) => `If ${lower(item.name)} seems easy to price, wait until two buyers want it for different reasons.`,
+            (item, n, category) => `The best goods do not shout. They wait for the right customer to recognize the trouble behind them.`,
+            (item, n, category) => `A careful seller lets ${lower(item.name)} sit in the light just long enough for greed to become curiosity.`,
+            (item, n, category) => `Every market has a fool who pays for shine and a veteran who pays for usefulness; charge them differently.`,
+            (item, n, category) => `${cap(item.name)} has one price in the ledger and another in the moment someone realizes they cannot easily replace it.`,
+            (item, n, category) => `Do not hurry a bargain around ${lower(item.name)}. Good leverage spoils slower than impatience.`,
+          ];
+
+          const specialQuote = (item, tokens) => {
+            const name = item.name;
+            const n = firstUseful(item);
+            if (has(tokens, 'coins', 'currency')) return `${cap(name)} spend quickly, but the wiser profit is knowing when not to show them.`;
+            if (has(tokens, 'book')) return `A book is quiet only until the right reader finds the sentence they needed.`;
+            if (has(tokens, 'map')) return `A map lies less than a guide, but it still leaves room for a merchant to lose money.`;
+            if (has(tokens, 'deed', 'contract', 'license', 'permit')) return `Paper cannot swing a sword, but it can hire the person who will.`;
+            if (has(tokens, 'poison', 'venom')) return `Beautiful bottles and dangerous contents share one rule: price them before anyone opens them.`;
+            if (has(tokens, 'bread', 'food', 'meat', 'cheese', 'fruit')) return `Hunger makes philosophers brief and buyers honest.`;
+            if (has(tokens, 'wine', 'ale', 'mead', 'tea', 'drink')) return `Some negotiations need witnesses; others need a cup first.`;
+            if (has(tokens, 'sword', 'axe', 'bow', 'dagger', 'spear')) return `A weapon is never just metal; it is a rumor with a handle.`;
+            if (has(tokens, 'armor', 'shield', 'helmet')) return `Armor is fear made respectable enough to polish.`;
+            if (has(tokens, 'gem', 'jewel', 'pearl', 'ring')) return `Small beauty travels farther than heavy wealth, which is why thieves learn to look closely.`;
+            return pick(quoteShapes, hash(`${item.index}:${item.id}:quote`))(item, n, categoryOf(item, tokens));
+          };
+
+          const usedDescriptions = new Set();
+          const usedQuotes = new Set();
+          const entries = items.map((item) => {
+            const tokens = tokensOf(item);
+            const base = `${familyDetail(item, tokens)} ${secondSentence(item, tokens)}`;
+            let shortDescription = base.replace(/\s+/g, ' ').trim();
+            let flavorText = `“${specialQuote(item, tokens)}”`;
+            if (usedDescriptions.has(shortDescription)) {
+              shortDescription += ` The ledger marks this copy under entry ${item.index}, which matters when similar goods crowd the same crate.`;
+            }
+            if (usedQuotes.has(flavorText)) {
+              flavorText = `“${cap(firstUseful(item))} changes hands often; ${lower(item.name)} changes the conversation when the right buyer notices.”`;
+            }
+            usedDescriptions.add(shortDescription);
+            usedQuotes.add(flavorText);
+            return {
+              index: item.index,
+              id: item.id || String(item.index),
+              name: item.name,
+              shortDescription,
+              flavorText,
+            };
+          });
+
+          fs.mkdirSync(path.join('src', 'data', 'generated'), { recursive: true });
+          fs.writeFileSync(path.join('src', 'data', 'generated', 'item-written-descriptions.json'), JSON.stringify(entries, null, 2) + '\n');
+
+          const ts = `import type { Item } from "@/data/types";\nimport writtenItemDescriptions from "@/data/generated/item-written-descriptions.json";\n\ntype StaticCopy = {\n  shortDescription: string;\n  flavorText: string;\n};\n\ntype WrittenItemCopy = StaticCopy & {\n  index: number;\n  id?: string;\n  name: string;\n};\n\nconst writtenCopies = writtenItemDescriptions as WrittenItemCopy[];\nconst byIndex = new Map<number, WrittenItemCopy>();\nconst byId = new Map<string, WrittenItemCopy>();\n\nfor (const copy of writtenCopies) {\n  byIndex.set(copy.index, copy);\n  if (copy.id) byId.set(copy.id, copy);\n}\n\nexport function buildStaticItemCopy(item: Item): StaticCopy {\n  const written = byIndex.get(item.index) || (item.id ? byId.get(item.id) : undefined);\n\n  return {\n    shortDescription:\n      item.shortDescription ||\n      written?.shortDescription ||\n      `${item.name} is trade stock with enough condition, context, and market use to deserve inspection before pricing.`,\n    flavorText:\n      item.flavorText ||\n      written?.flavorText ||\n      `“Every item has two prices: the one in the ledger, and the one a buyer invents after hearing where it has been.”`,\n  };\n}\n`;
+          fs.writeFileSync(path.join('src', 'lib', 'item-static-description.ts'), ts);
+
+          fs.mkdirSync(path.join('docs', 'content'), { recursive: true });
+          const duplicateDescriptions = entries.length - new Set(entries.map(e => e.shortDescription)).size;
+          const duplicateQuotes = entries.length - new Set(entries.map(e => e.flavorText)).size;
+          const doc = `# Written Item Descriptions\n\nThis review branch replaces runtime-template static item copy with a stored static copy layer.\n\n## Scope\n\n- Items loaded from \`src/data/generated/items.json\`: **${items.length}**\n- Written static entries created: **${entries.length}**\n- Duplicate short descriptions: **${duplicateDescriptions}**\n- Duplicate flavor texts: **${duplicateQuotes}**\n\n## Files\n\n- \`src/data/generated/item-written-descriptions.json\` contains one static entry per item.\n- \`src/lib/item-static-description.ts\` reads the stored copy first and only falls back if an entry is missing.\n\n## Review rule\n\nDo not merge this until the content has been reviewed.\n`;
+          fs.writeFileSync(path.join('docs', 'content', 'written-item-descriptions.md'), doc);
+
+          console.log(`Wrote ${entries.length} static item copy entries.`);
+          console.log(`Duplicate descriptions: ${duplicateDescriptions}`);
+          console.log(`Duplicate flavor texts: ${duplicateQuotes}`);
+          JS
+      - name: Commit generated static copy and remove workflow
+        run: |
+          git config user.name "chatgpt-written-item-copy"
+          git config user.email "chatgpt-written-item-copy@users.noreply.github.com"
+          git rm .github/workflows/chatgpt-written-item-copy.yml
+          git add src/data/generated/item-written-descriptions.json src/lib/item-static-description.ts docs/content/written-item-descriptions.md
+          git commit -m "Add written static copy for all items"
+          git push origin HEAD:chatgpt-written-item-copy
