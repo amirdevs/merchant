@@ -5,8 +5,8 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
 ## Scope
 
 - Actual game items in `src/data/generated/items.json`: **2206**
-- Hand-written static entries completed in this branch: **392**
-- Remaining items to write: **1814**
+- Hand-written static entries completed in this branch: **442**
+- Remaining items to write: **1764**
 - Completed batches:
   - **items 0–43**: currency, the Sunwake Harbor share, Painted Coast annals, local chronicles, primers, almanacs, and practical directories.
   - **items 44–91**: Crowncards books, magic/luck books, battle reports, trade essays, field guides, letters, and first gem items.
@@ -16,6 +16,7 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
   - **items 242–291**: alchemy workbench tools, oozes, jellies, turtles, frogs, scorpions, spiders, beetles, butterflies, moths, and first giant insects.
   - **items 292–341**: giant insects, moths, hive queens/workers, hounds, wolves, bats, rats, bears, megafauna, reptiles, and snakes.
   - **items 342–391**: remaining snakes and worms, farm animals, small birds, horse barding, dragon armors, gauntlets, war gloves, and first helmets.
+  - **items 392–441**: helmets, mail shirts, plate armor, leather armor, named faction armor, exotic breastplates, iron boots, and the shield of Pearlgate.
 
 ## Files
 
@@ -26,6 +27,8 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
 - `src/data/generated/item-written-descriptions-0242-0291.json` contains authored entries 242–291.
 - `src/data/generated/item-written-descriptions-0292-0341.json` contains authored entries 292–341.
 - `src/data/generated/item-written-descriptions-0342-0391.json` contains authored entries 342–391.
+- `src/data/generated/item-written-descriptions-0392-0416.json` contains authored entries 392–416.
+- `src/data/generated/item-written-descriptions-0417-0441.json` contains authored entries 417–441.
 - `src/lib/item-static-description.ts` reads the stored copy first and only falls back if an entry is missing.
 
 ## Writing standard
