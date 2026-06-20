@@ -1,5 +1,6 @@
 import type { Item } from "@/data/types";
-import writtenItemDescriptions from "@/data/generated/item-written-descriptions.json";
+import writtenItemDescriptions0000To0091 from "@/data/generated/item-written-descriptions.json";
+import writtenItemDescriptions0092To0141 from "@/data/generated/item-written-descriptions-0092-0141.json";
 
 type StaticCopy = {
   shortDescription: string;
@@ -12,7 +13,11 @@ type WrittenItemCopy = StaticCopy & {
   name: string;
 };
 
-const writtenCopies = writtenItemDescriptions as WrittenItemCopy[];
+const writtenCopies = [
+  ...(writtenItemDescriptions0000To0091 as WrittenItemCopy[]),
+  ...(writtenItemDescriptions0092To0141 as WrittenItemCopy[]),
+];
+
 const byIndex = new Map<number, WrittenItemCopy>();
 const byId = new Map<string, WrittenItemCopy>();
 
