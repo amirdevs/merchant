@@ -1,0 +1,257 @@
+name: ChatGPT no-upscale clean item icons
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate:
+    if: github.event_name == 'workflow_dispatch' || github.head_ref == 'chatgpt-icons-no-upscale-clean'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout branch with sparse assets
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 1
+          lfs: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            .gitattributes
+            .github/workflows/chatgpt-icons-no-upscale-clean.yml
+            docs/ITEM_ASSET_PIPELINE.md
+            docs/assets/icon-prompts/**
+            docs/assets/icon-sheets/**
+            public/game-assets/items/**
+
+      - name: Configure Git LFS and pull source sheets only
+        run: |
+          git lfs install
+          git lfs pull -I "docs/assets/icon-sheets/items-*.png"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install image dependencies
+        run: python -m pip install --upgrade pillow numpy opencv-python-headless
+
+      - name: Generate no-upscale clean icons
+        run: |
+          rm -rf public/game-assets/items
+          rm -rf docs/assets/icon-sheets/safe-crop docs/assets/icon-sheets/green-cleanup docs/assets/icon-sheets/upscale-4x-clean
+          mkdir -p public/game-assets/items docs/assets/icon-sheets/no-upscale-clean/qa-boards
+          python <<'PY'
+          import csv, json, math, os, re
+          from pathlib import Path
+          import cv2
+          import numpy as np
+          from PIL import Image, ImageDraw, ImageFont
+
+          ROOT = Path('.')
+          PROMPTS = ROOT/'docs/assets/icon-prompts'
+          SHEETS = ROOT/'docs/assets/icon-sheets'
+          OUT = ROOT/'public/game-assets/items'
+          TRACE = ROOT/'docs/assets/icon-sheets/no-upscale-clean'
+          QA = TRACE/'qa-boards'
+          OUT.mkdir(parents=True, exist_ok=True)
+          QA.mkdir(parents=True, exist_ok=True)
+          TARGET = 256
+
+          allow = {'allowedOutputPaths': [], 'allowedItemNames': [], 'allowedFamilies': []}
+          allow_path = PROMPTS/'few-variant-allowlist.json'
+          if allow_path.exists():
+              allow.update(json.loads(allow_path.read_text(encoding='utf-8')))
+          allowed_outputs = set(allow.get('allowedOutputPaths') or [])
+          allowed_names = set(allow.get('allowedItemNames') or [])
+          allowed_families = set(allow.get('allowedFamilies') or [])
+
+          def grid_box(size, idx):
+              w, h = size
+              col, row = idx % 10, idx // 10
+              return (round(col*w/10), round(row*h/5), round((col+1)*w/10), round((row+1)*h/5))
+
+          def infer_variant(slot):
+              v = str(slot.get('variant') or slot.get('quantityVariant') or '').lower().strip()
+              out = slot.get('output') or ''
+              name = str(slot.get('name') or slot.get('itemName') or '').lower()
+              if v:
+                  return v
+              if '__few' in out or ' few' in name:
+                  return 'few'
+              if '__many' in out or ' many' in name:
+                  return 'many'
+              return 'one'
+
+          def slot_name(slot):
+              return str(slot.get('itemName') or slot.get('name') or slot.get('id') or slot.get('output') or '')
+
+          def few_allowed(slot):
+              out = slot.get('output') or ''
+              nm = slot_name(slot)
+              fam = str(slot.get('family') or slot.get('category') or '')
+              return out in allowed_outputs or nm in allowed_names or fam in allowed_families
+
+          def foreground_mask(arr):
+              rgb = arr[:,:,:3].astype(np.int16)
+              a = arr[:,:,3] if arr.shape[2] == 4 else np.full(arr.shape[:2], 255, np.uint8)
+              r,g,b = rgb[:,:,0], rgb[:,:,1], rgb[:,:,2]
+              green = (a > 5) & (g > 135) & (r < 135) & (b < 135) & ((g-r) > 55) & ((g-b) > 55)
+              fg = (a > 5) & (~green)
+              fg = cv2.morphologyEx(fg.astype(np.uint8), cv2.MORPH_OPEN, np.ones((2,2),np.uint8)).astype(bool)
+              return fg
+
+          def remove_edge_green(im):
+              arr = np.array(im.convert('RGBA'))
+              r,g,b,a = [arr[:,:,i].astype(np.int16) for i in range(4)]
+              green = (a > 0) & (g > 135) & (r < 140) & (b < 140) & ((g-r) > 50) & ((g-b) > 50)
+              n, labels = cv2.connectedComponents(green.astype(np.uint8), 8)
+              edge_labels = set()
+              if n > 1:
+                  for edge in [labels[0,:], labels[-1,:], labels[:,0], labels[:,-1]]:
+                      edge_labels.update(int(x) for x in np.unique(edge) if x)
+                  if edge_labels:
+                      bg = np.isin(labels, list(edge_labels))
+                      arr[bg,3] = 0
+              return Image.fromarray(arr, 'RGBA')
+
+          def crop_slot(sheet, idx):
+              w,h = sheet.size
+              x0,y0,x1,y1 = grid_box((w,h), idx)
+              cw, ch = x1-x0, y1-y0
+              pad = int(min(cw,ch)*0.20)
+              rx0, ry0 = max(0,x0-pad), max(0,y0-pad)
+              rx1, ry1 = min(w,x1+pad), min(h,y1+pad)
+              region = sheet.crop((rx0,ry0,rx1,ry1)).convert('RGBA')
+              arr = np.array(region)
+              fg = foreground_mask(arr)
+              n, labels, stats, cents = cv2.connectedComponentsWithStats(fg.astype(np.uint8), 8)
+              keep = np.zeros(fg.shape, bool)
+              # target cell coordinates within region
+              tx0,ty0,tx1,ty1 = x0-rx0, y0-ry0, x1-rx0, y1-ry0
+              target_area = max(1, (tx1-tx0)*(ty1-ty0))
+              for lab in range(1,n):
+                  x,y,ww,hh,area = stats[lab]
+                  if area < 18:
+                      continue
+                  comp = labels == lab
+                  ox0,oy0 = max(x,tx0), max(y,ty0)
+                  ox1,oy1 = min(x+ww,tx1), min(y+hh,ty1)
+                  overlap = 0 if ox1 <= ox0 or oy1 <= oy0 else int(comp[oy0:oy1, ox0:ox1].sum())
+                  cx,cy = cents[lab]
+                  center_in = tx0 <= cx <= tx1 and ty0 <= cy <= ty1
+                  overlap_ratio = overlap / max(1, area)
+                  if center_in or overlap_ratio >= 0.22 or overlap > target_area*0.006:
+                      keep |= comp
+              if not keep.any():
+                  # fallback exact cell, safer than empty
+                  keep = fg
+              ys,xs = np.where(keep)
+              if len(xs) == 0:
+                  return Image.new('RGBA',(TARGET,TARGET),(0,0,0,0)), 'FAIL_EMPTY'
+              bx0,by0,bx1,by1 = xs.min(), ys.min(), xs.max()+1, ys.max()+1
+              extra = 8
+              bx0,by0 = max(0,bx0-extra), max(0,by0-extra)
+              bx1,by1 = min(region.width,bx1+extra), min(region.height,by1+extra)
+              cut = region.crop((bx0,by0,bx1,by1))
+              cut = remove_edge_green(cut)
+              # hard clip to kept bbox only by alpha bounding, not green interior
+              arr2 = np.array(cut)
+              alpha = arr2[:,:,3] > 5
+              if alpha.any():
+                  yy,xx = np.where(alpha)
+                  mb = 3
+                  cx0,cy0,cx1,cy1 = max(0,xx.min()-mb), max(0,yy.min()-mb), min(cut.width,xx.max()+1+mb), min(cut.height,yy.max()+1+mb)
+                  cut = cut.crop((cx0,cy0,cx1,cy1))
+              scale = min((TARGET-32)/max(1,cut.width), (TARGET-32)/max(1,cut.height), 1.0)
+              nw,nh = max(1,int(cut.width*scale)), max(1,int(cut.height*scale))
+              if (nw,nh) != cut.size:
+                  cut = cut.resize((nw,nh), Image.Resampling.LANCZOS)
+              canvas = Image.new('RGBA',(TARGET,TARGET),(0,0,0,0))
+              canvas.alpha_composite(cut, ((TARGET-nw)//2, (TARGET-nh)//2))
+              return canvas, 'PASS'
+
+          rows=[]; summary=[]; written=0; skipped_few=0; failures=0
+          configs = sorted(PROMPTS.glob('items-*.json'))
+          for cfg in configs:
+              data = json.loads(cfg.read_text(encoding='utf-8'))
+              slots = data.get('slots') or []
+              sheet_path = SHEETS/(cfg.stem + '.png')
+              if not sheet_path.exists():
+                  summary.append([cfg.stem,'FAIL',0,'missing sheet'])
+                  failures += 1
+                  continue
+              sheet = Image.open(sheet_path).convert('RGBA')
+              sheet_written=0; sheet_fail=0; sheet_skip=0
+              thumbs=[]
+              for idx,slot in enumerate(slots):
+                  variant = infer_variant(slot)
+                  outp = slot.get('output')
+                  if not outp:
+                      sheet_fail += 1
+                      rows.append([cfg.stem,idx+1,'FAIL_NO_OUTPUT','','',''])
+                      continue
+                  if variant == 'few' and not few_allowed(slot):
+                      skipped_few += 1; sheet_skip += 1
+                      rows.append([cfg.stem,idx+1,'SKIP_FEW',slot_name(slot),variant,outp])
+                      continue
+                  icon,status = crop_slot(sheet, idx)
+                  dest = ROOT/outp
+                  dest.parent.mkdir(parents=True, exist_ok=True)
+                  icon.save(dest, 'PNG', optimize=True)
+                  written += 1; sheet_written += 1
+                  if status != 'PASS':
+                      failures += 1; sheet_fail += 1
+                  rows.append([cfg.stem,idx+1,status,slot_name(slot),variant,outp])
+                  thumbs.append((idx+1, icon, status, Path(outp).name))
+              # QA board per sheet
+              cols=10; cell=104; labh=30; pad=8
+              board=Image.new('RGB',(cols*(cell+pad)+pad,5*(cell+labh+pad)+pad),(35,35,35))
+              d=ImageDraw.Draw(board)
+              for j,(slot_no,icon,status,name) in enumerate(thumbs[:50]):
+                  row,col = j//10,j%10
+                  x=pad+col*(cell+pad); y=pad+row*(cell+labh+pad)
+                  bg=Image.new('RGB',(cell,cell),(220,220,220))
+                  bd=ImageDraw.Draw(bg)
+                  for yy in range(0,cell,8):
+                      for xx in range(0,cell,8):
+                          if (xx//8+yy//8)%2: bd.rectangle([xx,yy,xx+7,yy+7], fill=(180,180,180))
+                  ic=icon.copy(); ic.thumbnail((cell,cell), Image.Resampling.LANCZOS)
+                  bg.paste(ic,((cell-ic.width)//2,(cell-ic.height)//2),ic)
+                  board.paste(bg,(x,y)); d.rectangle([x,y,x+cell-1,y+cell-1], outline=(60,210,80) if status=='PASS' else (255,80,80), width=2)
+                  d.text((x,y+cell+2), f'{slot_no:02d} {name[:18]}', fill=(240,240,240))
+              board.save(QA/(cfg.stem+'-qa.jpg'), quality=88)
+              summary.append([cfg.stem,'PASS' if sheet_fail==0 else 'WARN',sheet_written,f'skipped_few={sheet_skip}; fail={sheet_fail}'])
+
+          with (TRACE/'NO_UPSCALE_CROP_CELLS.csv').open('w',newline='',encoding='utf-8') as f:
+              w=csv.writer(f); w.writerow(['sheet','slot','status','name','variant','output']); w.writerows(rows)
+          with (TRACE/'NO_UPSCALE_SUMMARY.csv').open('w',newline='',encoding='utf-8') as f:
+              w=csv.writer(f); w.writerow(['sheet','status','icons_written','note']); w.writerows(summary)
+          report = f'''# No-Upscale Clean Icon Report\n\n- Sheets processed: {len(configs)}\n- Icons written: {written}\n- Few variants skipped by default: {skipped_few}\n- Failed crops: {failures}\n- Output size: {TARGET}x{TARGET} transparent PNG\n- Upscaling: disabled\n- Cleanup policy: only green background connected to crop edges is removed; interior green pixels are preserved.\n- Variant policy: keep `one` and `many` for all items; keep `few` only when listed in `docs/assets/icon-prompts/few-variant-allowlist.json`.\n\nSee `NO_UPSCALE_CROP_CELLS.csv`, `NO_UPSCALE_SUMMARY.csv`, and `qa-boards/`.\n'''
+          (TRACE/'NO_UPSCALE_CROP_REPORT.md').write_text(report, encoding='utf-8')
+          print(report)
+          if failures:
+              raise SystemExit('crop failures found')
+          PY
+
+      - name: Stage clean replacement and remove temporary workflow
+        run: |
+          git lfs install
+          git config user.name "chatgpt-icon-pipeline"
+          git config user.email "chatgpt-icon-pipeline@users.noreply.github.com"
+          git rm -r --ignore-unmatch public/game-assets/items docs/assets/icon-sheets/safe-crop docs/assets/icon-sheets/green-cleanup docs/assets/icon-sheets/upscale-4x-clean
+          git add .gitattributes docs/assets/icon-prompts/few-variant-allowlist.json public/game-assets/items docs/assets/icon-sheets/no-upscale-clean
+          rm -f .github/workflows/chatgpt-icons-no-upscale-clean.yml
+          git add -A .github/workflows/chatgpt-icons-no-upscale-clean.yml
+          git status --short
+          test "$(find public/game-assets/items -type f -name '*.png' | wc -l)" -gt 0
+          git commit -m "Regenerate item icons without upscaling"
+          git push
