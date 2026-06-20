@@ -27,7 +27,8 @@ jobs:
           const start = source.findIndex((line) => line.includes("node <<'JS'"));
           const end = source.findIndex((line, index) => index > start && line.trim() === 'JS');
           if (start < 0 || end < 0) throw new Error('Could not find embedded writer script.');
-          const script = source.slice(start + 1, end).map((line) => line.replace(/^          /, '')).join('\n');
+          let script = source.slice(start + 1, end).map((line) => line.replace(/^          /, '')).join('\n');
+          script = script.replaceAll('`${item.name}', '`\\${item.name}');
           fs.writeFileSync('/tmp/write-item-copy.cjs', script);
           JS
           node /tmp/write-item-copy.cjs
