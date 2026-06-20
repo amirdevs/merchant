@@ -1,13 +1,15 @@
 # Written Item Descriptions
 
-This draft branch is now being rebuilt as **hand-written item copy**, not a runtime template/combinator output.
+This draft branch is being rebuilt as **hand-written item copy**, not a runtime template/combinator output.
 
 ## Scope
 
 - Actual game items in `src/data/generated/items.json`: **2206**
-- Hand-written static entries completed in this branch: **44**
-- Remaining items to write: **2162**
-- Current completed batch: **items 0–43**, covering currency, the Sunwake Harbor share, Painted Coast annals, local chronicles, primers, almanacs, and practical directories.
+- Hand-written static entries completed in this branch: **92**
+- Remaining items to write: **2114**
+- Completed batches:
+  - **items 0–43**: currency, the Sunwake Harbor share, Painted Coast annals, local chronicles, primers, almanacs, and practical directories.
+  - **items 44–91**: Crowncards books, magic/luck books, battle reports, trade essays, field guides, letters, and first gem items.
 
 ## Files
 
