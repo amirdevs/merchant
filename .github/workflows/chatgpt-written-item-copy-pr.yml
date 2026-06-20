@@ -19,6 +19,12 @@ jobs:
           ref: ${{ github.head_ref || github.ref_name }}
           fetch-depth: 1
           lfs: false
+          sparse-checkout: |
+            .github/workflows
+            src/data/generated/items.json
+            src/lib
+            docs/content
+          sparse-checkout-cone-mode: false
       - name: Extract and run embedded writer
         run: |
           node <<'JS'
