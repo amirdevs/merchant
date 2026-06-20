@@ -27,23 +27,14 @@ jobs:
             src/lib
             docs/content
           sparse-checkout-cone-mode: false
-      - name: Run written item copy authoring
+      - name: Generate static item copy
         run: |
-          mkdir -p docs/content
-          set +e
-          node scripts/run-embedded-item-copy.cjs > docs/content/writer-output.log 2>&1
-          status=$?
-          echo "$status" > docs/content/writer-status.txt
-          tail -n 80 docs/content/writer-output.log || true
-          exit 0
-      - name: Commit generated static copy or debug output
+          git pull --ff-only origin ${{ github.head_ref || github.ref_name }}
+          node scripts/run-embedded-item-copy.cjs
+      - name: Commit review files
         run: |
           git config user.name "chatgpt-written-item-copy"
           git config user.email "chatgpt-written-item-copy@users.noreply.github.com"
           git add -A .
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Debug written static copy generation"
-            git push origin HEAD:${{ github.head_ref || github.ref_name }}
-          fi
+          git commit -m "Add written static copy for all items"
+          git push origin HEAD:${{ github.head_ref || github.ref_name }}
