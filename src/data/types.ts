@@ -29,6 +29,12 @@ export type Item = {
   storageNeeds?: string[];
   decayProfile?: string;
   marketBehavior?: string[];
+  shortDescription?: string;
+  flavorText?: string;
+  lore?: string;
+  inspectionText?: string;
+  useText?: string;
+  provenance?: string;
   loafValue: number;
   size: number;
   weight: number;
