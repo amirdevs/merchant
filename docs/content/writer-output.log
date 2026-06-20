@@ -1,0 +1,39 @@
+/tmp/write-item-copy.cjs:209
+const ts = `import type { Item } from "@/data/types";\nimport writtenItemDescriptions from "@/data/generated/item-written-descriptions.json";\n\ntype StaticCopy = {\n  shortDescription: string;\n  flavorText: string;\n};\n\ntype WrittenItemCopy = StaticCopy & {\n  index: number;\n  id?: string;\n  name: string;\n};\n\nconst writtenCopies = writtenItemDescriptions as WrittenItemCopy[];\nconst byIndex = new Map<number, WrittenItemCopy>();\nconst byId = new Map<string, WrittenItemCopy>();\n\nfor (const copy of writtenCopies) {\n  byIndex.set(copy.index, copy);\n  if (copy.id) byId.set(copy.id, copy);\n}\n\nexport function buildStaticItemCopy(item: Item): StaticCopy {\n  const written = byIndex.get(item.index) || (item.id ? byId.get(item.id) : undefined);\n\n  return {\n    shortDescription:\n      item.shortDescription ||\n      written?.shortDescription ||\n      `\${item.name} is trade stock with enough condition, context, and market use to deserve inspection before pricing.`,\n    flavorText:\n      item.flavorText ||\n      written?.flavorText ||\n      `“Every item has two prices: the one in the ledger, and the one a buyer invents after hearing where it has been.”`,\n  };\n}\n`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+
+SyntaxError: Invalid or unexpected token
+    at wrapSafe (node:internal/modules/cjs/loader:1713:18)
+    at Module._compile (node:internal/modules/cjs/loader:1755:20)
+    at Object..js (node:internal/modules/cjs/loader:1913:10)
+    at Module.load (node:internal/modules/cjs/loader:1505:32)
+    at Function._load (node:internal/modules/cjs/loader:1309:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.22.3
+node:child_process:955
+    throw err;
+    ^
+
+Error: Command failed: node /tmp/write-item-copy.cjs
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at checkExecSyncError (node:child_process:916:11)
+    at execFileSync (node:child_process:952:15)
+    at Object.<anonymous> (/home/runner/work/merchant/merchant/scripts/run-embedded-item-copy.cjs:13:1)
+    at Module._compile (node:internal/modules/cjs/loader:1781:14)
+    at Object..js (node:internal/modules/cjs/loader:1913:10)
+    at Module.load (node:internal/modules/cjs/loader:1505:32)
+    at Function._load (node:internal/modules/cjs/loader:1309:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19) {
+  status: 1,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 2230,
+  stdout: null,
+  stderr: null
+}
+
+Node.js v22.22.3
