@@ -5,8 +5,8 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
 ## Scope
 
 - Actual game items in `src/data/generated/items.json`: **2206**
-- Hand-written static entries completed in this branch: **592**
-- Remaining items to write: **1614**
+- Hand-written static entries completed in this branch: **642**
+- Remaining items to write: **1564**
 - Completed batches:
   - **items 0–43**: currency, the Sunwake Harbor share, Painted Coast annals, local chronicles, primers, almanacs, and practical directories.
   - **items 44–91**: Crowncards books, magic/luck books, battle reports, trade essays, field guides, letters, and first gem items.
@@ -20,6 +20,7 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
   - **items 442–491**: named shields, bucklers, banners, an empty book, flowers, rare botanicals, and first mushrooms.
   - **items 492–541**: remaining mushrooms, leaves, pond pads, odd herbs, wetland plants, rare red plants, and named botanicals.
   - **items 542–591**: colored bushes, seaweed, rare botanicals, seeds, seedlings, branches, logs, stump, scarves, and cloaks.
+  - **items 592–641**: coats, dresses, gloves, caps, veils, masks, skin rags, and robes.
 
 ## Files
 
@@ -37,6 +38,7 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
 - `src/data/generated/item-written-descriptions-0492-0516.json` contains authored entries 492–516.
 - `src/data/generated/item-written-descriptions-0517-0541.json` contains authored entries 517–541.
 - `src/data/generated/item-written-descriptions-0542-0591.json` contains authored entries 542–591.
+- `src/data/generated/item-written-descriptions-0592-0641.json` contains authored entries 592–641.
 - `src/lib/item-static-description.ts` reads the stored copy first and only falls back if an entry is missing.
 
 ## Writing standard
