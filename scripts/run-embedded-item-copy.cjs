@@ -17,5 +17,9 @@ script = script.replace(
   "`“Every item has two prices: the one in the ledger, and the one a buyer invents after hearing where it has been.”`,",
   "\"“Every item has two prices: the one in the ledger, and the one a buyer invents after hearing where it has been.”\","
 );
+script = script.replace(
+  "flavorText = `“${cap(firstUseful(item))} changes hands often; ${lower(item.name)} changes the conversation when the right buyer notices.”`;",
+  "flavorText = `“${cap(firstUseful(item))} changes hands often; ledger entry ${item.index} gives ${lower(item.name)} its own road and rumor.”`;"
+);
 fs.writeFileSync("/tmp/write-item-copy.cjs", script);
 execFileSync("node", ["/tmp/write-item-copy.cjs"], { stdio: "inherit" });
