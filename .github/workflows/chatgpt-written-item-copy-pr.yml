@@ -21,28 +21,18 @@ jobs:
           lfs: false
           sparse-checkout: |
             .github/workflows
+            scripts/run-embedded-item-copy.cjs
             src/data/generated/items.json
             src/lib
             docs/content
           sparse-checkout-cone-mode: false
-      - name: Extract and run embedded writer
-        run: |
-          node <<'JS'
-          const fs = require('fs');
-          const source = fs.readFileSync('.github/workflows/chatgpt-written-item-copy.yml', 'utf8').split('\n');
-          const start = source.findIndex((line) => line.includes("node <<'JS'"));
-          const end = source.findIndex((line, index) => index > start && line.trim() === 'JS');
-          if (start < 0 || end < 0) throw new Error('Could not find embedded writer script.');
-          let script = source.slice(start + 1, end).map((line) => line.replace(/^          /, '')).join('\n');
-          script = script.replaceAll('`${item.name}', '`\\${item.name}');
-          fs.writeFileSync('/tmp/write-item-copy.cjs', script);
-          JS
-          node /tmp/write-item-copy.cjs
+      - name: Run written item copy authoring
+        run: node scripts/run-embedded-item-copy.cjs
       - name: Commit generated static copy
         run: |
           git config user.name "chatgpt-written-item-copy"
           git config user.email "chatgpt-written-item-copy@users.noreply.github.com"
-          git rm .github/workflows/chatgpt-written-item-copy.yml .github/workflows/chatgpt-written-item-copy-pr.yml
+          git rm .github/workflows/chatgpt-written-item-copy.yml .github/workflows/chatgpt-written-item-copy-pr.yml scripts/run-embedded-item-copy.cjs
           git add src/data/generated/item-written-descriptions.json src/lib/item-static-description.ts docs/content/written-item-descriptions.md
           git commit -m "Add written static copy for all items"
           git push origin HEAD:${{ github.head_ref || github.ref_name }}
