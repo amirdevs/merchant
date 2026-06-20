@@ -19,6 +19,7 @@ jobs:
           ref: ${{ github.head_ref || github.ref_name }}
           fetch-depth: 1
           lfs: false
+          show-progress: false
           sparse-checkout: |
             .github/workflows
             scripts/run-embedded-item-copy.cjs
@@ -27,12 +28,18 @@ jobs:
             docs/content
           sparse-checkout-cone-mode: false
       - name: Run written item copy authoring
-        run: node scripts/run-embedded-item-copy.cjs
-      - name: Commit generated static copy
+        run: |
+          mkdir -p docs/content
+          set +e
+          node scripts/run-embedded-item-copy.cjs > docs/content/writer-output.log 2>&1
+          status=$?
+          echo "$status" > docs/content/writer-status.txt
+          tail -n 80 docs/content/writer-output.log || true
+          exit 0
+      - name: Commit generated static copy or debug output
         run: |
           git config user.name "chatgpt-written-item-copy"
           git config user.email "chatgpt-written-item-copy@users.noreply.github.com"
-          git rm .github/workflows/chatgpt-written-item-copy.yml .github/workflows/chatgpt-written-item-copy-pr.yml scripts/run-embedded-item-copy.cjs
-          git add src/data/generated/item-written-descriptions.json src/lib/item-static-description.ts docs/content/written-item-descriptions.md
-          git commit -m "Add written static copy for all items"
+          git add -A src/data/generated/item-written-descriptions.json src/lib/item-static-description.ts docs/content/written-item-descriptions.md docs/content/writer-output.log docs/content/writer-status.txt .github/workflows/chatgpt-written-item-copy-pr.yml
+          git commit -m "Debug written static copy generation"
           git push origin HEAD:${{ github.head_ref || github.ref_name }}
