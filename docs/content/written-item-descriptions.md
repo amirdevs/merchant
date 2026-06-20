@@ -5,8 +5,8 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
 ## Scope
 
 - Actual game items in `src/data/generated/items.json`: **2206**
-- Hand-written static entries completed in this branch: **492**
-- Remaining items to write: **1714**
+- Hand-written static entries completed in this branch: **542**
+- Remaining items to write: **1664**
 - Completed batches:
   - **items 0–43**: currency, the Sunwake Harbor share, Painted Coast annals, local chronicles, primers, almanacs, and practical directories.
   - **items 44–91**: Crowncards books, magic/luck books, battle reports, trade essays, field guides, letters, and first gem items.
@@ -18,6 +18,7 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
   - **items 342–391**: remaining snakes and worms, farm animals, small birds, horse barding, dragon armors, gauntlets, war gloves, and first helmets.
   - **items 392–441**: helmets, mail shirts, plate armor, leather armor, named faction armor, exotic breastplates, iron boots, and the shield of Pearlgate.
   - **items 442–491**: named shields, bucklers, banners, an empty book, flowers, rare botanicals, and first mushrooms.
+  - **items 492–541**: remaining mushrooms, leaves, pond pads, odd herbs, wetland plants, rare red plants, and named botanicals.
 
 ## Files
 
@@ -32,7 +33,9 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
 - `src/data/generated/item-written-descriptions-0417-0441.json` contains authored entries 417–441.
 - `src/data/generated/item-written-descriptions-0442-0466.json` contains authored entries 442–466.
 - `src/data/generated/item-written-descriptions-0467-0491.json` contains authored entries 467–491.
-- `src/lib/item-static-description.ts` reads the stored copy first and only falls back if an entry is missing.
+- `src/data/generated/item-written-descriptions-0492-0516.json` contains authored entries 492–516.
+- `src/data/generated/item-written-descriptions-0517-0541.json` contains authored entries 517–541.
+- `src/lib/item-static-description.ts` reads the stored copy first and only falls back if an entry is missing. Current note: the 492–541 JSON chunks have been committed; the reader wiring still needs to be updated after the connector accepts the TypeScript file update.
 
 ## Writing standard
 
