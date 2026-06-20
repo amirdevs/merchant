@@ -5,19 +5,21 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
 ## Scope
 
 - Actual game items in `src/data/generated/items.json`: **2206**
-- Hand-written static entries completed in this branch: **192**
-- Remaining items to write: **2014**
+- Hand-written static entries completed in this branch: **242**
+- Remaining items to write: **1964**
 - Completed batches:
   - **items 0–43**: currency, the Sunwake Harbor share, Painted Coast annals, local chronicles, primers, almanacs, and practical directories.
   - **items 44–91**: Crowncards books, magic/luck books, battle reports, trade essays, field guides, letters, and first gem items.
   - **items 92–141**: scarce/fabled gemstones, crowns, colored crystals, gem necklaces, and rings.
   - **items 142–191**: additional rings plus the first spice/herb goods.
+  - **items 192–241**: remaining spices/aromatics, poisons, potions, remedies, alchemy solutions, and first alchemy tools.
 
 ## Files
 
 - `src/data/generated/item-written-descriptions.json` contains authored entries 0–91.
 - `src/data/generated/item-written-descriptions-0092-0141.json` contains authored entries 92–141.
 - `src/data/generated/item-written-descriptions-0142-0191.json` contains authored entries 142–191.
+- `src/data/generated/item-written-descriptions-0192-0241.json` contains authored entries 192–241.
 - `src/lib/item-static-description.ts` reads the stored copy first and only falls back if an entry is missing.
 
 ## Writing standard
