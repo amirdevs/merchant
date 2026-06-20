@@ -26,7 +26,7 @@ jobs:
           cat > .git/info/sparse-checkout <<'EOF'
           .github/workflows/*
           scripts/run-embedded-item-copy.cjs
-          src/data/generated/items.json
+          src/data/generated/*
           src/lib/*
           docs/content/*
           EOF
