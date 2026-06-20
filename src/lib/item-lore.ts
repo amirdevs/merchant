@@ -1,6 +1,7 @@
 import type { Item, Kingdom, Marketplace } from "@/data/types";
 import { money, title } from "@/lib/format";
 import { itemCatalogTokens, normalizeItemToken } from "@/lib/item-catalog";
+import { buildStaticItemCopy } from "@/lib/item-static-description";
 
 type ItemWithOptionalLore = Item & {
   shortDescription?: string;
@@ -35,11 +36,31 @@ type LoreProfile = {
 const fallbackProfile: LoreProfile = {
   label: "trade good",
   appraiser: "broker",
-  craft: ["passed through many hands before reaching a merchant stall", "carries enough odd detail to reward a careful inspection", "has the practical charm of a thing made for travel, barter, and display"],
-  origin: ["counted among the wandering goods of the Painted Coast", "recorded in caravan ledgers as a useful but unpredictable article", "found wherever market roads cross old local custom"],
-  handling: ["keep it dry, wrapped, and separate from rougher cargo", "inspect it for cracks, missing parts, stains, and hidden marks before pricing", "store it where customers can see it without handling it too freely"],
-  use: ["best used as a bargaining piece when a buyer cares more about story than standard value", "use it to sweeten a bundle deal or anchor a cautious negotiation", "show it late in a trade, when the other side has already revealed what they value"],
-  market: ["moves best when the stallholder can explain why it matters", "draws stronger offers from buyers who recognize its provenance", "has flexible value because rumor, need, and condition all matter"],
+  craft: [
+    "passed through enough hands to collect small marks of travel, storage, and negotiation",
+    "carries the practical charm of a thing made for barter, transport, and display",
+    "rewards a careful look because its value is hidden in condition, timing, and buyer interest",
+  ],
+  origin: [
+    "counted among the wandering goods of the Painted Coast",
+    "recorded in caravan ledgers as useful but unpredictable stock",
+    "found wherever market roads cross local habit and old trade custom",
+  ],
+  handling: [
+    "keep it dry, wrapped, and separate from rougher cargo",
+    "inspect it for cracks, stains, missing parts, and hidden marks before pricing",
+    "store it where customers can see it without handling it too freely",
+  ],
+  use: [
+    "use it to sweeten a bundle deal or anchor a cautious negotiation",
+    "show it when the buyer has already revealed what they value",
+    "sell it with a clear story rather than letting it sit as anonymous stock",
+  ],
+  market: [
+    "moves best when the stallholder can explain why it matters",
+    "draws stronger offers from buyers who recognize its provenance",
+    "has flexible value because rumor, need, and condition all matter",
+  ],
 };
 
 const familyProfiles: Record<string, LoreProfile> = {
@@ -55,17 +76,17 @@ const familyProfiles: Record<string, LoreProfile> = {
   weapon: {
     label: "weapon",
     appraiser: "arms factor",
-    craft: ["balanced for hands that expect trouble before sunset", "shows the maker's argument between reach, weight, and intimidation", "bears the useful beauty of steel that was made to survive bad roads"],
-    origin: ["the sort of piece that follows border patrols, caravan guards, and nervous nobles", "would not look out of place beside a drill yard, mercenary chest, or rebel cache", "carries the politics of every kingdom that taxes steel"],
+    craft: ["balanced for hands that expect trouble before sunset", "shows the maker's argument between reach, weight, and intimidation", "bears the useful beauty of steel, wood, cord, or head-weight made to survive bad roads"],
+    origin: ["follows border patrols, caravan guards, nervous nobles, and anyone who listens to road rumors", "would not look out of place beside a drill yard, mercenary chest, or rebel cache", "carries the politics of every kingdom that taxes steel"],
     handling: ["oil the metal, bind the edge, and keep it away from damp sacks", "wrap it before entering strict towns; exposed steel changes every conversation", "check the grip, head, string, or point before trusting the listed value"],
-    use: ["trade it to guards, hunters, militia quartermasters, and anyone who hears war in the weather", "pairs well with armor, repair tools, and travel permits in a hard bargain", "use its threat as part of the price, but never let the buyer test it near your stall"],
+    use: ["trade it to guards, hunters, militia quartermasters, and anyone who hears war in the weather", "pair it with armor, repair tools, and travel permits in a hard bargain", "use its threat as part of the price, but never let the buyer test it near your stall"],
     market: ["rises sharply when roads become unsafe or rumors of war spread", "may trigger inspections where military goods are restricted", "sells best when condition and provenance are presented with confidence"],
   },
   armor: {
     label: "armor",
     appraiser: "armorer",
     craft: ["built around the old compromise between protection, pride, and fatigue", "shows careful joins where craft matters more than decoration", "has the unmistakable grammar of rivets, straps, plates, padding, and scars"],
-    origin: ["belongs to the world of escorts, gate guards, tournament yards, and fearful roads", "has likely rested on a peg in some barracks, manor, guild hall, or caravan chest", "carries both status and suspicion in kingdoms that watch armed travelers"],
+    origin: ["belongs to escorts, gate guards, tournament yards, and fearful roads", "has likely rested on a peg in some barracks, manor, guild hall, or caravan chest", "carries both status and suspicion in kingdoms that watch armed travelers"],
     handling: ["keep buckles supple, padding dry, and metal free from red bloom", "measure fit before promising it to a customer; badly fitted armor is an expensive insult", "pack it above wet goods and below nothing that can dent the finish"],
     use: ["trade it to guards, duelists, adventurers, and nobles who prefer caution to regret", "bundle it with weapons or repair supplies for stronger offers", "use visible quality to justify a higher first price"],
     market: ["valuable in dangerous seasons and awkward in peaceful inspections", "condition matters as much as material", "buyers pay more when the piece looks ready rather than merely old"],
@@ -83,7 +104,7 @@ const familyProfiles: Record<string, LoreProfile> = {
     label: "arcane good",
     appraiser: "hedge arcanist",
     craft: ["hums with the kind of craft that pretends not to be listening", "has a decorative logic older than most market charters", "shows the patient marks of ritual work, failed theory, and stubborn belief"],
-    origin: ["moves through scholar towers, shrine rooms, back-alley charm sellers, and noble cabinets", "is spoken of more carefully than ordinary goods because nobody agrees what it can do", "belongs to the borderland between trade, prayer, trickery, and power"],
+    origin: ["moves through scholar towers, shrine rooms, back-alley charm sellers, and noble cabinets", "is spoken of carefully because nobody agrees what it can do", "belongs to the borderland between trade, prayer, trickery, and power"],
     handling: ["wrap it in clean cloth and keep it away from iron filings, spilled salt, and loud skeptics", "do not promise more than you can prove; arcane buyers remember insults", "store it where curious customers can admire it without touching the working surface"],
     use: ["trade it to mages, priests, collectors, and desperate travelers chasing unlikely advantages", "use its mystery to raise interest, then anchor the price with condition and rarity", "bundle it with books, gems, or alchemical stock for better narrative value"],
     market: ["valuable wherever fear and ambition outrun common sense", "suffers when buyers demand proof and thrives when they demand hope", "may be prized, mocked, or seized depending on local law"],
@@ -260,6 +281,7 @@ function profileFor(item: Item, tokens: Set<string>) {
   if (has(tokens, "document", "documents", "deed", "deeds", "maps", "map", "permit", "license", "contract")) return familyProfiles.document;
   if (has(tokens, "jewelry", "jewlery", "rings", "necklaces", "amulets", "crowns")) return familyProfiles.luxury;
   if (has(tokens, "gems", "gem", "crystals", "crystal")) return familyProfiles.gem;
+  if (has(tokens, "cards", "card", "game", "dice", "deck")) return familyProfiles.game;
   const family = normalizeItemToken(item.family || item.tradeRole || "").replace(/\s+/g, "_");
   return familyProfiles[family] || fallbackProfile;
 }
@@ -268,26 +290,6 @@ function rarityText(item: Item) {
   if (item.unique) return "singular";
   const band = item.rarityBand || (item.rarity && item.rarity >= 5 ? "legendary" : item.rarity && item.rarity >= 4 ? "rare" : item.rarity && item.rarity >= 3 ? "uncommon" : "common");
   return normalizeItemToken(band).replace(/\s+/g, "-");
-}
-
-function qualityText(item: Item, tokens: Set<string>) {
-  if (item.unique) return "a named piece with its own reputation";
-  if (has(tokens, "fabled", "legendary")) return "the sort of fabled stock buyers ask to see twice";
-  if (has(tokens, "scarce", "rare")) return "scarce enough to slow a buyer's breathing";
-  if (has(tokens, "notable", "uncommon")) return "notable enough to deserve a better place on the stall cloth";
-  if (item.loafValue >= 1000) return "valuable enough to make careful merchants lower their voices";
-  if (item.loafValue <= 5) return "ordinary in price but still useful in the right bundle";
-  return "respectable trade stock with room for a skilled seller to improve the margin";
-}
-
-function descriptor(item: Item, tokens: Set<string>) {
-  if (has(tokens, "fragile")) return "fragile";
-  if (has(tokens, "forbidden", "contraband", "poison")) return "dangerous";
-  if (has(tokens, "fresh", "cool storage")) return "perishable";
-  if (has(tokens, "valuable small")) return "compact and valuable";
-  if (item.weight >= 7 || item.size >= 7) return "heavy";
-  if (item.size >= 4) return "bulky";
-  return "portable";
 }
 
 function originPhrase(item: Item, market: Marketplace, kingdom?: Kingdom) {
@@ -308,16 +310,16 @@ function marketPressure(item: Item, market: Marketplace, kingdom?: Kingdom, ille
 }
 
 function explicitLore(item: ItemWithOptionalLore) {
-  return item.lore || item.inspectionText || item.flavorText || item.shortDescription || "";
+  return item.lore || item.inspectionText || item.provenance || "";
 }
 
 export function buildItemLore({ item, market, kingdom, quantity, illegal }: { item: Item; market: Marketplace; kingdom?: Kingdom; quantity: number; illegal?: boolean }): RichItemLore {
   const richItem = item as ItemWithOptionalLore;
   const tokens = itemCatalogTokens(item);
   const profile = profileFor(item, tokens);
+  const staticCopy = buildStaticItemCopy(item);
   const seed = `${item.index}:${item.name}:${market.index}`;
   const rarity = rarityText(item);
-  const category = human(item.subfamily || item.family || profile.label).toLowerCase();
   const origin = originPhrase(item, market, kingdom);
   const explicit = explicitLore(richItem);
   const craft = pick(`${seed}:craft`, profile.craft);
@@ -325,19 +327,11 @@ export function buildItemLore({ item, market, kingdom, quantity, illegal }: { it
   const handling = richItem.useText || pick(`${seed}:handling`, profile.handling);
   const use = richItem.useText || pick(`${seed}:use`, profile.use);
   const marketLine = pick(`${seed}:market`, profile.market);
-  const quality = qualityText(item, tokens);
-  const condition = descriptor(item, tokens);
   const valueLine = `${money(item.loafValue)} base value, ${item.weight} weight, ${item.size} size, ${rarity} rarity`;
 
-  const shortDescription = richItem.shortDescription
-    || `${item.name} is ${condition} ${category} — ${quality}.`;
-
-  const flavorText = richItem.flavorText
-    || `“Every item has two prices: the one in the ledger, and the one a buyer invents after hearing where it has been.”`;
-
-  const lore = explicit
-    || `${craft}. It is ${origin}; ${originMemory}. In a merchant's hands, ${item.name.toLowerCase()} is not just cargo but a story waiting for the right customer in ${market.name}.`;
-
+  const shortDescription = richItem.shortDescription || staticCopy.shortDescription;
+  const flavorText = richItem.flavorText || staticCopy.flavorText;
+  const lore = explicit || `${craft}. It is ${origin}; ${originMemory}. In a merchant's hands, ${item.name.toLowerCase()} is not just cargo but a story waiting for the right customer in ${market.name}.`;
   const appraisal = `${profile.appraiser ? `A ${profile.appraiser}` : "A careful appraiser"} would start with ${valueLine}, then test condition, provenance, and how urgently the buyer needs this particular ${profile.label}. ${marketLine}.`;
 
   return {
