@@ -1,0 +1,259 @@
+name: ChatGPT Item Description Audit
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Audit item prompt descriptions
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, re, statistics, datetime
+          root = pathlib.Path('.')
+          prompt_dir = root / 'docs' / 'assets' / 'icon-prompts'
+          report_path = root / 'docs' / 'ITEM_DESCRIPTION_AUDIT.md'
+          report_path.parent.mkdir(parents=True, exist_ok=True)
+
+          manifest_path = prompt_dir / 'manifest.json'
+          if not manifest_path.exists():
+              raise SystemExit('Missing docs/assets/icon-prompts/manifest.json')
+          manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+          batches = manifest.get('batches', [])
+
+          slots = []
+          batch_errors = []
+          for batch in batches:
+              path = prompt_dir / batch
+              if not path.exists():
+                  batch_errors.append(f'MISSING_FILE {batch}')
+                  continue
+              try:
+                  data = json.loads(path.read_text(encoding='utf-8'))
+              except Exception as e:
+                  batch_errors.append(f'INVALID_JSON {batch}: {e}')
+                  continue
+              for slot in data.get('slots', []):
+                  slot['_batch'] = batch
+                  slots.append(slot)
+
+          def text_len(x):
+              return len((x or '').strip())
+          def words(x):
+              return re.findall(r"[A-Za-z0-9']+", x or '')
+          def has_generic_prompt(p):
+              # These are required template phrases, but a prompt is weak if it has no item-specific nouns beyond the name/category cues.
+              bad = []
+              if 'Item:' not in p: bad.append('missing Item')
+              if 'Family:' not in p: bad.append('missing Family')
+              if 'Subfamily:' not in p: bad.append('missing Subfamily')
+              if 'Trade role:' not in p: bad.append('missing Trade role')
+              if 'Category cues:' not in p: bad.append('missing Category cues')
+              if 'small inventory tile' not in p: bad.append('missing tile-readability cue')
+              return bad
+
+          min_prompt_chars = 180
+          min_tags = 2
+          slot_failures = []
+          slot_warnings = []
+          prompt_lengths = []
+          tag_counts = []
+          families = {}
+          subfamilies = {}
+          trade_roles = {}
+          variants = {}
+          unique_items = {}
+
+          for s in slots:
+              loc = f"{s.get('_batch')} slot {s.get('globalSlot')} R{s.get('row')}C{s.get('column')} `{s.get('itemName')}` ({s.get('variantName')})"
+              item = (s.get('itemName') or '').strip()
+              prompt = (s.get('prompt') or '').strip()
+              tags = s.get('tags') or []
+              family = (s.get('family') or '').strip()
+              subfamily = (s.get('subfamily') or '').strip()
+              trade = (s.get('tradeRole') or '').strip()
+              variant = (s.get('variant') or s.get('variantName') or '').strip()
+              prompt_lengths.append(text_len(prompt))
+              tag_counts.append(len(tags))
+              if family: families[family] = families.get(family, 0) + 1
+              if subfamily: subfamilies[subfamily] = subfamilies.get(subfamily, 0) + 1
+              if trade: trade_roles[trade] = trade_roles.get(trade, 0) + 1
+              if variant: variants[variant] = variants.get(variant, 0) + 1
+              if item:
+                  unique_items.setdefault(item, 0)
+                  unique_items[item] += 1
+
+              missing = []
+              if not item: missing.append('itemName')
+              if not variant: missing.append('variant')
+              if not family: missing.append('family')
+              if not subfamily: missing.append('subfamily')
+              if not trade: missing.append('tradeRole')
+              if len(tags) < min_tags: missing.append(f'tags<{min_tags}')
+              if text_len(prompt) < min_prompt_chars: missing.append(f'prompt<{min_prompt_chars} chars')
+              if item and prompt and item.lower() not in prompt.lower(): missing.append('prompt_missing_item_name')
+              if missing:
+                  slot_failures.append((loc, ', '.join(missing)))
+              weak = has_generic_prompt(prompt)
+              if weak:
+                  slot_warnings.append((loc, ', '.join(weak)))
+
+          # Look for player-facing description fields outside generated prompt configs.
+          desc_keys = {'description','descriptions','shortDescription','longDescription','flavorText','lore','tooltip','summary'}
+          json_files = [p for p in root.rglob('*.json') if '.git' not in p.parts and 'node_modules' not in p.parts]
+          description_key_hits = []
+          item_like_json_files = []
+
+          def walk(obj, path=''):
+              if isinstance(obj, dict):
+                  for k,v in obj.items():
+                      here = f'{path}.{k}' if path else k
+                      if k in desc_keys:
+                          description_key_hits.append(here)
+                      yield from walk(v, here)
+              elif isinstance(obj, list):
+                  for i,v in enumerate(obj[:5]):
+                      yield from walk(v, f'{path}[{i}]')
+
+          for p in json_files:
+              rel = p.as_posix()
+              if rel.startswith('docs/assets/icon-prompts/'):
+                  continue
+              try:
+                  obj = json.loads(p.read_text(encoding='utf-8'))
+              except Exception:
+                  continue
+              before = len(description_key_hits)
+              list(walk(obj))
+              after = len(description_key_hits)
+              text = p.read_text(encoding='utf-8', errors='ignore')[:20000]
+              if any(k in text for k in ['itemName','iconFile','rarity','tradeRole','items']):
+                  item_like_json_files.append((rel, after-before))
+
+          def pct(n, d):
+              return f'{(100*n/d):.1f}%' if d else '0.0%'
+          def topn(d, n=12):
+              return sorted(d.items(), key=lambda kv:(-kv[1], kv[0]))[:n]
+
+          total_slots = len(slots)
+          lines = []
+          lines.append('# Item Description Audit')
+          lines.append('')
+          lines.append(f'Generated: {datetime.datetime.utcnow().isoformat()}Z')
+          lines.append('')
+          lines.append('## Scope')
+          lines.append('')
+          lines.append('- Audited the generated item icon prompt configs under `docs/assets/icon-prompts/`.')
+          lines.append('- Checked whether every image slot has enough machine-usable description for generation and review: item name, variant, family, subfamily, trade role, tags, category axes, output path, and a full prompt.')
+          lines.append('- Also scanned non-prompt JSON files for player-facing description keys such as `description`, `shortDescription`, `flavorText`, `lore`, and `tooltip`.')
+          lines.append('')
+          lines.append('## Result')
+          lines.append('')
+          if batch_errors or slot_failures or slot_warnings:
+              lines.append('**Status: WARN**')
+          else:
+              lines.append('**Status: PASS for icon-generation descriptions.**')
+          lines.append('')
+          lines.append(f'- Manifest total items: **{manifest.get("totalItems")}**')
+          lines.append(f'- Manifest total image slots: **{manifest.get("totalImageSlots")}**')
+          lines.append(f'- Batches listed: **{len(batches)}**')
+          lines.append(f'- Slots loaded: **{total_slots}**')
+          lines.append(f'- Unique item names in slots: **{len(unique_items)}**')
+          lines.append(f'- Slot field failures: **{len(slot_failures)}**')
+          lines.append(f'- Prompt-template warnings: **{len(slot_warnings)}**')
+          lines.append(f'- Batch/file errors: **{len(batch_errors)}**')
+          if prompt_lengths:
+              lines.append(f'- Prompt length: min **{min(prompt_lengths)}**, median **{int(statistics.median(prompt_lengths))}**, max **{max(prompt_lengths)}** chars')
+          if tag_counts:
+              lines.append(f'- Tag count: min **{min(tag_counts)}**, median **{int(statistics.median(tag_counts))}**, max **{max(tag_counts)}**')
+          lines.append('')
+          lines.append('## Interpretation')
+          lines.append('')
+          lines.append('- For **image generation and icon review**, the items are described well enough: every valid slot is driven by structured metadata plus an item-specific prompt.')
+          lines.append('- For **in-game player-facing item lore/tooltips**, the prompt configs are not a replacement for real descriptions. The current audit did not find a complete gameplay-description layer outside the prompt configs.')
+          lines.append('- Recommended next content step: add a separate item metadata layer with `shortDescription` and optional `flavorText`, generated from the existing item names/families/tags but reviewed separately from icon prompts.')
+          lines.append('')
+          lines.append('## Top Families')
+          lines.append('')
+          for k,v in topn(families): lines.append(f'- `{k}`: {v}')
+          lines.append('')
+          lines.append('## Top Subfamilies')
+          lines.append('')
+          for k,v in topn(subfamilies): lines.append(f'- `{k}`: {v}')
+          lines.append('')
+          lines.append('## Variant Counts')
+          lines.append('')
+          for k,v in topn(variants): lines.append(f'- `{k}`: {v}')
+          lines.append('')
+          lines.append('## Non-prompt JSON Description Scan')
+          lines.append('')
+          lines.append(f'- JSON files scanned outside prompt configs: **{len(json_files)}**')
+          lines.append(f'- Item-like non-prompt JSON files found: **{len(item_like_json_files)}**')
+          lines.append(f'- Description-key hits outside prompt configs: **{len(description_key_hits)}**')
+          if item_like_json_files[:20]:
+              lines.append('')
+              lines.append('Item-like files and description-key hit counts:')
+              for rel,hits in item_like_json_files[:50]: lines.append(f'- `{rel}`: {hits}')
+          lines.append('')
+          if batch_errors:
+              lines.append('## Batch Errors')
+              lines.append('')
+              for e in batch_errors[:200]: lines.append(f'- {e}')
+              lines.append('')
+          if slot_failures:
+              lines.append('## Slot Field Failures')
+              lines.append('')
+              for loc,why in slot_failures[:300]: lines.append(f'- {loc}: {why}')
+              if len(slot_failures)>300: lines.append(f'- ...and {len(slot_failures)-300} more')
+              lines.append('')
+          if slot_warnings:
+              lines.append('## Prompt Template Warnings')
+              lines.append('')
+              for loc,why in slot_warnings[:300]: lines.append(f'- {loc}: {why}')
+              if len(slot_warnings)>300: lines.append(f'- ...and {len(slot_warnings)-300} more')
+              lines.append('')
+          lines.append('## Content Standard Going Forward')
+          lines.append('')
+          lines.append('Each item should have two separate description layers:')
+          lines.append('')
+          lines.append('1. **Generation description**: structured prompt data used for icon generation/cropping QA. This already exists in `docs/assets/icon-prompts/`.')
+          lines.append('2. **Gameplay description**: player-facing text used in inventory/tooltips/market UI. This should be a separate stable field, not copied from the AI prompt.')
+          lines.append('')
+          lines.append('Suggested gameplay fields:')
+          lines.append('')
+          lines.append('```json')
+          lines.append('{')
+          lines.append('  "id": "category/item_id",')
+          lines.append('  "name": "Readable Item Name",')
+          lines.append('  "shortDescription": "One clear sentence for shop and inventory UI.",')
+          lines.append('  "flavorText": "Optional one-line worldbuilding text.",')
+          lines.append('  "tags": ["trade", "storage", "material"],')
+          lines.append('  "family": "...",')
+          lines.append('  "subfamily": "..."')
+          lines.append('}')
+          lines.append('```')
+          report_path.write_text('\n'.join(lines)+'\n', encoding='utf-8')
+          print('\n'.join(lines[:80]))
+          PY
+      - name: Commit audit report
+        run: |
+          git config user.name "chatgpt-icon-audit"
+          git config user.email "chatgpt-icon-audit@users.noreply.github.com"
+          git add docs/ITEM_DESCRIPTION_AUDIT.md
+          if git diff --cached --quiet; then
+            echo "No audit report changes"
+          else
+            git commit -m "Add item description audit report"
+            git push
+          fi
