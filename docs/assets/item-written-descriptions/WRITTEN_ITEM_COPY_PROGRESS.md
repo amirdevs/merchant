@@ -7,10 +7,10 @@ This file tracks the manually authored static item copy for PR #9.
 ## Current status
 
 - Actual game items: 2206
-- Hand-written entries completed: 2092
-- Remaining: 114
-- Last completed item index: 2091
-- Next start point: 2092
+- Hand-written entries completed: 2142
+- Remaining: 64
+- Last completed item index: 2141
+- Next start point: 2142
 
 ## Completed batches
 
@@ -56,6 +56,7 @@ This file tracks the manually authored static item copy for PR #9.
 - 1942–1991: war hammers, games, Crowncards, trade notes, baked goods, grain sacks, and seeds/bulbs.
 - 1992–2041: orchard grafts, feed, fruit, meats, fish, drinks, spices, preserves, sailcloth, brocade, sewing goods, leather, tack, and shell buttons.
 - 2042–2091: timber, forge supplies, jeweler materials, workshop tools, travel gear, harbor supplies, almanacs, and practical market books.
+- 2092–2141: permits, entertainment goods, magical reagents, shrine goods, modest weapons, animal stock, hidden compartments, questionable papers, and storm-shell curios.
 
 ## Standard
 
