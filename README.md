@@ -48,7 +48,8 @@ This is a playable local vertical-slice foundation, not a full clone yet. It cur
 - economy, capacity, travel, quest, company, and UI-integration helper foundations
 - playable UI integration through the Strategy Planner
 - character rework/portrait roadmap for replacing original visible NPC identities
-- useful new NPC seed roster and existing character audit planning
+- useful-new-NPC seed roster and first character portrait prompt batch plan
+- existing-character audit plan and final roster-map targets
 - playtest/balance report generation
 - offline local save/load and import/export
 
@@ -56,7 +57,7 @@ Steam and online systems are not included.
 
 ## Documentation Reading Order
 
-Read docs in order from `docs/00_READ_ME_FIRST.md` through `docs/12_EXISTING_CHARACTER_AUDIT.md`.
+Read docs in order from `docs/00_READ_ME_FIRST.md` through `docs/13_FINAL_CHARACTER_ROSTER_MAP.md`.
 
 Current source-of-truth docs:
 
@@ -74,6 +75,7 @@ Current source-of-truth docs:
 10_CHARACTER_REWORK_AND_PORTRAITS.md
 11_USEFUL_NPC_ROSTER_SEEDS.md
 12_EXISTING_CHARACTER_AUDIT.md
+13_FINAL_CHARACTER_ROSTER_MAP.md
 ```
 
 Generated reports, old phase notes, audit outputs, and historical notes belong under `docs/logs/` and are not part of the normal reading path.

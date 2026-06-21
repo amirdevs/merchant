@@ -1,126 +1,103 @@
 # 12 - Existing Character Audit
 
-This doc is the next step after `11_USEFUL_NPC_ROSTER_SEEDS.md`.
-
-Portrait generation is still blocked. We are not there yet.
+This document defines how to audit the existing generated character records before writing final names, stories, looks, portrait prompts, and expression sets.
 
 ## Current baseline
 
-The generated character source is:
+The generated character data contains **203 records**, indexed from `0` through `202`.
+
+This step does **not** generate portraits.
+
+## Why audit first
+
+The project needs original public-facing characters, but the old generated indexes can still be useful as mechanical anchors for market placement, stock generation, dialogue references, quest references, tests, and save/load safety.
+
+So the rule is:
 
 ```text
-src/data/generated/characters.json
+Keep internal generated indexes stable for now.
+Replace all public-facing identity.
 ```
 
-Current known generated baseline:
+Public-facing identity includes:
 
-```text
-Total generated records: 203
-Index range: 0-202
-```
+- display name
+- portrait
+- visual design
+- story/description
+- dialogue flavor
+- personality wording
+- any lookalike source-game presentation
 
-This file remains a mechanical reference for now. Do not edit it directly for visible identity work.
+## Audit decisions
 
-## Why audit before portraits
-
-Character portraits are expensive to generate and crop. The final visible roster must be decided before any real portrait-sheet production.
-
-The audit decides which generated records become:
+Each generated slot should receive one of these decisions:
 
 ```text
 KEEP_AND_REWORK
 REPLACE_VISIBLE_IDENTITY
 MERGE_WITH_ANOTHER
 DISABLE_OR_HIDE
-PROMOTE_TO_SYSTEM_NPC
-NEEDS_MANUAL_REVIEW
+REFERENCE_CHECK_REQUIRED
 ```
 
-## Hard rule
+Use `REFERENCE_CHECK_REQUIRED` when a slot might be linked to stock, market placement, dialogue, quests, or save data.
 
-All visible old identity must be replaced:
+## Initial target
+
+The first final-roster target is:
 
 ```text
-old public name -> new original display name
-old portrait -> new original portrait
-old look -> new profession-specific visual design
-old dialogue flavor -> new story/dialogue voice
+203 generated records
+192 visible reworked legacy slots
+11 hidden/merged legacy slots
 ```
 
-The internal index can stay temporarily so quests, markets, saves, and stock logic do not break.
+This is only a target. It can change after the per-character identity batch reveals which slots are worth keeping.
 
-## Initial audit decisions
+## Range-level audit plan
 
-The seed audit lives in:
+The first audit plan lives in:
 
 ```text
 src/data/characters/legacyCharacterAuditPlan.ts
 ```
 
-Initial direction:
+It divides the generated character list into five work ranges:
 
-| Generated index scope | Current role type | Decision | Why |
-|---:|---|---|---|
-| `0` | Guard/law role | `PROMOTE_TO_SYSTEM_NPC` | Needed for illegal goods, confiscation, customs, toll, and route-risk loops. |
-| `1` | Thief/risk role | `PROMOTE_TO_SYSTEM_NPC` | Needed for robbery, crime, black-market, and travel risk loops. |
-| `2-10` | Early guild/tutorial leaders | `REPLACE_VISIBLE_IDENTITY` | High-visibility NPCs must become fully original. |
-| `11-120` | Main merchants/specialists | `KEEP_AND_REWORK` | Most likely useful as stock anchors, market flavor, quest contacts, and portrait variety. |
-| `121-180` | Later specialists/travelers/duplicates | `NEEDS_MANUAL_REVIEW` | Useful roles may be mixed with duplicates; avoid portrait work until sorted. |
-| `181-202` | Tail/special/inactive records | `NEEDS_MANUAL_REVIEW` | Some may be hidden or special; check references before disabling. |
+| Range | Purpose | Default action |
+|---|---:|---|
+| 0 | guard/security anchor | replace visible identity |
+| 1-40 | core market cast | replace visible identity |
+| 41-120 | standard traders/workers | replace visible identity |
+| 121-180 | duplicate/support review | reference check |
+| 181-202 | late/inactive/special review | reference check and likely hide/merge |
 
-## What counts as a useful old slot
+## Portrait-tier default
 
-Keep or promote a generated slot when it supports at least one current/future system:
+Portrait tiers should stay conservative until the full identity catalog exists:
 
-- barter/trade stock identity
-- travel risk or route events
-- warehouse/company/shipment loop
-- quest/contract/runtime dialogue
-- illegal goods, customs, or guard behavior
-- market identity and local price flavor
-- rare item sink or specialist buyer
-- tutorial/onboarding role
+| Tier | Expressions | Use |
+|---|---:|---|
+| major | 5 | recurring service/quest/company/guard characters |
+| merchant | 3 | normal active traders and useful workers |
+| minor | 1 | background or low-frequency visible characters |
 
-## What should be disabled or merged
+## What not to do yet
 
-Disable, hide, or merge a slot when it is:
+Do not generate character sheets yet.
 
-- a weak duplicate of a stronger NPC
-- inactive and not referenced by any useful system
-- too generic to justify portrait generation
-- redundant inside the same market
-- only useful as historical source data
+Portrait generation begins only after:
 
-## Existing + new roster rule
+1. final visible roster is approved,
+2. all final names/stories/looks are written,
+3. all portrait images are listed in image-based batch manifests,
+4. one small test sheet passes quality/crop/style checks.
 
-The final roster must combine:
+## Next doc
+
+Read next:
 
 ```text
-reworked generated slots
-useful new NPC seeds
-merged/disabled generated slots
-final expression count per visible NPC
+docs/13_FINAL_CHARACTER_ROSTER_MAP.md
 ```
-
-Do not generate portraits until that final roster map exists.
-
-## Next step
-
-Next doc/patch should be:
-
-```text
-13_FINAL_CHARACTER_ROSTER_MAP.md
-```
-
-That step should produce the first final roster manifest and calculate:
-
-```text
-final visible legacy characters
-final useful new NPCs
-disabled/hidden old slots
-final total characters
-final total portrait images
-first test portrait batch size
-```
-
-Only after that do we write full hand-made identities and prompt batches.

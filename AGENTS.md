@@ -26,6 +26,7 @@ Current source-of-truth docs must be numbered in reading order:
 /docs/10_CHARACTER_REWORK_AND_PORTRAITS.md
 /docs/11_USEFUL_NPC_ROSTER_SEEDS.md
 /docs/12_EXISTING_CHARACTER_AUDIT.md
+/docs/13_FINAL_CHARACTER_ROSTER_MAP.md
 ```
 
 Do not add new unnumbered Markdown docs directly under `/docs`, `/docs/game`, `/docs/systems`, or `/docs/development`.
@@ -66,10 +67,11 @@ Useful new NPCs should be planned before portrait generation so portrait sheets 
 src/data/characters/newUsefulNpcSeeds.ts
 ```
 
-The current legacy-generated character audit lives in:
+The existing generated-character audit and final roster-map planning live in:
 
 ```text
 src/data/characters/legacyCharacterAuditPlan.ts
+src/data/characters/finalCharacterRosterPlan.ts
 ```
 
 Character portrait prompts must live beside item prompts under:
@@ -96,7 +98,7 @@ Prompts must be hand-written for each character/image. Do not use generic repeat
 
 Each expression prompt must preserve the same identity anchors and change only expression, posture, and emotional acting.
 
-Do not generate portrait sheets until the roster and prompt manifests have been reviewed. Portrait generation/cropping is expensive and should happen after weak old characters, useful new NPCs, expression counts, and final total portrait-image count are planned.
+Do not generate portrait sheets until the final roster, per-character identity catalog, and portrait manifest batches have been reviewed. Portrait generation/cropping is expensive and should happen after weak old characters, useful new NPCs, and expression counts are planned.
 
 ## Current UI Direction
 

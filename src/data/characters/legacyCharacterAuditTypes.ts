@@ -1,47 +1,32 @@
-export type LegacyCharacterDecision =
+import type { CharacterExpressionTier, CharacterReworkStatus } from "./characterRemakeTypes";
+
+export type LegacyCharacterAuditPriority = "core" | "standard" | "low" | "reference_check";
+
+export type LegacyCharacterAuditDecision =
   | "KEEP_AND_REWORK"
   | "REPLACE_VISIBLE_IDENTITY"
   | "MERGE_WITH_ANOTHER"
   | "DISABLE_OR_HIDE"
-  | "PROMOTE_TO_SYSTEM_NPC"
-  | "NEEDS_MANUAL_REVIEW";
+  | "REFERENCE_CHECK_REQUIRED";
 
-export type LegacyCharacterAuditPriority = "critical" | "high" | "medium" | "low";
-
-export type LegacyCharacterAuditGroup =
-  | "law_and_risk"
-  | "tutorial_or_guild"
-  | "core_merchant"
-  | "market_specialist"
-  | "traveler"
-  | "beggar_or_rumor"
-  | "inactive_or_secret"
-  | "duplicate_or_weak";
-
-export interface LegacyCharacterAuditRule {
-  readonly id: string;
-  readonly title: string;
-  readonly appliesTo: readonly string[];
-  readonly defaultDecision: LegacyCharacterDecision;
+export interface LegacyCharacterRangeAudit {
+  readonly rangeId: string;
+  readonly startIndex: number;
+  readonly endIndex: number;
   readonly priority: LegacyCharacterAuditPriority;
-  readonly notes: string;
+  readonly defaultDecision: LegacyCharacterAuditDecision;
+  readonly defaultReworkStatus: CharacterReworkStatus;
+  readonly defaultExpressionTier: CharacterExpressionTier;
+  readonly publicIdentityRule: string;
+  readonly gameplayReason: string;
+  readonly auditNotes: readonly string[];
 }
 
-export interface LegacyCharacterAuditBaseline {
-  readonly sourceFile: string;
-  readonly currentRecordCount: number;
-  readonly indexRange: readonly [number, number];
-  readonly auditGoal: string;
-  readonly shouldEditGeneratedFileDirectly: false;
-  readonly nextStepBeforePortraits: string;
-}
-
-export interface LegacyCharacterAuditDecisionSeed {
-  readonly originalIndex: number | readonly [number, number];
-  readonly sourceIdentity: string;
-  readonly auditGroup: LegacyCharacterAuditGroup;
-  readonly recommendedDecision: LegacyCharacterDecision;
-  readonly priority: LegacyCharacterAuditPriority;
-  readonly reason: string;
-  readonly remakeDirection: string;
+export interface LegacyCharacterAuditSummary {
+  readonly generatedCharacterRecordCount: number;
+  readonly firstGeneratedIndex: number;
+  readonly lastGeneratedIndex: number;
+  readonly targetLegacyVisibleSlots: number;
+  readonly targetLegacyDisableOrMergeSlots: number;
+  readonly auditRanges: readonly LegacyCharacterRangeAudit[];
 }

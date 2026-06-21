@@ -1,134 +1,91 @@
-import type {
-  LegacyCharacterAuditBaseline,
-  LegacyCharacterAuditDecisionSeed,
-  LegacyCharacterAuditRule,
-} from "./legacyCharacterAuditTypes";
+import type { LegacyCharacterAuditSummary } from "./legacyCharacterAuditTypes";
 
-export const legacyCharacterAuditBaseline = {
-  sourceFile: "src/data/generated/characters.json",
-  currentRecordCount: 203,
-  indexRange: [0, 202],
-  auditGoal:
-    "Classify every generated character before final identity writing, portrait prompt manifests, and portrait sheet generation.",
-  shouldEditGeneratedFileDirectly: false,
-  nextStepBeforePortraits:
-    "Build the final roster map that combines reworked legacy slots, useful new NPC seeds, disabled weak slots, and final expression counts.",
-} as const satisfies LegacyCharacterAuditBaseline;
-
-export const legacyCharacterAuditRules = [
-  {
-    id: "keep-internal-indexes",
-    title: "Keep generated indexes stable",
-    appliesTo: ["all legacy records"],
-    defaultDecision: "REPLACE_VISIBLE_IDENTITY",
-    priority: "critical",
-    notes:
-      "Do not delete or renumber generated character records until all quest, market, save, and dialogue references are migrated. Replace public identity through the remake layer first.",
-  },
-  {
-    id: "rewrite-visible-identity",
-    title: "Replace all public-facing identity",
-    appliesTo: ["names", "portraits", "dialogue flavor", "short descriptions", "visual design"],
-    defaultDecision: "REPLACE_VISIBLE_IDENTITY",
-    priority: "critical",
-    notes:
-      "Every visible old name and portrait must become an original remake identity. The generated data remains mechanical reference only.",
-  },
-  {
-    id: "disable-weak-duplicates",
-    title: "Disable or merge weak duplicates",
-    appliesTo: ["redundant merchants", "inactive records", "low-purpose repeated roles"],
-    defaultDecision: "NEEDS_MANUAL_REVIEW",
-    priority: "high",
-    notes:
-      "Do not generate portraits for weak duplicate slots until the final roster map decides whether they become disabled, merged, or promoted into a useful system role.",
-  },
-  {
-    id: "system-support-promotion",
-    title: "Promote useful old slots into system NPCs",
-    appliesTo: ["guards", "thieves", "travelers", "guild leaders", "market specialists"],
-    defaultDecision: "PROMOTE_TO_SYSTEM_NPC",
-    priority: "high",
-    notes:
-      "Important old mechanical roles can become customs officers, caravan rivals, brokers, quest contacts, appraisers, or other useful remake NPCs.",
-  },
-  {
-    id: "portrait-later",
-    title: "No portraits during audit",
-    appliesTo: ["all character records"],
-    defaultDecision: "NEEDS_MANUAL_REVIEW",
-    priority: "critical",
-    notes:
-      "Portrait generation starts only after the final roster, expression counts, identity anchors, and image-based prompt batches are approved.",
-  },
-] as const satisfies readonly LegacyCharacterAuditRule[];
-
-export const legacyCharacterAuditDecisionSeeds = [
-  {
-    originalIndex: 0,
-    sourceIdentity: "Guard",
-    auditGroup: "law_and_risk",
-    recommendedDecision: "PROMOTE_TO_SYSTEM_NPC",
-    priority: "critical",
-    reason: "Guards are core to illegal-goods, confiscation, toll, and route-risk systems.",
-    remakeDirection:
-      "Replace with an original customs/road-law character family. Keep the mechanical role, but split future portraits into stern, suspicious, and angry expressions.",
-  },
-  {
-    originalIndex: 1,
-    sourceIdentity: "Thief",
-    auditGroup: "law_and_risk",
-    recommendedDecision: "PROMOTE_TO_SYSTEM_NPC",
-    priority: "critical",
-    reason: "The thief/plunderer role supports robbery, risk, black-market, and route danger loops.",
-    remakeDirection:
-      "Replace with an original underworld contact or roadside thief archetype. Keep risk mechanics, rewrite all name/look/dialogue.",
-  },
-  {
-    originalIndex: [2, 10],
-    sourceIdentity: "Early guild/tutorial market leaders",
-    auditGroup: "tutorial_or_guild",
-    recommendedDecision: "REPLACE_VISIBLE_IDENTITY",
-    priority: "critical",
-    reason: "These are high-visibility NPCs and should not keep old names, old portraits, or old tutorial flavor.",
-    remakeDirection:
-      "Create original guild presidents, mentors, auctioneers, and market officials with small story descriptions and strong profession silhouettes.",
-  },
-  {
-    originalIndex: [11, 120],
-    sourceIdentity: "Main active merchants and market specialists",
-    auditGroup: "core_merchant",
-    recommendedDecision: "KEEP_AND_REWORK",
-    priority: "high",
-    reason: "Most active merchants are useful as stock anchors, market flavor, quest contacts, and portrait variety.",
-    remakeDirection:
-      "Keep mechanical slots where useful, but rewrite names, biographies, profession styling, visual anchors, trade personalities, and expression plans.",
-  },
-  {
-    originalIndex: [121, 180],
-    sourceIdentity: "Later active specialists, travelers, rumor, and duplicate market roles",
-    auditGroup: "market_specialist",
-    recommendedDecision: "NEEDS_MANUAL_REVIEW",
-    priority: "medium",
-    reason: "This range likely contains useful roles mixed with duplicates that should be merged or disabled before portrait generation.",
-    remakeDirection:
-      "Audit against market needs. Promote unique roles; merge redundant ones into stronger new identities; avoid generating portraits for weak slots.",
-  },
-  {
-    originalIndex: [181, 202],
-    sourceIdentity: "Late/special/inactive tail records",
-    auditGroup: "inactive_or_secret",
-    recommendedDecision: "NEEDS_MANUAL_REVIEW",
-    priority: "medium",
-    reason: "Tail records can include inactive, special, hidden, or weak records that may not deserve portrait work.",
-    remakeDirection:
-      "Check references before disabling. Keep story-critical slots, hide inactive filler, and convert only useful ones into original special NPCs.",
-  },
-] as const satisfies readonly LegacyCharacterAuditDecisionSeed[];
-
-export const legacyCharacterAuditNextActions = [
-  "Create the final roster map with one row per generated index and every useful new NPC seed.",
-  "Mark each generated slot as keep/rework, replace identity, merge, disable/hide, promote to system NPC, or needs review.",
-  "Calculate the final visible character count and total portrait-image count before any image generation.",
-  "Only after final roster approval, write the full hand-made names, stories, visual anchors, and expression prompts.",
-] as const;
+export const legacyGeneratedCharacterAuditSummary = {
+  generatedCharacterRecordCount: 203,
+  firstGeneratedIndex: 0,
+  lastGeneratedIndex: 202,
+  targetLegacyVisibleSlots: 192,
+  targetLegacyDisableOrMergeSlots: 11,
+  auditRanges: [
+    {
+      rangeId: "legacy-000-000-guard-anchor",
+      startIndex: 0,
+      endIndex: 0,
+      priority: "core",
+      defaultDecision: "REPLACE_VISIBLE_IDENTITY",
+      defaultReworkStatus: "REPLACE_VISIBLE_IDENTITY",
+      defaultExpressionTier: "major",
+      publicIdentityRule: "Keep the mechanical guard slot, but replace the public name, portrait, story, and dialogue flavor completely.",
+      gameplayReason: "The guard role is useful for legality, tolls, inspections, risky travel, and market warnings.",
+      auditNotes: [
+        "Do not copy the original guard look or name.",
+        "Give this slot a distinctive law/route/security identity.",
+        "Use this character as an early expression-test candidate before bulk portrait generation.",
+      ],
+    },
+    {
+      rangeId: "legacy-001-040-core-market-cast",
+      startIndex: 1,
+      endIndex: 40,
+      priority: "core",
+      defaultDecision: "REPLACE_VISIBLE_IDENTITY",
+      defaultReworkStatus: "REPLACE_VISIBLE_IDENTITY",
+      defaultExpressionTier: "merchant",
+      publicIdentityRule: "Preserve only useful mechanical references, then create fully original names, looks, stories, and trade personalities.",
+      gameplayReason: "Early-index NPCs are likely to appear often in market and trading flows, so they should become high-quality original merchants and service NPCs.",
+      auditNotes: [
+        "Prioritize profession readability and market usefulness.",
+        "Avoid making adjacent characters similar in face shape, age, clothing, or color palette.",
+        "Upgrade any boring duplicate merchant into a clearer specialist before deciding to disable it.",
+      ],
+    },
+    {
+      rangeId: "legacy-041-120-standard-traders-and-workers",
+      startIndex: 41,
+      endIndex: 120,
+      priority: "standard",
+      defaultDecision: "REPLACE_VISIBLE_IDENTITY",
+      defaultReworkStatus: "REPLACE_VISIBLE_IDENTITY",
+      defaultExpressionTier: "merchant",
+      publicIdentityRule: "Rework all visible identity and keep the slot if it contributes a readable profession, market role, or item-supply purpose.",
+      gameplayReason: "This middle pool should provide most normal merchants, suppliers, craftspeople, buyers, and rumor sources.",
+      auditNotes: [
+        "Convert weak duplicates into more specific professions when possible.",
+        "Use working-class silhouettes, props, and local market flavor to prevent same-looking portraits.",
+        "Escalate quest-useful characters to major expression tier later if they receive contracts or story hooks.",
+      ],
+    },
+    {
+      rangeId: "legacy-121-180-duplicate-and-support-review",
+      startIndex: 121,
+      endIndex: 180,
+      priority: "reference_check",
+      defaultDecision: "REFERENCE_CHECK_REQUIRED",
+      defaultReworkStatus: "KEEP_AND_REWORK",
+      defaultExpressionTier: "minor",
+      publicIdentityRule: "Check runtime references before disabling. Rework useful slots; merge or hide slots that are duplicate, inactive, or mechanically empty.",
+      gameplayReason: "This pool is reserved for finding weak old characters that can be replaced by useful new NPCs without breaking market or quest data.",
+      auditNotes: [
+        "Do not delete raw generated records yet.",
+        "If a slot has no useful profession, no stock identity, and no likely references, mark it merge/disable in the final identity pass.",
+        "Minor slots should usually get neutral-only portraits unless promoted by gameplay use.",
+      ],
+    },
+    {
+      rangeId: "legacy-181-202-late-inactive-and-special-review",
+      startIndex: 181,
+      endIndex: 202,
+      priority: "reference_check",
+      defaultDecision: "REFERENCE_CHECK_REQUIRED",
+      defaultReworkStatus: "DISABLE_OR_HIDE",
+      defaultExpressionTier: "minor",
+      publicIdentityRule: "Treat late/inactive/special slots as candidates for hiding, merging, or full replacement unless they are needed by runtime references.",
+      gameplayReason: "The late tail is the best place to reduce weak source-game carryover before portrait generation.",
+      auditNotes: [
+        "Known inactive records should not receive portraits unless intentionally reactivated.",
+        "Use this range to hit the target of 11 disabled/merged legacy slots.",
+        "If a slot becomes useful, give it a completely new public identity rather than preserving old flavor.",
+      ],
+    },
+  ],
+} as const satisfies LegacyCharacterAuditSummary;
