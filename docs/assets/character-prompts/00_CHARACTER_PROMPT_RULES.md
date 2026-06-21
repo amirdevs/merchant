@@ -14,6 +14,24 @@ docs/assets/character-prompts/portrait-batch-identity-001.json
 
 Do not generate the template. Do not generate full production sheets until the test sheet is approved.
 
+Useful new NPC and identity planning currently comes from source data, not separate step docs:
+
+```text
+src/data/characters/newUsefulNpcSeeds.ts
+src/data/characters/characterIdentityCatalogBatch01.ts
+```
+
+Current planning target:
+
+```text
+48 useful new NPC identities
+194 useful-new-NPC portrait images
+240 target visible characters
+726 target portrait images
+```
+
+These targets are planning inputs only. They are not approval to generate full portrait production sheets.
+
 ## Core batching rule
 
 Batch by total images, not by characters.
@@ -39,6 +57,16 @@ Cell size: 1024 x 1024
 ```
 
 Use 5x4 only after the art direction is approved. Do not use 10x5 for character faces unless quality remains excellent.
+
+Approve the first test sheet only if:
+
+- every cell follows JSON order;
+- each portrait is centered inside its square crop cell;
+- no portrait crosses into another cell;
+- characters look entertaining, profession-specific, and distinct;
+- repeated expressions still look like the same character;
+- the green background is clean enough for automatic crop/removal;
+- props are visible but not cut off.
 
 ## Crop and mapping rules
 

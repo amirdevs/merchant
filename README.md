@@ -47,10 +47,8 @@ This is a playable local vertical-slice foundation, not a full clone yet. It cur
 - item/icon structural lock checks
 - economy, capacity, travel, quest, company, and UI-integration helper foundations
 - playable UI integration through the Strategy Planner
-- character rework/portrait roadmap for replacing original visible NPC identities
-- useful-new-NPC seed roster and first character portrait prompt batch plan
-- existing-character audit plan and final roster-map targets
-- first full character identity-catalog batch for useful new NPCs
+- character rework planning for replacing original visible NPC identities
+- useful-new-NPC seed and identity catalog data under `src/data/characters/`
 - playtest/balance report generation
 - offline local save/load and import/export
 
@@ -58,7 +56,7 @@ Steam and online systems are not included.
 
 ## Documentation Reading Order
 
-Read docs in order from `docs/00_READ_ME_FIRST.md` through `docs/14_FIRST_IDENTITY_CATALOG_BATCH.md`.
+Read docs in order from `docs/00_READ_ME_FIRST.md` through `docs/08_UI_UX_DIRECTION.md`.
 
 Current source-of-truth docs:
 
@@ -72,12 +70,6 @@ Current source-of-truth docs:
 06_ECONOMY_AND_TRAVEL.md
 07_QUESTS_COMPANY_AND_UI.md
 08_UI_UX_DIRECTION.md
-09_PLAYABLE_UI_INTEGRATION.md
-10_CHARACTER_REWORK_AND_PORTRAITS.md
-11_USEFUL_NPC_ROSTER_SEEDS.md
-12_EXISTING_CHARACTER_AUDIT.md
-13_FINAL_CHARACTER_ROSTER_MAP.md
-14_FIRST_IDENTITY_CATALOG_BATCH.md
 ```
 
 Generated reports, old phase notes, audit outputs, and historical notes belong under `docs/logs/` and are not part of the normal reading path.
@@ -85,4 +77,4 @@ Generated reports, old phase notes, audit outputs, and historical notes belong u
 Asset prompt configs are kept under `docs/assets/`:
 
 - `docs/assets/icon-prompts/` for item icon sheets
-- `docs/assets/character-prompts/` for character portrait/expression sheets
+- `docs/assets/character-prompts/` for character portrait JSON manifests, expression sheets, and prompt rules

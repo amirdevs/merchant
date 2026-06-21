@@ -8,7 +8,7 @@ The project is an offline React/Vite remake prototype inspired by Merchant of th
 
 ## Documentation Rules
 
-All documentation must live under `/docs`.
+All permanent documentation must live under `/docs`.
 
 Current source-of-truth docs must be numbered in reading order:
 
@@ -22,13 +22,17 @@ Current source-of-truth docs must be numbered in reading order:
 /docs/06_ECONOMY_AND_TRAVEL.md
 /docs/07_QUESTS_COMPANY_AND_UI.md
 /docs/08_UI_UX_DIRECTION.md
-/docs/09_PLAYABLE_UI_INTEGRATION.md
-/docs/10_CHARACTER_REWORK_AND_PORTRAITS.md
-/docs/11_USEFUL_NPC_ROSTER_SEEDS.md
-/docs/12_EXISTING_CHARACTER_AUDIT.md
-/docs/13_FINAL_CHARACTER_ROSTER_MAP.md
-/docs/14_FIRST_IDENTITY_CATALOG_BATCH.md
 ```
+
+Only one roadmap doc exists:
+
+```text
+/docs/03_GAME_LOGIC_AND_ROADMAP.md
+```
+
+Do not add per-step completion docs. Do not add root delivery-note docs such as `README_STEP*.md`, `README_NEXT_*.md`, or temporary patch handoffs. Update the existing roadmap/system docs instead of creating new docs.
+
+Every ZIP/root-overlay response should not include `README_STEP*` files or temporary delivery notes as repo files.
 
 Do not add new unnumbered Markdown docs directly under `/docs`, `/docs/game`, `/docs/systems`, or `/docs/development`.
 
