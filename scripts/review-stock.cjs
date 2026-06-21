@@ -13,7 +13,6 @@ const professions = JSON.parse(fs.readFileSync(path.join(dataDir, "professions.j
 
 const tierOrder = ["empty", "pocket", "sparse", "light", "modest", "standard", "stocked", "large", "wholesale", "grand"];
 const sampleDays = [1, 3, 7, 14];
-const BIAS_ARCHETYPE_ID = "bias";
 const BIAS_SOURCE_MULTIPLIERS = { character: 0.85, profession: 0.6, marketplace: 0.35, kingdom: 0.25 };
 const BIAS_WEIGHT_PER_PERCENT = 0.055;
 const MIN_BIAS_WEIGHT = -5;
@@ -178,15 +177,10 @@ function collectGeneratedBiasWeights(character, profile) {
   return Object.fromEntries(Object.entries(weights).filter(([, weight]) => Math.abs(weight) >= 0.05));
 }
 
-function applyGeneratedBiasArchetype(character, profile) {
-  const weightedTags = collectGeneratedBiasWeights(character, profile);
-  stockArchetypes[BIAS_ARCHETYPE_ID] = { ...(stockArchetypes[BIAS_ARCHETYPE_ID] || {}), weightedTags, forbiddenTags: [] };
-  if (!Object.keys(weightedTags).length) return profile;
-  if (profile.archetypes.some((entry) => entry.id === BIAS_ARCHETYPE_ID)) return profile;
-  return {
-    ...profile,
-    archetypes: [...profile.archetypes, { id: BIAS_ARCHETYPE_ID, weight: 1 }],
-  };
+function applyGeneratedBiasWeights(character, profile) {
+  const stockBiasWeights = collectGeneratedBiasWeights(character, profile);
+  if (!Object.keys(stockBiasWeights).length) return profile;
+  return { ...profile, stockBiasWeights };
 }
 
 function resolveStockProfile(character) {
@@ -195,7 +189,7 @@ function resolveStockProfile(character) {
   if (character.isMerchant) profile = { ...profile, tier: atLeastTier(profile.tier, "stocked") };
   profile = mergeProfile(profile, characterStockOverrides[character.name]);
   profile = applyLifestyleBaseline(character, profile);
-  return applyGeneratedBiasArchetype(character, profile);
+  return applyGeneratedBiasWeights(character, profile);
 }
 
 function resolvedStockSettings(character, day) {
@@ -300,6 +294,10 @@ function generateInventory(character, day = 1) {
   const professionPools = character.professionSlug ? professions[character.professionSlug]?.obtainableItems || [] : [];
   const pools = [...(character.obtainableItems || []), ...professionPools].slice(0, 16);
   const { weights, configs } = weightedArchetypeTags(settings.profile.archetypes);
+  for (const [tag, weight] of Object.entries(settings.profile.stockBiasWeights || {})) {
+    const normalized = normalize(tag);
+    weights.set(normalized, (weights.get(normalized) || 0) + weight);
+  }
   for (const pool of pools) weights.set(normalize(pool.tag), (weights.get(normalize(pool.tag)) || 0) + 4);
   const forbidden = new Set([...(character.excludedObtainItems || []), ...(settings.profile.forbiddenTags || []), ...configs.flatMap((config) => config.forbiddenTags || [])].map(normalize));
   const minValue = settings.profile.minValue || 0;

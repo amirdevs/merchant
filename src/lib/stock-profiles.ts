@@ -3,10 +3,9 @@ import kingdomsJson from "@/data/generated/kingdoms.json";
 import marketplacesJson from "@/data/generated/marketplaces.json";
 import professionsJson from "@/data/generated/professions.json";
 import type { Bias, Character, Kingdom, Marketplace, Profession } from "@/data/types";
-import { stockArchetypes } from "@/data/stock/archetypes";
 import { characterStockOverrides, fallbackStockProfile, lifestyleStockBaselines, merchantFallbackProfile, professionStockProfiles } from "@/data/stock/profiles";
 import { stockTiers } from "@/data/stock/tiers";
-import type { LifestyleStockBaselineId, StockProfile, StockProfileOverride, StockTierId } from "@/data/stock/types";
+import type { LifestyleStockBaselineId, StockBiasWeights, StockProfile, StockProfileOverride, StockTierId } from "@/data/stock/types";
 import { normalizeItemToken } from "./item-catalog";
 
 const tierOrder: StockTierId[] = ["empty", "pocket", "sparse", "light", "modest", "standard", "stocked", "large", "wholesale", "grand"];
@@ -15,7 +14,6 @@ const marketplaces = marketplacesJson as Marketplace[];
 const kingdoms = kingdomsJson as Kingdom[];
 const baseCharacters = charactersJson as Character[];
 
-const BIAS_ARCHETYPE_ID = "bias" as const;
 const BIAS_SOURCE_MULTIPLIERS = {
   character: 0.85,
   profession: 0.6,
@@ -87,7 +85,7 @@ function isContrabandStocker(character: Character, profile: StockProfile) {
   return baseline === "criminal" || character.isPlunderer || character.professionSlug === "thief" || profile.archetypes.some((entry) => entry.id === "contraband");
 }
 
-function collectGeneratedBiasWeights(character: Character, profile: StockProfile) {
+function collectGeneratedBiasWeights(character: Character, profile: StockProfile): StockBiasWeights {
   const weights: Record<string, number> = {};
   const profession = character.professionSlug ? professions[character.professionSlug] : undefined;
   const marketplace = marketplaces[character.marketplaceIndex];
@@ -108,18 +106,10 @@ function collectGeneratedBiasWeights(character: Character, profile: StockProfile
   return Object.fromEntries(Object.entries(weights).filter(([, weight]) => Math.abs(weight) >= 0.05));
 }
 
-function applyGeneratedBiasArchetype(character: Character, profile: StockProfile): StockProfile {
-  const weightedTags = collectGeneratedBiasWeights(character, profile);
-  stockArchetypes[BIAS_ARCHETYPE_ID].weightedTags = weightedTags;
-  stockArchetypes[BIAS_ARCHETYPE_ID].forbiddenTags = [];
-
-  if (!Object.keys(weightedTags).length) return profile;
-  if (profile.archetypes.some((entry) => entry.id === BIAS_ARCHETYPE_ID)) return profile;
-
-  return {
-    ...profile,
-    archetypes: [...profile.archetypes, { id: BIAS_ARCHETYPE_ID, weight: 1 }],
-  };
+function applyGeneratedBiasWeights(character: Character, profile: StockProfile): StockProfile {
+  const stockBiasWeights = collectGeneratedBiasWeights(character, profile);
+  if (!Object.keys(stockBiasWeights).length) return profile;
+  return { ...profile, stockBiasWeights };
 }
 
 export function resolveStockProfile(character: Character): StockProfile {
@@ -131,7 +121,7 @@ export function resolveStockProfile(character: Character): StockProfile {
 
   profile = mergeProfile(profile, characterStockOverrides[character.name]);
   profile = applyLifestyleBaseline(character, profile);
-  return applyGeneratedBiasArchetype(character, profile);
+  return applyGeneratedBiasWeights(character, profile);
 }
 
 export function resolvedStockSettings(character: Character, day: number) {

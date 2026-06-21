@@ -4,7 +4,7 @@ import kingdomsJson from "../data/generated/kingdoms.json";
 import marketplacesJson from "../data/generated/marketplaces.json";
 import professionsJson from "../data/generated/professions.json";
 import type { Character, InventoryEntry, Item, Kingdom, Marketplace, ObtainableItem, Profession } from "../data/types";
-import { appraiseOffer, valueOffer, type TradePerspective } from "./barter";
+import { appraiseOffer, valueOffer, visibleOfferableInventory, type TradePerspective } from "./barter";
 import type { AuctionSession } from "./auction";
 import type { RaceResult } from "./racing";
 import { createMythProgression, type MythProgression, type MythSession } from "./myth";
@@ -223,6 +223,10 @@ export function generateInventory(character: Character, day = 1) {
   const professionPools = character.professionSlug ? professions[character.professionSlug]?.obtainableItems || [] : [];
   const pools = [...(character.obtainableItems || []), ...professionPools].slice(0, 16);
   const { weights, configs } = weightedArchetypeTags(settings.profile.archetypes);
+  for (const [tag, weight] of Object.entries(settings.profile.stockBiasWeights || {})) {
+    const normalized = normalizeStockToken(tag);
+    weights.set(normalized, (weights.get(normalized) || 0) + weight);
+  }
   for (const pool of pools) weights.set(normalizeStockToken(pool.tag), (weights.get(normalizeStockToken(pool.tag)) || 0) + 4);
 
   const forbidden = new Set([
@@ -439,8 +443,8 @@ export function autoAskPrice(state: GameState, character: Character) {
   const avoid = character.inventory.filter((entry) => entry.offerQuantity > 0).length === 1
     ? character.inventory.find((entry) => entry.offerQuantity > 0)?.itemIndex
     : undefined;
-  const candidates = state.playerInventory
-    .filter((entry) => entry.quantity > 0 && !entry.conceal && entry.itemIndex !== avoid)
+  const candidates = visibleOfferableInventory(state.playerInventory, "auto")
+    .filter((entry) => entry.itemIndex !== avoid)
     .sort((left, right) => itemPreferenceScore(state, character, right.itemIndex) - itemPreferenceScore(state, character, left.itemIndex));
 
   for (const entry of candidates) {

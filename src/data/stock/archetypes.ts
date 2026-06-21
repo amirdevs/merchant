@@ -127,6 +127,4 @@ export const stockArchetypes: Record<StockArchetypeId, StockArchetype> = {
     guaranteedTags: ["arrows", "bows", "meat"],
   },
   salvage: { weightedTags: { monster_parts: 8, animal_goods: 6, tool: 4, container: 3, stone: 2, curio: 2 }, localityBias: 0.05 },
-  // Runtime placeholder. `resolveStockProfile` rewrites this per NPC from original generated biases.
-  bias: { weightedTags: {} },
 };

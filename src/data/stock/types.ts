@@ -48,8 +48,7 @@ export type StockArchetypeId =
   | "quartermaster"
   | "traveler"
   | "hunter"
-  | "salvage"
-  | "bias";
+  | "salvage";
 
 export type LifestyleStockBaselineId =
   | "poor"
@@ -97,10 +96,13 @@ export type LifestyleStockBaseline = {
   guaranteedTags?: string[];
 };
 
+export type StockBiasWeights = Record<string, number>;
+
 export type StockProfile = {
   tier: StockTierId;
   archetypes: WeightedArchetype[];
   lifestyleBaseline?: LifestyleStockBaselineId;
+  stockBiasWeights?: StockBiasWeights;
   stackModifier?: number;
   quantityMultiplier?: number;
   coinMultiplier?: number;
