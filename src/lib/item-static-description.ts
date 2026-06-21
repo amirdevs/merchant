@@ -42,6 +42,7 @@ import writtenItemDescriptions1842To1891 from "@/data/generated/item-written-des
 import writtenItemDescriptions1892To1941 from "@/data/generated/item-written-descriptions-1892-1941.json";
 import writtenItemDescriptions1942To1991 from "@/data/generated/item-written-descriptions-1942-1991.json";
 import writtenItemDescriptions1992To2041 from "@/data/generated/item-written-descriptions-1992-2041.json";
+import writtenItemDescriptions2042To2091 from "@/data/generated/item-written-descriptions-2042-2091.json";
 
 type StaticCopy = {
   shortDescription: string;
@@ -98,6 +99,7 @@ const writtenCopies = [
   ...(writtenItemDescriptions1892To1941 as WrittenItemCopy[]),
   ...(writtenItemDescriptions1942To1991 as WrittenItemCopy[]),
   ...(writtenItemDescriptions1992To2041 as WrittenItemCopy[]),
+  ...(writtenItemDescriptions2042To2091 as WrittenItemCopy[]),
 ];
 
 const byIndex = new Map<number, WrittenItemCopy>();
