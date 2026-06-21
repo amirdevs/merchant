@@ -1,26 +1,88 @@
-# Merchant roadmap Step 5-11 root overlay
+# Merchant React/Vite Remake
 
-Extract this ZIP at the repository root.
+Offline remake prototype using React, Vite, Tailwind 4, and local extracted game assets/data.
 
-This cumulative overlay includes Steps 5-11 plus the Step 9/10 company integration fix:
-
-- `createCompanyState`, `CompanyState`, and `settleShipments` are restored/exported from `src/lib/company.ts` for `game.ts` and `save.ts` compatibility.
-- Step 11 adds playtest/balance checklist helpers and a report generator.
-
-Run after extracting:
+## Commands
 
 ```powershell
 pnpm install
-pnpm test:company
-pnpm test:barter
-pnpm test:playtest
-pnpm playtest:balance
-pnpm verify:current-state
+pnpm dev
+```
+
+Build:
+
+```powershell
 pnpm build
 ```
 
-Review:
+Run the current full validation gate:
 
-- `docs/development/playtest-balance-report.md`
-- `docs/systems/profession-stock-review.md`
-- `docs/assets/item-icon-lock-report.md`
+```powershell
+pnpm verify:current-state
+```
+
+Useful focused checks:
+
+```powershell
+pnpm audit:data
+pnpm audit:assets
+pnpm audit:item-icons
+pnpm audit:stock
+pnpm review:stock
+pnpm test:barter
+pnpm test:economy
+pnpm test:travel
+pnpm test:quests
+pnpm test:company
+pnpm test:ui-integration
+pnpm test:playtest
+pnpm playtest:balance
+```
+
+## Data And Assets
+
+- Data is extracted from the original bundled renderer into `src/data/generated`.
+- Assets are copied into `public/game-assets`.
+- Item/icon lock reports live under `docs/assets/`.
+- Re-extract data with:
+
+```powershell
+pnpm extract:data
+```
+
+## Current Scope
+
+This is a playable vertical slice foundation, not a full clone yet:
+
+- town/customer selection
+- original characters/items/markets data
+- original town, backdrop, portrait, and stall images
+- generated NPC inventories with profession stock profiles, lifestyle baselines, and generated-data bias flavor
+- player inventory
+- offer panels
+- haggling valuation using NPC, profession, market, kingdom, illegal-good, and relationship inputs
+- travel helper foundation with toll, risk, capacity, and arrival planning
+- local save/load with schema-v2 clean break for the item overhaul
+- offline mod packs from `public/data/mods`
+- quest/contract/dialogue runtime foundation
+- company, warehouse, shipment, and stock-ownership foundation helpers
+- routed original UI, item, travel, and ambient sounds
+
+Steam and online systems are not included.
+
+## Docs
+
+Project documentation lives under `docs/`.
+
+- Docs index: `docs/README.md`
+- Current roadmap: `docs/game/roadmap.md`
+- Game logic parity: `docs/game/game-logic-parity.md`
+- UI/UX brief: `docs/game/ui-ux-brief.md`
+- Current UI reference images: `docs/ui_parts/`
+- Trading and NPC stock system: `docs/systems/trading-and-stock.md`
+- Profession stock review: `docs/systems/profession-stock-review.md`
+- Profession stock audit: `docs/systems/profession-stock-audit.md`
+- Item icon pipeline: `docs/assets/item-icon-pipeline.md`
+- Item icon lock report: `docs/assets/item-icon-lock-report.md`
+- Playtest/balance report: `docs/development/playtest-balance-report.md`
+- Technical notes: `docs/development/technical-notes.md`

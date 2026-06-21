@@ -156,9 +156,9 @@ export function createCompanyState(): CompanyState {
   };
 }
 
-function syncLegacyCompanyCash(company: CompanyState) {
+function syncLegacyCompanyCash(company: Pick<CompanyLedger, "cashCopper"> & { bankCopper?: number }) {
   company.cashCopper = Math.max(0, Math.floor(company.cashCopper || 0));
-  company.bankCopper = company.cashCopper;
+  if ("bankCopper" in company) company.bankCopper = company.cashCopper;
 }
 
 
@@ -282,6 +282,7 @@ export function startShipment(company: CompanyLedger, shipmentId: string) {
   const due = shipmentTotalUpfrontCopper(shipment);
   if (company.cashCopper < due) return { ok: false, reason: "insufficient_company_cash" as const };
   company.cashCopper -= due;
+  syncLegacyCompanyCash(company);
   shipment.status = "in_transit";
   return { ok: true, reason: "started" as const };
 }
@@ -430,6 +431,7 @@ export function payDividend(company: CompanyLedger, totalCopper: number) {
   const plan = dividendPlan(company, totalCopper);
   if (company.cashCopper < plan.totalCopper) return { ok: false, reason: "insufficient_company_cash" as const, plan };
   company.cashCopper -= plan.totalCopper;
+  syncLegacyCompanyCash(company);
   return { ok: true, reason: "dividend_paid" as const, plan };
 }
 
@@ -474,6 +476,7 @@ export function companyPaysCopper(company: CompanyLedger, copperValue: number) {
   const amount = Math.max(0, Math.floor(copperValue || 0));
   if (!companyCanPayCopper(company, amount)) return false;
   company.cashCopper -= amount;
+  syncLegacyCompanyCash(company);
   return true;
 }
 
@@ -482,6 +485,7 @@ export function playerInvestsCopper(company: CompanyLedger, playerInventory: Inv
   if (!canAffordCopper(playerInventory, items, amount)) return { ok: false, reason: "player_cannot_afford" as const };
   if (!spendCopper(playerInventory, items, amount)) return { ok: false, reason: "player_cannot_afford" as const };
   company.cashCopper += amount;
+  syncLegacyCompanyCash(company);
   return { ok: true, reason: "invested" as const };
 }
 
