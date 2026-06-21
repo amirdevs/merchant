@@ -7,10 +7,10 @@ This file tracks the manually authored static item copy for PR #9.
 ## Current status
 
 - Actual game items: 2206
-- Hand-written entries completed: 1042
-- Remaining: 1164
-- Last completed item index: 1041
-- Next start point: 1042
+- Hand-written entries completed: 1092
+- Remaining: 1114
+- Last completed item index: 1091
+- Next start point: 1092
 
 ## Completed batches
 
@@ -35,6 +35,7 @@ This file tracks the manually authored static item copy for PR #9.
 - 892–941: rye, oats, quinoa, grain stalks, tables, beds, dressers, shelves, chairs, sofas, stools, thrones, and fence lengths.
 - 942–991: mats, rugs, doors, dressers, shelves, chairs, glass vessels, alchemy glassware, and first gravestones. This batch was corrected for index alignment before continuing.
 - 992–1041: remaining gravestones, symbolic action/virtue tokens, wooden bowls, and wooden plates.
+- 1042–1091: tableware, bedding, decor, glassware-adjacent household goods, keys, and first amulets.
 
 ## Standard
 
