@@ -28,6 +28,12 @@ function statusLabel(slot: SaveSlotSummary) {
   return "Corrupt";
 }
 
+function formatSavedAt(value: string | null, fallback: string) {
+  if (!value) return fallback;
+  const savedAt = new Date(value);
+  return Number.isNaN(savedAt.getTime()) ? "Unknown" : savedAt.toLocaleString();
+}
+
 export function SaveLoadView({ state, merchantProfile, saveSlots, importInputRef, onBack, onSave, onLoad, onExport, onImport, onDelete, onUnavailable }: SaveLoadViewProps) {
   const [selectedSlot, setSelectedSlot] = useState(0);
   const [confirmAction, setConfirmAction] = useState<"save" | "delete" | null>(null);
@@ -48,7 +54,7 @@ export function SaveLoadView({ state, merchantProfile, saveSlots, importInputRef
     day: slot.day ?? "-",
     wealth: statusLabel(slot),
     mode: slot.empty ? "-" : slot.compatible ? merchantProfile.difficulty : `v${slot.saveVersion ?? "?"}`,
-    savedAt: slot.savedAt ? new Date(slot.savedAt).toLocaleString() : slot.empty ? "Empty" : "Unknown",
+    savedAt: formatSavedAt(slot.savedAt, slot.empty ? "Empty" : "Unknown"),
   }));
 
   return (
@@ -82,7 +88,7 @@ export function SaveLoadView({ state, merchantProfile, saveSlots, importInputRef
         <Panel title="Selected Save Detail" variant="parchment">
           <div className="grid gap-3">
             <div className="min-h-40 rounded-md border border-[#9a7138]/60 bg-cover bg-center p-3 text-sm text-[#3c260f]" style={{ backgroundImage: `linear-gradient(0deg, rgba(255,246,217,.84), rgba(255,246,217,.28)), url("${uiAssets.backplates.saveLoadArchiveRoom ?? uiAssets.backplates.settingsRoom}")` }}>
-              <strong className="block font-display text-2xl">{selected?.compatible ? merchantProfile.name : selected?.empty ? "Empty Slot" : "Old Ledger"}</strong>
+              <strong className="block font-display text-2xl">{selected?.compatible ? merchantProfile.name : selected?.empty ? "Empty Slot" : selected?.status === "corrupt" ? "Damaged Ledger" : "Old Ledger"}</strong>
               <span>{selected?.empty ? "Empty archive slot" : selected?.compatible ? `Saved day ${selected?.day ?? "-"}` : statusLabel(selected)} / Current day {state.day} / {merchantProfile.difficulty}</span>
               {selected && !selected.empty && !selected.compatible ? (
                 <p className="mt-3 flex gap-2 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/75 p-2 text-xs leading-relaxed text-[#6e260f]"><AlertTriangle size={16} /> {selected.reason || "This save cannot be loaded by the current item catalog."}</p>
@@ -107,7 +113,7 @@ export function SaveLoadView({ state, merchantProfile, saveSlots, importInputRef
             </p>
             <div className="rounded-sm border border-[#9a7138]/55 bg-[#fff6d7]/60 p-3 text-sm">
               <strong className="block">{selected?.name}</strong>
-              <span>{selected?.empty ? "Empty" : selected?.compatible ? `Saved day ${selected?.day ?? "-"} at ${selected?.savedAt ? new Date(selected.savedAt).toLocaleString() : "unknown time"}` : selected?.reason || (selected ? statusLabel(selected) : "Unknown")}</span>
+              <span>{selected?.empty ? "Empty" : selected?.compatible ? `Saved day ${selected?.day ?? "-"} at ${formatSavedAt(selected.savedAt, "unknown time")}` : selected?.reason || (selected ? statusLabel(selected) : "Unknown")}</span>
             </div>
             <div className="flex justify-end gap-2">
               <Button variant="secondary" onClick={() => setConfirmAction(null)}>Cancel</Button>

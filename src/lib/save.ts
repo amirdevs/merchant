@@ -53,7 +53,8 @@ function isCurrentEnvelope(value: unknown): value is SaveEnvelope {
     candidate &&
       typeof candidate === "object" &&
       "game" in candidate &&
-      candidate.saveVersion === SAVE_VERSION
+      candidate.saveVersion === SAVE_VERSION &&
+      candidate.schemaLabel === SAVE_SCHEMA_LABEL
   );
 }
 

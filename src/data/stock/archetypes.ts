@@ -47,7 +47,7 @@ export const stockArchetypes: Record<StockArchetypeId, StockArchetype> = {
     guaranteedTags: ["seafood", "barrels"],
   },
   fletcher: {
-    weightedTags: { arrows: 18, bows: 13, crossbows: 5, wood: 8, tool: 4, container: 2, travel: 2, weapon: 1 },
+    weightedTags: { arrows: 18, bows: 13, crossbows: 5, wood: 18, tool: 12, container: 2, travel: 2 },
     forbiddenTags: ["swords", "axes", "maces", "flails", "war hammers", "armor", "luxury", "magic"],
     quantityMultipliers: { arrows: 4.5, wood: 2.4, bows: 1.6 },
     minimumQuantities: { arrows: 28, wood: 10 },
@@ -55,7 +55,7 @@ export const stockArchetypes: Record<StockArchetypeId, StockArchetype> = {
   },
   livestock: { weightedTags: { livestock: 12, animal: 8, animals: 6, pack_animals: 5, food: 3, container: 2 }, quantityMultipliers: { food: 2 } },
   blacksmith: {
-    weightedTags: { ore: 19, metal: 16, ingots: 15, raw_material: 9, coal: 9, tool: 7, repair_input: 5, construction: 4, weapon: 1, armor: 1 },
+    weightedTags: { ore: 24, ingots: 20, coal: 16, tool: 12, repair_input: 6, construction: 3, metal: 2 },
     forbiddenTags: ["luxury", "jewelry", "art", "magic", "desserts", "fruit"],
     quantityMultipliers: { ingots: 2.6, ore: 2.8, metal: 2, coal: 2.4, tool: 1.4, repair_input: 1.6 },
     minimumQuantities: { ingots: 16, ore: 16, coal: 12, tool: 4 },

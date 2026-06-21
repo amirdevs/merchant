@@ -19,6 +19,12 @@ Build:
 pnpm build
 ```
 
+Barter regression tests:
+
+```powershell
+pnpm test:barter
+```
+
 Run the full current-state verification pass after trading, item, icon, or stock-profile changes:
 
 ```powershell
