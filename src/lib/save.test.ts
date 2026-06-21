@@ -1,5 +1,14 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import { deleteGameSave, listSaveSlots, loadGame, parseGameSave, saveGame } from "./save";
+import {
+  deleteGameSave,
+  INCOMPATIBLE_SAVE_MESSAGE,
+  listSaveSlots,
+  loadGame,
+  parseGameSave,
+  SAVE_VERSION,
+  saveGame,
+  serializeGame,
+} from "./save";
 import { newGame } from "./game";
 
 function installLocalStorage() {
@@ -39,7 +48,7 @@ describe("save slots", () => {
     expect(loadGame(1)).toBeNull();
   });
 
-  it("migrates older saves with missing modern fields", () => {
+  it("blocks pre-v2 saves without mutating or loading them", () => {
     const legacy = {
       marketIndex: 0,
       day: 2,
@@ -49,11 +58,72 @@ describe("save slots", () => {
       message: "legacy",
     };
 
-    const parsed = parseGameSave(JSON.stringify(legacy));
+    localStorage.setItem("merchant-react-save-slot-0", JSON.stringify(legacy));
 
-    expect(parsed?.offersMade).toBe(0);
-    expect(parsed?.npcRelations).toEqual({});
-    expect(parsed?.questStates).toEqual({});
-    expect(parsed?.dialogueLog).toEqual([]);
+    expect(parseGameSave(JSON.stringify(legacy))).toBeNull();
+    expect(loadGame(0)).toBeNull();
+    expect(listSaveSlots()[0]).toMatchObject({
+      status: "incompatible",
+      compatible: false,
+      empty: false,
+      reason: INCOMPATIBLE_SAVE_MESSAGE,
+      saveVersion: null,
+    });
+  });
+
+  it("loads and inspects new schema-v2 saves", () => {
+    const state = { ...newGame(), day: 9 };
+    const raw = serializeGame(state);
+
+    localStorage.setItem("merchant-react-save-slot-1", raw);
+
+    expect(JSON.parse(raw).saveVersion).toBe(SAVE_VERSION);
+    expect(parseGameSave(raw)?.day).toBe(9);
+    expect(listSaveSlots()[1]).toMatchObject({
+      status: "compatible",
+      compatible: true,
+      empty: false,
+      day: 9,
+      saveVersion: SAVE_VERSION,
+    });
+  });
+
+  it("blocks envelopes with the v2 number but a different catalog schema", () => {
+    const envelope = JSON.parse(serializeGame(newGame()));
+    envelope.schemaLabel = "different-item-catalog";
+    const raw = JSON.stringify(envelope);
+
+    localStorage.setItem("merchant-react-save-slot-1", raw);
+
+    expect(parseGameSave(raw)).toBeNull();
+    expect(listSaveSlots()[1]).toMatchObject({
+      status: "incompatible",
+      compatible: false,
+      empty: false,
+      saveVersion: SAVE_VERSION,
+    });
+  });
+
+  it("reports malformed and invalid v2 slots as corrupt", () => {
+    localStorage.setItem("merchant-react-save-slot-1", "{broken");
+    localStorage.setItem("merchant-react-save-slot-2", JSON.stringify({
+      saveVersion: SAVE_VERSION,
+      schemaLabel: "item-catalog-2026-06-v2",
+      savedAt: "2026-06-21T00:00:00.000Z",
+      game: { day: 3 },
+    }));
+
+    expect(listSaveSlots()[1]).toMatchObject({
+      status: "corrupt",
+      compatible: false,
+      empty: false,
+      saveVersion: null,
+    });
+    expect(listSaveSlots()[2]).toMatchObject({
+      status: "corrupt",
+      compatible: false,
+      empty: false,
+      saveVersion: SAVE_VERSION,
+    });
   });
 });

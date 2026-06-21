@@ -120,3 +120,27 @@ Implemented:
 Reason:
 
 - Step 3.5 connected old generated biases to stock, but Step 3.6 keeps those biases mild and gives us a repeatable way to decide whether NPC stock is balanced enough before moving to barter regression tests.
+
+## Step 4 Addendum - Barter Correctness Regression Tests
+
+This overlay also includes Step 4 regression coverage for the current barter layer.
+
+Changed files:
+
+- `src/lib/barter.ts`
+- `src/lib/barter.test.ts`
+- `docs/development/barter-regression-tests.md`
+
+Step 4 adds pure helper functions for acceptance, offerability, and failure messages so rules can be tested outside the React UI. The existing `pnpm test:barter` command now covers valuation modifiers, appraisal thresholds, illegal goods, black-market premiums, repeated haggling pressure, protected/concealed item rules, and bad-offer explanations.
+
+Run:
+
+```powershell
+pnpm test:barter
+```
+
+or run the whole verification gate:
+
+```powershell
+pnpm verify:current-state
+```

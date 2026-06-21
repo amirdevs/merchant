@@ -362,7 +362,9 @@ const requiredTokens = {
 
 const balanceTargets = {
   alchemist: { identity: ["alchemy", "ingredient", "container", "potions", "remedies"], minIdentityShare: 0.5, maxFinishedShare: 0.35, maxLuxuryShare: 0.35 },
-  bard: { identity: ["music", "game", "book", "art", "travel"], minIdentityShare: 0.5, maxRawShare: 0.25, maxLuxuryShare: 0.3 },
+  // Music and game items are intentionally cataloged as luxury goods, so a bard's healthy identity mix
+  // naturally sits above the generic luxury ceiling used by other professions.
+  bard: { identity: ["music", "game", "book", "art", "travel"], minIdentityShare: 0.5, maxRawShare: 0.25, maxLuxuryShare: 0.4 },
   barkeep: { identity: ["drink", "drinks", "food", "barrels", "glass", "household"], minIdentityShare: 0.58, maxRawShare: 0.25, maxFinishedShare: 0.35, maxLuxuryShare: 0.15 },
   blacksmith: { identity: ["ore", "ingots", "metal", "coal", "tool", "tools", "repairinput", "construction"], minIdentityShare: 0.62, maxFinishedShare: 0.28, maxLuxuryShare: 0.08, maxConsumableShare: 0.16 },
   butcher: { identity: ["meat", "preserved", "spice", "tool", "container", "food"], minIdentityShare: 0.58, maxFinishedShare: 0.2, maxLuxuryShare: 0.08 },

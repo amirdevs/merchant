@@ -2,6 +2,9 @@ import type { Bias, Character, InventoryEntry, Item, Marketplace, Profession } f
 import { itemMatchesCatalogToken } from "./item-catalog";
 
 export type TradePerspective = "player" | "character";
+export type TradeAppraisal = "great_deal" | "good_deal" | "fair_deal" | "close" | "reaching" | "far" | "leave";
+export type OfferabilityMode = "manual" | "auto";
+
 export type ValueAdjustment = {
   label: string;
   amount: number;
@@ -15,11 +18,25 @@ export type OfferValueLine = {
   adjustments: ValueAdjustment[];
 };
 
+export type OfferFailureContext = {
+  playerValue: number;
+  characterValue: number;
+  appraisal: TradeAppraisal;
+  character?: Character | null;
+  hasIllegalGoods?: boolean;
+  hasProtectedGoods?: boolean;
+  hasConcealedGoods?: boolean;
+  hasPlayerOffer?: boolean;
+  hasCharacterOffer?: boolean;
+};
+
 const EXOTIC_BIAS_PERCENT = 20;
 const BULK_BIAS_NERF = 10;
 const MAX_BULK_BIAS_PERCENT = 25;
 const HAGGLE_DECREASE_MULTIPLIER = 2;
 const DEFAULT_BIAS_MAGNITUDE = 1;
+
+const ACCEPTED_APPRAISALS: TradeAppraisal[] = ["great_deal", "good_deal", "fair_deal"];
 
 function matchesBias(item: Item, bias: Bias) {
   return itemMatchesCatalogToken(item, bias.tag);
@@ -161,7 +178,7 @@ export function valueOfferBreakdown(options: {
   return { total, lines };
 }
 
-export function appraiseOffer(playerValue: number, characterValue: number, character: Character) {
+export function appraiseOffer(playerValue: number, characterValue: number, character: Character): TradeAppraisal {
   const difference = playerValue - characterValue;
   const close = (characterValue * (character.closeToDealPercent || 10)) / 100;
   const reaching = (characterValue * (character.reachingDealPercent || 40)) / 100;
@@ -174,4 +191,50 @@ export function appraiseOffer(playerValue: number, characterValue: number, chara
   if (difference > -reaching) return "reaching";
   if (difference > -far) return "far";
   return "leave";
+}
+
+export function canAcceptAppraisal(appraisal: TradeAppraisal) {
+  return ACCEPTED_APPRAISALS.includes(appraisal);
+}
+
+export function availableQuantity(entry: InventoryEntry) {
+  return Math.max(0, entry.quantity - Math.max(0, entry.offerQuantity || 0));
+}
+
+export function isOfferableEntry(entry: InventoryEntry, mode: OfferabilityMode = "manual") {
+  if (availableQuantity(entry) <= 0) return false;
+  if (entry.protected) return false;
+  if (mode === "auto" && entry.conceal) return false;
+  return true;
+}
+
+export function visibleOfferableInventory(inventory: InventoryEntry[], mode: OfferabilityMode = "auto") {
+  return inventory.filter((entry) => isOfferableEntry(entry, mode));
+}
+
+export function explainOfferFailure(context: OfferFailureContext) {
+  const {
+    playerValue,
+    characterValue,
+    appraisal,
+    hasIllegalGoods = false,
+    hasProtectedGoods = false,
+    hasConcealedGoods = false,
+    hasPlayerOffer = playerValue > 0,
+    hasCharacterOffer = characterValue > 0,
+  } = context;
+
+  if (canAcceptAppraisal(appraisal)) return null;
+  if (!hasPlayerOffer && !hasCharacterOffer) return "No goods are currently offered.";
+  if (!hasPlayerOffer) return "Add goods or coins to your side of the offer.";
+  if (!hasCharacterOffer) return "Select something from the customer's stock or use Ask Price first.";
+  if (hasProtectedGoods) return "Protected goods cannot be offered accidentally.";
+  if (hasConcealedGoods) return "Concealed goods are ignored by automatic offer matching.";
+  if (hasIllegalGoods) return "Illegal goods make this deal risky for a normal trader.";
+  if (appraisal === "close") return "The customer is close to accepting, but still wants a little more value.";
+  if (appraisal === "reaching") return "The customer thinks the offer is reaching.";
+  if (appraisal === "far") return "The customer thinks the offer is far from fair.";
+  if (appraisal === "leave") return "The customer wants a much better offer.";
+  if (playerValue <= characterValue) return "The offer is not in the customer's favor yet.";
+  return "The customer wants a much better offer.";
 }

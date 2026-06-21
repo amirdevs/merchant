@@ -72,10 +72,10 @@ export const professionStockProfiles: Record<string, StockProfile> = {
   },
   bard: {
     tier: "light",
-    archetypes: [{ id: "bard", weight: 0.78 }, { id: "traveler", weight: 0.17 }, { id: "art", weight: 0.05 }],
+    archetypes: [{ id: "bard", weight: 0.82 }, { id: "traveler", weight: 0.17 }, { id: "art", weight: 0.01 }],
     lifestyleBaseline: "traveler",
     guaranteedTags: ["music", "game", "book"],
-    forbiddenTags: ["ore", "ingots", "armor"],
+    forbiddenTags: ["ore", "ingots", "armor", "magic", "jewelry", "royal", "contraband", "monster_parts"],
   },
   barkeep: {
     tier: "standard",
@@ -98,12 +98,12 @@ export const professionStockProfiles: Record<string, StockProfile> = {
   },
   blacksmith: {
     tier: "standard",
-    archetypes: [{ id: "blacksmith", weight: 0.88 }, { id: "tools", weight: 0.08 }, { id: "weapons", weight: 0.025 }, { id: "armor", weight: 0.015 }],
+    archetypes: [{ id: "blacksmith", weight: 0.94 }, { id: "tools", weight: 0.04 }, { id: "weapons", weight: 0.0125 }, { id: "armor", weight: 0.0075 }],
     lifestyleBaseline: "worker",
     quantityMultiplier: 1.22,
     coinMultiplier: 1.15,
     guaranteedTags: ["ore", "ingots", "coal", "tool"],
-    forbiddenTags: ["luxury", "jewelry", "art", "magic", "food"],
+    forbiddenTags: ["luxury", "jewelry", "art", "magic", "food", "animal_goods", "statues", "book"],
   },
   butcher: {
     tier: "modest",
@@ -147,12 +147,12 @@ export const professionStockProfiles: Record<string, StockProfile> = {
   },
   fletcher: {
     tier: "standard",
-    archetypes: [{ id: "fletcher", weight: 0.88 }, { id: "tools", weight: 0.12 }],
+    archetypes: [{ id: "fletcher", weight: 0.96 }, { id: "tools", weight: 0.04 }],
     lifestyleBaseline: "worker",
     quantityMultiplier: 1.2,
     coinMultiplier: 1.1,
     guaranteedTags: ["arrows", "bows", "wood", "tool"],
-    forbiddenTags: ["swords", "axes", "maces", "flails", "armor", "luxury", "magic"],
+    forbiddenTags: ["swords", "axes", "maces", "flails", "armor", "luxury", "magic", "clothes", "book", "art", "jewelry"],
   },
   hunter: {
     tier: "light",
