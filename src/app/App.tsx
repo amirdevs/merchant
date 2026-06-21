@@ -19,6 +19,7 @@ const MarketHubView = lazy(() => import("@/features/market/MarketHubView").then(
 const NewMerchantProfileView = lazy(() => import("@/features/profile/NewMerchantProfileView").then((module) => ({ default: module.NewMerchantProfileView })));
 const SaveLoadView = lazy(() => import("@/features/save-load/SaveLoadView").then((module) => ({ default: module.SaveLoadView })));
 const SettingsView = lazy(() => import("@/features/settings/SettingsView").then((module) => ({ default: module.SettingsView })));
+const StrategyDashboardView = lazy(() => import("@/features/strategy/StrategyDashboardView").then((module) => ({ default: module.StrategyDashboardView })));
 const SystemMenuView = lazy(() => import("@/features/system/SystemMenuView").then((module) => ({ default: module.SystemMenuView })));
 const TravelMapView = lazy(() => import("@/features/travel/TravelMapView").then((module) => ({ default: module.TravelMapView })));
 
@@ -51,6 +52,7 @@ const gameViews: GameView[] = [
   "load-game",
   "settings",
   "system",
+  "strategy",
   "travel",
   "market",
   "customers",
@@ -62,8 +64,8 @@ const gameViews: GameView[] = [
   "inventory-filter",
   "item-detail",
 ];
-const passiveClockViews = new Set<GameView>(["market", "barter", "travel", "journal", "inventory", "inventory-filter", "item-detail", "company", "event", "customers"]);
-const sceneOverlayViews = new Set<GameView>(["customers", "journal", "inventory", "inventory-filter", "item-detail"]);
+const passiveClockViews = new Set<GameView>(["market", "barter", "travel", "journal", "inventory", "inventory-filter", "item-detail", "company", "event", "customers", "strategy"]);
+const sceneOverlayViews = new Set<GameView>(["customers", "journal", "inventory", "inventory-filter", "item-detail", "strategy"]);
 const titleViews = new Set<GameView>(["main-menu", "new-profile", "load-game", "settings"]);
 
 function SceneLoading() {
@@ -197,6 +199,8 @@ export function App() {
         return <SettingsView soundOn={controller.soundOn} uiPreferences={uiPreferences} onToggleSound={controller.actions.toggleAudio} onChangePreferences={setUiPreferences} onBack={() => navigate("main-menu")} />;
       case "travel":
         return <TravelMapView state={controller.state} onEnterMarket={() => navigate("market")} onOpenJournal={() => navigate("journal")} onTravel={controller.actions.travel} onClearTravelResult={controller.actions.clearTravelResult} onToggleRouteBookmark={controller.actions.toggleRouteBookmark} onSetRouteNote={controller.actions.setRouteNote} onBuySupplies={controller.actions.buyCaravanSupplies} />;
+      case "strategy":
+        return <StrategyDashboardView state={controller.state} onNavigate={navigate} onSelectCustomer={(person) => { controller.actions.selectCharacter(person); navigate("barter"); }} onNextCustomer={controller.actions.nextCustomer} />;
       case "market":
         return renderMarketScene();
       case "customers":

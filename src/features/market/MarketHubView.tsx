@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Building2, Gavel, Handshake, Map, Menu, PackageSearch, ScrollText, UserRoundPlus } from "lucide-react";
+import { Building2, ClipboardList, Gavel, Handshake, Map, Menu, PackageSearch, ScrollText, UserRoundPlus } from "lucide-react";
 import type { Character, Marketplace } from "@/data/types";
 import type { GameState } from "@/lib/game";
 import { eventBiases, eventIsActive, nextEventDay } from "@/lib/events";
@@ -102,6 +102,7 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
               backgroundSize: "cover",
             }}
           >
+            <MarketCommand icon={<ClipboardList size={34} />} label="Planner" onClick={() => onNavigate("strategy")} />
             <MarketCommand icon={<ScrollText size={34} />} label="Journal" onClick={() => onNavigate("journal")} />
             <MarketCommand icon={<Map size={34} />} label="Packup" onClick={onPackup} />
             <MarketCommand icon={<Map size={34} />} label="Map" onClick={() => onNavigate("travel")} />

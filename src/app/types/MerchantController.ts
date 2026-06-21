@@ -12,6 +12,7 @@ export type GameView =
   | "load-game"
   | "settings"
   | "system"
+  | "strategy"
   | "travel"
   | "market"
   | "customers"
