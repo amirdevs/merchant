@@ -16,6 +16,7 @@ This is the first doc to read.
 10. `09_PLAYABLE_UI_INTEGRATION.md` - first visible gameplay UI integration pass.
 11. `10_CHARACTER_REWORK_AND_PORTRAITS.md` - character roster, identity replacement, portrait prompt, and expression roadmap.
 12. `11_USEFUL_NPC_ROSTER_SEEDS.md` - useful new NPC roster seeds and first portrait batch plan.
+13. `12_EXISTING_CHARACTER_AUDIT.md` - audit rules and seed decisions for the existing 203 generated characters.
 
 ## What is source of truth
 
