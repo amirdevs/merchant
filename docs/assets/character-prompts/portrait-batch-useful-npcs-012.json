@@ -1,0 +1,642 @@
+{
+  "batchId": "portrait-batch-useful-npcs-012",
+  "version": "v4-approved-style-3x4-production-manifest",
+  "status": "ready_after_all_character_prompts_are_done",
+  "purpose": "Useful new NPC portrait production manifest. Do not generate the full set until legacy character prompts are also complete and the final manifest is approved.",
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "If the generated sheet resolution differs, scale crop coordinates proportionally from the actual width/height while preserving 3 columns by 4 rows.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "images": [
+    {
+      "order": 1,
+      "globalOrder": 133,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "imageId": "npc-new-032-happy",
+      "characterId": "npc-new-032",
+      "displayName": "Elo Juniperseal",
+      "profession": "Public Scribe",
+      "expression": "happy",
+      "outputFile": "npc-new-032-happy.png",
+      "ancestryOrSpecies": "gnome scribe",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-032: long-fingered public scribe, fair olive skin, soft brown curls, indigo writing robe, feather pen behind ear, patient attentive expression",
+      "visualTraits": [
+        "long-fingered patient silhouette",
+        "fair olive skin",
+        "soft brown curls",
+        "indigo writing robe",
+        "feather pen behind ear",
+        "wax seal row",
+        "attentive expression"
+      ],
+      "professionProps": [
+        "feather pen",
+        "wax seals",
+        "folded letters"
+      ],
+      "dominantColors": [
+        "indigo",
+        "wax red",
+        "cream"
+      ],
+      "prompt": "A patient young scribe with fair olive skin, long fingers, soft brown curls, indigo writing robe, feather pen tucked behind one ear, and wax seals lined like sweets. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: gnome scribe. Identity anchors must remain unchanged: same person as npc-new-032: long-fingered public scribe, fair olive skin, soft brown curls, indigo writing robe, feather pen behind ear, patient attentive expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 2,
+      "globalOrder": 134,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "imageId": "npc-new-032-suspicious",
+      "characterId": "npc-new-032",
+      "displayName": "Elo Juniperseal",
+      "profession": "Public Scribe",
+      "expression": "suspicious",
+      "outputFile": "npc-new-032-suspicious.png",
+      "ancestryOrSpecies": "gnome scribe",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-032: long-fingered public scribe, fair olive skin, soft brown curls, indigo writing robe, feather pen behind ear, patient attentive expression",
+      "visualTraits": [
+        "long-fingered patient silhouette",
+        "fair olive skin",
+        "soft brown curls",
+        "indigo writing robe",
+        "feather pen behind ear",
+        "wax seal row",
+        "attentive expression"
+      ],
+      "professionProps": [
+        "feather pen",
+        "wax seals",
+        "folded letters"
+      ],
+      "dominantColors": [
+        "indigo",
+        "wax red",
+        "cream"
+      ],
+      "prompt": "A patient young scribe with fair olive skin, long fingers, soft brown curls, indigo writing robe, feather pen tucked behind one ear, and wax seals lined like sweets. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: gnome scribe. Identity anchors must remain unchanged: same person as npc-new-032: long-fingered public scribe, fair olive skin, soft brown curls, indigo writing robe, feather pen behind ear, patient attentive expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 3,
+      "globalOrder": 135,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "imageId": "npc-new-033-neutral",
+      "characterId": "npc-new-033",
+      "displayName": "Rook Velvetknife",
+      "profession": "Black Market Fence",
+      "expression": "neutral",
+      "outputFile": "npc-new-033-neutral.png",
+      "ancestryOrSpecies": "emberfolk",
+      "magicalTraits": [
+        "small dark horns",
+        "ember eyes"
+      ],
+      "identityAnchor": "same person as npc-new-033: slim black market fence, deep brown skin, oiled black moustache, maroon velvet coat, single pearl earring, cane-top hidden knife, charming dangerous smile",
+      "visualTraits": [
+        "slim velvet-smooth silhouette",
+        "deep brown skin",
+        "oiled black moustache",
+        "maroon velvet coat",
+        "single pearl earring",
+        "cane-top hidden knife",
+        "dangerous smile"
+      ],
+      "professionProps": [
+        "cane-top knife",
+        "velvet coat",
+        "black ledger"
+      ],
+      "dominantColors": [
+        "maroon",
+        "pearl",
+        "black"
+      ],
+      "prompt": "A slim middle-aged fence with deep brown skin, oiled black moustache, maroon velvet coat, one pearl earring, and a cane-top knife hidden beneath a polished smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: emberfolk. Visible magical traits that must remain consistent: small dark horns, ember eyes. Identity anchors must remain unchanged: same person as npc-new-033: slim black market fence, deep brown skin, oiled black moustache, maroon velvet coat, single pearl earring, cane-top hidden knife, charming dangerous smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 4,
+      "globalOrder": 136,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "imageId": "npc-new-033-happy",
+      "characterId": "npc-new-033",
+      "displayName": "Rook Velvetknife",
+      "profession": "Black Market Fence",
+      "expression": "happy",
+      "outputFile": "npc-new-033-happy.png",
+      "ancestryOrSpecies": "emberfolk",
+      "magicalTraits": [
+        "small dark horns",
+        "ember eyes"
+      ],
+      "identityAnchor": "same person as npc-new-033: slim black market fence, deep brown skin, oiled black moustache, maroon velvet coat, single pearl earring, cane-top hidden knife, charming dangerous smile",
+      "visualTraits": [
+        "slim velvet-smooth silhouette",
+        "deep brown skin",
+        "oiled black moustache",
+        "maroon velvet coat",
+        "single pearl earring",
+        "cane-top hidden knife",
+        "dangerous smile"
+      ],
+      "professionProps": [
+        "cane-top knife",
+        "velvet coat",
+        "black ledger"
+      ],
+      "dominantColors": [
+        "maroon",
+        "pearl",
+        "black"
+      ],
+      "prompt": "A slim middle-aged fence with deep brown skin, oiled black moustache, maroon velvet coat, one pearl earring, and a cane-top knife hidden beneath a polished smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: emberfolk. Visible magical traits that must remain consistent: small dark horns, ember eyes. Identity anchors must remain unchanged: same person as npc-new-033: slim black market fence, deep brown skin, oiled black moustache, maroon velvet coat, single pearl earring, cane-top hidden knife, charming dangerous smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 5,
+      "globalOrder": 137,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "imageId": "npc-new-033-suspicious",
+      "characterId": "npc-new-033",
+      "displayName": "Rook Velvetknife",
+      "profession": "Black Market Fence",
+      "expression": "suspicious",
+      "outputFile": "npc-new-033-suspicious.png",
+      "ancestryOrSpecies": "emberfolk",
+      "magicalTraits": [
+        "small dark horns",
+        "ember eyes"
+      ],
+      "identityAnchor": "same person as npc-new-033: slim black market fence, deep brown skin, oiled black moustache, maroon velvet coat, single pearl earring, cane-top hidden knife, charming dangerous smile",
+      "visualTraits": [
+        "slim velvet-smooth silhouette",
+        "deep brown skin",
+        "oiled black moustache",
+        "maroon velvet coat",
+        "single pearl earring",
+        "cane-top hidden knife",
+        "dangerous smile"
+      ],
+      "professionProps": [
+        "cane-top knife",
+        "velvet coat",
+        "black ledger"
+      ],
+      "dominantColors": [
+        "maroon",
+        "pearl",
+        "black"
+      ],
+      "prompt": "A slim middle-aged fence with deep brown skin, oiled black moustache, maroon velvet coat, one pearl earring, and a cane-top knife hidden beneath a polished smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: emberfolk. Visible magical traits that must remain consistent: small dark horns, ember eyes. Identity anchors must remain unchanged: same person as npc-new-033: slim black market fence, deep brown skin, oiled black moustache, maroon velvet coat, single pearl earring, cane-top hidden knife, charming dangerous smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 6,
+      "globalOrder": 138,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "imageId": "npc-new-033-worried",
+      "characterId": "npc-new-033",
+      "displayName": "Rook Velvetknife",
+      "profession": "Black Market Fence",
+      "expression": "worried",
+      "outputFile": "npc-new-033-worried.png",
+      "ancestryOrSpecies": "emberfolk",
+      "magicalTraits": [
+        "small dark horns",
+        "ember eyes"
+      ],
+      "identityAnchor": "same person as npc-new-033: slim black market fence, deep brown skin, oiled black moustache, maroon velvet coat, single pearl earring, cane-top hidden knife, charming dangerous smile",
+      "visualTraits": [
+        "slim velvet-smooth silhouette",
+        "deep brown skin",
+        "oiled black moustache",
+        "maroon velvet coat",
+        "single pearl earring",
+        "cane-top hidden knife",
+        "dangerous smile"
+      ],
+      "professionProps": [
+        "cane-top knife",
+        "velvet coat",
+        "black ledger"
+      ],
+      "dominantColors": [
+        "maroon",
+        "pearl",
+        "black"
+      ],
+      "prompt": "A slim middle-aged fence with deep brown skin, oiled black moustache, maroon velvet coat, one pearl earring, and a cane-top knife hidden beneath a polished smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: emberfolk. Visible magical traits that must remain consistent: small dark horns, ember eyes. Identity anchors must remain unchanged: same person as npc-new-033: slim black market fence, deep brown skin, oiled black moustache, maroon velvet coat, single pearl earring, cane-top hidden knife, charming dangerous smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 7,
+      "globalOrder": 139,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "imageId": "npc-new-033-angry",
+      "characterId": "npc-new-033",
+      "displayName": "Rook Velvetknife",
+      "profession": "Black Market Fence",
+      "expression": "angry",
+      "outputFile": "npc-new-033-angry.png",
+      "ancestryOrSpecies": "emberfolk",
+      "magicalTraits": [
+        "small dark horns",
+        "ember eyes"
+      ],
+      "identityAnchor": "same person as npc-new-033: slim black market fence, deep brown skin, oiled black moustache, maroon velvet coat, single pearl earring, cane-top hidden knife, charming dangerous smile",
+      "visualTraits": [
+        "slim velvet-smooth silhouette",
+        "deep brown skin",
+        "oiled black moustache",
+        "maroon velvet coat",
+        "single pearl earring",
+        "cane-top hidden knife",
+        "dangerous smile"
+      ],
+      "professionProps": [
+        "cane-top knife",
+        "velvet coat",
+        "black ledger"
+      ],
+      "dominantColors": [
+        "maroon",
+        "pearl",
+        "black"
+      ],
+      "prompt": "A slim middle-aged fence with deep brown skin, oiled black moustache, maroon velvet coat, one pearl earring, and a cane-top knife hidden beneath a polished smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: emberfolk. Visible magical traits that must remain consistent: small dark horns, ember eyes. Identity anchors must remain unchanged: same person as npc-new-033: slim black market fence, deep brown skin, oiled black moustache, maroon velvet coat, single pearl earring, cane-top hidden knife, charming dangerous smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 8,
+      "globalOrder": 140,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "imageId": "npc-new-034-neutral",
+      "characterId": "npc-new-034",
+      "displayName": "Pip Sootheel",
+      "profession": "Thief Contact",
+      "expression": "neutral",
+      "outputFile": "npc-new-034-neutral.png",
+      "ancestryOrSpecies": "goblin-kin",
+      "magicalTraits": [
+        "large expressive goblin ears"
+      ],
+      "identityAnchor": "same person as npc-new-034: tiny quick thief contact, soot-darkened cheeks, bright hazel eyes, chopped black hair, oversized green coat, cloth-wrapped bare feet, mischievous wary grin",
+      "visualTraits": [
+        "tiny quick silhouette",
+        "teen",
+        "soot-darkened cheeks",
+        "bright hazel eyes",
+        "chopped black hair",
+        "oversized green coat",
+        "cloth-wrapped feet"
+      ],
+      "professionProps": [
+        "lockpick string",
+        "stolen button pouch",
+        "sooty coat"
+      ],
+      "dominantColors": [
+        "soot black",
+        "green",
+        "hazel"
+      ],
+      "prompt": "A tiny quick teen with soot-darkened cheeks, bright hazel eyes, chopped black hair, oversized green coat, and bare feet wrapped in cloth strips. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: goblin-kin. Visible magical traits that must remain consistent: large expressive goblin ears. Identity anchors must remain unchanged: same person as npc-new-034: tiny quick thief contact, soot-darkened cheeks, bright hazel eyes, chopped black hair, oversized green coat, cloth-wrapped bare feet, mischievous wary grin. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 9,
+      "globalOrder": 141,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "imageId": "npc-new-034-happy",
+      "characterId": "npc-new-034",
+      "displayName": "Pip Sootheel",
+      "profession": "Thief Contact",
+      "expression": "happy",
+      "outputFile": "npc-new-034-happy.png",
+      "ancestryOrSpecies": "goblin-kin",
+      "magicalTraits": [
+        "large expressive goblin ears"
+      ],
+      "identityAnchor": "same person as npc-new-034: tiny quick thief contact, soot-darkened cheeks, bright hazel eyes, chopped black hair, oversized green coat, cloth-wrapped bare feet, mischievous wary grin",
+      "visualTraits": [
+        "tiny quick silhouette",
+        "teen",
+        "soot-darkened cheeks",
+        "bright hazel eyes",
+        "chopped black hair",
+        "oversized green coat",
+        "cloth-wrapped feet"
+      ],
+      "professionProps": [
+        "lockpick string",
+        "stolen button pouch",
+        "sooty coat"
+      ],
+      "dominantColors": [
+        "soot black",
+        "green",
+        "hazel"
+      ],
+      "prompt": "A tiny quick teen with soot-darkened cheeks, bright hazel eyes, chopped black hair, oversized green coat, and bare feet wrapped in cloth strips. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: goblin-kin. Visible magical traits that must remain consistent: large expressive goblin ears. Identity anchors must remain unchanged: same person as npc-new-034: tiny quick thief contact, soot-darkened cheeks, bright hazel eyes, chopped black hair, oversized green coat, cloth-wrapped bare feet, mischievous wary grin. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 10,
+      "globalOrder": 142,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "imageId": "npc-new-034-suspicious",
+      "characterId": "npc-new-034",
+      "displayName": "Pip Sootheel",
+      "profession": "Thief Contact",
+      "expression": "suspicious",
+      "outputFile": "npc-new-034-suspicious.png",
+      "ancestryOrSpecies": "goblin-kin",
+      "magicalTraits": [
+        "large expressive goblin ears"
+      ],
+      "identityAnchor": "same person as npc-new-034: tiny quick thief contact, soot-darkened cheeks, bright hazel eyes, chopped black hair, oversized green coat, cloth-wrapped bare feet, mischievous wary grin",
+      "visualTraits": [
+        "tiny quick silhouette",
+        "teen",
+        "soot-darkened cheeks",
+        "bright hazel eyes",
+        "chopped black hair",
+        "oversized green coat",
+        "cloth-wrapped feet"
+      ],
+      "professionProps": [
+        "lockpick string",
+        "stolen button pouch",
+        "sooty coat"
+      ],
+      "dominantColors": [
+        "soot black",
+        "green",
+        "hazel"
+      ],
+      "prompt": "A tiny quick teen with soot-darkened cheeks, bright hazel eyes, chopped black hair, oversized green coat, and bare feet wrapped in cloth strips. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: goblin-kin. Visible magical traits that must remain consistent: large expressive goblin ears. Identity anchors must remain unchanged: same person as npc-new-034: tiny quick thief contact, soot-darkened cheeks, bright hazel eyes, chopped black hair, oversized green coat, cloth-wrapped bare feet, mischievous wary grin. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 11,
+      "globalOrder": 143,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "imageId": "npc-new-035-neutral",
+      "characterId": "npc-new-035",
+      "displayName": "Sergeant Borran Clink",
+      "profession": "Corrupt Guard",
+      "expression": "neutral",
+      "outputFile": "npc-new-035-neutral.png",
+      "ancestryOrSpecies": "orc-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-035: thick-necked corrupt guard, flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, heavy coin purse, forced friendly grin",
+      "visualTraits": [
+        "thick-necked sweating silhouette",
+        "flushed pale skin",
+        "yellowed moustache",
+        "rusted chain shirt",
+        "heavy coin purse",
+        "crooked spear",
+        "forced friendly grin"
+      ],
+      "professionProps": [
+        "heavy coin purse",
+        "rusted badge",
+        "crooked spear"
+      ],
+      "dominantColors": [
+        "rust",
+        "yellow",
+        "dirty steel"
+      ],
+      "prompt": "A thick-necked guard with flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, crooked spear, and a purse heavier than his sword. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: orc-kin. Identity anchors must remain unchanged: same person as npc-new-035: thick-necked corrupt guard, flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, heavy coin purse, forced friendly grin. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 12,
+      "globalOrder": 144,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "imageId": "npc-new-035-happy",
+      "characterId": "npc-new-035",
+      "displayName": "Sergeant Borran Clink",
+      "profession": "Corrupt Guard",
+      "expression": "happy",
+      "outputFile": "npc-new-035-happy.png",
+      "ancestryOrSpecies": "orc-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-035: thick-necked corrupt guard, flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, heavy coin purse, forced friendly grin",
+      "visualTraits": [
+        "thick-necked sweating silhouette",
+        "flushed pale skin",
+        "yellowed moustache",
+        "rusted chain shirt",
+        "heavy coin purse",
+        "crooked spear",
+        "forced friendly grin"
+      ],
+      "professionProps": [
+        "heavy coin purse",
+        "rusted badge",
+        "crooked spear"
+      ],
+      "dominantColors": [
+        "rust",
+        "yellow",
+        "dirty steel"
+      ],
+      "prompt": "A thick-necked guard with flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, crooked spear, and a purse heavier than his sword. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: orc-kin. Identity anchors must remain unchanged: same person as npc-new-035: thick-necked corrupt guard, flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, heavy coin purse, forced friendly grin. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    }
+  ]
+}

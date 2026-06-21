@@ -6,3 +6,5 @@ export * from "./characterRosterTypes";
 export * from "./finalCharacterRosterPlan";
 export * from "./characterIdentityTypes";
 export * from "./characterIdentityCatalogBatch01";
+export * from "./characterIdentityCatalogBatch02";
+export * from "./characterIdentityCatalog";

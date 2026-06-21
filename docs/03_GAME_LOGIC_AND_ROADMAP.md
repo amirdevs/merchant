@@ -35,26 +35,28 @@ src/data/characters/newUsefulNpcSeeds.ts
 src/data/characters/legacyCharacterAuditPlan.ts
 src/data/characters/finalCharacterRosterPlan.ts
 src/data/characters/characterIdentityCatalogBatch01.ts
+src/data/characters/characterIdentityCatalogBatch02.ts
+src/data/characters/characterIdentityCatalog.ts
 ```
 
 Current planning targets:
 
 ```text
 203 generated reference records
-48 useful new NPC seeds
+48 useful new NPC identities complete
+194 useful-new-NPC portrait prompts complete
 240 target visible characters
-726 target portrait images
+726 target portrait images before final roster adjustment
 ```
 
 Character work should move in larger useful chunks:
 
-1. finish useful NPC identities;
+1. useful-new-NPC identity catalog and portrait manifests are complete;
 2. rewrite legacy identities in large groups;
 3. finalize visible roster and expression tiers;
-4. create complete portrait image manifests;
-5. generate one approved test sheet;
-6. generate full portrait sheets only after approval;
-7. integrate remake identities and portraits into market, barter, quest, and company UI.
+4. create complete full-cast portrait image manifests;
+5. generate full portrait sheets only after all character prompts are finished and reviewed;
+6. integrate remake identities and portraits into market, barter, quest, and company UI.
 
 ## Portrait generation gate
 
@@ -68,6 +70,17 @@ Do not generate full portrait sheets until all of these are true:
 
 Portrait prompts are batched by total image count, not by character count. A single character can have some expressions in one batch and remaining expressions in another batch, as long as every prompt repeats the same identity anchors.
 
+Approved sheet direction:
+
+```text
+3 columns x 4 rows
+12 portraits per sheet
+one continuous flat #00FF00 background
+no visible cells, panels, borders, or separators
+crop by JSON row/column/order/outputFile
+if generated resolution is smaller than the JSON canvas, scale the crop grid proportionally
+```
+
 ## What is done / what remains
 
 Done:
@@ -76,14 +89,15 @@ Done:
 - playable Strategy Planner integration pass;
 - useful new NPC seed roster;
 - legacy character audit plan and final roster target;
-- first useful-new-NPC identity catalog batch;
-- draft portrait manifest seeds for test batches.
+- useful-new-NPC identity catalog, 48 characters;
+- useful-new-NPC portrait manifests, 194 images in 3x4 sheets;
+- approved portrait style gate: charming, slightly cartoony, fantasy ancestry variety, single flat green background, crop-safe spacing.
 
 Remaining:
 
-- complete the useful-new-NPC identity catalog in source;
 - rewrite legacy generated character identities;
+- produce legacy portrait manifests;
 - approve final roster and expression counts;
-- approve one portrait test sheet before production generation;
+- only then generate/crop all portrait sheets;
 - wire remake character identity and portraits into the runtime UI;
 - add audits for missing portraits, duplicate display names, original-name leaks, missing stories, missing role tags, and orphan files.

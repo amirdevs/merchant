@@ -1,0 +1,624 @@
+{
+  "batchId": "portrait-batch-useful-npcs-004",
+  "version": "v4-approved-style-3x4-production-manifest",
+  "status": "ready_after_all_character_prompts_are_done",
+  "purpose": "Useful new NPC portrait production manifest. Do not generate the full set until legacy character prompts are also complete and the final manifest is approved.",
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "If the generated sheet resolution differs, scale crop coordinates proportionally from the actual width/height while preserving 3 columns by 4 rows.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "images": [
+    {
+      "order": 1,
+      "globalOrder": 37,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "imageId": "npc-new-009-angry",
+      "characterId": "npc-new-009",
+      "displayName": "Kesta Far-Ridge",
+      "profession": "Route Scout",
+      "expression": "angry",
+      "outputFile": "npc-new-009-angry.png",
+      "ancestryOrSpecies": "antlered forest elf",
+      "magicalTraits": [
+        "small antler buds",
+        "leaf-flecked hair"
+      ],
+      "identityAnchor": "same person as npc-new-009: small weather-bitten route scout, copper-brown skin, sun-cracked lips, short black hair, faded green hood, map case across chest, muddy boots, alert narrowed eyes",
+      "visualTraits": [
+        "small weather-bitten build",
+        "copper-brown skin",
+        "sun-cracked lips",
+        "short black hair",
+        "faded green hood",
+        "map case across chest",
+        "muddy boots"
+      ],
+      "professionProps": [
+        "map case",
+        "trail tokens",
+        "muddy boots"
+      ],
+      "dominantColors": [
+        "faded green",
+        "dust brown",
+        "sun tan"
+      ],
+      "prompt": "A small weather-bitten route scout with copper-brown skin, sun-cracked lips, short black hair, faded green hood, map case strapped across chest, muddy boots, alert narrowed eyes and trail tokens. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: antlered forest elf. Visible magical traits that must remain consistent: small antler buds, leaf-flecked hair. Identity anchors must remain unchanged: same person as npc-new-009: small weather-bitten route scout, copper-brown skin, sun-cracked lips, short black hair, faded green hood, map case across chest, muddy boots, alert narrowed eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 2,
+      "globalOrder": 38,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "imageId": "npc-new-010-neutral",
+      "characterId": "npc-new-010",
+      "displayName": "Brann Oxweather",
+      "profession": "Caravan Captain",
+      "expression": "neutral",
+      "outputFile": "npc-new-010-neutral.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture",
+      "visualTraits": [
+        "massive calm silhouette",
+        "elder",
+        "dark bronze skin",
+        "missing thumb",
+        "white beard in three braids",
+        "heavy red travel cloak",
+        "iron route badges"
+      ],
+      "professionProps": [
+        "iron route badges",
+        "wagon tally board",
+        "heavy travel cloak"
+      ],
+      "dominantColors": [
+        "deep red",
+        "iron",
+        "sand"
+      ],
+      "prompt": "A massive elderly caravan captain with dark bronze skin, one missing thumb visible, white beard braided into three cords, heavy red travel cloak pinned with iron route badges, wagon tally board at his side. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 3,
+      "globalOrder": 39,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "imageId": "npc-new-010-happy",
+      "characterId": "npc-new-010",
+      "displayName": "Brann Oxweather",
+      "profession": "Caravan Captain",
+      "expression": "happy",
+      "outputFile": "npc-new-010-happy.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture",
+      "visualTraits": [
+        "massive calm silhouette",
+        "elder",
+        "dark bronze skin",
+        "missing thumb",
+        "white beard in three braids",
+        "heavy red travel cloak",
+        "iron route badges"
+      ],
+      "professionProps": [
+        "iron route badges",
+        "wagon tally board",
+        "heavy travel cloak"
+      ],
+      "dominantColors": [
+        "deep red",
+        "iron",
+        "sand"
+      ],
+      "prompt": "A massive elderly caravan captain with dark bronze skin, one missing thumb visible, white beard braided into three cords, heavy red travel cloak pinned with iron route badges, wagon tally board at his side. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 4,
+      "globalOrder": 40,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "imageId": "npc-new-010-suspicious",
+      "characterId": "npc-new-010",
+      "displayName": "Brann Oxweather",
+      "profession": "Caravan Captain",
+      "expression": "suspicious",
+      "outputFile": "npc-new-010-suspicious.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture",
+      "visualTraits": [
+        "massive calm silhouette",
+        "elder",
+        "dark bronze skin",
+        "missing thumb",
+        "white beard in three braids",
+        "heavy red travel cloak",
+        "iron route badges"
+      ],
+      "professionProps": [
+        "iron route badges",
+        "wagon tally board",
+        "heavy travel cloak"
+      ],
+      "dominantColors": [
+        "deep red",
+        "iron",
+        "sand"
+      ],
+      "prompt": "A massive elderly caravan captain with dark bronze skin, one missing thumb visible, white beard braided into three cords, heavy red travel cloak pinned with iron route badges, wagon tally board at his side. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 5,
+      "globalOrder": 41,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "imageId": "npc-new-010-worried",
+      "characterId": "npc-new-010",
+      "displayName": "Brann Oxweather",
+      "profession": "Caravan Captain",
+      "expression": "worried",
+      "outputFile": "npc-new-010-worried.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture",
+      "visualTraits": [
+        "massive calm silhouette",
+        "elder",
+        "dark bronze skin",
+        "missing thumb",
+        "white beard in three braids",
+        "heavy red travel cloak",
+        "iron route badges"
+      ],
+      "professionProps": [
+        "iron route badges",
+        "wagon tally board",
+        "heavy travel cloak"
+      ],
+      "dominantColors": [
+        "deep red",
+        "iron",
+        "sand"
+      ],
+      "prompt": "A massive elderly caravan captain with dark bronze skin, one missing thumb visible, white beard braided into three cords, heavy red travel cloak pinned with iron route badges, wagon tally board at his side. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 6,
+      "globalOrder": 42,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "imageId": "npc-new-010-angry",
+      "characterId": "npc-new-010",
+      "displayName": "Brann Oxweather",
+      "profession": "Caravan Captain",
+      "expression": "angry",
+      "outputFile": "npc-new-010-angry.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture",
+      "visualTraits": [
+        "massive calm silhouette",
+        "elder",
+        "dark bronze skin",
+        "missing thumb",
+        "white beard in three braids",
+        "heavy red travel cloak",
+        "iron route badges"
+      ],
+      "professionProps": [
+        "iron route badges",
+        "wagon tally board",
+        "heavy travel cloak"
+      ],
+      "dominantColors": [
+        "deep red",
+        "iron",
+        "sand"
+      ],
+      "prompt": "A massive elderly caravan captain with dark bronze skin, one missing thumb visible, white beard braided into three cords, heavy red travel cloak pinned with iron route badges, wagon tally board at his side. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 7,
+      "globalOrder": 43,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "imageId": "npc-new-011-neutral",
+      "characterId": "npc-new-011",
+      "displayName": "Nilo Gatecoin",
+      "profession": "Toll Officer",
+      "expression": "neutral",
+      "outputFile": "npc-new-011-neutral.png",
+      "ancestryOrSpecies": "orc-blooded caravan captain",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-011: plump immaculate toll officer, fair skin, tiny curled moustache, lacquered blue cap, cream gloves, polished coin abacus, smug official posture",
+      "visualTraits": [
+        "plump immaculate build",
+        "fair skin",
+        "tiny curled moustache",
+        "lacquered blue cap",
+        "stiff cream gloves",
+        "polished coin abacus",
+        "smug official posture"
+      ],
+      "professionProps": [
+        "coin abacus",
+        "toll tickets",
+        "blue cap badge"
+      ],
+      "dominantColors": [
+        "blue",
+        "cream",
+        "gold"
+      ],
+      "prompt": "A plump immaculate toll officer with fair skin, tiny curled moustache, lacquered blue cap, stiff cream gloves, polished coin abacus at belt, toll tickets fanned in one hand. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: orc-blooded caravan captain. Identity anchors must remain unchanged: same person as npc-new-011: plump immaculate toll officer, fair skin, tiny curled moustache, lacquered blue cap, cream gloves, polished coin abacus, smug official posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 8,
+      "globalOrder": 44,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "imageId": "npc-new-011-happy",
+      "characterId": "npc-new-011",
+      "displayName": "Nilo Gatecoin",
+      "profession": "Toll Officer",
+      "expression": "happy",
+      "outputFile": "npc-new-011-happy.png",
+      "ancestryOrSpecies": "orc-blooded caravan captain",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-011: plump immaculate toll officer, fair skin, tiny curled moustache, lacquered blue cap, cream gloves, polished coin abacus, smug official posture",
+      "visualTraits": [
+        "plump immaculate build",
+        "fair skin",
+        "tiny curled moustache",
+        "lacquered blue cap",
+        "stiff cream gloves",
+        "polished coin abacus",
+        "smug official posture"
+      ],
+      "professionProps": [
+        "coin abacus",
+        "toll tickets",
+        "blue cap badge"
+      ],
+      "dominantColors": [
+        "blue",
+        "cream",
+        "gold"
+      ],
+      "prompt": "A plump immaculate toll officer with fair skin, tiny curled moustache, lacquered blue cap, stiff cream gloves, polished coin abacus at belt, toll tickets fanned in one hand. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: orc-blooded caravan captain. Identity anchors must remain unchanged: same person as npc-new-011: plump immaculate toll officer, fair skin, tiny curled moustache, lacquered blue cap, cream gloves, polished coin abacus, smug official posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 9,
+      "globalOrder": 45,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "imageId": "npc-new-011-suspicious",
+      "characterId": "npc-new-011",
+      "displayName": "Nilo Gatecoin",
+      "profession": "Toll Officer",
+      "expression": "suspicious",
+      "outputFile": "npc-new-011-suspicious.png",
+      "ancestryOrSpecies": "orc-blooded caravan captain",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-011: plump immaculate toll officer, fair skin, tiny curled moustache, lacquered blue cap, cream gloves, polished coin abacus, smug official posture",
+      "visualTraits": [
+        "plump immaculate build",
+        "fair skin",
+        "tiny curled moustache",
+        "lacquered blue cap",
+        "stiff cream gloves",
+        "polished coin abacus",
+        "smug official posture"
+      ],
+      "professionProps": [
+        "coin abacus",
+        "toll tickets",
+        "blue cap badge"
+      ],
+      "dominantColors": [
+        "blue",
+        "cream",
+        "gold"
+      ],
+      "prompt": "A plump immaculate toll officer with fair skin, tiny curled moustache, lacquered blue cap, stiff cream gloves, polished coin abacus at belt, toll tickets fanned in one hand. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: orc-blooded caravan captain. Identity anchors must remain unchanged: same person as npc-new-011: plump immaculate toll officer, fair skin, tiny curled moustache, lacquered blue cap, cream gloves, polished coin abacus, smug official posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 10,
+      "globalOrder": 46,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "imageId": "npc-new-012-neutral",
+      "characterId": "npc-new-012",
+      "displayName": "Arra Stonepassport",
+      "profession": "Border Customs Guard",
+      "expression": "neutral",
+      "outputFile": "npc-new-012-neutral.png",
+      "ancestryOrSpecies": "river gnome",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare",
+      "visualTraits": [
+        "tall stone-faced body",
+        "deep mahogany skin",
+        "silver streaks at temples",
+        "square shoulders",
+        "sand uniform",
+        "dark leather plates",
+        "inspection spear"
+      ],
+      "professionProps": [
+        "inspection spear",
+        "passport seals",
+        "contraband hook"
+      ],
+      "dominantColors": [
+        "sand",
+        "dark leather",
+        "silver"
+      ],
+      "prompt": "A tall stone-faced customs guard with deep mahogany skin, silver streaks at temples, square shoulders, sand-colored uniform reinforced with dark leather plates, inspection spear and passport seals. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: river gnome. Identity anchors must remain unchanged: same person as npc-new-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 11,
+      "globalOrder": 47,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "imageId": "npc-new-012-happy",
+      "characterId": "npc-new-012",
+      "displayName": "Arra Stonepassport",
+      "profession": "Border Customs Guard",
+      "expression": "happy",
+      "outputFile": "npc-new-012-happy.png",
+      "ancestryOrSpecies": "river gnome",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare",
+      "visualTraits": [
+        "tall stone-faced body",
+        "deep mahogany skin",
+        "silver streaks at temples",
+        "square shoulders",
+        "sand uniform",
+        "dark leather plates",
+        "inspection spear"
+      ],
+      "professionProps": [
+        "inspection spear",
+        "passport seals",
+        "contraband hook"
+      ],
+      "dominantColors": [
+        "sand",
+        "dark leather",
+        "silver"
+      ],
+      "prompt": "A tall stone-faced customs guard with deep mahogany skin, silver streaks at temples, square shoulders, sand-colored uniform reinforced with dark leather plates, inspection spear and passport seals. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: river gnome. Identity anchors must remain unchanged: same person as npc-new-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "order": 12,
+      "globalOrder": 48,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "imageId": "npc-new-012-suspicious",
+      "characterId": "npc-new-012",
+      "displayName": "Arra Stonepassport",
+      "profession": "Border Customs Guard",
+      "expression": "suspicious",
+      "outputFile": "npc-new-012-suspicious.png",
+      "ancestryOrSpecies": "river gnome",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare",
+      "visualTraits": [
+        "tall stone-faced body",
+        "deep mahogany skin",
+        "silver streaks at temples",
+        "square shoulders",
+        "sand uniform",
+        "dark leather plates",
+        "inspection spear"
+      ],
+      "professionProps": [
+        "inspection spear",
+        "passport seals",
+        "contraband hook"
+      ],
+      "dominantColors": [
+        "sand",
+        "dark leather",
+        "silver"
+      ],
+      "prompt": "A tall stone-faced customs guard with deep mahogany skin, silver streaks at temples, square shoulders, sand-colored uniform reinforced with dark leather plates, inspection spear and passport seals. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: river gnome. Identity anchors must remain unchanged: same person as npc-new-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    }
+  ]
+}
