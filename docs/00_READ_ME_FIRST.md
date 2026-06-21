@@ -18,6 +18,7 @@ This is the first doc to read.
 12. `11_USEFUL_NPC_ROSTER_SEEDS.md` - useful new NPC roster seeds and first portrait batch plan.
 13. `12_EXISTING_CHARACTER_AUDIT.md` - generated-character audit rules and keep/replace/disable planning.
 14. `13_FINAL_CHARACTER_ROSTER_MAP.md` - final visible roster target, portrait count target, and generation gate.
+15. `14_FIRST_IDENTITY_CATALOG_BATCH.md` - first full original identity batch with final names, stories, looks, expression tiers, and portrait anchors.
 
 ## What is source of truth
 

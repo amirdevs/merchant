@@ -2,6 +2,12 @@ import type { CharacterExpressionTier, CharacterReworkStatus } from "./character
 
 export type CharacterRosterSource = "legacy_generated" | "new_useful_npc" | "future_story_npc";
 
+export type CharacterPortraitGenerationStatus =
+  | "BLOCKED_UNTIL_IDENTITY_CATALOG"
+  | "BLOCKED_UNTIL_FULL_IDENTITY_CATALOG_AND_TEST_MANIFEST"
+  | "READY_FOR_TEST_BATCH"
+  | "READY_FOR_FULL_BATCHES";
+
 export interface PortraitTierAllocation {
   readonly tier: CharacterExpressionTier;
   readonly characterCount: number;
@@ -21,12 +27,20 @@ export interface CharacterRosterPoolPlan {
   readonly portraitAllocations: readonly PortraitTierAllocation[];
 }
 
+export interface CharacterIdentityCatalogProgress {
+  readonly batchId: string;
+  readonly characterCount: number;
+  readonly plannedPortraitImageCount: number;
+  readonly portraitGenerationAllowed: boolean;
+}
+
 export interface FinalCharacterRosterPlan {
   readonly planId: string;
-  readonly portraitGenerationStatus: "BLOCKED_UNTIL_IDENTITY_CATALOG" | "READY_FOR_TEST_BATCH" | "READY_FOR_FULL_BATCHES";
+  readonly portraitGenerationStatus: CharacterPortraitGenerationStatus;
   readonly finalVisibleCharacterTarget: number;
   readonly hiddenOrMergedLegacyTarget: number;
   readonly plannedPortraitImageTarget: number;
+  readonly completedIdentityCatalogBatches?: readonly CharacterIdentityCatalogProgress[];
   readonly pools: readonly CharacterRosterPoolPlan[];
   readonly generationGateChecklist: readonly string[];
   readonly nextStep: string;

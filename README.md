@@ -50,6 +50,7 @@ This is a playable local vertical-slice foundation, not a full clone yet. It cur
 - character rework/portrait roadmap for replacing original visible NPC identities
 - useful-new-NPC seed roster and first character portrait prompt batch plan
 - existing-character audit plan and final roster-map targets
+- first full character identity-catalog batch for useful new NPCs
 - playtest/balance report generation
 - offline local save/load and import/export
 
@@ -57,7 +58,7 @@ Steam and online systems are not included.
 
 ## Documentation Reading Order
 
-Read docs in order from `docs/00_READ_ME_FIRST.md` through `docs/13_FINAL_CHARACTER_ROSTER_MAP.md`.
+Read docs in order from `docs/00_READ_ME_FIRST.md` through `docs/14_FIRST_IDENTITY_CATALOG_BATCH.md`.
 
 Current source-of-truth docs:
 
@@ -76,6 +77,7 @@ Current source-of-truth docs:
 11_USEFUL_NPC_ROSTER_SEEDS.md
 12_EXISTING_CHARACTER_AUDIT.md
 13_FINAL_CHARACTER_ROSTER_MAP.md
+14_FIRST_IDENTITY_CATALOG_BATCH.md
 ```
 
 Generated reports, old phase notes, audit outputs, and historical notes belong under `docs/logs/` and are not part of the normal reading path.

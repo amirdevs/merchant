@@ -1,5 +1,6 @@
 import { getPlannedPortraitImageCount } from "./characterRemakeTypes";
 import { newUsefulNpcSeeds } from "./newUsefulNpcSeeds";
+import { characterIdentityCatalogBatch01Summary } from "./characterIdentityCatalogBatch01";
 import type { FinalCharacterRosterPlan } from "./characterRosterTypes";
 
 export const generatedLegacyCharacterCount = 203;
@@ -14,10 +15,11 @@ export const usefulNewNpcPortraitImageCount = newUsefulNpcSeeds.reduce(
 
 export const finalCharacterRosterPlan = {
   planId: "character-roster-v2-pre-portrait",
-  portraitGenerationStatus: "BLOCKED_UNTIL_IDENTITY_CATALOG",
+  portraitGenerationStatus: "BLOCKED_UNTIL_FULL_IDENTITY_CATALOG_AND_TEST_MANIFEST",
   finalVisibleCharacterTarget: targetVisibleLegacyCharacterCount + usefulNewNpcSeedCount,
   hiddenOrMergedLegacyTarget: targetHiddenOrMergedLegacyCharacterCount,
   plannedPortraitImageTarget: 726,
+  completedIdentityCatalogBatches: [characterIdentityCatalogBatch01Summary],
   pools: [
     {
       source: "legacy_generated",
@@ -92,7 +94,7 @@ export const finalCharacterRosterPlan = {
     "Generate only one small test portrait batch first.",
     "Approve style, consistency, crop safety, and expression identity before full portrait generation.",
   ],
-  nextStep: "Step 14 - write the first full identity-catalog batch with final names, stories, looks, and expression tiers.",
+  nextStep: "Step 15 - continue identity-catalog batches until all useful new NPCs and reworked legacy slots have final names, stories, looks, and expression tiers.",
 } as const satisfies FinalCharacterRosterPlan;
 
 export const finalCharacterRosterSummary = {
@@ -103,5 +105,6 @@ export const finalCharacterRosterSummary = {
   usefulNewNpcPortraitImageCount,
   finalVisibleCharacterTarget: finalCharacterRosterPlan.finalVisibleCharacterTarget,
   plannedPortraitImageTarget: finalCharacterRosterPlan.plannedPortraitImageTarget,
+  completedIdentityCatalogBatches: finalCharacterRosterPlan.completedIdentityCatalogBatches,
   portraitGenerationStatus: finalCharacterRosterPlan.portraitGenerationStatus,
 } as const;

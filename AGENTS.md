@@ -27,6 +27,7 @@ Current source-of-truth docs must be numbered in reading order:
 /docs/11_USEFUL_NPC_ROSTER_SEEDS.md
 /docs/12_EXISTING_CHARACTER_AUDIT.md
 /docs/13_FINAL_CHARACTER_ROSTER_MAP.md
+/docs/14_FIRST_IDENTITY_CATALOG_BATCH.md
 ```
 
 Do not add new unnumbered Markdown docs directly under `/docs`, `/docs/game`, `/docs/systems`, or `/docs/development`.
@@ -72,6 +73,12 @@ The existing generated-character audit and final roster-map planning live in:
 ```text
 src/data/characters/legacyCharacterAuditPlan.ts
 src/data/characters/finalCharacterRosterPlan.ts
+```
+
+The first identity-catalog batch lives in:
+
+```text
+src/data/characters/characterIdentityCatalogBatch01.ts
 ```
 
 Character portrait prompts must live beside item prompts under:
