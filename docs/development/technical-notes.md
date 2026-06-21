@@ -20,6 +20,7 @@ pnpm test:barter
 pnpm test:economy
 pnpm test:travel
 pnpm test:quests
+pnpm test:company
 pnpm verify:current-state
 pnpm audit:data
 pnpm audit:assets
@@ -95,3 +96,7 @@ Shared money, wallet, inventory value, and capacity helpers live in:
 - `src/lib/economy.test.ts`
 
 Use these helpers for tolls, fees, future NPC budget checks, warehouses, shipments, and company ledger calculations instead of duplicating coin math in UI or feature code.
+
+## Step 9 Company Foundation
+
+`src/lib/company.ts` contains pure company, warehouse, shipment, agent, valuation, dividend, and stock ownership helpers. Run `pnpm test:company` after changing this layer.

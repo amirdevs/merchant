@@ -10,6 +10,7 @@ const checks = [
   ["pnpm", ["test:economy"]],
   ["pnpm", ["test:travel"]],
   ["pnpm", ["test:quests"]],
+  ["pnpm", ["test:company"]],
   ["pnpm", ["build"]],
 ];
 
@@ -39,3 +40,4 @@ console.log("Review docs/assets/item-icon-lock-report.md before final item/icon 
 console.log("Economy helpers are covered by src/lib/economy.test.ts.");
 console.log("Travel planning helpers are covered by src/lib/travel-loop.test.ts.");
 console.log("Quest runtime helpers are covered by src/lib/quest-runtime.test.ts.");
+console.log("Company, warehouse, shipment, and stock helpers are covered by src/lib/company.test.ts.");
