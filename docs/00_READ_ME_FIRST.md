@@ -15,6 +15,7 @@ This is the first doc to read.
 9. `08_UI_UX_DIRECTION.md` - visual direction and UI style rules.
 10. `09_PLAYABLE_UI_INTEGRATION.md` - first visible gameplay UI integration pass.
 11. `10_CHARACTER_REWORK_AND_PORTRAITS.md` - character roster, identity replacement, portrait prompt, and expression roadmap.
+12. `11_USEFUL_NPC_ROSTER_SEEDS.md` - useful new NPC roster seeds and first portrait batch plan.
 
 ## What is source of truth
 

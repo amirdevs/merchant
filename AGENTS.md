@@ -24,6 +24,7 @@ Current source-of-truth docs must be numbered in reading order:
 /docs/08_UI_UX_DIRECTION.md
 /docs/09_PLAYABLE_UI_INTEGRATION.md
 /docs/10_CHARACTER_REWORK_AND_PORTRAITS.md
+/docs/11_USEFUL_NPC_ROSTER_SEEDS.md
 ```
 
 Do not add new unnumbered Markdown docs directly under `/docs`, `/docs/game`, `/docs/systems`, or `/docs/development`.
@@ -58,7 +59,11 @@ Visible character identity must be original. Do not preserve original public-fac
 
 Keep stable internal IDs/indexes until the runtime has a safe migration path. The original generated character data may remain as mechanical reference, but UI-facing identity should come from the remake layer.
 
-Useful new NPCs should be planned before portrait generation so portrait sheets only need to be generated/cropped once.
+Useful new NPCs should be planned before portrait generation so portrait sheets only need to be generated/cropped once. The current seed roster lives in:
+
+```text
+src/data/characters/newUsefulNpcSeeds.ts
+```
 
 Character portrait prompts must live beside item prompts under:
 
@@ -83,6 +88,8 @@ Every portrait image entry must include:
 Prompts must be hand-written for each character/image. Do not use generic repeated character prompts except for shared style/cropping constraints.
 
 Each expression prompt must preserve the same identity anchors and change only expression, posture, and emotional acting.
+
+Do not generate portrait sheets until the roster and prompt manifests have been reviewed. Portrait generation/cropping is expensive and should happen after weak old characters, useful new NPCs, and expression counts are planned.
 
 ## Current UI Direction
 
@@ -113,6 +120,7 @@ Do not use npm for installs or scripts unless the user explicitly asks.
 - The user often says "continue"; continue the current task from local context.
 - Ask before doing if there is a real product/architecture choice awaiting the user's call.
 - The user prefers ZIP/root-overlay patches unless they ask for direct Git commits.
+- Every ZIP response should include a suggested Git commit message.
 - The user is fine with creating new saves; do not preserve old save compatibility unless requested.
 - Dist/release build output should not be committed.
 - Do not use one-time patch scripts for docs organization; provide direct files or a clear delete list.
