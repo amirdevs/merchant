@@ -7,10 +7,10 @@ This file tracks the manually authored static item copy for PR #9.
 ## Current status
 
 - Actual game items: 2206
-- Hand-written entries completed: 1842
-- Remaining: 364
-- Last completed item index: 1841
-- Next start point: 1842
+- Hand-written entries completed: 1892
+- Remaining: 314
+- Last completed item index: 1891
+- Next start point: 1892
 
 ## Completed batches
 
@@ -51,6 +51,7 @@ This file tracks the manually authored static item copy for PR #9.
 - 1692–1741: executioner axes, hand axes, war axes, bows, clubs, and the arbalest.
 - 1742–1791: arbalests, crossbows, daggers, short swords, flails, eveningstars, and maces.
 - 1792–1841: remaining maces, spears, polearms, tridents, claymores, cutlasses, rapiers, and double swords.
+- 1842–1891: dueling sword, broadsword, falchions, greatswords, katanas, longswords, rapiers, sabres, scimitars, and named fabled swords.
 
 ## Standard
 
