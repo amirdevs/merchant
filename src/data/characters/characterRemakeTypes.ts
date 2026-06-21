@@ -14,7 +14,11 @@ export type CharacterExpression =
   | "angry"
   | "sad"
   | "surprised"
-  | "bargaining";
+  | "bargaining"
+  | "wonder"
+  | "proud"
+  | "amused"
+  | "tired";
 
 export type CharacterExpressionTier = "major" | "merchant" | "minor" | "special";
 
@@ -37,6 +41,10 @@ export interface CharacterPortraitPlan {
   readonly professionProps: readonly string[];
   readonly dominantColors: readonly string[];
   readonly negativePrompt: string;
+  /** Optional fantasy ancestry/species direction. Use this to avoid an all-human cast. */
+  readonly ancestryOrSpecies?: string;
+  /** Optional visible magical/otherworldly traits. Keep them readable and profession-safe. */
+  readonly magicalTraits?: readonly string[];
 }
 
 export interface NewUsefulNpcSeed {

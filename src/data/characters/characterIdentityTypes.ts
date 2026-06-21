@@ -38,6 +38,10 @@ export interface FinalCharacterIdentityProfile {
   readonly negativePrompt: string;
   readonly questHooks: readonly string[];
   readonly integrationNotes: string;
+  /** Optional fantasy ancestry/species direction. Use this to make the cast visibly varied. */
+  readonly ancestryOrSpecies?: string;
+  /** Optional visible magical/otherworldly traits. Keep these consistent across expressions. */
+  readonly magicalTraits?: readonly string[];
 }
 
 export interface CharacterIdentityCatalogBatch {
