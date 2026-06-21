@@ -1,6 +1,6 @@
 # Merchant React/Vite Remake
 
-Offline React/Vite remake prototype using extracted Merchant-style data, local assets, and new replacement systems for trading, stock, items, travel, quests, company management, and UI integration.
+Offline React/Vite remake prototype using extracted Merchant-style data, local assets, and new replacement systems for trading, stock, items, travel, quests, company management, UI integration, and original character/portrait replacement.
 
 ## Commands
 
@@ -46,6 +46,8 @@ This is a playable local vertical-slice foundation, not a full clone yet. It cur
 - save schema v2 clean break
 - item/icon structural lock checks
 - economy, capacity, travel, quest, company, and UI-integration helper foundations
+- playable UI integration through the Strategy Planner
+- character rework/portrait roadmap for replacing original visible NPC identities
 - playtest/balance report generation
 - offline local save/load and import/export
 
@@ -53,6 +55,27 @@ Steam and online systems are not included.
 
 ## Documentation Reading Order
 
-Read docs in order from `docs/00_READ_ME_FIRST.md` to `docs/08_UI_UX_DIRECTION.md`.
+Read docs in order from `docs/00_READ_ME_FIRST.md` through `docs/10_CHARACTER_REWORK_AND_PORTRAITS.md`.
+
+Current source-of-truth docs:
+
+```text
+00_READ_ME_FIRST.md
+01_PROJECT_OVERVIEW.md
+02_DEVELOPMENT_SETUP.md
+03_GAME_LOGIC_AND_ROADMAP.md
+04_TRADING_AND_STOCK.md
+05_ITEMS_AND_ICONS.md
+06_ECONOMY_AND_TRAVEL.md
+07_QUESTS_COMPANY_AND_UI.md
+08_UI_UX_DIRECTION.md
+09_PLAYABLE_UI_INTEGRATION.md
+10_CHARACTER_REWORK_AND_PORTRAITS.md
+```
 
 Generated reports, old phase notes, audit outputs, and historical notes belong under `docs/logs/` and are not part of the normal reading path.
+
+Asset prompt configs are kept under `docs/assets/`:
+
+- `docs/assets/icon-prompts/` for item icon sheets
+- `docs/assets/character-prompts/` for character portrait/expression sheets

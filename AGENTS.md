@@ -4,7 +4,7 @@ This repo is `C:\Freelance\merchant-react-electron`.
 
 Always treat `C:\Freelance\merchant-react-electron` as the only valid project root for this app. Do not use, inspect, edit, sync from, or infer project state from any `D:\game\...` checkout unless the user explicitly asks for work in that path. If Codex is launched from another directory, change to `C:\Freelance\merchant-react-electron` before reading or editing project files.
 
-The project is an offline React/Vite remake prototype inspired by Merchant of the Six Kingdoms. The user wants a local-only app that uses original extracted data as reference while replacing/overhauling systems, UI, and item art.
+The project is an offline React/Vite remake prototype inspired by Merchant of the Six Kingdoms. The user wants a local-only app that uses original extracted data as reference while replacing/overhauling systems, UI, item art, character identities, character portraits, and visible narrative flavor.
 
 ## Documentation Rules
 
@@ -22,6 +22,8 @@ Current source-of-truth docs must be numbered in reading order:
 /docs/06_ECONOMY_AND_TRAVEL.md
 /docs/07_QUESTS_COMPANY_AND_UI.md
 /docs/08_UI_UX_DIRECTION.md
+/docs/09_PLAYABLE_UI_INTEGRATION.md
+/docs/10_CHARACTER_REWORK_AND_PORTRAITS.md
 ```
 
 Do not add new unnumbered Markdown docs directly under `/docs`, `/docs/game`, `/docs/systems`, or `/docs/development`.
@@ -40,13 +42,47 @@ Examples of log-only docs:
 - one-time phase notes
 - migration notes that are no longer source-of-truth
 
-Asset production folders are allowed to remain under `/docs/assets/` when they contain working assets/configs, not prose source-of-truth docs:
+Asset production folders are allowed to remain under `/docs/assets/` when they contain working assets/configs, prompt manifests, generated sheet plans, or cropping references rather than prose source-of-truth docs:
 
 - `/docs/assets/icon-prompts/`
 - `/docs/assets/icon-sheets/`
+- `/docs/assets/character-prompts/`
+- `/docs/assets/character-sheets/`
 - `/docs/ui_parts/`
 
 Before adding docs, update the numbered reading order if the doc is permanent; otherwise put it in `/docs/logs/`.
+
+## Character Rework Rules
+
+Visible character identity must be original. Do not preserve original public-facing names, portraits, dialogue flavor, or lookalike visual designs from the source game.
+
+Keep stable internal IDs/indexes until the runtime has a safe migration path. The original generated character data may remain as mechanical reference, but UI-facing identity should come from the remake layer.
+
+Useful new NPCs should be planned before portrait generation so portrait sheets only need to be generated/cropped once.
+
+Character portrait prompts must live beside item prompts under:
+
+```text
+/docs/assets/character-prompts/
+```
+
+Character prompt batches are batched by total portrait images, not by total characters. Example: 200 characters with 5 expression portraits each means 1000 portrait images to batch. A single character may have some expressions in one batch and the remaining expressions in another batch.
+
+Every portrait image entry must include:
+
+- `imageId`
+- `characterId`
+- `expression`
+- `batchId`
+- `identityAnchor`
+- `visualTraits`
+- `professionProps`
+- `prompt`
+- `negativePrompt`
+
+Prompts must be hand-written for each character/image. Do not use generic repeated character prompts except for shared style/cropping constraints.
+
+Each expression prompt must preserve the same identity anchors and change only expression, posture, and emotional acting.
 
 ## Current UI Direction
 
@@ -80,6 +116,7 @@ Do not use npm for installs or scripts unless the user explicitly asks.
 - The user is fine with creating new saves; do not preserve old save compatibility unless requested.
 - Dist/release build output should not be committed.
 - Do not use one-time patch scripts for docs organization; provide direct files or a clear delete list.
+- Character prompt files should be created before portrait generation so sheets and cropping stay consistent.
 
 ## Validation
 

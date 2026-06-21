@@ -13,6 +13,8 @@ This is the first doc to read.
 7. `06_ECONOMY_AND_TRAVEL.md` - money, capacity, travel, risk, market loop.
 8. `07_QUESTS_COMPANY_AND_UI.md` - quests, contracts, dialogue runtime, company layer, UI view models.
 9. `08_UI_UX_DIRECTION.md` - visual direction and UI style rules.
+10. `09_PLAYABLE_UI_INTEGRATION.md` - first visible gameplay UI integration pass.
+11. `10_CHARACTER_REWORK_AND_PORTRAITS.md` - character roster, identity replacement, portrait prompt, and expression roadmap.
 
 ## What is source of truth
 
@@ -27,4 +29,6 @@ The numbered docs above are the current source-of-truth docs.
 - Permanent docs must be numbered under `/docs`.
 - Generated/log-only docs must be under `/docs/logs`.
 - Do not add unnumbered Markdown files under `/docs`, `/docs/game`, `/docs/systems`, or `/docs/development`.
-- Asset production folders can remain under `/docs/assets/` if they contain configs/images rather than prose docs.
+- Asset production folders can remain under `/docs/assets/` if they contain configs/images rather than prose source-of-truth docs.
+- Item prompt files belong under `/docs/assets/icon-prompts/`.
+- Character prompt files belong under `/docs/assets/character-prompts/`.
