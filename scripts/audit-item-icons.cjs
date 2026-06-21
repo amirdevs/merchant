@@ -5,7 +5,7 @@ const root = path.join(__dirname, "..");
 const dataDir = path.join(root, "src", "data", "generated");
 const publicItemsDir = path.join(root, "public", "game-assets", "items");
 const promptDir = path.join(root, "docs", "assets", "icon-prompts");
-const outDir = path.join(root, "docs", "assets");
+const outDir = path.join(root, "docs", "logs");
 
 const failOnWarnings = process.argv.includes("--strict-warnings");
 const failOnOrphans = process.argv.includes("--strict-orphans");
@@ -481,8 +481,8 @@ const report = [
   "",
   "## Manual Review Files",
   "",
-  "- `docs/assets/item-icon-manual-review.csv`: row-by-row visual review sheet.",
-  "- `docs/assets/item-icon-lock-report.json`: complete machine-readable report.",
+  "- `docs/logs/item-icon-manual-review.csv`: row-by-row visual review sheet.",
+  "- `docs/logs/item-icon-lock-report.json`: complete machine-readable report.",
   "",
   "## Manual Visual Review Standard",
   "",
@@ -502,6 +502,7 @@ const jsonReport = {
   manualReviewRows: manualRows,
 };
 
+fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, "item-icon-lock-report.md"), `${report}\n`);
 fs.writeFileSync(path.join(outDir, "item-icon-lock-report.json"), `${JSON.stringify(jsonReport, null, 2)}\n`);
 fs.writeFileSync(path.join(outDir, "item-icon-manual-review.csv"), `${csv}\n`);
@@ -513,9 +514,9 @@ if (!jsonOnly) {
   console.log(`Actual item icon files: ${summary.actualItemIconFileCount}`);
   console.log(`Errors: ${summary.issueCount}`);
   console.log(`Warnings: ${summary.warningCount}`);
-  console.log("Wrote docs/assets/item-icon-lock-report.md");
-  console.log("Wrote docs/assets/item-icon-lock-report.json");
-  console.log("Wrote docs/assets/item-icon-manual-review.csv");
+  console.log("Wrote docs/logs/item-icon-lock-report.md");
+  console.log("Wrote docs/logs/item-icon-lock-report.json");
+  console.log("Wrote docs/logs/item-icon-manual-review.csv");
   if (issues.length) {
     console.log("First blocking errors:");
     for (const issue of issues.slice(0, 30)) console.log(`- ${issue.code}: ${issue.message}`);

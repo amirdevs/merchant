@@ -155,8 +155,8 @@ _None._
 
 ## Manual Review Files
 
-- `docs/assets/item-icon-manual-review.csv`: row-by-row visual review sheet.
-- `docs/assets/item-icon-lock-report.json`: complete machine-readable report.
+- `docs/logs/item-icon-manual-review.csv`: row-by-row visual review sheet.
+- `docs/logs/item-icon-lock-report.json`: complete machine-readable report.
 
 ## Manual Visual Review Standard
 

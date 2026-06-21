@@ -3,7 +3,7 @@ const path = require("path");
 
 const root = path.join(__dirname, "..");
 const dataDir = path.join(root, "src", "data", "generated");
-const outFile = path.join(root, "docs", "systems", "profession-stock-review.md");
+const outFile = path.join(root, "docs", "logs", "profession-stock-review.md");
 
 const characters = JSON.parse(fs.readFileSync(path.join(dataDir, "characters.json"), "utf8"));
 const items = JSON.parse(fs.readFileSync(path.join(dataDir, "items.json"), "utf8"));

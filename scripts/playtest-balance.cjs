@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = path.join(__dirname, "..");
-const outFile = path.join(root, "docs", "development", "playtest-balance-report.md");
+const outFile = path.join(root, "docs", "logs", "playtest-balance-report.md");
 
 function readIfExists(relativePath) {
   const file = path.join(root, relativePath);
@@ -20,7 +20,7 @@ function parseMarkdownMetric(text, label) {
 }
 
 function readIconMetrics() {
-  const jsonText = readIfExists("docs/assets/item-icon-lock-report.json");
+  const jsonText = readIfExists("docs/logs/item-icon-lock-report.json");
   if (jsonText) {
     try {
       const report = JSON.parse(jsonText);
@@ -39,7 +39,7 @@ function readIconMetrics() {
     }
   }
 
-  const markdown = readIfExists("docs/assets/item-icon-lock-report.md");
+  const markdown = readIfExists("docs/logs/item-icon-lock-report.md");
   return {
     source: markdown ? "markdown" : "unavailable",
     missingRuntimeIcons: parseMarkdownMetric(markdown, "Missing runtime icon files") ?? 0,
@@ -49,8 +49,8 @@ function readIconMetrics() {
   };
 }
 
-const stockReport = readIfExists("docs/systems/profession-stock-review.md");
-const iconReport = readIfExists("docs/assets/item-icon-lock-report.md");
+const stockReport = readIfExists("docs/logs/profession-stock-review.md");
+const iconReport = readIfExists("docs/logs/item-icon-lock-report.md");
 
 const stockPasses = countMatches(stockReport, /Balance status: PASS/g);
 const stockReviews = countMatches(stockReport, /Balance status: REVIEW/g);

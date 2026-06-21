@@ -4,13 +4,55 @@ This repo is `C:\Freelance\merchant-react-electron`.
 
 Always treat `C:\Freelance\merchant-react-electron` as the only valid project root for this app. Do not use, inspect, edit, sync from, or infer project state from any `D:\game\...` checkout unless the user explicitly asks for work in that path. If Codex is launched from another directory, change to `C:\Freelance\merchant-react-electron` before reading or editing project files.
 
-The project is an offline React/Vite remake prototype inspired by Merchant of the Six Kingdoms. The user wants to rebuild the game as a local-only app, using the original game as a design/gameplay reference but gradually replacing generated assets so the project has its own look.
+The project is an offline React/Vite remake prototype inspired by Merchant of the Six Kingdoms. The user wants a local-only app that uses original extracted data as reference while replacing/overhauling systems, UI, and item art.
+
+## Documentation Rules
+
+All documentation must live under `/docs`.
+
+Current source-of-truth docs must be numbered in reading order:
+
+```text
+/docs/00_READ_ME_FIRST.md
+/docs/01_PROJECT_OVERVIEW.md
+/docs/02_DEVELOPMENT_SETUP.md
+/docs/03_GAME_LOGIC_AND_ROADMAP.md
+/docs/04_TRADING_AND_STOCK.md
+/docs/05_ITEMS_AND_ICONS.md
+/docs/06_ECONOMY_AND_TRAVEL.md
+/docs/07_QUESTS_COMPANY_AND_UI.md
+/docs/08_UI_UX_DIRECTION.md
+```
+
+Do not add new unnumbered Markdown docs directly under `/docs`, `/docs/game`, `/docs/systems`, or `/docs/development`.
+
+Log-only docs, generated reports, temporary phase notes, audits, and historical handoffs must go under:
+
+```text
+/docs/logs/
+```
+
+Examples of log-only docs:
+
+- generated stock reviews
+- generated item icon audit reports
+- generated playtest/balance reports
+- one-time phase notes
+- migration notes that are no longer source-of-truth
+
+Asset production folders are allowed to remain under `/docs/assets/` when they contain working assets/configs, not prose source-of-truth docs:
+
+- `/docs/assets/icon-prompts/`
+- `/docs/assets/icon-sheets/`
+- `/docs/ui_parts/`
+
+Before adding docs, update the numbered reading order if the doc is permanent; otherwise put it in `/docs/logs/`.
 
 ## Current UI Direction
 
 Use `docs/ui_parts/` as the current UI visual reference. The target look is bright painterly fantasy merchant UI: sunlit coastal town scenes, parchment ledgers, carved dark wood shells, blue enamel title plates, brass trim, heraldic seals, gold status chips, polished NPC portraits, collectible item art, and beveled green/blue/red command buttons.
 
-Do not describe or implement the UI as a generic dense medieval app. Keep it compact and practical for repeated trading, but match the new premium PC merchant RPG mockups in `docs/ui_parts`.
+Do not describe or implement the UI as a generic dense medieval app. Keep it compact and practical for repeated trading, but match the premium PC merchant RPG mockups in `docs/ui_parts`.
 
 ## Stack
 
@@ -18,13 +60,14 @@ Do not describe or implement the UI as a generic dense medieval app. Keep it com
 - App: React 18, TypeScript, Vite
 - Styling: Tailwind CSS v4
 - UI icons: `lucide-react`
-- Main scripts:
-  - `pnpm dev`
-  - `pnpm dev:web`
-  - `pnpm build`
-  - `pnpm audit:data`
-  - `pnpm generate:icon-prompts`
-  - `pnpm rename:item-icons`
+
+Common commands:
+
+```powershell
+pnpm dev
+pnpm build
+pnpm verify:current-state
+```
 
 Do not use npm for installs or scripts unless the user explicitly asks.
 
@@ -32,91 +75,31 @@ Do not use npm for installs or scripts unless the user explicitly asks.
 
 - The user wants practical implementation, not long proposals.
 - The user often says "continue"; continue the current task from local context.
-- The user does not need end-of-task game launch testing unless they ask.
-- The user expects commits when requested, using Conventional Commit style like `feat(ui): improve inventory`.
-- The user is fine with creating new saves; do not spend time preserving old save compatibility unless specifically requested.
+- Ask before doing if there is a real product/architecture choice awaiting the user's call.
+- The user prefers ZIP/root-overlay patches unless they ask for direct Git commits.
+- The user is fine with creating new saves; do not preserve old save compatibility unless requested.
 - Dist/release build output should not be committed.
-- If work becomes slow because of fixable local conditions, such as huge untracked files, Git asset scanning, stuck Git processes, large binary pushes, or long-running dev/build processes, stop active work and ask the user before continuing. Prefer fixing the slowdown first over waiting silently.
-
-## Asset Pipeline State
-
-The item icon pipeline is being restarted. Old generated/cropped item icons were bad because the cropped image content did not match filenames. The user plans to remove/remake item icons.
-
-Important folders:
-
-- `docs/assets/icon-prompts/`: generated JSON configs for image generation
-- `docs/assets/icon-sheets/`: user will place generated full sheets here for review
-- `public/game-assets/items/`: final cropped item icons should eventually go here
-- `scripts/generate-icon-prompts.cjs`: generates the prompt configs
-- `scripts/crop-icon-sheet.ps1`: existing cropper work from earlier; may need updates for green background and 16:9 sheets
-
-Current prompt config design:
-
-- 1972 items from `src/data/generated/items.json`
-- 2672 total image slots after counting `one`, `few`, and `many`
-- 54 config JSON files
-- Each config contains at most 50 image slots
-- Each sheet should be a strict `10 columns x 5 rows` reading left-to-right, top-to-bottom
-- Some items use `single_few_many`; those consume 3 slots
-- Use each JSON's `generationPrompt` field when generating images
-
-The latest prompt direction requested by the user:
-
-- Do not pressure exact high resolution; user will upscale later.
-- Do not mention PNG in the image prompt.
-- If true transparency is not possible, use a solid pure `#00FF00` green background.
-- Make the art "totally ultra cartoony and artistic", more magical, fantastic, playful, and cooler.
-- Avoid realistic or semi-realistic output.
-- Quantity variants must be visually clear:
-  - `one`: exactly one main item only
-  - `few`: exactly 3 to 5 clearly separated pieces
-  - `many`: at least 12 pieces or an overflowing container/pile
-
-Last known issue: a generated batch looked better stylistically but still too realistic/boring for the user, and `one/few/many` sometimes did not read correctly. The generator has been patched to address this, but the user has not yet tested the newest prompt.
-
-## Sheet Review Checklist
-
-When the user asks to "check" generated sheets in `docs/assets/icon-sheets`:
-
-1. List files by `LastWriteTime`.
-2. Treat newest files as the next configs in sorted `docs/assets/icon-prompts/items-*.json` order unless filenames match configs.
-3. View the images.
-4. Check:
-   - 50 icons per normal sheet, or correct count for final sheet
-   - 10x5 layout
-   - left-to-right/top-to-bottom order against the matching JSON `order`
-   - style: ultra-cartoony magical fantasy game art, not realistic
-   - background: true transparent or solid `#00FF00`; no checkerboard
-   - `one/few/many` quantity differences
-   - enough spacing for cropping
-5. Be direct: say whether to keep or regenerate.
-
-## Git Notes
-
-Recent relevant commits:
-
-- `c412245 feat(assets): rename item icons`
-- `65ae229 feat(assets): add cropped item icons`
-- `d17f26b feat(assets): preserve icon prompt production files`
-- `ff2336d feat(assets): track item icon prompts`
-- `302e4c5 feat(assets): generate item icon prompts`
-
-Current worktree may be very dirty because the user is intentionally deleting/remaking item assets. Do not restore asset deletions unless the user explicitly asks.
+- Do not use one-time patch scripts for docs organization; provide direct files or a clear delete list.
 
 ## Validation
 
-Run `pnpm audit:data` after data/script prompt changes. This has been passing.
+Run focused tests for the area changed. For broad changes, run:
 
-Use `pnpm build` and `pnpm test` only when the change has meaningful compile/runtime risk, when targeted validation is unavailable, or when the user explicitly asks. Do not run them automatically after small, localized edits; they produce excessive output and consume too much context.
+```powershell
+pnpm verify:current-state
+pnpm build
+```
+
+`verify:current-state` should include data, asset, item icon, stock, barter, economy, travel, quest, company, UI-integration, playtest checks, and reports.
 
 ## UI Architecture Rules
 
-- Tailwind CSS is the default styling system. Use Tailwind utility classes directly in components for layout, spacing, typography, state styling, and responsive behavior.
-- Keep `src/styles.css` minimal: Tailwind imports, font-face declarations, theme tokens, root/body reset, and truly global browser basics only.
+- Tailwind CSS is the default styling system.
+- Keep `src/styles.css` minimal.
 - Do not add broad global override files such as `ui-cooking.css`, `ui-gamefit.css`, or similar patch-layer CSS.
-- Do not use global CSS to force all screens into shape. Build each screen as real React components that fit the game viewport by design.
+- Build each screen as real React components that fit the game viewport by design.
 - Use small modular React files. Avoid giant components, giant utility files, and multi-component dump files.
-- Use component-local CSS modules only when Tailwind cannot cleanly express the effect, such as masks, pseudo-elements, nine-slice frame effects, or complex decorative asset layering.
+- Use component-local CSS modules only when Tailwind cannot cleanly express the effect.
 - Do not introduce duplicate architecture roots. The current clean base uses `src/app`, `src/features`, `src/components`, `src/lib`, and `src/data`.
-- Do not recreate `src/sub-domains` unless the user explicitly asks to return to that naming.
+- Do not recreate `src/sub-domains` unless the user explicitly asks.
 - Before returning a patch, check imports for stale references to deleted folders and removed CSS layers.

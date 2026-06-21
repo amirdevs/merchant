@@ -38,12 +38,12 @@ for (const [command, args] of checks) {
 }
 
 console.log("\nCurrent-state verification passed.");
-console.log("Review docs/systems/profession-stock-review.md before final stock/profile approval.");
-console.log("Review docs/assets/item-icon-lock-report.md before final item/icon approval.");
+console.log("Review docs/logs/profession-stock-review.md before final stock/profile approval.");
+console.log("Review docs/logs/item-icon-lock-report.md before final item/icon approval.");
 console.log("Economy helpers are covered by src/lib/economy.test.ts.");
 console.log("Travel planning helpers are covered by src/lib/travel-loop.test.ts.");
 console.log("Quest runtime helpers are covered by src/lib/quest-runtime.test.ts.");
 console.log("Company, warehouse, shipment, and stock helpers are covered by src/lib/company.test.ts.");
 console.log("UI integration view models are covered by src/lib/ui-integration.test.ts.");
 console.log("Playtest/balance checklist helpers are covered by src/lib/playtest-balance.test.ts.");
-console.log("Review docs/development/playtest-balance-report.md before the final manual pass.");
+console.log("Review docs/logs/playtest-balance-report.md before the final manual pass.");
