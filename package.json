@@ -25,7 +25,8 @@
     "sync:ui-assets": "node scripts/sync-ui-assets.cjs",
     "extract:data": "node scripts/extract-data.cjs",
     "cleanup:ui": "node scripts/cleanup-ui-mess.cjs",
-    "test:company": "vitest run src/lib/company.test.ts"
+    "test:company": "vitest run src/lib/company.test.ts",
+    "test:ui-integration": "vitest run src/lib/ui-integration.test.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",

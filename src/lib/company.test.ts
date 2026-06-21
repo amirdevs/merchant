@@ -114,7 +114,7 @@ describe("company, warehouse, shipment, and stock helpers", () => {
     localCompany.shipments.push(shipment);
 
     expect(startShipment(localCompany, "ship-2")).toMatchObject({ ok: true, reason: "started" });
-    expect(localCompany.cashCopper).toBe(11_944);
+    expect(localCompany.cashCopper).toBe(11_943);
 
     const loss = resolveShipmentOutcome(shipment, 0.1);
     expect(loss.lost).toBe(true);

@@ -11,6 +11,7 @@ const checks = [
   ["pnpm", ["test:travel"]],
   ["pnpm", ["test:quests"]],
   ["pnpm", ["test:company"]],
+  ["pnpm", ["test:ui-integration"]],
   ["pnpm", ["build"]],
 ];
 
@@ -41,3 +42,4 @@ console.log("Economy helpers are covered by src/lib/economy.test.ts.");
 console.log("Travel planning helpers are covered by src/lib/travel-loop.test.ts.");
 console.log("Quest runtime helpers are covered by src/lib/quest-runtime.test.ts.");
 console.log("Company, warehouse, shipment, and stock helpers are covered by src/lib/company.test.ts.");
+console.log("UI integration view models are covered by src/lib/ui-integration.test.ts.");

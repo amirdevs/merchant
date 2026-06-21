@@ -21,6 +21,7 @@ pnpm test:economy
 pnpm test:travel
 pnpm test:quests
 pnpm test:company
+pnpm test:ui-integration
 pnpm verify:current-state
 pnpm audit:data
 pnpm audit:assets
@@ -99,4 +100,10 @@ Use these helpers for tolls, fees, future NPC budget checks, warehouses, shipmen
 
 ## Step 9 Company Foundation
 
-`src/lib/company.ts` contains pure company, warehouse, shipment, agent, valuation, dividend, and stock ownership helpers. Run `pnpm test:company` after changing this layer.
+`src/lib/company.ts` contains pure company, warehouse, shipment, agent, valuation, dividend, and stock ownership helpers. Run `pnpm test:company
+pnpm test:ui-integration` after changing this layer.
+
+
+## UI Integration View Models
+
+`src/lib/ui-integration.ts` converts economy, travel, quest, and company helper outputs into small UI-ready panels. Test with `pnpm test:ui-integration`.
