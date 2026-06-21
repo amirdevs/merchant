@@ -1,0 +1,590 @@
+{
+  "batchId": "characters-0481-0492",
+  "version": "v4-approved-style-3x4-sequential-production-manifest",
+  "status": "ready_for_generation_in_filename_order_after_final_review",
+  "purpose": "Sequential character portrait production manifest. Generate files in filename order; crop left-to-right and top-to-bottom; name each crop by outputFile.",
+  "batch": {
+    "firstGlobalSlot": 481,
+    "lastGlobalSlot": 492,
+    "slotCount": 12,
+    "maxSlotsPerSheet": 12
+  },
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Generate sheets in filename order.",
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "If the generated sheet resolution differs, scale crop coordinates proportionally from the actual width/height while preserving 3 columns by 4 rows.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "order": [
+    "1. npc-legacy-106-neutral",
+    "2. npc-legacy-107-neutral",
+    "3. npc-legacy-108-neutral",
+    "4. npc-legacy-108-happy",
+    "5. npc-legacy-108-suspicious",
+    "6. npc-legacy-108-worried",
+    "7. npc-legacy-108-angry",
+    "8. npc-legacy-109-neutral",
+    "9. npc-legacy-109-happy",
+    "10. npc-legacy-109-suspicious",
+    "11. npc-legacy-109-worried",
+    "12. npc-legacy-109-angry"
+  ],
+  "images": [
+    {
+      "order": 1,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "imageId": "npc-legacy-106-neutral",
+      "characterId": "npc-legacy-106",
+      "displayName": "Willa Peachbutton",
+      "profession": "market nurse",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-106-neutral.png",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-106: round gentle silhouette, peach-brown skin, white bonnet, green satchel, bandages, market nurse, human, bandages",
+      "visualTraits": [
+        "round gentle silhouette",
+        "peach-brown skin",
+        "white bonnet",
+        "green satchel",
+        "bandages"
+      ],
+      "professionProps": [
+        "bandages",
+        "medicine satchel",
+        "little sweet pouch"
+      ],
+      "prompt": "A round young woman with peach-brown skin, white bonnet, green medicine satchel, and clean bandages looped over one arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 481,
+      "batchId": "characters-0481-0492"
+    },
+    {
+      "order": 2,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "imageId": "npc-legacy-107-neutral",
+      "characterId": "npc-legacy-107",
+      "displayName": "Jori Mossbucket",
+      "profession": "compost buyer",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-107-neutral.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "goblin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-107: short goblin silhouette, moss-green skin, brown overalls, flower ear, compost bucket, compost buyer, goblin, compost bucket",
+      "visualTraits": [
+        "short goblin silhouette",
+        "moss-green skin",
+        "brown overalls",
+        "flower ear",
+        "compost bucket"
+      ],
+      "professionProps": [
+        "compost bucket",
+        "small shovel",
+        "flower token"
+      ],
+      "prompt": "A short goblin with moss-green skin, brown overalls, flower tucked behind one ear, and a little bucket of compost. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 482,
+      "batchId": "characters-0481-0492"
+    },
+    {
+      "order": 3,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "imageId": "npc-legacy-108-neutral",
+      "characterId": "npc-legacy-108",
+      "displayName": "Lord Marrec Quillgate",
+      "profession": "customs magistrate",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-108-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-108: tall legal silhouette, white moustache, brass monocle, powdered blue robe, wax-sealed tablets, customs magistrate, human, wax-sealed customs tablets",
+      "visualTraits": [
+        "tall legal silhouette",
+        "white moustache",
+        "brass monocle",
+        "powdered blue robe",
+        "wax-sealed tablets",
+        "long narrow hands"
+      ],
+      "professionProps": [
+        "wax-sealed customs tablets",
+        "brass monocle",
+        "tax stamp"
+      ],
+      "prompt": "A tall older human nobleman with umber skin, long white moustache, powdered blue robe, brass monocle, and a stack of wax-sealed customs tablets. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 483,
+      "batchId": "characters-0481-0492"
+    },
+    {
+      "order": 4,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "imageId": "npc-legacy-108-happy",
+      "characterId": "npc-legacy-108",
+      "displayName": "Lord Marrec Quillgate",
+      "profession": "customs magistrate",
+      "expression": "happy",
+      "outputFile": "npc-legacy-108-happy.png",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-108: tall legal silhouette, white moustache, brass monocle, powdered blue robe, wax-sealed tablets, customs magistrate, human, wax-sealed customs tablets",
+      "visualTraits": [
+        "tall legal silhouette",
+        "white moustache",
+        "brass monocle",
+        "powdered blue robe",
+        "wax-sealed tablets",
+        "long narrow hands"
+      ],
+      "professionProps": [
+        "wax-sealed customs tablets",
+        "brass monocle",
+        "tax stamp"
+      ],
+      "prompt": "A tall older human nobleman with umber skin, long white moustache, powdered blue robe, brass monocle, and a stack of wax-sealed customs tablets. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 484,
+      "batchId": "characters-0481-0492"
+    },
+    {
+      "order": 5,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "imageId": "npc-legacy-108-suspicious",
+      "characterId": "npc-legacy-108",
+      "displayName": "Lord Marrec Quillgate",
+      "profession": "customs magistrate",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-108-suspicious.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-108: tall legal silhouette, white moustache, brass monocle, powdered blue robe, wax-sealed tablets, customs magistrate, human, wax-sealed customs tablets",
+      "visualTraits": [
+        "tall legal silhouette",
+        "white moustache",
+        "brass monocle",
+        "powdered blue robe",
+        "wax-sealed tablets",
+        "long narrow hands"
+      ],
+      "professionProps": [
+        "wax-sealed customs tablets",
+        "brass monocle",
+        "tax stamp"
+      ],
+      "prompt": "A tall older human nobleman with umber skin, long white moustache, powdered blue robe, brass monocle, and a stack of wax-sealed customs tablets. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 485,
+      "batchId": "characters-0481-0492"
+    },
+    {
+      "order": 6,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "imageId": "npc-legacy-108-worried",
+      "characterId": "npc-legacy-108",
+      "displayName": "Lord Marrec Quillgate",
+      "profession": "customs magistrate",
+      "expression": "worried",
+      "outputFile": "npc-legacy-108-worried.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-108: tall legal silhouette, white moustache, brass monocle, powdered blue robe, wax-sealed tablets, customs magistrate, human, wax-sealed customs tablets",
+      "visualTraits": [
+        "tall legal silhouette",
+        "white moustache",
+        "brass monocle",
+        "powdered blue robe",
+        "wax-sealed tablets",
+        "long narrow hands"
+      ],
+      "professionProps": [
+        "wax-sealed customs tablets",
+        "brass monocle",
+        "tax stamp"
+      ],
+      "prompt": "A tall older human nobleman with umber skin, long white moustache, powdered blue robe, brass monocle, and a stack of wax-sealed customs tablets. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 486,
+      "batchId": "characters-0481-0492"
+    },
+    {
+      "order": 7,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "imageId": "npc-legacy-108-angry",
+      "characterId": "npc-legacy-108",
+      "displayName": "Lord Marrec Quillgate",
+      "profession": "customs magistrate",
+      "expression": "angry",
+      "outputFile": "npc-legacy-108-angry.png",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-108: tall legal silhouette, white moustache, brass monocle, powdered blue robe, wax-sealed tablets, customs magistrate, human, wax-sealed customs tablets",
+      "visualTraits": [
+        "tall legal silhouette",
+        "white moustache",
+        "brass monocle",
+        "powdered blue robe",
+        "wax-sealed tablets",
+        "long narrow hands"
+      ],
+      "professionProps": [
+        "wax-sealed customs tablets",
+        "brass monocle",
+        "tax stamp"
+      ],
+      "prompt": "A tall older human nobleman with umber skin, long white moustache, powdered blue robe, brass monocle, and a stack of wax-sealed customs tablets. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 487,
+      "batchId": "characters-0481-0492"
+    },
+    {
+      "order": 8,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "imageId": "npc-legacy-109-neutral",
+      "characterId": "npc-legacy-109",
+      "displayName": "Tazmina Dragonmint",
+      "profession": "dragonfruit apothecary",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-109-neutral.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "djinn-blooded human",
+      "magicalTraits": [
+        "small fruit-spark motes around fingers"
+      ],
+      "identityAnchor": "same person as npc-legacy-109: round cheerful silhouette, magenta curls, golden freckles, violet vest, glowing fruit tray, dragonfruit apothecary, djinn-blooded human, glowing dragonfruit tray",
+      "visualTraits": [
+        "round cheerful silhouette",
+        "magenta curls",
+        "golden freckles",
+        "violet vest",
+        "glowing fruit tray",
+        "sparkly eyes"
+      ],
+      "professionProps": [
+        "glowing dragonfruit tray",
+        "tiny mortar",
+        "medicine bottles"
+      ],
+      "prompt": "A round djinn-blooded woman with copper skin, magenta curls, golden freckles, violet vest, and a tray of glowing dragonfruits cut like jewels. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 488,
+      "batchId": "characters-0481-0492"
+    },
+    {
+      "order": 9,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "imageId": "npc-legacy-109-happy",
+      "characterId": "npc-legacy-109",
+      "displayName": "Tazmina Dragonmint",
+      "profession": "dragonfruit apothecary",
+      "expression": "happy",
+      "outputFile": "npc-legacy-109-happy.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "djinn-blooded human",
+      "magicalTraits": [
+        "small fruit-spark motes around fingers"
+      ],
+      "identityAnchor": "same person as npc-legacy-109: round cheerful silhouette, magenta curls, golden freckles, violet vest, glowing fruit tray, dragonfruit apothecary, djinn-blooded human, glowing dragonfruit tray",
+      "visualTraits": [
+        "round cheerful silhouette",
+        "magenta curls",
+        "golden freckles",
+        "violet vest",
+        "glowing fruit tray",
+        "sparkly eyes"
+      ],
+      "professionProps": [
+        "glowing dragonfruit tray",
+        "tiny mortar",
+        "medicine bottles"
+      ],
+      "prompt": "A round djinn-blooded woman with copper skin, magenta curls, golden freckles, violet vest, and a tray of glowing dragonfruits cut like jewels. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 489,
+      "batchId": "characters-0481-0492"
+    },
+    {
+      "order": 10,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "imageId": "npc-legacy-109-suspicious",
+      "characterId": "npc-legacy-109",
+      "displayName": "Tazmina Dragonmint",
+      "profession": "dragonfruit apothecary",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-109-suspicious.png",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "djinn-blooded human",
+      "magicalTraits": [
+        "small fruit-spark motes around fingers"
+      ],
+      "identityAnchor": "same person as npc-legacy-109: round cheerful silhouette, magenta curls, golden freckles, violet vest, glowing fruit tray, dragonfruit apothecary, djinn-blooded human, glowing dragonfruit tray",
+      "visualTraits": [
+        "round cheerful silhouette",
+        "magenta curls",
+        "golden freckles",
+        "violet vest",
+        "glowing fruit tray",
+        "sparkly eyes"
+      ],
+      "professionProps": [
+        "glowing dragonfruit tray",
+        "tiny mortar",
+        "medicine bottles"
+      ],
+      "prompt": "A round djinn-blooded woman with copper skin, magenta curls, golden freckles, violet vest, and a tray of glowing dragonfruits cut like jewels. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 490,
+      "batchId": "characters-0481-0492"
+    },
+    {
+      "order": 11,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "imageId": "npc-legacy-109-worried",
+      "characterId": "npc-legacy-109",
+      "displayName": "Tazmina Dragonmint",
+      "profession": "dragonfruit apothecary",
+      "expression": "worried",
+      "outputFile": "npc-legacy-109-worried.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "djinn-blooded human",
+      "magicalTraits": [
+        "small fruit-spark motes around fingers"
+      ],
+      "identityAnchor": "same person as npc-legacy-109: round cheerful silhouette, magenta curls, golden freckles, violet vest, glowing fruit tray, dragonfruit apothecary, djinn-blooded human, glowing dragonfruit tray",
+      "visualTraits": [
+        "round cheerful silhouette",
+        "magenta curls",
+        "golden freckles",
+        "violet vest",
+        "glowing fruit tray",
+        "sparkly eyes"
+      ],
+      "professionProps": [
+        "glowing dragonfruit tray",
+        "tiny mortar",
+        "medicine bottles"
+      ],
+      "prompt": "A round djinn-blooded woman with copper skin, magenta curls, golden freckles, violet vest, and a tray of glowing dragonfruits cut like jewels. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 491,
+      "batchId": "characters-0481-0492"
+    },
+    {
+      "order": 12,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "imageId": "npc-legacy-109-angry",
+      "characterId": "npc-legacy-109",
+      "displayName": "Tazmina Dragonmint",
+      "profession": "dragonfruit apothecary",
+      "expression": "angry",
+      "outputFile": "npc-legacy-109-angry.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "djinn-blooded human",
+      "magicalTraits": [
+        "small fruit-spark motes around fingers"
+      ],
+      "identityAnchor": "same person as npc-legacy-109: round cheerful silhouette, magenta curls, golden freckles, violet vest, glowing fruit tray, dragonfruit apothecary, djinn-blooded human, glowing dragonfruit tray",
+      "visualTraits": [
+        "round cheerful silhouette",
+        "magenta curls",
+        "golden freckles",
+        "violet vest",
+        "glowing fruit tray",
+        "sparkly eyes"
+      ],
+      "professionProps": [
+        "glowing dragonfruit tray",
+        "tiny mortar",
+        "medicine bottles"
+      ],
+      "prompt": "A round djinn-blooded woman with copper skin, magenta curls, golden freckles, violet vest, and a tray of glowing dragonfruits cut like jewels. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 492,
+      "batchId": "characters-0481-0492"
+    }
+  ]
+}

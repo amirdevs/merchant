@@ -52,29 +52,26 @@ Current planning targets:
 192 legacy reworked identities complete across batches 001-004
 528 legacy portrait prompts complete across batches 001-004
 240 visible character identities prepared before final roster review
-722 prepared portrait prompts before final all-cast manifest normalization
+722 prepared portrait prompts in final all-cast sheet order
 ```
 
-Current prompt manifests live under `docs/assets/character-prompts/`:
+Current production prompt files live under `docs/assets/character-prompts/` and are named like item prompt ranges:
 
 ```text
-portrait-manifest-useful-new-npcs.json
-portrait-manifest-legacy-batch-001.json
-portrait-manifest-legacy-batch-002.json
-portrait-manifest-legacy-batch-003.json
-portrait-manifest-legacy-batch-004.json
-portrait-batch-useful-npcs-001.json ... portrait-batch-useful-npcs-017.json
-portrait-batch-legacy-001-001.json ... portrait-batch-legacy-001-012.json
-portrait-batch-legacy-002-001.json ... portrait-batch-legacy-002-012.json
-portrait-batch-legacy-003-001.json ... portrait-batch-legacy-003-012.json
-portrait-batch-legacy-004-001.json ... portrait-batch-legacy-004-008.json
+characters-0001-0012.json
+characters-0013-0024.json
+characters-0025-0036.json
+...
+characters-0721-0722.json
 ```
+
+Generate character sheets in filename order. Do not use old category names such as useful, legacy, new-npcs, identity, batch group, test, template, or manifest as generation order.
 
 Character work should move in larger useful chunks:
 
 1. useful-new-NPC identity catalog and portrait manifests are complete;
 2. legacy identity catalog and portrait manifests are complete;
-3. finalize visible roster, expression counts, and all-cast sheet order;
+3. final visible roster, expression counts, and all-cast sheet order are normalized;
 4. generate full portrait sheets only after all character prompts are finished and reviewed;
 5. integrate remake identities and portraits into market, barter, quest, and company UI.
 
@@ -85,9 +82,9 @@ Do not generate full portrait sheets until all of these are true:
 - final visible roster is reviewed;
 - per-character identity catalog is complete;
 - expression counts and total image count are final;
-- portrait JSON manifests exist under `docs/assets/character-prompts/`;
+- sequential portrait JSON files exist under `docs/assets/character-prompts/`;
 - the small test sheet passes style, consistency, green-background, slot-order, and crop-safety checks;
-- the final all-cast manifest groups production sheets into clean 3x4 / 12-image sheets.
+- the final all-cast production sequence uses clean 3x4 / 12-image sheets.
 
 Portrait prompts are batched by total image count, not by character count. A single character can have some expressions in one batch and remaining expressions in another batch, as long as every prompt repeats the same identity anchors.
 
@@ -112,12 +109,12 @@ Done:
 - legacy character audit plan and final roster target;
 - useful-new-NPC identity catalog, 48 characters / 194 portrait prompts;
 - legacy identity batches 001-004, 192 characters / 528 portrait prompts;
+- normalized character prompt files, 61 JSON files / 722 portrait prompts;
 - approved portrait style gate: charming, slightly cartoony, fantasy ancestry variety, single flat green background, crop-safe spacing.
 
 Remaining:
 
 - review the final 240-character roster and expression counts;
-- normalize the all-cast portrait manifest into final production sheet order;
 - only then generate/crop all portrait sheets;
 - wire remake character identity and portraits into the runtime UI;
 - add audits for missing portraits, duplicate display names, original-name leaks, missing stories, missing role tags, and orphan files.

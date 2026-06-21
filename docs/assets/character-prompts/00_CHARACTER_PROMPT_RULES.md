@@ -1,6 +1,18 @@
 # Character Portrait Prompt Rules
 
-Character portrait manifests live beside item prompts in `docs/assets/character-prompts/`. Final cropped portraits belong under `public/game-assets/portraits/`.
+Character portrait prompt files live beside item prompts in `docs/assets/character-prompts/`. Final cropped portraits belong under `public/game-assets/portraits/`.
+
+Production character prompt JSON files are named like item prompt ranges:
+
+```text
+characters-0001-0012.json
+characters-0013-0024.json
+characters-0025-0036.json
+...
+characters-0721-0722.json
+```
+
+Generate sheets in filename order. Do not use old category words such as useful, legacy, new-npcs, identity, batch group, test, template, or manifest to decide generation order.
 
 ## Current approved direction
 
@@ -51,6 +63,7 @@ The cropper must name files by `outputFile`, not by visual guessing.
 ## Sheet generation rules
 
 - One sheet only per batch.
+- Generate `characters-*.json` files in filename order.
 - Use the exact grid, canvas, crop cells, and image order from the JSON.
 - Fill cells left-to-right by row, top-to-bottom.
 - Never reorder, skip, duplicate, merge, or invent images.

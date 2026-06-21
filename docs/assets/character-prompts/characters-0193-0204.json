@@ -1,0 +1,604 @@
+{
+  "batchId": "characters-0193-0204",
+  "version": "v4-approved-style-3x4-sequential-production-manifest",
+  "status": "ready_for_generation_in_filename_order_after_final_review",
+  "purpose": "Sequential character portrait production manifest. Generate files in filename order; crop left-to-right and top-to-bottom; name each crop by outputFile.",
+  "batch": {
+    "firstGlobalSlot": 193,
+    "lastGlobalSlot": 204,
+    "slotCount": 12,
+    "maxSlotsPerSheet": 12
+  },
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Generate sheets in filename order.",
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "If the generated sheet resolution differs, scale crop coordinates proportionally from the actual width/height while preserving 3 columns by 4 rows.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "order": [
+    "1. npc-new-048-worried",
+    "2. npc-new-048-angry",
+    "3. npc-legacy-000-neutral",
+    "4. npc-legacy-000-happy",
+    "5. npc-legacy-000-suspicious",
+    "6. npc-legacy-000-worried",
+    "7. npc-legacy-000-angry",
+    "8. npc-legacy-001-neutral",
+    "9. npc-legacy-001-happy",
+    "10. npc-legacy-001-suspicious",
+    "11. npc-legacy-001-worried",
+    "12. npc-legacy-001-angry"
+  ],
+  "images": [
+    {
+      "order": 1,
+      "globalOrder": 193,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "imageId": "npc-new-048-worried",
+      "characterId": "npc-new-048",
+      "displayName": "Hessa Pilgrim-Marshal",
+      "profession": "Pilgrim Quartermaster",
+      "expression": "worried",
+      "outputFile": "npc-new-048-worried.png",
+      "ancestryOrSpecies": "human pilgrim",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-048: broad steady pilgrim quartermaster, medium brown skin, grey-streaked braid, sand pilgrim coat, blue prayer beads, ration knife, calm protective expression",
+      "visualTraits": [
+        "broad steady silhouette",
+        "medium brown skin",
+        "grey-streaked braid",
+        "sand pilgrim coat",
+        "blue prayer beads",
+        "ration knife",
+        "calm protective expression"
+      ],
+      "professionProps": [
+        "blue prayer beads",
+        "ration knife",
+        "pilgrim supply ledger"
+      ],
+      "dominantColors": [
+        "sand",
+        "blue",
+        "steel"
+      ],
+      "prompt": "A broad steady pilgrim quartermaster with medium brown skin, thick grey-streaked braid, sand-colored pilgrim coat, blue prayer beads, and a ration knife at her belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: human pilgrim. Identity anchors must remain unchanged: same person as npc-new-048: broad steady pilgrim quartermaster, medium brown skin, grey-streaked braid, sand pilgrim coat, blue prayer beads, ration knife, calm protective expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0193-0204"
+    },
+    {
+      "order": 2,
+      "globalOrder": 194,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "imageId": "npc-new-048-angry",
+      "characterId": "npc-new-048",
+      "displayName": "Hessa Pilgrim-Marshal",
+      "profession": "Pilgrim Quartermaster",
+      "expression": "angry",
+      "outputFile": "npc-new-048-angry.png",
+      "ancestryOrSpecies": "human pilgrim",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-048: broad steady pilgrim quartermaster, medium brown skin, grey-streaked braid, sand pilgrim coat, blue prayer beads, ration knife, calm protective expression",
+      "visualTraits": [
+        "broad steady silhouette",
+        "medium brown skin",
+        "grey-streaked braid",
+        "sand pilgrim coat",
+        "blue prayer beads",
+        "ration knife",
+        "calm protective expression"
+      ],
+      "professionProps": [
+        "blue prayer beads",
+        "ration knife",
+        "pilgrim supply ledger"
+      ],
+      "dominantColors": [
+        "sand",
+        "blue",
+        "steel"
+      ],
+      "prompt": "A broad steady pilgrim quartermaster with medium brown skin, thick grey-streaked braid, sand-colored pilgrim coat, blue prayer beads, and a ration knife at her belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: human pilgrim. Identity anchors must remain unchanged: same person as npc-new-048: broad steady pilgrim quartermaster, medium brown skin, grey-streaked braid, sand pilgrim coat, blue prayer beads, ration knife, calm protective expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0193-0204"
+    },
+    {
+      "order": 3,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "imageId": "npc-legacy-000-neutral",
+      "characterId": "npc-legacy-000",
+      "displayName": "Captain Rowan Ashveil",
+      "profession": "gate captain",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-000-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-000: tall disciplined silhouette, silver-threaded black hair, scar under one eye, blue-black cloak, iron gate pin, gate captain, human, iron gate pin",
+      "visualTraits": [
+        "tall disciplined silhouette",
+        "silver-threaded black hair",
+        "scar under one eye",
+        "blue-black cloak",
+        "iron gate pin",
+        "permit ledger"
+      ],
+      "professionProps": [
+        "iron gate pin",
+        "route permit ledger",
+        "short baton"
+      ],
+      "prompt": "A tall ash-brown human gate captain with silver-threaded black hair, a hawk nose, scar under one eye, blue-black cloak clasped with an iron gate pin, and a ledger of route permits tucked under his arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 195,
+      "batchId": "characters-0193-0204"
+    },
+    {
+      "order": 4,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "imageId": "npc-legacy-000-happy",
+      "characterId": "npc-legacy-000",
+      "displayName": "Captain Rowan Ashveil",
+      "profession": "gate captain",
+      "expression": "happy",
+      "outputFile": "npc-legacy-000-happy.png",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-000: tall disciplined silhouette, silver-threaded black hair, scar under one eye, blue-black cloak, iron gate pin, gate captain, human, iron gate pin",
+      "visualTraits": [
+        "tall disciplined silhouette",
+        "silver-threaded black hair",
+        "scar under one eye",
+        "blue-black cloak",
+        "iron gate pin",
+        "permit ledger"
+      ],
+      "professionProps": [
+        "iron gate pin",
+        "route permit ledger",
+        "short baton"
+      ],
+      "prompt": "A tall ash-brown human gate captain with silver-threaded black hair, a hawk nose, scar under one eye, blue-black cloak clasped with an iron gate pin, and a ledger of route permits tucked under his arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 196,
+      "batchId": "characters-0193-0204"
+    },
+    {
+      "order": 5,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "imageId": "npc-legacy-000-suspicious",
+      "characterId": "npc-legacy-000",
+      "displayName": "Captain Rowan Ashveil",
+      "profession": "gate captain",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-000-suspicious.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-000: tall disciplined silhouette, silver-threaded black hair, scar under one eye, blue-black cloak, iron gate pin, gate captain, human, iron gate pin",
+      "visualTraits": [
+        "tall disciplined silhouette",
+        "silver-threaded black hair",
+        "scar under one eye",
+        "blue-black cloak",
+        "iron gate pin",
+        "permit ledger"
+      ],
+      "professionProps": [
+        "iron gate pin",
+        "route permit ledger",
+        "short baton"
+      ],
+      "prompt": "A tall ash-brown human gate captain with silver-threaded black hair, a hawk nose, scar under one eye, blue-black cloak clasped with an iron gate pin, and a ledger of route permits tucked under his arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 197,
+      "batchId": "characters-0193-0204"
+    },
+    {
+      "order": 6,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "imageId": "npc-legacy-000-worried",
+      "characterId": "npc-legacy-000",
+      "displayName": "Captain Rowan Ashveil",
+      "profession": "gate captain",
+      "expression": "worried",
+      "outputFile": "npc-legacy-000-worried.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-000: tall disciplined silhouette, silver-threaded black hair, scar under one eye, blue-black cloak, iron gate pin, gate captain, human, iron gate pin",
+      "visualTraits": [
+        "tall disciplined silhouette",
+        "silver-threaded black hair",
+        "scar under one eye",
+        "blue-black cloak",
+        "iron gate pin",
+        "permit ledger"
+      ],
+      "professionProps": [
+        "iron gate pin",
+        "route permit ledger",
+        "short baton"
+      ],
+      "prompt": "A tall ash-brown human gate captain with silver-threaded black hair, a hawk nose, scar under one eye, blue-black cloak clasped with an iron gate pin, and a ledger of route permits tucked under his arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 198,
+      "batchId": "characters-0193-0204"
+    },
+    {
+      "order": 7,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "imageId": "npc-legacy-000-angry",
+      "characterId": "npc-legacy-000",
+      "displayName": "Captain Rowan Ashveil",
+      "profession": "gate captain",
+      "expression": "angry",
+      "outputFile": "npc-legacy-000-angry.png",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-000: tall disciplined silhouette, silver-threaded black hair, scar under one eye, blue-black cloak, iron gate pin, gate captain, human, iron gate pin",
+      "visualTraits": [
+        "tall disciplined silhouette",
+        "silver-threaded black hair",
+        "scar under one eye",
+        "blue-black cloak",
+        "iron gate pin",
+        "permit ledger"
+      ],
+      "professionProps": [
+        "iron gate pin",
+        "route permit ledger",
+        "short baton"
+      ],
+      "prompt": "A tall ash-brown human gate captain with silver-threaded black hair, a hawk nose, scar under one eye, blue-black cloak clasped with an iron gate pin, and a ledger of route permits tucked under his arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 199,
+      "batchId": "characters-0193-0204"
+    },
+    {
+      "order": 8,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "imageId": "npc-legacy-001-neutral",
+      "characterId": "npc-legacy-001",
+      "displayName": "Brenna Coalbright",
+      "profession": "blacksmith",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-001-neutral.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "dwarf",
+      "magicalTraits": [
+        "soft ember glow in braids"
+      ],
+      "identityAnchor": "same person as npc-legacy-001: broad dwarf silhouette, flame-orange braids, soot freckles, muscular forearms, burnt leather apron, blacksmith, dwarf, small forge hammer",
+      "visualTraits": [
+        "broad dwarf silhouette",
+        "flame-orange braids",
+        "soot freckles",
+        "muscular forearms",
+        "burnt leather apron",
+        "iron bead ties"
+      ],
+      "professionProps": [
+        "small forge hammer",
+        "tongs",
+        "glowing rivets"
+      ],
+      "prompt": "A broad dwarf blacksmith woman with copper-brown skin, muscular forearms, soot freckles, flame-orange braids tied with iron beads, a leather apron burned at the edges, and a small hammer held like a favorite spoon. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 200,
+      "batchId": "characters-0193-0204"
+    },
+    {
+      "order": 9,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "imageId": "npc-legacy-001-happy",
+      "characterId": "npc-legacy-001",
+      "displayName": "Brenna Coalbright",
+      "profession": "blacksmith",
+      "expression": "happy",
+      "outputFile": "npc-legacy-001-happy.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "dwarf",
+      "magicalTraits": [
+        "soft ember glow in braids"
+      ],
+      "identityAnchor": "same person as npc-legacy-001: broad dwarf silhouette, flame-orange braids, soot freckles, muscular forearms, burnt leather apron, blacksmith, dwarf, small forge hammer",
+      "visualTraits": [
+        "broad dwarf silhouette",
+        "flame-orange braids",
+        "soot freckles",
+        "muscular forearms",
+        "burnt leather apron",
+        "iron bead ties"
+      ],
+      "professionProps": [
+        "small forge hammer",
+        "tongs",
+        "glowing rivets"
+      ],
+      "prompt": "A broad dwarf blacksmith woman with copper-brown skin, muscular forearms, soot freckles, flame-orange braids tied with iron beads, a leather apron burned at the edges, and a small hammer held like a favorite spoon. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 201,
+      "batchId": "characters-0193-0204"
+    },
+    {
+      "order": 10,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "imageId": "npc-legacy-001-suspicious",
+      "characterId": "npc-legacy-001",
+      "displayName": "Brenna Coalbright",
+      "profession": "blacksmith",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-001-suspicious.png",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "dwarf",
+      "magicalTraits": [
+        "soft ember glow in braids"
+      ],
+      "identityAnchor": "same person as npc-legacy-001: broad dwarf silhouette, flame-orange braids, soot freckles, muscular forearms, burnt leather apron, blacksmith, dwarf, small forge hammer",
+      "visualTraits": [
+        "broad dwarf silhouette",
+        "flame-orange braids",
+        "soot freckles",
+        "muscular forearms",
+        "burnt leather apron",
+        "iron bead ties"
+      ],
+      "professionProps": [
+        "small forge hammer",
+        "tongs",
+        "glowing rivets"
+      ],
+      "prompt": "A broad dwarf blacksmith woman with copper-brown skin, muscular forearms, soot freckles, flame-orange braids tied with iron beads, a leather apron burned at the edges, and a small hammer held like a favorite spoon. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 202,
+      "batchId": "characters-0193-0204"
+    },
+    {
+      "order": 11,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "imageId": "npc-legacy-001-worried",
+      "characterId": "npc-legacy-001",
+      "displayName": "Brenna Coalbright",
+      "profession": "blacksmith",
+      "expression": "worried",
+      "outputFile": "npc-legacy-001-worried.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "dwarf",
+      "magicalTraits": [
+        "soft ember glow in braids"
+      ],
+      "identityAnchor": "same person as npc-legacy-001: broad dwarf silhouette, flame-orange braids, soot freckles, muscular forearms, burnt leather apron, blacksmith, dwarf, small forge hammer",
+      "visualTraits": [
+        "broad dwarf silhouette",
+        "flame-orange braids",
+        "soot freckles",
+        "muscular forearms",
+        "burnt leather apron",
+        "iron bead ties"
+      ],
+      "professionProps": [
+        "small forge hammer",
+        "tongs",
+        "glowing rivets"
+      ],
+      "prompt": "A broad dwarf blacksmith woman with copper-brown skin, muscular forearms, soot freckles, flame-orange braids tied with iron beads, a leather apron burned at the edges, and a small hammer held like a favorite spoon. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 203,
+      "batchId": "characters-0193-0204"
+    },
+    {
+      "order": 12,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "imageId": "npc-legacy-001-angry",
+      "characterId": "npc-legacy-001",
+      "displayName": "Brenna Coalbright",
+      "profession": "blacksmith",
+      "expression": "angry",
+      "outputFile": "npc-legacy-001-angry.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "dwarf",
+      "magicalTraits": [
+        "soft ember glow in braids"
+      ],
+      "identityAnchor": "same person as npc-legacy-001: broad dwarf silhouette, flame-orange braids, soot freckles, muscular forearms, burnt leather apron, blacksmith, dwarf, small forge hammer",
+      "visualTraits": [
+        "broad dwarf silhouette",
+        "flame-orange braids",
+        "soot freckles",
+        "muscular forearms",
+        "burnt leather apron",
+        "iron bead ties"
+      ],
+      "professionProps": [
+        "small forge hammer",
+        "tongs",
+        "glowing rivets"
+      ],
+      "prompt": "A broad dwarf blacksmith woman with copper-brown skin, muscular forearms, soot freckles, flame-orange braids tied with iron beads, a leather apron burned at the edges, and a small hammer held like a favorite spoon. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 204,
+      "batchId": "characters-0193-0204"
+    }
+  ]
+}

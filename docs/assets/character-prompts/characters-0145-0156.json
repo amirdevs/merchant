@@ -1,0 +1,671 @@
+{
+  "batchId": "characters-0145-0156",
+  "version": "v4-approved-style-3x4-sequential-production-manifest",
+  "status": "ready_for_generation_in_filename_order_after_final_review",
+  "purpose": "Sequential character portrait production manifest. Generate files in filename order; crop left-to-right and top-to-bottom; name each crop by outputFile.",
+  "batch": {
+    "firstGlobalSlot": 145,
+    "lastGlobalSlot": 156,
+    "slotCount": 12,
+    "maxSlotsPerSheet": 12
+  },
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Generate sheets in filename order.",
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "If the generated sheet resolution differs, scale crop coordinates proportionally from the actual width/height while preserving 3 columns by 4 rows.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "order": [
+    "1. npc-new-035-suspicious",
+    "2. npc-new-035-worried",
+    "3. npc-new-035-angry",
+    "4. npc-new-036-neutral",
+    "5. npc-new-036-happy",
+    "6. npc-new-036-suspicious",
+    "7. npc-new-037-neutral",
+    "8. npc-new-037-happy",
+    "9. npc-new-037-suspicious",
+    "10. npc-new-037-worried",
+    "11. npc-new-037-angry",
+    "12. npc-new-038-neutral"
+  ],
+  "images": [
+    {
+      "order": 1,
+      "globalOrder": 145,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "imageId": "npc-new-035-suspicious",
+      "characterId": "npc-new-035",
+      "displayName": "Sergeant Borran Clink",
+      "profession": "Corrupt Guard",
+      "expression": "suspicious",
+      "outputFile": "npc-new-035-suspicious.png",
+      "ancestryOrSpecies": "orc-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-035: thick-necked corrupt guard, flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, heavy coin purse, forced friendly grin",
+      "visualTraits": [
+        "thick-necked sweating silhouette",
+        "flushed pale skin",
+        "yellowed moustache",
+        "rusted chain shirt",
+        "heavy coin purse",
+        "crooked spear",
+        "forced friendly grin"
+      ],
+      "professionProps": [
+        "heavy coin purse",
+        "rusted badge",
+        "crooked spear"
+      ],
+      "dominantColors": [
+        "rust",
+        "yellow",
+        "dirty steel"
+      ],
+      "prompt": "A thick-necked guard with flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, crooked spear, and a purse heavier than his sword. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: orc-kin. Identity anchors must remain unchanged: same person as npc-new-035: thick-necked corrupt guard, flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, heavy coin purse, forced friendly grin. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    },
+    {
+      "order": 2,
+      "globalOrder": 146,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "imageId": "npc-new-035-worried",
+      "characterId": "npc-new-035",
+      "displayName": "Sergeant Borran Clink",
+      "profession": "Corrupt Guard",
+      "expression": "worried",
+      "outputFile": "npc-new-035-worried.png",
+      "ancestryOrSpecies": "orc-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-035: thick-necked corrupt guard, flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, heavy coin purse, forced friendly grin",
+      "visualTraits": [
+        "thick-necked sweating silhouette",
+        "flushed pale skin",
+        "yellowed moustache",
+        "rusted chain shirt",
+        "heavy coin purse",
+        "crooked spear",
+        "forced friendly grin"
+      ],
+      "professionProps": [
+        "heavy coin purse",
+        "rusted badge",
+        "crooked spear"
+      ],
+      "dominantColors": [
+        "rust",
+        "yellow",
+        "dirty steel"
+      ],
+      "prompt": "A thick-necked guard with flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, crooked spear, and a purse heavier than his sword. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: orc-kin. Identity anchors must remain unchanged: same person as npc-new-035: thick-necked corrupt guard, flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, heavy coin purse, forced friendly grin. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    },
+    {
+      "order": 3,
+      "globalOrder": 147,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "imageId": "npc-new-035-angry",
+      "characterId": "npc-new-035",
+      "displayName": "Sergeant Borran Clink",
+      "profession": "Corrupt Guard",
+      "expression": "angry",
+      "outputFile": "npc-new-035-angry.png",
+      "ancestryOrSpecies": "orc-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-035: thick-necked corrupt guard, flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, heavy coin purse, forced friendly grin",
+      "visualTraits": [
+        "thick-necked sweating silhouette",
+        "flushed pale skin",
+        "yellowed moustache",
+        "rusted chain shirt",
+        "heavy coin purse",
+        "crooked spear",
+        "forced friendly grin"
+      ],
+      "professionProps": [
+        "heavy coin purse",
+        "rusted badge",
+        "crooked spear"
+      ],
+      "dominantColors": [
+        "rust",
+        "yellow",
+        "dirty steel"
+      ],
+      "prompt": "A thick-necked guard with flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, crooked spear, and a purse heavier than his sword. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: orc-kin. Identity anchors must remain unchanged: same person as npc-new-035: thick-necked corrupt guard, flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, heavy coin purse, forced friendly grin. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    },
+    {
+      "order": 4,
+      "globalOrder": 148,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "imageId": "npc-new-036-neutral",
+      "characterId": "npc-new-036",
+      "displayName": "Tala Bittermint",
+      "profession": "Contraband Buyer",
+      "expression": "neutral",
+      "outputFile": "npc-new-036-neutral.png",
+      "ancestryOrSpecies": "night-market human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-036: narrow sharp contraband buyer, medium brown skin, shaved sides with long mint-green braid, black apothecary apron, silver herb knife, focused unsentimental stare",
+      "visualTraits": [
+        "narrow sharp silhouette",
+        "medium brown skin",
+        "shaved sides",
+        "long mint-green braid",
+        "black apothecary apron",
+        "silver herb knife",
+        "focused stare"
+      ],
+      "professionProps": [
+        "silver herb knife",
+        "sealed herb tins",
+        "black apron"
+      ],
+      "dominantColors": [
+        "mint green",
+        "black",
+        "silver"
+      ],
+      "prompt": "A narrow sharp young buyer with medium brown skin, shaved sides and long mint-green braid, black apothecary apron, silver herb knife at her wrist, and eyes that measure dosage before danger. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: night-market human. Identity anchors must remain unchanged: same person as npc-new-036: narrow sharp contraband buyer, medium brown skin, shaved sides with long mint-green braid, black apothecary apron, silver herb knife, focused unsentimental stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    },
+    {
+      "order": 5,
+      "globalOrder": 149,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "imageId": "npc-new-036-happy",
+      "characterId": "npc-new-036",
+      "displayName": "Tala Bittermint",
+      "profession": "Contraband Buyer",
+      "expression": "happy",
+      "outputFile": "npc-new-036-happy.png",
+      "ancestryOrSpecies": "night-market human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-036: narrow sharp contraband buyer, medium brown skin, shaved sides with long mint-green braid, black apothecary apron, silver herb knife, focused unsentimental stare",
+      "visualTraits": [
+        "narrow sharp silhouette",
+        "medium brown skin",
+        "shaved sides",
+        "long mint-green braid",
+        "black apothecary apron",
+        "silver herb knife",
+        "focused stare"
+      ],
+      "professionProps": [
+        "silver herb knife",
+        "sealed herb tins",
+        "black apron"
+      ],
+      "dominantColors": [
+        "mint green",
+        "black",
+        "silver"
+      ],
+      "prompt": "A narrow sharp young buyer with medium brown skin, shaved sides and long mint-green braid, black apothecary apron, silver herb knife at her wrist, and eyes that measure dosage before danger. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: night-market human. Identity anchors must remain unchanged: same person as npc-new-036: narrow sharp contraband buyer, medium brown skin, shaved sides with long mint-green braid, black apothecary apron, silver herb knife, focused unsentimental stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    },
+    {
+      "order": 6,
+      "globalOrder": 150,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "imageId": "npc-new-036-suspicious",
+      "characterId": "npc-new-036",
+      "displayName": "Tala Bittermint",
+      "profession": "Contraband Buyer",
+      "expression": "suspicious",
+      "outputFile": "npc-new-036-suspicious.png",
+      "ancestryOrSpecies": "night-market human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-036: narrow sharp contraband buyer, medium brown skin, shaved sides with long mint-green braid, black apothecary apron, silver herb knife, focused unsentimental stare",
+      "visualTraits": [
+        "narrow sharp silhouette",
+        "medium brown skin",
+        "shaved sides",
+        "long mint-green braid",
+        "black apothecary apron",
+        "silver herb knife",
+        "focused stare"
+      ],
+      "professionProps": [
+        "silver herb knife",
+        "sealed herb tins",
+        "black apron"
+      ],
+      "dominantColors": [
+        "mint green",
+        "black",
+        "silver"
+      ],
+      "prompt": "A narrow sharp young buyer with medium brown skin, shaved sides and long mint-green braid, black apothecary apron, silver herb knife at her wrist, and eyes that measure dosage before danger. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: night-market human. Identity anchors must remain unchanged: same person as npc-new-036: narrow sharp contraband buyer, medium brown skin, shaved sides with long mint-green braid, black apothecary apron, silver herb knife, focused unsentimental stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    },
+    {
+      "order": 7,
+      "globalOrder": 151,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "imageId": "npc-new-037-neutral",
+      "characterId": "npc-new-037",
+      "displayName": "Nim Crowstep",
+      "profession": "Night Courier",
+      "expression": "neutral",
+      "outputFile": "npc-new-037-neutral.png",
+      "ancestryOrSpecies": "cat-eyed changeling",
+      "magicalTraits": [
+        "catlike pupils",
+        "night-courier shadow marks"
+      ],
+      "identityAnchor": "same person as npc-new-037: lanky night courier, dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, quiet watchful eyes",
+      "visualTraits": [
+        "lanky quiet silhouette",
+        "dark umber skin",
+        "long narrow face",
+        "crow-feather cloak pin",
+        "charcoal scarf",
+        "runner calf wraps",
+        "watchful eyes"
+      ],
+      "professionProps": [
+        "crow-feather pin",
+        "sealed night pouch",
+        "runner wraps"
+      ],
+      "dominantColors": [
+        "charcoal",
+        "crow black",
+        "rose red"
+      ],
+      "prompt": "A lanky quiet courier with dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, and eyes that check exits before faces. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: cat-eyed changeling. Visible magical traits that must remain consistent: catlike pupils, night-courier shadow marks. Identity anchors must remain unchanged: same person as npc-new-037: lanky night courier, dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, quiet watchful eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    },
+    {
+      "order": 8,
+      "globalOrder": 152,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "imageId": "npc-new-037-happy",
+      "characterId": "npc-new-037",
+      "displayName": "Nim Crowstep",
+      "profession": "Night Courier",
+      "expression": "happy",
+      "outputFile": "npc-new-037-happy.png",
+      "ancestryOrSpecies": "cat-eyed changeling",
+      "magicalTraits": [
+        "catlike pupils",
+        "night-courier shadow marks"
+      ],
+      "identityAnchor": "same person as npc-new-037: lanky night courier, dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, quiet watchful eyes",
+      "visualTraits": [
+        "lanky quiet silhouette",
+        "dark umber skin",
+        "long narrow face",
+        "crow-feather cloak pin",
+        "charcoal scarf",
+        "runner calf wraps",
+        "watchful eyes"
+      ],
+      "professionProps": [
+        "crow-feather pin",
+        "sealed night pouch",
+        "runner wraps"
+      ],
+      "dominantColors": [
+        "charcoal",
+        "crow black",
+        "rose red"
+      ],
+      "prompt": "A lanky quiet courier with dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, and eyes that check exits before faces. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: cat-eyed changeling. Visible magical traits that must remain consistent: catlike pupils, night-courier shadow marks. Identity anchors must remain unchanged: same person as npc-new-037: lanky night courier, dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, quiet watchful eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    },
+    {
+      "order": 9,
+      "globalOrder": 153,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "imageId": "npc-new-037-suspicious",
+      "characterId": "npc-new-037",
+      "displayName": "Nim Crowstep",
+      "profession": "Night Courier",
+      "expression": "suspicious",
+      "outputFile": "npc-new-037-suspicious.png",
+      "ancestryOrSpecies": "cat-eyed changeling",
+      "magicalTraits": [
+        "catlike pupils",
+        "night-courier shadow marks"
+      ],
+      "identityAnchor": "same person as npc-new-037: lanky night courier, dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, quiet watchful eyes",
+      "visualTraits": [
+        "lanky quiet silhouette",
+        "dark umber skin",
+        "long narrow face",
+        "crow-feather cloak pin",
+        "charcoal scarf",
+        "runner calf wraps",
+        "watchful eyes"
+      ],
+      "professionProps": [
+        "crow-feather pin",
+        "sealed night pouch",
+        "runner wraps"
+      ],
+      "dominantColors": [
+        "charcoal",
+        "crow black",
+        "rose red"
+      ],
+      "prompt": "A lanky quiet courier with dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, and eyes that check exits before faces. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: cat-eyed changeling. Visible magical traits that must remain consistent: catlike pupils, night-courier shadow marks. Identity anchors must remain unchanged: same person as npc-new-037: lanky night courier, dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, quiet watchful eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    },
+    {
+      "order": 10,
+      "globalOrder": 154,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "imageId": "npc-new-037-worried",
+      "characterId": "npc-new-037",
+      "displayName": "Nim Crowstep",
+      "profession": "Night Courier",
+      "expression": "worried",
+      "outputFile": "npc-new-037-worried.png",
+      "ancestryOrSpecies": "cat-eyed changeling",
+      "magicalTraits": [
+        "catlike pupils",
+        "night-courier shadow marks"
+      ],
+      "identityAnchor": "same person as npc-new-037: lanky night courier, dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, quiet watchful eyes",
+      "visualTraits": [
+        "lanky quiet silhouette",
+        "dark umber skin",
+        "long narrow face",
+        "crow-feather cloak pin",
+        "charcoal scarf",
+        "runner calf wraps",
+        "watchful eyes"
+      ],
+      "professionProps": [
+        "crow-feather pin",
+        "sealed night pouch",
+        "runner wraps"
+      ],
+      "dominantColors": [
+        "charcoal",
+        "crow black",
+        "rose red"
+      ],
+      "prompt": "A lanky quiet courier with dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, and eyes that check exits before faces. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: cat-eyed changeling. Visible magical traits that must remain consistent: catlike pupils, night-courier shadow marks. Identity anchors must remain unchanged: same person as npc-new-037: lanky night courier, dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, quiet watchful eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    },
+    {
+      "order": 11,
+      "globalOrder": 155,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "imageId": "npc-new-037-angry",
+      "characterId": "npc-new-037",
+      "displayName": "Nim Crowstep",
+      "profession": "Night Courier",
+      "expression": "angry",
+      "outputFile": "npc-new-037-angry.png",
+      "ancestryOrSpecies": "cat-eyed changeling",
+      "magicalTraits": [
+        "catlike pupils",
+        "night-courier shadow marks"
+      ],
+      "identityAnchor": "same person as npc-new-037: lanky night courier, dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, quiet watchful eyes",
+      "visualTraits": [
+        "lanky quiet silhouette",
+        "dark umber skin",
+        "long narrow face",
+        "crow-feather cloak pin",
+        "charcoal scarf",
+        "runner calf wraps",
+        "watchful eyes"
+      ],
+      "professionProps": [
+        "crow-feather pin",
+        "sealed night pouch",
+        "runner wraps"
+      ],
+      "dominantColors": [
+        "charcoal",
+        "crow black",
+        "rose red"
+      ],
+      "prompt": "A lanky quiet courier with dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, and eyes that check exits before faces. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: cat-eyed changeling. Visible magical traits that must remain consistent: catlike pupils, night-courier shadow marks. Identity anchors must remain unchanged: same person as npc-new-037: lanky night courier, dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, quiet watchful eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    },
+    {
+      "order": 12,
+      "globalOrder": 156,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "imageId": "npc-new-038-neutral",
+      "characterId": "npc-new-038",
+      "displayName": "Vel Tallowmark",
+      "profession": "Forger",
+      "expression": "neutral",
+      "outputFile": "npc-new-038-neutral.png",
+      "ancestryOrSpecies": "ink-touched human",
+      "magicalTraits": [
+        "ink-stained fingertips with faint rune marks"
+      ],
+      "identityAnchor": "same person as npc-new-038: soft-faced document forger, pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, magnifying lens ribbon, careful guilty expression",
+      "visualTraits": [
+        "soft-faced ink-stained silhouette",
+        "pale brown skin",
+        "tired eyes",
+        "wax-spattered grey robe",
+        "ink-stained cuffs",
+        "magnifying lens ribbon",
+        "careful guilty expression"
+      ],
+      "professionProps": [
+        "seal molds",
+        "magnifying lens",
+        "wax scrap box"
+      ],
+      "dominantColors": [
+        "grey",
+        "wax red",
+        "ink black"
+      ],
+      "prompt": "A soft-faced middle-aged forger with pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, and a magnifying lens pinned to a ribbon. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: ink-touched human. Visible magical traits that must remain consistent: ink-stained fingertips with faint rune marks. Identity anchors must remain unchanged: same person as npc-new-038: soft-faced document forger, pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, magnifying lens ribbon, careful guilty expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "batchId": "characters-0145-0156"
+    }
+  ]
+}
