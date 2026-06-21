@@ -4,7 +4,17 @@ Character portrait prompts live here because item prompts live beside them in `d
 
 Use this folder for character portrait sheet manifests, not runtime cropped portraits. Final cropped portraits should go under `public/game-assets/portraits/`.
 
-## Core rule
+## Current generation gate
+
+Generate only the approved test batch first:
+
+```text
+docs/assets/character-prompts/portrait-batch-identity-001.json
+```
+
+Do not generate the template. Do not generate full production sheets until the test sheet is approved.
+
+## Core batching rule
 
 Batch by total images, not by characters.
 
@@ -16,65 +26,71 @@ The 1000 images are divided into portrait batches.
 A single character may have neutral/happy/suspicious in one batch and worried/angry in another batch.
 ```
 
-## Why this matters
+## Quality rule after first test
 
-Portrait generation and cropping is expensive. The final roster, expression counts, image IDs, and grid order must be planned before generation so the project can crop once and avoid repeating sheets.
+The first 5x4 test proved the crop pipeline works, but it made the cast feel too plain and repetitive. For character portraits, default to fewer portraits per sheet unless quality is already proven.
 
-## Batch manifest fields
+Recommended test grid:
 
-Every portrait batch JSON should include:
+```text
+4 columns x 3 rows = 12 portraits
+Target sheet: 4096 x 3072
+Cell size: 1024 x 1024
+```
+
+Use 5x4 only after the art direction is approved. Do not use 10x5 for character faces unless quality remains excellent.
+
+## Crop and mapping rules
+
+Every portrait JSON entry must include:
 
 ```json
 {
-  "batch": {
-    "batchId": "portrait-batch-001",
-    "firstImageSlot": 1,
-    "lastImageSlot": 20,
-    "slotCount": 20,
-    "maxSlotsPerSheet": 20
-  },
-  "grid": {
-    "columns": 5,
-    "rows": 4,
-    "readingOrder": "left-to-right by row, top-to-bottom",
-    "targetCanvas": "highest available 16:9 canvas",
-    "targetCell": "one bust portrait per cell, generous padding, crop-safe"
-  },
-  "style": "...",
-  "sheetPrompt": "...",
-  "generationPrompt": "...",
-  "order": []
+  "order": 1,
+  "row": 1,
+  "column": 1,
+  "cell": "R1C1",
+  "imageId": "npc-new-001-neutral",
+  "characterId": "npc-new-001",
+  "expression": "neutral",
+  "outputFile": "npc-new-001-neutral.png",
+  "cropCell": { "x": 0, "y": 0, "width": 1024, "height": 1024 }
 }
 ```
 
-## Image entry fields
+The cropper should name files by `outputFile`, not by visual guessing.
 
-Every `order` item should include:
+## Sheet generation rules
 
-```json
-{
-  "slot": 1,
-  "imageId": "npc-014-happy",
-  "characterId": "npc-014",
-  "expression": "happy",
-  "batchId": "portrait-batch-001",
-  "displayName": "Mara Vellwick",
-  "profession": "candle seller and rumor broker",
-  "identityAnchor": "same person as npc-014: short round candle seller, warm brown skin, black hair tucked under a wax-stained blue scarf, tiny burn scar on left thumb, amber bead necklace, cream linen apron with blue thread repairs",
-  "visualTraits": [
-    "short and round silhouette",
-    "soft square face",
-    "wax-stained apron",
-    "amber bead necklace",
-    "small burn scar on left thumb"
-  ],
-  "professionProps": [
-    "bundle of thin beeswax candles",
-    "small brass wick scissors"
-  ],
-  "prompt": "...",
-  "negativePrompt": "..."
-}
+- One sheet only per batch.
+- Use the exact grid from the JSON.
+- Fill cells left-to-right by row, top-to-bottom.
+- Never reorder images.
+- Never skip slots.
+- Never duplicate slots.
+- Each portrait must stay fully inside its own invisible square crop cell.
+- Keep generous padding around head, hair, hats, shoulders, hands, and props.
+- Use a solid pure green background: `#00FF00`.
+- No checkerboard.
+- No visible grid lines.
+- No labels, numbers, names, text, UI frames, borders, or watermarks.
+- Do not let a hand, bell, paper, hair, hat, tool, or shoulder cross into another cell.
+- Keep each character centered in the cell with consistent bust scale.
+
+## Character attractiveness and entertainment direction
+
+The portraits should feel like premium collectible NPCs, not plain medieval workers.
+
+Use:
+
+```text
+beautiful, charming, memorable, expressive, playful, profession-specific, stylized fantasy merchant RPG character design, bold silhouette, vibrant clothing accents, readable face, appealing eyes, cinematic but crop-safe bust portrait, polished painterly-cartoon PC game UI portrait.
+```
+
+Avoid:
+
+```text
+boring plain peasants, generic medieval faces, same nose/eyes/mouth repeated, low-energy neutral poses, muddy brown clothing only, over-realistic photo faces, gritty realism, anime, modern fashion, full-body scenes, busy backgrounds.
 ```
 
 ## Prompt writing rules
@@ -83,47 +99,19 @@ Every `order` item should include:
 - Only shared style/crop rules may be reused.
 - Never write generic character prompts.
 - Every expression prompt must repeat the same identity anchor.
-- Expression prompts change face, eyes, mouth, brow, head tilt, and posture; they must not change clothing, age, body type, skin tone, hair, or profession props.
-- Profession must be visible in the portrait through clothing, tools, hands, posture, or background hint.
+- Expression prompts change face, eyes, mouth, brow, head tilt, hand acting, and posture; they must not change clothing, age, body type, skin tone, hair, or profession props.
+- Profession must be visible through clothing, tools, hands, posture, and props.
 - Characters must not look like the original game portraits.
 - Characters must not look alike unless intentionally related.
+- Do not place all expressions of the same character together in every test sheet. For test sheets, prefer 1–2 expressions per character so the sheet shows variety.
 
 ## Shared style
 
 Use a consistent game portrait style:
 
 ```text
-Stylized fantasy merchant RPG portrait, polished hand-painted game UI art, readable face, expressive eyes, clear silhouette, bust portrait from chest up, three-quarter view or front-facing, warm painterly lighting, crisp edges, premium collectible NPC portrait, not photo-realistic, not gritty realism, not anime, not modern clothing, no text, no labels, no UI frame, no watermark.
+Stylized fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, beautiful and entertaining character design, expressive eyes, clear silhouette, bust portrait from chest up, three-quarter view or front-facing, warm painterly lighting, crisp edges, premium collectible NPC portrait, playful profession-specific details, simple pure green background #00FF00, not photo-realistic, not gritty realism, not anime, not modern clothing, no text, no labels, no UI frame, no watermark.
 ```
-
-## Sheet generation rules
-
-Follow the item-sheet discipline:
-
-- strict grid;
-- one portrait per cell;
-- reading order left-to-right by row, top-to-bottom;
-- exact slot order from JSON;
-- solid pure green `#00FF00` background;
-- no visible grid lines;
-- no labels or numbers;
-- no text;
-- no borders;
-- no watermarks;
-- enough padding around each portrait for clean crop;
-- portraits must not overlap neighboring cells.
-
-## Recommended grids
-
-Use the biggest grid that still preserves face quality:
-
-```text
-10x5 = 50 portraits, maximum efficiency, same as item sheets
-5x4 = 20 portraits, balanced quality and efficiency
-4x3 = 12 portraits, high-quality important characters or expressions
-```
-
-Record the grid in every batch. Do not assume all batches have the same grid.
 
 ## Expression tiers
 
@@ -137,5 +125,5 @@ special: custom expression list based on story role
 ## Negative prompt baseline
 
 ```text
-Do not change identity between expressions. No duplicate faces. No modern clothing. No text. No labels. No letters. No numbers. No UI frame. No border. No watermark. No cropped-off head. No extra limbs. No full-body scene. No photorealism. No generic medieval peasant clone. No same face repeated for different characters.
+Do not change identity between expressions. No duplicate faces. No boring plain medieval worker. No modern clothing. No text. No labels. No letters. No numbers. No UI frame. No border. No watermark. No cropped-off head. No extra limbs. No full-body scene. No photorealism. No generic medieval peasant clone. No same face repeated for different characters. No flat muddy colors. No busy background.
 ```

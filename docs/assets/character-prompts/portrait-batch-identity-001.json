@@ -1,612 +1,283 @@
 {
   "batchId": "portrait-batch-identity-001",
-  "status": "draft_test_batch_seed_not_full_generation",
+  "version": "v2-test-sheet-gate",
+  "status": "generate_this_test_sheet_first_only",
+  "purpose": "Revised first portrait test after the 5x4 sheet looked too plain and repetitive. This 4x3 batch improves crop safety, face quality, order mapping, profession variety, and character appeal.",
   "layout": {
-    "columns": 5,
-    "rows": 4,
-    "totalCells": 20,
+    "columns": 4,
+    "rows": 3,
+    "totalCells": 12,
     "background": "#00FF00",
-    "fillOrder": "left-to-right top-to-bottom"
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 4096,
+      "height": 3072
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    }
   },
-  "rules": [
-    "Batch by total images, not characters.",
-    "One character may be split across multiple portrait batches.",
-    "Each entry repeats identityAnchor to preserve character consistency.",
-    "No labels, numbers, text, borders, UI frames, or watermarks.",
-    "Use generous crop padding around head and shoulders."
+  "cropNamingRules": [
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "The first image is row 1 column 1; the last image is row 3 column 4.",
+    "If a portrait crosses a cell boundary, reject the sheet instead of naming by guess."
   ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Layout exactly 4 columns x 3 rows, 12 portraits total, target 4096x3072 if possible, each portrait centered inside a 1024x1024 invisible crop cell. Fill cells left-to-right by row, top-to-bottom, matching the order field exactly. Solid pure green background #00FF00. No text, labels, names, numbers, UI frames, borders, grid lines, or watermarks. Every portrait must stay fully inside its own cell with generous padding around head, hair, hats, shoulders, hands, and props. Characters must look beautiful, entertaining, memorable, varied, and profession-specific. Repeated expressions of the same character must look like the same person with only expression/acting changed.",
+  "sharedStyle": "beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props",
   "images": [
     {
+      "order": 1,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
       "imageId": "npc-new-001-neutral",
       "characterId": "npc-new-001",
+      "displayName": "Mirella Brasscall",
+      "profession": "auctioneer",
       "expression": "neutral",
-      "batchId": "portrait-batch-identity-001",
-      "order": 1,
-      "identityAnchor": "same person as npc-new-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile",
-      "visualTraits": [
-        "tall ringing silhouette",
-        "olive skin",
-        "severe black braid",
-        "sharp cheekbones",
-        "long wax-stained fingers",
-        "burgundy sleeveless auction coat",
-        "brass hand bell",
-        "parchment sleeves"
-      ],
-      "professionProps": [
-        "brass hand bell",
-        "sealed bid cards",
-        "wax-stained ledger"
-      ],
-      "dominantColors": [
-        "burgundy",
-        "brass",
-        "parchment"
-      ],
-      "prompt": "same person as npc-new-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile. A tall olive-skinned woman auctioneer with a severe black braid, sharp cheekbones, long fingers stained red with sealing wax, burgundy sleeveless auction coat over parchment sleeves, polished brass hand bell, sealed bid cards tucked at her belt, posture like a stage commander. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
+      "outputFile": "npc-new-001-neutral.png",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-001: tall charismatic olive-skinned woman auctioneer, severe glossy black braid, sharp elegant cheekbones, long red wax-stained fingers, burgundy-and-gold sleeveless auction coat, parchment puff sleeves, polished brass hand bell, sealed bid cards at belt",
+      "prompt": "A striking theatrical auctioneer with the charisma of a stage star, tall olive-skinned woman with a glossy severe black braid, sharp elegant cheekbones, gold hoop earrings, red sealing-wax stains on long fingers, rich burgundy-and-gold auction coat over parchment puff sleeves, polished brass hand bell lifted near her shoulder, sealed bid cards at her belt. Expression: poised neutral confidence, calm direct gaze, tiny knowing smile, like she can make a room bid higher with one eyebrow. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
     },
     {
+      "order": 2,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
       "imageId": "npc-new-001-happy",
       "characterId": "npc-new-001",
+      "displayName": "Mirella Brasscall",
+      "profession": "auctioneer",
       "expression": "happy",
-      "batchId": "portrait-batch-identity-001",
-      "order": 2,
-      "identityAnchor": "same person as npc-new-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile",
-      "visualTraits": [
-        "tall ringing silhouette",
-        "olive skin",
-        "severe black braid",
-        "sharp cheekbones",
-        "long wax-stained fingers",
-        "burgundy sleeveless auction coat",
-        "brass hand bell",
-        "parchment sleeves"
-      ],
-      "professionProps": [
-        "brass hand bell",
-        "sealed bid cards",
-        "wax-stained ledger"
-      ],
-      "dominantColors": [
-        "burgundy",
-        "brass",
-        "parchment"
-      ],
-      "prompt": "same person as npc-new-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile. A tall olive-skinned woman auctioneer with a severe black braid, sharp cheekbones, long fingers stained red with sealing wax, burgundy sleeveless auction coat over parchment sleeves, polished brass hand bell, sealed bid cards tucked at her belt, posture like a stage commander. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
+      "outputFile": "npc-new-001-happy.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-001: tall charismatic olive-skinned woman auctioneer, severe glossy black braid, sharp elegant cheekbones, long red wax-stained fingers, burgundy-and-gold sleeveless auction coat, parchment puff sleeves, polished brass hand bell, sealed bid cards at belt",
+      "prompt": "same person as npc-new-001: tall charismatic olive-skinned woman auctioneer with glossy severe black braid, sharp elegant cheekbones, burgundy-and-gold auction coat, parchment puff sleeves, brass hand bell, sealed bid cards, red wax-stained fingers. Expression: dazzling triumphant auction smile, bright eyes, playful raised bell, delighted because the price just doubled; keep the same face, hair, clothing, body shape, props, colors and identity. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
     },
     {
-      "imageId": "npc-new-001-suspicious",
-      "characterId": "npc-new-001",
-      "expression": "suspicious",
-      "batchId": "portrait-batch-identity-001",
       "order": 3,
-      "identityAnchor": "same person as npc-new-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile",
-      "visualTraits": [
-        "tall ringing silhouette",
-        "olive skin",
-        "severe black braid",
-        "sharp cheekbones",
-        "long wax-stained fingers",
-        "burgundy sleeveless auction coat",
-        "brass hand bell",
-        "parchment sleeves"
-      ],
-      "professionProps": [
-        "brass hand bell",
-        "sealed bid cards",
-        "wax-stained ledger"
-      ],
-      "dominantColors": [
-        "burgundy",
-        "brass",
-        "parchment"
-      ],
-      "prompt": "same person as npc-new-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile. A tall olive-skinned woman auctioneer with a severe black braid, sharp cheekbones, long fingers stained red with sealing wax, burgundy sleeveless auction coat over parchment sleeves, polished brass hand bell, sealed bid cards tucked at her belt, posture like a stage commander. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
-    },
-    {
-      "imageId": "npc-new-001-worried",
-      "characterId": "npc-new-001",
-      "expression": "worried",
-      "batchId": "portrait-batch-identity-001",
-      "order": 4,
-      "identityAnchor": "same person as npc-new-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile",
-      "visualTraits": [
-        "tall ringing silhouette",
-        "olive skin",
-        "severe black braid",
-        "sharp cheekbones",
-        "long wax-stained fingers",
-        "burgundy sleeveless auction coat",
-        "brass hand bell",
-        "parchment sleeves"
-      ],
-      "professionProps": [
-        "brass hand bell",
-        "sealed bid cards",
-        "wax-stained ledger"
-      ],
-      "dominantColors": [
-        "burgundy",
-        "brass",
-        "parchment"
-      ],
-      "prompt": "same person as npc-new-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile. A tall olive-skinned woman auctioneer with a severe black braid, sharp cheekbones, long fingers stained red with sealing wax, burgundy sleeveless auction coat over parchment sleeves, polished brass hand bell, sealed bid cards tucked at her belt, posture like a stage commander. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
-    },
-    {
-      "imageId": "npc-new-001-angry",
-      "characterId": "npc-new-001",
-      "expression": "angry",
-      "batchId": "portrait-batch-identity-001",
-      "order": 5,
-      "identityAnchor": "same person as npc-new-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile",
-      "visualTraits": [
-        "tall ringing silhouette",
-        "olive skin",
-        "severe black braid",
-        "sharp cheekbones",
-        "long wax-stained fingers",
-        "burgundy sleeveless auction coat",
-        "brass hand bell",
-        "parchment sleeves"
-      ],
-      "professionProps": [
-        "brass hand bell",
-        "sealed bid cards",
-        "wax-stained ledger"
-      ],
-      "dominantColors": [
-        "burgundy",
-        "brass",
-        "parchment"
-      ],
-      "prompt": "same person as npc-new-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile. A tall olive-skinned woman auctioneer with a severe black braid, sharp cheekbones, long fingers stained red with sealing wax, burgundy sleeveless auction coat over parchment sleeves, polished brass hand bell, sealed bid cards tucked at her belt, posture like a stage commander. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
-    },
-    {
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
       "imageId": "npc-new-002-neutral",
       "characterId": "npc-new-002",
+      "displayName": "Orren Scale-Eye",
+      "profession": "appraiser",
       "expression": "neutral",
-      "batchId": "portrait-batch-identity-001",
-      "order": 6,
-      "identityAnchor": "same person as npc-new-002: short elderly appraiser, square jaw, pale freckles, cloudy blue eyes, round green glass lenses, dark pocketed apron, tiny brass scale, severe patience",
-      "visualTraits": [
-        "short square build",
-        "elder",
-        "pale freckled skin",
-        "cloudy blue eyes",
-        "round green glass lenses",
-        "square jaw",
-        "dark pocketed apron",
-        "tiny brass scale"
-      ],
-      "professionProps": [
-        "tiny brass scale",
-        "green glass lens",
-        "marked appraisal tags"
-      ],
-      "dominantColors": [
-        "dark green",
-        "aged brass",
-        "cream"
-      ],
-      "prompt": "same person as npc-new-002: short elderly appraiser, square jaw, pale freckles, cloudy blue eyes, round green glass lenses, dark pocketed apron, tiny brass scale, severe patience. A short square elderly appraiser with pale freckled skin, square jaw, cloudy blue eyes behind round green glass lenses, a dark apron covered in tiny pockets, tiny brass scale raised near his chest, expression of severe patience. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
+      "outputFile": "npc-new-002-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-002: short square elderly appraiser, pale freckled skin, square jaw, cloudy blue eyes, oversized round green glass lenses, neat white side hair, dark pocketed apron, tiny brass scale, tagged trinkets",
+      "prompt": "A charmingly fussy elderly appraiser built like a small square box, pale freckled skin, neat white side hair, cloudy blue eyes magnified behind oversized round green glass lenses, dark apron packed with tiny pockets, tagged trinkets, a delicate brass scale balanced between careful fingers. Expression: severe neutral patience, lips pursed, eyebrow barely lifted, amusingly hard to impress. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
     },
     {
-      "imageId": "npc-new-002-happy",
-      "characterId": "npc-new-002",
-      "expression": "happy",
-      "batchId": "portrait-batch-identity-001",
-      "order": 7,
-      "identityAnchor": "same person as npc-new-002: short elderly appraiser, square jaw, pale freckles, cloudy blue eyes, round green glass lenses, dark pocketed apron, tiny brass scale, severe patience",
-      "visualTraits": [
-        "short square build",
-        "elder",
-        "pale freckled skin",
-        "cloudy blue eyes",
-        "round green glass lenses",
-        "square jaw",
-        "dark pocketed apron",
-        "tiny brass scale"
-      ],
-      "professionProps": [
-        "tiny brass scale",
-        "green glass lens",
-        "marked appraisal tags"
-      ],
-      "dominantColors": [
-        "dark green",
-        "aged brass",
-        "cream"
-      ],
-      "prompt": "same person as npc-new-002: short elderly appraiser, square jaw, pale freckles, cloudy blue eyes, round green glass lenses, dark pocketed apron, tiny brass scale, severe patience. A short square elderly appraiser with pale freckled skin, square jaw, cloudy blue eyes behind round green glass lenses, a dark apron covered in tiny pockets, tiny brass scale raised near his chest, expression of severe patience. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
-    },
-    {
+      "order": 4,
+      "row": 1,
+      "column": 4,
+      "cell": "R1C4",
       "imageId": "npc-new-002-suspicious",
       "characterId": "npc-new-002",
+      "displayName": "Orren Scale-Eye",
+      "profession": "appraiser",
       "expression": "suspicious",
-      "batchId": "portrait-batch-identity-001",
-      "order": 8,
-      "identityAnchor": "same person as npc-new-002: short elderly appraiser, square jaw, pale freckles, cloudy blue eyes, round green glass lenses, dark pocketed apron, tiny brass scale, severe patience",
-      "visualTraits": [
-        "short square build",
-        "elder",
-        "pale freckled skin",
-        "cloudy blue eyes",
-        "round green glass lenses",
-        "square jaw",
-        "dark pocketed apron",
-        "tiny brass scale"
-      ],
-      "professionProps": [
-        "tiny brass scale",
-        "green glass lens",
-        "marked appraisal tags"
-      ],
-      "dominantColors": [
-        "dark green",
-        "aged brass",
-        "cream"
-      ],
-      "prompt": "same person as npc-new-002: short elderly appraiser, square jaw, pale freckles, cloudy blue eyes, round green glass lenses, dark pocketed apron, tiny brass scale, severe patience. A short square elderly appraiser with pale freckled skin, square jaw, cloudy blue eyes behind round green glass lenses, a dark apron covered in tiny pockets, tiny brass scale raised near his chest, expression of severe patience. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
+      "outputFile": "npc-new-002-suspicious.png",
+      "cropCell": {
+        "x": 3072,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-002: short square elderly appraiser, pale freckled skin, square jaw, cloudy blue eyes, oversized round green glass lenses, neat white side hair, dark pocketed apron, tiny brass scale, tagged trinkets",
+      "prompt": "same person as npc-new-002: short square elderly appraiser with pale freckles, square jaw, cloudy blue eyes behind oversized green lenses, neat white side hair, dark pocketed apron, tiny brass scale and tagged trinkets. Expression: comically suspicious squint through the green lenses, one brow arched high, mouth pinched as if spotting a counterfeit; keep identity, clothing, props and colors unchanged. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
     },
     {
-      "imageId": "npc-new-003-neutral",
-      "characterId": "npc-new-003",
-      "expression": "neutral",
-      "batchId": "portrait-batch-identity-001",
-      "order": 9,
-      "identityAnchor": "same person as npc-new-003: barrel-chested broker, deep brown skin, close-cropped curls, patched ochre vest, rope belt with wooden counting tiles, crate hook, heavy confident posture",
-      "visualTraits": [
-        "broad barrel chest",
-        "deep brown skin",
-        "close-cropped curls",
-        "patched ochre vest",
-        "rope belt",
-        "wooden counting tiles",
-        "heavy relaxed stance"
-      ],
-      "professionProps": [
-        "wooden counting tiles",
-        "crate hook",
-        "bulk order slate"
-      ],
-      "dominantColors": [
-        "ochre",
-        "rope tan",
-        "dark brown"
-      ],
-      "prompt": "same person as npc-new-003: barrel-chested broker, deep brown skin, close-cropped curls, patched ochre vest, rope belt with wooden counting tiles, crate hook, heavy confident posture. A broad barrel-chested bulk goods broker with deep brown skin, close-cropped curls, patched ochre vest, rope belt hung with wooden counting tiles, crate hook over one shoulder, confident warehouse-row posture. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
-    },
-    {
+      "order": 5,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
       "imageId": "npc-new-003-happy",
       "characterId": "npc-new-003",
+      "displayName": "Basko Fencrate",
+      "profession": "bulk goods broker",
       "expression": "happy",
-      "batchId": "portrait-batch-identity-001",
-      "order": 10,
-      "identityAnchor": "same person as npc-new-003: barrel-chested broker, deep brown skin, close-cropped curls, patched ochre vest, rope belt with wooden counting tiles, crate hook, heavy confident posture",
-      "visualTraits": [
-        "broad barrel chest",
-        "deep brown skin",
-        "close-cropped curls",
-        "patched ochre vest",
-        "rope belt",
-        "wooden counting tiles",
-        "heavy relaxed stance"
-      ],
-      "professionProps": [
-        "wooden counting tiles",
-        "crate hook",
-        "bulk order slate"
-      ],
-      "dominantColors": [
-        "ochre",
-        "rope tan",
-        "dark brown"
-      ],
-      "prompt": "same person as npc-new-003: barrel-chested broker, deep brown skin, close-cropped curls, patched ochre vest, rope belt with wooden counting tiles, crate hook, heavy confident posture. A broad barrel-chested bulk goods broker with deep brown skin, close-cropped curls, patched ochre vest, rope belt hung with wooden counting tiles, crate hook over one shoulder, confident warehouse-row posture. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
+      "outputFile": "npc-new-003-happy.png",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-003: broad barrel-chested bulk broker, deep brown skin, close-cropped curls, patched ochre vest, rope belt with wooden counting tiles, crate hook, big warm smile, heavy confident posture",
+      "prompt": "A broad barrel-chested bulk goods broker with deep brown skin, close-cropped curls, powerful shoulders, patched ochre vest with colorful stitched repairs, rope belt hung with wooden counting tiles, big crate hook resting safely across one shoulder, rolled bulk-order slate tucked under one arm. Expression: booming happy grin, warm laughing eyes, lovable giant energy, proud of a huge sale. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
     },
     {
+      "order": 6,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
       "imageId": "npc-new-003-suspicious",
       "characterId": "npc-new-003",
+      "displayName": "Basko Fencrate",
+      "profession": "bulk goods broker",
       "expression": "suspicious",
-      "batchId": "portrait-batch-identity-001",
-      "order": 11,
-      "identityAnchor": "same person as npc-new-003: barrel-chested broker, deep brown skin, close-cropped curls, patched ochre vest, rope belt with wooden counting tiles, crate hook, heavy confident posture",
-      "visualTraits": [
-        "broad barrel chest",
-        "deep brown skin",
-        "close-cropped curls",
-        "patched ochre vest",
-        "rope belt",
-        "wooden counting tiles",
-        "heavy relaxed stance"
-      ],
-      "professionProps": [
-        "wooden counting tiles",
-        "crate hook",
-        "bulk order slate"
-      ],
-      "dominantColors": [
-        "ochre",
-        "rope tan",
-        "dark brown"
-      ],
-      "prompt": "same person as npc-new-003: barrel-chested broker, deep brown skin, close-cropped curls, patched ochre vest, rope belt with wooden counting tiles, crate hook, heavy confident posture. A broad barrel-chested bulk goods broker with deep brown skin, close-cropped curls, patched ochre vest, rope belt hung with wooden counting tiles, crate hook over one shoulder, confident warehouse-row posture. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
+      "outputFile": "npc-new-003-suspicious.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-003: broad barrel-chested bulk broker, deep brown skin, close-cropped curls, patched ochre vest, rope belt with wooden counting tiles, crate hook, big warm smile, heavy confident posture",
+      "prompt": "same person as npc-new-003: broad barrel-chested bulk broker with deep brown skin, close-cropped curls, patched ochre vest, rope belt of wooden counting tiles, crate hook and bulk-order slate. Expression: suspicious but funny side-eye, one eyebrow lifted, mouth twisted like someone offered to buy only three onions; keep the same huge body shape, clothing, props and colors. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
     },
     {
+      "order": 7,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
       "imageId": "npc-new-004-neutral",
       "characterId": "npc-new-004",
+      "displayName": "Saffra Moonlock",
+      "profession": "rare item collector",
       "expression": "neutral",
-      "batchId": "portrait-batch-identity-001",
-      "order": 12,
-      "identityAnchor": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
-      "visualTraits": [
-        "thin jeweled silhouette",
-        "young adult",
-        "warm golden-brown skin",
-        "crescent earrings",
-        "midnight-blue scarf",
-        "many silver rings",
-        "wide restless eyes",
-        "nervous elegant hands"
-      ],
-      "professionProps": [
-        "velvet specimen pouch",
-        "silver rings",
-        "catalog of rumors"
-      ],
-      "dominantColors": [
-        "midnight blue",
-        "silver",
-        "violet"
-      ],
-      "prompt": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
+      "outputFile": "npc-new-004-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-004: thin elegant young rare-item collector, warm golden-brown skin, wide restless eyes, crescent earrings, midnight-blue scarf, violet velvet pouch, many silver rings, graceful nervous hands",
+      "prompt": "A beautiful eerie rare-item collector with warm golden-brown skin, wide restless eyes, crescent moon earrings, midnight-blue scarf, violet velvet specimen pouch, silver rings on every finger, graceful nervous hands hovering around a tiny locked relic case. Expression: soft neutral fascination, half-smile, eyes hungry for stories, elegant but slightly strange. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
     },
     {
-      "imageId": "npc-new-004-happy",
+      "order": 8,
+      "row": 2,
+      "column": 4,
+      "cell": "R2C4",
+      "imageId": "npc-new-004-wonder",
       "characterId": "npc-new-004",
-      "expression": "happy",
-      "batchId": "portrait-batch-identity-001",
-      "order": 13,
-      "identityAnchor": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
-      "visualTraits": [
-        "thin jeweled silhouette",
-        "young adult",
-        "warm golden-brown skin",
-        "crescent earrings",
-        "midnight-blue scarf",
-        "many silver rings",
-        "wide restless eyes",
-        "nervous elegant hands"
-      ],
-      "professionProps": [
-        "velvet specimen pouch",
-        "silver rings",
-        "catalog of rumors"
-      ],
-      "dominantColors": [
-        "midnight blue",
-        "silver",
-        "violet"
-      ],
-      "prompt": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
+      "displayName": "Saffra Moonlock",
+      "profession": "rare item collector",
+      "expression": "wonder",
+      "outputFile": "npc-new-004-wonder.png",
+      "cropCell": {
+        "x": 3072,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-004: thin elegant young rare-item collector, warm golden-brown skin, wide restless eyes, crescent earrings, midnight-blue scarf, violet velvet pouch, many silver rings, graceful nervous hands",
+      "prompt": "same person as npc-new-004: thin elegant young rare-item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, violet velvet pouch, many silver rings, graceful nervous hands. Expression: enchanted wonder, eyes sparkling wide, lips parted, fingers carefully presenting a tiny glowing oddity in a velvet pouch; keep identity and outfit unchanged. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
     },
     {
-      "imageId": "npc-new-004-suspicious",
-      "characterId": "npc-new-004",
-      "expression": "suspicious",
-      "batchId": "portrait-batch-identity-001",
-      "order": 14,
-      "identityAnchor": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
-      "visualTraits": [
-        "thin jeweled silhouette",
-        "young adult",
-        "warm golden-brown skin",
-        "crescent earrings",
-        "midnight-blue scarf",
-        "many silver rings",
-        "wide restless eyes",
-        "nervous elegant hands"
-      ],
-      "professionProps": [
-        "velvet specimen pouch",
-        "silver rings",
-        "catalog of rumors"
-      ],
-      "dominantColors": [
-        "midnight blue",
-        "silver",
-        "violet"
-      ],
-      "prompt": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
-    },
-    {
-      "imageId": "npc-new-004-worried",
-      "characterId": "npc-new-004",
-      "expression": "worried",
-      "batchId": "portrait-batch-identity-001",
-      "order": 15,
-      "identityAnchor": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
-      "visualTraits": [
-        "thin jeweled silhouette",
-        "young adult",
-        "warm golden-brown skin",
-        "crescent earrings",
-        "midnight-blue scarf",
-        "many silver rings",
-        "wide restless eyes",
-        "nervous elegant hands"
-      ],
-      "professionProps": [
-        "velvet specimen pouch",
-        "silver rings",
-        "catalog of rumors"
-      ],
-      "dominantColors": [
-        "midnight blue",
-        "silver",
-        "violet"
-      ],
-      "prompt": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
-    },
-    {
-      "imageId": "npc-new-004-angry",
-      "characterId": "npc-new-004",
-      "expression": "angry",
-      "batchId": "portrait-batch-identity-001",
-      "order": 16,
-      "identityAnchor": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
-      "visualTraits": [
-        "thin jeweled silhouette",
-        "young adult",
-        "warm golden-brown skin",
-        "crescent earrings",
-        "midnight-blue scarf",
-        "many silver rings",
-        "wide restless eyes",
-        "nervous elegant hands"
-      ],
-      "professionProps": [
-        "velvet specimen pouch",
-        "silver rings",
-        "catalog of rumors"
-      ],
-      "dominantColors": [
-        "midnight blue",
-        "silver",
-        "violet"
-      ],
-      "prompt": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
-    },
-    {
-      "imageId": "npc-new-005-neutral",
-      "characterId": "npc-new-005",
-      "expression": "neutral",
-      "batchId": "portrait-batch-identity-001",
-      "order": 17,
-      "identityAnchor": "same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
-      "visualTraits": [
-        "wiry lopsided body",
-        "tawny skin",
-        "uneven shoulders",
-        "crooked grin",
-        "messy copper hair",
-        "patched leather satchel",
-        "bent hinges and chipped cups"
-      ],
-      "professionProps": [
-        "patched satchel",
-        "repair twine",
-        "cracked sample box"
-      ],
-      "dominantColors": [
-        "copper",
-        "patched leather",
-        "dusty teal"
-      ],
-      "prompt": "same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups. A wiry lopsided young damaged-goods dealer with tawny skin, uneven shoulders, crooked grin, messy copper hair, patched leather satchel spilling bent hinges and chipped cups, bargain-cart energy. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
-    },
-    {
+      "order": 9,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
       "imageId": "npc-new-005-happy",
       "characterId": "npc-new-005",
+      "displayName": "Joryn Crackbox",
+      "profession": "damaged goods dealer",
       "expression": "happy",
-      "batchId": "portrait-batch-identity-001",
-      "order": 18,
-      "identityAnchor": "same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
-      "visualTraits": [
-        "wiry lopsided body",
-        "tawny skin",
-        "uneven shoulders",
-        "crooked grin",
-        "messy copper hair",
-        "patched leather satchel",
-        "bent hinges and chipped cups"
-      ],
-      "professionProps": [
-        "patched satchel",
-        "repair twine",
-        "cracked sample box"
-      ],
-      "dominantColors": [
-        "copper",
-        "patched leather",
-        "dusty teal"
-      ],
-      "prompt": "same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups. A wiry lopsided young damaged-goods dealer with tawny skin, uneven shoulders, crooked grin, messy copper hair, patched leather satchel spilling bent hinges and chipped cups, bargain-cart energy. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
+      "outputFile": "npc-new-005-happy.png",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-005: wiry lopsided young damaged-goods dealer, tawny skin, messy copper hair, crooked grin, uneven shoulders, patched leather satchel, bent hinges, cracked buckles, chipped cups",
+      "prompt": "A mischievous wiry young damaged-goods dealer with tawny skin, messy copper hair exploding in curls, uneven shoulders, a crooked lovable grin, patched leather satchel spilling bent hinges, cracked buckles and chipped cups, colorful repair twine looped around one wrist. Expression: cheerful rascal smile, bright eyes, proudly showing a broken cup like it is treasure. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
     },
     {
+      "order": 10,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
       "imageId": "npc-new-005-suspicious",
       "characterId": "npc-new-005",
+      "displayName": "Joryn Crackbox",
+      "profession": "damaged goods dealer",
       "expression": "suspicious",
-      "batchId": "portrait-batch-identity-001",
-      "order": 19,
-      "identityAnchor": "same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
-      "visualTraits": [
-        "wiry lopsided body",
-        "tawny skin",
-        "uneven shoulders",
-        "crooked grin",
-        "messy copper hair",
-        "patched leather satchel",
-        "bent hinges and chipped cups"
-      ],
-      "professionProps": [
-        "patched satchel",
-        "repair twine",
-        "cracked sample box"
-      ],
-      "dominantColors": [
-        "copper",
-        "patched leather",
-        "dusty teal"
-      ],
-      "prompt": "same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups. A wiry lopsided young damaged-goods dealer with tawny skin, uneven shoulders, crooked grin, messy copper hair, patched leather satchel spilling bent hinges and chipped cups, bargain-cart energy. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
+      "outputFile": "npc-new-005-suspicious.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-005: wiry lopsided young damaged-goods dealer, tawny skin, messy copper hair, crooked grin, uneven shoulders, patched leather satchel, bent hinges, cracked buckles, chipped cups",
+      "prompt": "same person as npc-new-005: wiry lopsided young damaged-goods dealer with tawny skin, messy copper hair, uneven shoulders, crooked grin, patched leather satchel, bent hinges, cracked buckles, chipped cups, repair twine. Expression: playful suspicious look, eyes sliding sideways, grin half-hidden as if he knows the item is broken but hopes you do not; keep identity unchanged. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
     },
     {
+      "order": 11,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
       "imageId": "npc-new-006-neutral",
       "characterId": "npc-new-006",
+      "displayName": "Helva Quaystamp",
+      "profession": "import-export clerk",
       "expression": "neutral",
-      "batchId": "portrait-batch-identity-001",
-      "order": 20,
-      "identityAnchor": "same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
-      "visualTraits": [
-        "upright narrow posture",
-        "dark umber skin",
-        "crisp teal collar",
-        "silver-threaded hair under cap",
-        "ink-stained thumbs",
-        "stack of stamped dock papers"
-      ],
-      "professionProps": [
-        "origin stamps",
-        "dock papers",
-        "ink pad"
-      ],
-      "dominantColors": [
-        "teal",
-        "silver",
-        "ink black"
-      ],
-      "prompt": "same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare. A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Keep the same face, body shape, clothing, props, colors, and profession identity across expression variants.",
-      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background"
+      "outputFile": "npc-new-006-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-006: elegant narrow upright import-export clerk, dark umber skin, silver-threaded hair tucked under teal cap, crisp teal collar, ink-stained thumbs, stamped dock papers, origin stamps, controlled polite stare",
+      "prompt": "An elegant narrow upright import-export clerk with dark umber skin, silver-threaded hair tucked under a small teal cap, crisp teal collar with gold stitching, ink-stained thumbs, stack of stamped dock papers held like a fan, origin stamps and ink pad clipped to her belt. Expression: composed neutral politeness, perfectly controlled face, intelligent eyes that notice every lie. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
+    },
+    {
+      "order": 12,
+      "row": 3,
+      "column": 4,
+      "cell": "R3C4",
+      "imageId": "npc-new-006-suspicious",
+      "characterId": "npc-new-006",
+      "displayName": "Helva Quaystamp",
+      "profession": "import-export clerk",
+      "expression": "suspicious",
+      "outputFile": "npc-new-006-suspicious.png",
+      "cropCell": {
+        "x": 3072,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "identityAnchor": "same person as npc-new-006: elegant narrow upright import-export clerk, dark umber skin, silver-threaded hair tucked under teal cap, crisp teal collar, ink-stained thumbs, stamped dock papers, origin stamps, controlled polite stare",
+      "prompt": "same person as npc-new-006: elegant narrow import-export clerk with dark umber skin, silver-threaded hair under teal cap, crisp teal collar, ink-stained thumbs, stamped dock papers, origin stamps, controlled polite stare. Expression: suspicious official stare, chin lifted, eyes narrowed over the papers, one stamp paused mid-air; keep the same identity, outfit, props and colors. beautiful and entertaining stylized medieval fantasy merchant RPG portrait, polished painterly-cartoon PC game UI art, premium collectible NPC portrait, charming expressive face, clear silhouette, bust portrait from chest up, three-quarter view, warm painterly lighting, crisp clean edges, vibrant profession-specific clothing accents, playful memorable details, simple pure green background #00FF00 for cropping, centered inside one invisible square crop cell, generous padding around head shoulders hair hands and props Keep the portrait fully contained inside its assigned invisible square crop cell. Do not touch or cross neighboring cells.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no cropped head, no cropped hands, no prop crossing cell boundary, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background"
     }
   ]
 }
