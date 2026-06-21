@@ -22,6 +22,8 @@ pnpm test:travel
 pnpm test:quests
 pnpm test:company
 pnpm test:ui-integration
+pnpm test:playtest
+pnpm playtest:balance
 pnpm verify:current-state
 pnpm audit:data
 pnpm audit:assets
@@ -107,3 +109,8 @@ pnpm test:ui-integration` after changing this layer.
 ## UI Integration View Models
 
 `src/lib/ui-integration.ts` converts economy, travel, quest, and company helper outputs into small UI-ready panels. Test with `pnpm test:ui-integration`.
+
+## Step 11 Playtest Balance
+
+- `pnpm test:playtest`: validates checklist/report helper logic.
+- `pnpm playtest:balance`: writes `docs/development/playtest-balance-report.md` from current review artifacts.

@@ -61,6 +61,15 @@ export type CompanyLedger = {
   shareholders: CompanyShareholder[];
 };
 
+export type CompanyState = CompanyLedger & {
+  /** Legacy UI/save compatibility flag. New valuation uses cashCopper and structured warehouses. */
+  founded: boolean;
+  /** Legacy alias kept for older screens. Prefer cashCopper for new systems. */
+  bankCopper: number;
+  loanBalance: number;
+  factionReputation: Record<string, number>;
+};
+
 export type WarehouseCapacityStatus = {
   valueCopper: number;
   weight: number;
@@ -127,6 +136,31 @@ export type ShipmentResolution = {
 function cloneInventory(inventory: InventoryEntry[]) {
   return inventory.map((entry) => ({ ...entry }));
 }
+
+export function createCompanyState(): CompanyState {
+  return {
+    name: "The Ledger Company",
+    cashCopper: 0,
+    reputation: 0,
+    influence: 0,
+    authorizedShares: 1_000,
+    issuedShares: 100,
+    warehouses: [],
+    shipments: [],
+    agents: [],
+    shareholders: [{ id: "player", name: "Player", shares: 100 }],
+    founded: false,
+    bankCopper: 0,
+    loanBalance: 0,
+    factionReputation: {},
+  };
+}
+
+function syncLegacyCompanyCash(company: CompanyState) {
+  company.cashCopper = Math.max(0, Math.floor(company.cashCopper || 0));
+  company.bankCopper = company.cashCopper;
+}
+
 
 function removeVisibleQuantity(inventory: InventoryEntry[], itemIndex: number, quantity: number) {
   let remaining = Math.max(0, Math.floor(quantity || 0));
@@ -289,6 +323,45 @@ export function marketWarehouse(warehouses: CompanyWarehouse[], marketIndex: num
   return warehouses.find((warehouse) => warehouse.marketIndex === marketIndex) || null;
 }
 
+export function openWarehouse(company: CompanyState, marketIndex: number) {
+  if (marketWarehouse(company.warehouses, marketIndex)) return false;
+  company.warehouses.push(createWarehouse({
+    id: `market-${marketIndex}`,
+    name: `Market ${marketIndex} Warehouse`,
+    marketIndex,
+    capacityWeight: 1_000,
+    capacitySize: 1_000,
+    weeklyFeeCopper: 25,
+  }));
+  company.founded = true;
+  return true;
+}
+
+export function depositWarehouse(company: CompanyState, marketIndex: number, playerInventory: InventoryEntry[], itemIndex: number, quantity: number, items: Item[] = []) {
+  let warehouse = marketWarehouse(company.warehouses, marketIndex);
+  if (!warehouse) {
+    openWarehouse(company, marketIndex);
+    warehouse = marketWarehouse(company.warehouses, marketIndex);
+  }
+  if (!warehouse) return false;
+  if (!items.length) {
+    const amount = Math.max(0, Math.floor(quantity || 0));
+    if (!removeVisibleQuantity(playerInventory, itemIndex, amount)) return false;
+    addInventory(warehouse.inventory, itemIndex, amount);
+    company.founded = true;
+    return true;
+  }
+  const result = storeInWarehouse(playerInventory, warehouse, itemIndex, quantity, items);
+  if (result.ok) company.founded = true;
+  return result.ok;
+}
+
+export function withdrawWarehouse(company: CompanyState, marketIndex: number, playerInventory: InventoryEntry[], itemIndex: number, quantity: number) {
+  const warehouse = marketWarehouse(company.warehouses, marketIndex);
+  if (!warehouse) return false;
+  return retrieveFromWarehouse(warehouse, playerInventory, itemIndex, quantity).ok;
+}
+
 export function warehouseValueCopper(warehouses: CompanyWarehouse[], items: Item[]) {
   return warehouses.reduce((total, warehouse) => total + inventoryCopperValue(warehouse.inventory, items), 0);
 }
@@ -410,6 +483,74 @@ export function playerInvestsCopper(company: CompanyLedger, playerInventory: Inv
   if (!spendCopper(playerInventory, items, amount)) return { ok: false, reason: "player_cannot_afford" as const };
   company.cashCopper += amount;
   return { ok: true, reason: "invested" as const };
+}
+
+function shipmentDeterministicRoll(shipment: Pick<CompanyShipment, "id" | "fromMarketIndex" | "toMarketIndex" | "departDay">) {
+  let value = 0;
+  for (const char of shipment.id) value = (value * 31 + char.charCodeAt(0)) >>> 0;
+  value = (value + (shipment.departDay + 1) * 1664525 + (shipment.fromMarketIndex + 1) * 1013904223 + shipment.toMarketIndex * 7919) >>> 0;
+  value ^= value >>> 16;
+  return (value >>> 0) / 4294967296;
+}
+
+export function settleShipments(company: CompanyState, day: number) {
+  const settled: CompanyShipment[] = [];
+  for (const shipment of company.shipments) {
+    if (shipment.status !== "in_transit" || day < shipment.arrivalDay) continue;
+    const result = resolveShipmentOutcome(shipment, shipmentDeterministicRoll(shipment));
+    Object.assign(shipment, result.shipment);
+    if (result.delivered) {
+      company.reputation += 1;
+      company.influence += 1;
+      company.factionReputation[String(shipment.toMarketIndex)] = (company.factionReputation[String(shipment.toMarketIndex)] || 0) + 1;
+    } else {
+      company.reputation = Math.max(0, company.reputation - 1);
+      company.factionReputation[String(shipment.toMarketIndex)] = (company.factionReputation[String(shipment.toMarketIndex)] || 0) - 1;
+      if (result.compensationCopper > 0) {
+        company.cashCopper += result.compensationCopper;
+        syncLegacyCompanyCash(company);
+      }
+    }
+    settled.push(shipment);
+  }
+  return settled;
+}
+
+export function createShipment(company: CompanyState, fromMarketIndex: number, toMarketIndex: number, day: number, travelDays: number, tolls: number) {
+  if (company.shipments.some((shipment) => shipment.status === "in_transit")) return null;
+  const shipment = planShipment({
+    id: `${fromMarketIndex}:${toMarketIndex}:${day}`,
+    fromMarketIndex,
+    toMarketIndex,
+    departDay: day,
+    travelDays: Math.max(2, travelDays),
+    tollCopper: Math.max(20, tolls * 4 + travelDays * 3),
+    riskPercent: Math.min(70, 10 + travelDays * 4),
+    cargo: [],
+    items: [],
+  });
+  company.shipments.push(shipment);
+  company.founded = true;
+  return shipment;
+}
+
+export function takeLoan(company: CompanyState, amount = 100) {
+  const loan = Math.max(0, Math.floor(amount || 0));
+  if (company.loanBalance > 0 || loan <= 0) return 0;
+  company.cashCopper += loan;
+  company.loanBalance = Math.ceil((loan * 110) / 100);
+  syncLegacyCompanyCash(company);
+  company.founded = true;
+  return loan;
+}
+
+export function repayLoan(company: CompanyState) {
+  syncLegacyCompanyCash(company);
+  if (company.loanBalance <= 0 || company.cashCopper < company.loanBalance) return false;
+  company.cashCopper -= company.loanBalance;
+  company.loanBalance = 0;
+  syncLegacyCompanyCash(company);
+  return true;
 }
 
 export function routeLabel(markets: Marketplace[], fromMarketIndex: number, toMarketIndex: number) {

@@ -1,20 +1,26 @@
-# Merchant Roadmap Step 5-8 Overlay
+# Merchant roadmap Step 5-11 root overlay
 
-Extract this ZIP in the repository root. It includes the Step 5 item/icon lock tooling, Step 6 economy helpers, Step 7 travel/risk helpers, and Step 8 quest/contract/dialogue runtime foundation.
+Extract this ZIP at the repository root.
 
-After extracting, run:
+This cumulative overlay includes Steps 5-11 plus the Step 9/10 company integration fix:
+
+- `createCompanyState`, `CompanyState`, and `settleShipments` are restored/exported from `src/lib/company.ts` for `game.ts` and `save.ts` compatibility.
+- Step 11 adds playtest/balance checklist helpers and a report generator.
+
+Run after extracting:
 
 ```powershell
 pnpm install
-pnpm test:quests
+pnpm test:company
+pnpm test:barter
+pnpm test:playtest
+pnpm playtest:balance
 pnpm verify:current-state
 pnpm build
 ```
 
-Important generated/review files after verification:
+Review:
 
-- `docs/assets/item-icon-lock-report.md`
-- `docs/assets/item-icon-manual-review.csv`
+- `docs/development/playtest-balance-report.md`
 - `docs/systems/profession-stock-review.md`
-
-Step 8 adds `src/lib/quest-runtime.ts` and `src/lib/quest-runtime.test.ts`.
+- `docs/assets/item-icon-lock-report.md`

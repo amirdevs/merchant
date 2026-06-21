@@ -13,6 +13,9 @@ This folder is split into current source-of-truth docs and generated/review asse
 - `development/economy-foundation.md`: shared money, wallet, value, and capacity helper rules.
 - `development/travel-risk-market-loop.md`: travel planning, route risk, toll/stallage, capacity, and arrival-summary helpers.
 - `development/quest-contract-dialogue-runtime.md`: typed quest, contract, and dialogue transaction runtime foundation.
+- `development/company-warehouses-shipments.md`: company, warehouse, shipment, stock-ownership foundation.
+- `development/ui-integration-pass.md`: UI-facing view models and action-checklist foundation.
+- `development/playtest-balance-pass.md`: final manual playtest and balance checkpoint.
 - `development/item-icon-lock.md`: Step 5 item/icon lock process and review rules.
 - `assets/item-icon-pipeline.md`: item icon prompt/sheet/crop/audit pipeline.
 
@@ -23,6 +26,7 @@ This folder is split into current source-of-truth docs and generated/review asse
 - `assets/item-icon-lock-report.md`: generated structural item icon audit.
 - `assets/item-icon-lock-report.json`: generated machine-readable item icon audit.
 - `assets/item-icon-manual-review.csv`: generated row-by-row visual review sheet.
+- `development/playtest-balance-report.md`: generated playtest/balance checkpoint report.
 - `ui_parts/`: current UI visual reference mockups.
 
 These folders are useful project material, but generated reports should be refreshed by their scripts instead of edited by hand.

@@ -26,7 +26,9 @@
     "extract:data": "node scripts/extract-data.cjs",
     "cleanup:ui": "node scripts/cleanup-ui-mess.cjs",
     "test:company": "vitest run src/lib/company.test.ts",
-    "test:ui-integration": "vitest run src/lib/ui-integration.test.ts"
+    "test:ui-integration": "vitest run src/lib/ui-integration.test.ts",
+    "test:playtest": "vitest run src/lib/playtest-balance.test.ts",
+    "playtest:balance": "node scripts/playtest-balance.cjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",

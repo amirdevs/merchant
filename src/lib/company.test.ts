@@ -6,6 +6,8 @@ import {
   canStoreInventory,
   companySolvency,
   companyValuation,
+  createCompanyState,
+  createShipment,
   createWarehouse,
   deliverShipmentToWarehouse,
   dividendPlan,
@@ -16,6 +18,7 @@ import {
   playerInvestsCopper,
   resolveShipmentOutcome,
   routeLabel,
+  settleShipments,
   shipmentRiskLabel,
   shipmentTotalUpfrontCopper,
   startShipment,
@@ -179,4 +182,24 @@ describe("company, warehouse, shipment, and stock helpers", () => {
     ] as Marketplace[];
     expect(routeLabel(markets, 2, 3)).toBe("Harbor -> Capital");
   });
+
+  it("creates and settles game-compatible company state", () => {
+    const localCompany = createCompanyState();
+    expect(localCompany.cashCopper).toBe(0);
+    expect(localCompany.bankCopper).toBe(0);
+    expect(localCompany.shareholders[0]).toMatchObject({ id: "player", shares: 100 });
+
+    localCompany.cashCopper = 500;
+    localCompany.bankCopper = 500;
+    const shipment = createShipment(localCompany, 0, 1, 1, 2, 10);
+    expect(shipment).toBeTruthy();
+    expect(localCompany.founded).toBe(true);
+    if (!shipment) return;
+    expect(startShipment(localCompany, shipment.id)).toMatchObject({ ok: true, reason: "started" });
+
+    const settled = settleShipments(localCompany, shipment.arrivalDay);
+    expect(settled).toHaveLength(1);
+    expect(["delivered", "lost"]).toContain(settled[0].status);
+  });
+
 });

@@ -12,6 +12,8 @@ const checks = [
   ["pnpm", ["test:quests"]],
   ["pnpm", ["test:company"]],
   ["pnpm", ["test:ui-integration"]],
+  ["pnpm", ["test:playtest"]],
+  ["pnpm", ["playtest:balance"]],
   ["pnpm", ["build"]],
 ];
 
@@ -43,3 +45,5 @@ console.log("Travel planning helpers are covered by src/lib/travel-loop.test.ts.
 console.log("Quest runtime helpers are covered by src/lib/quest-runtime.test.ts.");
 console.log("Company, warehouse, shipment, and stock helpers are covered by src/lib/company.test.ts.");
 console.log("UI integration view models are covered by src/lib/ui-integration.test.ts.");
+console.log("Playtest/balance checklist helpers are covered by src/lib/playtest-balance.test.ts.");
+console.log("Review docs/development/playtest-balance-report.md before the final manual pass.");
