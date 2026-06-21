@@ -7,10 +7,10 @@ This file tracks the manually authored static item copy for PR #9.
 ## Current status
 
 - Actual game items: 2206
-- Hand-written entries completed: 1542
-- Remaining: 664
-- Last completed item index: 1541
-- Next start point: 1542
+- Hand-written entries completed: 1592
+- Remaining: 614
+- Last completed item index: 1591
+- Next start point: 1592
 
 ## Completed batches
 
@@ -45,6 +45,7 @@ This file tracks the manually authored static item copy for PR #9.
 - 1392–1441: boglings, pack and riding animals, paintings, musical instruments, and paints.
 - 1442–1491: remaining paints, trophies, enchanted statues, monster statues, clan idols, and first fabled marble statues.
 - 1492–1541: fabled ancient statues, barrels, baskets, cages, carts, carriages, chests, crates, bags, and pottery.
+- 1542–1591: small pots, sacks, ingots, ores, rocks, coal, anvils, bait, planks, utility goods, and first tools.
 
 ## Standard
 
