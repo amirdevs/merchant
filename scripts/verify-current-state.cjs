@@ -8,6 +8,7 @@ const checks = [
   ["pnpm", ["review:stock"]],
   ["pnpm", ["test:barter"]],
   ["pnpm", ["test:economy"]],
+  ["pnpm", ["test:travel"]],
   ["pnpm", ["build"]],
 ];
 
@@ -35,3 +36,4 @@ console.log("\nCurrent-state verification passed.");
 console.log("Review docs/systems/profession-stock-review.md before final stock/profile approval.");
 console.log("Review docs/assets/item-icon-lock-report.md before final item/icon approval.");
 console.log("Economy helpers are covered by src/lib/economy.test.ts.");
+console.log("Travel planning helpers are covered by src/lib/travel-loop.test.ts.");

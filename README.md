@@ -22,6 +22,7 @@ Run the current validation gate:
 ```powershell
 pnpm verify:current-state
 pnpm test:economy
+pnpm test:travel
 ```
 
 Audit extracted content and asset references:
@@ -77,3 +78,7 @@ Project documentation lives under `docs/`.
 - Technical notes: `docs/development/technical-notes.md`
 
 - Economy foundation: `docs/development/economy-foundation.md`
+
+## Step 7 Travel Foundation
+
+`src/lib/travel-loop.ts` centralizes route planning, toll/stallage affordability, cargo capacity blockers, illegal-cargo warnings, theft/inspection risk preview, market close status, and arrival summary copy. Run `pnpm test:travel`.
