@@ -48,7 +48,18 @@ export type StockArchetypeId =
   | "quartermaster"
   | "traveler"
   | "hunter"
-  | "salvage";
+  | "salvage"
+  | "bias";
+
+export type LifestyleStockBaselineId =
+  | "poor"
+  | "worker"
+  | "shopkeeper"
+  | "traveler"
+  | "noble"
+  | "military"
+  | "criminal"
+  | "religious";
 
 export type StockRestockMode = "daily" | "interval" | "weekly" | "on-arrival" | "never";
 
@@ -81,9 +92,15 @@ export type WeightedArchetype = {
   weight?: number;
 };
 
+export type LifestyleStockBaseline = {
+  archetypes: WeightedArchetype[];
+  guaranteedTags?: string[];
+};
+
 export type StockProfile = {
   tier: StockTierId;
   archetypes: WeightedArchetype[];
+  lifestyleBaseline?: LifestyleStockBaselineId;
   stackModifier?: number;
   quantityMultiplier?: number;
   coinMultiplier?: number;

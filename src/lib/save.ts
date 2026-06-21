@@ -5,13 +5,18 @@ import { createLawState } from "./law";
 import { createRivalState, ensureRivalState } from "./rivals";
 import { createMythProgression, ensureMythProgression } from "./myth";
 
-export const SAVE_VERSION = 1;
+export const SAVE_VERSION = 2;
+export const SAVE_SCHEMA_LABEL = "item-catalog-2026-06-v2";
+export const INCOMPATIBLE_SAVE_MESSAGE =
+  "This save was created before the item-catalog and NPC-stock overhaul. Start a new game or delete the old slot; loading it could point inventories at the wrong items.";
+
 const SAVE_KEY = "merchant-react-save";
 const SAVE_SLOT_PREFIX = "merchant-react-save-slot-";
 const SAVE_SLOT_COUNT = 4;
 
 export type SaveEnvelope = {
   saveVersion: number;
+  schemaLabel?: string;
   savedAt: string;
   game: GameState;
 };
@@ -23,7 +28,34 @@ export type SaveSlotSummary = {
   day: number | null;
   marketIndex: number | null;
   empty: boolean;
+  compatible: boolean;
+  status: "empty" | "compatible" | "incompatible" | "corrupt";
+  reason?: string;
+  saveVersion?: number | null;
 };
+
+function emptySlot(slot: number): SaveSlotSummary {
+  return {
+    slot,
+    name: slot === 0 ? "Primary Ledger" : `Archive Slot ${slot + 1}`,
+    savedAt: null,
+    day: null,
+    marketIndex: null,
+    empty: true,
+    compatible: false,
+    status: "empty",
+  };
+}
+
+function isCurrentEnvelope(value: unknown): value is SaveEnvelope {
+  const candidate = value as Partial<SaveEnvelope> | null;
+  return Boolean(
+    candidate &&
+      typeof candidate === "object" &&
+      "game" in candidate &&
+      candidate.saveVersion === SAVE_VERSION
+  );
+}
 
 function isGameState(value: unknown): value is GameState {
   const candidate = value as Partial<GameState> | null;
@@ -67,6 +99,7 @@ function isGameState(value: unknown): value is GameState {
 export function serializeGame(state: GameState) {
   const envelope: SaveEnvelope = {
     saveVersion: SAVE_VERSION,
+    schemaLabel: SAVE_SCHEMA_LABEL,
     savedAt: new Date().toISOString(),
     game: state,
   };
@@ -76,11 +109,78 @@ export function serializeGame(state: GameState) {
 export function parseGameSave(raw: string) {
   try {
     const parsed = JSON.parse(raw) as SaveEnvelope | GameState;
-    if ("game" in parsed && isGameState(parsed.game)) return parsed.game;
-    if (isGameState(parsed)) return parsed;
+    if (!isCurrentEnvelope(parsed)) return null;
+    if (isGameState(parsed.game)) return parsed.game;
     return null;
   } catch {
     return null;
+  }
+}
+
+function inspectSave(raw: string, slot: number): SaveSlotSummary {
+  try {
+    const parsed = JSON.parse(raw) as Partial<SaveEnvelope> | Partial<GameState>;
+    const maybeEnvelope = parsed as Partial<SaveEnvelope>;
+    const game = "game" in maybeEnvelope ? maybeEnvelope.game : parsed;
+    const saveVersion = "saveVersion" in maybeEnvelope && typeof maybeEnvelope.saveVersion === "number" ? maybeEnvelope.saveVersion : null;
+    const savedAt = "savedAt" in maybeEnvelope && typeof maybeEnvelope.savedAt === "string" ? maybeEnvelope.savedAt : null;
+    const day = game && typeof (game as Partial<GameState>).day === "number" ? ((game as Partial<GameState>).day as number) : null;
+    const marketIndex = game && typeof (game as Partial<GameState>).marketIndex === "number" ? ((game as Partial<GameState>).marketIndex as number) : null;
+
+    if (!isCurrentEnvelope(parsed)) {
+      return {
+        slot,
+        name: slot === 0 ? "Primary Ledger" : `Archive Slot ${slot + 1}`,
+        savedAt,
+        day,
+        marketIndex,
+        empty: false,
+        compatible: false,
+        status: "incompatible",
+        reason: INCOMPATIBLE_SAVE_MESSAGE,
+        saveVersion,
+      };
+    }
+
+    if (!isGameState(maybeEnvelope.game)) {
+      return {
+        slot,
+        name: slot === 0 ? "Primary Ledger" : `Archive Slot ${slot + 1}`,
+        savedAt,
+        day,
+        marketIndex,
+        empty: false,
+        compatible: false,
+        status: "corrupt",
+        reason: "This slot has the current save version, but its game-state payload is not valid.",
+        saveVersion: SAVE_VERSION,
+      };
+    }
+
+    return {
+      slot,
+      name: slot === 0 ? "Primary Ledger" : `Archive Slot ${slot + 1}`,
+      savedAt,
+      day,
+      marketIndex,
+      empty: false,
+      compatible: true,
+      status: "compatible",
+      saveVersion: SAVE_VERSION,
+    };
+  } catch {
+    return {
+      slot,
+      name: slot === 0 ? "Primary Ledger" : `Archive Slot ${slot + 1}`,
+      savedAt: null,
+      day: null,
+      marketIndex: null,
+      empty: false,
+      compatible: false,
+      status: "corrupt",
+      reason: "This slot does not contain readable JSON.",
+      saveVersion: null,
+    };
   }
 }
 
@@ -115,20 +215,7 @@ export function importGame(raw: string, slot = 0) {
 export function listSaveSlots(): SaveSlotSummary[] {
   return Array.from({ length: SAVE_SLOT_COUNT }, (_, slot) => {
     const raw = localStorage.getItem(slotKey(slot)) || (slot === 0 ? localStorage.getItem(SAVE_KEY) : null);
-    if (!raw) return { slot, name: `Archive Slot ${slot + 1}`, savedAt: null, day: null, marketIndex: null, empty: true };
-    try {
-      const parsed = JSON.parse(raw) as SaveEnvelope | GameState;
-      const game = "game" in parsed ? parsed.game : parsed;
-      return {
-        slot,
-        name: slot === 0 ? "Primary Ledger" : `Archive Slot ${slot + 1}`,
-        savedAt: "savedAt" in parsed ? parsed.savedAt : null,
-        day: typeof game.day === "number" ? game.day : null,
-        marketIndex: typeof game.marketIndex === "number" ? game.marketIndex : null,
-        empty: false,
-      };
-    } catch {
-      return { slot, name: `Archive Slot ${slot + 1}`, savedAt: null, day: null, marketIndex: null, empty: true };
-    }
+    if (!raw) return emptySlot(slot);
+    return inspectSave(raw, slot);
   });
 }

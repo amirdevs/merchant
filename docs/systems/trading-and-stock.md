@@ -1,8 +1,8 @@
 # Trading and NPC Stock System
 
-This document is the canonical spec for the current barter loop, customer behavior, NPC stock configuration, restocking, and intended extension points.
+This document is the canonical spec for the current barter loop, customer behavior, NPC stock configuration, restocking, stock diagnostics, and intended extension points.
 
-Use `profession-stock-audit.md` as the detailed balance appendix for profession-specific stock problems and recommended archetype work.
+Use `profession-stock-audit.md` as the detailed balance appendix for profession-specific stock problems and recommended stock personality work. Use the generated `profession-stock-review.md` after every stock/item change to inspect real deterministic samples.
 
 ## Core Trading Loop
 
@@ -10,7 +10,7 @@ The player trades directly with one customer at a time.
 
 1. The market selects the next unseen customer from the current day's queue.
 2. The player moves goods from either inventory into the two offer panels.
-3. Offer values are calculated from item value, market demand, NPC preferences, relationship state, and other trade modifiers.
+3. Offer values are calculated from item value, market demand, NPC preferences, relationship state, illegal-good risk, and other trade modifiers.
 4. `Ask Price` asks the NPC to price selected goods from their stock.
 5. `Ask Offer` lets the NPC construct a counteroffer against the player's selected goods.
 6. `Accept` resolves the barter.
@@ -28,6 +28,7 @@ The conversation modal is informational. Trade-changing actions remain on the ma
 - Right click: move or clear the full stack.
 - Drag and drop: relocate the full stack between stock and offer.
 - Protect: prevents accidental movement from the player's stock.
+- Conceal: hides player goods from automatic offer matching and visible inspection flows where supported.
 
 The drag preview is only visual. It shows the item, full name, and quantity while leaving the source slot visible.
 
@@ -73,6 +74,7 @@ Resolution order:
 2. Merchant minimum-capacity rule when `isMerchant` is true.
 3. Named override from `characterStockOverrides`.
 4. General fallback when no profession profile exists.
+5. Universal baseline overlay for small general goods and basic supplies.
 
 Named overrides are authoritative and can replace the tier, archetypes, restock behavior, value bands, and modifiers.
 
@@ -83,15 +85,15 @@ A stack is one distinct item type, regardless of quantity.
 | Tier | Distinct stacks | Quantity multiplier | Typical purpose |
 |---|---:|---:|---|
 | Empty | 0 | 0 | Story-only NPC |
-| Pocket | 3–6 | 0.5 | Beggar, messenger |
-| Sparse | 6–11 | 0.7 | Guard, incidental local |
-| Light | 10–16 | 0.9 | Traveler, worker |
-| Modest | 15–22 | 1.1 | Small vendor |
-| Standard | 21–30 | 1.4 | Craftsperson |
-| Stocked | 29–40 | 1.8 | Regular merchant |
-| Large | 39–52 | 2.4 | Established merchant |
-| Wholesale | 50–68 | 3.2 | Quartermaster, supplier |
-| Grand | 65–90 | 4.5 | Major trading house |
+| Pocket | 3-6 | 0.5 | Beggar, messenger |
+| Sparse | 6-11 | 0.7 | Guard, incidental local |
+| Light | 10-16 | 0.9 | Traveler, worker |
+| Modest | 15-22 | 1.1 | Small vendor |
+| Standard | 21-30 | 1.4 | Craftsperson |
+| Stocked | 29-40 | 1.8 | Regular merchant |
+| Large | 39-52 | 2.4 | Established merchant |
+| Wholesale | 50-68 | 3.2 | Quartermaster, supplier |
+| Grand | 65-90 | 4.5 | Major trading house |
 
 Each tier also defines:
 
@@ -110,75 +112,47 @@ Current archetypes:
 - general;
 - food;
 - baker;
+- barkeep;
+- butcher;
+- cook;
+- farmer;
 - fisher;
+- fletcher;
 - livestock;
 - blacksmith;
+- miner;
 - weapons;
 - armor;
 - fabrics;
+- seamstress;
 - leather;
 - carpenter;
 - tools;
+- toolmaker;
 - alchemist;
 - healer;
 - magic;
 - books;
 - art;
+- bard;
 - jewelry;
 - luxury;
 - maritime;
 - contraband;
 - religious;
 - royal;
+- knight;
+- soldier;
+- quartermaster;
 - traveler;
+- hunter;
 - salvage.
-
-## Profession Stock Audit Summary
-
-The current balancing standard is that every trading NPC should generally have four layers of stock:
-
-1. Money reserve appropriate to stock tier.
-2. Profession essentials that define the NPC immediately.
-3. Raw materials or consumables required by that profession.
-4. Small general stock such as food, supplies, storage, or household items.
-
-High-priority profession fixes from the audit:
-
-- Blacksmiths: more ore, ingots, tools, and repair stock; fewer finished weapons and armor as the dominant stock.
-- Fletchers: arrows, bows, wood, and fletching support goods instead of broad weapon catalogs.
-- Miners: ore, coal, rocks, gems, carts, and pack animals instead of blacksmith stock.
-- Barkeeps: drinks, food, barrels, glassware, household goods, and stronger coin reserves.
-- Bards: music, games, books, and art first; traveler stock second.
-- Farmers: bulk produce, grains, seeds, and animals.
-- Butchers: bulk meat and spices as the dominant goods.
-- Toolmakers: tools and materials instead of blacksmith weapons and armor.
-
-Recommended reusable archetypes still worth adding or tuning:
-
-- `alchemy-ingredients`
-- `bard`
-- `barkeep`
-- `butcher`
-- `cook`
-- `farmer`
-- `fletcher`
-- `hunter`
-- `miner`
-- `quartermaster`
-- `toolmaker`
-- `fashion`
-- `military`
-- `curiosities`
-- `containers`
-- `raw-materials`
-- `prepared-food`
-- `heraldry`
-
-The detailed profession-by-profession notes live in `profession-stock-audit.md`.
 
 An archetype can configure:
 
 - weighted item tags;
+- quantity multipliers;
+- minimum quantities;
 - forbidden tags;
 - minimum and maximum values;
 - local-goods preference;
@@ -191,14 +165,58 @@ Example:
 {
   tier: "large",
   archetypes: [
-    { id: "blacksmith", weight: 0.6 },
-    { id: "weapons", weight: 0.25 },
-    { id: "armor", weight: 0.15 }
-  ]
+    { id: "blacksmith", weight: 0.8 },
+    { id: "tools", weight: 0.1 },
+    { id: "weapons", weight: 0.06 },
+    { id: "armor", weight: 0.04 }
+  ],
+  guaranteedTags: ["ore", "ingots", "coal", "tool"]
 }
 ```
 
-This produces a large metalworking merchant without changing the NPC's displayed profession.
+This produces a metalworking merchant where raw inputs and tools dominate while finished weapons and armor are present but not the main stock.
+
+## Profession Stock Audit Summary
+
+The current balancing standard is that every trading NPC should generally have four layers of stock:
+
+1. Money reserve appropriate to stock tier.
+2. Profession essentials that define the NPC immediately.
+3. Raw materials or consumables required by that profession.
+4. Small general stock such as food, supplies, storage, or household items.
+
+High-priority professions to keep checking after every item or profile change:
+
+- Blacksmiths: ore, ingots, coal, tools, repair stock first; finished weapons and armor should not dominate.
+- Fletchers: arrows, bows, wood, and fletching support goods instead of broad weapon catalogs.
+- Miners: ore, coal, rocks, gems, carts, and pack animals instead of blacksmith stock.
+- Barkeeps: drinks, food, barrels, glassware, household goods, and stronger coin reserves.
+- Bards: music, games, books, and art first; traveler stock second.
+- Farmers: bulk produce, grains, seeds, and animals.
+- Butchers: bulk meat and spices as the dominant goods.
+- Toolmakers: tools and materials instead of blacksmith weapons and armor.
+
+The detailed profession-by-profession notes live in `profession-stock-audit.md`.
+
+
+## Lifestyle Stock Baselines
+
+The old universal baseline no longer adds the same `food`/`supplies` layer to everyone. Resolved stock now adds a small lifestyle layer after profession and named overrides:
+
+- `poor`: salvage and a little food.
+- `worker`: food, tools, and small general goods.
+- `shopkeeper`: general goods, containers, and light food/tools.
+- `traveler`: travel goods and food.
+- `noble`: royal/luxury goods and currency.
+- `military`: soldier/travel/food support.
+- `criminal`: contraband and salvage.
+- `religious`: religious goods, books, and small food support.
+
+Profession profiles can set `lifestyleBaseline` directly. Otherwise the resolver infers it from the profession slug and `isMerchant`.
+
+## Save Compatibility Note
+
+Current saves use `SAVE_VERSION = 2` and schema label `item-catalog-2026-06-v2`. Pre-overhaul saves are blocked because old `itemIndex` values can point to wrong recreated items. See `docs/development/save-schema.md`.
 
 ## Restocking
 
@@ -232,7 +250,7 @@ Generation performs these steps:
 4. Apply value limits and forbidden tags.
 5. Add guaranteed categories first.
 6. Select remaining distinct items using deterministic weighted sampling.
-7. Calculate quantity from configured pool ranges, item value, tier quantity, and coin multipliers.
+7. Calculate quantity from configured pool ranges, item value, tier quantity, coin multipliers, archetype quantity multipliers, and minimum quantities.
 8. Blend the generated stock with remaining stock according to `restockRate`.
 
 Unique items are excluded from ordinary random stock. They should be awarded through quests, events, or explicit future unique-stock rules.
@@ -251,7 +269,41 @@ NPCs also have independent behavior outside stock:
 - repeated weak offers reduce patience;
 - completing trades records relationship history.
 
-Stock profiles do not replace these systems. They only control supply.
+Stock profiles do not replace these systems. They control supply shape. Original generated biases now also nudge supply through a dynamic `bias` archetype, so an NPC can value a category during barter and be somewhat more or less likely to stock it.
+
+## Stock Diagnostics
+
+Run these after item catalog, icon, generated data, stock profile, barter, or market simulation changes:
+
+```powershell
+pnpm audit:data
+pnpm audit:assets
+pnpm audit:stock
+pnpm review:stock
+pnpm test:barter
+pnpm build
+```
+
+Or run the aggregate command:
+
+```powershell
+pnpm verify:current-state
+```
+
+`pnpm review:stock` writes `docs/systems/profession-stock-review.md` and samples deterministic inventories by profession across days 1, 3, 7, and 14. The report includes:
+
+- sampled NPC names;
+- average visible stacks;
+- average total stock value;
+- average coin reserve value;
+- top item families;
+- required-token gaps;
+- balance status (`PASS` or `REVIEW`);
+- identity/raw/consumable/finished/luxury/illegal stock shares;
+- raw/material/input/finished/luxury/currency/travel composition;
+- example day-1 stock.
+
+Use this as the first balance check before regenerating prompt configs or tuning profile weights. Treat `REVIEW` as a prompt for manual inspection, not an automatic failure.
 
 ## How to Customize an NPC
 
@@ -297,7 +349,8 @@ The following changes affect other systems and should not be made in isolation:
 
 ## Future Goals
 
-- Add a developer-facing stock inspector showing resolved tier, archetypes, and selection weights.
+- Continue tuning lifestyle baselines after reviewing generated stock samples; add supplier/settled-vendor variants if needed.
+- Add a developer-facing stock inspector showing resolved tier, archetypes, weights, guaranteed tags, and rejected candidates.
 - Add market-specific profile overrides.
 - Add seasonal and event stock overlays.
 - Add relationship-gated hidden shelves.
@@ -309,6 +362,6 @@ The following changes affect other systems and should not be made in isolation:
 - Add stock provenance so player-sold goods can circulate through markets.
 - Add warehouse and wholesale contracts tied to `wholesale` and `grand` suppliers.
 - Add UI filters for large inventories.
-- Add automated balance audits for stack counts, values, rarity, and coin reserves.
+- Promote the current `review:stock` balance heuristics into stricter CI once the generated catalog stabilizes.
 - Add profile validation that reports unknown tags, impossible guarantees, and empty archetypes.
 - Add an editor or JSON schema for changing stock profiles without touching TypeScript.
