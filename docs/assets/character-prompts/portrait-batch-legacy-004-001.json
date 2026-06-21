@@ -1,0 +1,564 @@
+{
+  "batchId": "portrait-batch-legacy-004-001",
+  "version": "v4-approved-style-3x4-production-manifest",
+  "status": "portrait_generation_blocked_until_final_all_cast_review",
+  "sourceIdentityBatch": "identity-catalog-legacy-batch-004",
+  "purpose": "Final legacy identity prompt sheet. Generate only after the complete all-character manifest is reviewed.",
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "If generated resolution is smaller than the JSON canvas, scale the crop grid proportionally.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "images": [
+    {
+      "imageId": "npc-legacy-162-neutral",
+      "characterId": "npc-legacy-162",
+      "displayName": "Duchess Nima Glassvale",
+      "profession": "Noble Investor",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-162-neutral.png",
+      "ancestryOrSpecies": "moon-touched half-elf",
+      "magicalTraits": [
+        "faint moonlit glints in the glass beads"
+      ],
+      "identityAnchor": "same person as npc-legacy-162: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
+      "visualTraits": [
+        "moon-touched half-elf elegance",
+        "silver-lavender eyes",
+        "glass bead hair pins",
+        "emerald velvet sleeves",
+        "crystal abacus",
+        "long poised fingers"
+      ],
+      "professionProps": [
+        "crystal abacus",
+        "sealed investment letters",
+        "tiny share ledger"
+      ],
+      "prompt": "A graceful moon-touched half-elf duchess with warm brown skin, silver-lavender eyes, a waterfall of dark curls pinned by glass beads, emerald velvet sleeves, and a crystal abacus draped over one wrist. Expression: calm readable neutral expression, relaxed mouth, direct eye contact, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 1,
+      "globalOrder": 1,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "imageId": "npc-legacy-162-happy",
+      "characterId": "npc-legacy-162",
+      "displayName": "Duchess Nima Glassvale",
+      "profession": "Noble Investor",
+      "expression": "happy",
+      "outputFile": "npc-legacy-162-happy.png",
+      "ancestryOrSpecies": "moon-touched half-elf",
+      "magicalTraits": [
+        "faint moonlit glints in the glass beads"
+      ],
+      "identityAnchor": "same person as npc-legacy-162: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
+      "visualTraits": [
+        "moon-touched half-elf elegance",
+        "silver-lavender eyes",
+        "glass bead hair pins",
+        "emerald velvet sleeves",
+        "crystal abacus",
+        "long poised fingers"
+      ],
+      "professionProps": [
+        "crystal abacus",
+        "sealed investment letters",
+        "tiny share ledger"
+      ],
+      "prompt": "A graceful moon-touched half-elf duchess with warm brown skin, silver-lavender eyes, a waterfall of dark curls pinned by glass beads, emerald velvet sleeves, and a crystal abacus draped over one wrist. Expression: happy expression, genuine profession-appropriate smile, brighter eyes, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 2,
+      "globalOrder": 2,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "imageId": "npc-legacy-162-suspicious",
+      "characterId": "npc-legacy-162",
+      "displayName": "Duchess Nima Glassvale",
+      "profession": "Noble Investor",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-162-suspicious.png",
+      "ancestryOrSpecies": "moon-touched half-elf",
+      "magicalTraits": [
+        "faint moonlit glints in the glass beads"
+      ],
+      "identityAnchor": "same person as npc-legacy-162: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
+      "visualTraits": [
+        "moon-touched half-elf elegance",
+        "silver-lavender eyes",
+        "glass bead hair pins",
+        "emerald velvet sleeves",
+        "crystal abacus",
+        "long poised fingers"
+      ],
+      "professionProps": [
+        "crystal abacus",
+        "sealed investment letters",
+        "tiny share ledger"
+      ],
+      "prompt": "A graceful moon-touched half-elf duchess with warm brown skin, silver-lavender eyes, a waterfall of dark curls pinned by glass beads, emerald velvet sleeves, and a crystal abacus draped over one wrist. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 3,
+      "globalOrder": 3,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "imageId": "npc-legacy-162-worried",
+      "characterId": "npc-legacy-162",
+      "displayName": "Duchess Nima Glassvale",
+      "profession": "Noble Investor",
+      "expression": "worried",
+      "outputFile": "npc-legacy-162-worried.png",
+      "ancestryOrSpecies": "moon-touched half-elf",
+      "magicalTraits": [
+        "faint moonlit glints in the glass beads"
+      ],
+      "identityAnchor": "same person as npc-legacy-162: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
+      "visualTraits": [
+        "moon-touched half-elf elegance",
+        "silver-lavender eyes",
+        "glass bead hair pins",
+        "emerald velvet sleeves",
+        "crystal abacus",
+        "long poised fingers"
+      ],
+      "professionProps": [
+        "crystal abacus",
+        "sealed investment letters",
+        "tiny share ledger"
+      ],
+      "prompt": "A graceful moon-touched half-elf duchess with warm brown skin, silver-lavender eyes, a waterfall of dark curls pinned by glass beads, emerald velvet sleeves, and a crystal abacus draped over one wrist. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 4,
+      "globalOrder": 4,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "imageId": "npc-legacy-162-angry",
+      "characterId": "npc-legacy-162",
+      "displayName": "Duchess Nima Glassvale",
+      "profession": "Noble Investor",
+      "expression": "angry",
+      "outputFile": "npc-legacy-162-angry.png",
+      "ancestryOrSpecies": "moon-touched half-elf",
+      "magicalTraits": [
+        "faint moonlit glints in the glass beads"
+      ],
+      "identityAnchor": "same person as npc-legacy-162: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
+      "visualTraits": [
+        "moon-touched half-elf elegance",
+        "silver-lavender eyes",
+        "glass bead hair pins",
+        "emerald velvet sleeves",
+        "crystal abacus",
+        "long poised fingers"
+      ],
+      "professionProps": [
+        "crystal abacus",
+        "sealed investment letters",
+        "tiny share ledger"
+      ],
+      "prompt": "A graceful moon-touched half-elf duchess with warm brown skin, silver-lavender eyes, a waterfall of dark curls pinned by glass beads, emerald velvet sleeves, and a crystal abacus draped over one wrist. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 5,
+      "globalOrder": 5,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "imageId": "npc-legacy-163-neutral",
+      "characterId": "npc-legacy-163",
+      "displayName": "Master Threlk Mudhorn",
+      "profession": "Quarry Factor",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-163-neutral.png",
+      "ancestryOrSpecies": "ogre-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-163: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
+      "visualTraits": [
+        "massive ogre-kin build",
+        "mossy grey skin",
+        "blunt tusks",
+        "chalk-marked forearms",
+        "cracked leather apron",
+        "stone-sample necklace"
+      ],
+      "professionProps": [
+        "stone sample",
+        "chalk stick",
+        "quarry tally board"
+      ],
+      "prompt": "A massive ogre-kin quarry factor with mossy grey skin, small amber eyes, blunt tusks, a cracked leather apron, chalk marks on his forearms, and a miniature stone sample hanging from a chain. Expression: calm readable neutral expression, relaxed mouth, direct eye contact, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 6,
+      "globalOrder": 6,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "imageId": "npc-legacy-163-happy",
+      "characterId": "npc-legacy-163",
+      "displayName": "Master Threlk Mudhorn",
+      "profession": "Quarry Factor",
+      "expression": "happy",
+      "outputFile": "npc-legacy-163-happy.png",
+      "ancestryOrSpecies": "ogre-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-163: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
+      "visualTraits": [
+        "massive ogre-kin build",
+        "mossy grey skin",
+        "blunt tusks",
+        "chalk-marked forearms",
+        "cracked leather apron",
+        "stone-sample necklace"
+      ],
+      "professionProps": [
+        "stone sample",
+        "chalk stick",
+        "quarry tally board"
+      ],
+      "prompt": "A massive ogre-kin quarry factor with mossy grey skin, small amber eyes, blunt tusks, a cracked leather apron, chalk marks on his forearms, and a miniature stone sample hanging from a chain. Expression: happy expression, genuine profession-appropriate smile, brighter eyes, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 7,
+      "globalOrder": 7,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "imageId": "npc-legacy-163-suspicious",
+      "characterId": "npc-legacy-163",
+      "displayName": "Master Threlk Mudhorn",
+      "profession": "Quarry Factor",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-163-suspicious.png",
+      "ancestryOrSpecies": "ogre-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-163: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
+      "visualTraits": [
+        "massive ogre-kin build",
+        "mossy grey skin",
+        "blunt tusks",
+        "chalk-marked forearms",
+        "cracked leather apron",
+        "stone-sample necklace"
+      ],
+      "professionProps": [
+        "stone sample",
+        "chalk stick",
+        "quarry tally board"
+      ],
+      "prompt": "A massive ogre-kin quarry factor with mossy grey skin, small amber eyes, blunt tusks, a cracked leather apron, chalk marks on his forearms, and a miniature stone sample hanging from a chain. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 8,
+      "globalOrder": 8,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "imageId": "npc-legacy-163-worried",
+      "characterId": "npc-legacy-163",
+      "displayName": "Master Threlk Mudhorn",
+      "profession": "Quarry Factor",
+      "expression": "worried",
+      "outputFile": "npc-legacy-163-worried.png",
+      "ancestryOrSpecies": "ogre-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-163: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
+      "visualTraits": [
+        "massive ogre-kin build",
+        "mossy grey skin",
+        "blunt tusks",
+        "chalk-marked forearms",
+        "cracked leather apron",
+        "stone-sample necklace"
+      ],
+      "professionProps": [
+        "stone sample",
+        "chalk stick",
+        "quarry tally board"
+      ],
+      "prompt": "A massive ogre-kin quarry factor with mossy grey skin, small amber eyes, blunt tusks, a cracked leather apron, chalk marks on his forearms, and a miniature stone sample hanging from a chain. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 9,
+      "globalOrder": 9,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "imageId": "npc-legacy-163-angry",
+      "characterId": "npc-legacy-163",
+      "displayName": "Master Threlk Mudhorn",
+      "profession": "Quarry Factor",
+      "expression": "angry",
+      "outputFile": "npc-legacy-163-angry.png",
+      "ancestryOrSpecies": "ogre-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-163: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
+      "visualTraits": [
+        "massive ogre-kin build",
+        "mossy grey skin",
+        "blunt tusks",
+        "chalk-marked forearms",
+        "cracked leather apron",
+        "stone-sample necklace"
+      ],
+      "professionProps": [
+        "stone sample",
+        "chalk stick",
+        "quarry tally board"
+      ],
+      "prompt": "A massive ogre-kin quarry factor with mossy grey skin, small amber eyes, blunt tusks, a cracked leather apron, chalk marks on his forearms, and a miniature stone sample hanging from a chain. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 10,
+      "globalOrder": 10,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "imageId": "npc-legacy-164-neutral",
+      "characterId": "npc-legacy-164",
+      "displayName": "Sister Pavi Embermoth",
+      "profession": "Relic Hospice Keeper",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-164-neutral.png",
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [
+        "tiny harmless ember moths glowing inside her lantern"
+      ],
+      "identityAnchor": "same person as npc-legacy-164: short round halfling silhouette, kind tired eyes, ember-moth hood embroidery, soot-smudged fingertips, little moth lantern, relic hospice keeper, halfling, moth lantern",
+      "visualTraits": [
+        "short round halfling silhouette",
+        "kind tired eyes",
+        "ember-moth hood embroidery",
+        "soot-smudged fingertips",
+        "little moth lantern",
+        "soft cream robes"
+      ],
+      "professionProps": [
+        "moth lantern",
+        "healing linen",
+        "wax prayer seals"
+      ],
+      "prompt": "A soft round halfling nun with cinnamon skin, kind tired eyes, a cream hood dotted with ember-moth embroidery, soot-smudged fingertips, and a little lantern full of orange moth-light. Expression: calm readable neutral expression, relaxed mouth, direct eye contact, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 11,
+      "globalOrder": 11,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      }
+    },
+    {
+      "imageId": "npc-legacy-164-happy",
+      "characterId": "npc-legacy-164",
+      "displayName": "Sister Pavi Embermoth",
+      "profession": "Relic Hospice Keeper",
+      "expression": "happy",
+      "outputFile": "npc-legacy-164-happy.png",
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [
+        "tiny harmless ember moths glowing inside her lantern"
+      ],
+      "identityAnchor": "same person as npc-legacy-164: short round halfling silhouette, kind tired eyes, ember-moth hood embroidery, soot-smudged fingertips, little moth lantern, relic hospice keeper, halfling, moth lantern",
+      "visualTraits": [
+        "short round halfling silhouette",
+        "kind tired eyes",
+        "ember-moth hood embroidery",
+        "soot-smudged fingertips",
+        "little moth lantern",
+        "soft cream robes"
+      ],
+      "professionProps": [
+        "moth lantern",
+        "healing linen",
+        "wax prayer seals"
+      ],
+      "prompt": "A soft round halfling nun with cinnamon skin, kind tired eyes, a cream hood dotted with ember-moth embroidery, soot-smudged fingertips, and a little lantern full of orange moth-light. Expression: happy expression, genuine profession-appropriate smile, brighter eyes, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 12,
+      "globalOrder": 12,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      }
+    }
+  ]
+}

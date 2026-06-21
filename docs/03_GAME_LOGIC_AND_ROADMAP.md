@@ -39,6 +39,7 @@ src/data/characters/characterIdentityCatalogBatch02.ts
 src/data/characters/characterIdentityCatalogLegacyBatch01.ts
 src/data/characters/characterIdentityCatalogLegacyBatch02.ts
 src/data/characters/characterIdentityCatalogLegacyBatch03.ts
+src/data/characters/characterIdentityCatalogLegacyBatch04.ts
 src/data/characters/characterIdentityCatalog.ts
 ```
 
@@ -48,10 +49,10 @@ Current planning targets:
 203 generated reference records
 48 useful new NPC identities complete
 194 useful-new-NPC portrait prompts complete
-162 legacy reworked identities complete across batches 001-003
-432 legacy portrait prompts complete across batches 001-003
-240 target visible characters before final roster review
-726 target portrait images before final expression-count review
+192 legacy reworked identities complete across batches 001-004
+528 legacy portrait prompts complete across batches 001-004
+240 visible character identities prepared before final roster review
+722 prepared portrait prompts before final all-cast manifest normalization
 ```
 
 Current prompt manifests live under `docs/assets/character-prompts/`:
@@ -61,20 +62,21 @@ portrait-manifest-useful-new-npcs.json
 portrait-manifest-legacy-batch-001.json
 portrait-manifest-legacy-batch-002.json
 portrait-manifest-legacy-batch-003.json
+portrait-manifest-legacy-batch-004.json
 portrait-batch-useful-npcs-001.json ... portrait-batch-useful-npcs-017.json
 portrait-batch-legacy-001-001.json ... portrait-batch-legacy-001-012.json
 portrait-batch-legacy-002-001.json ... portrait-batch-legacy-002-012.json
 portrait-batch-legacy-003-001.json ... portrait-batch-legacy-003-012.json
+portrait-batch-legacy-004-001.json ... portrait-batch-legacy-004-008.json
 ```
 
 Character work should move in larger useful chunks:
 
 1. useful-new-NPC identity catalog and portrait manifests are complete;
-2. rewrite legacy identities in large groups;
-3. finalize visible roster and expression tiers;
-4. create complete full-cast portrait image manifests;
-5. generate full portrait sheets only after all character prompts are finished and reviewed;
-6. integrate remake identities and portraits into market, barter, quest, and company UI.
+2. legacy identity catalog and portrait manifests are complete;
+3. finalize visible roster, expression counts, and all-cast sheet order;
+4. generate full portrait sheets only after all character prompts are finished and reviewed;
+5. integrate remake identities and portraits into market, barter, quest, and company UI.
 
 ## Portrait generation gate
 
@@ -84,7 +86,8 @@ Do not generate full portrait sheets until all of these are true:
 - per-character identity catalog is complete;
 - expression counts and total image count are final;
 - portrait JSON manifests exist under `docs/assets/character-prompts/`;
-- the small test sheet passes style, consistency, green-background, slot-order, and crop-safety checks.
+- the small test sheet passes style, consistency, green-background, slot-order, and crop-safety checks;
+- the final all-cast manifest groups production sheets into clean 3x4 / 12-image sheets.
 
 Portrait prompts are batched by total image count, not by character count. A single character can have some expressions in one batch and remaining expressions in another batch, as long as every prompt repeats the same identity anchors.
 
@@ -108,13 +111,13 @@ Done:
 - useful new NPC seed roster;
 - legacy character audit plan and final roster target;
 - useful-new-NPC identity catalog, 48 characters / 194 portrait prompts;
-- legacy identity batches 001-003, 162 characters / 432 portrait prompts;
+- legacy identity batches 001-004, 192 characters / 528 portrait prompts;
 - approved portrait style gate: charming, slightly cartoony, fantasy ancestry variety, single flat green background, crop-safe spacing.
 
 Remaining:
 
-- finish the remaining legacy generated character identity batch;
-- approve final roster and expression counts;
+- review the final 240-character roster and expression counts;
+- normalize the all-cast portrait manifest into final production sheet order;
 - only then generate/crop all portrait sheets;
 - wire remake character identity and portraits into the runtime UI;
 - add audits for missing portraits, duplicate display names, original-name leaks, missing stories, missing role tags, and orphan files.

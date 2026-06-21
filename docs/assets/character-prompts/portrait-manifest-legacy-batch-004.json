@@ -1,0 +1,41 @@
+{
+  "manifestId": "portrait-manifest-legacy-batch-004",
+  "version": "v4-approved-style-3x4-production-manifest",
+  "status": "portrait_generation_blocked_until_final_all_cast_review",
+  "sourceIdentityBatch": "identity-catalog-legacy-batch-004",
+  "identityCount": 30,
+  "portraitImageCount": 96,
+  "portraitSheetCount": 8,
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "batches": [
+    "portrait-batch-legacy-004-001.json",
+    "portrait-batch-legacy-004-002.json",
+    "portrait-batch-legacy-004-003.json",
+    "portrait-batch-legacy-004-004.json",
+    "portrait-batch-legacy-004-005.json",
+    "portrait-batch-legacy-004-006.json",
+    "portrait-batch-legacy-004-007.json",
+    "portrait-batch-legacy-004-008.json"
+  ],
+  "notes": [
+    "Final legacy identity batch covering original indexes 162-191.",
+    "Every batch file contains exactly 12 portrait prompts in 3x4 order.",
+    "Do not generate until the full all-character manifest is reviewed."
+  ]
+}

@@ -3,6 +3,7 @@ import { characterIdentityCatalogBatch02 } from "./characterIdentityCatalogBatch
 import { characterIdentityCatalogLegacyBatch01 } from "./characterIdentityCatalogLegacyBatch01";
 import { characterIdentityCatalogLegacyBatch02 } from "./characterIdentityCatalogLegacyBatch02";
 import { characterIdentityCatalogLegacyBatch03 } from "./characterIdentityCatalogLegacyBatch03";
+import { characterIdentityCatalogLegacyBatch04 } from "./characterIdentityCatalogLegacyBatch04";
 import { getIdentityBatchPortraitImageCount } from "./characterIdentityTypes";
 
 export const characterIdentityCatalogBatches = [
@@ -11,6 +12,7 @@ export const characterIdentityCatalogBatches = [
   characterIdentityCatalogLegacyBatch01,
   characterIdentityCatalogLegacyBatch02,
   characterIdentityCatalogLegacyBatch03,
+  characterIdentityCatalogLegacyBatch04,
 ] as const;
 
 export const characterIdentityCatalogIdentityCount = characterIdentityCatalogBatches.reduce(
@@ -46,6 +48,9 @@ export const legacyReworkedIdentityCatalogPortraitImageCount = allCharacterIdent
 export const usefulNewNpcIdentityCatalogComplete = usefulNewNpcIdentityCatalogIdentityCount === 48;
 export const legacyIdentityCatalogStarted = legacyReworkedIdentityCatalogIdentityCount > 0;
 export const legacyIdentityCatalogBatch03Complete = legacyReworkedIdentityCatalogIdentityCount >= 162;
+export const legacyIdentityCatalogComplete = legacyReworkedIdentityCatalogIdentityCount >= 192;
+export const characterIdentityCatalogReadyForFinalPortraitManifest =
+  usefulNewNpcIdentityCatalogComplete && legacyIdentityCatalogComplete;
 
 export const characterIdentityCatalogSummary = {
   batchCount: characterIdentityCatalogBatches.length,
@@ -58,4 +63,6 @@ export const characterIdentityCatalogSummary = {
   legacyReworkedIdentityCatalogPortraitImageCount,
   legacyIdentityCatalogStarted,
   legacyIdentityCatalogBatch03Complete,
+  legacyIdentityCatalogComplete,
+  characterIdentityCatalogReadyForFinalPortraitManifest,
 } as const;
