@@ -7,10 +7,10 @@ This file tracks the manually authored static item copy for PR #9.
 ## Current status
 
 - Actual game items: 2206
-- Hand-written entries completed: 1992
-- Remaining: 214
-- Last completed item index: 1991
-- Next start point: 1992
+- Hand-written entries completed: 2042
+- Remaining: 164
+- Last completed item index: 2041
+- Next start point: 2042
 
 ## Completed batches
 
@@ -54,6 +54,7 @@ This file tracks the manually authored static item copy for PR #9.
 - 1842–1891: dueling sword, broadsword, falchions, greatswords, katanas, longswords, rapiers, sabres, scimitars, and named fabled swords.
 - 1892–1941: exotic swords, whips, staves, slings, scythes, tomahawks, traps, field tools, and the bomb.
 - 1942–1991: war hammers, games, Crowncards, trade notes, baked goods, grain sacks, and seeds/bulbs.
+- 1992–2041: orchard grafts, feed, fruit, meats, fish, drinks, spices, preserves, sailcloth, brocade, sewing goods, leather, tack, and shell buttons.
 
 ## Standard
 
