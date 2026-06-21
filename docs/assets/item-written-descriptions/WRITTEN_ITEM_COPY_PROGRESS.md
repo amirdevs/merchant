@@ -7,10 +7,10 @@ This file tracks the manually authored static item copy for PR #9.
 ## Current status
 
 - Actual game items: 2206
-- Hand-written entries completed: 992
-- Remaining: 1214
-- Last completed item index: 991
-- Next start point: 992
+- Hand-written entries completed: 1042
+- Remaining: 1164
+- Last completed item index: 1041
+- Next start point: 1042
 
 ## Completed batches
 
@@ -34,6 +34,7 @@ This file tracks the manually authored static item copy for PR #9.
 - 842–891: pecan, pisatcchio, walnut, cashew, seafood, vegetables, rice, wheat, and barley.
 - 892–941: rye, oats, quinoa, grain stalks, tables, beds, dressers, shelves, chairs, sofas, stools, thrones, and fence lengths.
 - 942–991: mats, rugs, doors, dressers, shelves, chairs, glass vessels, alchemy glassware, and first gravestones.
+- 992–1041: remaining gravestones, symbolic action/virtue tokens, wooden bowls, and wooden plates.
 
 ## Standard
 
