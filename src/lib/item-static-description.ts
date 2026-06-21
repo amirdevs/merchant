@@ -16,6 +16,7 @@ import writtenItemDescriptions0542To0591 from "@/data/generated/item-written-des
 import writtenItemDescriptions0592To0641 from "@/data/generated/item-written-descriptions-0592-0641.json";
 import writtenItemDescriptions0642To0691 from "@/data/generated/item-written-descriptions-0642-0691.json";
 import writtenItemDescriptions0692To0741 from "@/data/generated/item-written-descriptions-0692-0741.json";
+import writtenItemDescriptions0742To0791 from "@/data/generated/item-written-descriptions-0742-0791.json";
 
 type StaticCopy = {
   shortDescription: string;
@@ -46,6 +47,7 @@ const writtenCopies = [
   ...(writtenItemDescriptions0592To0641 as WrittenItemCopy[]),
   ...(writtenItemDescriptions0642To0691 as WrittenItemCopy[]),
   ...(writtenItemDescriptions0692To0741 as WrittenItemCopy[]),
+  ...(writtenItemDescriptions0742To0791 as WrittenItemCopy[]),
 ];
 
 const byIndex = new Map<number, WrittenItemCopy>();
@@ -60,13 +62,7 @@ export function buildStaticItemCopy(item: Item): StaticCopy {
   const written = byIndex.get(item.index) || (item.id ? byId.get(item.id) : undefined);
 
   return {
-    shortDescription:
-      item.shortDescription ||
-      written?.shortDescription ||
-      item.name + " is trade stock with enough condition, context, and market use to deserve inspection before pricing.",
-    flavorText:
-      item.flavorText ||
-      written?.flavorText ||
-      "“Every item has two prices: the one in the ledger, and the one a buyer invents after hearing where it has been.”",
+    shortDescription: item.shortDescription || written?.shortDescription || `${item.name} is a trade item with its own market use and condition notes.`,
+    flavorText: item.flavorText || written?.flavorText || "“Every item has a story once it changes hands.”",
   };
 }
