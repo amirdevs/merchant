@@ -7,10 +7,10 @@ This file tracks the manually authored static item copy for PR #9.
 ## Current status
 
 - Actual game items: 2206
-- Hand-written entries completed: 1392
-- Remaining: 814
-- Last completed item index: 1391
-- Next start point: 1392
+- Hand-written entries completed: 1442
+- Remaining: 764
+- Last completed item index: 1441
+- Next start point: 1442
 
 ## Completed batches
 
@@ -42,6 +42,7 @@ This file tracks the manually authored static item copy for PR #9.
 - 1242–1291: remaining wands, maps, reef serpent and tidefolk beings, aquatic figures, and first bestiary creatures.
 - 1292–1341: bestiary creatures, elemental forest and swamp beings, dragon hides, and first draconic materials.
 - 1342–1391: dragon scales, magical eyes, rare winged beasts, giants, mire brutes, ogres, and first boglings.
+- 1392–1441: boglings, pack and riding animals, paintings, musical instruments, and paints.
 
 ## Standard
 
