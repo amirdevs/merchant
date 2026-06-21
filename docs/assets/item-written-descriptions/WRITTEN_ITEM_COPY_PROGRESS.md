@@ -7,10 +7,10 @@ This file tracks the manually authored static item copy for PR #9.
 ## Current status
 
 - Actual game items: 2206
-- Hand-written entries completed: 1292
-- Remaining: 914
-- Last completed item index: 1291
-- Next start point: 1292
+- Hand-written entries completed: 1342
+- Remaining: 864
+- Last completed item index: 1341
+- Next start point: 1342
 
 ## Completed batches
 
@@ -40,6 +40,7 @@ This file tracks the manually authored static item copy for PR #9.
 - 1142–1191: runes, canvas sheet, scepters, and the fabled glaive of Lantern-Summoning.
 - 1192–1241: invocation glaives, scepters, elemental and fabled scepters, and magical wands.
 - 1242–1291: remaining wands, maps, reef serpent and tidefolk beings, aquatic figures, and first bestiary creatures.
+- 1292–1341: bestiary creatures, elemental forest and swamp beings, dragon hides, and first draconic materials.
 
 ## Standard
 
