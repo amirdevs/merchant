@@ -152,8 +152,8 @@ Sample days: 1, 3, 7, 14.
 
 - Profile: tier `stocked`; lifestyle `worker`; archetypes fisher 0.84, maritime 0.16, food 0.08, tools 0.08, general 0.06.
 - Generated-data stock bias preview: magic -11.0, monster parts -10.0, religion 2.6, seafood -2.3, shoes 1.9, spears 1.6, barrels 1.0, drinks 1.0.
-- Balance status: REVIEW - identity share low (52% < 58%).
-- Balance shares: identity 52%, raw 10%, consumable 48%, finished 15%, luxury/rare 3%, illegal 0%.
+- Balance status: PASS.
+- Balance shares: identity 66%, raw 10%, consumable 48%, finished 15%, luxury/rare 3%, illegal 0%.
 - Sampled NPCs: Sam Fisher, Ano, Panuk.
 - Average visible stacks across sampled days: 34.
 - Average total stock value across sampled days: 85,500 loaf-value.
@@ -360,7 +360,7 @@ Sample days: 1, 3, 7, 14.
 - This review samples deterministic generated stock for days 1, 3, 7, and 14. Restock blending and existing save-state stock can still change what a player sees.
 - `Average coin reserve value` is estimated from currency-like items in generated inventory, not from a separate future NPC wallet system.
 - Composition buckets are token-based diagnostics, so one item can count in multiple buckets.
-- Original generated biases now softly affect stock selection through the dynamic `bias` archetype: character and profession biases are strongest, market and kingdom biases are lighter, and illegal kingdom tags discourage legal merchants while helping criminal stock.
+- Generated-data stock bias uses local `stockBiasWeights` on each resolved profile: character and profession biases are strongest, market and kingdom biases are lighter, and illegal kingdom tags discourage legal merchants while helping criminal stock.
 - Step 3.6 balance targets are intentionally stack-share heuristics. PASS means the generated stock shape is acceptable for moving to barter tests; REVIEW means the profession may need manual visual/gameplay inspection.
 - Broad merchant-style professions intentionally carry mixed goods until named merchant subtypes are designed.
 - Inspect high-priority professions manually after every item catalog rewrite: blacksmith, fletcher, miner, barkeep, bard, farmer, butcher, and toolmaker.

@@ -13,13 +13,49 @@ function countMatches(text, pattern) {
   return (text.match(pattern) || []).length;
 }
 
+function parseMarkdownMetric(text, label) {
+  const escapedLabel = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = text.match(new RegExp(`^- ${escapedLabel}:\\s*(\\d+)\\s*$`, "mi"));
+  return match ? Number(match[1]) : null;
+}
+
+function readIconMetrics() {
+  const jsonText = readIfExists("docs/assets/item-icon-lock-report.json");
+  if (jsonText) {
+    try {
+      const report = JSON.parse(jsonText);
+      const issues = Array.isArray(report.issues) ? report.issues : [];
+      const warnings = Array.isArray(report.warnings) ? report.warnings : [];
+      const orphanFiles = Array.isArray(report.orphanFiles) ? report.orphanFiles : [];
+      return {
+        source: "JSON",
+        missingRuntimeIcons: issues.filter((issue) => issue?.code === "missing-runtime-icon-file").length,
+        orphanIcons: Number(report.summary?.orphanItemIconFileCount ?? orphanFiles.length),
+        errors: Number(report.summary?.issueCount ?? issues.length),
+        warnings: Number(report.summary?.warningCount ?? warnings.length),
+      };
+    } catch {
+      // Fall back to the generated markdown summary below.
+    }
+  }
+
+  const markdown = readIfExists("docs/assets/item-icon-lock-report.md");
+  return {
+    source: markdown ? "markdown" : "unavailable",
+    missingRuntimeIcons: parseMarkdownMetric(markdown, "Missing runtime icon files") ?? 0,
+    orphanIcons: parseMarkdownMetric(markdown, "Orphan item icon files") ?? 0,
+    errors: parseMarkdownMetric(markdown, "Errors") ?? 0,
+    warnings: parseMarkdownMetric(markdown, "Warnings") ?? 0,
+  };
+}
+
 const stockReport = readIfExists("docs/systems/profession-stock-review.md");
 const iconReport = readIfExists("docs/assets/item-icon-lock-report.md");
 
 const stockPasses = countMatches(stockReport, /Balance status: PASS/g);
 const stockReviews = countMatches(stockReport, /Balance status: REVIEW/g);
-const iconMissing = countMatches(iconReport, /missing/gi);
-const iconOrphans = countMatches(iconReport, /orphan/gi);
+const iconMetrics = readIconMetrics();
+const iconIssues = iconMetrics.missingRuntimeIcons + iconMetrics.orphanIcons + iconMetrics.errors + iconMetrics.warnings;
 
 const generatedAt = new Date().toISOString();
 const lines = [
@@ -35,8 +71,12 @@ const lines = [
   `- Stock PASS sections: ${stockPasses}`,
   `- Stock REVIEW sections: ${stockReviews}`,
   `- Item icon report present: ${iconReport ? "yes" : "no"}`,
-  `- Icon report missing-word hits: ${iconMissing}`,
-  `- Icon report orphan-word hits: ${iconOrphans}`,
+  `- Item icon metrics source: ${iconMetrics.source}`,
+  `- Missing runtime icon files: ${iconMetrics.missingRuntimeIcons}`,
+  `- Orphan item icon files: ${iconMetrics.orphanIcons}`,
+  `- Icon errors: ${iconMetrics.errors}`,
+  `- Icon warnings: ${iconMetrics.warnings}`,
+  `- Icon issues total: ${iconIssues}`,
   "",
   "## Manual Smoke Checklist",
   "",

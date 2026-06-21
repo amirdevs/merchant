@@ -367,7 +367,7 @@ const balanceTargets = {
   blacksmith: { identity: ["ore", "ingots", "metal", "coal", "tool", "tools", "repairinput", "construction"], minIdentityShare: 0.62, maxFinishedShare: 0.28, maxLuxuryShare: 0.08, maxConsumableShare: 0.16 },
   butcher: { identity: ["meat", "preserved", "spice", "tool", "container", "food"], minIdentityShare: 0.58, maxFinishedShare: 0.2, maxLuxuryShare: 0.08 },
   farmer: { identity: ["produce", "grain", "seeds", "livestock", "animal", "tool", "basket", "sack"], minIdentityShare: 0.62, maxFinishedShare: 0.18, maxLuxuryShare: 0.08 },
-  fisher: { identity: ["seafood", "fish", "shellfish", "maritime", "barrels", "tool"], minIdentityShare: 0.58, maxFinishedShare: 0.22, maxLuxuryShare: 0.08 },
+  fisher: { identity: ["seafood", "fish", "shellfish", "preserved", "maritime", "barrels", "container", "tool", "maps", "travel"], minIdentityShare: 0.58, maxFinishedShare: 0.22, maxLuxuryShare: 0.08 },
   fletcher: { identity: ["arrows", "bows", "crossbows", "wood", "tool", "travel"], minIdentityShare: 0.62, maxFinishedShare: 0.42, maxLuxuryShare: 0.08 },
   hunter: { identity: ["arrows", "bows", "meat", "animalgoods", "leather", "travel", "container"], minIdentityShare: 0.52, maxLuxuryShare: 0.2 },
   miner: { identity: ["ore", "coal", "stone", "rocks", "gem", "crystals", "tool", "rawmaterial", "packanimals", "vehicles"], minIdentityShare: 0.64, maxFinishedShare: 0.16, maxLuxuryShare: 0.16, maxConsumableShare: 0.12 },
@@ -566,7 +566,7 @@ lines.push("");
 lines.push("- This review samples deterministic generated stock for days 1, 3, 7, and 14. Restock blending and existing save-state stock can still change what a player sees.");
 lines.push("- `Average coin reserve value` is estimated from currency-like items in generated inventory, not from a separate future NPC wallet system.");
 lines.push("- Composition buckets are token-based diagnostics, so one item can count in multiple buckets.");
-lines.push("- Original generated biases now softly affect stock selection through the dynamic `bias` archetype: character and profession biases are strongest, market and kingdom biases are lighter, and illegal kingdom tags discourage legal merchants while helping criminal stock.");
+lines.push("- Generated-data stock bias uses local `stockBiasWeights` on each resolved profile: character and profession biases are strongest, market and kingdom biases are lighter, and illegal kingdom tags discourage legal merchants while helping criminal stock.");
 lines.push("- Step 3.6 balance targets are intentionally stack-share heuristics. PASS means the generated stock shape is acceptable for moving to barter tests; REVIEW means the profession may need manual visual/gameplay inspection.");
 lines.push("- Broad merchant-style professions intentionally carry mixed goods until named merchant subtypes are designed.");
 lines.push("- Inspect high-priority professions manually after every item catalog rewrite: blacksmith, fletcher, miner, barkeep, bard, farmer, butcher, and toolmaker.");
