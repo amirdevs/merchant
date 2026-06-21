@@ -62,7 +62,13 @@ export function buildStaticItemCopy(item: Item): StaticCopy {
   const written = byIndex.get(item.index) || (item.id ? byId.get(item.id) : undefined);
 
   return {
-    shortDescription: item.shortDescription || written?.shortDescription || `${item.name} is a trade item with its own market use and condition notes.`,
-    flavorText: item.flavorText || written?.flavorText || "“Every item has a story once it changes hands.”",
+    shortDescription:
+      item.shortDescription ||
+      written?.shortDescription ||
+      item.name + " is trade stock with enough condition, context, and market use to deserve inspection before pricing.",
+    flavorText:
+      item.flavorText ||
+      written?.flavorText ||
+      "“Every item has two prices: the one in the ledger, and the one a buyer invents after hearing where it has been.”",
   };
 }
