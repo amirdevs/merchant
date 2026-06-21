@@ -9,6 +9,7 @@ const checks = [
   ["pnpm", ["test:barter"]],
   ["pnpm", ["test:economy"]],
   ["pnpm", ["test:travel"]],
+  ["pnpm", ["test:quests"]],
   ["pnpm", ["build"]],
 ];
 
@@ -37,3 +38,4 @@ console.log("Review docs/systems/profession-stock-review.md before final stock/p
 console.log("Review docs/assets/item-icon-lock-report.md before final item/icon approval.");
 console.log("Economy helpers are covered by src/lib/economy.test.ts.");
 console.log("Travel planning helpers are covered by src/lib/travel-loop.test.ts.");
+console.log("Quest runtime helpers are covered by src/lib/quest-runtime.test.ts.");

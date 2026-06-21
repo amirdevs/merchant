@@ -1,84 +1,20 @@
-# Merchant React/Vite Remake
+# Merchant Roadmap Step 5-8 Overlay
 
-Offline remake prototype using React, Vite, Tailwind 4, and local extracted game assets/data.
+Extract this ZIP in the repository root. It includes the Step 5 item/icon lock tooling, Step 6 economy helpers, Step 7 travel/risk helpers, and Step 8 quest/contract/dialogue runtime foundation.
 
-> Active development for the current overhaul is on `main`.
-
-## Commands
+After extracting, run:
 
 ```powershell
 pnpm install
-pnpm dev
-```
-
-Build:
-
-```powershell
+pnpm test:quests
+pnpm verify:current-state
 pnpm build
 ```
 
-Run the current validation gate:
+Important generated/review files after verification:
 
-```powershell
-pnpm verify:current-state
-pnpm test:economy
-pnpm test:travel
-```
+- `docs/assets/item-icon-lock-report.md`
+- `docs/assets/item-icon-manual-review.csv`
+- `docs/systems/profession-stock-review.md`
 
-Audit extracted content and asset references:
-
-```powershell
-pnpm audit:data
-pnpm audit:assets
-pnpm audit:item-icons
-```
-
-## Data And Assets
-
-- Data is extracted from the original bundled renderer into `src/data/generated`.
-- Assets are copied into `public/game-assets`.
-- Re-extract data with:
-
-```powershell
-pnpm extract:data
-```
-
-## Current Scope
-
-This is a playable vertical slice, not a full clone yet:
-
-- town/customer selection
-- original characters/items/markets data
-- original town, backdrop, portrait, and stall images
-- generated NPC inventories
-- player inventory
-- offer panels
-- haggling valuation using NPC preferences
-- travel between connected markets
-- local save/load with import/export
-- offline mod packs from `public/data/mods`
-- market quest/event notes
-- routed original UI, item, travel, and ambient sounds
-
-Steam and online systems are not included.
-
-## Docs
-
-Project documentation lives under `docs/`.
-
-- Docs index: `docs/README.md`
-- Current roadmap: `docs/game/roadmap.md`
-- Game logic parity: `docs/game/game-logic-parity.md`
-- UI/UX brief: `docs/game/ui-ux-brief.md`
-- Current UI reference images: `docs/ui_parts/`
-- Trading and NPC stock system: `docs/systems/trading-and-stock.md`
-- Profession stock audit: `docs/systems/profession-stock-audit.md`
-- Item icon pipeline: `docs/assets/item-icon-pipeline.md`
-- Item/icon lock process: `docs/development/item-icon-lock.md`
-- Technical notes: `docs/development/technical-notes.md`
-
-- Economy foundation: `docs/development/economy-foundation.md`
-
-## Step 7 Travel Foundation
-
-`src/lib/travel-loop.ts` centralizes route planning, toll/stallage affordability, cargo capacity blockers, illegal-cargo warnings, theft/inspection risk preview, market close status, and arrival summary copy. Run `pnpm test:travel`.
+Step 8 adds `src/lib/quest-runtime.ts` and `src/lib/quest-runtime.test.ts`.

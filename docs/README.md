@@ -11,6 +11,8 @@ This folder is split into current source-of-truth docs and generated/review asse
 - `systems/profession-stock-audit.md`: profession-by-profession stock balance audit and follow-up list.
 - `development/technical-notes.md`: stack, commands, generated data, scripts, and git hygiene.
 - `development/economy-foundation.md`: shared money, wallet, value, and capacity helper rules.
+- `development/travel-risk-market-loop.md`: travel planning, route risk, toll/stallage, capacity, and arrival-summary helpers.
+- `development/quest-contract-dialogue-runtime.md`: typed quest, contract, and dialogue transaction runtime foundation.
 - `development/item-icon-lock.md`: Step 5 item/icon lock process and review rules.
 - `assets/item-icon-pipeline.md`: item icon prompt/sheet/crop/audit pipeline.
 

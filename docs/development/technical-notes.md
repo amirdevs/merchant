@@ -19,6 +19,7 @@ pnpm test
 pnpm test:barter
 pnpm test:economy
 pnpm test:travel
+pnpm test:quests
 pnpm verify:current-state
 pnpm audit:data
 pnpm audit:assets
