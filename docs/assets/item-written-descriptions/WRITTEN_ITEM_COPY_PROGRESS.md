@@ -7,10 +7,10 @@ This file tracks the manually authored static item copy for PR #9.
 ## Current status
 
 - Actual game items: 2206
-- Hand-written entries completed: 1142
-- Remaining: 1064
-- Last completed item index: 1141
-- Next start point: 1142
+- Hand-written entries completed: 1192
+- Remaining: 1014
+- Last completed item index: 1191
+- Next start point: 1192
 
 ## Completed batches
 
@@ -37,6 +37,7 @@ This file tracks the manually authored static item copy for PR #9.
 - 992–1041: remaining gravestones, symbolic action/virtue tokens, wooden bowls, and wooden plates.
 - 1042–1091: tableware, bedding, decor, glassware-adjacent household goods, keys, and first amulets.
 - 1092–1141: amulets, fabled magic relics, candles, cooking tools, magical cloth, crowns, rare spell materials, and mage hats.
+- 1142–1191: runes, canvas sheet, scepters, and the fabled glaive of Lantern-Summoning.
 
 ## Standard
 
