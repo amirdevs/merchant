@@ -33,7 +33,7 @@ This file tracks the manually authored static item copy for PR #9.
 - 792–841: scarce sugar cane, fruits, cooked meats, mushrooms, almonds, and peanuts.
 - 842–891: pecan, pisatcchio, walnut, cashew, seafood, vegetables, rice, wheat, and barley.
 - 892–941: rye, oats, quinoa, grain stalks, tables, beds, dressers, shelves, chairs, sofas, stools, thrones, and fence lengths.
-- 942–991: mats, rugs, doors, dressers, shelves, chairs, glass vessels, alchemy glassware, and first gravestones.
+- 942–991: mats, rugs, doors, dressers, shelves, chairs, glass vessels, alchemy glassware, and first gravestones. This batch was corrected for index alignment before continuing.
 - 992–1041: remaining gravestones, symbolic action/virtue tokens, wooden bowls, and wooden plates.
 
 ## Standard
