@@ -1,0 +1,551 @@
+{
+  "batchId": "portrait-batch-legacy-001-002",
+  "version": "v4-approved-style-3x4-legacy-batch-001",
+  "status": "do_not_generate_until_all_character_prompts_are_complete",
+  "purpose": "Legacy character rework portrait manifest batch 001. Keep for later full production after all legacy prompt batches are complete.",
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "The first image is row 1 column 1; the last image is row 4 column 3.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "images": [
+    {
+      "order": 1,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "imageId": "npc-legacy-002-suspicious",
+      "characterId": "npc-legacy-002",
+      "displayName": "Lysaro Vellthorn",
+      "profession": "silk factor",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-002-suspicious.png",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "half-elf",
+      "magicalTraits": [
+        "faint shimmer on silk edges"
+      ],
+      "identityAnchor": "same person as npc-legacy-002: slender half-elf silhouette, violet eyes, silver-black hair, lacquered nails, emerald and plum scarves, silk factor, half-elf, fabric swatches",
+      "visualTraits": [
+        "slender half-elf silhouette",
+        "violet eyes",
+        "silver-black hair",
+        "lacquered nails",
+        "emerald and plum scarves",
+        "fabric swatch fan"
+      ],
+      "professionProps": [
+        "fabric swatches",
+        "silk measuring cord",
+        "ornate fan"
+      ],
+      "prompt": "A graceful violet-eyed half-elf silk factor with long silver-black hair, narrow shoulders, lacquered nails, layered emerald and plum scarves, and a fan of fabric swatches that flutter like bright birds. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 2,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "imageId": "npc-legacy-002-worried",
+      "characterId": "npc-legacy-002",
+      "displayName": "Lysaro Vellthorn",
+      "profession": "silk factor",
+      "expression": "worried",
+      "outputFile": "npc-legacy-002-worried.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "half-elf",
+      "magicalTraits": [
+        "faint shimmer on silk edges"
+      ],
+      "identityAnchor": "same person as npc-legacy-002: slender half-elf silhouette, violet eyes, silver-black hair, lacquered nails, emerald and plum scarves, silk factor, half-elf, fabric swatches",
+      "visualTraits": [
+        "slender half-elf silhouette",
+        "violet eyes",
+        "silver-black hair",
+        "lacquered nails",
+        "emerald and plum scarves",
+        "fabric swatch fan"
+      ],
+      "professionProps": [
+        "fabric swatches",
+        "silk measuring cord",
+        "ornate fan"
+      ],
+      "prompt": "A graceful violet-eyed half-elf silk factor with long silver-black hair, narrow shoulders, lacquered nails, layered emerald and plum scarves, and a fan of fabric swatches that flutter like bright birds. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 3,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "imageId": "npc-legacy-002-angry",
+      "characterId": "npc-legacy-002",
+      "displayName": "Lysaro Vellthorn",
+      "profession": "silk factor",
+      "expression": "angry",
+      "outputFile": "npc-legacy-002-angry.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "half-elf",
+      "magicalTraits": [
+        "faint shimmer on silk edges"
+      ],
+      "identityAnchor": "same person as npc-legacy-002: slender half-elf silhouette, violet eyes, silver-black hair, lacquered nails, emerald and plum scarves, silk factor, half-elf, fabric swatches",
+      "visualTraits": [
+        "slender half-elf silhouette",
+        "violet eyes",
+        "silver-black hair",
+        "lacquered nails",
+        "emerald and plum scarves",
+        "fabric swatch fan"
+      ],
+      "professionProps": [
+        "fabric swatches",
+        "silk measuring cord",
+        "ornate fan"
+      ],
+      "prompt": "A graceful violet-eyed half-elf silk factor with long silver-black hair, narrow shoulders, lacquered nails, layered emerald and plum scarves, and a fan of fabric swatches that flutter like bright birds. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 4,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "imageId": "npc-legacy-003-neutral",
+      "characterId": "npc-legacy-003",
+      "displayName": "Marta Honeyjaw",
+      "profession": "baker matron",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-003-neutral.png",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-003: round halfling silhouette, flour-dusted cheeks, golden curls, red kerchief, honey apron, baker matron, halfling, basket of rolls",
+      "visualTraits": [
+        "round halfling silhouette",
+        "flour-dusted cheeks",
+        "golden curls",
+        "red kerchief",
+        "honey apron",
+        "dimpled hands"
+      ],
+      "professionProps": [
+        "basket of rolls",
+        "wooden peel",
+        "flour pouch"
+      ],
+      "prompt": "A round cheerful halfling baker with flour-dusted cheeks, golden curls escaping a red kerchief, dimpled hands, a honey-colored apron, and a basket of moon-shaped rolls held high. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 5,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "imageId": "npc-legacy-003-happy",
+      "characterId": "npc-legacy-003",
+      "displayName": "Marta Honeyjaw",
+      "profession": "baker matron",
+      "expression": "happy",
+      "outputFile": "npc-legacy-003-happy.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-003: round halfling silhouette, flour-dusted cheeks, golden curls, red kerchief, honey apron, baker matron, halfling, basket of rolls",
+      "visualTraits": [
+        "round halfling silhouette",
+        "flour-dusted cheeks",
+        "golden curls",
+        "red kerchief",
+        "honey apron",
+        "dimpled hands"
+      ],
+      "professionProps": [
+        "basket of rolls",
+        "wooden peel",
+        "flour pouch"
+      ],
+      "prompt": "A round cheerful halfling baker with flour-dusted cheeks, golden curls escaping a red kerchief, dimpled hands, a honey-colored apron, and a basket of moon-shaped rolls held high. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 6,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "imageId": "npc-legacy-003-suspicious",
+      "characterId": "npc-legacy-003",
+      "displayName": "Marta Honeyjaw",
+      "profession": "baker matron",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-003-suspicious.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-003: round halfling silhouette, flour-dusted cheeks, golden curls, red kerchief, honey apron, baker matron, halfling, basket of rolls",
+      "visualTraits": [
+        "round halfling silhouette",
+        "flour-dusted cheeks",
+        "golden curls",
+        "red kerchief",
+        "honey apron",
+        "dimpled hands"
+      ],
+      "professionProps": [
+        "basket of rolls",
+        "wooden peel",
+        "flour pouch"
+      ],
+      "prompt": "A round cheerful halfling baker with flour-dusted cheeks, golden curls escaping a red kerchief, dimpled hands, a honey-colored apron, and a basket of moon-shaped rolls held high. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 7,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "imageId": "npc-legacy-003-worried",
+      "characterId": "npc-legacy-003",
+      "displayName": "Marta Honeyjaw",
+      "profession": "baker matron",
+      "expression": "worried",
+      "outputFile": "npc-legacy-003-worried.png",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-003: round halfling silhouette, flour-dusted cheeks, golden curls, red kerchief, honey apron, baker matron, halfling, basket of rolls",
+      "visualTraits": [
+        "round halfling silhouette",
+        "flour-dusted cheeks",
+        "golden curls",
+        "red kerchief",
+        "honey apron",
+        "dimpled hands"
+      ],
+      "professionProps": [
+        "basket of rolls",
+        "wooden peel",
+        "flour pouch"
+      ],
+      "prompt": "A round cheerful halfling baker with flour-dusted cheeks, golden curls escaping a red kerchief, dimpled hands, a honey-colored apron, and a basket of moon-shaped rolls held high. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 8,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "imageId": "npc-legacy-003-angry",
+      "characterId": "npc-legacy-003",
+      "displayName": "Marta Honeyjaw",
+      "profession": "baker matron",
+      "expression": "angry",
+      "outputFile": "npc-legacy-003-angry.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-003: round halfling silhouette, flour-dusted cheeks, golden curls, red kerchief, honey apron, baker matron, halfling, basket of rolls",
+      "visualTraits": [
+        "round halfling silhouette",
+        "flour-dusted cheeks",
+        "golden curls",
+        "red kerchief",
+        "honey apron",
+        "dimpled hands"
+      ],
+      "professionProps": [
+        "basket of rolls",
+        "wooden peel",
+        "flour pouch"
+      ],
+      "prompt": "A round cheerful halfling baker with flour-dusted cheeks, golden curls escaping a red kerchief, dimpled hands, a honey-colored apron, and a basket of moon-shaped rolls held high. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 9,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "imageId": "npc-legacy-004-neutral",
+      "characterId": "npc-legacy-004",
+      "displayName": "Ysolde Nightquill",
+      "profession": "scribe of ledgers",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-004-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [
+        "tiny ink motes around pen nib"
+      ],
+      "identityAnchor": "same person as npc-legacy-004: tall elegant scribe, raven hair, crescent spectacles, ink-blue lips, teal robe, scribe of ledgers, human, silver pen",
+      "visualTraits": [
+        "tall elegant scribe",
+        "raven hair",
+        "crescent spectacles",
+        "ink-blue lips",
+        "teal robe",
+        "sealed contracts"
+      ],
+      "professionProps": [
+        "silver pen",
+        "sealed contracts",
+        "ledger ribbon"
+      ],
+      "prompt": "A tall raven-haired human scribe with deep umber skin, crescent spectacles, ink-blue lips, crisp teal robe, a stack of sealed contracts, and a silver pen tucked behind one ear. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 10,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "imageId": "npc-legacy-004-happy",
+      "characterId": "npc-legacy-004",
+      "displayName": "Ysolde Nightquill",
+      "profession": "scribe of ledgers",
+      "expression": "happy",
+      "outputFile": "npc-legacy-004-happy.png",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [
+        "tiny ink motes around pen nib"
+      ],
+      "identityAnchor": "same person as npc-legacy-004: tall elegant scribe, raven hair, crescent spectacles, ink-blue lips, teal robe, scribe of ledgers, human, silver pen",
+      "visualTraits": [
+        "tall elegant scribe",
+        "raven hair",
+        "crescent spectacles",
+        "ink-blue lips",
+        "teal robe",
+        "sealed contracts"
+      ],
+      "professionProps": [
+        "silver pen",
+        "sealed contracts",
+        "ledger ribbon"
+      ],
+      "prompt": "A tall raven-haired human scribe with deep umber skin, crescent spectacles, ink-blue lips, crisp teal robe, a stack of sealed contracts, and a silver pen tucked behind one ear. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 11,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "imageId": "npc-legacy-004-suspicious",
+      "characterId": "npc-legacy-004",
+      "displayName": "Ysolde Nightquill",
+      "profession": "scribe of ledgers",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-004-suspicious.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [
+        "tiny ink motes around pen nib"
+      ],
+      "identityAnchor": "same person as npc-legacy-004: tall elegant scribe, raven hair, crescent spectacles, ink-blue lips, teal robe, scribe of ledgers, human, silver pen",
+      "visualTraits": [
+        "tall elegant scribe",
+        "raven hair",
+        "crescent spectacles",
+        "ink-blue lips",
+        "teal robe",
+        "sealed contracts"
+      ],
+      "professionProps": [
+        "silver pen",
+        "sealed contracts",
+        "ledger ribbon"
+      ],
+      "prompt": "A tall raven-haired human scribe with deep umber skin, crescent spectacles, ink-blue lips, crisp teal robe, a stack of sealed contracts, and a silver pen tucked behind one ear. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 12,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "imageId": "npc-legacy-004-worried",
+      "characterId": "npc-legacy-004",
+      "displayName": "Ysolde Nightquill",
+      "profession": "scribe of ledgers",
+      "expression": "worried",
+      "outputFile": "npc-legacy-004-worried.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [
+        "tiny ink motes around pen nib"
+      ],
+      "identityAnchor": "same person as npc-legacy-004: tall elegant scribe, raven hair, crescent spectacles, ink-blue lips, teal robe, scribe of ledgers, human, silver pen",
+      "visualTraits": [
+        "tall elegant scribe",
+        "raven hair",
+        "crescent spectacles",
+        "ink-blue lips",
+        "teal robe",
+        "sealed contracts"
+      ],
+      "professionProps": [
+        "silver pen",
+        "sealed contracts",
+        "ledger ribbon"
+      ],
+      "prompt": "A tall raven-haired human scribe with deep umber skin, crescent spectacles, ink-blue lips, crisp teal robe, a stack of sealed contracts, and a silver pen tucked behind one ear. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    }
+  ]
+}
