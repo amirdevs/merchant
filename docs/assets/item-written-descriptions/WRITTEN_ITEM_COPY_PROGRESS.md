@@ -7,10 +7,10 @@ This file tracks the manually authored static item copy for PR #9.
 ## Current status
 
 - Actual game items: 2206
-- Hand-written entries completed: 1742
-- Remaining: 464
-- Last completed item index: 1741
-- Next start point: 1742
+- Hand-written entries completed: 1792
+- Remaining: 414
+- Last completed item index: 1791
+- Next start point: 1792
 
 ## Completed batches
 
@@ -49,6 +49,7 @@ This file tracks the manually authored static item copy for PR #9.
 - 1592–1641: workshop tools, signs, textile equipment, tack, and fibers.
 - 1642–1691: leather, thread, linen, silk, specialty arrows, axes, and first executioner axes.
 - 1692–1741: executioner axes, hand axes, war axes, bows, clubs, and the arbalest.
+- 1742–1791: arbalests, crossbows, daggers, short swords, flails, eveningstars, and maces.
 
 ## Standard
 
