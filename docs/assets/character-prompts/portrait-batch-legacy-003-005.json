@@ -1,0 +1,531 @@
+{
+  "batchId": "portrait-batch-legacy-003-005",
+  "version": "v4-approved-style-3x4-legacy-batch-003",
+  "status": "do_not_generate_until_all_character_prompts_are_complete",
+  "purpose": "Legacy character rework portrait manifest batch 003 sheet 005. Keep for later full production after all legacy prompt batches are complete.",
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "The first image is row 1 column 1; the last image is row 4 column 3.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "images": [
+    {
+      "order": 1,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "imageId": "npc-legacy-118-neutral",
+      "characterId": "npc-legacy-118",
+      "displayName": "Boro Thimbleback",
+      "profession": "button seller",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-118-neutral.png",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-118: button seller silhouette, distinct face shape, profession costume, memorable prop, bright color accent, button seller, human, button seller tools",
+      "visualTraits": [
+        "button seller silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "button seller tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A hunchbacked tortle man with mossy shell, tiny spectacles, blue waistcoat, and trays of glittering buttons. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 2,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "imageId": "npc-legacy-118-happy",
+      "characterId": "npc-legacy-118",
+      "displayName": "Boro Thimbleback",
+      "profession": "button seller",
+      "expression": "happy",
+      "outputFile": "npc-legacy-118-happy.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-118: button seller silhouette, distinct face shape, profession costume, memorable prop, bright color accent, button seller, human, button seller tools",
+      "visualTraits": [
+        "button seller silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "button seller tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A hunchbacked tortle man with mossy shell, tiny spectacles, blue waistcoat, and trays of glittering buttons. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 3,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "imageId": "npc-legacy-118-suspicious",
+      "characterId": "npc-legacy-118",
+      "displayName": "Boro Thimbleback",
+      "profession": "button seller",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-118-suspicious.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 90,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-118: button seller silhouette, distinct face shape, profession costume, memorable prop, bright color accent, button seller, human, button seller tools",
+      "visualTraits": [
+        "button seller silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "button seller tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A hunchbacked tortle man with mossy shell, tiny spectacles, blue waistcoat, and trays of glittering buttons. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 4,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "imageId": "npc-legacy-119-neutral",
+      "characterId": "npc-legacy-119",
+      "displayName": "Elka Rainbarrel",
+      "profession": "barrel cooper",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-119-neutral.png",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-119: barrel cooper silhouette, distinct face shape, profession costume, memorable prop, bright color accent, barrel cooper, human, barrel cooper tools",
+      "visualTraits": [
+        "barrel cooper silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "barrel cooper tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A muscular human woman with rain-dark skin, shaved sides, oak apron, and a half-sized barrel under one arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 5,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "imageId": "npc-legacy-119-happy",
+      "characterId": "npc-legacy-119",
+      "displayName": "Elka Rainbarrel",
+      "profession": "barrel cooper",
+      "expression": "happy",
+      "outputFile": "npc-legacy-119-happy.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-119: barrel cooper silhouette, distinct face shape, profession costume, memorable prop, bright color accent, barrel cooper, human, barrel cooper tools",
+      "visualTraits": [
+        "barrel cooper silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "barrel cooper tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A muscular human woman with rain-dark skin, shaved sides, oak apron, and a half-sized barrel under one arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 6,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "imageId": "npc-legacy-119-suspicious",
+      "characterId": "npc-legacy-119",
+      "displayName": "Elka Rainbarrel",
+      "profession": "barrel cooper",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-119-suspicious.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 1114,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-119: barrel cooper silhouette, distinct face shape, profession costume, memorable prop, bright color accent, barrel cooper, human, barrel cooper tools",
+      "visualTraits": [
+        "barrel cooper silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "barrel cooper tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A muscular human woman with rain-dark skin, shaved sides, oak apron, and a half-sized barrel under one arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 7,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "imageId": "npc-legacy-120-neutral",
+      "characterId": "npc-legacy-120",
+      "displayName": "Jorin Plumwax",
+      "profession": "seal maker",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-120-neutral.png",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [
+        "subtle harmless market-glow around props"
+      ],
+      "identityAnchor": "same person as npc-legacy-120: seal maker silhouette, distinct face shape, profession costume, memorable prop, bright color accent, seal maker, halfling, seal maker tools",
+      "visualTraits": [
+        "seal maker silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "seal maker tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A slender half-elf man with plum hair, amber gloves, wax-stained sleeves, and a board of carved seals. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 8,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "imageId": "npc-legacy-120-happy",
+      "characterId": "npc-legacy-120",
+      "displayName": "Jorin Plumwax",
+      "profession": "seal maker",
+      "expression": "happy",
+      "outputFile": "npc-legacy-120-happy.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [
+        "subtle harmless market-glow around props"
+      ],
+      "identityAnchor": "same person as npc-legacy-120: seal maker silhouette, distinct face shape, profession costume, memorable prop, bright color accent, seal maker, halfling, seal maker tools",
+      "visualTraits": [
+        "seal maker silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "seal maker tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A slender half-elf man with plum hair, amber gloves, wax-stained sleeves, and a board of carved seals. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 9,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "imageId": "npc-legacy-120-suspicious",
+      "characterId": "npc-legacy-120",
+      "displayName": "Jorin Plumwax",
+      "profession": "seal maker",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-120-suspicious.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 2138,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [
+        "subtle harmless market-glow around props"
+      ],
+      "identityAnchor": "same person as npc-legacy-120: seal maker silhouette, distinct face shape, profession costume, memorable prop, bright color accent, seal maker, halfling, seal maker tools",
+      "visualTraits": [
+        "seal maker silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "seal maker tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A slender half-elf man with plum hair, amber gloves, wax-stained sleeves, and a board of carved seals. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 10,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "imageId": "npc-legacy-121-neutral",
+      "characterId": "npc-legacy-121",
+      "displayName": "Vess Nimblehook",
+      "profession": "fish hook peddler",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-121-neutral.png",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 120,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-121: fish hook peddler silhouette, distinct face shape, profession costume, memorable prop, bright color accent, fish hook peddler, human, fish hook peddler tools",
+      "visualTraits": [
+        "fish hook peddler silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "fish hook peddler tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A wiry goblin woman with bright teal skin, shell earrings, yellow coat, and strings of silver hooks. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 11,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "imageId": "npc-legacy-121-happy",
+      "characterId": "npc-legacy-121",
+      "displayName": "Vess Nimblehook",
+      "profession": "fish hook peddler",
+      "expression": "happy",
+      "outputFile": "npc-legacy-121-happy.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 1144,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-121: fish hook peddler silhouette, distinct face shape, profession costume, memorable prop, bright color accent, fish hook peddler, human, fish hook peddler tools",
+      "visualTraits": [
+        "fish hook peddler silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "fish hook peddler tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A wiry goblin woman with bright teal skin, shell earrings, yellow coat, and strings of silver hooks. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    },
+    {
+      "order": 12,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "imageId": "npc-legacy-121-suspicious",
+      "characterId": "npc-legacy-121",
+      "displayName": "Vess Nimblehook",
+      "profession": "fish hook peddler",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-121-suspicious.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "safePortraitBox": {
+        "x": 2168,
+        "y": 3162,
+        "width": 784,
+        "height": 844
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-121: fish hook peddler silhouette, distinct face shape, profession costume, memorable prop, bright color accent, fish hook peddler, human, fish hook peddler tools",
+      "visualTraits": [
+        "fish hook peddler silhouette",
+        "distinct face shape",
+        "profession costume",
+        "memorable prop",
+        "bright color accent"
+      ],
+      "professionProps": [
+        "fish hook peddler tools",
+        "sample goods",
+        "small ledger"
+      ],
+      "prompt": "A wiry goblin woman with bright teal skin, shell earrings, yellow coat, and strings of silver hooks. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background"
+    }
+  ]
+}

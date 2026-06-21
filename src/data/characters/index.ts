@@ -9,4 +9,5 @@ export * from "./characterIdentityCatalogBatch01";
 export * from "./characterIdentityCatalogBatch02";
 export * from "./characterIdentityCatalogLegacyBatch01";
 export * from "./characterIdentityCatalogLegacyBatch02";
+export * from "./characterIdentityCatalogLegacyBatch03";
 export * from "./characterIdentityCatalog";

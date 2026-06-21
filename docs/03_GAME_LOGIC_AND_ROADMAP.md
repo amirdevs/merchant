@@ -38,6 +38,7 @@ src/data/characters/characterIdentityCatalogBatch01.ts
 src/data/characters/characterIdentityCatalogBatch02.ts
 src/data/characters/characterIdentityCatalogLegacyBatch01.ts
 src/data/characters/characterIdentityCatalogLegacyBatch02.ts
+src/data/characters/characterIdentityCatalogLegacyBatch03.ts
 src/data/characters/characterIdentityCatalog.ts
 ```
 
@@ -47,8 +48,8 @@ Current planning targets:
 203 generated reference records
 48 useful new NPC identities complete
 194 useful-new-NPC portrait prompts complete
-108 legacy reworked identities complete across batches 001-002
-288 legacy portrait prompts complete across batches 001-002
+162 legacy reworked identities complete across batches 001-003
+432 legacy portrait prompts complete across batches 001-003
 240 target visible characters before final roster review
 726 target portrait images before final expression-count review
 ```
@@ -59,9 +60,11 @@ Current prompt manifests live under `docs/assets/character-prompts/`:
 portrait-manifest-useful-new-npcs.json
 portrait-manifest-legacy-batch-001.json
 portrait-manifest-legacy-batch-002.json
+portrait-manifest-legacy-batch-003.json
 portrait-batch-useful-npcs-001.json ... portrait-batch-useful-npcs-017.json
 portrait-batch-legacy-001-001.json ... portrait-batch-legacy-001-012.json
 portrait-batch-legacy-002-001.json ... portrait-batch-legacy-002-012.json
+portrait-batch-legacy-003-001.json ... portrait-batch-legacy-003-012.json
 ```
 
 Character work should move in larger useful chunks:
@@ -105,12 +108,12 @@ Done:
 - useful new NPC seed roster;
 - legacy character audit plan and final roster target;
 - useful-new-NPC identity catalog, 48 characters / 194 portrait prompts;
-- legacy identity batches 001-002, 108 characters / 288 portrait prompts;
+- legacy identity batches 001-003, 162 characters / 432 portrait prompts;
 - approved portrait style gate: charming, slightly cartoony, fantasy ancestry variety, single flat green background, crop-safe spacing.
 
 Remaining:
 
-- finish the remaining legacy generated character identity batches;
+- finish the remaining legacy generated character identity batch;
 - approve final roster and expression counts;
 - only then generate/crop all portrait sheets;
 - wire remake character identity and portraits into the runtime UI;

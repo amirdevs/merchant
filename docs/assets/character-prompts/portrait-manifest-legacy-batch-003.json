@@ -1,0 +1,42 @@
+{
+  "manifestId": "portrait-manifest-legacy-batch-003",
+  "version": "v4-approved-style-3x4-legacy-batch-003",
+  "status": "do_not_generate_until_all_character_prompts_are_complete",
+  "sourceIdentityBatch": "identity-catalog-legacy-batch-003",
+  "legacyOriginalIndexRange": "108-161",
+  "characterCount": 54,
+  "portraitImageCount": 144,
+  "sheetCount": 12,
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "batches": [
+    "portrait-batch-legacy-003-001.json",
+    "portrait-batch-legacy-003-002.json",
+    "portrait-batch-legacy-003-003.json",
+    "portrait-batch-legacy-003-004.json",
+    "portrait-batch-legacy-003-005.json",
+    "portrait-batch-legacy-003-006.json",
+    "portrait-batch-legacy-003-007.json",
+    "portrait-batch-legacy-003-008.json",
+    "portrait-batch-legacy-003-009.json",
+    "portrait-batch-legacy-003-010.json",
+    "portrait-batch-legacy-003-011.json",
+    "portrait-batch-legacy-003-012.json"
+  ],
+  "cropNamingRule": "Name every cropped portrait exactly as its outputFile. If the generated sheet has a lower resolution, scale the 3x4 crop grid proportionally while keeping row/column order."
+}
