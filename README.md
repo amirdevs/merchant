@@ -1,21 +1,16 @@
-# Merchant final cleanup fix
+# Merchant docs organization patch
 
-Root-overlay hotfix for the last cleanup items found after the latest `main` review.
+This root-overlay patch adds `scripts/organize-docs.cjs`.
 
-Apply from repo root:
+After extracting into the repo root, run:
 
 ```powershell
-node scripts/apply-final-cleanup.cjs
+node scripts/organize-docs.cjs
+pnpm audit:item-icons
 pnpm review:stock
 pnpm playtest:balance
 pnpm verify:current-state
 pnpm build
 ```
 
-This patch:
-
-- strengthens fisher stock identity;
-- updates stock-review wording to local `stockBiasWeights`;
-- changes playtest balance report parsing from word counts to real summary values.
-
-The GitHub default branch still must be changed manually in GitHub settings if desired.
+The script creates numbered current docs under `docs/`, moves log/generated/legacy docs under `docs/logs/`, updates report output paths, updates root README docs links, and updates `AGENTS.md` with documentation rules.
