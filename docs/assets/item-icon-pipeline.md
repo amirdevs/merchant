@@ -1,31 +1,33 @@
 # Item Icon Pipeline
 
-This document tracks the current item icon generation pipeline.
+This document tracks the current item icon generation, crop, audit, and lock pipeline.
 
 ## Folders
 
 - `docs/assets/icon-prompts/`: generated JSON prompt configs.
 - `docs/assets/icon-sheets/`: generated full sheets placed here for review.
 - `public/game-assets/items/`: final cropped runtime item icons.
+- `docs/assets/item-icon-lock-report.md`: generated structural lock report.
+- `docs/assets/item-icon-manual-review.csv`: generated visual review checklist.
 
 ## Scripts
 
-- `pnpm generate:icon-prompts`: regenerates prompt configs from generated item data.
 - `pnpm enrich:item-catalog`: regenerates item taxonomy, category axes, forms, and metadata before prompt generation.
+- `pnpm generate:icon-prompts`: regenerates prompt configs from generated item data.
+- `pnpm audit:item-icons`: verifies item icon references, prompt outputs, one/few/many variants, duplicates, orphans, and writes the lock reports.
+- `pnpm audit:assets`: verifies broader game asset references.
 - `pnpm rename:item-icons`: legacy rename utility.
 - `scripts/crop-icon-sheet.ps1`: cropper for generated icon sheets.
 
-Run `pnpm audit:data` after changing data or prompt-generation scripts.
+Run `pnpm audit:data`, `pnpm audit:item-icons`, and `pnpm audit:assets` after changing item data, icon prompt generation, or cropped icon files.
 
 ## Current Prompt Batch Shape
 
 - Source data: `src/data/generated/items.json`.
-- Current item count: 2,206.
-- Current output slots: 5,006 after `one`, `few`, and `many` variants.
-- Config count: 101 normal JSON files.
+- Prompt configs: `docs/assets/icon-prompts/items-*.json`.
 - Normal sheet layout: strict 10 columns by 5 rows.
 - Normal sheet size: 50 image slots.
-- Final sheet contains 6 slots.
+- Final sheet can contain fewer slots.
 - Read order: left to right, top to bottom.
 - Variant decisions come from item `forms`, `family`, `tradeRole`, `bulkProfile`, and `categoryAxes` metadata.
 
@@ -61,3 +63,13 @@ When reviewing files in `docs/assets/icon-sheets`:
 8. Check `one`, `few`, and `many` quantity differences.
 9. Check enough spacing for cropping.
 10. Decide directly whether to keep or regenerate.
+
+## Lock Checklist
+
+Before moving beyond item/icon work:
+
+1. Run `pnpm audit:item-icons`.
+2. Confirm `docs/assets/item-icon-lock-report.md` has no blocking errors.
+3. Review `docs/assets/item-icon-manual-review.csv` for high-priority items.
+4. Regenerate or quarantine wrong-item, bad-quantity, bad-crop, or duplicate visuals.
+5. Re-run `pnpm verify:current-state`.

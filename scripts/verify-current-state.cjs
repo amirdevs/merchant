@@ -3,9 +3,11 @@ const { spawnSync } = require("child_process");
 const checks = [
   ["pnpm", ["audit:data"]],
   ["pnpm", ["audit:assets"]],
+  ["pnpm", ["audit:item-icons"]],
   ["pnpm", ["audit:stock"]],
   ["pnpm", ["review:stock"]],
   ["pnpm", ["test:barter"]],
+  ["pnpm", ["test:economy"]],
   ["pnpm", ["build"]],
 ];
 
@@ -31,3 +33,5 @@ for (const [command, args] of checks) {
 
 console.log("\nCurrent-state verification passed.");
 console.log("Review docs/systems/profession-stock-review.md before final stock/profile approval.");
+console.log("Review docs/assets/item-icon-lock-report.md before final item/icon approval.");
+console.log("Economy helpers are covered by src/lib/economy.test.ts.");
