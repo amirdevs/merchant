@@ -5,8 +5,8 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
 ## Scope
 
 - Actual game items in `src/data/generated/items.json`: **2206**
-- Hand-written static entries completed in this branch: **742**
-- Remaining items to write: **1464**
+- Hand-written static entries completed in this branch: **792**
+- Remaining items to write: **1414**
 - Completed batches:
   - **items 0–43**: currency, the Sunwake Harbor share, Painted Coast annals, local chronicles, primers, almanacs, and practical directories.
   - **items 44–91**: Crowncards books, magic/luck books, battle reports, trade essays, field guides, letters, and first gem items.
@@ -23,6 +23,7 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
   - **items 592–641**: coats, dresses, gloves, caps, veils, masks, skin rags, and robes.
   - **items 642–691**: footwear, legwear, undergarments, tunics, monk robes, and the first regional coats of arms.
   - **items 692–741**: remaining regional coats of arms, copper and silver vessels, stoves, pots, land deeds, and first drinks.
+  - **items 742–791**: remaining drinks, flags, bread, beans, tea goods, hops, dairy, eggs, oil, vinegar, and first sweets.
 
 ## Files
 
@@ -43,6 +44,7 @@ This draft branch is being rebuilt as **hand-written item copy**, not a runtime 
 - `src/data/generated/item-written-descriptions-0592-0641.json` contains authored entries 592–641.
 - `src/data/generated/item-written-descriptions-0642-0691.json` contains authored entries 642–691.
 - `src/data/generated/item-written-descriptions-0692-0741.json` contains authored entries 692–741.
+- `src/data/generated/item-written-descriptions-0742-0791.json` contains authored entries 742–791.
 - `src/lib/item-static-description.ts` reads the stored copy first and only falls back if an entry is missing.
 
 ## Writing standard
