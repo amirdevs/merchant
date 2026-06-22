@@ -1,0 +1,53 @@
+name: Export Character Sheets
+
+on:
+  push:
+    branches:
+      - ai/export-character-sheets
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  export-character-sheets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Collect and zip character sheets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _chatgpt_exports/character-sheets
+          find docs/assets -type f -name 'characters-*.png' | sort > _chatgpt_exports/character-sheets/source-sheets.txt || true
+          count=$(wc -l < _chatgpt_exports/character-sheets/source-sheets.txt | tr -d ' ')
+          echo "sheet_count=$count" > _chatgpt_exports/character-sheets/export-summary.txt
+          if [ "$count" -eq 0 ]; then
+            echo "No character sheet PNGs found under docs/assets matching characters-*.png" >> _chatgpt_exports/character-sheets/export-summary.txt
+            printf 'No character sheet PNGs found under docs/assets matching characters-*.png\n' > _chatgpt_exports/character-sheets/README.txt
+            zip -j _chatgpt_exports/character-sheets/character-sheets.zip _chatgpt_exports/character-sheets/README.txt _chatgpt_exports/character-sheets/source-sheets.txt _chatgpt_exports/character-sheets/export-summary.txt
+          else
+            zip -@ _chatgpt_exports/character-sheets/character-sheets.zip < _chatgpt_exports/character-sheets/source-sheets.txt
+          fi
+          ls -lh _chatgpt_exports/character-sheets
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: character-sheets-export
+          path: _chatgpt_exports/character-sheets/
+
+      - name: Commit export metadata back to branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "chatgpt-export-bot"
+          git config user.email "chatgpt-export-bot@example.invalid"
+          git add _chatgpt_exports/character-sheets/source-sheets.txt _chatgpt_exports/character-sheets/export-summary.txt
+          git commit -m "chore: add character sheets export metadata" || exit 0
+          git push
