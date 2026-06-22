@@ -1,0 +1,582 @@
+{
+  "batchId": "characters-0085-0096",
+  "version": "v4-approved-style-3x4-sequential-production-manifest",
+  "status": "ready_for_generation_in_filename_order_after_final_review",
+  "purpose": "Sequential character portrait production manifest. Generate files in filename order; crop left-to-right and top-to-bottom; name each crop by outputFile.",
+  "batch": {
+    "firstGlobalSlot": 85,
+    "lastGlobalSlot": 96,
+    "slotCount": 12,
+    "maxSlotsPerSheet": 12
+  },
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Generate sheets in filename order.",
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "If the generated sheet resolution differs, scale crop coordinates proportionally from the actual width/height while preserving 3 columns by 4 rows.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "order": [
+    "1. npc-new-020-worried",
+    "2. npc-new-020-angry",
+    "3. npc-new-021-neutral",
+    "4. npc-new-021-happy",
+    "5. npc-new-021-suspicious",
+    "6. npc-new-021-worried",
+    "7. npc-new-021-angry",
+    "8. npc-new-022-neutral",
+    "9. npc-new-022-happy",
+    "10. npc-new-022-suspicious",
+    "11. npc-new-023-neutral",
+    "12. npc-new-023-happy"
+  ],
+  "images": [
+    {
+      "order": 1,
+      "globalOrder": 85,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "imageId": "npc-new-020-worried",
+      "characterId": "npc-new-020",
+      "displayName": "Lord Pavren Duskmere",
+      "profession": "Investor",
+      "expression": "worried",
+      "outputFile": "npc-new-020-worried.png",
+      "ancestryOrSpecies": "human noble",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture",
+      "visualTraits": [
+        "tall soft-handed silhouette",
+        "pale skin",
+        "powdered dark hair",
+        "plum velvet coat",
+        "pearl buttons",
+        "velvet gloves",
+        "cold lazy smile"
+      ],
+      "professionProps": [
+        "pearl buttons",
+        "investment letter",
+        "velvet glove"
+      ],
+      "dominantColors": [
+        "plum",
+        "pearl",
+        "black"
+      ],
+      "prompt": "A tall soft-handed noble with pale skin, powdered dark hair, plum velvet coat, pearl buttons, velvet gloves, and a lazy smile that never reaches his eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: human noble. Identity anchors must remain unchanged: same person as npc-new-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    },
+    {
+      "order": 2,
+      "globalOrder": 86,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "imageId": "npc-new-020-angry",
+      "characterId": "npc-new-020",
+      "displayName": "Lord Pavren Duskmere",
+      "profession": "Investor",
+      "expression": "angry",
+      "outputFile": "npc-new-020-angry.png",
+      "ancestryOrSpecies": "human noble",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture",
+      "visualTraits": [
+        "tall soft-handed silhouette",
+        "pale skin",
+        "powdered dark hair",
+        "plum velvet coat",
+        "pearl buttons",
+        "velvet gloves",
+        "cold lazy smile"
+      ],
+      "professionProps": [
+        "pearl buttons",
+        "investment letter",
+        "velvet glove"
+      ],
+      "dominantColors": [
+        "plum",
+        "pearl",
+        "black"
+      ],
+      "prompt": "A tall soft-handed noble with pale skin, powdered dark hair, plum velvet coat, pearl buttons, velvet gloves, and a lazy smile that never reaches his eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: human noble. Identity anchors must remain unchanged: same person as npc-new-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    },
+    {
+      "order": 3,
+      "globalOrder": 87,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "imageId": "npc-new-021-neutral",
+      "characterId": "npc-new-021",
+      "displayName": "Mara Debtneedle",
+      "profession": "Debt Collector",
+      "expression": "neutral",
+      "outputFile": "npc-new-021-neutral.png",
+      "ancestryOrSpecies": "goblin-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-021: thin needle-straight debt collector, dark brown skin, charcoal veil, silver nose chain, ledger strapped across ribs, calm merciless expression",
+      "visualTraits": [
+        "thin needle-straight silhouette",
+        "dark brown skin",
+        "narrow eyes",
+        "charcoal veil",
+        "silver nose chain",
+        "rib-strapped ledger",
+        "calm merciless face"
+      ],
+      "professionProps": [
+        "rib-strapped ledger",
+        "silver nose chain",
+        "debt tokens"
+      ],
+      "dominantColors": [
+        "charcoal",
+        "silver",
+        "dark red"
+      ],
+      "prompt": "A thin needle-straight collector with dark brown skin, narrow eyes, charcoal veil, silver nose chain, and a ledger strapped like armor across her ribs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: goblin-kin. Identity anchors must remain unchanged: same person as npc-new-021: thin needle-straight debt collector, dark brown skin, charcoal veil, silver nose chain, ledger strapped across ribs, calm merciless expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    },
+    {
+      "order": 4,
+      "globalOrder": 88,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "imageId": "npc-new-021-happy",
+      "characterId": "npc-new-021",
+      "displayName": "Mara Debtneedle",
+      "profession": "Debt Collector",
+      "expression": "happy",
+      "outputFile": "npc-new-021-happy.png",
+      "ancestryOrSpecies": "goblin-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-021: thin needle-straight debt collector, dark brown skin, charcoal veil, silver nose chain, ledger strapped across ribs, calm merciless expression",
+      "visualTraits": [
+        "thin needle-straight silhouette",
+        "dark brown skin",
+        "narrow eyes",
+        "charcoal veil",
+        "silver nose chain",
+        "rib-strapped ledger",
+        "calm merciless face"
+      ],
+      "professionProps": [
+        "rib-strapped ledger",
+        "silver nose chain",
+        "debt tokens"
+      ],
+      "dominantColors": [
+        "charcoal",
+        "silver",
+        "dark red"
+      ],
+      "prompt": "A thin needle-straight collector with dark brown skin, narrow eyes, charcoal veil, silver nose chain, and a ledger strapped like armor across her ribs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: goblin-kin. Identity anchors must remain unchanged: same person as npc-new-021: thin needle-straight debt collector, dark brown skin, charcoal veil, silver nose chain, ledger strapped across ribs, calm merciless expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    },
+    {
+      "order": 5,
+      "globalOrder": 89,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "imageId": "npc-new-021-suspicious",
+      "characterId": "npc-new-021",
+      "displayName": "Mara Debtneedle",
+      "profession": "Debt Collector",
+      "expression": "suspicious",
+      "outputFile": "npc-new-021-suspicious.png",
+      "ancestryOrSpecies": "goblin-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-021: thin needle-straight debt collector, dark brown skin, charcoal veil, silver nose chain, ledger strapped across ribs, calm merciless expression",
+      "visualTraits": [
+        "thin needle-straight silhouette",
+        "dark brown skin",
+        "narrow eyes",
+        "charcoal veil",
+        "silver nose chain",
+        "rib-strapped ledger",
+        "calm merciless face"
+      ],
+      "professionProps": [
+        "rib-strapped ledger",
+        "silver nose chain",
+        "debt tokens"
+      ],
+      "dominantColors": [
+        "charcoal",
+        "silver",
+        "dark red"
+      ],
+      "prompt": "A thin needle-straight collector with dark brown skin, narrow eyes, charcoal veil, silver nose chain, and a ledger strapped like armor across her ribs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: goblin-kin. Identity anchors must remain unchanged: same person as npc-new-021: thin needle-straight debt collector, dark brown skin, charcoal veil, silver nose chain, ledger strapped across ribs, calm merciless expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    },
+    {
+      "order": 6,
+      "globalOrder": 90,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "imageId": "npc-new-021-worried",
+      "characterId": "npc-new-021",
+      "displayName": "Mara Debtneedle",
+      "profession": "Debt Collector",
+      "expression": "worried",
+      "outputFile": "npc-new-021-worried.png",
+      "ancestryOrSpecies": "goblin-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-021: thin needle-straight debt collector, dark brown skin, charcoal veil, silver nose chain, ledger strapped across ribs, calm merciless expression",
+      "visualTraits": [
+        "thin needle-straight silhouette",
+        "dark brown skin",
+        "narrow eyes",
+        "charcoal veil",
+        "silver nose chain",
+        "rib-strapped ledger",
+        "calm merciless face"
+      ],
+      "professionProps": [
+        "rib-strapped ledger",
+        "silver nose chain",
+        "debt tokens"
+      ],
+      "dominantColors": [
+        "charcoal",
+        "silver",
+        "dark red"
+      ],
+      "prompt": "A thin needle-straight collector with dark brown skin, narrow eyes, charcoal veil, silver nose chain, and a ledger strapped like armor across her ribs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: goblin-kin. Identity anchors must remain unchanged: same person as npc-new-021: thin needle-straight debt collector, dark brown skin, charcoal veil, silver nose chain, ledger strapped across ribs, calm merciless expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    },
+    {
+      "order": 7,
+      "globalOrder": 91,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "imageId": "npc-new-021-angry",
+      "characterId": "npc-new-021",
+      "displayName": "Mara Debtneedle",
+      "profession": "Debt Collector",
+      "expression": "angry",
+      "outputFile": "npc-new-021-angry.png",
+      "ancestryOrSpecies": "goblin-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-021: thin needle-straight debt collector, dark brown skin, charcoal veil, silver nose chain, ledger strapped across ribs, calm merciless expression",
+      "visualTraits": [
+        "thin needle-straight silhouette",
+        "dark brown skin",
+        "narrow eyes",
+        "charcoal veil",
+        "silver nose chain",
+        "rib-strapped ledger",
+        "calm merciless face"
+      ],
+      "professionProps": [
+        "rib-strapped ledger",
+        "silver nose chain",
+        "debt tokens"
+      ],
+      "dominantColors": [
+        "charcoal",
+        "silver",
+        "dark red"
+      ],
+      "prompt": "A thin needle-straight collector with dark brown skin, narrow eyes, charcoal veil, silver nose chain, and a ledger strapped like armor across her ribs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: goblin-kin. Identity anchors must remain unchanged: same person as npc-new-021: thin needle-straight debt collector, dark brown skin, charcoal veil, silver nose chain, ledger strapped across ribs, calm merciless expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    },
+    {
+      "order": 8,
+      "globalOrder": 92,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "imageId": "npc-new-022-neutral",
+      "characterId": "npc-new-022",
+      "displayName": "Fenro Shieldpaper",
+      "profession": "Insurance Agent",
+      "expression": "neutral",
+      "outputFile": "npc-new-022-neutral.png",
+      "ancestryOrSpecies": "dwarf-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-022: round anxious insurance agent, fair freckled skin, sandy curls, mint-green waistcoat, spectacles on blue string, worried polite smile",
+      "visualTraits": [
+        "round anxious silhouette",
+        "fair freckled skin",
+        "sandy curls",
+        "mint-green waistcoat",
+        "spectacles on blue string",
+        "policy scrolls",
+        "worried polite smile"
+      ],
+      "professionProps": [
+        "policy scrolls",
+        "risk stamps",
+        "wax umbrella seal"
+      ],
+      "dominantColors": [
+        "mint green",
+        "blue",
+        "cream"
+      ],
+      "prompt": "A round anxious insurance agent with fair freckled skin, sandy curls, mint-green waistcoat, spectacles tied to his collar with blue string, and policy scrolls hugged to his chest. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: dwarf-kin. Identity anchors must remain unchanged: same person as npc-new-022: round anxious insurance agent, fair freckled skin, sandy curls, mint-green waistcoat, spectacles on blue string, worried polite smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    },
+    {
+      "order": 9,
+      "globalOrder": 93,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "imageId": "npc-new-022-happy",
+      "characterId": "npc-new-022",
+      "displayName": "Fenro Shieldpaper",
+      "profession": "Insurance Agent",
+      "expression": "happy",
+      "outputFile": "npc-new-022-happy.png",
+      "ancestryOrSpecies": "dwarf-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-022: round anxious insurance agent, fair freckled skin, sandy curls, mint-green waistcoat, spectacles on blue string, worried polite smile",
+      "visualTraits": [
+        "round anxious silhouette",
+        "fair freckled skin",
+        "sandy curls",
+        "mint-green waistcoat",
+        "spectacles on blue string",
+        "policy scrolls",
+        "worried polite smile"
+      ],
+      "professionProps": [
+        "policy scrolls",
+        "risk stamps",
+        "wax umbrella seal"
+      ],
+      "dominantColors": [
+        "mint green",
+        "blue",
+        "cream"
+      ],
+      "prompt": "A round anxious insurance agent with fair freckled skin, sandy curls, mint-green waistcoat, spectacles tied to his collar with blue string, and policy scrolls hugged to his chest. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: dwarf-kin. Identity anchors must remain unchanged: same person as npc-new-022: round anxious insurance agent, fair freckled skin, sandy curls, mint-green waistcoat, spectacles on blue string, worried polite smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    },
+    {
+      "order": 10,
+      "globalOrder": 94,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "imageId": "npc-new-022-suspicious",
+      "characterId": "npc-new-022",
+      "displayName": "Fenro Shieldpaper",
+      "profession": "Insurance Agent",
+      "expression": "suspicious",
+      "outputFile": "npc-new-022-suspicious.png",
+      "ancestryOrSpecies": "dwarf-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-022: round anxious insurance agent, fair freckled skin, sandy curls, mint-green waistcoat, spectacles on blue string, worried polite smile",
+      "visualTraits": [
+        "round anxious silhouette",
+        "fair freckled skin",
+        "sandy curls",
+        "mint-green waistcoat",
+        "spectacles on blue string",
+        "policy scrolls",
+        "worried polite smile"
+      ],
+      "professionProps": [
+        "policy scrolls",
+        "risk stamps",
+        "wax umbrella seal"
+      ],
+      "dominantColors": [
+        "mint green",
+        "blue",
+        "cream"
+      ],
+      "prompt": "A round anxious insurance agent with fair freckled skin, sandy curls, mint-green waistcoat, spectacles tied to his collar with blue string, and policy scrolls hugged to his chest. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: dwarf-kin. Identity anchors must remain unchanged: same person as npc-new-022: round anxious insurance agent, fair freckled skin, sandy curls, mint-green waistcoat, spectacles on blue string, worried polite smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    },
+    {
+      "order": 11,
+      "globalOrder": 95,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "imageId": "npc-new-023-neutral",
+      "characterId": "npc-new-023",
+      "displayName": "Rudo Dockhand-King",
+      "profession": "Dock Foreman",
+      "expression": "neutral",
+      "outputFile": "npc-new-023-neutral.png",
+      "ancestryOrSpecies": "ogre-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-023: huge scarred dock foreman, deep umber skin, shaved scalp, broken nose, sleeveless blue work coat, rope tattoos, commanding dockside glare",
+      "visualTraits": [
+        "huge scarred silhouette",
+        "deep umber skin",
+        "shaved scalp",
+        "broken nose",
+        "rope tattoos",
+        "sleeveless blue work coat",
+        "commanding dock glare"
+      ],
+      "professionProps": [
+        "cargo hook",
+        "rope tattoos",
+        "dock schedule slate"
+      ],
+      "dominantColors": [
+        "work blue",
+        "rope tan",
+        "iron"
+      ],
+      "prompt": "A huge scarred dock foreman with deep umber skin, shaved scalp, broken nose, sleeveless blue work coat, rope tattoos around both forearms, and a cargo hook balanced across his shoulder. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: ogre-kin. Identity anchors must remain unchanged: same person as npc-new-023: huge scarred dock foreman, deep umber skin, shaved scalp, broken nose, sleeveless blue work coat, rope tattoos, commanding dockside glare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    },
+    {
+      "order": 12,
+      "globalOrder": 96,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "imageId": "npc-new-023-happy",
+      "characterId": "npc-new-023",
+      "displayName": "Rudo Dockhand-King",
+      "profession": "Dock Foreman",
+      "expression": "happy",
+      "outputFile": "npc-new-023-happy.png",
+      "ancestryOrSpecies": "ogre-kin",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-023: huge scarred dock foreman, deep umber skin, shaved scalp, broken nose, sleeveless blue work coat, rope tattoos, commanding dockside glare",
+      "visualTraits": [
+        "huge scarred silhouette",
+        "deep umber skin",
+        "shaved scalp",
+        "broken nose",
+        "rope tattoos",
+        "sleeveless blue work coat",
+        "commanding dock glare"
+      ],
+      "professionProps": [
+        "cargo hook",
+        "rope tattoos",
+        "dock schedule slate"
+      ],
+      "dominantColors": [
+        "work blue",
+        "rope tan",
+        "iron"
+      ],
+      "prompt": "A huge scarred dock foreman with deep umber skin, shaved scalp, broken nose, sleeveless blue work coat, rope tattoos around both forearms, and a cargo hook balanced across his shoulder. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: ogre-kin. Identity anchors must remain unchanged: same person as npc-new-023: huge scarred dock foreman, deep umber skin, shaved scalp, broken nose, sleeveless blue work coat, rope tattoos, commanding dockside glare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0085-0096"
+    }
+  ]
+}

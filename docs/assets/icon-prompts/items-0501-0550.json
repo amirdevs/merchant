@@ -1,0 +1,3651 @@
+{
+  "batch": {
+    "firstGlobalSlot": 501,
+    "lastGlobalSlot": 550,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. polar bear (many)\n2. alligator (one)\n3. alligator (few)\n4. alligator (many)\n5. baby alligator (one)\n6. baby alligator (few)\n7. baby alligator (many)\n8. crocodile (one)\n9. crocodile (few)\n10. crocodile (many)\n11. gecko (one)\n12. gila (one)\n13. iguana (one)\n14. scarce komodo dragon (one)\n15. scarce komodo dragon (few)\n16. scarce komodo dragon (many)\n17. lizard (one)\n18. newt (one)\n19. adder (one)\n20. adder (few)\n21. adder (many)\n22. anaconda (one)\n23. anaconda (few)\n24. anaconda (many)\n25. ball python (one)\n26. ball python (few)\n27. ball python (many)\n28. black mamba (one)\n29. black mamba (few)\n30. black mamba (many)\n31. grey snake (one)\n32. fabled mana viper (one)\n33. fabled mana viper (few)\n34. fabled mana viper (many)\n35. sea snake (one)\n36. shock serpent (one)\n37. small snake (one)\n38. viper (one)\n39. viper (few)\n40. viper (many)\n41. water moccasin (one)\n42. water moccasin (few)\n43. water moccasin (many)\n44. yellow snake (one)\n45. yellow snake (few)\n46. yellow snake (many)\n47. notable brain worm (one)\n48. scarce elephant slug (one)\n49. leech (one)\n50. slug (one)",
+  "order": [
+    "1. polar bear (many)",
+    "2. alligator (one)",
+    "3. alligator (few)",
+    "4. alligator (many)",
+    "5. baby alligator (one)",
+    "6. baby alligator (few)",
+    "7. baby alligator (many)",
+    "8. crocodile (one)",
+    "9. crocodile (few)",
+    "10. crocodile (many)",
+    "11. gecko (one)",
+    "12. gila (one)",
+    "13. iguana (one)",
+    "14. scarce komodo dragon (one)",
+    "15. scarce komodo dragon (few)",
+    "16. scarce komodo dragon (many)",
+    "17. lizard (one)",
+    "18. newt (one)",
+    "19. adder (one)",
+    "20. adder (few)",
+    "21. adder (many)",
+    "22. anaconda (one)",
+    "23. anaconda (few)",
+    "24. anaconda (many)",
+    "25. ball python (one)",
+    "26. ball python (few)",
+    "27. ball python (many)",
+    "28. black mamba (one)",
+    "29. black mamba (few)",
+    "30. black mamba (many)",
+    "31. grey snake (one)",
+    "32. fabled mana viper (one)",
+    "33. fabled mana viper (few)",
+    "34. fabled mana viper (many)",
+    "35. sea snake (one)",
+    "36. shock serpent (one)",
+    "37. small snake (one)",
+    "38. viper (one)",
+    "39. viper (few)",
+    "40. viper (many)",
+    "41. water moccasin (one)",
+    "42. water moccasin (few)",
+    "43. water moccasin (many)",
+    "44. yellow snake (one)",
+    "45. yellow snake (few)",
+    "46. yellow snake (many)",
+    "47. notable brain worm (one)",
+    "48. scarce elephant slug (one)",
+    "49. leech (one)",
+    "50. slug (one)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 501,
+      "itemIndex": 324,
+      "itemNumber": 325,
+      "itemName": "polar bear",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "megafauna",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "megafauna",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 150,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/polar_bear.png",
+      "output": "public/game-assets/items/animal_goods/polar_bear_many.png",
+      "prompt": "Create a very abundant quantity of polar bear, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: polar bear. Family: animal_goods. Subfamily: megafauna. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, megafauna, raw, common, crate, none, animals, megafauna, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel physically large and heavy.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 502,
+      "itemIndex": 325,
+      "itemNumber": 326,
+      "itemName": "alligator",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 30,
+      "weight": 30,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/alligator.png",
+      "output": "public/game-assets/items/animal_goods/alligator.png",
+      "prompt": "Create exactly one clear alligator, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: alligator. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 503,
+      "itemIndex": 325,
+      "itemNumber": 326,
+      "itemName": "alligator",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 30,
+      "weight": 30,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/alligator.png",
+      "output": "public/game-assets/items/animal_goods/alligator_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated alligator, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: alligator. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 504,
+      "itemIndex": 325,
+      "itemNumber": 326,
+      "itemName": "alligator",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 30,
+      "weight": 30,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/alligator.png",
+      "output": "public/game-assets/items/animal_goods/alligator_many.png",
+      "prompt": "Create a very abundant quantity of alligator, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: alligator. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 505,
+      "itemIndex": 326,
+      "itemNumber": 327,
+      "itemName": "baby alligator",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/baby_alligator.png",
+      "output": "public/game-assets/items/animal_goods/baby_alligator.png",
+      "prompt": "Create exactly one clear baby alligator, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: baby alligator. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 506,
+      "itemIndex": 326,
+      "itemNumber": 327,
+      "itemName": "baby alligator",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/baby_alligator.png",
+      "output": "public/game-assets/items/animal_goods/baby_alligator_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated baby alligator, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: baby alligator. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 507,
+      "itemIndex": 326,
+      "itemNumber": 327,
+      "itemName": "baby alligator",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/baby_alligator.png",
+      "output": "public/game-assets/items/animal_goods/baby_alligator_many.png",
+      "prompt": "Create a very abundant quantity of baby alligator, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: baby alligator. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 508,
+      "itemIndex": 327,
+      "itemNumber": 328,
+      "itemName": "crocodile",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/crocodile.png",
+      "output": "public/game-assets/items/animal_goods/crocodile.png",
+      "prompt": "Create exactly one clear crocodile, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: crocodile. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel physically large and heavy.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 509,
+      "itemIndex": 327,
+      "itemNumber": 328,
+      "itemName": "crocodile",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/crocodile.png",
+      "output": "public/game-assets/items/animal_goods/crocodile_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated crocodile, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: crocodile. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel physically large and heavy.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 510,
+      "itemIndex": 327,
+      "itemNumber": 328,
+      "itemName": "crocodile",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/crocodile.png",
+      "output": "public/game-assets/items/animal_goods/crocodile_many.png",
+      "prompt": "Create a very abundant quantity of crocodile, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: crocodile. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel physically large and heavy.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 511,
+      "itemIndex": 328,
+      "itemNumber": 329,
+      "itemName": "gecko",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/gecko.png",
+      "output": "public/game-assets/items/animal_goods/gecko.png",
+      "prompt": "Create exactly one clear gecko, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: gecko. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: single. Category cues: animal_goods, reptiles, raw, common, single, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 512,
+      "itemIndex": 329,
+      "itemNumber": 330,
+      "itemName": "gila",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/gila.png",
+      "output": "public/game-assets/items/animal_goods/gila.png",
+      "prompt": "Create exactly one clear gila, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: gila. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: single. Category cues: animal_goods, reptiles, raw, common, single, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 513,
+      "itemIndex": 330,
+      "itemNumber": 331,
+      "itemName": "iguana",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 3,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/iguana.png",
+      "output": "public/game-assets/items/animal_goods/iguana.png",
+      "prompt": "Create exactly one clear iguana, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: iguana. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: single. Category cues: animal_goods, reptiles, raw, common, single, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 514,
+      "itemIndex": 331,
+      "itemNumber": 332,
+      "itemName": "scarce komodo dragon",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "monster_derived"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 20,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/scarce_komodo_dragon.png",
+      "output": "public/game-assets/items/animal_goods/scarce_komodo_dragon.png",
+      "prompt": "Create exactly one clear scarce komodo dragon, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce komodo dragon. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, monster_derived, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 515,
+      "itemIndex": 331,
+      "itemNumber": 332,
+      "itemName": "scarce komodo dragon",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "monster_derived"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 20,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/scarce_komodo_dragon.png",
+      "output": "public/game-assets/items/animal_goods/scarce_komodo_dragon_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated scarce komodo dragon, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce komodo dragon. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, monster_derived, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 516,
+      "itemIndex": 331,
+      "itemNumber": 332,
+      "itemName": "scarce komodo dragon",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "monster_derived"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 20,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/scarce_komodo_dragon.png",
+      "output": "public/game-assets/items/animal_goods/scarce_komodo_dragon_many.png",
+      "prompt": "Create a very abundant quantity of scarce komodo dragon, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce komodo dragon. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, reptiles, raw, common, crate, none, animals, reptiles, animal_goods, raw, monster_derived, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 517,
+      "itemIndex": 332,
+      "itemNumber": 333,
+      "itemName": "lizard",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/lizard.png",
+      "output": "public/game-assets/items/animal_goods/lizard.png",
+      "prompt": "Create exactly one clear lizard, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: lizard. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: single. Category cues: animal_goods, reptiles, raw, common, single, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 518,
+      "itemIndex": 333,
+      "itemNumber": 334,
+      "itemName": "newt",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "reptiles",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "reptiles",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/newt.png",
+      "output": "public/game-assets/items/animal_goods/newt.png",
+      "prompt": "Create exactly one clear newt, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: newt. Family: animal_goods. Subfamily: reptiles. Trade role: raw. Bulk profile: single. Category cues: animal_goods, reptiles, raw, common, single, none, animals, reptiles, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 519,
+      "itemIndex": 334,
+      "itemNumber": 335,
+      "itemName": "adder",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/adder.png",
+      "output": "public/game-assets/items/animal_goods/adder.png",
+      "prompt": "Create exactly one clear adder, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: adder. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 520,
+      "itemIndex": 334,
+      "itemNumber": 335,
+      "itemName": "adder",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/adder.png",
+      "output": "public/game-assets/items/animal_goods/adder_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated adder, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: adder. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 521,
+      "itemIndex": 334,
+      "itemNumber": 335,
+      "itemName": "adder",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/adder.png",
+      "output": "public/game-assets/items/animal_goods/adder_many.png",
+      "prompt": "Create a very abundant quantity of adder, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: adder. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 522,
+      "itemIndex": 335,
+      "itemNumber": 336,
+      "itemName": "anaconda",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/anaconda.png",
+      "output": "public/game-assets/items/animal_goods/anaconda.png",
+      "prompt": "Create exactly one clear anaconda, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: anaconda. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 523,
+      "itemIndex": 335,
+      "itemNumber": 336,
+      "itemName": "anaconda",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/anaconda.png",
+      "output": "public/game-assets/items/animal_goods/anaconda_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated anaconda, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: anaconda. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 524,
+      "itemIndex": 335,
+      "itemNumber": 336,
+      "itemName": "anaconda",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/anaconda.png",
+      "output": "public/game-assets/items/animal_goods/anaconda_many.png",
+      "prompt": "Create a very abundant quantity of anaconda, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: anaconda. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 525,
+      "itemIndex": 336,
+      "itemNumber": 337,
+      "itemName": "ball python",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 7,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/ball_python.png",
+      "output": "public/game-assets/items/animal_goods/ball_python.png",
+      "prompt": "Create exactly one clear ball python, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ball python. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 526,
+      "itemIndex": 336,
+      "itemNumber": 337,
+      "itemName": "ball python",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 7,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/ball_python.png",
+      "output": "public/game-assets/items/animal_goods/ball_python_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ball python, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ball python. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 527,
+      "itemIndex": 336,
+      "itemNumber": 337,
+      "itemName": "ball python",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 7,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/ball_python.png",
+      "output": "public/game-assets/items/animal_goods/ball_python_many.png",
+      "prompt": "Create a very abundant quantity of ball python, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ball python. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 528,
+      "itemIndex": 337,
+      "itemNumber": 338,
+      "itemName": "black mamba",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 6,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/black_mamba.png",
+      "output": "public/game-assets/items/animal_goods/black_mamba.png",
+      "prompt": "Create exactly one clear black mamba, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: black mamba. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 529,
+      "itemIndex": 337,
+      "itemNumber": 338,
+      "itemName": "black mamba",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 6,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/black_mamba.png",
+      "output": "public/game-assets/items/animal_goods/black_mamba_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated black mamba, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: black mamba. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 530,
+      "itemIndex": 337,
+      "itemNumber": 338,
+      "itemName": "black mamba",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 6,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/black_mamba.png",
+      "output": "public/game-assets/items/animal_goods/black_mamba_many.png",
+      "prompt": "Create a very abundant quantity of black mamba, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: black mamba. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 531,
+      "itemIndex": 338,
+      "itemNumber": 339,
+      "itemName": "grey snake",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/grey_snake.png",
+      "output": "public/game-assets/items/animal_goods/grey_snake.png",
+      "prompt": "Create exactly one clear grey snake, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: grey snake. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: single. Category cues: animal_goods, snakes, raw, common, single, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 532,
+      "itemIndex": 339,
+      "itemNumber": 340,
+      "itemName": "fabled mana viper",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 7,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/fabled_mana_viper.png",
+      "output": "public/game-assets/items/animal_goods/fabled_mana_viper.png",
+      "prompt": "Create exactly one clear fabled mana viper, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fabled mana viper. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, uncommon, crate, none, animals, snakes, animal_goods, raw, crafted, common, fine, bulk_trade. It should feel medium-sized.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 533,
+      "itemIndex": 339,
+      "itemNumber": 340,
+      "itemName": "fabled mana viper",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 7,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/fabled_mana_viper.png",
+      "output": "public/game-assets/items/animal_goods/fabled_mana_viper_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated fabled mana viper, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: fabled mana viper. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, uncommon, crate, none, animals, snakes, animal_goods, raw, crafted, common, fine, bulk_trade. It should feel medium-sized.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 534,
+      "itemIndex": 339,
+      "itemNumber": 340,
+      "itemName": "fabled mana viper",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 7,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/fabled_mana_viper.png",
+      "output": "public/game-assets/items/animal_goods/fabled_mana_viper_many.png",
+      "prompt": "Create a very abundant quantity of fabled mana viper, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: fabled mana viper. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, uncommon, crate, none, animals, snakes, animal_goods, raw, crafted, common, fine, bulk_trade. It should feel medium-sized.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 535,
+      "itemIndex": 340,
+      "itemNumber": 341,
+      "itemName": "sea snake",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/sea_snake.png",
+      "output": "public/game-assets/items/animal_goods/sea_snake.png",
+      "prompt": "Create exactly one clear sea snake, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: sea snake. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: single. Category cues: animal_goods, snakes, raw, common, single, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 536,
+      "itemIndex": 341,
+      "itemNumber": 342,
+      "itemName": "shock serpent",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/shock_serpent.png",
+      "output": "public/game-assets/items/animal_goods/shock_serpent.png",
+      "prompt": "Create exactly one clear shock serpent, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: shock serpent. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: single. Category cues: animal_goods, snakes, raw, common, single, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 537,
+      "itemIndex": 342,
+      "itemNumber": 343,
+      "itemName": "small snake",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/small_snake.png",
+      "output": "public/game-assets/items/animal_goods/small_snake.png",
+      "prompt": "Create exactly one clear small snake, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: small snake. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: single. Category cues: animal_goods, snakes, raw, common, single, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 538,
+      "itemIndex": 343,
+      "itemNumber": 344,
+      "itemName": "viper",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/viper.png",
+      "output": "public/game-assets/items/animal_goods/viper.png",
+      "prompt": "Create exactly one clear viper, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: viper. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 539,
+      "itemIndex": 343,
+      "itemNumber": 344,
+      "itemName": "viper",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/viper.png",
+      "output": "public/game-assets/items/animal_goods/viper_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated viper, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: viper. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 540,
+      "itemIndex": 343,
+      "itemNumber": 344,
+      "itemName": "viper",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/viper.png",
+      "output": "public/game-assets/items/animal_goods/viper_many.png",
+      "prompt": "Create a very abundant quantity of viper, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: viper. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 541,
+      "itemIndex": 344,
+      "itemNumber": 345,
+      "itemName": "water moccasin",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 4,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/water_moccasin.png",
+      "output": "public/game-assets/items/animal_goods/water_moccasin.png",
+      "prompt": "Create exactly one clear water moccasin, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: water moccasin. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 542,
+      "itemIndex": 344,
+      "itemNumber": 345,
+      "itemName": "water moccasin",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 4,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/water_moccasin.png",
+      "output": "public/game-assets/items/animal_goods/water_moccasin_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated water moccasin, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: water moccasin. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 543,
+      "itemIndex": 344,
+      "itemNumber": 345,
+      "itemName": "water moccasin",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 4,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/water_moccasin.png",
+      "output": "public/game-assets/items/animal_goods/water_moccasin_many.png",
+      "prompt": "Create a very abundant quantity of water moccasin, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: water moccasin. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 544,
+      "itemIndex": 345,
+      "itemNumber": 346,
+      "itemName": "yellow snake",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/yellow_snake.png",
+      "output": "public/game-assets/items/animal_goods/yellow_snake.png",
+      "prompt": "Create exactly one clear yellow snake, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: yellow snake. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 545,
+      "itemIndex": 345,
+      "itemNumber": 346,
+      "itemName": "yellow snake",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/yellow_snake.png",
+      "output": "public/game-assets/items/animal_goods/yellow_snake_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated yellow snake, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: yellow snake. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 546,
+      "itemIndex": 345,
+      "itemNumber": 346,
+      "itemName": "yellow snake",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "animals",
+        "snakes",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "snakes",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/yellow_snake.png",
+      "output": "public/game-assets/items/animal_goods/yellow_snake_many.png",
+      "prompt": "Create a very abundant quantity of yellow snake, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: yellow snake. Family: animal_goods. Subfamily: snakes. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, snakes, raw, common, crate, none, animals, snakes, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should feel medium-sized.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 547,
+      "itemIndex": 346,
+      "itemNumber": 347,
+      "itemName": "notable brain worm",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "monster_parts",
+        "worms",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/notable_brain_worm.png",
+      "output": "public/game-assets/items/curio/notable_brain_worm.png",
+      "prompt": "Create exactly one clear notable brain worm, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: notable brain worm. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: single. Category cues: curio, monster_parts, curio, common, single, none, monster_parts, worms, curio, crafted, common, bulk_trade, monster_part, curio. It should read clearly in a small inventory tile.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 548,
+      "itemIndex": 347,
+      "itemNumber": 348,
+      "itemName": "scarce elephant slug",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "worms",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "worms",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/scarce_elephant_slug.png",
+      "output": "public/game-assets/items/animal_goods/scarce_elephant_slug.png",
+      "prompt": "Create exactly one clear scarce elephant slug, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce elephant slug. Family: animal_goods. Subfamily: worms. Trade role: raw. Bulk profile: single. Category cues: animal_goods, worms, raw, common, single, none, animals, worms, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 549,
+      "itemIndex": 348,
+      "itemNumber": 349,
+      "itemName": "leech",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "worms",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "worms",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/leech.png",
+      "output": "public/game-assets/items/animal_goods/leech.png",
+      "prompt": "Create exactly one clear leech, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: leech. Family: animal_goods. Subfamily: worms. Trade role: raw. Bulk profile: single. Category cues: animal_goods, worms, raw, common, single, none, animals, worms, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 550,
+      "itemIndex": 349,
+      "itemNumber": 350,
+      "itemName": "slug",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "animals",
+        "worms",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "worms",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/slug.png",
+      "output": "public/game-assets/items/animal_goods/slug.png",
+      "prompt": "Create exactly one clear slug, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: slug. Family: animal_goods. Subfamily: worms. Trade role: raw. Bulk profile: single. Category cues: animal_goods, worms, raw, common, single, none, animals, worms, animal_goods, raw, crafted, common, bulk_trade, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

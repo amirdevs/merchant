@@ -1,0 +1,4059 @@
+{
+  "batch": {
+    "firstGlobalSlot": 4551,
+    "lastGlobalSlot": 4600,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. barley flatbread (many)\n2. honeycrust roll (one)\n3. honeycrust roll (few)\n4. honeycrust roll (many)\n5. salt bun (one)\n6. salt bun (few)\n7. salt bun (many)\n8. moonbun pastry (one)\n9. moonbun pastry (few)\n10. moonbun pastry (many)\n11. orchard pie (one)\n12. orchard pie (few)\n13. orchard pie (many)\n14. sailor hardcake (one)\n15. festival sugar twist (one)\n16. festival sugar twist (few)\n17. festival sugar twist (many)\n18. amber wheat sack (one)\n19. amber wheat sack (few)\n20. amber wheat sack (many)\n21. blue barley sack (one)\n22. blue barley sack (few)\n23. blue barley sack (many)\n24. red millet sack (one)\n25. red millet sack (few)\n26. red millet sack (many)\n27. moonpea seed packet (one)\n28. moonpea seed packet (few)\n29. moonpea seed packet (many)\n30. saffron crocus bulbs (one)\n31. saffron crocus bulbs (few)\n32. saffron crocus bulbs (many)\n33. orchard graft bundle (one)\n34. clover feed sack (one)\n35. sunpear (one)\n36. sunpear (few)\n37. sunpear (many)\n38. moonplum (one)\n39. moonplum (few)\n40. moonplum (many)\n41. saltmelon (one)\n42. saltmelon (few)\n43. saltmelon (many)\n44. ruby carrot (one)\n45. ruby carrot (few)\n46. ruby carrot (many)\n47. lantern squash (one)\n48. lantern squash (few)\n49. lantern squash (many)\n50. glassberry basket (one)",
+  "order": [
+    "1. barley flatbread (many)",
+    "2. honeycrust roll (one)",
+    "3. honeycrust roll (few)",
+    "4. honeycrust roll (many)",
+    "5. salt bun (one)",
+    "6. salt bun (few)",
+    "7. salt bun (many)",
+    "8. moonbun pastry (one)",
+    "9. moonbun pastry (few)",
+    "10. moonbun pastry (many)",
+    "11. orchard pie (one)",
+    "12. orchard pie (few)",
+    "13. orchard pie (many)",
+    "14. sailor hardcake (one)",
+    "15. festival sugar twist (one)",
+    "16. festival sugar twist (few)",
+    "17. festival sugar twist (many)",
+    "18. amber wheat sack (one)",
+    "19. amber wheat sack (few)",
+    "20. amber wheat sack (many)",
+    "21. blue barley sack (one)",
+    "22. blue barley sack (few)",
+    "23. blue barley sack (many)",
+    "24. red millet sack (one)",
+    "25. red millet sack (few)",
+    "26. red millet sack (many)",
+    "27. moonpea seed packet (one)",
+    "28. moonpea seed packet (few)",
+    "29. moonpea seed packet (many)",
+    "30. saffron crocus bulbs (one)",
+    "31. saffron crocus bulbs (few)",
+    "32. saffron crocus bulbs (many)",
+    "33. orchard graft bundle (one)",
+    "34. clover feed sack (one)",
+    "35. sunpear (one)",
+    "36. sunpear (few)",
+    "37. sunpear (many)",
+    "38. moonplum (one)",
+    "39. moonplum (few)",
+    "40. moonplum (many)",
+    "41. saltmelon (one)",
+    "42. saltmelon (few)",
+    "43. saltmelon (many)",
+    "44. ruby carrot (one)",
+    "45. ruby carrot (few)",
+    "46. ruby carrot (many)",
+    "47. lantern squash (one)",
+    "48. lantern squash (few)",
+    "49. lantern squash (many)",
+    "50. glassberry basket (one)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 4551,
+      "itemIndex": 1980,
+      "itemNumber": 1981,
+      "itemName": "barley flatbread",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "bread",
+        "grain",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "bread",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/barley_flatbread.png",
+      "output": "public/game-assets/items/food/barley_flatbread_many.png",
+      "prompt": "Create a very abundant quantity of barley flatbread, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: barley flatbread. Family: food. Subfamily: bread. Trade role: finished. Bulk profile: basket. Category cues: food, bread, finished, common, basket, expires, food, bread, grain, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 4552,
+      "itemIndex": 1981,
+      "itemNumber": 1982,
+      "itemName": "honeycrust roll",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "bread",
+        "honey",
+        "curio",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "bread",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/honeycrust_roll.png",
+      "output": "public/game-assets/items/food/honeycrust_roll.png",
+      "prompt": "Create exactly one clear honeycrust roll, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: honeycrust roll. Family: food. Subfamily: bread. Trade role: finished. Bulk profile: basket. Category cues: food, bread, finished, common, basket, expires, food, bread, honey, curio, finished, farmed, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 4553,
+      "itemIndex": 1981,
+      "itemNumber": 1982,
+      "itemName": "honeycrust roll",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "bread",
+        "honey",
+        "curio",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "bread",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/honeycrust_roll.png",
+      "output": "public/game-assets/items/food/honeycrust_roll_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated honeycrust roll, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: honeycrust roll. Family: food. Subfamily: bread. Trade role: finished. Bulk profile: basket. Category cues: food, bread, finished, common, basket, expires, food, bread, honey, curio, finished, farmed, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 4554,
+      "itemIndex": 1981,
+      "itemNumber": 1982,
+      "itemName": "honeycrust roll",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "bread",
+        "honey",
+        "curio",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "bread",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/honeycrust_roll.png",
+      "output": "public/game-assets/items/food/honeycrust_roll_many.png",
+      "prompt": "Create a very abundant quantity of honeycrust roll, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: honeycrust roll. Family: food. Subfamily: bread. Trade role: finished. Bulk profile: basket. Category cues: food, bread, finished, common, basket, expires, food, bread, honey, curio, finished, farmed, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 4555,
+      "itemIndex": 1982,
+      "itemNumber": 1983,
+      "itemName": "salt bun",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "bread",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "bread",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/salt_bun.png",
+      "output": "public/game-assets/items/spice/salt_bun.png",
+      "prompt": "Create exactly one clear salt bun, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: salt bun. Family: spice. Subfamily: bread. Trade role: ingredient. Bulk profile: sack. Category cues: spice, bread, ingredient, common, sack, preserved, food, bread, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 4556,
+      "itemIndex": 1982,
+      "itemNumber": 1983,
+      "itemName": "salt bun",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "bread",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "bread",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/salt_bun.png",
+      "output": "public/game-assets/items/spice/salt_bun_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated salt bun, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: salt bun. Family: spice. Subfamily: bread. Trade role: ingredient. Bulk profile: sack. Category cues: spice, bread, ingredient, common, sack, preserved, food, bread, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 4557,
+      "itemIndex": 1982,
+      "itemNumber": 1983,
+      "itemName": "salt bun",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "bread",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "bread",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/salt_bun.png",
+      "output": "public/game-assets/items/spice/salt_bun_many.png",
+      "prompt": "Create a very abundant quantity of salt bun, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: salt bun. Family: spice. Subfamily: bread. Trade role: ingredient. Bulk profile: sack. Category cues: spice, bread, ingredient, common, sack, preserved, food, bread, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 4558,
+      "itemIndex": 1983,
+      "itemNumber": 1984,
+      "itemName": "moonbun pastry",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "desserts",
+        "curio",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "desserts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "food/moonbun_pastry.png",
+      "output": "public/game-assets/items/food/moonbun_pastry.png",
+      "prompt": "Create exactly one clear moonbun pastry, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: moonbun pastry. Family: food. Subfamily: desserts. Trade role: finished. Bulk profile: basket. Category cues: food, desserts, finished, common, basket, expires, food, desserts, curio, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 4559,
+      "itemIndex": 1983,
+      "itemNumber": 1984,
+      "itemName": "moonbun pastry",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "desserts",
+        "curio",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "desserts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "food/moonbun_pastry.png",
+      "output": "public/game-assets/items/food/moonbun_pastry_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated moonbun pastry, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: moonbun pastry. Family: food. Subfamily: desserts. Trade role: finished. Bulk profile: basket. Category cues: food, desserts, finished, common, basket, expires, food, desserts, curio, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 4560,
+      "itemIndex": 1983,
+      "itemNumber": 1984,
+      "itemName": "moonbun pastry",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "desserts",
+        "curio",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "desserts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "food/moonbun_pastry.png",
+      "output": "public/game-assets/items/food/moonbun_pastry_many.png",
+      "prompt": "Create a very abundant quantity of moonbun pastry, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: moonbun pastry. Family: food. Subfamily: desserts. Trade role: finished. Bulk profile: basket. Category cues: food, desserts, finished, common, basket, expires, food, desserts, curio, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 4561,
+      "itemIndex": 1984,
+      "itemNumber": 1985,
+      "itemName": "orchard pie",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "desserts",
+        "fruit",
+        "curio",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "desserts",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 2,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "produce/orchard_pie.png",
+      "output": "public/game-assets/items/produce/orchard_pie.png",
+      "prompt": "Create exactly one clear orchard pie, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: orchard pie. Family: produce. Subfamily: desserts. Trade role: ingredient. Bulk profile: basket. Category cues: produce, desserts, ingredient, common, basket, fresh, food, desserts, fruit, curio, produce, ingredient, farmed, foraged. It should read clearly in a small inventory tile.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 4562,
+      "itemIndex": 1984,
+      "itemNumber": 1985,
+      "itemName": "orchard pie",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "desserts",
+        "fruit",
+        "curio",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "desserts",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 2,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "produce/orchard_pie.png",
+      "output": "public/game-assets/items/produce/orchard_pie_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated orchard pie, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: orchard pie. Family: produce. Subfamily: desserts. Trade role: ingredient. Bulk profile: basket. Category cues: produce, desserts, ingredient, common, basket, fresh, food, desserts, fruit, curio, produce, ingredient, farmed, foraged. It should read clearly in a small inventory tile.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 4563,
+      "itemIndex": 1984,
+      "itemNumber": 1985,
+      "itemName": "orchard pie",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "desserts",
+        "fruit",
+        "curio",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "desserts",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 2,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "produce/orchard_pie.png",
+      "output": "public/game-assets/items/produce/orchard_pie_many.png",
+      "prompt": "Create a very abundant quantity of orchard pie, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: orchard pie. Family: produce. Subfamily: desserts. Trade role: ingredient. Bulk profile: basket. Category cues: produce, desserts, ingredient, common, basket, fresh, food, desserts, fruit, curio, produce, ingredient, farmed, foraged. It should read clearly in a small inventory tile.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 4564,
+      "itemIndex": 1985,
+      "itemNumber": 1986,
+      "itemName": "sailor hardcake",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "food",
+        "travel",
+        "finished"
+      ],
+      "family": "travel",
+      "subfamily": "travel",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "travel/sailor_hardcake.png",
+      "output": "public/game-assets/items/travel/sailor_hardcake.png",
+      "prompt": "Create exactly one clear sailor hardcake, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: sailor hardcake. Family: travel. Subfamily: travel. Trade role: finished. Bulk profile: single. Category cues: travel, travel, finished, common, single, none, food, travel, finished, crafted, common, bulk_trade, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 4565,
+      "itemIndex": 1986,
+      "itemNumber": 1987,
+      "itemName": "festival sugar twist",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "desserts",
+        "festival_good",
+        "curio",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "desserts",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/festival_sugar_twist.png",
+      "output": "public/game-assets/items/spice/festival_sugar_twist.png",
+      "prompt": "Create exactly one clear festival sugar twist, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: festival sugar twist. Family: spice. Subfamily: desserts. Trade role: ingredient. Bulk profile: sack. Category cues: spice, desserts, ingredient, common, sack, preserved, food, desserts, festival_good, curio, spice, ingredient, crafted, common. It should read clearly in a small inventory tile.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 4566,
+      "itemIndex": 1986,
+      "itemNumber": 1987,
+      "itemName": "festival sugar twist",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "desserts",
+        "festival_good",
+        "curio",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "desserts",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/festival_sugar_twist.png",
+      "output": "public/game-assets/items/spice/festival_sugar_twist_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated festival sugar twist, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: festival sugar twist. Family: spice. Subfamily: desserts. Trade role: ingredient. Bulk profile: sack. Category cues: spice, desserts, ingredient, common, sack, preserved, food, desserts, festival_good, curio, spice, ingredient, crafted, common. It should read clearly in a small inventory tile.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 4567,
+      "itemIndex": 1986,
+      "itemNumber": 1987,
+      "itemName": "festival sugar twist",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "desserts",
+        "festival_good",
+        "curio",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "desserts",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/festival_sugar_twist.png",
+      "output": "public/game-assets/items/spice/festival_sugar_twist_many.png",
+      "prompt": "Create a very abundant quantity of festival sugar twist, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: festival sugar twist. Family: spice. Subfamily: desserts. Trade role: ingredient. Bulk profile: sack. Category cues: spice, desserts, ingredient, common, sack, preserved, food, desserts, festival_good, curio, spice, ingredient, crafted, common. It should read clearly in a small inventory tile.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 4568,
+      "itemIndex": 1987,
+      "itemNumber": 1988,
+      "itemName": "amber wheat sack",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "grain",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "grain",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/amber_wheat_sack.png",
+      "output": "public/game-assets/items/food/amber_wheat_sack.png",
+      "prompt": "Create exactly one clear amber wheat sack, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: amber wheat sack. Family: food. Subfamily: grain. Trade role: finished. Bulk profile: basket. Category cues: food, grain, finished, common, basket, expires, grain, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 4569,
+      "itemIndex": 1987,
+      "itemNumber": 1988,
+      "itemName": "amber wheat sack",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "grain",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "grain",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/amber_wheat_sack.png",
+      "output": "public/game-assets/items/food/amber_wheat_sack_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated amber wheat sack, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: amber wheat sack. Family: food. Subfamily: grain. Trade role: finished. Bulk profile: basket. Category cues: food, grain, finished, common, basket, expires, grain, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 4570,
+      "itemIndex": 1987,
+      "itemNumber": 1988,
+      "itemName": "amber wheat sack",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "grain",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "grain",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/amber_wheat_sack.png",
+      "output": "public/game-assets/items/food/amber_wheat_sack_many.png",
+      "prompt": "Create a very abundant quantity of amber wheat sack, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: amber wheat sack. Family: food. Subfamily: grain. Trade role: finished. Bulk profile: basket. Category cues: food, grain, finished, common, basket, expires, grain, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 4571,
+      "itemIndex": 1988,
+      "itemNumber": 1989,
+      "itemName": "blue barley sack",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "grain",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "grain",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/blue_barley_sack.png",
+      "output": "public/game-assets/items/food/blue_barley_sack.png",
+      "prompt": "Create exactly one clear blue barley sack, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: blue barley sack. Family: food. Subfamily: grain. Trade role: finished. Bulk profile: basket. Category cues: food, grain, finished, common, basket, expires, grain, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 4572,
+      "itemIndex": 1988,
+      "itemNumber": 1989,
+      "itemName": "blue barley sack",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "grain",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "grain",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/blue_barley_sack.png",
+      "output": "public/game-assets/items/food/blue_barley_sack_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated blue barley sack, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: blue barley sack. Family: food. Subfamily: grain. Trade role: finished. Bulk profile: basket. Category cues: food, grain, finished, common, basket, expires, grain, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 4573,
+      "itemIndex": 1988,
+      "itemNumber": 1989,
+      "itemName": "blue barley sack",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "grain",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "grain",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/blue_barley_sack.png",
+      "output": "public/game-assets/items/food/blue_barley_sack_many.png",
+      "prompt": "Create a very abundant quantity of blue barley sack, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: blue barley sack. Family: food. Subfamily: grain. Trade role: finished. Bulk profile: basket. Category cues: food, grain, finished, common, basket, expires, grain, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 4574,
+      "itemIndex": 1989,
+      "itemNumber": 1990,
+      "itemName": "red millet sack",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "grain",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "grain",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/red_millet_sack.png",
+      "output": "public/game-assets/items/food/red_millet_sack.png",
+      "prompt": "Create exactly one clear red millet sack, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: red millet sack. Family: food. Subfamily: grain. Trade role: finished. Bulk profile: basket. Category cues: food, grain, finished, common, basket, expires, grain, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 4575,
+      "itemIndex": 1989,
+      "itemNumber": 1990,
+      "itemName": "red millet sack",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "grain",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "grain",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/red_millet_sack.png",
+      "output": "public/game-assets/items/food/red_millet_sack_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated red millet sack, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: red millet sack. Family: food. Subfamily: grain. Trade role: finished. Bulk profile: basket. Category cues: food, grain, finished, common, basket, expires, grain, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 4576,
+      "itemIndex": 1989,
+      "itemNumber": 1990,
+      "itemName": "red millet sack",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "grain",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "grain",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/red_millet_sack.png",
+      "output": "public/game-assets/items/food/red_millet_sack_many.png",
+      "prompt": "Create a very abundant quantity of red millet sack, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: red millet sack. Family: food. Subfamily: grain. Trade role: finished. Bulk profile: basket. Category cues: food, grain, finished, common, basket, expires, grain, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 4577,
+      "itemIndex": 1990,
+      "itemNumber": 1991,
+      "itemName": "moonpea seed packet",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "grain",
+        "seeds",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "seeds",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/moonpea_seed_packet.png",
+      "output": "public/game-assets/items/grain/moonpea_seed_packet.png",
+      "prompt": "Create exactly one clear moonpea seed packet, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: moonpea seed packet. Family: grain. Subfamily: seeds. Trade role: ingredient. Bulk profile: sack. Category cues: grain, seeds, ingredient, common, sack, preserved, grain, seeds, ingredient, farmed, common, dry, daily_staple, grain. It should read clearly in a small inventory tile.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 4578,
+      "itemIndex": 1990,
+      "itemNumber": 1991,
+      "itemName": "moonpea seed packet",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "grain",
+        "seeds",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "seeds",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/moonpea_seed_packet.png",
+      "output": "public/game-assets/items/grain/moonpea_seed_packet_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated moonpea seed packet, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: moonpea seed packet. Family: grain. Subfamily: seeds. Trade role: ingredient. Bulk profile: sack. Category cues: grain, seeds, ingredient, common, sack, preserved, grain, seeds, ingredient, farmed, common, dry, daily_staple, grain. It should read clearly in a small inventory tile.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 4579,
+      "itemIndex": 1990,
+      "itemNumber": 1991,
+      "itemName": "moonpea seed packet",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "grain",
+        "seeds",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "seeds",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/moonpea_seed_packet.png",
+      "output": "public/game-assets/items/grain/moonpea_seed_packet_many.png",
+      "prompt": "Create a very abundant quantity of moonpea seed packet, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: moonpea seed packet. Family: grain. Subfamily: seeds. Trade role: ingredient. Bulk profile: sack. Category cues: grain, seeds, ingredient, common, sack, preserved, grain, seeds, ingredient, farmed, common, dry, daily_staple, grain. It should read clearly in a small inventory tile.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 4580,
+      "itemIndex": 1991,
+      "itemNumber": 1992,
+      "itemName": "saffron crocus bulbs",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "grain",
+        "seeds",
+        "spice",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "seeds",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "grain/saffron_crocus_bulbs.png",
+      "output": "public/game-assets/items/grain/saffron_crocus_bulbs.png",
+      "prompt": "Create exactly one clear saffron crocus bulbs, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: saffron crocus bulbs. Family: grain. Subfamily: seeds. Trade role: ingredient. Bulk profile: sack. Category cues: grain, seeds, ingredient, uncommon, sack, preserved, grain, seeds, spice, ingredient, farmed, common, fine, dry. It should read clearly in a small inventory tile.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 4581,
+      "itemIndex": 1991,
+      "itemNumber": 1992,
+      "itemName": "saffron crocus bulbs",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "grain",
+        "seeds",
+        "spice",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "seeds",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "grain/saffron_crocus_bulbs.png",
+      "output": "public/game-assets/items/grain/saffron_crocus_bulbs_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated saffron crocus bulbs, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: saffron crocus bulbs. Family: grain. Subfamily: seeds. Trade role: ingredient. Bulk profile: sack. Category cues: grain, seeds, ingredient, uncommon, sack, preserved, grain, seeds, spice, ingredient, farmed, common, fine, dry. It should read clearly in a small inventory tile.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 4582,
+      "itemIndex": 1991,
+      "itemNumber": 1992,
+      "itemName": "saffron crocus bulbs",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "grain",
+        "seeds",
+        "spice",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "seeds",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "grain/saffron_crocus_bulbs.png",
+      "output": "public/game-assets/items/grain/saffron_crocus_bulbs_many.png",
+      "prompt": "Create a very abundant quantity of saffron crocus bulbs, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: saffron crocus bulbs. Family: grain. Subfamily: seeds. Trade role: ingredient. Bulk profile: sack. Category cues: grain, seeds, ingredient, uncommon, sack, preserved, grain, seeds, spice, ingredient, farmed, common, fine, dry. It should read clearly in a small inventory tile.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 4583,
+      "itemIndex": 1992,
+      "itemNumber": 1993,
+      "itemName": "orchard graft bundle",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "grain",
+        "produce",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "grain",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "curio/orchard_graft_bundle.png",
+      "output": "public/game-assets/items/curio/orchard_graft_bundle.png",
+      "prompt": "Create exactly one clear orchard graft bundle, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: orchard graft bundle. Family: curio. Subfamily: grain. Trade role: curio. Bulk profile: single. Category cues: curio, grain, curio, common, single, none, grain, produce, curio, crafted, common, bulk_trade, curio, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 4584,
+      "itemIndex": 1993,
+      "itemNumber": 1994,
+      "itemName": "clover feed sack",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "grain",
+        "livestock",
+        "animal"
+      ],
+      "family": "livestock",
+      "subfamily": "grain",
+      "tradeRole": "animal",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "animal"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "caged"
+        ],
+        "artVariant": [
+          "cage",
+          "single_object"
+        ],
+        "featureHooks": [
+          "pack_animal"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "cage",
+      "storageNeeds": [
+        "stable"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "livestock/clover_feed_sack.png",
+      "output": "public/game-assets/items/livestock/clover_feed_sack.png",
+      "prompt": "Create exactly one clear clover feed sack, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: clover feed sack. Family: livestock. Subfamily: grain. Trade role: animal. Bulk profile: cage. Category cues: livestock, grain, animal, common, cage, none, grain, livestock, animal, farmed, common, stable, bulk_trade, animal. It should read clearly in a small inventory tile.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 4585,
+      "itemIndex": 1994,
+      "itemNumber": 1995,
+      "itemName": "sunpear",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "fruit",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "fruit",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/sunpear.png",
+      "output": "public/game-assets/items/produce/sunpear.png",
+      "prompt": "Create exactly one clear sunpear, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: sunpear. Family: produce. Subfamily: fruit. Trade role: ingredient. Bulk profile: basket. Category cues: produce, fruit, ingredient, common, basket, fresh, produce, fruit, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 4586,
+      "itemIndex": 1994,
+      "itemNumber": 1995,
+      "itemName": "sunpear",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "fruit",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "fruit",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/sunpear.png",
+      "output": "public/game-assets/items/produce/sunpear_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated sunpear, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: sunpear. Family: produce. Subfamily: fruit. Trade role: ingredient. Bulk profile: basket. Category cues: produce, fruit, ingredient, common, basket, fresh, produce, fruit, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 4587,
+      "itemIndex": 1994,
+      "itemNumber": 1995,
+      "itemName": "sunpear",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "fruit",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "fruit",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/sunpear.png",
+      "output": "public/game-assets/items/produce/sunpear_many.png",
+      "prompt": "Create a very abundant quantity of sunpear, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: sunpear. Family: produce. Subfamily: fruit. Trade role: ingredient. Bulk profile: basket. Category cues: produce, fruit, ingredient, common, basket, fresh, produce, fruit, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 4588,
+      "itemIndex": 1995,
+      "itemNumber": 1996,
+      "itemName": "moonplum",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "fruit",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "fruit",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/moonplum.png",
+      "output": "public/game-assets/items/produce/moonplum.png",
+      "prompt": "Create exactly one clear moonplum, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: moonplum. Family: produce. Subfamily: fruit. Trade role: ingredient. Bulk profile: basket. Category cues: produce, fruit, ingredient, common, basket, fresh, produce, fruit, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 4589,
+      "itemIndex": 1995,
+      "itemNumber": 1996,
+      "itemName": "moonplum",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "fruit",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "fruit",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/moonplum.png",
+      "output": "public/game-assets/items/produce/moonplum_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated moonplum, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: moonplum. Family: produce. Subfamily: fruit. Trade role: ingredient. Bulk profile: basket. Category cues: produce, fruit, ingredient, common, basket, fresh, produce, fruit, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 4590,
+      "itemIndex": 1995,
+      "itemNumber": 1996,
+      "itemName": "moonplum",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "fruit",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "fruit",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/moonplum.png",
+      "output": "public/game-assets/items/produce/moonplum_many.png",
+      "prompt": "Create a very abundant quantity of moonplum, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: moonplum. Family: produce. Subfamily: fruit. Trade role: ingredient. Bulk profile: basket. Category cues: produce, fruit, ingredient, common, basket, fresh, produce, fruit, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 4591,
+      "itemIndex": 1996,
+      "itemNumber": 1997,
+      "itemName": "saltmelon",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "fruit",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "fruit",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/saltmelon.png",
+      "output": "public/game-assets/items/produce/saltmelon.png",
+      "prompt": "Create exactly one clear saltmelon, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: saltmelon. Family: produce. Subfamily: fruit. Trade role: ingredient. Bulk profile: basket. Category cues: produce, fruit, ingredient, common, basket, fresh, produce, fruit, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 4592,
+      "itemIndex": 1996,
+      "itemNumber": 1997,
+      "itemName": "saltmelon",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "fruit",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "fruit",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/saltmelon.png",
+      "output": "public/game-assets/items/produce/saltmelon_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated saltmelon, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: saltmelon. Family: produce. Subfamily: fruit. Trade role: ingredient. Bulk profile: basket. Category cues: produce, fruit, ingredient, common, basket, fresh, produce, fruit, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 4593,
+      "itemIndex": 1996,
+      "itemNumber": 1997,
+      "itemName": "saltmelon",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "fruit",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "fruit",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/saltmelon.png",
+      "output": "public/game-assets/items/produce/saltmelon_many.png",
+      "prompt": "Create a very abundant quantity of saltmelon, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: saltmelon. Family: produce. Subfamily: fruit. Trade role: ingredient. Bulk profile: basket. Category cues: produce, fruit, ingredient, common, basket, fresh, produce, fruit, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 4594,
+      "itemIndex": 1997,
+      "itemNumber": 1998,
+      "itemName": "ruby carrot",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "veggies",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/ruby_carrot.png",
+      "output": "public/game-assets/items/produce/ruby_carrot.png",
+      "prompt": "Create exactly one clear ruby carrot, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ruby carrot. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, produce, veggies, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 4595,
+      "itemIndex": 1997,
+      "itemNumber": 1998,
+      "itemName": "ruby carrot",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "veggies",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/ruby_carrot.png",
+      "output": "public/game-assets/items/produce/ruby_carrot_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ruby carrot, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ruby carrot. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, produce, veggies, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 4596,
+      "itemIndex": 1997,
+      "itemNumber": 1998,
+      "itemName": "ruby carrot",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "veggies",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/ruby_carrot.png",
+      "output": "public/game-assets/items/produce/ruby_carrot_many.png",
+      "prompt": "Create a very abundant quantity of ruby carrot, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ruby carrot. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, produce, veggies, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 4597,
+      "itemIndex": 1998,
+      "itemNumber": 1999,
+      "itemName": "lantern squash",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "veggies",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/lantern_squash.png",
+      "output": "public/game-assets/items/produce/lantern_squash.png",
+      "prompt": "Create exactly one clear lantern squash, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: lantern squash. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, produce, veggies, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 4598,
+      "itemIndex": 1998,
+      "itemNumber": 1999,
+      "itemName": "lantern squash",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "veggies",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/lantern_squash.png",
+      "output": "public/game-assets/items/produce/lantern_squash_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated lantern squash, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: lantern squash. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, produce, veggies, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 4599,
+      "itemIndex": 1998,
+      "itemNumber": 1999,
+      "itemName": "lantern squash",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "veggies",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/lantern_squash.png",
+      "output": "public/game-assets/items/produce/lantern_squash_many.png",
+      "prompt": "Create a very abundant quantity of lantern squash, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: lantern squash. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, produce, veggies, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 4600,
+      "itemIndex": 1999,
+      "itemNumber": 2000,
+      "itemName": "glassberry basket",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "produce",
+        "fruit",
+        "food",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "fruit",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "fruit"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "produce/glassberry_basket.png",
+      "output": "public/game-assets/items/produce/glassberry_basket.png",
+      "prompt": "Create exactly one clear glassberry basket, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: glassberry basket. Family: produce. Subfamily: fruit. Trade role: ingredient. Bulk profile: basket. Category cues: produce, fruit, ingredient, common, basket, fresh, produce, fruit, food, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

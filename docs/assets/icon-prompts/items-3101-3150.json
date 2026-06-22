@@ -1,0 +1,3733 @@
+{
+  "batch": {
+    "firstGlobalSlot": 3101,
+    "lastGlobalSlot": 3150,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. market ogre (one)\n2. market ogre (few)\n3. market ogre (many)\n4. scarce mage ogre (one)\n5. scarce mage ogre (few)\n6. scarce mage ogre (many)\n7. market rock mire brute (one)\n8. market rock mire brute (few)\n9. market rock mire brute (many)\n10. notable ghost mire brute (one)\n11. notable ghost mire brute (few)\n12. notable ghost mire brute (many)\n13. scarce stone giant (one)\n14. fabled titan (one)\n15. market swamp mire brute (one)\n16. market swamp mire brute (few)\n17. market swamp mire brute (many)\n18. notable two headed ogre (one)\n19. notable two headed ogre (few)\n20. notable two headed ogre (many)\n21. bogling (one)\n22. bogling (few)\n23. bogling (many)\n24. bogling high priest (one)\n25. bogling high priest (few)\n26. bogling high priest (many)\n27. bogling knight (one)\n28. bogling knight (few)\n29. bogling knight (many)\n30. bogling priest (one)\n31. bogling priest (few)\n32. bogling priest (many)\n33. bogling sorcerer (one)\n34. bogling sorcerer (few)\n35. bogling sorcerer (many)\n36. bogling warlord (one)\n37. bogling warlord (few)\n38. bogling warlord (many)\n39. bogling warrior (one)\n40. bogling warrior (few)\n41. bogling warrior (many)\n42. bogling wizard (one)\n43. bogling wizard (few)\n44. bogling wizard (many)\n45. oxen (one)\n46. oxen (few)\n47. oxen (many)\n48. donkey (one)\n49. donkey (few)\n50. donkey (many)",
+  "order": [
+    "1. market ogre (one)",
+    "2. market ogre (few)",
+    "3. market ogre (many)",
+    "4. scarce mage ogre (one)",
+    "5. scarce mage ogre (few)",
+    "6. scarce mage ogre (many)",
+    "7. market rock mire brute (one)",
+    "8. market rock mire brute (few)",
+    "9. market rock mire brute (many)",
+    "10. notable ghost mire brute (one)",
+    "11. notable ghost mire brute (few)",
+    "12. notable ghost mire brute (many)",
+    "13. scarce stone giant (one)",
+    "14. fabled titan (one)",
+    "15. market swamp mire brute (one)",
+    "16. market swamp mire brute (few)",
+    "17. market swamp mire brute (many)",
+    "18. notable two headed ogre (one)",
+    "19. notable two headed ogre (few)",
+    "20. notable two headed ogre (many)",
+    "21. bogling (one)",
+    "22. bogling (few)",
+    "23. bogling (many)",
+    "24. bogling high priest (one)",
+    "25. bogling high priest (few)",
+    "26. bogling high priest (many)",
+    "27. bogling knight (one)",
+    "28. bogling knight (few)",
+    "29. bogling knight (many)",
+    "30. bogling priest (one)",
+    "31. bogling priest (few)",
+    "32. bogling priest (many)",
+    "33. bogling sorcerer (one)",
+    "34. bogling sorcerer (few)",
+    "35. bogling sorcerer (many)",
+    "36. bogling warlord (one)",
+    "37. bogling warlord (few)",
+    "38. bogling warlord (many)",
+    "39. bogling warrior (one)",
+    "40. bogling warrior (few)",
+    "41. bogling warrior (many)",
+    "42. bogling wizard (one)",
+    "43. bogling wizard (few)",
+    "44. bogling wizard (many)",
+    "45. oxen (one)",
+    "46. oxen (few)",
+    "47. oxen (many)",
+    "48. donkey (one)",
+    "49. donkey (few)",
+    "50. donkey (many)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 3101,
+      "itemIndex": 1378,
+      "itemNumber": 1379,
+      "itemName": "market ogre",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 150,
+      "weight": 1250,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/market_ogre.png",
+      "output": "public/game-assets/items/curio/market_ogre.png",
+      "prompt": "Create exactly one clear market ogre, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market ogre. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, giants, curio, crafted, common, bulk_trade, monster_part, curio. It should feel physically large and heavy.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 3102,
+      "itemIndex": 1378,
+      "itemNumber": 1379,
+      "itemName": "market ogre",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 150,
+      "weight": 1250,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/market_ogre.png",
+      "output": "public/game-assets/items/curio/market_ogre_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated market ogre, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: market ogre. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, giants, curio, crafted, common, bulk_trade, monster_part, curio. It should feel physically large and heavy.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 3103,
+      "itemIndex": 1378,
+      "itemNumber": 1379,
+      "itemName": "market ogre",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 150,
+      "weight": 1250,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/market_ogre.png",
+      "output": "public/game-assets/items/curio/market_ogre_many.png",
+      "prompt": "Create a very abundant quantity of market ogre, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: market ogre. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, giants, curio, crafted, common, bulk_trade, monster_part, curio. It should feel physically large and heavy.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 3104,
+      "itemIndex": 1379,
+      "itemNumber": 1380,
+      "itemName": "scarce mage ogre",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 1250,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/scarce_mage_ogre.png",
+      "output": "public/game-assets/items/curio/scarce_mage_ogre.png",
+      "prompt": "Create exactly one clear scarce mage ogre, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce mage ogre. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, uncommon, crate, none, monster_parts, giants, curio, crafted, common, fine, locked, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 3105,
+      "itemIndex": 1379,
+      "itemNumber": 1380,
+      "itemName": "scarce mage ogre",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 1250,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/scarce_mage_ogre.png",
+      "output": "public/game-assets/items/curio/scarce_mage_ogre_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated scarce mage ogre, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce mage ogre. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, uncommon, crate, none, monster_parts, giants, curio, crafted, common, fine, locked, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 3106,
+      "itemIndex": 1379,
+      "itemNumber": 1380,
+      "itemName": "scarce mage ogre",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 1250,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/scarce_mage_ogre.png",
+      "output": "public/game-assets/items/curio/scarce_mage_ogre_many.png",
+      "prompt": "Create a very abundant quantity of scarce mage ogre, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce mage ogre. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, uncommon, crate, none, monster_parts, giants, curio, crafted, common, fine, locked, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 3107,
+      "itemIndex": 1380,
+      "itemNumber": 1381,
+      "itemName": "market rock mire brute",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 400,
+      "weight": 3000,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/market_rock_mire_brute.png",
+      "output": "public/game-assets/items/curio/market_rock_mire_brute.png",
+      "prompt": "Create exactly one clear market rock mire brute, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market rock mire brute. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, giants, curio, crafted, common, bulk_trade, monster_part, curio. It should feel physically large and heavy.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 3108,
+      "itemIndex": 1380,
+      "itemNumber": 1381,
+      "itemName": "market rock mire brute",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 400,
+      "weight": 3000,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/market_rock_mire_brute.png",
+      "output": "public/game-assets/items/curio/market_rock_mire_brute_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated market rock mire brute, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: market rock mire brute. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, giants, curio, crafted, common, bulk_trade, monster_part, curio. It should feel physically large and heavy.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 3109,
+      "itemIndex": 1380,
+      "itemNumber": 1381,
+      "itemName": "market rock mire brute",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 400,
+      "weight": 3000,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/market_rock_mire_brute.png",
+      "output": "public/game-assets/items/curio/market_rock_mire_brute_many.png",
+      "prompt": "Create a very abundant quantity of market rock mire brute, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: market rock mire brute. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, giants, curio, crafted, common, bulk_trade, monster_part, curio. It should feel physically large and heavy.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 3110,
+      "itemIndex": 1381,
+      "itemNumber": 1382,
+      "itemName": "notable ghost mire brute",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 400,
+      "weight": 150,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/notable_ghost_mire_brute.png",
+      "output": "public/game-assets/items/curio/notable_ghost_mire_brute.png",
+      "prompt": "Create exactly one clear notable ghost mire brute, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: notable ghost mire brute. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, uncommon, crate, none, monster_parts, giants, curio, crafted, common, fine, bulk_trade, monster_part. It should feel physically large and heavy.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 3111,
+      "itemIndex": 1381,
+      "itemNumber": 1382,
+      "itemName": "notable ghost mire brute",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 400,
+      "weight": 150,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/notable_ghost_mire_brute.png",
+      "output": "public/game-assets/items/curio/notable_ghost_mire_brute_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated notable ghost mire brute, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: notable ghost mire brute. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, uncommon, crate, none, monster_parts, giants, curio, crafted, common, fine, bulk_trade, monster_part. It should feel physically large and heavy.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 3112,
+      "itemIndex": 1381,
+      "itemNumber": 1382,
+      "itemName": "notable ghost mire brute",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 400,
+      "weight": 150,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/notable_ghost_mire_brute.png",
+      "output": "public/game-assets/items/curio/notable_ghost_mire_brute_many.png",
+      "prompt": "Create a very abundant quantity of notable ghost mire brute, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: notable ghost mire brute. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, uncommon, crate, none, monster_parts, giants, curio, crafted, common, fine, bulk_trade, monster_part. It should feel physically large and heavy.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 3113,
+      "itemIndex": 1382,
+      "itemNumber": 1383,
+      "itemName": "scarce stone giant",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "monster_parts",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 500,
+      "weight": 5000,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "stone/scarce_stone_giant.png",
+      "output": "public/game-assets/items/stone/scarce_stone_giant.png",
+      "prompt": "Create exactly one clear scarce stone giant, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce stone giant. Family: stone. Subfamily: monster_parts. Trade role: raw. Bulk profile: crate. Category cues: stone, monster_parts, raw, rare, crate, none, monster_parts, giants, curio, stone, raw, mined, common, fine. It should feel physically large and heavy.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 3114,
+      "itemIndex": 1383,
+      "itemNumber": 1384,
+      "itemName": "fabled titan",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 300,
+      "weight": 3000,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/fabled_titan.png",
+      "output": "public/game-assets/items/curio/fabled_titan.png",
+      "prompt": "Create exactly one clear fabled titan, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fabled titan. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, rare, crate, none, monster_parts, giants, curio, crafted, common, fine, masterwork, locked. It should feel physically large and heavy.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 3115,
+      "itemIndex": 1384,
+      "itemNumber": 1385,
+      "itemName": "market swamp mire brute",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 500,
+      "weight": 1000,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/market_swamp_mire_brute.png",
+      "output": "public/game-assets/items/curio/market_swamp_mire_brute.png",
+      "prompt": "Create exactly one clear market swamp mire brute, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market swamp mire brute. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, giants, curio, crafted, common, bulk_trade, monster_part, curio. It should feel physically large and heavy.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 3116,
+      "itemIndex": 1384,
+      "itemNumber": 1385,
+      "itemName": "market swamp mire brute",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 500,
+      "weight": 1000,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/market_swamp_mire_brute.png",
+      "output": "public/game-assets/items/curio/market_swamp_mire_brute_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated market swamp mire brute, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: market swamp mire brute. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, giants, curio, crafted, common, bulk_trade, monster_part, curio. It should feel physically large and heavy.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 3117,
+      "itemIndex": 1384,
+      "itemNumber": 1385,
+      "itemName": "market swamp mire brute",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 500,
+      "weight": 1000,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/market_swamp_mire_brute.png",
+      "output": "public/game-assets/items/curio/market_swamp_mire_brute_many.png",
+      "prompt": "Create a very abundant quantity of market swamp mire brute, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: market swamp mire brute. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, giants, curio, crafted, common, bulk_trade, monster_part, curio. It should feel physically large and heavy.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 3118,
+      "itemIndex": 1385,
+      "itemNumber": 1386,
+      "itemName": "notable two headed ogre",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 200,
+      "weight": 1250,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/notable_two_headed_ogre.png",
+      "output": "public/game-assets/items/curio/notable_two_headed_ogre.png",
+      "prompt": "Create exactly one clear notable two headed ogre, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: notable two headed ogre. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, uncommon, crate, none, monster_parts, giants, curio, crafted, common, fine, bulk_trade, monster_part. It should feel physically large and heavy.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 3119,
+      "itemIndex": 1385,
+      "itemNumber": 1386,
+      "itemName": "notable two headed ogre",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 200,
+      "weight": 1250,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/notable_two_headed_ogre.png",
+      "output": "public/game-assets/items/curio/notable_two_headed_ogre_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated notable two headed ogre, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: notable two headed ogre. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, uncommon, crate, none, monster_parts, giants, curio, crafted, common, fine, bulk_trade, monster_part. It should feel physically large and heavy.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 3120,
+      "itemIndex": 1385,
+      "itemNumber": 1386,
+      "itemName": "notable two headed ogre",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "giants",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 200,
+      "weight": 1250,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/notable_two_headed_ogre.png",
+      "output": "public/game-assets/items/curio/notable_two_headed_ogre_many.png",
+      "prompt": "Create a very abundant quantity of notable two headed ogre, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: notable two headed ogre. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, uncommon, crate, none, monster_parts, giants, curio, crafted, common, fine, bulk_trade, monster_part. It should feel physically large and heavy.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 3121,
+      "itemIndex": 1386,
+      "itemNumber": 1387,
+      "itemName": "bogling",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_2.png",
+      "output": "public/game-assets/items/curio/bogling_2.png",
+      "prompt": "Create exactly one clear bogling, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: bogling. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 3122,
+      "itemIndex": 1386,
+      "itemNumber": 1387,
+      "itemName": "bogling",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_2.png",
+      "output": "public/game-assets/items/curio/bogling_2_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bogling, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 3123,
+      "itemIndex": 1386,
+      "itemNumber": 1387,
+      "itemName": "bogling",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_2.png",
+      "output": "public/game-assets/items/curio/bogling_2_many.png",
+      "prompt": "Create a very abundant quantity of bogling, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 3124,
+      "itemIndex": 1387,
+      "itemNumber": 1388,
+      "itemName": "bogling high priest",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_high_priest.png",
+      "output": "public/game-assets/items/curio/bogling_high_priest.png",
+      "prompt": "Create exactly one clear bogling high priest, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: bogling high priest. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 3125,
+      "itemIndex": 1387,
+      "itemNumber": 1388,
+      "itemName": "bogling high priest",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_high_priest.png",
+      "output": "public/game-assets/items/curio/bogling_high_priest_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bogling high priest, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling high priest. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 3126,
+      "itemIndex": 1387,
+      "itemNumber": 1388,
+      "itemName": "bogling high priest",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_high_priest.png",
+      "output": "public/game-assets/items/curio/bogling_high_priest_many.png",
+      "prompt": "Create a very abundant quantity of bogling high priest, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling high priest. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 3127,
+      "itemIndex": 1388,
+      "itemNumber": 1389,
+      "itemName": "bogling knight",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_knight.png",
+      "output": "public/game-assets/items/curio/bogling_knight.png",
+      "prompt": "Create exactly one clear bogling knight, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: bogling knight. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 3128,
+      "itemIndex": 1388,
+      "itemNumber": 1389,
+      "itemName": "bogling knight",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_knight.png",
+      "output": "public/game-assets/items/curio/bogling_knight_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bogling knight, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling knight. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 3129,
+      "itemIndex": 1388,
+      "itemNumber": 1389,
+      "itemName": "bogling knight",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_knight.png",
+      "output": "public/game-assets/items/curio/bogling_knight_many.png",
+      "prompt": "Create a very abundant quantity of bogling knight, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling knight. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 3130,
+      "itemIndex": 1389,
+      "itemNumber": 1390,
+      "itemName": "bogling priest",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_priest.png",
+      "output": "public/game-assets/items/curio/bogling_priest.png",
+      "prompt": "Create exactly one clear bogling priest, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: bogling priest. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 3131,
+      "itemIndex": 1389,
+      "itemNumber": 1390,
+      "itemName": "bogling priest",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_priest.png",
+      "output": "public/game-assets/items/curio/bogling_priest_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bogling priest, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling priest. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 3132,
+      "itemIndex": 1389,
+      "itemNumber": 1390,
+      "itemName": "bogling priest",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_priest.png",
+      "output": "public/game-assets/items/curio/bogling_priest_many.png",
+      "prompt": "Create a very abundant quantity of bogling priest, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling priest. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 3133,
+      "itemIndex": 1390,
+      "itemNumber": 1391,
+      "itemName": "bogling sorcerer",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_sorcerer.png",
+      "output": "public/game-assets/items/curio/bogling_sorcerer.png",
+      "prompt": "Create exactly one clear bogling sorcerer, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: bogling sorcerer. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 3134,
+      "itemIndex": 1390,
+      "itemNumber": 1391,
+      "itemName": "bogling sorcerer",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_sorcerer.png",
+      "output": "public/game-assets/items/curio/bogling_sorcerer_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bogling sorcerer, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling sorcerer. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 3135,
+      "itemIndex": 1390,
+      "itemNumber": 1391,
+      "itemName": "bogling sorcerer",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_sorcerer.png",
+      "output": "public/game-assets/items/curio/bogling_sorcerer_many.png",
+      "prompt": "Create a very abundant quantity of bogling sorcerer, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling sorcerer. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 3136,
+      "itemIndex": 1391,
+      "itemNumber": 1392,
+      "itemName": "bogling warlord",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_warlord.png",
+      "output": "public/game-assets/items/curio/bogling_warlord.png",
+      "prompt": "Create exactly one clear bogling warlord, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: bogling warlord. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 3137,
+      "itemIndex": 1391,
+      "itemNumber": 1392,
+      "itemName": "bogling warlord",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_warlord.png",
+      "output": "public/game-assets/items/curio/bogling_warlord_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bogling warlord, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling warlord. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 3138,
+      "itemIndex": 1391,
+      "itemNumber": 1392,
+      "itemName": "bogling warlord",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_warlord.png",
+      "output": "public/game-assets/items/curio/bogling_warlord_many.png",
+      "prompt": "Create a very abundant quantity of bogling warlord, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling warlord. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 3139,
+      "itemIndex": 1392,
+      "itemNumber": 1393,
+      "itemName": "bogling warrior",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_warrior.png",
+      "output": "public/game-assets/items/curio/bogling_warrior.png",
+      "prompt": "Create exactly one clear bogling warrior, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: bogling warrior. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 3140,
+      "itemIndex": 1392,
+      "itemNumber": 1393,
+      "itemName": "bogling warrior",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_warrior.png",
+      "output": "public/game-assets/items/curio/bogling_warrior_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bogling warrior, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling warrior. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 3141,
+      "itemIndex": 1392,
+      "itemNumber": 1393,
+      "itemName": "bogling warrior",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_warrior.png",
+      "output": "public/game-assets/items/curio/bogling_warrior_many.png",
+      "prompt": "Create a very abundant quantity of bogling warrior, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling warrior. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 3142,
+      "itemIndex": 1393,
+      "itemNumber": 1394,
+      "itemName": "bogling wizard",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_wizard.png",
+      "output": "public/game-assets/items/curio/bogling_wizard.png",
+      "prompt": "Create exactly one clear bogling wizard, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: bogling wizard. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 3143,
+      "itemIndex": 1393,
+      "itemNumber": 1394,
+      "itemName": "bogling wizard",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_wizard.png",
+      "output": "public/game-assets/items/curio/bogling_wizard_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bogling wizard, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling wizard. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 3144,
+      "itemIndex": 1393,
+      "itemNumber": 1394,
+      "itemName": "bogling wizard",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "bogling",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "monster_parts",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/bogling_wizard.png",
+      "output": "public/game-assets/items/curio/bogling_wizard_many.png",
+      "prompt": "Create a very abundant quantity of bogling wizard, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: bogling wizard. Family: curio. Subfamily: monster_parts. Trade role: curio. Bulk profile: crate. Category cues: curio, monster_parts, curio, common, crate, none, monster_parts, bogling, curio, crafted, common, bulk_trade, monster_part, curio. It should feel medium-sized.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 3145,
+      "itemIndex": 1394,
+      "itemNumber": 1395,
+      "itemName": "oxen",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "pack_animals",
+        "oxen",
+        "livestock",
+        "travel",
+        "finished"
+      ],
+      "family": "travel",
+      "subfamily": "pack_animals",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 0,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "travel/oxen.png",
+      "output": "public/game-assets/items/travel/oxen.png",
+      "prompt": "Create exactly one clear oxen, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: oxen. Family: travel. Subfamily: pack_animals. Trade role: finished. Bulk profile: crate. Category cues: travel, pack_animals, finished, common, crate, none, pack_animals, oxen, livestock, travel, finished, crafted, common, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 3146,
+      "itemIndex": 1394,
+      "itemNumber": 1395,
+      "itemName": "oxen",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "pack_animals",
+        "oxen",
+        "livestock",
+        "travel",
+        "finished"
+      ],
+      "family": "travel",
+      "subfamily": "pack_animals",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 0,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "travel/oxen.png",
+      "output": "public/game-assets/items/travel/oxen_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated oxen, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: oxen. Family: travel. Subfamily: pack_animals. Trade role: finished. Bulk profile: crate. Category cues: travel, pack_animals, finished, common, crate, none, pack_animals, oxen, livestock, travel, finished, crafted, common, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 3147,
+      "itemIndex": 1394,
+      "itemNumber": 1395,
+      "itemName": "oxen",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "pack_animals",
+        "oxen",
+        "livestock",
+        "travel",
+        "finished"
+      ],
+      "family": "travel",
+      "subfamily": "pack_animals",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 0,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "travel/oxen.png",
+      "output": "public/game-assets/items/travel/oxen_many.png",
+      "prompt": "Create a very abundant quantity of oxen, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: oxen. Family: travel. Subfamily: pack_animals. Trade role: finished. Bulk profile: crate. Category cues: travel, pack_animals, finished, common, crate, none, pack_animals, oxen, livestock, travel, finished, crafted, common, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 3148,
+      "itemIndex": 1395,
+      "itemNumber": 1396,
+      "itemName": "donkey",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "pack_animals",
+        "donkey",
+        "livestock",
+        "travel",
+        "finished"
+      ],
+      "family": "travel",
+      "subfamily": "pack_animals",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 40,
+      "weight": 0,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "travel/donkey.png",
+      "output": "public/game-assets/items/travel/donkey.png",
+      "prompt": "Create exactly one clear donkey, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: donkey. Family: travel. Subfamily: pack_animals. Trade role: finished. Bulk profile: crate. Category cues: travel, pack_animals, finished, common, crate, none, pack_animals, donkey, livestock, travel, finished, crafted, common, bulk_trade. It should feel medium-sized.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 3149,
+      "itemIndex": 1395,
+      "itemNumber": 1396,
+      "itemName": "donkey",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "pack_animals",
+        "donkey",
+        "livestock",
+        "travel",
+        "finished"
+      ],
+      "family": "travel",
+      "subfamily": "pack_animals",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 40,
+      "weight": 0,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "travel/donkey.png",
+      "output": "public/game-assets/items/travel/donkey_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated donkey, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: donkey. Family: travel. Subfamily: pack_animals. Trade role: finished. Bulk profile: crate. Category cues: travel, pack_animals, finished, common, crate, none, pack_animals, donkey, livestock, travel, finished, crafted, common, bulk_trade. It should feel medium-sized.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 3150,
+      "itemIndex": 1395,
+      "itemNumber": 1396,
+      "itemName": "donkey",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "pack_animals",
+        "donkey",
+        "livestock",
+        "travel",
+        "finished"
+      ],
+      "family": "travel",
+      "subfamily": "pack_animals",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 40,
+      "weight": 0,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "travel/donkey.png",
+      "output": "public/game-assets/items/travel/donkey_many.png",
+      "prompt": "Create a very abundant quantity of donkey, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: donkey. Family: travel. Subfamily: pack_animals. Trade role: finished. Bulk profile: crate. Category cues: travel, pack_animals, finished, common, crate, none, pack_animals, donkey, livestock, travel, finished, crafted, common, bulk_trade. It should feel medium-sized.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

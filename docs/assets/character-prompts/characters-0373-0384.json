@@ -1,0 +1,504 @@
+{
+  "batchId": "characters-0373-0384",
+  "version": "v4-approved-style-3x4-sequential-production-manifest",
+  "status": "ready_for_generation_in_filename_order_after_final_review",
+  "purpose": "Sequential character portrait production manifest. Generate files in filename order; crop left-to-right and top-to-bottom; name each crop by outputFile.",
+  "batch": {
+    "firstGlobalSlot": 373,
+    "lastGlobalSlot": 384,
+    "slotCount": 12,
+    "maxSlotsPerSheet": 12
+  },
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Generate sheets in filename order.",
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "If the generated sheet resolution differs, scale crop coordinates proportionally from the actual width/height while preserving 3 columns by 4 rows.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "order": [
+    "1. npc-legacy-061-happy",
+    "2. npc-legacy-061-suspicious",
+    "3. npc-legacy-062-neutral",
+    "4. npc-legacy-062-happy",
+    "5. npc-legacy-062-suspicious",
+    "6. npc-legacy-063-neutral",
+    "7. npc-legacy-063-happy",
+    "8. npc-legacy-063-suspicious",
+    "9. npc-legacy-064-neutral",
+    "10. npc-legacy-064-happy",
+    "11. npc-legacy-064-suspicious",
+    "12. npc-legacy-065-neutral"
+  ],
+  "images": [
+    {
+      "order": 1,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "imageId": "npc-legacy-061-happy",
+      "characterId": "npc-legacy-061",
+      "displayName": "Kesh Riverjaw",
+      "profession": "ferry clerk",
+      "expression": "happy",
+      "outputFile": "npc-legacy-061-happy.png",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "river-troll",
+      "magicalTraits": [
+        "small water droplets clinging to sideburns"
+      ],
+      "identityAnchor": "same person as npc-legacy-061: heavy river-troll silhouette, slate-blue skin, mossy sideburns, sleepy yellow eyes, waterproof vest, ferry clerk, river-troll, ticket punch",
+      "visualTraits": [
+        "heavy river-troll silhouette",
+        "slate-blue skin",
+        "mossy sideburns",
+        "sleepy yellow eyes",
+        "waterproof vest"
+      ],
+      "professionProps": [
+        "ticket punch",
+        "ferry token roll",
+        "river bell"
+      ],
+      "prompt": "A heavyset river-troll man with slate-blue skin, mossy sideburns, sleepy yellow eyes, waterproof brown vest, and a huge ticket punch on a chain. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 373,
+      "batchId": "characters-0373-0384"
+    },
+    {
+      "order": 2,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "imageId": "npc-legacy-061-suspicious",
+      "characterId": "npc-legacy-061",
+      "displayName": "Kesh Riverjaw",
+      "profession": "ferry clerk",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-061-suspicious.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "river-troll",
+      "magicalTraits": [
+        "small water droplets clinging to sideburns"
+      ],
+      "identityAnchor": "same person as npc-legacy-061: heavy river-troll silhouette, slate-blue skin, mossy sideburns, sleepy yellow eyes, waterproof vest, ferry clerk, river-troll, ticket punch",
+      "visualTraits": [
+        "heavy river-troll silhouette",
+        "slate-blue skin",
+        "mossy sideburns",
+        "sleepy yellow eyes",
+        "waterproof vest"
+      ],
+      "professionProps": [
+        "ticket punch",
+        "ferry token roll",
+        "river bell"
+      ],
+      "prompt": "A heavyset river-troll man with slate-blue skin, mossy sideburns, sleepy yellow eyes, waterproof brown vest, and a huge ticket punch on a chain. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 374,
+      "batchId": "characters-0373-0384"
+    },
+    {
+      "order": 3,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "imageId": "npc-legacy-062-neutral",
+      "characterId": "npc-legacy-062",
+      "displayName": "Pavia Goldspool",
+      "profession": "ribbon weaver",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-062-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-062: graceful ribbon silhouette, honey-brown skin, auburn hair, peacock shawl, gold bracelets, ribbon weaver, human, ribbon fan",
+      "visualTraits": [
+        "graceful ribbon silhouette",
+        "honey-brown skin",
+        "auburn hair",
+        "peacock shawl",
+        "gold bracelets"
+      ],
+      "professionProps": [
+        "ribbon fan",
+        "gold shuttle",
+        "color chart"
+      ],
+      "prompt": "A graceful woman with honey-brown skin, waist-length auburn hair, peacock-blue shawl, gold bracelets, and a fan of shimmering ribbons looped around both arms. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 375,
+      "batchId": "characters-0373-0384"
+    },
+    {
+      "order": 4,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "imageId": "npc-legacy-062-happy",
+      "characterId": "npc-legacy-062",
+      "displayName": "Pavia Goldspool",
+      "profession": "ribbon weaver",
+      "expression": "happy",
+      "outputFile": "npc-legacy-062-happy.png",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-062: graceful ribbon silhouette, honey-brown skin, auburn hair, peacock shawl, gold bracelets, ribbon weaver, human, ribbon fan",
+      "visualTraits": [
+        "graceful ribbon silhouette",
+        "honey-brown skin",
+        "auburn hair",
+        "peacock shawl",
+        "gold bracelets"
+      ],
+      "professionProps": [
+        "ribbon fan",
+        "gold shuttle",
+        "color chart"
+      ],
+      "prompt": "A graceful woman with honey-brown skin, waist-length auburn hair, peacock-blue shawl, gold bracelets, and a fan of shimmering ribbons looped around both arms. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 376,
+      "batchId": "characters-0373-0384"
+    },
+    {
+      "order": 5,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "imageId": "npc-legacy-062-suspicious",
+      "characterId": "npc-legacy-062",
+      "displayName": "Pavia Goldspool",
+      "profession": "ribbon weaver",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-062-suspicious.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-062: graceful ribbon silhouette, honey-brown skin, auburn hair, peacock shawl, gold bracelets, ribbon weaver, human, ribbon fan",
+      "visualTraits": [
+        "graceful ribbon silhouette",
+        "honey-brown skin",
+        "auburn hair",
+        "peacock shawl",
+        "gold bracelets"
+      ],
+      "professionProps": [
+        "ribbon fan",
+        "gold shuttle",
+        "color chart"
+      ],
+      "prompt": "A graceful woman with honey-brown skin, waist-length auburn hair, peacock-blue shawl, gold bracelets, and a fan of shimmering ribbons looped around both arms. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 377,
+      "batchId": "characters-0373-0384"
+    },
+    {
+      "order": 6,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "imageId": "npc-legacy-063-neutral",
+      "characterId": "npc-legacy-063",
+      "displayName": "Tomo Picklebarrel",
+      "profession": "pickler",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-063-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-063: round halfling silhouette, olive skin, wild green scarf, enormous eyebrows, stained apron, pickler, halfling, pickle barrel",
+      "visualTraits": [
+        "round halfling silhouette",
+        "olive skin",
+        "wild green scarf",
+        "enormous eyebrows",
+        "stained apron"
+      ],
+      "professionProps": [
+        "pickle barrel",
+        "wooden tasting fork",
+        "brine ladle"
+      ],
+      "prompt": "A round halfling man with olive skin, wild green scarf, enormous eyebrows, stained apron, and a little barrel hugged under one arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 378,
+      "batchId": "characters-0373-0384"
+    },
+    {
+      "order": 7,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "imageId": "npc-legacy-063-happy",
+      "characterId": "npc-legacy-063",
+      "displayName": "Tomo Picklebarrel",
+      "profession": "pickler",
+      "expression": "happy",
+      "outputFile": "npc-legacy-063-happy.png",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-063: round halfling silhouette, olive skin, wild green scarf, enormous eyebrows, stained apron, pickler, halfling, pickle barrel",
+      "visualTraits": [
+        "round halfling silhouette",
+        "olive skin",
+        "wild green scarf",
+        "enormous eyebrows",
+        "stained apron"
+      ],
+      "professionProps": [
+        "pickle barrel",
+        "wooden tasting fork",
+        "brine ladle"
+      ],
+      "prompt": "A round halfling man with olive skin, wild green scarf, enormous eyebrows, stained apron, and a little barrel hugged under one arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 379,
+      "batchId": "characters-0373-0384"
+    },
+    {
+      "order": 8,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "imageId": "npc-legacy-063-suspicious",
+      "characterId": "npc-legacy-063",
+      "displayName": "Tomo Picklebarrel",
+      "profession": "pickler",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-063-suspicious.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "halfling",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-063: round halfling silhouette, olive skin, wild green scarf, enormous eyebrows, stained apron, pickler, halfling, pickle barrel",
+      "visualTraits": [
+        "round halfling silhouette",
+        "olive skin",
+        "wild green scarf",
+        "enormous eyebrows",
+        "stained apron"
+      ],
+      "professionProps": [
+        "pickle barrel",
+        "wooden tasting fork",
+        "brine ladle"
+      ],
+      "prompt": "A round halfling man with olive skin, wild green scarf, enormous eyebrows, stained apron, and a little barrel hugged under one arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 380,
+      "batchId": "characters-0373-0384"
+    },
+    {
+      "order": 9,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "imageId": "npc-legacy-064-neutral",
+      "characterId": "npc-legacy-064",
+      "displayName": "Rashka Copperpaw",
+      "profession": "pot mender",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-064-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "catfolk",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-064: wiry catfolk silhouette, copper fur, green eyes, patched red apron, curled whiskers, pot mender, catfolk, copper rivet necklace",
+      "visualTraits": [
+        "wiry catfolk silhouette",
+        "copper fur",
+        "green eyes",
+        "patched red apron",
+        "curled whiskers"
+      ],
+      "professionProps": [
+        "copper rivet necklace",
+        "small hammer",
+        "mended pot"
+      ],
+      "prompt": "A wiry catfolk woman with copper fur, green eyes, patched red apron, curled whiskers, and a necklace of tiny copper rivets. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 381,
+      "batchId": "characters-0373-0384"
+    },
+    {
+      "order": 10,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "imageId": "npc-legacy-064-happy",
+      "characterId": "npc-legacy-064",
+      "displayName": "Rashka Copperpaw",
+      "profession": "pot mender",
+      "expression": "happy",
+      "outputFile": "npc-legacy-064-happy.png",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "catfolk",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-064: wiry catfolk silhouette, copper fur, green eyes, patched red apron, curled whiskers, pot mender, catfolk, copper rivet necklace",
+      "visualTraits": [
+        "wiry catfolk silhouette",
+        "copper fur",
+        "green eyes",
+        "patched red apron",
+        "curled whiskers"
+      ],
+      "professionProps": [
+        "copper rivet necklace",
+        "small hammer",
+        "mended pot"
+      ],
+      "prompt": "A wiry catfolk woman with copper fur, green eyes, patched red apron, curled whiskers, and a necklace of tiny copper rivets. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 382,
+      "batchId": "characters-0373-0384"
+    },
+    {
+      "order": 11,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "imageId": "npc-legacy-064-suspicious",
+      "characterId": "npc-legacy-064",
+      "displayName": "Rashka Copperpaw",
+      "profession": "pot mender",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-064-suspicious.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "catfolk",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-064: wiry catfolk silhouette, copper fur, green eyes, patched red apron, curled whiskers, pot mender, catfolk, copper rivet necklace",
+      "visualTraits": [
+        "wiry catfolk silhouette",
+        "copper fur",
+        "green eyes",
+        "patched red apron",
+        "curled whiskers"
+      ],
+      "professionProps": [
+        "copper rivet necklace",
+        "small hammer",
+        "mended pot"
+      ],
+      "prompt": "A wiry catfolk woman with copper fur, green eyes, patched red apron, curled whiskers, and a necklace of tiny copper rivets. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 383,
+      "batchId": "characters-0373-0384"
+    },
+    {
+      "order": 12,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "imageId": "npc-legacy-065-neutral",
+      "characterId": "npc-legacy-065",
+      "displayName": "Elowen Pearlcup",
+      "profession": "tea seller",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-065-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "half-elf",
+      "magicalTraits": [
+        "subtle steam curls shaped like birds"
+      ],
+      "identityAnchor": "same person as npc-legacy-065: serene half-elf silhouette, dark umber skin, pearl-white hair, moss-green robe, long fingers, tea seller, half-elf, porcelain tea cup",
+      "visualTraits": [
+        "serene half-elf silhouette",
+        "dark umber skin",
+        "pearl-white hair",
+        "moss-green robe",
+        "long fingers"
+      ],
+      "professionProps": [
+        "porcelain tea cup",
+        "tea tin",
+        "bird-painted saucer"
+      ],
+      "prompt": "A serene half-elf woman with dark umber skin, pearl-white hair bun, moss-green robe, long fingers, and a porcelain cup painted with tiny birds. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 384,
+      "batchId": "characters-0373-0384"
+    }
+  ]
+}

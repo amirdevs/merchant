@@ -1,0 +1,4097 @@
+{
+  "batch": {
+    "firstGlobalSlot": 1101,
+    "lastGlobalSlot": 1150,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. Redvale seeds (few)\n2. Redvale seeds (many)\n3. seedling broad tree (one)\n4. seedling broad tree (few)\n5. seedling broad tree (many)\n6. seedling bush (one)\n7. seedling bush (few)\n8. seedling bush (many)\n9. seedling curvy (one)\n10. seedling curvy (few)\n11. seedling curvy (many)\n12. seedling five leafs (one)\n13. seedling five leafs (few)\n14. seedling five leafs (many)\n15. seedling palm (one)\n16. seedling palm (few)\n17. seedling palm (many)\n18. seedling tree (one)\n19. seedling tree (few)\n20. seedling tree (many)\n21. seedling two leafs (one)\n22. seedling two leafs (few)\n23. seedling two leafs (many)\n24. islands republic seeds (one)\n25. islands republic seeds (few)\n26. islands republic seeds (many)\n27. market seeds (one)\n28. market seeds (few)\n29. market seeds (many)\n30. wheat seed (one)\n31. wheat seed (few)\n32. wheat seed (many)\n33. barley seed (one)\n34. barley seed (few)\n35. barley seed (many)\n36. sorghum seed (one)\n37. sorghum seed (few)\n38. sorghum seed (many)\n39. large branch (one)\n40. large branch (few)\n41. large branch (many)\n42. log (one)\n43. log (few)\n44. log (many)\n45. seedling bare (one)\n46. seedling bare (few)\n47. seedling bare (many)\n48. small branch (one)\n49. small branch (few)\n50. small branch (many)",
+  "order": [
+    "1. Redvale seeds (few)",
+    "2. Redvale seeds (many)",
+    "3. seedling broad tree (one)",
+    "4. seedling broad tree (few)",
+    "5. seedling broad tree (many)",
+    "6. seedling bush (one)",
+    "7. seedling bush (few)",
+    "8. seedling bush (many)",
+    "9. seedling curvy (one)",
+    "10. seedling curvy (few)",
+    "11. seedling curvy (many)",
+    "12. seedling five leafs (one)",
+    "13. seedling five leafs (few)",
+    "14. seedling five leafs (many)",
+    "15. seedling palm (one)",
+    "16. seedling palm (few)",
+    "17. seedling palm (many)",
+    "18. seedling tree (one)",
+    "19. seedling tree (few)",
+    "20. seedling tree (many)",
+    "21. seedling two leafs (one)",
+    "22. seedling two leafs (few)",
+    "23. seedling two leafs (many)",
+    "24. islands republic seeds (one)",
+    "25. islands republic seeds (few)",
+    "26. islands republic seeds (many)",
+    "27. market seeds (one)",
+    "28. market seeds (few)",
+    "29. market seeds (many)",
+    "30. wheat seed (one)",
+    "31. wheat seed (few)",
+    "32. wheat seed (many)",
+    "33. barley seed (one)",
+    "34. barley seed (few)",
+    "35. barley seed (many)",
+    "36. sorghum seed (one)",
+    "37. sorghum seed (few)",
+    "38. sorghum seed (many)",
+    "39. large branch (one)",
+    "40. large branch (few)",
+    "41. large branch (many)",
+    "42. log (one)",
+    "43. log (few)",
+    "44. log (many)",
+    "45. seedling bare (one)",
+    "46. seedling bare (few)",
+    "47. seedling bare (many)",
+    "48. small branch (one)",
+    "49. small branch (few)",
+    "50. small branch (many)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 1101,
+      "itemIndex": 565,
+      "itemNumber": 566,
+      "itemName": "Redvale seeds",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/redvale_seeds.png",
+      "output": "public/game-assets/items/grain/redvale_seeds_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated Redvale seeds, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: Redvale seeds. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 1102,
+      "itemIndex": 565,
+      "itemNumber": 566,
+      "itemName": "Redvale seeds",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/redvale_seeds.png",
+      "output": "public/game-assets/items/grain/redvale_seeds_many.png",
+      "prompt": "Create a very abundant quantity of Redvale seeds, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: Redvale seeds. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 1103,
+      "itemIndex": 566,
+      "itemNumber": 567,
+      "itemName": "seedling broad tree",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_broad_tree.png",
+      "output": "public/game-assets/items/grain/seedling_broad_tree.png",
+      "prompt": "Create exactly one clear seedling broad tree, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: seedling broad tree. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 1104,
+      "itemIndex": 566,
+      "itemNumber": 567,
+      "itemName": "seedling broad tree",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_broad_tree.png",
+      "output": "public/game-assets/items/grain/seedling_broad_tree_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated seedling broad tree, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling broad tree. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 1105,
+      "itemIndex": 566,
+      "itemNumber": 567,
+      "itemName": "seedling broad tree",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_broad_tree.png",
+      "output": "public/game-assets/items/grain/seedling_broad_tree_many.png",
+      "prompt": "Create a very abundant quantity of seedling broad tree, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling broad tree. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 1106,
+      "itemIndex": 567,
+      "itemNumber": 568,
+      "itemName": "seedling bush",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_bush.png",
+      "output": "public/game-assets/items/grain/seedling_bush.png",
+      "prompt": "Create exactly one clear seedling bush, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: seedling bush. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 1107,
+      "itemIndex": 567,
+      "itemNumber": 568,
+      "itemName": "seedling bush",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_bush.png",
+      "output": "public/game-assets/items/grain/seedling_bush_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated seedling bush, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling bush. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 1108,
+      "itemIndex": 567,
+      "itemNumber": 568,
+      "itemName": "seedling bush",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_bush.png",
+      "output": "public/game-assets/items/grain/seedling_bush_many.png",
+      "prompt": "Create a very abundant quantity of seedling bush, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling bush. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 1109,
+      "itemIndex": 568,
+      "itemNumber": 569,
+      "itemName": "seedling curvy",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_curvy.png",
+      "output": "public/game-assets/items/grain/seedling_curvy.png",
+      "prompt": "Create exactly one clear seedling curvy, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: seedling curvy. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 1110,
+      "itemIndex": 568,
+      "itemNumber": 569,
+      "itemName": "seedling curvy",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_curvy.png",
+      "output": "public/game-assets/items/grain/seedling_curvy_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated seedling curvy, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling curvy. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 1111,
+      "itemIndex": 568,
+      "itemNumber": 569,
+      "itemName": "seedling curvy",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_curvy.png",
+      "output": "public/game-assets/items/grain/seedling_curvy_many.png",
+      "prompt": "Create a very abundant quantity of seedling curvy, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling curvy. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 1112,
+      "itemIndex": 569,
+      "itemNumber": 570,
+      "itemName": "seedling five leafs",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_five_leafs.png",
+      "output": "public/game-assets/items/grain/seedling_five_leafs.png",
+      "prompt": "Create exactly one clear seedling five leafs, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: seedling five leafs. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 1113,
+      "itemIndex": 569,
+      "itemNumber": 570,
+      "itemName": "seedling five leafs",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_five_leafs.png",
+      "output": "public/game-assets/items/grain/seedling_five_leafs_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated seedling five leafs, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling five leafs. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 1114,
+      "itemIndex": 569,
+      "itemNumber": 570,
+      "itemName": "seedling five leafs",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_five_leafs.png",
+      "output": "public/game-assets/items/grain/seedling_five_leafs_many.png",
+      "prompt": "Create a very abundant quantity of seedling five leafs, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling five leafs. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 1115,
+      "itemIndex": 570,
+      "itemNumber": 571,
+      "itemName": "seedling palm",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_palm.png",
+      "output": "public/game-assets/items/grain/seedling_palm.png",
+      "prompt": "Create exactly one clear seedling palm, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: seedling palm. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 1116,
+      "itemIndex": 570,
+      "itemNumber": 571,
+      "itemName": "seedling palm",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_palm.png",
+      "output": "public/game-assets/items/grain/seedling_palm_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated seedling palm, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling palm. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 1117,
+      "itemIndex": 570,
+      "itemNumber": 571,
+      "itemName": "seedling palm",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_palm.png",
+      "output": "public/game-assets/items/grain/seedling_palm_many.png",
+      "prompt": "Create a very abundant quantity of seedling palm, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling palm. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 1118,
+      "itemIndex": 571,
+      "itemNumber": 572,
+      "itemName": "seedling tree",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_tree.png",
+      "output": "public/game-assets/items/grain/seedling_tree.png",
+      "prompt": "Create exactly one clear seedling tree, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: seedling tree. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 1119,
+      "itemIndex": 571,
+      "itemNumber": 572,
+      "itemName": "seedling tree",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_tree.png",
+      "output": "public/game-assets/items/grain/seedling_tree_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated seedling tree, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling tree. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 1120,
+      "itemIndex": 571,
+      "itemNumber": 572,
+      "itemName": "seedling tree",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_tree.png",
+      "output": "public/game-assets/items/grain/seedling_tree_many.png",
+      "prompt": "Create a very abundant quantity of seedling tree, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling tree. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 1121,
+      "itemIndex": 572,
+      "itemNumber": 573,
+      "itemName": "seedling two leafs",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_two_leafs.png",
+      "output": "public/game-assets/items/grain/seedling_two_leafs.png",
+      "prompt": "Create exactly one clear seedling two leafs, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: seedling two leafs. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 1122,
+      "itemIndex": 572,
+      "itemNumber": 573,
+      "itemName": "seedling two leafs",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_two_leafs.png",
+      "output": "public/game-assets/items/grain/seedling_two_leafs_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated seedling two leafs, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling two leafs. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 1123,
+      "itemIndex": 572,
+      "itemNumber": 573,
+      "itemName": "seedling two leafs",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/seedling_two_leafs.png",
+      "output": "public/game-assets/items/grain/seedling_two_leafs_many.png",
+      "prompt": "Create a very abundant quantity of seedling two leafs, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling two leafs. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 1124,
+      "itemIndex": 573,
+      "itemNumber": 574,
+      "itemName": "islands republic seeds",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/islands_republic_seeds.png",
+      "output": "public/game-assets/items/grain/islands_republic_seeds.png",
+      "prompt": "Create exactly one clear islands republic seeds, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: islands republic seeds. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 1125,
+      "itemIndex": 573,
+      "itemNumber": 574,
+      "itemName": "islands republic seeds",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/islands_republic_seeds.png",
+      "output": "public/game-assets/items/grain/islands_republic_seeds_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated islands republic seeds, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: islands republic seeds. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 1126,
+      "itemIndex": 573,
+      "itemNumber": 574,
+      "itemName": "islands republic seeds",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/islands_republic_seeds.png",
+      "output": "public/game-assets/items/grain/islands_republic_seeds_many.png",
+      "prompt": "Create a very abundant quantity of islands republic seeds, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: islands republic seeds. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 1127,
+      "itemIndex": 574,
+      "itemNumber": 575,
+      "itemName": "market seeds",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/market_seeds.png",
+      "output": "public/game-assets/items/grain/market_seeds.png",
+      "prompt": "Create exactly one clear market seeds, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market seeds. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 1128,
+      "itemIndex": 574,
+      "itemNumber": 575,
+      "itemName": "market seeds",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/market_seeds.png",
+      "output": "public/game-assets/items/grain/market_seeds_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated market seeds, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: market seeds. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 1129,
+      "itemIndex": 574,
+      "itemNumber": 575,
+      "itemName": "market seeds",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/market_seeds.png",
+      "output": "public/game-assets/items/grain/market_seeds_many.png",
+      "prompt": "Create a very abundant quantity of market seeds, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: market seeds. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 1130,
+      "itemIndex": 575,
+      "itemNumber": 576,
+      "itemName": "wheat seed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/wheat_seed.png",
+      "output": "public/game-assets/items/grain/wheat_seed.png",
+      "prompt": "Create exactly one clear wheat seed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: wheat seed. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 1131,
+      "itemIndex": 575,
+      "itemNumber": 576,
+      "itemName": "wheat seed",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/wheat_seed.png",
+      "output": "public/game-assets/items/grain/wheat_seed_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated wheat seed, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: wheat seed. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 1132,
+      "itemIndex": 575,
+      "itemNumber": 576,
+      "itemName": "wheat seed",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/wheat_seed.png",
+      "output": "public/game-assets/items/grain/wheat_seed_many.png",
+      "prompt": "Create a very abundant quantity of wheat seed, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: wheat seed. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 1133,
+      "itemIndex": 576,
+      "itemNumber": 577,
+      "itemName": "barley seed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/barley_seed.png",
+      "output": "public/game-assets/items/grain/barley_seed.png",
+      "prompt": "Create exactly one clear barley seed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: barley seed. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 1134,
+      "itemIndex": 576,
+      "itemNumber": 577,
+      "itemName": "barley seed",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/barley_seed.png",
+      "output": "public/game-assets/items/grain/barley_seed_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated barley seed, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: barley seed. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 1135,
+      "itemIndex": 576,
+      "itemNumber": 577,
+      "itemName": "barley seed",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/barley_seed.png",
+      "output": "public/game-assets/items/grain/barley_seed_many.png",
+      "prompt": "Create a very abundant quantity of barley seed, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: barley seed. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 1136,
+      "itemIndex": 577,
+      "itemNumber": 578,
+      "itemName": "sorghum seed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/sorghum_seed.png",
+      "output": "public/game-assets/items/grain/sorghum_seed.png",
+      "prompt": "Create exactly one clear sorghum seed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: sorghum seed. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 1137,
+      "itemIndex": 577,
+      "itemNumber": 578,
+      "itemName": "sorghum seed",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/sorghum_seed.png",
+      "output": "public/game-assets/items/grain/sorghum_seed_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated sorghum seed, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: sorghum seed. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 1138,
+      "itemIndex": 577,
+      "itemNumber": 578,
+      "itemName": "sorghum seed",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "seeds",
+        "grain",
+        "ingredient"
+      ],
+      "family": "grain",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "grain/sorghum_seed.png",
+      "output": "public/game-assets/items/grain/sorghum_seed_many.png",
+      "prompt": "Create a very abundant quantity of sorghum seed, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: sorghum seed. Family: grain. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: grain, botanicals, ingredient, common, sack, preserved, botanicals, seeds, grain, ingredient, farmed, common, dry, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 1139,
+      "itemIndex": 578,
+      "itemNumber": 579,
+      "itemName": "large branch",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 5,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/large_branch.png",
+      "output": "public/game-assets/items/produce/large_branch.png",
+      "prompt": "Create exactly one clear large branch, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large branch. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 1140,
+      "itemIndex": 578,
+      "itemNumber": 579,
+      "itemName": "large branch",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 5,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/large_branch.png",
+      "output": "public/game-assets/items/produce/large_branch_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large branch, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large branch. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 1141,
+      "itemIndex": 578,
+      "itemNumber": 579,
+      "itemName": "large branch",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 5,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/large_branch.png",
+      "output": "public/game-assets/items/produce/large_branch_many.png",
+      "prompt": "Create a very abundant quantity of large branch, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large branch. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 1142,
+      "itemIndex": 579,
+      "itemNumber": 580,
+      "itemName": "log",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 40,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/log.png",
+      "output": "public/game-assets/items/produce/log.png",
+      "prompt": "Create exactly one clear log, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: log. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 1143,
+      "itemIndex": 579,
+      "itemNumber": 580,
+      "itemName": "log",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 40,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/log.png",
+      "output": "public/game-assets/items/produce/log_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated log, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: log. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 1144,
+      "itemIndex": 579,
+      "itemNumber": 580,
+      "itemName": "log",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 40,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/log.png",
+      "output": "public/game-assets/items/produce/log_many.png",
+      "prompt": "Create a very abundant quantity of log, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: log. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 1145,
+      "itemIndex": 580,
+      "itemNumber": 581,
+      "itemName": "seedling bare",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/seedling_bare.png",
+      "output": "public/game-assets/items/produce/seedling_bare.png",
+      "prompt": "Create exactly one clear seedling bare, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: seedling bare. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 1146,
+      "itemIndex": 580,
+      "itemNumber": 581,
+      "itemName": "seedling bare",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/seedling_bare.png",
+      "output": "public/game-assets/items/produce/seedling_bare_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated seedling bare, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling bare. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 1147,
+      "itemIndex": 580,
+      "itemNumber": 581,
+      "itemName": "seedling bare",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/seedling_bare.png",
+      "output": "public/game-assets/items/produce/seedling_bare_many.png",
+      "prompt": "Create a very abundant quantity of seedling bare, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: seedling bare. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 1148,
+      "itemIndex": 581,
+      "itemNumber": 582,
+      "itemName": "small branch",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/small_branch.png",
+      "output": "public/game-assets/items/produce/small_branch.png",
+      "prompt": "Create exactly one clear small branch, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: small branch. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 1149,
+      "itemIndex": 581,
+      "itemNumber": 582,
+      "itemName": "small branch",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/small_branch.png",
+      "output": "public/game-assets/items/produce/small_branch_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated small branch, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: small branch. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 1150,
+      "itemIndex": 581,
+      "itemNumber": 582,
+      "itemName": "small branch",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/small_branch.png",
+      "output": "public/game-assets/items/produce/small_branch_many.png",
+      "prompt": "Create a very abundant quantity of small branch, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: small branch. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

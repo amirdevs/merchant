@@ -1,0 +1,3765 @@
+{
+  "batch": {
+    "firstGlobalSlot": 4851,
+    "lastGlobalSlot": 4900,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. oath cord (one)\n2. dock knife (one)\n3. dock knife (few)\n4. dock knife (many)\n5. boar spear (one)\n6. boar spear (few)\n7. boar spear (many)\n8. caravan sabre (one)\n9. caravan sabre (few)\n10. caravan sabre (many)\n11. arrow bundle (one)\n12. arrow bundle (few)\n13. arrow bundle (many)\n14. bodkin arrow case (one)\n15. bodkin arrow case (few)\n16. bodkin arrow case (many)\n17. boiled leather vest (one)\n18. boiled leather vest (few)\n19. boiled leather vest (many)\n20. enamel parade shield (one)\n21. enamel parade shield (few)\n22. enamel parade shield (many)\n23. market piglet (one)\n24. pack mule (one)\n25. pack mule (few)\n26. pack mule (many)\n27. beehive box (one)\n28. beehive box (few)\n29. beehive box (many)\n30. songbird cage (one)\n31. false bottom box (one)\n32. unmarked pearl pouch (one)\n33. loaded dice (one)\n34. forged toll pass (one)\n35. lockpick roll (one)\n36. coded ledger scrap (one)\n37. bottle with a tiny storm (one)\n38. bottle with a tiny storm (few)\n39. bottle with a tiny storm (many)\n40. singing shell (one)\n41. brass mechanical beetle (one)\n42. glass apple (one)\n43. memory ribbon (one)\n44. soft kid leather (one)\n45. soft kid leather (few)\n46. soft kid leather (many)\n47. thick oxhide (one)\n48. thick oxhide (few)\n49. thick oxhide (many)\n50. dyed belt leather (one)",
+  "order": [
+    "1. oath cord (one)",
+    "2. dock knife (one)",
+    "3. dock knife (few)",
+    "4. dock knife (many)",
+    "5. boar spear (one)",
+    "6. boar spear (few)",
+    "7. boar spear (many)",
+    "8. caravan sabre (one)",
+    "9. caravan sabre (few)",
+    "10. caravan sabre (many)",
+    "11. arrow bundle (one)",
+    "12. arrow bundle (few)",
+    "13. arrow bundle (many)",
+    "14. bodkin arrow case (one)",
+    "15. bodkin arrow case (few)",
+    "16. bodkin arrow case (many)",
+    "17. boiled leather vest (one)",
+    "18. boiled leather vest (few)",
+    "19. boiled leather vest (many)",
+    "20. enamel parade shield (one)",
+    "21. enamel parade shield (few)",
+    "22. enamel parade shield (many)",
+    "23. market piglet (one)",
+    "24. pack mule (one)",
+    "25. pack mule (few)",
+    "26. pack mule (many)",
+    "27. beehive box (one)",
+    "28. beehive box (few)",
+    "29. beehive box (many)",
+    "30. songbird cage (one)",
+    "31. false bottom box (one)",
+    "32. unmarked pearl pouch (one)",
+    "33. loaded dice (one)",
+    "34. forged toll pass (one)",
+    "35. lockpick roll (one)",
+    "36. coded ledger scrap (one)",
+    "37. bottle with a tiny storm (one)",
+    "38. bottle with a tiny storm (few)",
+    "39. bottle with a tiny storm (many)",
+    "40. singing shell (one)",
+    "41. brass mechanical beetle (one)",
+    "42. glass apple (one)",
+    "43. memory ribbon (one)",
+    "44. soft kid leather (one)",
+    "45. soft kid leather (few)",
+    "46. soft kid leather (many)",
+    "47. thick oxhide (one)",
+    "48. thick oxhide (few)",
+    "49. thick oxhide (many)",
+    "50. dyed belt leather (one)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 4851,
+      "itemIndex": 2122,
+      "itemNumber": 2123,
+      "itemName": "oath cord",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "religion",
+        "document",
+        "luxury"
+      ],
+      "family": "religion",
+      "subfamily": "document",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "blessed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "blessed"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "religion/oath_cord.png",
+      "output": "public/game-assets/items/religion/oath_cord.png",
+      "prompt": "Create exactly one clear oath cord, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: oath cord. Family: religion. Subfamily: document. Trade role: luxury. Bulk profile: single. Category cues: religion, document, luxury, common, single, none, religion, document, luxury, blessed, common, blessed, bulk_trade, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 4852,
+      "itemIndex": 2123,
+      "itemNumber": 2124,
+      "itemName": "dock knife",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "daggers",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "daggers",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/dock_knife.png",
+      "output": "public/game-assets/items/weapon/dock_knife.png",
+      "prompt": "Create exactly one clear dock knife, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: dock knife. Family: weapon. Subfamily: daggers. Trade role: equipment. Bulk profile: rack. Category cues: weapon, daggers, equipment, common, rack, rusts, weapon, daggers, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 4853,
+      "itemIndex": 2123,
+      "itemNumber": 2124,
+      "itemName": "dock knife",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "daggers",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "daggers",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/dock_knife.png",
+      "output": "public/game-assets/items/weapon/dock_knife_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated dock knife, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: dock knife. Family: weapon. Subfamily: daggers. Trade role: equipment. Bulk profile: rack. Category cues: weapon, daggers, equipment, common, rack, rusts, weapon, daggers, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 4854,
+      "itemIndex": 2123,
+      "itemNumber": 2124,
+      "itemName": "dock knife",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "daggers",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "daggers",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/dock_knife.png",
+      "output": "public/game-assets/items/weapon/dock_knife_many.png",
+      "prompt": "Create a very abundant quantity of dock knife, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: dock knife. Family: weapon. Subfamily: daggers. Trade role: equipment. Bulk profile: rack. Category cues: weapon, daggers, equipment, common, rack, rusts, weapon, daggers, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 4855,
+      "itemIndex": 2124,
+      "itemNumber": 2125,
+      "itemName": "boar spear",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "spears",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/boar_spear.png",
+      "output": "public/game-assets/items/weapon/boar_spear.png",
+      "prompt": "Create exactly one clear boar spear, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: boar spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapon, spears, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 4856,
+      "itemIndex": 2124,
+      "itemNumber": 2125,
+      "itemName": "boar spear",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "spears",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/boar_spear.png",
+      "output": "public/game-assets/items/weapon/boar_spear_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated boar spear, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: boar spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapon, spears, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 4857,
+      "itemIndex": 2124,
+      "itemNumber": 2125,
+      "itemName": "boar spear",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "spears",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "spears",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/boar_spear.png",
+      "output": "public/game-assets/items/weapon/boar_spear_many.png",
+      "prompt": "Create a very abundant quantity of boar spear, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: boar spear. Family: weapon. Subfamily: spears. Trade role: equipment. Bulk profile: rack. Category cues: weapon, spears, equipment, common, rack, rusts, weapon, spears, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 4858,
+      "itemIndex": 2125,
+      "itemNumber": 2126,
+      "itemName": "caravan sabre",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "swords",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "swords",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 3,
+      "weight": 3,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "weapon/caravan_sabre.png",
+      "output": "public/game-assets/items/weapon/caravan_sabre.png",
+      "prompt": "Create exactly one clear caravan sabre, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: caravan sabre. Family: weapon. Subfamily: swords. Trade role: equipment. Bulk profile: rack. Category cues: weapon, swords, equipment, common, rack, rusts, weapon, swords, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 4859,
+      "itemIndex": 2125,
+      "itemNumber": 2126,
+      "itemName": "caravan sabre",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "swords",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "swords",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 3,
+      "weight": 3,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "weapon/caravan_sabre.png",
+      "output": "public/game-assets/items/weapon/caravan_sabre_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated caravan sabre, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: caravan sabre. Family: weapon. Subfamily: swords. Trade role: equipment. Bulk profile: rack. Category cues: weapon, swords, equipment, common, rack, rusts, weapon, swords, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 4860,
+      "itemIndex": 2125,
+      "itemNumber": 2126,
+      "itemName": "caravan sabre",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "swords",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "swords",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 3,
+      "weight": 3,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "weapon/caravan_sabre.png",
+      "output": "public/game-assets/items/weapon/caravan_sabre_many.png",
+      "prompt": "Create a very abundant quantity of caravan sabre, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: caravan sabre. Family: weapon. Subfamily: swords. Trade role: equipment. Bulk profile: rack. Category cues: weapon, swords, equipment, common, rack, rusts, weapon, swords, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 4861,
+      "itemIndex": 2126,
+      "itemNumber": 2127,
+      "itemName": "arrow bundle",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "arrows",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "arrows",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/arrow_bundle.png",
+      "output": "public/game-assets/items/weapon/arrow_bundle.png",
+      "prompt": "Create exactly one clear arrow bundle, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: arrow bundle. Family: weapon. Subfamily: arrows. Trade role: equipment. Bulk profile: rack. Category cues: weapon, arrows, equipment, common, rack, rusts, weapon, arrows, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 4862,
+      "itemIndex": 2126,
+      "itemNumber": 2127,
+      "itemName": "arrow bundle",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "arrows",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "arrows",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/arrow_bundle.png",
+      "output": "public/game-assets/items/weapon/arrow_bundle_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated arrow bundle, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: arrow bundle. Family: weapon. Subfamily: arrows. Trade role: equipment. Bulk profile: rack. Category cues: weapon, arrows, equipment, common, rack, rusts, weapon, arrows, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 4863,
+      "itemIndex": 2126,
+      "itemNumber": 2127,
+      "itemName": "arrow bundle",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "arrows",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "arrows",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/arrow_bundle.png",
+      "output": "public/game-assets/items/weapon/arrow_bundle_many.png",
+      "prompt": "Create a very abundant quantity of arrow bundle, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: arrow bundle. Family: weapon. Subfamily: arrows. Trade role: equipment. Bulk profile: rack. Category cues: weapon, arrows, equipment, common, rack, rusts, weapon, arrows, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 4864,
+      "itemIndex": 2127,
+      "itemNumber": 2128,
+      "itemName": "bodkin arrow case",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "arrows",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "arrows",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/bodkin_arrow_case.png",
+      "output": "public/game-assets/items/weapon/bodkin_arrow_case.png",
+      "prompt": "Create exactly one clear bodkin arrow case, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: bodkin arrow case. Family: weapon. Subfamily: arrows. Trade role: equipment. Bulk profile: rack. Category cues: weapon, arrows, equipment, common, rack, rusts, weapon, arrows, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 4865,
+      "itemIndex": 2127,
+      "itemNumber": 2128,
+      "itemName": "bodkin arrow case",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "arrows",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "arrows",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/bodkin_arrow_case.png",
+      "output": "public/game-assets/items/weapon/bodkin_arrow_case_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bodkin arrow case, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: bodkin arrow case. Family: weapon. Subfamily: arrows. Trade role: equipment. Bulk profile: rack. Category cues: weapon, arrows, equipment, common, rack, rusts, weapon, arrows, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 4866,
+      "itemIndex": 2127,
+      "itemNumber": 2128,
+      "itemName": "bodkin arrow case",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "weapon",
+        "arrows",
+        "curio",
+        "equipment"
+      ],
+      "family": "weapon",
+      "subfamily": "arrows",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "weapon/bodkin_arrow_case.png",
+      "output": "public/game-assets/items/weapon/bodkin_arrow_case_many.png",
+      "prompt": "Create a very abundant quantity of bodkin arrow case, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: bodkin arrow case. Family: weapon. Subfamily: arrows. Trade role: equipment. Bulk profile: rack. Category cues: weapon, arrows, equipment, common, rack, rusts, weapon, arrows, curio, equipment, crafted, common, hazardous, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 4867,
+      "itemIndex": 2128,
+      "itemNumber": 2129,
+      "itemName": "boiled leather vest",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "leather",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "armor/boiled_leather_vest.png",
+      "output": "public/game-assets/items/armor/boiled_leather_vest.png",
+      "prompt": "Create exactly one clear boiled leather vest, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: boiled leather vest. Family: armor. Subfamily: leather. Trade role: equipment. Bulk profile: rack. Category cues: armor, leather, equipment, common, rack, rusts, armor, leather, equipment, crafted, common, war_good, leather, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 4868,
+      "itemIndex": 2128,
+      "itemNumber": 2129,
+      "itemName": "boiled leather vest",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "leather",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "armor/boiled_leather_vest.png",
+      "output": "public/game-assets/items/armor/boiled_leather_vest_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated boiled leather vest, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: boiled leather vest. Family: armor. Subfamily: leather. Trade role: equipment. Bulk profile: rack. Category cues: armor, leather, equipment, common, rack, rusts, armor, leather, equipment, crafted, common, war_good, leather, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 4869,
+      "itemIndex": 2128,
+      "itemNumber": 2129,
+      "itemName": "boiled leather vest",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "leather",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "armor/boiled_leather_vest.png",
+      "output": "public/game-assets/items/armor/boiled_leather_vest_many.png",
+      "prompt": "Create a very abundant quantity of boiled leather vest, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: boiled leather vest. Family: armor. Subfamily: leather. Trade role: equipment. Bulk profile: rack. Category cues: armor, leather, equipment, common, rack, rusts, armor, leather, equipment, crafted, common, war_good, leather, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 4870,
+      "itemIndex": 2129,
+      "itemNumber": 2130,
+      "itemName": "enamel parade shield",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "shields",
+        "luxury",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "shields",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 4,
+      "weight": 5,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "armor/enamel_parade_shield.png",
+      "output": "public/game-assets/items/armor/enamel_parade_shield.png",
+      "prompt": "Create exactly one clear enamel parade shield, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: enamel parade shield. Family: armor. Subfamily: shields. Trade role: equipment. Bulk profile: rack. Category cues: armor, shields, equipment, uncommon, rack, rusts, armor, shields, luxury, equipment, crafted, common, fine, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 4871,
+      "itemIndex": 2129,
+      "itemNumber": 2130,
+      "itemName": "enamel parade shield",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "shields",
+        "luxury",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "shields",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 4,
+      "weight": 5,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "armor/enamel_parade_shield.png",
+      "output": "public/game-assets/items/armor/enamel_parade_shield_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated enamel parade shield, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: enamel parade shield. Family: armor. Subfamily: shields. Trade role: equipment. Bulk profile: rack. Category cues: armor, shields, equipment, uncommon, rack, rusts, armor, shields, luxury, equipment, crafted, common, fine, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 4872,
+      "itemIndex": 2129,
+      "itemNumber": 2130,
+      "itemName": "enamel parade shield",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "shields",
+        "luxury",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "shields",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 4,
+      "weight": 5,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "armor/enamel_parade_shield.png",
+      "output": "public/game-assets/items/armor/enamel_parade_shield_many.png",
+      "prompt": "Create a very abundant quantity of enamel parade shield, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: enamel parade shield. Family: armor. Subfamily: shields. Trade role: equipment. Bulk profile: rack. Category cues: armor, shields, equipment, uncommon, rack, rusts, armor, shields, luxury, equipment, crafted, common, fine, war_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 4873,
+      "itemIndex": 2130,
+      "itemNumber": 2131,
+      "itemName": "market piglet",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "livestock",
+        "animals",
+        "animal"
+      ],
+      "family": "livestock",
+      "subfamily": "livestock",
+      "tradeRole": "animal",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "animal"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "caged"
+        ],
+        "artVariant": [
+          "cage",
+          "single_object"
+        ],
+        "featureHooks": [
+          "pack_animal"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "cage",
+      "storageNeeds": [
+        "stable"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 4,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "livestock/market_piglet.png",
+      "output": "public/game-assets/items/livestock/market_piglet.png",
+      "prompt": "Create exactly one clear market piglet, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market piglet. Family: livestock. Subfamily: livestock. Trade role: animal. Bulk profile: cage. Category cues: livestock, livestock, animal, common, cage, none, livestock, animals, animal, farmed, common, stable, bulk_trade, animal. It should read clearly in a small inventory tile.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 4874,
+      "itemIndex": 2131,
+      "itemNumber": 2132,
+      "itemName": "pack mule",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "livestock",
+        "pack_animals",
+        "travel",
+        "finished"
+      ],
+      "family": "travel",
+      "subfamily": "livestock",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 20,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "travel/pack_mule.png",
+      "output": "public/game-assets/items/travel/pack_mule.png",
+      "prompt": "Create exactly one clear pack mule, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: pack mule. Family: travel. Subfamily: livestock. Trade role: finished. Bulk profile: crate. Category cues: travel, livestock, finished, uncommon, crate, none, livestock, pack_animals, travel, finished, crafted, common, fine, bulk_trade. It should feel medium-sized.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 4875,
+      "itemIndex": 2131,
+      "itemNumber": 2132,
+      "itemName": "pack mule",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "livestock",
+        "pack_animals",
+        "travel",
+        "finished"
+      ],
+      "family": "travel",
+      "subfamily": "livestock",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 20,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "travel/pack_mule.png",
+      "output": "public/game-assets/items/travel/pack_mule_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated pack mule, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: pack mule. Family: travel. Subfamily: livestock. Trade role: finished. Bulk profile: crate. Category cues: travel, livestock, finished, uncommon, crate, none, livestock, pack_animals, travel, finished, crafted, common, fine, bulk_trade. It should feel medium-sized.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 4876,
+      "itemIndex": 2131,
+      "itemNumber": 2132,
+      "itemName": "pack mule",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "livestock",
+        "pack_animals",
+        "travel",
+        "finished"
+      ],
+      "family": "travel",
+      "subfamily": "livestock",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 20,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "travel/pack_mule.png",
+      "output": "public/game-assets/items/travel/pack_mule_many.png",
+      "prompt": "Create a very abundant quantity of pack mule, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: pack mule. Family: travel. Subfamily: livestock. Trade role: finished. Bulk profile: crate. Category cues: travel, livestock, finished, uncommon, crate, none, livestock, pack_animals, travel, finished, crafted, common, fine, bulk_trade. It should feel medium-sized.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 4877,
+      "itemIndex": 2132,
+      "itemNumber": 2133,
+      "itemName": "beehive box",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "livestock",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "livestock",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "food/beehive_box.png",
+      "output": "public/game-assets/items/food/beehive_box.png",
+      "prompt": "Create exactly one clear beehive box, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: beehive box. Family: food. Subfamily: livestock. Trade role: finished. Bulk profile: basket. Category cues: food, livestock, finished, common, basket, expires, livestock, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 4878,
+      "itemIndex": 2132,
+      "itemNumber": 2133,
+      "itemName": "beehive box",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "livestock",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "livestock",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "food/beehive_box.png",
+      "output": "public/game-assets/items/food/beehive_box_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated beehive box, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: beehive box. Family: food. Subfamily: livestock. Trade role: finished. Bulk profile: basket. Category cues: food, livestock, finished, common, basket, expires, livestock, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 4879,
+      "itemIndex": 2132,
+      "itemNumber": 2133,
+      "itemName": "beehive box",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "livestock",
+        "food",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "livestock",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "food/beehive_box.png",
+      "output": "public/game-assets/items/food/beehive_box_many.png",
+      "prompt": "Create a very abundant quantity of beehive box, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: beehive box. Family: food. Subfamily: livestock. Trade role: finished. Bulk profile: basket. Category cues: food, livestock, finished, common, basket, expires, livestock, food, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 4880,
+      "itemIndex": 2133,
+      "itemNumber": 2134,
+      "itemName": "songbird cage",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "livestock",
+        "luxury",
+        "animal"
+      ],
+      "family": "livestock",
+      "subfamily": "luxury",
+      "tradeRole": "animal",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "animal"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "caged"
+        ],
+        "artVariant": [
+          "cage",
+          "single_object"
+        ],
+        "featureHooks": [
+          "pack_animal"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "cage",
+      "storageNeeds": [
+        "stable"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "livestock/songbird_cage.png",
+      "output": "public/game-assets/items/livestock/songbird_cage.png",
+      "prompt": "Create exactly one clear songbird cage, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: songbird cage. Family: livestock. Subfamily: luxury. Trade role: animal. Bulk profile: cage. Category cues: livestock, luxury, animal, common, cage, none, livestock, luxury, animal, farmed, common, stable, bulk_trade, animal. It should read clearly in a small inventory tile.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 4881,
+      "itemIndex": 2134,
+      "itemNumber": 2135,
+      "itemName": "false bottom box",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "contraband",
+        "container",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "contraband",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "curio/false_bottom_box.png",
+      "output": "public/game-assets/items/curio/false_bottom_box.png",
+      "prompt": "Create exactly one clear false bottom box, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: false bottom box. Family: curio. Subfamily: contraband. Trade role: curio. Bulk profile: single. Category cues: curio, contraband, curio, common, single, none, contraband, container, curio, crafted, common, bulk_trade, curio, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 4882,
+      "itemIndex": 2135,
+      "itemNumber": 2136,
+      "itemName": "unmarked pearl pouch",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "contraband",
+        "luxury",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "contraband",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "curio/unmarked_pearl_pouch.png",
+      "output": "public/game-assets/items/curio/unmarked_pearl_pouch.png",
+      "prompt": "Create exactly one clear unmarked pearl pouch, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: unmarked pearl pouch. Family: curio. Subfamily: contraband. Trade role: curio. Bulk profile: single. Category cues: curio, contraband, curio, uncommon, single, none, contraband, luxury, curio, crafted, common, fine, bulk_trade, curio. It should read clearly in a small inventory tile.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 4883,
+      "itemIndex": 2136,
+      "itemNumber": 2137,
+      "itemName": "loaded dice",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "contraband",
+        "game",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "contraband",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/loaded_dice.png",
+      "output": "public/game-assets/items/curio/loaded_dice.png",
+      "prompt": "Create exactly one clear loaded dice, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: loaded dice. Family: curio. Subfamily: contraband. Trade role: curio. Bulk profile: single. Category cues: curio, contraband, curio, common, single, none, contraband, game, curio, crafted, common, bulk_trade, curio, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 4884,
+      "itemIndex": 2137,
+      "itemNumber": 2138,
+      "itemName": "forged toll pass",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "contraband",
+        "document",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "contraband",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "curio/forged_toll_pass.png",
+      "output": "public/game-assets/items/curio/forged_toll_pass.png",
+      "prompt": "Create exactly one clear forged toll pass, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: forged toll pass. Family: curio. Subfamily: contraband. Trade role: curio. Bulk profile: single. Category cues: curio, contraband, curio, uncommon, single, none, contraband, document, curio, crafted, common, fine, bulk_trade, curio. It should read clearly in a small inventory tile.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 4885,
+      "itemIndex": 2138,
+      "itemNumber": 2139,
+      "itemName": "lockpick roll",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "contraband",
+        "tool",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "contraband",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "curio/lockpick_roll.png",
+      "output": "public/game-assets/items/curio/lockpick_roll.png",
+      "prompt": "Create exactly one clear lockpick roll, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: lockpick roll. Family: curio. Subfamily: contraband. Trade role: curio. Bulk profile: single. Category cues: curio, contraband, curio, common, single, none, contraband, tool, curio, crafted, common, bulk_trade, curio, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 4886,
+      "itemIndex": 2139,
+      "itemNumber": 2140,
+      "itemName": "coded ledger scrap",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "contraband",
+        "document",
+        "curio"
+      ],
+      "family": "curio",
+      "subfamily": "contraband",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "curio/coded_ledger_scrap.png",
+      "output": "public/game-assets/items/curio/coded_ledger_scrap.png",
+      "prompt": "Create exactly one clear coded ledger scrap, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: coded ledger scrap. Family: curio. Subfamily: contraband. Trade role: curio. Bulk profile: single. Category cues: curio, contraband, curio, common, single, none, contraband, document, curio, crafted, common, bulk_trade, curio, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 4887,
+      "itemIndex": 2140,
+      "itemNumber": 2141,
+      "itemName": "bottle with a tiny storm",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "curio",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "curio",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "magic/bottle_with_a_tiny_storm.png",
+      "output": "public/game-assets/items/magic/bottle_with_a_tiny_storm.png",
+      "prompt": "Create exactly one clear bottle with a tiny storm, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: bottle with a tiny storm. Family: magic. Subfamily: curio. Trade role: finished. Bulk profile: bottle. Category cues: magic, curio, finished, uncommon, bottle, volatile, curio, magic, finished, crafted, common, fine, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 4888,
+      "itemIndex": 2140,
+      "itemNumber": 2141,
+      "itemName": "bottle with a tiny storm",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "curio",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "curio",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "magic/bottle_with_a_tiny_storm.png",
+      "output": "public/game-assets/items/magic/bottle_with_a_tiny_storm_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated bottle with a tiny storm, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: bottle with a tiny storm. Family: magic. Subfamily: curio. Trade role: finished. Bulk profile: bottle. Category cues: magic, curio, finished, uncommon, bottle, volatile, curio, magic, finished, crafted, common, fine, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 4889,
+      "itemIndex": 2140,
+      "itemNumber": 2141,
+      "itemName": "bottle with a tiny storm",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "curio",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "curio",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "magic/bottle_with_a_tiny_storm.png",
+      "output": "public/game-assets/items/magic/bottle_with_a_tiny_storm_many.png",
+      "prompt": "Create a very abundant quantity of bottle with a tiny storm, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: bottle with a tiny storm. Family: magic. Subfamily: curio. Trade role: finished. Bulk profile: bottle. Category cues: magic, curio, finished, uncommon, bottle, volatile, curio, magic, finished, crafted, common, fine, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 4890,
+      "itemIndex": 2141,
+      "itemNumber": 2142,
+      "itemName": "singing shell",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "curio",
+        "music",
+        "luxury"
+      ],
+      "family": "music",
+      "subfamily": "curio",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "music/singing_shell.png",
+      "output": "public/game-assets/items/music/singing_shell.png",
+      "prompt": "Create exactly one clear singing shell, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: singing shell. Family: music. Subfamily: curio. Trade role: luxury. Bulk profile: single. Category cues: music, curio, luxury, common, single, none, curio, music, luxury, crafted, common, noble_luxury, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 4891,
+      "itemIndex": 2142,
+      "itemNumber": 2143,
+      "itemName": "brass mechanical beetle",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "curio",
+        "tool"
+      ],
+      "family": "curio",
+      "subfamily": "tool",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "curio/brass_mechanical_beetle.png",
+      "output": "public/game-assets/items/curio/brass_mechanical_beetle.png",
+      "prompt": "Create exactly one clear brass mechanical beetle, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: brass mechanical beetle. Family: curio. Subfamily: tool. Trade role: curio. Bulk profile: single. Category cues: curio, tool, curio, uncommon, single, none, curio, tool, crafted, common, fine, bulk_trade, curio, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 4892,
+      "itemIndex": 2143,
+      "itemNumber": 2144,
+      "itemName": "glass apple",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "curio",
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "curio",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 3,
+      "unique": false,
+      "iconFile": "art/glass_apple.png",
+      "output": "public/game-assets/items/art/glass_apple.png",
+      "prompt": "Create exactly one clear glass apple, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: glass apple. Family: art. Subfamily: curio. Trade role: luxury. Bulk profile: single. Category cues: art, curio, luxury, uncommon, single, none, curio, glass, art, luxury, crafted, common, fine, fragile. It should read clearly in a small inventory tile.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 4893,
+      "itemIndex": 2144,
+      "itemNumber": 2145,
+      "itemName": "memory ribbon",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "curio",
+        "textile"
+      ],
+      "family": "curio",
+      "subfamily": "textile",
+      "tradeRole": "curio",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "curio"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "curio/memory_ribbon.png",
+      "output": "public/game-assets/items/curio/memory_ribbon.png",
+      "prompt": "Create exactly one clear memory ribbon, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: memory ribbon. Family: curio. Subfamily: textile. Trade role: curio. Bulk profile: single. Category cues: curio, textile, curio, common, single, none, curio, textile, crafted, common, bulk_trade, curio, ordinary, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 4894,
+      "itemIndex": 2145,
+      "itemNumber": 2146,
+      "itemName": "soft kid leather",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "leather",
+        "animal_goods",
+        "finished"
+      ],
+      "family": "leather",
+      "subfamily": "animal_goods",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "leather/soft_kid_leather.png",
+      "output": "public/game-assets/items/leather/soft_kid_leather.png",
+      "prompt": "Create exactly one clear soft kid leather, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: soft kid leather. Family: leather. Subfamily: animal_goods. Trade role: finished. Bulk profile: roll. Category cues: leather, animal_goods, finished, common, roll, none, leather, animal_goods, finished, crafted, common, craft_supply, leather, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 4895,
+      "itemIndex": 2145,
+      "itemNumber": 2146,
+      "itemName": "soft kid leather",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "leather",
+        "animal_goods",
+        "finished"
+      ],
+      "family": "leather",
+      "subfamily": "animal_goods",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "leather/soft_kid_leather.png",
+      "output": "public/game-assets/items/leather/soft_kid_leather_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated soft kid leather, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: soft kid leather. Family: leather. Subfamily: animal_goods. Trade role: finished. Bulk profile: roll. Category cues: leather, animal_goods, finished, common, roll, none, leather, animal_goods, finished, crafted, common, craft_supply, leather, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 4896,
+      "itemIndex": 2145,
+      "itemNumber": 2146,
+      "itemName": "soft kid leather",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "leather",
+        "animal_goods",
+        "finished"
+      ],
+      "family": "leather",
+      "subfamily": "animal_goods",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "leather/soft_kid_leather.png",
+      "output": "public/game-assets/items/leather/soft_kid_leather_many.png",
+      "prompt": "Create a very abundant quantity of soft kid leather, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: soft kid leather. Family: leather. Subfamily: animal_goods. Trade role: finished. Bulk profile: roll. Category cues: leather, animal_goods, finished, common, roll, none, leather, animal_goods, finished, crafted, common, craft_supply, leather, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 4897,
+      "itemIndex": 2146,
+      "itemNumber": 2147,
+      "itemName": "thick oxhide",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "leather",
+        "animal_goods",
+        "finished"
+      ],
+      "family": "leather",
+      "subfamily": "animal_goods",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "leather/thick_oxhide.png",
+      "output": "public/game-assets/items/leather/thick_oxhide.png",
+      "prompt": "Create exactly one clear thick oxhide, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: thick oxhide. Family: leather. Subfamily: animal_goods. Trade role: finished. Bulk profile: roll. Category cues: leather, animal_goods, finished, common, roll, none, leather, animal_goods, finished, crafted, common, craft_supply, leather, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 4898,
+      "itemIndex": 2146,
+      "itemNumber": 2147,
+      "itemName": "thick oxhide",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "leather",
+        "animal_goods",
+        "finished"
+      ],
+      "family": "leather",
+      "subfamily": "animal_goods",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "leather/thick_oxhide.png",
+      "output": "public/game-assets/items/leather/thick_oxhide_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated thick oxhide, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: thick oxhide. Family: leather. Subfamily: animal_goods. Trade role: finished. Bulk profile: roll. Category cues: leather, animal_goods, finished, common, roll, none, leather, animal_goods, finished, crafted, common, craft_supply, leather, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 4899,
+      "itemIndex": 2146,
+      "itemNumber": 2147,
+      "itemName": "thick oxhide",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "leather",
+        "animal_goods",
+        "finished"
+      ],
+      "family": "leather",
+      "subfamily": "animal_goods",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 3,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "leather/thick_oxhide.png",
+      "output": "public/game-assets/items/leather/thick_oxhide_many.png",
+      "prompt": "Create a very abundant quantity of thick oxhide, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: thick oxhide. Family: leather. Subfamily: animal_goods. Trade role: finished. Bulk profile: roll. Category cues: leather, animal_goods, finished, common, roll, none, leather, animal_goods, finished, crafted, common, craft_supply, leather, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 4900,
+      "itemIndex": 2147,
+      "itemNumber": 2148,
+      "itemName": "dyed belt leather",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "leather",
+        "textile",
+        "finished"
+      ],
+      "family": "leather",
+      "subfamily": "textile",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "leather/dyed_belt_leather.png",
+      "output": "public/game-assets/items/leather/dyed_belt_leather.png",
+      "prompt": "Create exactly one clear dyed belt leather, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: dyed belt leather. Family: leather. Subfamily: textile. Trade role: finished. Bulk profile: roll. Category cues: leather, textile, finished, common, roll, none, leather, textile, finished, crafted, common, craft_supply, leather, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

@@ -1,0 +1,594 @@
+{
+  "batchId": "characters-0061-0072",
+  "version": "v4-approved-style-3x4-sequential-production-manifest",
+  "status": "ready_for_generation_in_filename_order_after_final_review",
+  "purpose": "Sequential character portrait production manifest. Generate files in filename order; crop left-to-right and top-to-bottom; name each crop by outputFile.",
+  "batch": {
+    "firstGlobalSlot": 61,
+    "lastGlobalSlot": 72,
+    "slotCount": 12,
+    "maxSlotsPerSheet": 12
+  },
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Generate sheets in filename order.",
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "If the generated sheet resolution differs, scale crop coordinates proportionally from the actual width/height while preserving 3 columns by 4 rows.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "order": [
+    "1. npc-new-015-angry",
+    "2. npc-new-016-neutral",
+    "3. npc-new-016-happy",
+    "4. npc-new-016-suspicious",
+    "5. npc-new-016-worried",
+    "6. npc-new-016-angry",
+    "7. npc-new-017-neutral",
+    "8. npc-new-017-happy",
+    "9. npc-new-017-suspicious",
+    "10. npc-new-017-worried",
+    "11. npc-new-017-angry",
+    "12. npc-new-018-neutral"
+  ],
+  "images": [
+    {
+      "order": 1,
+      "globalOrder": 61,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "imageId": "npc-new-015-angry",
+      "characterId": "npc-new-015",
+      "displayName": "Suren Reedwake",
+      "profession": "Ferry Master",
+      "expression": "angry",
+      "outputFile": "npc-new-015-angry.png",
+      "ancestryOrSpecies": "raven-touched halfling",
+      "magicalTraits": [
+        "raven-feather hair charms",
+        "dark omen markings"
+      ],
+      "identityAnchor": "same person as npc-new-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression",
+      "visualTraits": [
+        "thin reedlike silhouette",
+        "elder",
+        "weathered tan skin",
+        "watery grey eyes",
+        "reed hat",
+        "patched navy coat",
+        "rope-knotted hands",
+        "ferry pole"
+      ],
+      "professionProps": [
+        "ferry pole",
+        "river token pouch",
+        "reed hat"
+      ],
+      "dominantColors": [
+        "navy",
+        "reed tan",
+        "grey"
+      ],
+      "prompt": "A thin reedlike elderly ferry master with weathered tan skin, watery grey eyes, reed hat, patched navy coat, hands knotted like rope around a ferry pole, river token pouch at belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: raven-touched halfling. Visible magical traits that must remain consistent: raven-feather hair charms, dark omen markings. Identity anchors must remain unchanged: same person as npc-new-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    },
+    {
+      "order": 2,
+      "globalOrder": 62,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "imageId": "npc-new-016-neutral",
+      "characterId": "npc-new-016",
+      "displayName": "Vaska LowLantern",
+      "profession": "Smuggler Guide",
+      "expression": "neutral",
+      "outputFile": "npc-new-016-neutral.png",
+      "ancestryOrSpecies": "shadow-marked human",
+      "magicalTraits": [
+        "half-shadow lantern glow"
+      ],
+      "identityAnchor": "same person as npc-new-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture",
+      "visualTraits": [
+        "short shadowy silhouette",
+        "brown skin",
+        "sharp green eyes",
+        "black hood with dull copper lining",
+        "half-dark painted lantern",
+        "foxlike cautious posture"
+      ],
+      "professionProps": [
+        "half-dark lantern",
+        "hidden trail cord",
+        "knife-length map"
+      ],
+      "dominantColors": [
+        "black",
+        "dull copper",
+        "green"
+      ],
+      "prompt": "A short shadowy smuggler guide with brown skin, sharp green eyes, black hood lined in dull copper, half-dark painted lantern held low, hidden trail cord and knife-length map visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: shadow-marked human. Visible magical traits that must remain consistent: half-shadow lantern glow. Identity anchors must remain unchanged: same person as npc-new-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    },
+    {
+      "order": 3,
+      "globalOrder": 63,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "imageId": "npc-new-016-happy",
+      "characterId": "npc-new-016",
+      "displayName": "Vaska LowLantern",
+      "profession": "Smuggler Guide",
+      "expression": "happy",
+      "outputFile": "npc-new-016-happy.png",
+      "ancestryOrSpecies": "shadow-marked human",
+      "magicalTraits": [
+        "half-shadow lantern glow"
+      ],
+      "identityAnchor": "same person as npc-new-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture",
+      "visualTraits": [
+        "short shadowy silhouette",
+        "brown skin",
+        "sharp green eyes",
+        "black hood with dull copper lining",
+        "half-dark painted lantern",
+        "foxlike cautious posture"
+      ],
+      "professionProps": [
+        "half-dark lantern",
+        "hidden trail cord",
+        "knife-length map"
+      ],
+      "dominantColors": [
+        "black",
+        "dull copper",
+        "green"
+      ],
+      "prompt": "A short shadowy smuggler guide with brown skin, sharp green eyes, black hood lined in dull copper, half-dark painted lantern held low, hidden trail cord and knife-length map visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: shadow-marked human. Visible magical traits that must remain consistent: half-shadow lantern glow. Identity anchors must remain unchanged: same person as npc-new-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    },
+    {
+      "order": 4,
+      "globalOrder": 64,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "imageId": "npc-new-016-suspicious",
+      "characterId": "npc-new-016",
+      "displayName": "Vaska LowLantern",
+      "profession": "Smuggler Guide",
+      "expression": "suspicious",
+      "outputFile": "npc-new-016-suspicious.png",
+      "ancestryOrSpecies": "shadow-marked human",
+      "magicalTraits": [
+        "half-shadow lantern glow"
+      ],
+      "identityAnchor": "same person as npc-new-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture",
+      "visualTraits": [
+        "short shadowy silhouette",
+        "brown skin",
+        "sharp green eyes",
+        "black hood with dull copper lining",
+        "half-dark painted lantern",
+        "foxlike cautious posture"
+      ],
+      "professionProps": [
+        "half-dark lantern",
+        "hidden trail cord",
+        "knife-length map"
+      ],
+      "dominantColors": [
+        "black",
+        "dull copper",
+        "green"
+      ],
+      "prompt": "A short shadowy smuggler guide with brown skin, sharp green eyes, black hood lined in dull copper, half-dark painted lantern held low, hidden trail cord and knife-length map visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: shadow-marked human. Visible magical traits that must remain consistent: half-shadow lantern glow. Identity anchors must remain unchanged: same person as npc-new-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    },
+    {
+      "order": 5,
+      "globalOrder": 65,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "imageId": "npc-new-016-worried",
+      "characterId": "npc-new-016",
+      "displayName": "Vaska LowLantern",
+      "profession": "Smuggler Guide",
+      "expression": "worried",
+      "outputFile": "npc-new-016-worried.png",
+      "ancestryOrSpecies": "shadow-marked human",
+      "magicalTraits": [
+        "half-shadow lantern glow"
+      ],
+      "identityAnchor": "same person as npc-new-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture",
+      "visualTraits": [
+        "short shadowy silhouette",
+        "brown skin",
+        "sharp green eyes",
+        "black hood with dull copper lining",
+        "half-dark painted lantern",
+        "foxlike cautious posture"
+      ],
+      "professionProps": [
+        "half-dark lantern",
+        "hidden trail cord",
+        "knife-length map"
+      ],
+      "dominantColors": [
+        "black",
+        "dull copper",
+        "green"
+      ],
+      "prompt": "A short shadowy smuggler guide with brown skin, sharp green eyes, black hood lined in dull copper, half-dark painted lantern held low, hidden trail cord and knife-length map visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: shadow-marked human. Visible magical traits that must remain consistent: half-shadow lantern glow. Identity anchors must remain unchanged: same person as npc-new-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    },
+    {
+      "order": 6,
+      "globalOrder": 66,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "imageId": "npc-new-016-angry",
+      "characterId": "npc-new-016",
+      "displayName": "Vaska LowLantern",
+      "profession": "Smuggler Guide",
+      "expression": "angry",
+      "outputFile": "npc-new-016-angry.png",
+      "ancestryOrSpecies": "shadow-marked human",
+      "magicalTraits": [
+        "half-shadow lantern glow"
+      ],
+      "identityAnchor": "same person as npc-new-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture",
+      "visualTraits": [
+        "short shadowy silhouette",
+        "brown skin",
+        "sharp green eyes",
+        "black hood with dull copper lining",
+        "half-dark painted lantern",
+        "foxlike cautious posture"
+      ],
+      "professionProps": [
+        "half-dark lantern",
+        "hidden trail cord",
+        "knife-length map"
+      ],
+      "dominantColors": [
+        "black",
+        "dull copper",
+        "green"
+      ],
+      "prompt": "A short shadowy smuggler guide with brown skin, sharp green eyes, black hood lined in dull copper, half-dark painted lantern held low, hidden trail cord and knife-length map visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: shadow-marked human. Visible magical traits that must remain consistent: half-shadow lantern glow. Identity anchors must remain unchanged: same person as npc-new-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    },
+    {
+      "order": 7,
+      "globalOrder": 67,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "imageId": "npc-new-017-neutral",
+      "characterId": "npc-new-017",
+      "displayName": "Tessa Cratewell",
+      "profession": "Warehouse Keeper",
+      "expression": "neutral",
+      "outputFile": "npc-new-017-neutral.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-017: stocky warehouse keeper, warm brown skin, square glasses, greying curls under blue kerchief, heavy key ring across chest, chalk-dusted cuffs, tidy watchful expression",
+      "visualTraits": [
+        "stocky organized silhouette",
+        "warm brown skin",
+        "square glasses",
+        "greying curls",
+        "blue kerchief",
+        "chalk-dusted cuffs",
+        "heavy key ring across chest"
+      ],
+      "professionProps": [
+        "heavy key ring",
+        "crate ledger",
+        "chalk tally board"
+      ],
+      "dominantColors": [
+        "blue",
+        "wood brown",
+        "chalk white"
+      ],
+      "prompt": "A stocky middle-aged warehouse keeper with warm brown skin, square glasses, greying curls under a blue kerchief, heavy key ring across her chest, chalk dust on both cuffs, and a posture that says every crate has a correct place. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-017: stocky warehouse keeper, warm brown skin, square glasses, greying curls under blue kerchief, heavy key ring across chest, chalk-dusted cuffs, tidy watchful expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    },
+    {
+      "order": 8,
+      "globalOrder": 68,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "imageId": "npc-new-017-happy",
+      "characterId": "npc-new-017",
+      "displayName": "Tessa Cratewell",
+      "profession": "Warehouse Keeper",
+      "expression": "happy",
+      "outputFile": "npc-new-017-happy.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-017: stocky warehouse keeper, warm brown skin, square glasses, greying curls under blue kerchief, heavy key ring across chest, chalk-dusted cuffs, tidy watchful expression",
+      "visualTraits": [
+        "stocky organized silhouette",
+        "warm brown skin",
+        "square glasses",
+        "greying curls",
+        "blue kerchief",
+        "chalk-dusted cuffs",
+        "heavy key ring across chest"
+      ],
+      "professionProps": [
+        "heavy key ring",
+        "crate ledger",
+        "chalk tally board"
+      ],
+      "dominantColors": [
+        "blue",
+        "wood brown",
+        "chalk white"
+      ],
+      "prompt": "A stocky middle-aged warehouse keeper with warm brown skin, square glasses, greying curls under a blue kerchief, heavy key ring across her chest, chalk dust on both cuffs, and a posture that says every crate has a correct place. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-017: stocky warehouse keeper, warm brown skin, square glasses, greying curls under blue kerchief, heavy key ring across chest, chalk-dusted cuffs, tidy watchful expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    },
+    {
+      "order": 9,
+      "globalOrder": 69,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "imageId": "npc-new-017-suspicious",
+      "characterId": "npc-new-017",
+      "displayName": "Tessa Cratewell",
+      "profession": "Warehouse Keeper",
+      "expression": "suspicious",
+      "outputFile": "npc-new-017-suspicious.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-017: stocky warehouse keeper, warm brown skin, square glasses, greying curls under blue kerchief, heavy key ring across chest, chalk-dusted cuffs, tidy watchful expression",
+      "visualTraits": [
+        "stocky organized silhouette",
+        "warm brown skin",
+        "square glasses",
+        "greying curls",
+        "blue kerchief",
+        "chalk-dusted cuffs",
+        "heavy key ring across chest"
+      ],
+      "professionProps": [
+        "heavy key ring",
+        "crate ledger",
+        "chalk tally board"
+      ],
+      "dominantColors": [
+        "blue",
+        "wood brown",
+        "chalk white"
+      ],
+      "prompt": "A stocky middle-aged warehouse keeper with warm brown skin, square glasses, greying curls under a blue kerchief, heavy key ring across her chest, chalk dust on both cuffs, and a posture that says every crate has a correct place. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-017: stocky warehouse keeper, warm brown skin, square glasses, greying curls under blue kerchief, heavy key ring across chest, chalk-dusted cuffs, tidy watchful expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    },
+    {
+      "order": 10,
+      "globalOrder": 70,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "imageId": "npc-new-017-worried",
+      "characterId": "npc-new-017",
+      "displayName": "Tessa Cratewell",
+      "profession": "Warehouse Keeper",
+      "expression": "worried",
+      "outputFile": "npc-new-017-worried.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-017: stocky warehouse keeper, warm brown skin, square glasses, greying curls under blue kerchief, heavy key ring across chest, chalk-dusted cuffs, tidy watchful expression",
+      "visualTraits": [
+        "stocky organized silhouette",
+        "warm brown skin",
+        "square glasses",
+        "greying curls",
+        "blue kerchief",
+        "chalk-dusted cuffs",
+        "heavy key ring across chest"
+      ],
+      "professionProps": [
+        "heavy key ring",
+        "crate ledger",
+        "chalk tally board"
+      ],
+      "dominantColors": [
+        "blue",
+        "wood brown",
+        "chalk white"
+      ],
+      "prompt": "A stocky middle-aged warehouse keeper with warm brown skin, square glasses, greying curls under a blue kerchief, heavy key ring across her chest, chalk dust on both cuffs, and a posture that says every crate has a correct place. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-017: stocky warehouse keeper, warm brown skin, square glasses, greying curls under blue kerchief, heavy key ring across chest, chalk-dusted cuffs, tidy watchful expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    },
+    {
+      "order": 11,
+      "globalOrder": 71,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "imageId": "npc-new-017-angry",
+      "characterId": "npc-new-017",
+      "displayName": "Tessa Cratewell",
+      "profession": "Warehouse Keeper",
+      "expression": "angry",
+      "outputFile": "npc-new-017-angry.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-new-017: stocky warehouse keeper, warm brown skin, square glasses, greying curls under blue kerchief, heavy key ring across chest, chalk-dusted cuffs, tidy watchful expression",
+      "visualTraits": [
+        "stocky organized silhouette",
+        "warm brown skin",
+        "square glasses",
+        "greying curls",
+        "blue kerchief",
+        "chalk-dusted cuffs",
+        "heavy key ring across chest"
+      ],
+      "professionProps": [
+        "heavy key ring",
+        "crate ledger",
+        "chalk tally board"
+      ],
+      "dominantColors": [
+        "blue",
+        "wood brown",
+        "chalk white"
+      ],
+      "prompt": "A stocky middle-aged warehouse keeper with warm brown skin, square glasses, greying curls under a blue kerchief, heavy key ring across her chest, chalk dust on both cuffs, and a posture that says every crate has a correct place. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-017: stocky warehouse keeper, warm brown skin, square glasses, greying curls under blue kerchief, heavy key ring across chest, chalk-dusted cuffs, tidy watchful expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    },
+    {
+      "order": 12,
+      "globalOrder": 72,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "imageId": "npc-new-018-neutral",
+      "characterId": "npc-new-018",
+      "displayName": "Corvin Sailstamp",
+      "profession": "Shipment Broker",
+      "expression": "neutral",
+      "outputFile": "npc-new-018-neutral.png",
+      "ancestryOrSpecies": "sea-elf",
+      "magicalTraits": [
+        "sea-glass eyes",
+        "wet pearl accents"
+      ],
+      "identityAnchor": "same person as npc-new-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile",
+      "visualTraits": [
+        "slender polished silhouette",
+        "light olive skin",
+        "swept black hair",
+        "teal silk cravat",
+        "brass cuff seals",
+        "contract tube",
+        "calculating smile"
+      ],
+      "professionProps": [
+        "contract tube",
+        "shipping seals",
+        "route fee cards"
+      ],
+      "dominantColors": [
+        "teal",
+        "brass",
+        "cream"
+      ],
+      "prompt": "A slender polished shipment broker with light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube tucked under one arm, and a smile that turns delays into invoices. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: sea-elf. Visible magical traits that must remain consistent: sea-glass eyes, wet pearl accents. Identity anchors must remain unchanged: same person as npc-new-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0061-0072"
+    }
+  ]
+}

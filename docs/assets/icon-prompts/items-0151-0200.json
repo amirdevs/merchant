@@ -1,0 +1,3813 @@
+{
+  "batch": {
+    "firstGlobalSlot": 151,
+    "lastGlobalSlot": 200,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. gold ring with red stone (one)\n2. gold ring with white stone (one)\n3. gold ring with yellow stone (one)\n4. market granite ring (one)\n5. market iron ring (one)\n6. ivory ring (one)\n7. jade ring (one)\n8. moonstone ring (one)\n9. opal ring (one)\n10. pearl ring (one)\n11. market plain black ring (one)\n12. plain blue ring (one)\n13. plain green ring (one)\n14. plain magenta ring (one)\n15. plain red ring (one)\n16. plain yellow ring (one)\n17. fabled ring of death (one)\n18. scarce ring of fire (one)\n19. scarce ring of power (one)\n20. fabled ring of time (one)\n21. fabled ring of vision (one)\n22. twisted ring (one)\n23. ruby ring (one)\n24. sapphire ring (one)\n25. fabled ring of shadows (one)\n26. silver ring (one)\n27. sparkling silver stone ring (one)\n28. market steel ring (one)\n29. notable tiger eye ring (one)\n30. topaz ring (one)\n31. scarce tourmaline ring (one)\n32. rough wooden ring (one)\n33. black pepper (one)\n34. black pepper (few)\n35. black pepper (many)\n36. ginger (one)\n37. ginger (few)\n38. ginger (many)\n39. salt (one)\n40. salt (few)\n41. salt (many)\n42. chives (one)\n43. chives (few)\n44. chives (many)\n45. thyme (one)\n46. thyme (few)\n47. thyme (many)\n48. garlic (one)\n49. garlic (few)\n50. garlic (many)",
+  "order": [
+    "1. gold ring with red stone (one)",
+    "2. gold ring with white stone (one)",
+    "3. gold ring with yellow stone (one)",
+    "4. market granite ring (one)",
+    "5. market iron ring (one)",
+    "6. ivory ring (one)",
+    "7. jade ring (one)",
+    "8. moonstone ring (one)",
+    "9. opal ring (one)",
+    "10. pearl ring (one)",
+    "11. market plain black ring (one)",
+    "12. plain blue ring (one)",
+    "13. plain green ring (one)",
+    "14. plain magenta ring (one)",
+    "15. plain red ring (one)",
+    "16. plain yellow ring (one)",
+    "17. fabled ring of death (one)",
+    "18. scarce ring of fire (one)",
+    "19. scarce ring of power (one)",
+    "20. fabled ring of time (one)",
+    "21. fabled ring of vision (one)",
+    "22. twisted ring (one)",
+    "23. ruby ring (one)",
+    "24. sapphire ring (one)",
+    "25. fabled ring of shadows (one)",
+    "26. silver ring (one)",
+    "27. sparkling silver stone ring (one)",
+    "28. market steel ring (one)",
+    "29. notable tiger eye ring (one)",
+    "30. topaz ring (one)",
+    "31. scarce tourmaline ring (one)",
+    "32. rough wooden ring (one)",
+    "33. black pepper (one)",
+    "34. black pepper (few)",
+    "35. black pepper (many)",
+    "36. ginger (one)",
+    "37. ginger (few)",
+    "38. ginger (many)",
+    "39. salt (one)",
+    "40. salt (few)",
+    "41. salt (many)",
+    "42. chives (one)",
+    "43. chives (few)",
+    "44. chives (many)",
+    "45. thyme (one)",
+    "46. thyme (few)",
+    "47. thyme (many)",
+    "48. garlic (one)",
+    "49. garlic (few)",
+    "50. garlic (many)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 151,
+      "itemIndex": 142,
+      "itemNumber": 143,
+      "itemName": "gold ring with red stone",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "gold",
+        "metal",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "gold"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/gold_ring_with_red_stone.png",
+      "output": "public/game-assets/items/luxury/gold_ring_with_red_stone.png",
+      "prompt": "Create exactly one clear gold ring with red stone, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: gold ring with red stone. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, rare, single, none, jewelry, rings, gold, metal, luxury, crafted, common, fine. It should read clearly in a small inventory tile.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 152,
+      "itemIndex": 143,
+      "itemNumber": 144,
+      "itemName": "gold ring with white stone",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "gold",
+        "metal",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "gold"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/gold_ring_with_white_stone.png",
+      "output": "public/game-assets/items/luxury/gold_ring_with_white_stone.png",
+      "prompt": "Create exactly one clear gold ring with white stone, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: gold ring with white stone. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, rare, single, none, jewelry, rings, gold, metal, luxury, crafted, common, fine. It should read clearly in a small inventory tile.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 153,
+      "itemIndex": 144,
+      "itemNumber": 145,
+      "itemName": "gold ring with yellow stone",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "gold",
+        "metal",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "gold"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/gold_ring_with_yellow_stone.png",
+      "output": "public/game-assets/items/luxury/gold_ring_with_yellow_stone.png",
+      "prompt": "Create exactly one clear gold ring with yellow stone, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: gold ring with yellow stone. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, rare, single, none, jewelry, rings, gold, metal, luxury, crafted, common, fine. It should read clearly in a small inventory tile.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 154,
+      "itemIndex": 145,
+      "itemNumber": 146,
+      "itemName": "market granite ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/market_granite_ring.png",
+      "output": "public/game-assets/items/luxury/market_granite_ring.png",
+      "prompt": "Create exactly one clear market granite ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market granite ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, common, single, none, jewelry, rings, luxury, crafted, common, noble_luxury, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 155,
+      "itemIndex": 146,
+      "itemNumber": 147,
+      "itemName": "market iron ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "metal",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/market_iron_ring.png",
+      "output": "public/game-assets/items/luxury/market_iron_ring.png",
+      "prompt": "Create exactly one clear market iron ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market iron ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, common, single, none, jewelry, rings, metal, luxury, crafted, common, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 156,
+      "itemIndex": 147,
+      "itemNumber": 148,
+      "itemName": "ivory ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/ivory_ring.png",
+      "output": "public/game-assets/items/luxury/ivory_ring.png",
+      "prompt": "Create exactly one clear ivory ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ivory ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, uncommon, single, none, jewelry, rings, luxury, crafted, common, fine, locked, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 157,
+      "itemIndex": 148,
+      "itemNumber": 149,
+      "itemName": "jade ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/jade_ring.png",
+      "output": "public/game-assets/items/luxury/jade_ring.png",
+      "prompt": "Create exactly one clear jade ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: jade ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, uncommon, single, none, jewelry, rings, luxury, crafted, common, fine, locked, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 158,
+      "itemIndex": 149,
+      "itemNumber": 150,
+      "itemName": "moonstone ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/moonstone_ring.png",
+      "output": "public/game-assets/items/luxury/moonstone_ring.png",
+      "prompt": "Create exactly one clear moonstone ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: moonstone ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, uncommon, single, none, jewelry, rings, luxury, crafted, common, fine, locked, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 159,
+      "itemIndex": 150,
+      "itemNumber": 151,
+      "itemName": "opal ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/opal_ring.png",
+      "output": "public/game-assets/items/luxury/opal_ring.png",
+      "prompt": "Create exactly one clear opal ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: opal ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, uncommon, single, none, jewelry, rings, luxury, crafted, common, fine, locked, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 160,
+      "itemIndex": 151,
+      "itemNumber": 152,
+      "itemName": "pearl ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/pearl_ring.png",
+      "output": "public/game-assets/items/luxury/pearl_ring.png",
+      "prompt": "Create exactly one clear pearl ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: pearl ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, uncommon, single, none, jewelry, rings, luxury, crafted, common, fine, locked, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 161,
+      "itemIndex": 152,
+      "itemNumber": 153,
+      "itemName": "market plain black ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/market_plain_black_ring.png",
+      "output": "public/game-assets/items/luxury/market_plain_black_ring.png",
+      "prompt": "Create exactly one clear market plain black ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market plain black ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, common, single, none, jewelry, rings, luxury, crafted, common, noble_luxury, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 162,
+      "itemIndex": 153,
+      "itemNumber": 154,
+      "itemName": "plain blue ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/plain_blue_ring.png",
+      "output": "public/game-assets/items/luxury/plain_blue_ring.png",
+      "prompt": "Create exactly one clear plain blue ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: plain blue ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, common, single, none, jewelry, rings, luxury, crafted, common, noble_luxury, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 163,
+      "itemIndex": 154,
+      "itemNumber": 155,
+      "itemName": "plain green ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/plain_green_ring.png",
+      "output": "public/game-assets/items/luxury/plain_green_ring.png",
+      "prompt": "Create exactly one clear plain green ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: plain green ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, common, single, none, jewelry, rings, luxury, crafted, common, noble_luxury, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 164,
+      "itemIndex": 155,
+      "itemNumber": 156,
+      "itemName": "plain magenta ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/plain_magenta_ring.png",
+      "output": "public/game-assets/items/luxury/plain_magenta_ring.png",
+      "prompt": "Create exactly one clear plain magenta ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: plain magenta ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, common, single, none, jewelry, rings, luxury, crafted, common, noble_luxury, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 165,
+      "itemIndex": 156,
+      "itemNumber": 157,
+      "itemName": "plain red ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/plain_red_ring.png",
+      "output": "public/game-assets/items/luxury/plain_red_ring.png",
+      "prompt": "Create exactly one clear plain red ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: plain red ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, common, single, none, jewelry, rings, luxury, crafted, common, noble_luxury, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 166,
+      "itemIndex": 157,
+      "itemNumber": 158,
+      "itemName": "plain yellow ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/plain_yellow_ring.png",
+      "output": "public/game-assets/items/luxury/plain_yellow_ring.png",
+      "prompt": "Create exactly one clear plain yellow ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: plain yellow ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, common, single, none, jewelry, rings, luxury, crafted, common, noble_luxury, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 167,
+      "itemIndex": 158,
+      "itemNumber": 159,
+      "itemName": "fabled ring of death",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/fabled_ring_of_death.png",
+      "output": "public/game-assets/items/luxury/fabled_ring_of_death.png",
+      "prompt": "Create exactly one clear fabled ring of death, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fabled ring of death. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, legendary, single, none, jewelry, rings, luxury, crafted, common, fine, masterwork, locked. It should read clearly in a small inventory tile.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 168,
+      "itemIndex": 159,
+      "itemNumber": 160,
+      "itemName": "scarce ring of fire",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/scarce_ring_of_fire.png",
+      "output": "public/game-assets/items/luxury/scarce_ring_of_fire.png",
+      "prompt": "Create exactly one clear scarce ring of fire, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce ring of fire. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, rare, single, none, jewelry, rings, luxury, crafted, common, fine, masterwork, locked. It should read clearly in a small inventory tile.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 169,
+      "itemIndex": 160,
+      "itemNumber": 161,
+      "itemName": "scarce ring of power",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/scarce_ring_of_power.png",
+      "output": "public/game-assets/items/luxury/scarce_ring_of_power.png",
+      "prompt": "Create exactly one clear scarce ring of power, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce ring of power. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, rare, single, none, jewelry, rings, luxury, crafted, common, fine, masterwork, locked. It should read clearly in a small inventory tile.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 170,
+      "itemIndex": 161,
+      "itemNumber": 162,
+      "itemName": "fabled ring of time",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/fabled_ring_of_time.png",
+      "output": "public/game-assets/items/luxury/fabled_ring_of_time.png",
+      "prompt": "Create exactly one clear fabled ring of time, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fabled ring of time. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, legendary, single, none, jewelry, rings, luxury, crafted, common, fine, masterwork, locked. It should read clearly in a small inventory tile.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 171,
+      "itemIndex": 162,
+      "itemNumber": 163,
+      "itemName": "fabled ring of vision",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/fabled_ring_of_vision.png",
+      "output": "public/game-assets/items/luxury/fabled_ring_of_vision.png",
+      "prompt": "Create exactly one clear fabled ring of vision, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fabled ring of vision. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, rare, single, none, jewelry, rings, luxury, crafted, common, fine, masterwork, locked. It should read clearly in a small inventory tile.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 172,
+      "itemIndex": 163,
+      "itemNumber": 164,
+      "itemName": "twisted ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/twisted_ring.png",
+      "output": "public/game-assets/items/luxury/twisted_ring.png",
+      "prompt": "Create exactly one clear twisted ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: twisted ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, uncommon, single, none, jewelry, rings, luxury, crafted, common, fine, noble_luxury, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 173,
+      "itemIndex": 164,
+      "itemNumber": 165,
+      "itemName": "ruby ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/ruby_ring.png",
+      "output": "public/game-assets/items/luxury/ruby_ring.png",
+      "prompt": "Create exactly one clear ruby ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ruby ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, uncommon, single, none, jewelry, rings, luxury, crafted, common, fine, locked, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 174,
+      "itemIndex": 165,
+      "itemNumber": 166,
+      "itemName": "sapphire ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/sapphire_ring.png",
+      "output": "public/game-assets/items/luxury/sapphire_ring.png",
+      "prompt": "Create exactly one clear sapphire ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: sapphire ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, uncommon, single, none, jewelry, rings, luxury, crafted, common, fine, locked, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 175,
+      "itemIndex": 166,
+      "itemNumber": 167,
+      "itemName": "fabled ring of shadows",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/fabled_ring_of_shadows.png",
+      "output": "public/game-assets/items/luxury/fabled_ring_of_shadows.png",
+      "prompt": "Create exactly one clear fabled ring of shadows, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fabled ring of shadows. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, legendary, single, none, jewelry, rings, luxury, crafted, common, fine, masterwork, locked. It should read clearly in a small inventory tile.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 176,
+      "itemIndex": 167,
+      "itemNumber": 168,
+      "itemName": "silver ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "metal",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/silver_ring.png",
+      "output": "public/game-assets/items/luxury/silver_ring.png",
+      "prompt": "Create exactly one clear silver ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: silver ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, uncommon, single, none, jewelry, rings, metal, luxury, crafted, common, fine, locked. It should read clearly in a small inventory tile.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 177,
+      "itemIndex": 168,
+      "itemNumber": 169,
+      "itemName": "sparkling silver stone ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "metal",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/sparkling_silver_stone_ring.png",
+      "output": "public/game-assets/items/luxury/sparkling_silver_stone_ring.png",
+      "prompt": "Create exactly one clear sparkling silver stone ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: sparkling silver stone ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, rare, single, none, jewelry, rings, metal, luxury, crafted, common, fine, masterwork. It should read clearly in a small inventory tile.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 178,
+      "itemIndex": 169,
+      "itemNumber": 170,
+      "itemName": "market steel ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/market_steel_ring.png",
+      "output": "public/game-assets/items/luxury/market_steel_ring.png",
+      "prompt": "Create exactly one clear market steel ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market steel ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, common, single, none, jewelry, rings, luxury, crafted, common, noble_luxury, finished_good, ordinary. It should read clearly in a small inventory tile.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 179,
+      "itemIndex": 170,
+      "itemNumber": 171,
+      "itemName": "notable tiger eye ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/notable_tiger_eye_ring.png",
+      "output": "public/game-assets/items/luxury/notable_tiger_eye_ring.png",
+      "prompt": "Create exactly one clear notable tiger eye ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: notable tiger eye ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, uncommon, single, none, jewelry, rings, luxury, crafted, common, fine, locked, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 180,
+      "itemIndex": 171,
+      "itemNumber": 172,
+      "itemName": "topaz ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/topaz_ring.png",
+      "output": "public/game-assets/items/luxury/topaz_ring.png",
+      "prompt": "Create exactly one clear topaz ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: topaz ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, uncommon, single, none, jewelry, rings, luxury, crafted, common, fine, locked, noble_luxury. It should read clearly in a small inventory tile.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 181,
+      "itemIndex": 172,
+      "itemNumber": 173,
+      "itemName": "scarce tourmaline ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "single",
+          "single_object"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/scarce_tourmaline_ring.png",
+      "output": "public/game-assets/items/luxury/scarce_tourmaline_ring.png",
+      "prompt": "Create exactly one clear scarce tourmaline ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce tourmaline ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, rare, single, none, jewelry, rings, luxury, crafted, common, fine, masterwork, locked. It should read clearly in a small inventory tile.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 182,
+      "itemIndex": 173,
+      "itemNumber": 174,
+      "itemName": "rough wooden ring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "jewelry",
+        "rings",
+        "wood",
+        "luxury"
+      ],
+      "family": "luxury",
+      "subfamily": "jewelry",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "luxury/rough_wooden_ring.png",
+      "output": "public/game-assets/items/luxury/rough_wooden_ring.png",
+      "prompt": "Create exactly one clear rough wooden ring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: rough wooden ring. Family: luxury. Subfamily: jewelry. Trade role: luxury. Bulk profile: single. Category cues: luxury, jewelry, luxury, common, single, none, jewelry, rings, wood, luxury, crafted, common, noble_luxury, wood. It should read clearly in a small inventory tile.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 183,
+      "itemIndex": 174,
+      "itemNumber": 175,
+      "itemName": "black pepper",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/black_pepper.png",
+      "output": "public/game-assets/items/spice/black_pepper.png",
+      "prompt": "Create exactly one clear black pepper, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: black pepper. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 184,
+      "itemIndex": 174,
+      "itemNumber": 175,
+      "itemName": "black pepper",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/black_pepper.png",
+      "output": "public/game-assets/items/spice/black_pepper_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated black pepper, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: black pepper. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 185,
+      "itemIndex": 174,
+      "itemNumber": 175,
+      "itemName": "black pepper",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/black_pepper.png",
+      "output": "public/game-assets/items/spice/black_pepper_many.png",
+      "prompt": "Create a very abundant quantity of black pepper, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: black pepper. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 186,
+      "itemIndex": 175,
+      "itemNumber": 176,
+      "itemName": "ginger",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/ginger.png",
+      "output": "public/game-assets/items/spice/ginger.png",
+      "prompt": "Create exactly one clear ginger, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ginger. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 187,
+      "itemIndex": 175,
+      "itemNumber": 176,
+      "itemName": "ginger",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/ginger.png",
+      "output": "public/game-assets/items/spice/ginger_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ginger, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ginger. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 188,
+      "itemIndex": 175,
+      "itemNumber": 176,
+      "itemName": "ginger",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/ginger.png",
+      "output": "public/game-assets/items/spice/ginger_many.png",
+      "prompt": "Create a very abundant quantity of ginger, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ginger. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 189,
+      "itemIndex": 176,
+      "itemNumber": 177,
+      "itemName": "salt",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/salt.png",
+      "output": "public/game-assets/items/spice/salt.png",
+      "prompt": "Create exactly one clear salt, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: salt. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 190,
+      "itemIndex": 176,
+      "itemNumber": 177,
+      "itemName": "salt",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/salt.png",
+      "output": "public/game-assets/items/spice/salt_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated salt, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: salt. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 191,
+      "itemIndex": 176,
+      "itemNumber": 177,
+      "itemName": "salt",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/salt.png",
+      "output": "public/game-assets/items/spice/salt_many.png",
+      "prompt": "Create a very abundant quantity of salt, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: salt. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 192,
+      "itemIndex": 177,
+      "itemNumber": 178,
+      "itemName": "chives",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/chives.png",
+      "output": "public/game-assets/items/spice/chives.png",
+      "prompt": "Create exactly one clear chives, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: chives. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 193,
+      "itemIndex": 177,
+      "itemNumber": 178,
+      "itemName": "chives",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/chives.png",
+      "output": "public/game-assets/items/spice/chives_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated chives, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: chives. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 194,
+      "itemIndex": 177,
+      "itemNumber": 178,
+      "itemName": "chives",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/chives.png",
+      "output": "public/game-assets/items/spice/chives_many.png",
+      "prompt": "Create a very abundant quantity of chives, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: chives. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 195,
+      "itemIndex": 178,
+      "itemNumber": 179,
+      "itemName": "thyme",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/thyme.png",
+      "output": "public/game-assets/items/spice/thyme.png",
+      "prompt": "Create exactly one clear thyme, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: thyme. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 196,
+      "itemIndex": 178,
+      "itemNumber": 179,
+      "itemName": "thyme",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/thyme.png",
+      "output": "public/game-assets/items/spice/thyme_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated thyme, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: thyme. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 197,
+      "itemIndex": 178,
+      "itemNumber": 179,
+      "itemName": "thyme",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/thyme.png",
+      "output": "public/game-assets/items/spice/thyme_many.png",
+      "prompt": "Create a very abundant quantity of thyme, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: thyme. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 198,
+      "itemIndex": 179,
+      "itemNumber": 180,
+      "itemName": "garlic",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/garlic.png",
+      "output": "public/game-assets/items/spice/garlic.png",
+      "prompt": "Create exactly one clear garlic, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: garlic. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 199,
+      "itemIndex": 179,
+      "itemNumber": 180,
+      "itemName": "garlic",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/garlic.png",
+      "output": "public/game-assets/items/spice/garlic_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated garlic, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: garlic. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 200,
+      "itemIndex": 179,
+      "itemNumber": 180,
+      "itemName": "garlic",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "food",
+        "spices",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "spices",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/garlic.png",
+      "output": "public/game-assets/items/spice/garlic_many.png",
+      "prompt": "Create a very abundant quantity of garlic, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: garlic. Family: spice. Subfamily: spices. Trade role: ingredient. Bulk profile: sack. Category cues: spice, spices, ingredient, common, sack, preserved, food, spices, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

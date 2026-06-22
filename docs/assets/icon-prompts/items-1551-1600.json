@@ -1,0 +1,3824 @@
+{
+  "batch": {
+    "firstGlobalSlot": 1551,
+    "lastGlobalSlot": 1600,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. large silver stove (one)\n2. large silver stove (few)\n3. large silver stove (many)\n4. small silver stove (one)\n5. small silver stove (few)\n6. small silver stove (many)\n7. small silver pot (one)\n8. small silver pot (few)\n9. small silver pot (many)\n10. tall silver pot (one)\n11. tall silver pot (few)\n12. tall silver pot (many)\n13. wide silver pot (one)\n14. wide silver pot (few)\n15. wide silver pot (many)\n16. Highbell land deed (one)\n17. Riverwake land deed (one)\n18. Embercourt land deed (one)\n19. Pearlgate land deed (one)\n20. Appleford land deed (one)\n21. Stormmere land deed (one)\n22. Crownfall land deed (one)\n23. Gatecrag land deed (one)\n24. market land deed (one)\n25. market beer (one)\n26. market beer (few)\n27. market beer (many)\n28. scarce drink of bones (one)\n29. scarce drink of bones (few)\n30. scarce drink of bones (many)\n31. fine ale (one)\n32. fine ale (few)\n33. fine ale (many)\n34. fine mead (one)\n35. fine mead (few)\n36. fine mead (many)\n37. fine wine (one)\n38. fine wine (few)\n39. fine wine (many)\n40. rough moonshine (one)\n41. rough moonshine (few)\n42. rough moonshine (many)\n43. rough ale (one)\n44. rough ale (few)\n45. rough ale (many)\n46. rough mead (one)\n47. rough mead (few)\n48. rough mead (many)\n49. rough wine (one)\n50. rough wine (few)",
+  "order": [
+    "1. large silver stove (one)",
+    "2. large silver stove (few)",
+    "3. large silver stove (many)",
+    "4. small silver stove (one)",
+    "5. small silver stove (few)",
+    "6. small silver stove (many)",
+    "7. small silver pot (one)",
+    "8. small silver pot (few)",
+    "9. small silver pot (many)",
+    "10. tall silver pot (one)",
+    "11. tall silver pot (few)",
+    "12. tall silver pot (many)",
+    "13. wide silver pot (one)",
+    "14. wide silver pot (few)",
+    "15. wide silver pot (many)",
+    "16. Highbell land deed (one)",
+    "17. Riverwake land deed (one)",
+    "18. Embercourt land deed (one)",
+    "19. Pearlgate land deed (one)",
+    "20. Appleford land deed (one)",
+    "21. Stormmere land deed (one)",
+    "22. Crownfall land deed (one)",
+    "23. Gatecrag land deed (one)",
+    "24. market land deed (one)",
+    "25. market beer (one)",
+    "26. market beer (few)",
+    "27. market beer (many)",
+    "28. scarce drink of bones (one)",
+    "29. scarce drink of bones (few)",
+    "30. scarce drink of bones (many)",
+    "31. fine ale (one)",
+    "32. fine ale (few)",
+    "33. fine ale (many)",
+    "34. fine mead (one)",
+    "35. fine mead (few)",
+    "36. fine mead (many)",
+    "37. fine wine (one)",
+    "38. fine wine (few)",
+    "39. fine wine (many)",
+    "40. rough moonshine (one)",
+    "41. rough moonshine (few)",
+    "42. rough moonshine (many)",
+    "43. rough ale (one)",
+    "44. rough ale (few)",
+    "45. rough ale (many)",
+    "46. rough mead (one)",
+    "47. rough mead (few)",
+    "48. rough mead (many)",
+    "49. rough wine (one)",
+    "50. rough wine (few)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 1551,
+      "itemIndex": 724,
+      "itemNumber": 725,
+      "itemName": "large silver stove",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 70,
+      "weight": 30,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/large_silver_stove.png",
+      "output": "public/game-assets/items/metal/large_silver_stove.png",
+      "prompt": "Create exactly one clear large silver stove, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large silver stove. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, uncommon, sack, rusts, silver, metal, raw, mined, common, fine, locked, craft_supply. It should feel physically large and heavy.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 1552,
+      "itemIndex": 724,
+      "itemNumber": 725,
+      "itemName": "large silver stove",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 70,
+      "weight": 30,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/large_silver_stove.png",
+      "output": "public/game-assets/items/metal/large_silver_stove_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large silver stove, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large silver stove. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, uncommon, sack, rusts, silver, metal, raw, mined, common, fine, locked, craft_supply. It should feel physically large and heavy.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 1553,
+      "itemIndex": 724,
+      "itemNumber": 725,
+      "itemName": "large silver stove",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 70,
+      "weight": 30,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/large_silver_stove.png",
+      "output": "public/game-assets/items/metal/large_silver_stove_many.png",
+      "prompt": "Create a very abundant quantity of large silver stove, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large silver stove. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, uncommon, sack, rusts, silver, metal, raw, mined, common, fine, locked, craft_supply. It should feel physically large and heavy.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 1554,
+      "itemIndex": 725,
+      "itemNumber": 726,
+      "itemName": "small silver stove",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/small_silver_stove.png",
+      "output": "public/game-assets/items/metal/small_silver_stove.png",
+      "prompt": "Create exactly one clear small silver stove, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: small silver stove. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, uncommon, sack, rusts, silver, metal, raw, mined, common, fine, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 1555,
+      "itemIndex": 725,
+      "itemNumber": 726,
+      "itemName": "small silver stove",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/small_silver_stove.png",
+      "output": "public/game-assets/items/metal/small_silver_stove_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated small silver stove, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: small silver stove. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, uncommon, sack, rusts, silver, metal, raw, mined, common, fine, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 1556,
+      "itemIndex": 725,
+      "itemNumber": 726,
+      "itemName": "small silver stove",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 25,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/small_silver_stove.png",
+      "output": "public/game-assets/items/metal/small_silver_stove_many.png",
+      "prompt": "Create a very abundant quantity of small silver stove, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: small silver stove. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, uncommon, sack, rusts, silver, metal, raw, mined, common, fine, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 1557,
+      "itemIndex": 726,
+      "itemNumber": 727,
+      "itemName": "small silver pot",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "household",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/small_silver_pot.png",
+      "output": "public/game-assets/items/metal/small_silver_pot.png",
+      "prompt": "Create exactly one clear small silver pot, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: small silver pot. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, common, sack, rusts, silver, household, metal, raw, mined, common, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 1558,
+      "itemIndex": 726,
+      "itemNumber": 727,
+      "itemName": "small silver pot",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "household",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/small_silver_pot.png",
+      "output": "public/game-assets/items/metal/small_silver_pot_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated small silver pot, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: small silver pot. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, common, sack, rusts, silver, household, metal, raw, mined, common, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 1559,
+      "itemIndex": 726,
+      "itemNumber": 727,
+      "itemName": "small silver pot",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "household",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/small_silver_pot.png",
+      "output": "public/game-assets/items/metal/small_silver_pot_many.png",
+      "prompt": "Create a very abundant quantity of small silver pot, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: small silver pot. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, common, sack, rusts, silver, household, metal, raw, mined, common, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 1560,
+      "itemIndex": 727,
+      "itemNumber": 728,
+      "itemName": "tall silver pot",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "household",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/tall_silver_pot.png",
+      "output": "public/game-assets/items/metal/tall_silver_pot.png",
+      "prompt": "Create exactly one clear tall silver pot, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: tall silver pot. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, common, sack, rusts, silver, household, metal, raw, mined, common, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 1561,
+      "itemIndex": 727,
+      "itemNumber": 728,
+      "itemName": "tall silver pot",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "household",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/tall_silver_pot.png",
+      "output": "public/game-assets/items/metal/tall_silver_pot_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated tall silver pot, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: tall silver pot. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, common, sack, rusts, silver, household, metal, raw, mined, common, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 1562,
+      "itemIndex": 727,
+      "itemNumber": 728,
+      "itemName": "tall silver pot",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "household",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/tall_silver_pot.png",
+      "output": "public/game-assets/items/metal/tall_silver_pot_many.png",
+      "prompt": "Create a very abundant quantity of tall silver pot, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: tall silver pot. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, common, sack, rusts, silver, household, metal, raw, mined, common, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 1563,
+      "itemIndex": 728,
+      "itemNumber": 729,
+      "itemName": "wide silver pot",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "household",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/wide_silver_pot.png",
+      "output": "public/game-assets/items/metal/wide_silver_pot.png",
+      "prompt": "Create exactly one clear wide silver pot, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: wide silver pot. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, common, sack, rusts, silver, household, metal, raw, mined, common, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 1564,
+      "itemIndex": 728,
+      "itemNumber": 729,
+      "itemName": "wide silver pot",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "household",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/wide_silver_pot.png",
+      "output": "public/game-assets/items/metal/wide_silver_pot_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated wide silver pot, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: wide silver pot. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, common, sack, rusts, silver, household, metal, raw, mined, common, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 1565,
+      "itemIndex": 728,
+      "itemNumber": 729,
+      "itemName": "wide silver pot",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "silver",
+        "household",
+        "metal",
+        "raw"
+      ],
+      "family": "metal",
+      "subfamily": "silver",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "silver"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "metal/wide_silver_pot.png",
+      "output": "public/game-assets/items/metal/wide_silver_pot_many.png",
+      "prompt": "Create a very abundant quantity of wide silver pot, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many sack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: wide silver pot. Family: metal. Subfamily: silver. Trade role: raw. Bulk profile: sack. Category cues: metal, silver, raw, common, sack, rusts, silver, household, metal, raw, mined, common, craft_supply, silver. It should feel medium-sized.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 1566,
+      "itemIndex": 729,
+      "itemNumber": 730,
+      "itemName": "Highbell land deed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "deeds",
+        "document"
+      ],
+      "family": "document",
+      "subfamily": "deeds",
+      "tradeRole": "document",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "document"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile",
+          "dry_storage",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "book",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "book",
+      "storageNeeds": [
+        "fragile",
+        "dry",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "document/highbell_land_deed.png",
+      "output": "public/game-assets/items/document/highbell_land_deed.png",
+      "prompt": "Create exactly one clear Highbell land deed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: Highbell land deed. Family: document. Subfamily: deeds. Trade role: document. Bulk profile: book. Category cues: document, deeds, document, legendary, book, none, deeds, document, crafted, common, fine, masterwork, fragile, dry. It should read clearly in a small inventory tile.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 1567,
+      "itemIndex": 730,
+      "itemNumber": 731,
+      "itemName": "Riverwake land deed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "deeds",
+        "document"
+      ],
+      "family": "document",
+      "subfamily": "deeds",
+      "tradeRole": "document",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "document"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile",
+          "dry_storage",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "book",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "book",
+      "storageNeeds": [
+        "fragile",
+        "dry",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "document/riverwake_land_deed.png",
+      "output": "public/game-assets/items/document/riverwake_land_deed.png",
+      "prompt": "Create exactly one clear Riverwake land deed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: Riverwake land deed. Family: document. Subfamily: deeds. Trade role: document. Bulk profile: book. Category cues: document, deeds, document, rare, book, none, deeds, document, crafted, common, fine, masterwork, fragile, dry. It should read clearly in a small inventory tile.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 1568,
+      "itemIndex": 731,
+      "itemNumber": 732,
+      "itemName": "Embercourt land deed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "deeds",
+        "document"
+      ],
+      "family": "document",
+      "subfamily": "deeds",
+      "tradeRole": "document",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "document"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile",
+          "dry_storage",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "book",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "book",
+      "storageNeeds": [
+        "fragile",
+        "dry",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "document/embercourt_land_deed.png",
+      "output": "public/game-assets/items/document/embercourt_land_deed.png",
+      "prompt": "Create exactly one clear Embercourt land deed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: Embercourt land deed. Family: document. Subfamily: deeds. Trade role: document. Bulk profile: book. Category cues: document, deeds, document, legendary, book, none, deeds, document, crafted, common, fine, masterwork, fragile, dry. It should read clearly in a small inventory tile.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 1569,
+      "itemIndex": 732,
+      "itemNumber": 733,
+      "itemName": "Pearlgate land deed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "deeds",
+        "document"
+      ],
+      "family": "document",
+      "subfamily": "deeds",
+      "tradeRole": "document",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "document"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile",
+          "dry_storage",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "book",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "book",
+      "storageNeeds": [
+        "fragile",
+        "dry",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "document/pearlgate_land_deed.png",
+      "output": "public/game-assets/items/document/pearlgate_land_deed.png",
+      "prompt": "Create exactly one clear Pearlgate land deed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: Pearlgate land deed. Family: document. Subfamily: deeds. Trade role: document. Bulk profile: book. Category cues: document, deeds, document, legendary, book, none, deeds, document, crafted, common, fine, masterwork, fragile, dry. It should read clearly in a small inventory tile.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 1570,
+      "itemIndex": 733,
+      "itemNumber": 734,
+      "itemName": "Appleford land deed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "deeds",
+        "document"
+      ],
+      "family": "document",
+      "subfamily": "deeds",
+      "tradeRole": "document",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "document"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile",
+          "dry_storage",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "book",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "book",
+      "storageNeeds": [
+        "fragile",
+        "dry",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "document/appleford_land_deed.png",
+      "output": "public/game-assets/items/document/appleford_land_deed.png",
+      "prompt": "Create exactly one clear Appleford land deed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: Appleford land deed. Family: document. Subfamily: deeds. Trade role: document. Bulk profile: book. Category cues: document, deeds, document, rare, book, none, deeds, document, crafted, common, fine, masterwork, fragile, dry. It should read clearly in a small inventory tile.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 1571,
+      "itemIndex": 734,
+      "itemNumber": 735,
+      "itemName": "Stormmere land deed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "deeds",
+        "document"
+      ],
+      "family": "document",
+      "subfamily": "deeds",
+      "tradeRole": "document",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "document"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile",
+          "dry_storage",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "book",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "book",
+      "storageNeeds": [
+        "fragile",
+        "dry",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "document/stormmere_land_deed.png",
+      "output": "public/game-assets/items/document/stormmere_land_deed.png",
+      "prompt": "Create exactly one clear Stormmere land deed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: Stormmere land deed. Family: document. Subfamily: deeds. Trade role: document. Bulk profile: book. Category cues: document, deeds, document, legendary, book, none, deeds, document, crafted, common, fine, masterwork, fragile, dry. It should read clearly in a small inventory tile.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 1572,
+      "itemIndex": 735,
+      "itemNumber": 736,
+      "itemName": "Crownfall land deed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "deeds",
+        "document"
+      ],
+      "family": "document",
+      "subfamily": "deeds",
+      "tradeRole": "document",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "document"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile",
+          "dry_storage",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "book",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "book",
+      "storageNeeds": [
+        "fragile",
+        "dry",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "document/crownfall_land_deed.png",
+      "output": "public/game-assets/items/document/crownfall_land_deed.png",
+      "prompt": "Create exactly one clear Crownfall land deed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: Crownfall land deed. Family: document. Subfamily: deeds. Trade role: document. Bulk profile: book. Category cues: document, deeds, document, legendary, book, none, deeds, document, crafted, common, fine, masterwork, fragile, dry. It should read clearly in a small inventory tile.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 1573,
+      "itemIndex": 736,
+      "itemNumber": 737,
+      "itemName": "Gatecrag land deed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "deeds",
+        "document"
+      ],
+      "family": "document",
+      "subfamily": "deeds",
+      "tradeRole": "document",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "document"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile",
+          "dry_storage",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "book",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "book",
+      "storageNeeds": [
+        "fragile",
+        "dry",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "document/gatecrag_land_deed.png",
+      "output": "public/game-assets/items/document/gatecrag_land_deed.png",
+      "prompt": "Create exactly one clear Gatecrag land deed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: Gatecrag land deed. Family: document. Subfamily: deeds. Trade role: document. Bulk profile: book. Category cues: document, deeds, document, rare, book, none, deeds, document, crafted, common, fine, masterwork, fragile, dry. It should read clearly in a small inventory tile.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 1574,
+      "itemIndex": 737,
+      "itemNumber": 738,
+      "itemName": "market land deed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "deeds",
+        "document"
+      ],
+      "family": "document",
+      "subfamily": "deeds",
+      "tradeRole": "document",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "document"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "fragile",
+          "dry_storage",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "book",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "book",
+      "storageNeeds": [
+        "fragile",
+        "dry",
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "document/market_land_deed.png",
+      "output": "public/game-assets/items/document/market_land_deed.png",
+      "prompt": "Create exactly one clear market land deed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market land deed. Family: document. Subfamily: deeds. Trade role: document. Bulk profile: book. Category cues: document, deeds, document, uncommon, book, none, deeds, document, crafted, common, fine, fragile, dry, locked. It should read clearly in a small inventory tile.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 1575,
+      "itemIndex": 738,
+      "itemNumber": 739,
+      "itemName": "market beer",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/market_beer.png",
+      "output": "public/game-assets/items/drink/market_beer.png",
+      "prompt": "Create exactly one clear market beer, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market beer. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 1576,
+      "itemIndex": 738,
+      "itemNumber": 739,
+      "itemName": "market beer",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/market_beer.png",
+      "output": "public/game-assets/items/drink/market_beer_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated market beer, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: market beer. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 1577,
+      "itemIndex": 738,
+      "itemNumber": 739,
+      "itemName": "market beer",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/market_beer.png",
+      "output": "public/game-assets/items/drink/market_beer_many.png",
+      "prompt": "Create a very abundant quantity of market beer, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: market beer. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 1578,
+      "itemIndex": 739,
+      "itemNumber": 740,
+      "itemName": "scarce drink of bones",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 5,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "drink/scarce_drink_of_bones.png",
+      "output": "public/game-assets/items/drink/scarce_drink_of_bones.png",
+      "prompt": "Create exactly one clear scarce drink of bones, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce drink of bones. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 1579,
+      "itemIndex": 739,
+      "itemNumber": 740,
+      "itemName": "scarce drink of bones",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 5,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "drink/scarce_drink_of_bones.png",
+      "output": "public/game-assets/items/drink/scarce_drink_of_bones_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated scarce drink of bones, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce drink of bones. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 1580,
+      "itemIndex": 739,
+      "itemNumber": 740,
+      "itemName": "scarce drink of bones",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 5,
+      "rarity": 2,
+      "unique": false,
+      "iconFile": "drink/scarce_drink_of_bones.png",
+      "output": "public/game-assets/items/drink/scarce_drink_of_bones_many.png",
+      "prompt": "Create a very abundant quantity of scarce drink of bones, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce drink of bones. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 1581,
+      "itemIndex": 740,
+      "itemNumber": 741,
+      "itemName": "fine ale",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/fine_ale.png",
+      "output": "public/game-assets/items/drink/fine_ale.png",
+      "prompt": "Create exactly one clear fine ale, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fine ale. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 1582,
+      "itemIndex": 740,
+      "itemNumber": 741,
+      "itemName": "fine ale",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/fine_ale.png",
+      "output": "public/game-assets/items/drink/fine_ale_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated fine ale, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: fine ale. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 1583,
+      "itemIndex": 740,
+      "itemNumber": 741,
+      "itemName": "fine ale",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/fine_ale.png",
+      "output": "public/game-assets/items/drink/fine_ale_many.png",
+      "prompt": "Create a very abundant quantity of fine ale, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: fine ale. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 1584,
+      "itemIndex": 741,
+      "itemNumber": 742,
+      "itemName": "fine mead",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/fine_mead.png",
+      "output": "public/game-assets/items/drink/fine_mead.png",
+      "prompt": "Create exactly one clear fine mead, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fine mead. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 1585,
+      "itemIndex": 741,
+      "itemNumber": 742,
+      "itemName": "fine mead",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/fine_mead.png",
+      "output": "public/game-assets/items/drink/fine_mead_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated fine mead, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: fine mead. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 1586,
+      "itemIndex": 741,
+      "itemNumber": 742,
+      "itemName": "fine mead",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/fine_mead.png",
+      "output": "public/game-assets/items/drink/fine_mead_many.png",
+      "prompt": "Create a very abundant quantity of fine mead, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: fine mead. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 1587,
+      "itemIndex": 742,
+      "itemNumber": 743,
+      "itemName": "fine wine",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/fine_wine.png",
+      "output": "public/game-assets/items/drink/fine_wine.png",
+      "prompt": "Create exactly one clear fine wine, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fine wine. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 1588,
+      "itemIndex": 742,
+      "itemNumber": 743,
+      "itemName": "fine wine",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/fine_wine.png",
+      "output": "public/game-assets/items/drink/fine_wine_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated fine wine, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: fine wine. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 1589,
+      "itemIndex": 742,
+      "itemNumber": 743,
+      "itemName": "fine wine",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/fine_wine.png",
+      "output": "public/game-assets/items/drink/fine_wine_many.png",
+      "prompt": "Create a very abundant quantity of fine wine, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: fine wine. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 1590,
+      "itemIndex": 743,
+      "itemNumber": 744,
+      "itemName": "rough moonshine",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/rough_moonshine.png",
+      "output": "public/game-assets/items/drink/rough_moonshine.png",
+      "prompt": "Create exactly one clear rough moonshine, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: rough moonshine. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 1591,
+      "itemIndex": 743,
+      "itemNumber": 744,
+      "itemName": "rough moonshine",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/rough_moonshine.png",
+      "output": "public/game-assets/items/drink/rough_moonshine_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated rough moonshine, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: rough moonshine. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 1592,
+      "itemIndex": 743,
+      "itemNumber": 744,
+      "itemName": "rough moonshine",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/rough_moonshine.png",
+      "output": "public/game-assets/items/drink/rough_moonshine_many.png",
+      "prompt": "Create a very abundant quantity of rough moonshine, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: rough moonshine. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 1593,
+      "itemIndex": 744,
+      "itemNumber": 745,
+      "itemName": "rough ale",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/rough_ale.png",
+      "output": "public/game-assets/items/drink/rough_ale.png",
+      "prompt": "Create exactly one clear rough ale, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: rough ale. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 1594,
+      "itemIndex": 744,
+      "itemNumber": 745,
+      "itemName": "rough ale",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/rough_ale.png",
+      "output": "public/game-assets/items/drink/rough_ale_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated rough ale, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: rough ale. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 1595,
+      "itemIndex": 744,
+      "itemNumber": 745,
+      "itemName": "rough ale",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/rough_ale.png",
+      "output": "public/game-assets/items/drink/rough_ale_many.png",
+      "prompt": "Create a very abundant quantity of rough ale, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: rough ale. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 1596,
+      "itemIndex": 745,
+      "itemNumber": 746,
+      "itemName": "rough mead",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/rough_mead.png",
+      "output": "public/game-assets/items/drink/rough_mead.png",
+      "prompt": "Create exactly one clear rough mead, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: rough mead. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 1597,
+      "itemIndex": 745,
+      "itemNumber": 746,
+      "itemName": "rough mead",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/rough_mead.png",
+      "output": "public/game-assets/items/drink/rough_mead_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated rough mead, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: rough mead. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 1598,
+      "itemIndex": 745,
+      "itemNumber": 746,
+      "itemName": "rough mead",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/rough_mead.png",
+      "output": "public/game-assets/items/drink/rough_mead_many.png",
+      "prompt": "Create a very abundant quantity of rough mead, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: rough mead. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 1599,
+      "itemIndex": 746,
+      "itemNumber": 747,
+      "itemName": "rough wine",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/rough_wine.png",
+      "output": "public/game-assets/items/drink/rough_wine.png",
+      "prompt": "Create exactly one clear rough wine, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: rough wine. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 1600,
+      "itemIndex": 746,
+      "itemNumber": 747,
+      "itemName": "rough wine",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "drinks",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "drinks",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/rough_wine.png",
+      "output": "public/game-assets/items/drink/rough_wine_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated rough wine, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: rough wine. Family: drink. Subfamily: drinks. Trade role: finished. Bulk profile: bottle. Category cues: drink, drinks, finished, common, bottle, expires, drinks, drink, finished, farmed, common, chilled, daily_staple, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

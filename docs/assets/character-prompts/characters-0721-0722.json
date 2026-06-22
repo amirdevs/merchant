@@ -1,0 +1,121 @@
+{
+  "batchId": "characters-0721-0722",
+  "version": "v4-approved-style-3x4-sequential-production-manifest",
+  "status": "ready_for_generation_in_filename_order_after_final_review",
+  "purpose": "Sequential character portrait production manifest. Generate files in filename order; crop left-to-right and top-to-bottom; name each crop by outputFile.",
+  "batch": {
+    "firstGlobalSlot": 721,
+    "lastGlobalSlot": 722,
+    "slotCount": 2,
+    "maxSlotsPerSheet": 12
+  },
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Generate sheets in filename order.",
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "If the generated sheet resolution differs, scale crop coordinates proportionally from the actual width/height while preserving 3 columns by 4 rows.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "order": [
+    "1. npc-legacy-190-neutral",
+    "2. npc-legacy-191-neutral"
+  ],
+  "images": [
+    {
+      "imageId": "npc-legacy-190-neutral",
+      "characterId": "npc-legacy-190",
+      "displayName": "Auntie Vessa Rainbowl",
+      "profession": "Well Watcher",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-190-neutral.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-190: elderly round face, silver headwrap, blue shawl, water ladle, rainbow beads, well watcher, human, wooden water ladle",
+      "visualTraits": [
+        "elderly round face",
+        "silver headwrap",
+        "blue shawl",
+        "water ladle",
+        "rainbow beads",
+        "gentle scolding eyes"
+      ],
+      "professionProps": [
+        "wooden water ladle",
+        "rainbow bead necklace"
+      ],
+      "prompt": "An elderly dark-skinned woman with soft round cheeks, silver headwrap, blue shawl, wooden water ladle, and a little rainbow bead necklace. Expression: calm readable neutral expression, relaxed mouth, direct eye contact, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 1,
+      "globalOrder": 721,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0721-0722"
+    },
+    {
+      "imageId": "npc-legacy-191-neutral",
+      "characterId": "npc-legacy-191",
+      "displayName": "Qadir Mothlamp",
+      "profession": "Night Lamplighter",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-191-neutral.png",
+      "ancestryOrSpecies": "human",
+      "magicalTraits": [
+        "three pale moths glowing near the lantern flame"
+      ],
+      "identityAnchor": "same person as npc-legacy-191: thin lamplighter silhouette, sleepy eyes, charcoal hood, long yellow scarf, brass lantern pole, night lamplighter, human, lantern pole",
+      "visualTraits": [
+        "thin lamplighter silhouette",
+        "sleepy eyes",
+        "charcoal hood",
+        "long yellow scarf",
+        "brass lantern pole",
+        "glowing moths"
+      ],
+      "professionProps": [
+        "lantern pole",
+        "oil flask",
+        "wick bundle"
+      ],
+      "prompt": "A thin young man with deep brown skin, sleepy eyes, charcoal hood, long yellow scarf, brass lantern pole, and three pale moths glowing near the flame. Expression: calm readable neutral expression, relaxed mouth, direct eye contact, identity anchors unchanged. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "order": 2,
+      "globalOrder": 722,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "batchId": "characters-0721-0722"
+    }
+  ]
+}

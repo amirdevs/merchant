@@ -1,0 +1,3737 @@
+{
+  "batch": {
+    "firstGlobalSlot": 1151,
+    "lastGlobalSlot": 1200,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. stump (one)\n2. stump (few)\n3. stump (many)\n4. scarf (one)\n5. scarf (few)\n6. scarf (many)\n7. ceremonial cloak (one)\n8. ceremonial cloak (few)\n9. ceremonial cloak (many)\n10. scarce dragonskin cloak (one)\n11. leather cloak (one)\n12. leather cloak (few)\n13. leather cloak (many)\n14. ratskin cloak (one)\n15. ratskin cloak (few)\n16. ratskin cloak (many)\n17. royal cloak (one)\n18. royal cloak (few)\n19. royal cloak (many)\n20. simple cloak (one)\n21. simple cloak (few)\n22. simple cloak (many)\n23. scarce cloak of starlight (one)\n24. thiefs cloak (one)\n25. thiefs cloak (few)\n26. thiefs cloak (many)\n27. ragged coat (one)\n28. ragged coat (few)\n29. ragged coat (many)\n30. royal coat (one)\n31. royal coat (few)\n32. royal coat (many)\n33. thick coat (one)\n34. thick coat (few)\n35. thick coat (many)\n36. black dress (one)\n37. black dress (few)\n38. black dress (many)\n39. corset (one)\n40. corset (few)\n41. corset (many)\n42. light blue dress (one)\n43. light blue dress (few)\n44. light blue dress (many)\n45. scarce red dress (one)\n46. scarce red dress (few)\n47. scarce red dress (many)\n48. white dress (one)\n49. white dress (few)\n50. white dress (many)",
+  "order": [
+    "1. stump (one)",
+    "2. stump (few)",
+    "3. stump (many)",
+    "4. scarf (one)",
+    "5. scarf (few)",
+    "6. scarf (many)",
+    "7. ceremonial cloak (one)",
+    "8. ceremonial cloak (few)",
+    "9. ceremonial cloak (many)",
+    "10. scarce dragonskin cloak (one)",
+    "11. leather cloak (one)",
+    "12. leather cloak (few)",
+    "13. leather cloak (many)",
+    "14. ratskin cloak (one)",
+    "15. ratskin cloak (few)",
+    "16. ratskin cloak (many)",
+    "17. royal cloak (one)",
+    "18. royal cloak (few)",
+    "19. royal cloak (many)",
+    "20. simple cloak (one)",
+    "21. simple cloak (few)",
+    "22. simple cloak (many)",
+    "23. scarce cloak of starlight (one)",
+    "24. thiefs cloak (one)",
+    "25. thiefs cloak (few)",
+    "26. thiefs cloak (many)",
+    "27. ragged coat (one)",
+    "28. ragged coat (few)",
+    "29. ragged coat (many)",
+    "30. royal coat (one)",
+    "31. royal coat (few)",
+    "32. royal coat (many)",
+    "33. thick coat (one)",
+    "34. thick coat (few)",
+    "35. thick coat (many)",
+    "36. black dress (one)",
+    "37. black dress (few)",
+    "38. black dress (many)",
+    "39. corset (one)",
+    "40. corset (few)",
+    "41. corset (many)",
+    "42. light blue dress (one)",
+    "43. light blue dress (few)",
+    "44. light blue dress (many)",
+    "45. scarce red dress (one)",
+    "46. scarce red dress (few)",
+    "47. scarce red dress (many)",
+    "48. white dress (one)",
+    "49. white dress (few)",
+    "50. white dress (many)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 1151,
+      "itemIndex": 582,
+      "itemNumber": 583,
+      "itemName": "stump",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 40,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/stump.png",
+      "output": "public/game-assets/items/produce/stump.png",
+      "prompt": "Create exactly one clear stump, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: stump. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 1152,
+      "itemIndex": 582,
+      "itemNumber": 583,
+      "itemName": "stump",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 40,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/stump.png",
+      "output": "public/game-assets/items/produce/stump_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated stump, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: stump. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 1153,
+      "itemIndex": 582,
+      "itemNumber": 583,
+      "itemName": "stump",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "wood",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 40,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/stump.png",
+      "output": "public/game-assets/items/produce/stump_many.png",
+      "prompt": "Create a very abundant quantity of stump, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: stump. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, wood, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 1154,
+      "itemIndex": 583,
+      "itemNumber": 584,
+      "itemName": "scarf",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 2,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/scarf.png",
+      "output": "public/game-assets/items/textile/scarf.png",
+      "prompt": "Create exactly one clear scarf, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarf. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, textile, finished, crafted, common, craft_supply, cloth, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 1155,
+      "itemIndex": 583,
+      "itemNumber": 584,
+      "itemName": "scarf",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 2,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/scarf.png",
+      "output": "public/game-assets/items/textile/scarf_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated scarf, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: scarf. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, textile, finished, crafted, common, craft_supply, cloth, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 1156,
+      "itemIndex": 583,
+      "itemNumber": 584,
+      "itemName": "scarf",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 2,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/scarf.png",
+      "output": "public/game-assets/items/textile/scarf_many.png",
+      "prompt": "Create a very abundant quantity of scarf, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: scarf. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, textile, finished, crafted, common, craft_supply, cloth, finished_good. It should read clearly in a small inventory tile.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 1157,
+      "itemIndex": 584,
+      "itemNumber": 585,
+      "itemName": "ceremonial cloak",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/ceremonial_cloak.png",
+      "output": "public/game-assets/items/textile/ceremonial_cloak.png",
+      "prompt": "Create exactly one clear ceremonial cloak, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ceremonial cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, cloaks, textile, finished, crafted, common, fine, locked. It should feel medium-sized.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 1158,
+      "itemIndex": 584,
+      "itemNumber": 585,
+      "itemName": "ceremonial cloak",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/ceremonial_cloak.png",
+      "output": "public/game-assets/items/textile/ceremonial_cloak_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ceremonial cloak, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ceremonial cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, cloaks, textile, finished, crafted, common, fine, locked. It should feel medium-sized.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 1159,
+      "itemIndex": 584,
+      "itemNumber": 585,
+      "itemName": "ceremonial cloak",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/ceremonial_cloak.png",
+      "output": "public/game-assets/items/textile/ceremonial_cloak_many.png",
+      "prompt": "Create a very abundant quantity of ceremonial cloak, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ceremonial cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, cloaks, textile, finished, crafted, common, fine, locked. It should feel medium-sized.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 1160,
+      "itemIndex": 585,
+      "itemNumber": 586,
+      "itemName": "scarce dragonskin cloak",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/scarce_dragonskin_cloak.png",
+      "output": "public/game-assets/items/textile/scarce_dragonskin_cloak.png",
+      "prompt": "Create exactly one clear scarce dragonskin cloak, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce dragonskin cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, legendary, roll, none, clothes, cloaks, textile, finished, crafted, common, fine, masterwork. It should feel medium-sized.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 1161,
+      "itemIndex": 586,
+      "itemNumber": 587,
+      "itemName": "leather cloak",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/leather_cloak.png",
+      "output": "public/game-assets/items/textile/leather_cloak.png",
+      "prompt": "Create exactly one clear leather cloak, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: leather cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 1162,
+      "itemIndex": 586,
+      "itemNumber": 587,
+      "itemName": "leather cloak",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/leather_cloak.png",
+      "output": "public/game-assets/items/textile/leather_cloak_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated leather cloak, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: leather cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 1163,
+      "itemIndex": 586,
+      "itemNumber": 587,
+      "itemName": "leather cloak",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/leather_cloak.png",
+      "output": "public/game-assets/items/textile/leather_cloak_many.png",
+      "prompt": "Create a very abundant quantity of leather cloak, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: leather cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 1164,
+      "itemIndex": 587,
+      "itemNumber": 588,
+      "itemName": "ratskin cloak",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/ratskin_cloak.png",
+      "output": "public/game-assets/items/textile/ratskin_cloak.png",
+      "prompt": "Create exactly one clear ratskin cloak, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ratskin cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 1165,
+      "itemIndex": 587,
+      "itemNumber": 588,
+      "itemName": "ratskin cloak",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/ratskin_cloak.png",
+      "output": "public/game-assets/items/textile/ratskin_cloak_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ratskin cloak, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ratskin cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 1166,
+      "itemIndex": 587,
+      "itemNumber": 588,
+      "itemName": "ratskin cloak",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/ratskin_cloak.png",
+      "output": "public/game-assets/items/textile/ratskin_cloak_many.png",
+      "prompt": "Create a very abundant quantity of ratskin cloak, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ratskin cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 1167,
+      "itemIndex": 588,
+      "itemNumber": 589,
+      "itemName": "royal cloak",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/royal_cloak.png",
+      "output": "public/game-assets/items/textile/royal_cloak.png",
+      "prompt": "Create exactly one clear royal cloak, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: royal cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, cloaks, textile, finished, crafted, common, fine, craft_supply. It should feel medium-sized.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 1168,
+      "itemIndex": 588,
+      "itemNumber": 589,
+      "itemName": "royal cloak",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/royal_cloak.png",
+      "output": "public/game-assets/items/textile/royal_cloak_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated royal cloak, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: royal cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, cloaks, textile, finished, crafted, common, fine, craft_supply. It should feel medium-sized.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 1169,
+      "itemIndex": 588,
+      "itemNumber": 589,
+      "itemName": "royal cloak",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/royal_cloak.png",
+      "output": "public/game-assets/items/textile/royal_cloak_many.png",
+      "prompt": "Create a very abundant quantity of royal cloak, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: royal cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, cloaks, textile, finished, crafted, common, fine, craft_supply. It should feel medium-sized.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 1170,
+      "itemIndex": 589,
+      "itemNumber": 590,
+      "itemName": "simple cloak",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/simple_cloak.png",
+      "output": "public/game-assets/items/textile/simple_cloak.png",
+      "prompt": "Create exactly one clear simple cloak, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: simple cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 1171,
+      "itemIndex": 589,
+      "itemNumber": 590,
+      "itemName": "simple cloak",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/simple_cloak.png",
+      "output": "public/game-assets/items/textile/simple_cloak_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated simple cloak, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: simple cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 1172,
+      "itemIndex": 589,
+      "itemNumber": 590,
+      "itemName": "simple cloak",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/simple_cloak.png",
+      "output": "public/game-assets/items/textile/simple_cloak_many.png",
+      "prompt": "Create a very abundant quantity of simple cloak, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: simple cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 1173,
+      "itemIndex": 590,
+      "itemNumber": 591,
+      "itemName": "scarce cloak of starlight",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "clothes",
+        "cloaks",
+        "magic",
+        "textile",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth",
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/scarce_cloak_of_starlight.png",
+      "output": "public/game-assets/items/magic/scarce_cloak_of_starlight.png",
+      "prompt": "Create exactly one clear scarce cloak of starlight, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce cloak of starlight. Family: magic. Subfamily: clothes. Trade role: finished. Bulk profile: bottle. Category cues: magic, clothes, finished, rare, bottle, volatile, clothes, cloaks, magic, textile, finished, crafted, common, fine. It should feel medium-sized.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 1174,
+      "itemIndex": 591,
+      "itemNumber": 592,
+      "itemName": "thiefs cloak",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/thiefs_cloak.png",
+      "output": "public/game-assets/items/textile/thiefs_cloak.png",
+      "prompt": "Create exactly one clear thiefs cloak, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: thiefs cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 1175,
+      "itemIndex": 591,
+      "itemNumber": 592,
+      "itemName": "thiefs cloak",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/thiefs_cloak.png",
+      "output": "public/game-assets/items/textile/thiefs_cloak_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated thiefs cloak, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: thiefs cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 1176,
+      "itemIndex": 591,
+      "itemNumber": 592,
+      "itemName": "thiefs cloak",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "cloaks",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/thiefs_cloak.png",
+      "output": "public/game-assets/items/textile/thiefs_cloak_many.png",
+      "prompt": "Create a very abundant quantity of thiefs cloak, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: thiefs cloak. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, cloaks, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 1177,
+      "itemIndex": 592,
+      "itemNumber": 593,
+      "itemName": "ragged coat",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "coats",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/ragged_coat.png",
+      "output": "public/game-assets/items/textile/ragged_coat.png",
+      "prompt": "Create exactly one clear ragged coat, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ragged coat. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, coats, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 1178,
+      "itemIndex": 592,
+      "itemNumber": 593,
+      "itemName": "ragged coat",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "coats",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/ragged_coat.png",
+      "output": "public/game-assets/items/textile/ragged_coat_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ragged coat, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ragged coat. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, coats, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 1179,
+      "itemIndex": 592,
+      "itemNumber": 593,
+      "itemName": "ragged coat",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "coats",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/ragged_coat.png",
+      "output": "public/game-assets/items/textile/ragged_coat_many.png",
+      "prompt": "Create a very abundant quantity of ragged coat, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ragged coat. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, coats, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 1180,
+      "itemIndex": 593,
+      "itemNumber": 594,
+      "itemName": "royal coat",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "coats",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/royal_coat.png",
+      "output": "public/game-assets/items/textile/royal_coat.png",
+      "prompt": "Create exactly one clear royal coat, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: royal coat. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, coats, textile, finished, crafted, common, fine, locked. It should feel medium-sized.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 1181,
+      "itemIndex": 593,
+      "itemNumber": 594,
+      "itemName": "royal coat",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "coats",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/royal_coat.png",
+      "output": "public/game-assets/items/textile/royal_coat_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated royal coat, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: royal coat. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, coats, textile, finished, crafted, common, fine, locked. It should feel medium-sized.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 1182,
+      "itemIndex": 593,
+      "itemNumber": 594,
+      "itemName": "royal coat",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "coats",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/royal_coat.png",
+      "output": "public/game-assets/items/textile/royal_coat_many.png",
+      "prompt": "Create a very abundant quantity of royal coat, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: royal coat. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, coats, textile, finished, crafted, common, fine, locked. It should feel medium-sized.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 1183,
+      "itemIndex": 594,
+      "itemNumber": 595,
+      "itemName": "thick coat",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "coats",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/thick_coat.png",
+      "output": "public/game-assets/items/textile/thick_coat.png",
+      "prompt": "Create exactly one clear thick coat, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: thick coat. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, coats, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 1184,
+      "itemIndex": 594,
+      "itemNumber": 595,
+      "itemName": "thick coat",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "coats",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/thick_coat.png",
+      "output": "public/game-assets/items/textile/thick_coat_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated thick coat, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: thick coat. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, coats, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 1185,
+      "itemIndex": 594,
+      "itemNumber": 595,
+      "itemName": "thick coat",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "coats",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/thick_coat.png",
+      "output": "public/game-assets/items/textile/thick_coat_many.png",
+      "prompt": "Create a very abundant quantity of thick coat, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: thick coat. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, coats, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 1186,
+      "itemIndex": 595,
+      "itemNumber": 596,
+      "itemName": "black dress",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/black_dress.png",
+      "output": "public/game-assets/items/textile/black_dress.png",
+      "prompt": "Create exactly one clear black dress, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: black dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 1187,
+      "itemIndex": 595,
+      "itemNumber": 596,
+      "itemName": "black dress",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/black_dress.png",
+      "output": "public/game-assets/items/textile/black_dress_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated black dress, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: black dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 1188,
+      "itemIndex": 595,
+      "itemNumber": 596,
+      "itemName": "black dress",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/black_dress.png",
+      "output": "public/game-assets/items/textile/black_dress_many.png",
+      "prompt": "Create a very abundant quantity of black dress, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: black dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 1189,
+      "itemIndex": 596,
+      "itemNumber": 597,
+      "itemName": "corset",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/corset.png",
+      "output": "public/game-assets/items/textile/corset.png",
+      "prompt": "Create exactly one clear corset, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: corset. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 1190,
+      "itemIndex": 596,
+      "itemNumber": 597,
+      "itemName": "corset",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/corset.png",
+      "output": "public/game-assets/items/textile/corset_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated corset, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: corset. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 1191,
+      "itemIndex": 596,
+      "itemNumber": 597,
+      "itemName": "corset",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/corset.png",
+      "output": "public/game-assets/items/textile/corset_many.png",
+      "prompt": "Create a very abundant quantity of corset, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: corset. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 1192,
+      "itemIndex": 597,
+      "itemNumber": 598,
+      "itemName": "light blue dress",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/light_blue_dress.png",
+      "output": "public/game-assets/items/textile/light_blue_dress.png",
+      "prompt": "Create exactly one clear light blue dress, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: light blue dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 1193,
+      "itemIndex": 597,
+      "itemNumber": 598,
+      "itemName": "light blue dress",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/light_blue_dress.png",
+      "output": "public/game-assets/items/textile/light_blue_dress_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated light blue dress, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: light blue dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 1194,
+      "itemIndex": 597,
+      "itemNumber": 598,
+      "itemName": "light blue dress",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/light_blue_dress.png",
+      "output": "public/game-assets/items/textile/light_blue_dress_many.png",
+      "prompt": "Create a very abundant quantity of light blue dress, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: light blue dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 1195,
+      "itemIndex": 598,
+      "itemNumber": 599,
+      "itemName": "scarce red dress",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/scarce_red_dress.png",
+      "output": "public/game-assets/items/textile/scarce_red_dress.png",
+      "prompt": "Create exactly one clear scarce red dress, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce red dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, dresses, textile, finished, crafted, common, fine, craft_supply. It should feel medium-sized.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 1196,
+      "itemIndex": 598,
+      "itemNumber": 599,
+      "itemName": "scarce red dress",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/scarce_red_dress.png",
+      "output": "public/game-assets/items/textile/scarce_red_dress_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated scarce red dress, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce red dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, dresses, textile, finished, crafted, common, fine, craft_supply. It should feel medium-sized.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 1197,
+      "itemIndex": 598,
+      "itemNumber": 599,
+      "itemName": "scarce red dress",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/scarce_red_dress.png",
+      "output": "public/game-assets/items/textile/scarce_red_dress_many.png",
+      "prompt": "Create a very abundant quantity of scarce red dress, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce red dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, uncommon, roll, none, clothes, dresses, textile, finished, crafted, common, fine, craft_supply. It should feel medium-sized.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 1198,
+      "itemIndex": 599,
+      "itemNumber": 600,
+      "itemName": "white dress",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/white_dress.png",
+      "output": "public/game-assets/items/textile/white_dress.png",
+      "prompt": "Create exactly one clear white dress, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: white dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 1199,
+      "itemIndex": 599,
+      "itemNumber": 600,
+      "itemName": "white dress",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/white_dress.png",
+      "output": "public/game-assets/items/textile/white_dress_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated white dress, arranged naturally as a few roll quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: white dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 1200,
+      "itemIndex": 599,
+      "itemNumber": 600,
+      "itemName": "white dress",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "roll quantity",
+      "tags": [
+        "clothes",
+        "dresses",
+        "textile",
+        "finished"
+      ],
+      "family": "textile",
+      "subfamily": "clothes",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "cloth"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "roll",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "roll",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "textile/white_dress.png",
+      "output": "public/game-assets/items/textile/white_dress_many.png",
+      "prompt": "Create a very abundant quantity of white dress, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many roll quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: white dress. Family: textile. Subfamily: clothes. Trade role: finished. Bulk profile: roll. Category cues: textile, clothes, finished, common, roll, none, clothes, dresses, textile, finished, crafted, common, craft_supply, cloth. It should feel medium-sized.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

@@ -1,0 +1,527 @@
+{
+  "batchId": "characters-0361-0372",
+  "version": "v4-approved-style-3x4-sequential-production-manifest",
+  "status": "ready_for_generation_in_filename_order_after_final_review",
+  "purpose": "Sequential character portrait production manifest. Generate files in filename order; crop left-to-right and top-to-bottom; name each crop by outputFile.",
+  "batch": {
+    "firstGlobalSlot": 361,
+    "lastGlobalSlot": 372,
+    "slotCount": 12,
+    "maxSlotsPerSheet": 12
+  },
+  "layout": {
+    "columns": 3,
+    "rows": 4,
+    "totalCells": 12,
+    "background": "#00FF00",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "fillOrder": "left-to-right top-to-bottom",
+    "targetCanvas": {
+      "width": 3072,
+      "height": 4096
+    },
+    "cellSize": {
+      "width": 1024,
+      "height": 1024
+    },
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+  },
+  "cropNamingRules": [
+    "Generate sheets in filename order.",
+    "Crop by row/column/cropCell from this JSON, not by visual guessing.",
+    "Name each cropped file exactly as outputFile.",
+    "If the generated sheet resolution differs, scale crop coordinates proportionally from the actual width/height while preserving 3 columns by 4 rows.",
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+  ],
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "order": [
+    "1. npc-legacy-058-suspicious",
+    "2. npc-legacy-058-worried",
+    "3. npc-legacy-058-angry",
+    "4. npc-legacy-059-neutral",
+    "5. npc-legacy-059-happy",
+    "6. npc-legacy-059-suspicious",
+    "7. npc-legacy-059-worried",
+    "8. npc-legacy-059-angry",
+    "9. npc-legacy-060-neutral",
+    "10. npc-legacy-060-happy",
+    "11. npc-legacy-060-suspicious",
+    "12. npc-legacy-061-neutral"
+  ],
+  "images": [
+    {
+      "order": 1,
+      "row": 1,
+      "column": 1,
+      "cell": "R1C1",
+      "imageId": "npc-legacy-058-suspicious",
+      "characterId": "npc-legacy-058",
+      "displayName": "Gorrum Bellowsong",
+      "profession": "forge guild factor",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-058-suspicious.png",
+      "cropCell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "fire-dwarf",
+      "magicalTraits": [
+        "warm ember glow in brows"
+      ],
+      "identityAnchor": "same person as npc-legacy-058: broad fire-dwarf silhouette, coal-black skin, bronze beard rings, ember eyebrows, green guild sash, forge guild factor, fire-dwarf, hammer tuning fork",
+      "visualTraits": [
+        "broad fire-dwarf silhouette",
+        "coal-black skin",
+        "bronze beard rings",
+        "ember eyebrows",
+        "green guild sash",
+        "soot waistcoat"
+      ],
+      "professionProps": [
+        "hammer tuning fork",
+        "guild seal stamp",
+        "ore permit tag"
+      ],
+      "prompt": "A broad fire-dwarf man with coal-black skin, bronze beard rings, ember-red eyebrows, a green guild sash over a soot-black waistcoat, and a tuning fork shaped like a tiny hammer. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 361,
+      "batchId": "characters-0361-0372"
+    },
+    {
+      "order": 2,
+      "row": 1,
+      "column": 2,
+      "cell": "R1C2",
+      "imageId": "npc-legacy-058-worried",
+      "characterId": "npc-legacy-058",
+      "displayName": "Gorrum Bellowsong",
+      "profession": "forge guild factor",
+      "expression": "worried",
+      "outputFile": "npc-legacy-058-worried.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "fire-dwarf",
+      "magicalTraits": [
+        "warm ember glow in brows"
+      ],
+      "identityAnchor": "same person as npc-legacy-058: broad fire-dwarf silhouette, coal-black skin, bronze beard rings, ember eyebrows, green guild sash, forge guild factor, fire-dwarf, hammer tuning fork",
+      "visualTraits": [
+        "broad fire-dwarf silhouette",
+        "coal-black skin",
+        "bronze beard rings",
+        "ember eyebrows",
+        "green guild sash",
+        "soot waistcoat"
+      ],
+      "professionProps": [
+        "hammer tuning fork",
+        "guild seal stamp",
+        "ore permit tag"
+      ],
+      "prompt": "A broad fire-dwarf man with coal-black skin, bronze beard rings, ember-red eyebrows, a green guild sash over a soot-black waistcoat, and a tuning fork shaped like a tiny hammer. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 362,
+      "batchId": "characters-0361-0372"
+    },
+    {
+      "order": 3,
+      "row": 1,
+      "column": 3,
+      "cell": "R1C3",
+      "imageId": "npc-legacy-058-angry",
+      "characterId": "npc-legacy-058",
+      "displayName": "Gorrum Bellowsong",
+      "profession": "forge guild factor",
+      "expression": "angry",
+      "outputFile": "npc-legacy-058-angry.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 0,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "fire-dwarf",
+      "magicalTraits": [
+        "warm ember glow in brows"
+      ],
+      "identityAnchor": "same person as npc-legacy-058: broad fire-dwarf silhouette, coal-black skin, bronze beard rings, ember eyebrows, green guild sash, forge guild factor, fire-dwarf, hammer tuning fork",
+      "visualTraits": [
+        "broad fire-dwarf silhouette",
+        "coal-black skin",
+        "bronze beard rings",
+        "ember eyebrows",
+        "green guild sash",
+        "soot waistcoat"
+      ],
+      "professionProps": [
+        "hammer tuning fork",
+        "guild seal stamp",
+        "ore permit tag"
+      ],
+      "prompt": "A broad fire-dwarf man with coal-black skin, bronze beard rings, ember-red eyebrows, a green guild sash over a soot-black waistcoat, and a tuning fork shaped like a tiny hammer. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 363,
+      "batchId": "characters-0361-0372"
+    },
+    {
+      "order": 4,
+      "row": 2,
+      "column": 1,
+      "cell": "R2C1",
+      "imageId": "npc-legacy-059-neutral",
+      "characterId": "npc-legacy-059",
+      "displayName": "Velia Mothscribe",
+      "profession": "contract whisperer",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-059-neutral.png",
+      "cropCell": {
+        "x": 0,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "fae-touched human",
+      "magicalTraits": [
+        "tiny moth-wing shimmer near hair ornaments"
+      ],
+      "identityAnchor": "same person as npc-legacy-059: petite fae-touched silhouette, violet eyes, moth-wing ornaments, ink-stained smile, soft grey cloak, contract whisperer, fae-touched human, silver-locked scroll case",
+      "visualTraits": [
+        "petite fae-touched silhouette",
+        "violet eyes",
+        "moth-wing ornaments",
+        "ink-stained smile",
+        "soft grey cloak",
+        "silver lock scroll case"
+      ],
+      "professionProps": [
+        "silver-locked scroll case",
+        "glowing ink pen",
+        "folded contract"
+      ],
+      "prompt": "A petite dark-skinned fae-touched scribe with moth-wing hair ornaments, violet eyes, ink-stained smile, soft grey cloak, and a scroll case covered in tiny silver locks. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 364,
+      "batchId": "characters-0361-0372"
+    },
+    {
+      "order": 5,
+      "row": 2,
+      "column": 2,
+      "cell": "R2C2",
+      "imageId": "npc-legacy-059-happy",
+      "characterId": "npc-legacy-059",
+      "displayName": "Velia Mothscribe",
+      "profession": "contract whisperer",
+      "expression": "happy",
+      "outputFile": "npc-legacy-059-happy.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "fae-touched human",
+      "magicalTraits": [
+        "tiny moth-wing shimmer near hair ornaments"
+      ],
+      "identityAnchor": "same person as npc-legacy-059: petite fae-touched silhouette, violet eyes, moth-wing ornaments, ink-stained smile, soft grey cloak, contract whisperer, fae-touched human, silver-locked scroll case",
+      "visualTraits": [
+        "petite fae-touched silhouette",
+        "violet eyes",
+        "moth-wing ornaments",
+        "ink-stained smile",
+        "soft grey cloak",
+        "silver lock scroll case"
+      ],
+      "professionProps": [
+        "silver-locked scroll case",
+        "glowing ink pen",
+        "folded contract"
+      ],
+      "prompt": "A petite dark-skinned fae-touched scribe with moth-wing hair ornaments, violet eyes, ink-stained smile, soft grey cloak, and a scroll case covered in tiny silver locks. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 365,
+      "batchId": "characters-0361-0372"
+    },
+    {
+      "order": 6,
+      "row": 2,
+      "column": 3,
+      "cell": "R2C3",
+      "imageId": "npc-legacy-059-suspicious",
+      "characterId": "npc-legacy-059",
+      "displayName": "Velia Mothscribe",
+      "profession": "contract whisperer",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-059-suspicious.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 1024,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "fae-touched human",
+      "magicalTraits": [
+        "tiny moth-wing shimmer near hair ornaments"
+      ],
+      "identityAnchor": "same person as npc-legacy-059: petite fae-touched silhouette, violet eyes, moth-wing ornaments, ink-stained smile, soft grey cloak, contract whisperer, fae-touched human, silver-locked scroll case",
+      "visualTraits": [
+        "petite fae-touched silhouette",
+        "violet eyes",
+        "moth-wing ornaments",
+        "ink-stained smile",
+        "soft grey cloak",
+        "silver lock scroll case"
+      ],
+      "professionProps": [
+        "silver-locked scroll case",
+        "glowing ink pen",
+        "folded contract"
+      ],
+      "prompt": "A petite dark-skinned fae-touched scribe with moth-wing hair ornaments, violet eyes, ink-stained smile, soft grey cloak, and a scroll case covered in tiny silver locks. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 366,
+      "batchId": "characters-0361-0372"
+    },
+    {
+      "order": 7,
+      "row": 3,
+      "column": 1,
+      "cell": "R3C1",
+      "imageId": "npc-legacy-059-worried",
+      "characterId": "npc-legacy-059",
+      "displayName": "Velia Mothscribe",
+      "profession": "contract whisperer",
+      "expression": "worried",
+      "outputFile": "npc-legacy-059-worried.png",
+      "cropCell": {
+        "x": 0,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "fae-touched human",
+      "magicalTraits": [
+        "tiny moth-wing shimmer near hair ornaments"
+      ],
+      "identityAnchor": "same person as npc-legacy-059: petite fae-touched silhouette, violet eyes, moth-wing ornaments, ink-stained smile, soft grey cloak, contract whisperer, fae-touched human, silver-locked scroll case",
+      "visualTraits": [
+        "petite fae-touched silhouette",
+        "violet eyes",
+        "moth-wing ornaments",
+        "ink-stained smile",
+        "soft grey cloak",
+        "silver lock scroll case"
+      ],
+      "professionProps": [
+        "silver-locked scroll case",
+        "glowing ink pen",
+        "folded contract"
+      ],
+      "prompt": "A petite dark-skinned fae-touched scribe with moth-wing hair ornaments, violet eyes, ink-stained smile, soft grey cloak, and a scroll case covered in tiny silver locks. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 367,
+      "batchId": "characters-0361-0372"
+    },
+    {
+      "order": 8,
+      "row": 3,
+      "column": 2,
+      "cell": "R3C2",
+      "imageId": "npc-legacy-059-angry",
+      "characterId": "npc-legacy-059",
+      "displayName": "Velia Mothscribe",
+      "profession": "contract whisperer",
+      "expression": "angry",
+      "outputFile": "npc-legacy-059-angry.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "fae-touched human",
+      "magicalTraits": [
+        "tiny moth-wing shimmer near hair ornaments"
+      ],
+      "identityAnchor": "same person as npc-legacy-059: petite fae-touched silhouette, violet eyes, moth-wing ornaments, ink-stained smile, soft grey cloak, contract whisperer, fae-touched human, silver-locked scroll case",
+      "visualTraits": [
+        "petite fae-touched silhouette",
+        "violet eyes",
+        "moth-wing ornaments",
+        "ink-stained smile",
+        "soft grey cloak",
+        "silver lock scroll case"
+      ],
+      "professionProps": [
+        "silver-locked scroll case",
+        "glowing ink pen",
+        "folded contract"
+      ],
+      "prompt": "A petite dark-skinned fae-touched scribe with moth-wing hair ornaments, violet eyes, ink-stained smile, soft grey cloak, and a scroll case covered in tiny silver locks. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 368,
+      "batchId": "characters-0361-0372"
+    },
+    {
+      "order": 9,
+      "row": 3,
+      "column": 3,
+      "cell": "R3C3",
+      "imageId": "npc-legacy-060-neutral",
+      "characterId": "npc-legacy-060",
+      "displayName": "Belli Thimblethorn",
+      "profession": "button seller",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-060-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 2048,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "gnome",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-060: tiny gnome silhouette, cinnamon skin, round spectacles, lavender curls, yellow vest, button seller, gnome, button strings",
+      "visualTraits": [
+        "tiny gnome silhouette",
+        "cinnamon skin",
+        "round spectacles",
+        "lavender curls",
+        "yellow vest",
+        "button jewelry"
+      ],
+      "professionProps": [
+        "button strings",
+        "tiny needle case",
+        "cloth sample card"
+      ],
+      "prompt": "A tiny gnome woman with cinnamon skin, huge round spectacles, lavender curls, yellow vest, and strings of bright buttons hanging like jewelry. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 369,
+      "batchId": "characters-0361-0372"
+    },
+    {
+      "order": 10,
+      "row": 4,
+      "column": 1,
+      "cell": "R4C1",
+      "imageId": "npc-legacy-060-happy",
+      "characterId": "npc-legacy-060",
+      "displayName": "Belli Thimblethorn",
+      "profession": "button seller",
+      "expression": "happy",
+      "outputFile": "npc-legacy-060-happy.png",
+      "cropCell": {
+        "x": 0,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "gnome",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-060: tiny gnome silhouette, cinnamon skin, round spectacles, lavender curls, yellow vest, button seller, gnome, button strings",
+      "visualTraits": [
+        "tiny gnome silhouette",
+        "cinnamon skin",
+        "round spectacles",
+        "lavender curls",
+        "yellow vest",
+        "button jewelry"
+      ],
+      "professionProps": [
+        "button strings",
+        "tiny needle case",
+        "cloth sample card"
+      ],
+      "prompt": "A tiny gnome woman with cinnamon skin, huge round spectacles, lavender curls, yellow vest, and strings of bright buttons hanging like jewelry. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 370,
+      "batchId": "characters-0361-0372"
+    },
+    {
+      "order": 11,
+      "row": 4,
+      "column": 2,
+      "cell": "R4C2",
+      "imageId": "npc-legacy-060-suspicious",
+      "characterId": "npc-legacy-060",
+      "displayName": "Belli Thimblethorn",
+      "profession": "button seller",
+      "expression": "suspicious",
+      "outputFile": "npc-legacy-060-suspicious.png",
+      "cropCell": {
+        "x": 1024,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "gnome",
+      "magicalTraits": [],
+      "identityAnchor": "same person as npc-legacy-060: tiny gnome silhouette, cinnamon skin, round spectacles, lavender curls, yellow vest, button seller, gnome, button strings",
+      "visualTraits": [
+        "tiny gnome silhouette",
+        "cinnamon skin",
+        "round spectacles",
+        "lavender curls",
+        "yellow vest",
+        "button jewelry"
+      ],
+      "professionProps": [
+        "button strings",
+        "tiny needle case",
+        "cloth sample card"
+      ],
+      "prompt": "A tiny gnome woman with cinnamon skin, huge round spectacles, lavender curls, yellow vest, and strings of bright buttons hanging like jewelry. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 371,
+      "batchId": "characters-0361-0372"
+    },
+    {
+      "order": 12,
+      "row": 4,
+      "column": 3,
+      "cell": "R4C3",
+      "imageId": "npc-legacy-061-neutral",
+      "characterId": "npc-legacy-061",
+      "displayName": "Kesh Riverjaw",
+      "profession": "ferry clerk",
+      "expression": "neutral",
+      "outputFile": "npc-legacy-061-neutral.png",
+      "cropCell": {
+        "x": 2048,
+        "y": 3072,
+        "width": 1024,
+        "height": 1024
+      },
+      "ancestryOrSpecies": "river-troll",
+      "magicalTraits": [
+        "small water droplets clinging to sideburns"
+      ],
+      "identityAnchor": "same person as npc-legacy-061: heavy river-troll silhouette, slate-blue skin, mossy sideburns, sleepy yellow eyes, waterproof vest, ferry clerk, river-troll, ticket punch",
+      "visualTraits": [
+        "heavy river-troll silhouette",
+        "slate-blue skin",
+        "mossy sideburns",
+        "sleepy yellow eyes",
+        "waterproof vest"
+      ],
+      "professionProps": [
+        "ticket punch",
+        "ferry token roll",
+        "river bell"
+      ],
+      "prompt": "A heavyset river-troll man with slate-blue skin, mossy sideburns, sleepy yellow eyes, waterproof brown vest, and a huge ticket punch on a chain. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
+      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "globalOrder": 372,
+      "batchId": "characters-0361-0372"
+    }
+  ]
+}

@@ -1,0 +1,3803 @@
+{
+  "batch": {
+    "firstGlobalSlot": 3551,
+    "lastGlobalSlot": 3600,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. hammer (many)\n2. strong hammer (one)\n3. strong hammer (few)\n4. strong hammer (many)\n5. hand axe (one)\n6. hand axe (few)\n7. hand axe (many)\n8. ink and quill (one)\n9. ink and quill (few)\n10. ink and quill (many)\n11. label (one)\n12. label (few)\n13. label (many)\n14. ladder (one)\n15. ladder (few)\n16. ladder (many)\n17. large gear (one)\n18. large gear (few)\n19. large gear (many)\n20. large tent (one)\n21. large tent (few)\n22. large tent (many)\n23. oil lamp (one)\n24. oil lamp (few)\n25. oil lamp (many)\n26. pedestal (one)\n27. pedestal (few)\n28. pedestal (many)\n29. pickaxe (one)\n30. pickaxe (few)\n31. pickaxe (many)\n32. forked rod (one)\n33. forked rod (few)\n34. forked rod (many)\n35. rope (one)\n36. rope (few)\n37. rope (many)\n38. shovel (one)\n39. shovel (few)\n40. shovel (many)\n41. small gear (one)\n42. small gear (few)\n43. small gear (many)\n44. square stone (one)\n45. square stone base (one)\n46. square stone base (few)\n47. square stone base (many)\n48. square cracked stone (one)\n49. square cracked stone (few)\n50. square cracked stone (many)",
+  "order": [
+    "1. hammer (many)",
+    "2. strong hammer (one)",
+    "3. strong hammer (few)",
+    "4. strong hammer (many)",
+    "5. hand axe (one)",
+    "6. hand axe (few)",
+    "7. hand axe (many)",
+    "8. ink and quill (one)",
+    "9. ink and quill (few)",
+    "10. ink and quill (many)",
+    "11. label (one)",
+    "12. label (few)",
+    "13. label (many)",
+    "14. ladder (one)",
+    "15. ladder (few)",
+    "16. ladder (many)",
+    "17. large gear (one)",
+    "18. large gear (few)",
+    "19. large gear (many)",
+    "20. large tent (one)",
+    "21. large tent (few)",
+    "22. large tent (many)",
+    "23. oil lamp (one)",
+    "24. oil lamp (few)",
+    "25. oil lamp (many)",
+    "26. pedestal (one)",
+    "27. pedestal (few)",
+    "28. pedestal (many)",
+    "29. pickaxe (one)",
+    "30. pickaxe (few)",
+    "31. pickaxe (many)",
+    "32. forked rod (one)",
+    "33. forked rod (few)",
+    "34. forked rod (many)",
+    "35. rope (one)",
+    "36. rope (few)",
+    "37. rope (many)",
+    "38. shovel (one)",
+    "39. shovel (few)",
+    "40. shovel (many)",
+    "41. small gear (one)",
+    "42. small gear (few)",
+    "43. small gear (many)",
+    "44. square stone (one)",
+    "45. square stone base (one)",
+    "46. square stone base (few)",
+    "47. square stone base (many)",
+    "48. square cracked stone (one)",
+    "49. square cracked stone (few)",
+    "50. square cracked stone (many)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 3551,
+      "itemIndex": 1586,
+      "itemNumber": 1587,
+      "itemName": "hammer",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/hammer.png",
+      "output": "public/game-assets/items/tool/hammer_many.png",
+      "prompt": "Create a very abundant quantity of hammer, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: hammer. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 3552,
+      "itemIndex": 1587,
+      "itemNumber": 1588,
+      "itemName": "strong hammer",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 4,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/strong_hammer.png",
+      "output": "public/game-assets/items/tool/strong_hammer.png",
+      "prompt": "Create exactly one clear strong hammer, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: strong hammer. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 3553,
+      "itemIndex": 1587,
+      "itemNumber": 1588,
+      "itemName": "strong hammer",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 4,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/strong_hammer.png",
+      "output": "public/game-assets/items/tool/strong_hammer_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated strong hammer, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: strong hammer. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 3554,
+      "itemIndex": 1587,
+      "itemNumber": 1588,
+      "itemName": "strong hammer",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 4,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/strong_hammer.png",
+      "output": "public/game-assets/items/tool/strong_hammer_many.png",
+      "prompt": "Create a very abundant quantity of strong hammer, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: strong hammer. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 3555,
+      "itemIndex": 1588,
+      "itemNumber": 1589,
+      "itemName": "hand axe",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/hand_axe.png",
+      "output": "public/game-assets/items/tool/hand_axe.png",
+      "prompt": "Create exactly one clear hand axe, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: hand axe. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 3556,
+      "itemIndex": 1588,
+      "itemNumber": 1589,
+      "itemName": "hand axe",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/hand_axe.png",
+      "output": "public/game-assets/items/tool/hand_axe_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated hand axe, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: hand axe. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 3557,
+      "itemIndex": 1588,
+      "itemNumber": 1589,
+      "itemName": "hand axe",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/hand_axe.png",
+      "output": "public/game-assets/items/tool/hand_axe_many.png",
+      "prompt": "Create a very abundant quantity of hand axe, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: hand axe. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 3558,
+      "itemIndex": 1589,
+      "itemNumber": 1590,
+      "itemName": "ink and quill",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/ink_and_quill.png",
+      "output": "public/game-assets/items/tool/ink_and_quill.png",
+      "prompt": "Create exactly one clear ink and quill, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ink and quill. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 3559,
+      "itemIndex": 1589,
+      "itemNumber": 1590,
+      "itemName": "ink and quill",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/ink_and_quill.png",
+      "output": "public/game-assets/items/tool/ink_and_quill_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ink and quill, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ink and quill. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 3560,
+      "itemIndex": 1589,
+      "itemNumber": 1590,
+      "itemName": "ink and quill",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/ink_and_quill.png",
+      "output": "public/game-assets/items/tool/ink_and_quill_many.png",
+      "prompt": "Create a very abundant quantity of ink and quill, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ink and quill. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 3561,
+      "itemIndex": 1590,
+      "itemNumber": 1591,
+      "itemName": "label",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/label.png",
+      "output": "public/game-assets/items/tool/label.png",
+      "prompt": "Create exactly one clear label, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: label. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 3562,
+      "itemIndex": 1590,
+      "itemNumber": 1591,
+      "itemName": "label",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/label.png",
+      "output": "public/game-assets/items/tool/label_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated label, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: label. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 3563,
+      "itemIndex": 1590,
+      "itemNumber": 1591,
+      "itemName": "label",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/label.png",
+      "output": "public/game-assets/items/tool/label_many.png",
+      "prompt": "Create a very abundant quantity of label, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: label. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 3564,
+      "itemIndex": 1591,
+      "itemNumber": 1592,
+      "itemName": "ladder",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 30,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/ladder.png",
+      "output": "public/game-assets/items/tool/ladder.png",
+      "prompt": "Create exactly one clear ladder, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ladder. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 3565,
+      "itemIndex": 1591,
+      "itemNumber": 1592,
+      "itemName": "ladder",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 30,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/ladder.png",
+      "output": "public/game-assets/items/tool/ladder_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ladder, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ladder. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 3566,
+      "itemIndex": 1591,
+      "itemNumber": 1592,
+      "itemName": "ladder",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 30,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/ladder.png",
+      "output": "public/game-assets/items/tool/ladder_many.png",
+      "prompt": "Create a very abundant quantity of ladder, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ladder. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 3567,
+      "itemIndex": 1592,
+      "itemNumber": 1593,
+      "itemName": "large gear",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/large_gear.png",
+      "output": "public/game-assets/items/tool/large_gear.png",
+      "prompt": "Create exactly one clear large gear, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large gear. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 3568,
+      "itemIndex": 1592,
+      "itemNumber": 1593,
+      "itemName": "large gear",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/large_gear.png",
+      "output": "public/game-assets/items/tool/large_gear_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large gear, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large gear. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 3569,
+      "itemIndex": 1592,
+      "itemNumber": 1593,
+      "itemName": "large gear",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/large_gear.png",
+      "output": "public/game-assets/items/tool/large_gear_many.png",
+      "prompt": "Create a very abundant quantity of large gear, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large gear. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 3570,
+      "itemIndex": 1593,
+      "itemNumber": 1594,
+      "itemName": "large tent",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 25,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/large_tent.png",
+      "output": "public/game-assets/items/tool/large_tent.png",
+      "prompt": "Create exactly one clear large tent, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large tent. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 3571,
+      "itemIndex": 1593,
+      "itemNumber": 1594,
+      "itemName": "large tent",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 25,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/large_tent.png",
+      "output": "public/game-assets/items/tool/large_tent_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large tent, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large tent. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 3572,
+      "itemIndex": 1593,
+      "itemNumber": 1594,
+      "itemName": "large tent",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 25,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/large_tent.png",
+      "output": "public/game-assets/items/tool/large_tent_many.png",
+      "prompt": "Create a very abundant quantity of large tent, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large tent. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 3573,
+      "itemIndex": 1594,
+      "itemNumber": 1595,
+      "itemName": "oil lamp",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "household",
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "household",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/oil_lamp.png",
+      "output": "public/game-assets/items/tool/oil_lamp.png",
+      "prompt": "Create exactly one clear oil lamp, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: oil lamp. Family: tool. Subfamily: household. Trade role: tool. Bulk profile: rack. Category cues: tool, household, tool, common, rack, rusts, household, tools, tool, crafted, common, hazardous, bulk_trade, steel. It should feel medium-sized.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 3574,
+      "itemIndex": 1594,
+      "itemNumber": 1595,
+      "itemName": "oil lamp",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "household",
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "household",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/oil_lamp.png",
+      "output": "public/game-assets/items/tool/oil_lamp_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated oil lamp, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: oil lamp. Family: tool. Subfamily: household. Trade role: tool. Bulk profile: rack. Category cues: tool, household, tool, common, rack, rusts, household, tools, tool, crafted, common, hazardous, bulk_trade, steel. It should feel medium-sized.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 3575,
+      "itemIndex": 1594,
+      "itemNumber": 1595,
+      "itemName": "oil lamp",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "household",
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "household",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/oil_lamp.png",
+      "output": "public/game-assets/items/tool/oil_lamp_many.png",
+      "prompt": "Create a very abundant quantity of oil lamp, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: oil lamp. Family: tool. Subfamily: household. Trade role: tool. Bulk profile: rack. Category cues: tool, household, tool, common, rack, rusts, household, tools, tool, crafted, common, hazardous, bulk_trade, steel. It should feel medium-sized.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 3576,
+      "itemIndex": 1595,
+      "itemNumber": 1596,
+      "itemName": "pedestal",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/pedestal.png",
+      "output": "public/game-assets/items/tool/pedestal.png",
+      "prompt": "Create exactly one clear pedestal, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: pedestal. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 3577,
+      "itemIndex": 1595,
+      "itemNumber": 1596,
+      "itemName": "pedestal",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/pedestal.png",
+      "output": "public/game-assets/items/tool/pedestal_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated pedestal, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: pedestal. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 3578,
+      "itemIndex": 1595,
+      "itemNumber": 1596,
+      "itemName": "pedestal",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/pedestal.png",
+      "output": "public/game-assets/items/tool/pedestal_many.png",
+      "prompt": "Create a very abundant quantity of pedestal, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: pedestal. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 3579,
+      "itemIndex": 1596,
+      "itemNumber": 1597,
+      "itemName": "pickaxe",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/pickaxe.png",
+      "output": "public/game-assets/items/tool/pickaxe.png",
+      "prompt": "Create exactly one clear pickaxe, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: pickaxe. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 3580,
+      "itemIndex": 1596,
+      "itemNumber": 1597,
+      "itemName": "pickaxe",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/pickaxe.png",
+      "output": "public/game-assets/items/tool/pickaxe_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated pickaxe, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: pickaxe. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 3581,
+      "itemIndex": 1596,
+      "itemNumber": 1597,
+      "itemName": "pickaxe",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/pickaxe.png",
+      "output": "public/game-assets/items/tool/pickaxe_many.png",
+      "prompt": "Create a very abundant quantity of pickaxe, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: pickaxe. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 3582,
+      "itemIndex": 1597,
+      "itemNumber": 1598,
+      "itemName": "forked rod",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/forked_rod.png",
+      "output": "public/game-assets/items/tool/forked_rod.png",
+      "prompt": "Create exactly one clear forked rod, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: forked rod. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 3583,
+      "itemIndex": 1597,
+      "itemNumber": 1598,
+      "itemName": "forked rod",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/forked_rod.png",
+      "output": "public/game-assets/items/tool/forked_rod_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated forked rod, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: forked rod. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 3584,
+      "itemIndex": 1597,
+      "itemNumber": 1598,
+      "itemName": "forked rod",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/forked_rod.png",
+      "output": "public/game-assets/items/tool/forked_rod_many.png",
+      "prompt": "Create a very abundant quantity of forked rod, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: forked rod. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 3585,
+      "itemIndex": 1598,
+      "itemNumber": 1599,
+      "itemName": "rope",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/rope.png",
+      "output": "public/game-assets/items/tool/rope.png",
+      "prompt": "Create exactly one clear rope, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: rope. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 3586,
+      "itemIndex": 1598,
+      "itemNumber": 1599,
+      "itemName": "rope",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/rope.png",
+      "output": "public/game-assets/items/tool/rope_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated rope, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: rope. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 3587,
+      "itemIndex": 1598,
+      "itemNumber": 1599,
+      "itemName": "rope",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/rope.png",
+      "output": "public/game-assets/items/tool/rope_many.png",
+      "prompt": "Create a very abundant quantity of rope, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: rope. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 3588,
+      "itemIndex": 1599,
+      "itemNumber": 1600,
+      "itemName": "shovel",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/shovel.png",
+      "output": "public/game-assets/items/tool/shovel.png",
+      "prompt": "Create exactly one clear shovel, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: shovel. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 3589,
+      "itemIndex": 1599,
+      "itemNumber": 1600,
+      "itemName": "shovel",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/shovel.png",
+      "output": "public/game-assets/items/tool/shovel_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated shovel, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: shovel. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 3590,
+      "itemIndex": 1599,
+      "itemNumber": 1600,
+      "itemName": "shovel",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 8,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/shovel.png",
+      "output": "public/game-assets/items/tool/shovel_many.png",
+      "prompt": "Create a very abundant quantity of shovel, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: shovel. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should feel medium-sized.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 3591,
+      "itemIndex": 1600,
+      "itemNumber": 1601,
+      "itemName": "small gear",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/small_gear.png",
+      "output": "public/game-assets/items/tool/small_gear.png",
+      "prompt": "Create exactly one clear small gear, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: small gear. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 3592,
+      "itemIndex": 1600,
+      "itemNumber": 1601,
+      "itemName": "small gear",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/small_gear.png",
+      "output": "public/game-assets/items/tool/small_gear_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated small gear, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: small gear. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 3593,
+      "itemIndex": 1600,
+      "itemNumber": 1601,
+      "itemName": "small gear",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "tool",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "bulky",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/small_gear.png",
+      "output": "public/game-assets/items/tool/small_gear_many.png",
+      "prompt": "Create a very abundant quantity of small gear, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: small gear. Family: tool. Subfamily: tool. Trade role: tool. Bulk profile: rack. Category cues: tool, tool, tool, common, rack, rusts, tools, tool, crafted, common, hazardous, bulk_trade, steel, tool. It should read clearly in a small inventory tile.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 3594,
+      "itemIndex": 1601,
+      "itemNumber": 1602,
+      "itemName": "square stone",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "tools",
+        "tool",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "tool",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "bulky"
+        ],
+        "artVariant": [
+          "single",
+          "single_object",
+          "separated_group"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "single",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 3,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "stone/square_stone.png",
+      "output": "public/game-assets/items/stone/square_stone.png",
+      "prompt": "Create exactly one clear square stone, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: square stone. Family: stone. Subfamily: tool. Trade role: raw. Bulk profile: single. Category cues: stone, tool, raw, common, single, none, tools, tool, stone, raw, mined, common, craft_supply, raw_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 3595,
+      "itemIndex": 1602,
+      "itemNumber": 1603,
+      "itemName": "square stone base",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "tools",
+        "tool",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "tool",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "stone/square_stone_base.png",
+      "output": "public/game-assets/items/stone/square_stone_base.png",
+      "prompt": "Create exactly one clear square stone base, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: square stone base. Family: stone. Subfamily: tool. Trade role: raw. Bulk profile: crate. Category cues: stone, tool, raw, common, crate, none, tools, tool, stone, raw, mined, common, craft_supply, raw_material. It should feel medium-sized.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 3596,
+      "itemIndex": 1602,
+      "itemNumber": 1603,
+      "itemName": "square stone base",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "tools",
+        "tool",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "tool",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "stone/square_stone_base.png",
+      "output": "public/game-assets/items/stone/square_stone_base_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated square stone base, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: square stone base. Family: stone. Subfamily: tool. Trade role: raw. Bulk profile: crate. Category cues: stone, tool, raw, common, crate, none, tools, tool, stone, raw, mined, common, craft_supply, raw_material. It should feel medium-sized.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 3597,
+      "itemIndex": 1602,
+      "itemNumber": 1603,
+      "itemName": "square stone base",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "tools",
+        "tool",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "tool",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "stone/square_stone_base.png",
+      "output": "public/game-assets/items/stone/square_stone_base_many.png",
+      "prompt": "Create a very abundant quantity of square stone base, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: square stone base. Family: stone. Subfamily: tool. Trade role: raw. Bulk profile: crate. Category cues: stone, tool, raw, common, crate, none, tools, tool, stone, raw, mined, common, craft_supply, raw_material. It should feel medium-sized.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 3598,
+      "itemIndex": 1603,
+      "itemNumber": 1604,
+      "itemName": "square cracked stone",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "tools",
+        "tool",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "tool",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 6,
+      "weight": 6,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "stone/square_cracked_stone.png",
+      "output": "public/game-assets/items/stone/square_cracked_stone.png",
+      "prompt": "Create exactly one clear square cracked stone, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: square cracked stone. Family: stone. Subfamily: tool. Trade role: raw. Bulk profile: crate. Category cues: stone, tool, raw, common, crate, none, tools, tool, stone, raw, mined, common, craft_supply, raw_material. It should feel medium-sized.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 3599,
+      "itemIndex": 1603,
+      "itemNumber": 1604,
+      "itemName": "square cracked stone",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "tools",
+        "tool",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "tool",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 6,
+      "weight": 6,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "stone/square_cracked_stone.png",
+      "output": "public/game-assets/items/stone/square_cracked_stone_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated square cracked stone, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: square cracked stone. Family: stone. Subfamily: tool. Trade role: raw. Bulk profile: crate. Category cues: stone, tool, raw, common, crate, none, tools, tool, stone, raw, mined, common, craft_supply, raw_material. It should feel medium-sized.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 3600,
+      "itemIndex": 1603,
+      "itemNumber": 1604,
+      "itemName": "square cracked stone",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "tools",
+        "tool",
+        "stone",
+        "raw"
+      ],
+      "family": "stone",
+      "subfamily": "tool",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "mined"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 6,
+      "weight": 6,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "stone/square_cracked_stone.png",
+      "output": "public/game-assets/items/stone/square_cracked_stone_many.png",
+      "prompt": "Create a very abundant quantity of square cracked stone, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: square cracked stone. Family: stone. Subfamily: tool. Trade role: raw. Bulk profile: crate. Category cues: stone, tool, raw, common, crate, none, tools, tool, stone, raw, mined, common, craft_supply, raw_material. It should feel medium-sized.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

@@ -1,0 +1,3800 @@
+{
+  "batch": {
+    "firstGlobalSlot": 2301,
+    "lastGlobalSlot": 2350,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. defend (few)\n2. defend (many)\n3. alpha (one)\n4. alpha (few)\n5. alpha (many)\n6. beta (one)\n7. beta (few)\n8. beta (many)\n9. delta (one)\n10. delta (few)\n11. delta (many)\n12. epsilon (one)\n13. epsilon (few)\n14. epsilon (many)\n15. eta (one)\n16. eta (few)\n17. eta (many)\n18. gamma (one)\n19. gamma (few)\n20. gamma (many)\n21. iota (one)\n22. iota (few)\n23. iota (many)\n24. theta (one)\n25. theta (few)\n26. theta (many)\n27. zeta (one)\n28. zeta (few)\n29. zeta (many)\n30. person (one)\n31. person (few)\n32. person (many)\n33. movement (one)\n34. movement (few)\n35. movement (many)\n36. heal (one)\n37. heal (few)\n38. heal (many)\n39. receive (one)\n40. receive (few)\n41. receive (many)\n42. trade (one)\n43. trade (few)\n44. trade (many)\n45. consume (one)\n46. consume (few)\n47. consume (many)\n48. justice (one)\n49. justice (few)\n50. justice (many)",
+  "order": [
+    "1. defend (few)",
+    "2. defend (many)",
+    "3. alpha (one)",
+    "4. alpha (few)",
+    "5. alpha (many)",
+    "6. beta (one)",
+    "7. beta (few)",
+    "8. beta (many)",
+    "9. delta (one)",
+    "10. delta (few)",
+    "11. delta (many)",
+    "12. epsilon (one)",
+    "13. epsilon (few)",
+    "14. epsilon (many)",
+    "15. eta (one)",
+    "16. eta (few)",
+    "17. eta (many)",
+    "18. gamma (one)",
+    "19. gamma (few)",
+    "20. gamma (many)",
+    "21. iota (one)",
+    "22. iota (few)",
+    "23. iota (many)",
+    "24. theta (one)",
+    "25. theta (few)",
+    "26. theta (many)",
+    "27. zeta (one)",
+    "28. zeta (few)",
+    "29. zeta (many)",
+    "30. person (one)",
+    "31. person (few)",
+    "32. person (many)",
+    "33. movement (one)",
+    "34. movement (few)",
+    "35. movement (many)",
+    "36. heal (one)",
+    "37. heal (few)",
+    "38. heal (many)",
+    "39. receive (one)",
+    "40. receive (few)",
+    "41. receive (many)",
+    "42. trade (one)",
+    "43. trade (few)",
+    "44. trade (many)",
+    "45. consume (one)",
+    "46. consume (few)",
+    "47. consume (many)",
+    "48. justice (one)",
+    "49. justice (few)",
+    "50. justice (many)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 2301,
+      "itemIndex": 995,
+      "itemNumber": 996,
+      "itemName": "defend",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/defend.png",
+      "output": "public/game-assets/items/magic/defend_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated defend, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: defend. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 2302,
+      "itemIndex": 995,
+      "itemNumber": 996,
+      "itemName": "defend",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/defend.png",
+      "output": "public/game-assets/items/magic/defend_many.png",
+      "prompt": "Create a very abundant quantity of defend, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: defend. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 2303,
+      "itemIndex": 996,
+      "itemNumber": 997,
+      "itemName": "alpha",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/alpha.png",
+      "output": "public/game-assets/items/magic/alpha.png",
+      "prompt": "Create exactly one clear alpha, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: alpha. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 2304,
+      "itemIndex": 996,
+      "itemNumber": 997,
+      "itemName": "alpha",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/alpha.png",
+      "output": "public/game-assets/items/magic/alpha_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated alpha, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: alpha. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 2305,
+      "itemIndex": 996,
+      "itemNumber": 997,
+      "itemName": "alpha",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/alpha.png",
+      "output": "public/game-assets/items/magic/alpha_many.png",
+      "prompt": "Create a very abundant quantity of alpha, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: alpha. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 2306,
+      "itemIndex": 997,
+      "itemNumber": 998,
+      "itemName": "beta",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/beta.png",
+      "output": "public/game-assets/items/magic/beta.png",
+      "prompt": "Create exactly one clear beta, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: beta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 2307,
+      "itemIndex": 997,
+      "itemNumber": 998,
+      "itemName": "beta",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/beta.png",
+      "output": "public/game-assets/items/magic/beta_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated beta, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: beta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 2308,
+      "itemIndex": 997,
+      "itemNumber": 998,
+      "itemName": "beta",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/beta.png",
+      "output": "public/game-assets/items/magic/beta_many.png",
+      "prompt": "Create a very abundant quantity of beta, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: beta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 2309,
+      "itemIndex": 998,
+      "itemNumber": 999,
+      "itemName": "delta",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/delta.png",
+      "output": "public/game-assets/items/magic/delta.png",
+      "prompt": "Create exactly one clear delta, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: delta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 2310,
+      "itemIndex": 998,
+      "itemNumber": 999,
+      "itemName": "delta",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/delta.png",
+      "output": "public/game-assets/items/magic/delta_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated delta, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: delta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 2311,
+      "itemIndex": 998,
+      "itemNumber": 999,
+      "itemName": "delta",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/delta.png",
+      "output": "public/game-assets/items/magic/delta_many.png",
+      "prompt": "Create a very abundant quantity of delta, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: delta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 2312,
+      "itemIndex": 999,
+      "itemNumber": 1000,
+      "itemName": "epsilon",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/epsilon.png",
+      "output": "public/game-assets/items/magic/epsilon.png",
+      "prompt": "Create exactly one clear epsilon, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: epsilon. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 2313,
+      "itemIndex": 999,
+      "itemNumber": 1000,
+      "itemName": "epsilon",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/epsilon.png",
+      "output": "public/game-assets/items/magic/epsilon_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated epsilon, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: epsilon. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 2314,
+      "itemIndex": 999,
+      "itemNumber": 1000,
+      "itemName": "epsilon",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/epsilon.png",
+      "output": "public/game-assets/items/magic/epsilon_many.png",
+      "prompt": "Create a very abundant quantity of epsilon, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: epsilon. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 2315,
+      "itemIndex": 1000,
+      "itemNumber": 1001,
+      "itemName": "eta",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/eta.png",
+      "output": "public/game-assets/items/magic/eta.png",
+      "prompt": "Create exactly one clear eta, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: eta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 2316,
+      "itemIndex": 1000,
+      "itemNumber": 1001,
+      "itemName": "eta",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/eta.png",
+      "output": "public/game-assets/items/magic/eta_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated eta, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: eta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 2317,
+      "itemIndex": 1000,
+      "itemNumber": 1001,
+      "itemName": "eta",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/eta.png",
+      "output": "public/game-assets/items/magic/eta_many.png",
+      "prompt": "Create a very abundant quantity of eta, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: eta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 2318,
+      "itemIndex": 1001,
+      "itemNumber": 1002,
+      "itemName": "gamma",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/gamma.png",
+      "output": "public/game-assets/items/magic/gamma.png",
+      "prompt": "Create exactly one clear gamma, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: gamma. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 2319,
+      "itemIndex": 1001,
+      "itemNumber": 1002,
+      "itemName": "gamma",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/gamma.png",
+      "output": "public/game-assets/items/magic/gamma_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated gamma, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: gamma. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 2320,
+      "itemIndex": 1001,
+      "itemNumber": 1002,
+      "itemName": "gamma",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/gamma.png",
+      "output": "public/game-assets/items/magic/gamma_many.png",
+      "prompt": "Create a very abundant quantity of gamma, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: gamma. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 2321,
+      "itemIndex": 1002,
+      "itemNumber": 1003,
+      "itemName": "iota",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/iota.png",
+      "output": "public/game-assets/items/magic/iota.png",
+      "prompt": "Create exactly one clear iota, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: iota. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 2322,
+      "itemIndex": 1002,
+      "itemNumber": 1003,
+      "itemName": "iota",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/iota.png",
+      "output": "public/game-assets/items/magic/iota_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated iota, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: iota. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 2323,
+      "itemIndex": 1002,
+      "itemNumber": 1003,
+      "itemName": "iota",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/iota.png",
+      "output": "public/game-assets/items/magic/iota_many.png",
+      "prompt": "Create a very abundant quantity of iota, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: iota. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 2324,
+      "itemIndex": 1003,
+      "itemNumber": 1004,
+      "itemName": "theta",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/theta.png",
+      "output": "public/game-assets/items/magic/theta.png",
+      "prompt": "Create exactly one clear theta, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: theta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 2325,
+      "itemIndex": 1003,
+      "itemNumber": 1004,
+      "itemName": "theta",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/theta.png",
+      "output": "public/game-assets/items/magic/theta_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated theta, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: theta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 2326,
+      "itemIndex": 1003,
+      "itemNumber": 1004,
+      "itemName": "theta",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/theta.png",
+      "output": "public/game-assets/items/magic/theta_many.png",
+      "prompt": "Create a very abundant quantity of theta, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: theta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 2327,
+      "itemIndex": 1004,
+      "itemNumber": 1005,
+      "itemName": "zeta",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/zeta.png",
+      "output": "public/game-assets/items/magic/zeta.png",
+      "prompt": "Create exactly one clear zeta, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: zeta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 2328,
+      "itemIndex": 1004,
+      "itemNumber": 1005,
+      "itemName": "zeta",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/zeta.png",
+      "output": "public/game-assets/items/magic/zeta_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated zeta, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: zeta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 2329,
+      "itemIndex": 1004,
+      "itemNumber": 1005,
+      "itemName": "zeta",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "alphabet_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/zeta.png",
+      "output": "public/game-assets/items/magic/zeta_many.png",
+      "prompt": "Create a very abundant quantity of zeta, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: zeta. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, alphabet_stones, magic, finished, crafted, common, enchanted, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 2330,
+      "itemIndex": 1005,
+      "itemNumber": 1006,
+      "itemName": "person",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/person.png",
+      "output": "public/game-assets/items/magic/person.png",
+      "prompt": "Create exactly one clear person, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: person. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 2331,
+      "itemIndex": 1005,
+      "itemNumber": 1006,
+      "itemName": "person",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/person.png",
+      "output": "public/game-assets/items/magic/person_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated person, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: person. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 2332,
+      "itemIndex": 1005,
+      "itemNumber": 1006,
+      "itemName": "person",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/person.png",
+      "output": "public/game-assets/items/magic/person_many.png",
+      "prompt": "Create a very abundant quantity of person, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: person. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 2333,
+      "itemIndex": 1006,
+      "itemNumber": 1007,
+      "itemName": "movement",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/movement.png",
+      "output": "public/game-assets/items/magic/movement.png",
+      "prompt": "Create exactly one clear movement, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: movement. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 2334,
+      "itemIndex": 1006,
+      "itemNumber": 1007,
+      "itemName": "movement",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/movement.png",
+      "output": "public/game-assets/items/magic/movement_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated movement, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: movement. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 2335,
+      "itemIndex": 1006,
+      "itemNumber": 1007,
+      "itemName": "movement",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/movement.png",
+      "output": "public/game-assets/items/magic/movement_many.png",
+      "prompt": "Create a very abundant quantity of movement, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: movement. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 2336,
+      "itemIndex": 1007,
+      "itemNumber": 1008,
+      "itemName": "heal",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/heal.png",
+      "output": "public/game-assets/items/magic/heal.png",
+      "prompt": "Create exactly one clear heal, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: heal. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 2337,
+      "itemIndex": 1007,
+      "itemNumber": 1008,
+      "itemName": "heal",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/heal.png",
+      "output": "public/game-assets/items/magic/heal_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated heal, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: heal. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 2338,
+      "itemIndex": 1007,
+      "itemNumber": 1008,
+      "itemName": "heal",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/heal.png",
+      "output": "public/game-assets/items/magic/heal_many.png",
+      "prompt": "Create a very abundant quantity of heal, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: heal. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 2339,
+      "itemIndex": 1008,
+      "itemNumber": 1009,
+      "itemName": "receive",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/receive.png",
+      "output": "public/game-assets/items/magic/receive.png",
+      "prompt": "Create exactly one clear receive, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: receive. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 2340,
+      "itemIndex": 1008,
+      "itemNumber": 1009,
+      "itemName": "receive",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/receive.png",
+      "output": "public/game-assets/items/magic/receive_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated receive, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: receive. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 2341,
+      "itemIndex": 1008,
+      "itemNumber": 1009,
+      "itemName": "receive",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/receive.png",
+      "output": "public/game-assets/items/magic/receive_many.png",
+      "prompt": "Create a very abundant quantity of receive, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: receive. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 2342,
+      "itemIndex": 1009,
+      "itemNumber": 1010,
+      "itemName": "trade",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/trade.png",
+      "output": "public/game-assets/items/magic/trade.png",
+      "prompt": "Create exactly one clear trade, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: trade. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 2343,
+      "itemIndex": 1009,
+      "itemNumber": 1010,
+      "itemName": "trade",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/trade.png",
+      "output": "public/game-assets/items/magic/trade_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated trade, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: trade. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 2344,
+      "itemIndex": 1009,
+      "itemNumber": 1010,
+      "itemName": "trade",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/trade.png",
+      "output": "public/game-assets/items/magic/trade_many.png",
+      "prompt": "Create a very abundant quantity of trade, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: trade. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 2345,
+      "itemIndex": 1010,
+      "itemNumber": 1011,
+      "itemName": "consume",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/consume.png",
+      "output": "public/game-assets/items/magic/consume.png",
+      "prompt": "Create exactly one clear consume, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: consume. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 2346,
+      "itemIndex": 1010,
+      "itemNumber": 1011,
+      "itemName": "consume",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/consume.png",
+      "output": "public/game-assets/items/magic/consume_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated consume, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: consume. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 2347,
+      "itemIndex": 1010,
+      "itemNumber": 1011,
+      "itemName": "consume",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/consume.png",
+      "output": "public/game-assets/items/magic/consume_many.png",
+      "prompt": "Create a very abundant quantity of consume, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: consume. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 2348,
+      "itemIndex": 1011,
+      "itemNumber": 1012,
+      "itemName": "justice",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/justice.png",
+      "output": "public/game-assets/items/magic/justice.png",
+      "prompt": "Create exactly one clear justice, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: justice. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 2349,
+      "itemIndex": 1011,
+      "itemNumber": 1012,
+      "itemName": "justice",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/justice.png",
+      "output": "public/game-assets/items/magic/justice_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated justice, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: justice. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 2350,
+      "itemIndex": 1011,
+      "itemNumber": 1012,
+      "itemName": "justice",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "glyph_stones",
+        "magic",
+        "finished"
+      ],
+      "family": "magic",
+      "subfamily": "glyph_stones",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "arcane_material"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "enchanting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "enchanted"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [],
+      "decayProfile": "volatile",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "magic/justice.png",
+      "output": "public/game-assets/items/magic/justice_many.png",
+      "prompt": "Create a very abundant quantity of justice, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: justice. Family: magic. Subfamily: glyph_stones. Trade role: finished. Bulk profile: bottle. Category cues: magic, glyph_stones, finished, common, bottle, volatile, glyph_stones, magic, finished, crafted, common, enchanted, bulk_trade, arcane_material. It should read clearly in a small inventory tile.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

@@ -1,0 +1,3837 @@
+{
+  "batch": {
+    "firstGlobalSlot": 701,
+    "lastGlobalSlot": 750,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. ironclan leather armor (few)\n2. ironclan leather armor (many)\n3. ironclan platemail (one)\n4. ironclan platemail (few)\n5. ironclan platemail (many)\n6. ironclan ringmail (one)\n7. ironclan ringmail (few)\n8. ironclan ringmail (many)\n9. platemail with gold (one)\n10. ring mail with leather (one)\n11. ring mail with leather (few)\n12. ring mail with leather (many)\n13. fancy ring mail with leather (one)\n14. fancy ring mail with leather (few)\n15. fancy ring mail with leather (many)\n16. salamander platemail (one)\n17. salamander platemail (few)\n18. salamander platemail (many)\n19. scale mail (one)\n20. scale mail (few)\n21. scale mail (many)\n22. scale mail with expensive gems (one)\n23. heavy platemail (one)\n24. heavy platemail (few)\n25. heavy platemail (many)\n26. fabled spiked ironclan breastplate (one)\n27. splint mail (one)\n28. splint mail (few)\n29. splint mail (many)\n30. strong leather armor (one)\n31. strong leather armor (few)\n32. strong leather armor (many)\n33. studded leather armor (one)\n34. studded leather armor (few)\n35. studded leather armor (many)\n36. mire brute hide (one)\n37. mire brute hide (few)\n38. mire brute hide (many)\n39. mire brute leather armor (one)\n40. mire brute leather armor (few)\n41. mire brute leather armor (many)\n42. fabled platemail of Unraveling (one)\n43. iron boots (one)\n44. iron boots (few)\n45. iron boots (many)\n46. shield of Pearlgate (one)\n47. shield of Pearlgate (few)\n48. shield of Pearlgate (many)\n49. Crownfall officier shield (one)\n50. Crownfall officier shield (few)",
+  "order": [
+    "1. ironclan leather armor (few)",
+    "2. ironclan leather armor (many)",
+    "3. ironclan platemail (one)",
+    "4. ironclan platemail (few)",
+    "5. ironclan platemail (many)",
+    "6. ironclan ringmail (one)",
+    "7. ironclan ringmail (few)",
+    "8. ironclan ringmail (many)",
+    "9. platemail with gold (one)",
+    "10. ring mail with leather (one)",
+    "11. ring mail with leather (few)",
+    "12. ring mail with leather (many)",
+    "13. fancy ring mail with leather (one)",
+    "14. fancy ring mail with leather (few)",
+    "15. fancy ring mail with leather (many)",
+    "16. salamander platemail (one)",
+    "17. salamander platemail (few)",
+    "18. salamander platemail (many)",
+    "19. scale mail (one)",
+    "20. scale mail (few)",
+    "21. scale mail (many)",
+    "22. scale mail with expensive gems (one)",
+    "23. heavy platemail (one)",
+    "24. heavy platemail (few)",
+    "25. heavy platemail (many)",
+    "26. fabled spiked ironclan breastplate (one)",
+    "27. splint mail (one)",
+    "28. splint mail (few)",
+    "29. splint mail (many)",
+    "30. strong leather armor (one)",
+    "31. strong leather armor (few)",
+    "32. strong leather armor (many)",
+    "33. studded leather armor (one)",
+    "34. studded leather armor (few)",
+    "35. studded leather armor (many)",
+    "36. mire brute hide (one)",
+    "37. mire brute hide (few)",
+    "38. mire brute hide (many)",
+    "39. mire brute leather armor (one)",
+    "40. mire brute leather armor (few)",
+    "41. mire brute leather armor (many)",
+    "42. fabled platemail of Unraveling (one)",
+    "43. iron boots (one)",
+    "44. iron boots (few)",
+    "45. iron boots (many)",
+    "46. shield of Pearlgate (one)",
+    "47. shield of Pearlgate (few)",
+    "48. shield of Pearlgate (many)",
+    "49. Crownfall officier shield (one)",
+    "50. Crownfall officier shield (few)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 701,
+      "itemIndex": 423,
+      "itemNumber": 424,
+      "itemName": "ironclan leather armor",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 35,
+      "weight": 20,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/ironclan_leather_armor.png",
+      "output": "public/game-assets/items/armor/ironclan_leather_armor_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ironclan leather armor, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ironclan leather armor. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, ironclan, leather, equipment, crafted, common, war_good. It should feel medium-sized.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 702,
+      "itemIndex": 423,
+      "itemNumber": 424,
+      "itemName": "ironclan leather armor",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 35,
+      "weight": 20,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/ironclan_leather_armor.png",
+      "output": "public/game-assets/items/armor/ironclan_leather_armor_many.png",
+      "prompt": "Create a very abundant quantity of ironclan leather armor, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ironclan leather armor. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, ironclan, leather, equipment, crafted, common, war_good. It should feel medium-sized.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 703,
+      "itemIndex": 424,
+      "itemNumber": 425,
+      "itemName": "ironclan platemail",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 80,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/ironclan_platemail.png",
+      "output": "public/game-assets/items/armor/ironclan_platemail.png",
+      "prompt": "Create exactly one clear ironclan platemail, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ironclan platemail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, uncommon, rack, rusts, armor, platemail, ironclan, equipment, crafted, common, fine, war_good. It should feel physically large and heavy.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 704,
+      "itemIndex": 424,
+      "itemNumber": 425,
+      "itemName": "ironclan platemail",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 80,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/ironclan_platemail.png",
+      "output": "public/game-assets/items/armor/ironclan_platemail_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ironclan platemail, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ironclan platemail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, uncommon, rack, rusts, armor, platemail, ironclan, equipment, crafted, common, fine, war_good. It should feel physically large and heavy.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 705,
+      "itemIndex": 424,
+      "itemNumber": 425,
+      "itemName": "ironclan platemail",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 80,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/ironclan_platemail.png",
+      "output": "public/game-assets/items/armor/ironclan_platemail_many.png",
+      "prompt": "Create a very abundant quantity of ironclan platemail, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ironclan platemail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, uncommon, rack, rusts, armor, platemail, ironclan, equipment, crafted, common, fine, war_good. It should feel physically large and heavy.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 706,
+      "itemIndex": 425,
+      "itemNumber": 426,
+      "itemName": "ironclan ringmail",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 25,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/ironclan_ringmail.png",
+      "output": "public/game-assets/items/armor/ironclan_ringmail.png",
+      "prompt": "Create exactly one clear ironclan ringmail, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ironclan ringmail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, ironclan, equipment, crafted, common, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 707,
+      "itemIndex": 425,
+      "itemNumber": 426,
+      "itemName": "ironclan ringmail",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 25,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/ironclan_ringmail.png",
+      "output": "public/game-assets/items/armor/ironclan_ringmail_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ironclan ringmail, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ironclan ringmail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, ironclan, equipment, crafted, common, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 708,
+      "itemIndex": 425,
+      "itemNumber": 426,
+      "itemName": "ironclan ringmail",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 25,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/ironclan_ringmail.png",
+      "output": "public/game-assets/items/armor/ironclan_ringmail_many.png",
+      "prompt": "Create a very abundant quantity of ironclan ringmail, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ironclan ringmail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, ironclan, equipment, crafted, common, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 709,
+      "itemIndex": 426,
+      "itemNumber": 427,
+      "itemName": "platemail with gold",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "armor",
+        "platemail",
+        "gold",
+        "metal",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "gold"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/platemail_with_gold.png",
+      "output": "public/game-assets/items/armor/platemail_with_gold.png",
+      "prompt": "Create exactly one clear platemail with gold, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: platemail with gold. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, rare, rack, rusts, armor, platemail, gold, metal, equipment, crafted, common, fine. It should feel medium-sized.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 710,
+      "itemIndex": 427,
+      "itemNumber": 428,
+      "itemName": "ring mail with leather",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/ring_mail_with_leather.png",
+      "output": "public/game-assets/items/armor/ring_mail_with_leather.png",
+      "prompt": "Create exactly one clear ring mail with leather, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: ring mail with leather. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, leather, equipment, crafted, common, war_good, leather. It should feel medium-sized.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 711,
+      "itemIndex": 427,
+      "itemNumber": 428,
+      "itemName": "ring mail with leather",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/ring_mail_with_leather.png",
+      "output": "public/game-assets/items/armor/ring_mail_with_leather_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated ring mail with leather, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: ring mail with leather. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, leather, equipment, crafted, common, war_good, leather. It should feel medium-sized.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 712,
+      "itemIndex": 427,
+      "itemNumber": 428,
+      "itemName": "ring mail with leather",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/ring_mail_with_leather.png",
+      "output": "public/game-assets/items/armor/ring_mail_with_leather_many.png",
+      "prompt": "Create a very abundant quantity of ring mail with leather, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: ring mail with leather. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, leather, equipment, crafted, common, war_good, leather. It should feel medium-sized.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 713,
+      "itemIndex": 428,
+      "itemNumber": 429,
+      "itemName": "fancy ring mail with leather",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/fancy_ring_mail_with_leather.png",
+      "output": "public/game-assets/items/armor/fancy_ring_mail_with_leather.png",
+      "prompt": "Create exactly one clear fancy ring mail with leather, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fancy ring mail with leather. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, uncommon, rack, rusts, armor, platemail, leather, equipment, crafted, common, fine, locked. It should feel medium-sized.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 714,
+      "itemIndex": 428,
+      "itemNumber": 429,
+      "itemName": "fancy ring mail with leather",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/fancy_ring_mail_with_leather.png",
+      "output": "public/game-assets/items/armor/fancy_ring_mail_with_leather_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated fancy ring mail with leather, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: fancy ring mail with leather. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, uncommon, rack, rusts, armor, platemail, leather, equipment, crafted, common, fine, locked. It should feel medium-sized.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 715,
+      "itemIndex": 428,
+      "itemNumber": 429,
+      "itemName": "fancy ring mail with leather",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/fancy_ring_mail_with_leather.png",
+      "output": "public/game-assets/items/armor/fancy_ring_mail_with_leather_many.png",
+      "prompt": "Create a very abundant quantity of fancy ring mail with leather, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: fancy ring mail with leather. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, uncommon, rack, rusts, armor, platemail, leather, equipment, crafted, common, fine, locked. It should feel medium-sized.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 716,
+      "itemIndex": 429,
+      "itemNumber": 430,
+      "itemName": "salamander platemail",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/salamander_platemail.png",
+      "output": "public/game-assets/items/armor/salamander_platemail.png",
+      "prompt": "Create exactly one clear salamander platemail, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: salamander platemail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, equipment, crafted, common, war_good, steel, finished_good. It should feel medium-sized.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 717,
+      "itemIndex": 429,
+      "itemNumber": 430,
+      "itemName": "salamander platemail",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/salamander_platemail.png",
+      "output": "public/game-assets/items/armor/salamander_platemail_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated salamander platemail, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: salamander platemail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, equipment, crafted, common, war_good, steel, finished_good. It should feel medium-sized.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 718,
+      "itemIndex": 429,
+      "itemNumber": 430,
+      "itemName": "salamander platemail",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/salamander_platemail.png",
+      "output": "public/game-assets/items/armor/salamander_platemail_many.png",
+      "prompt": "Create a very abundant quantity of salamander platemail, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: salamander platemail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, equipment, crafted, common, war_good, steel, finished_good. It should feel medium-sized.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 719,
+      "itemIndex": 430,
+      "itemNumber": 431,
+      "itemName": "scale mail",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/scale_mail.png",
+      "output": "public/game-assets/items/armor/scale_mail.png",
+      "prompt": "Create exactly one clear scale mail, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scale mail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, equipment, crafted, common, war_good, steel, finished_good. It should feel medium-sized.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 720,
+      "itemIndex": 430,
+      "itemNumber": 431,
+      "itemName": "scale mail",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/scale_mail.png",
+      "output": "public/game-assets/items/armor/scale_mail_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated scale mail, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: scale mail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, equipment, crafted, common, war_good, steel, finished_good. It should feel medium-sized.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 721,
+      "itemIndex": 430,
+      "itemNumber": 431,
+      "itemName": "scale mail",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/scale_mail.png",
+      "output": "public/game-assets/items/armor/scale_mail_many.png",
+      "prompt": "Create a very abundant quantity of scale mail, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: scale mail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, equipment, crafted, common, war_good, steel, finished_good. It should feel medium-sized.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 722,
+      "itemIndex": 431,
+      "itemNumber": 432,
+      "itemName": "scale mail with expensive gems",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/scale_mail_with_expensive_gems.png",
+      "output": "public/game-assets/items/armor/scale_mail_with_expensive_gems.png",
+      "prompt": "Create exactly one clear scale mail with expensive gems, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scale mail with expensive gems. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, legendary, rack, rusts, armor, platemail, equipment, crafted, common, fine, masterwork, locked. It should feel medium-sized.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 723,
+      "itemIndex": 432,
+      "itemNumber": 433,
+      "itemName": "heavy platemail",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/heavy_platemail.png",
+      "output": "public/game-assets/items/armor/heavy_platemail.png",
+      "prompt": "Create exactly one clear heavy platemail, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: heavy platemail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, uncommon, rack, rusts, armor, platemail, equipment, crafted, common, fine, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 724,
+      "itemIndex": 432,
+      "itemNumber": 433,
+      "itemName": "heavy platemail",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/heavy_platemail.png",
+      "output": "public/game-assets/items/armor/heavy_platemail_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated heavy platemail, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: heavy platemail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, uncommon, rack, rusts, armor, platemail, equipment, crafted, common, fine, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 725,
+      "itemIndex": 432,
+      "itemNumber": 433,
+      "itemName": "heavy platemail",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/heavy_platemail.png",
+      "output": "public/game-assets/items/armor/heavy_platemail_many.png",
+      "prompt": "Create a very abundant quantity of heavy platemail, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: heavy platemail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, uncommon, rack, rusts, armor, platemail, equipment, crafted, common, fine, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 726,
+      "itemIndex": 433,
+      "itemNumber": 434,
+      "itemName": "fabled spiked ironclan breastplate",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 120,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/fabled_spiked_ironclan_breastplate.png",
+      "output": "public/game-assets/items/armor/fabled_spiked_ironclan_breastplate.png",
+      "prompt": "Create exactly one clear fabled spiked ironclan breastplate, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fabled spiked ironclan breastplate. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, rare, rack, rusts, armor, platemail, ironclan, equipment, crafted, common, fine, masterwork. It should feel physically large and heavy.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 727,
+      "itemIndex": 434,
+      "itemNumber": 435,
+      "itemName": "splint mail",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 20,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/splint_mail.png",
+      "output": "public/game-assets/items/armor/splint_mail.png",
+      "prompt": "Create exactly one clear splint mail, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: splint mail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, equipment, crafted, common, war_good, steel, finished_good. It should feel medium-sized.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 728,
+      "itemIndex": 434,
+      "itemNumber": 435,
+      "itemName": "splint mail",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 20,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/splint_mail.png",
+      "output": "public/game-assets/items/armor/splint_mail_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated splint mail, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: splint mail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, equipment, crafted, common, war_good, steel, finished_good. It should feel medium-sized.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 729,
+      "itemIndex": 434,
+      "itemNumber": 435,
+      "itemName": "splint mail",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 20,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/splint_mail.png",
+      "output": "public/game-assets/items/armor/splint_mail_many.png",
+      "prompt": "Create a very abundant quantity of splint mail, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: splint mail. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, equipment, crafted, common, war_good, steel, finished_good. It should feel medium-sized.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 730,
+      "itemIndex": 435,
+      "itemNumber": 436,
+      "itemName": "strong leather armor",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/strong_leather_armor.png",
+      "output": "public/game-assets/items/armor/strong_leather_armor.png",
+      "prompt": "Create exactly one clear strong leather armor, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: strong leather armor. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, leather, equipment, crafted, common, war_good, leather. It should feel medium-sized.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 731,
+      "itemIndex": 435,
+      "itemNumber": 436,
+      "itemName": "strong leather armor",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/strong_leather_armor.png",
+      "output": "public/game-assets/items/armor/strong_leather_armor_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated strong leather armor, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: strong leather armor. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, leather, equipment, crafted, common, war_good, leather. It should feel medium-sized.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 732,
+      "itemIndex": 435,
+      "itemNumber": 436,
+      "itemName": "strong leather armor",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/strong_leather_armor.png",
+      "output": "public/game-assets/items/armor/strong_leather_armor_many.png",
+      "prompt": "Create a very abundant quantity of strong leather armor, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: strong leather armor. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, leather, equipment, crafted, common, war_good, leather. It should feel medium-sized.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 733,
+      "itemIndex": 436,
+      "itemNumber": 437,
+      "itemName": "studded leather armor",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/studded_leather_armor.png",
+      "output": "public/game-assets/items/armor/studded_leather_armor.png",
+      "prompt": "Create exactly one clear studded leather armor, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: studded leather armor. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, leather, equipment, crafted, common, war_good, leather. It should feel medium-sized.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 734,
+      "itemIndex": 436,
+      "itemNumber": 437,
+      "itemName": "studded leather armor",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/studded_leather_armor.png",
+      "output": "public/game-assets/items/armor/studded_leather_armor_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated studded leather armor, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: studded leather armor. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, leather, equipment, crafted, common, war_good, leather. It should feel medium-sized.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 735,
+      "itemIndex": 436,
+      "itemNumber": 437,
+      "itemName": "studded leather armor",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/studded_leather_armor.png",
+      "output": "public/game-assets/items/armor/studded_leather_armor_many.png",
+      "prompt": "Create a very abundant quantity of studded leather armor, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: studded leather armor. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, leather, equipment, crafted, common, war_good, leather. It should feel medium-sized.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 736,
+      "itemIndex": 437,
+      "itemNumber": 438,
+      "itemName": "mire brute hide",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 8,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/mire_brute_hide.png",
+      "output": "public/game-assets/items/armor/mire_brute_hide.png",
+      "prompt": "Create exactly one clear mire brute hide, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: mire brute hide. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, ironclan, equipment, crafted, common, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 737,
+      "itemIndex": 437,
+      "itemNumber": 438,
+      "itemName": "mire brute hide",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 8,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/mire_brute_hide.png",
+      "output": "public/game-assets/items/armor/mire_brute_hide_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated mire brute hide, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: mire brute hide. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, ironclan, equipment, crafted, common, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 738,
+      "itemIndex": 437,
+      "itemNumber": 438,
+      "itemName": "mire brute hide",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 8,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/mire_brute_hide.png",
+      "output": "public/game-assets/items/armor/mire_brute_hide_many.png",
+      "prompt": "Create a very abundant quantity of mire brute hide, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: mire brute hide. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, ironclan, equipment, crafted, common, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 739,
+      "itemIndex": 438,
+      "itemNumber": 439,
+      "itemName": "mire brute leather armor",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 12,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/mire_brute_leather_armor.png",
+      "output": "public/game-assets/items/armor/mire_brute_leather_armor.png",
+      "prompt": "Create exactly one clear mire brute leather armor, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: mire brute leather armor. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, ironclan, leather, equipment, crafted, common, war_good. It should feel medium-sized.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 740,
+      "itemIndex": 438,
+      "itemNumber": 439,
+      "itemName": "mire brute leather armor",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 12,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/mire_brute_leather_armor.png",
+      "output": "public/game-assets/items/armor/mire_brute_leather_armor_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated mire brute leather armor, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: mire brute leather armor. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, ironclan, leather, equipment, crafted, common, war_good. It should feel medium-sized.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 741,
+      "itemIndex": 438,
+      "itemNumber": 439,
+      "itemName": "mire brute leather armor",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "platemail",
+        "ironclan",
+        "leather",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "leather"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 12,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/mire_brute_leather_armor.png",
+      "output": "public/game-assets/items/armor/mire_brute_leather_armor_many.png",
+      "prompt": "Create a very abundant quantity of mire brute leather armor, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: mire brute leather armor. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, common, rack, rusts, armor, platemail, ironclan, leather, equipment, crafted, common, war_good. It should feel medium-sized.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 742,
+      "itemIndex": 439,
+      "itemNumber": 440,
+      "itemName": "fabled platemail of Unraveling",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "armor",
+        "platemail",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "platemail",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "legendary",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 30,
+      "weight": 20,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/fabled_platemail_of_unraveling.png",
+      "output": "public/game-assets/items/armor/fabled_platemail_of_unraveling.png",
+      "prompt": "Create exactly one clear fabled platemail of Unraveling, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fabled platemail of Unraveling. Family: armor. Subfamily: platemail. Trade role: equipment. Bulk profile: rack. Category cues: armor, platemail, equipment, legendary, rack, rusts, armor, platemail, equipment, crafted, common, fine, masterwork, locked. It should feel medium-sized.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 743,
+      "itemIndex": 440,
+      "itemNumber": 441,
+      "itemName": "iron boots",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "sabatons",
+        "metal",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "sabatons",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/iron_boots.png",
+      "output": "public/game-assets/items/armor/iron_boots.png",
+      "prompt": "Create exactly one clear iron boots, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: iron boots. Family: armor. Subfamily: sabatons. Trade role: equipment. Bulk profile: rack. Category cues: armor, sabatons, equipment, common, rack, rusts, armor, sabatons, metal, equipment, crafted, common, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 744,
+      "itemIndex": 440,
+      "itemNumber": 441,
+      "itemName": "iron boots",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "sabatons",
+        "metal",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "sabatons",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/iron_boots.png",
+      "output": "public/game-assets/items/armor/iron_boots_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated iron boots, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: iron boots. Family: armor. Subfamily: sabatons. Trade role: equipment. Bulk profile: rack. Category cues: armor, sabatons, equipment, common, rack, rusts, armor, sabatons, metal, equipment, crafted, common, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 745,
+      "itemIndex": 440,
+      "itemNumber": 441,
+      "itemName": "iron boots",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "sabatons",
+        "metal",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "sabatons",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 15,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/iron_boots.png",
+      "output": "public/game-assets/items/armor/iron_boots_many.png",
+      "prompt": "Create a very abundant quantity of iron boots, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: iron boots. Family: armor. Subfamily: sabatons. Trade role: equipment. Bulk profile: rack. Category cues: armor, sabatons, equipment, common, rack, rusts, armor, sabatons, metal, equipment, crafted, common, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 746,
+      "itemIndex": 441,
+      "itemNumber": 442,
+      "itemName": "shield of Pearlgate",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "shields",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "shields",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/shield_of_pearlgate.png",
+      "output": "public/game-assets/items/armor/shield_of_pearlgate.png",
+      "prompt": "Create exactly one clear shield of Pearlgate, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: shield of Pearlgate. Family: armor. Subfamily: shields. Trade role: equipment. Bulk profile: rack. Category cues: armor, shields, equipment, uncommon, rack, rusts, armor, shields, equipment, crafted, common, fine, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 747,
+      "itemIndex": 441,
+      "itemNumber": 442,
+      "itemName": "shield of Pearlgate",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "shields",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "shields",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/shield_of_pearlgate.png",
+      "output": "public/game-assets/items/armor/shield_of_pearlgate_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated shield of Pearlgate, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: shield of Pearlgate. Family: armor. Subfamily: shields. Trade role: equipment. Bulk profile: rack. Category cues: armor, shields, equipment, uncommon, rack, rusts, armor, shields, equipment, crafted, common, fine, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 748,
+      "itemIndex": 441,
+      "itemNumber": 442,
+      "itemName": "shield of Pearlgate",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "shields",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "shields",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/shield_of_pearlgate.png",
+      "output": "public/game-assets/items/armor/shield_of_pearlgate_many.png",
+      "prompt": "Create a very abundant quantity of shield of Pearlgate, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: shield of Pearlgate. Family: armor. Subfamily: shields. Trade role: equipment. Bulk profile: rack. Category cues: armor, shields, equipment, uncommon, rack, rusts, armor, shields, equipment, crafted, common, fine, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 749,
+      "itemIndex": 442,
+      "itemNumber": 443,
+      "itemName": "Crownfall officier shield",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "shields",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "shields",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/crownfall_officier_shield.png",
+      "output": "public/game-assets/items/armor/crownfall_officier_shield.png",
+      "prompt": "Create exactly one clear Crownfall officier shield, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: Crownfall officier shield. Family: armor. Subfamily: shields. Trade role: equipment. Bulk profile: rack. Category cues: armor, shields, equipment, uncommon, rack, rusts, armor, shields, equipment, crafted, common, fine, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 750,
+      "itemIndex": 442,
+      "itemNumber": 443,
+      "itemName": "Crownfall officier shield",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "armor",
+        "shields",
+        "equipment"
+      ],
+      "family": "armor",
+      "subfamily": "shields",
+      "tradeRole": "equipment",
+      "categoryAxes": {
+        "material": [
+          "steel"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary",
+          "military_restricted"
+        ],
+        "marketBehavior": [
+          "war_good"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "equipment"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "war_good"
+      ],
+      "size": 20,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "armor/crownfall_officier_shield.png",
+      "output": "public/game-assets/items/armor/crownfall_officier_shield_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated Crownfall officier shield, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: Crownfall officier shield. Family: armor. Subfamily: shields. Trade role: equipment. Bulk profile: rack. Category cues: armor, shields, equipment, uncommon, rack, rusts, armor, shields, equipment, crafted, common, fine, war_good, steel. It should feel medium-sized.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

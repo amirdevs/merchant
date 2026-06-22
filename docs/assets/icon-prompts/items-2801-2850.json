@@ -1,0 +1,4142 @@
+{
+  "batch": {
+    "firstGlobalSlot": 2801,
+    "lastGlobalSlot": 2850,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. tidefolk avatar (one)\n2. tidefolk avatar (few)\n3. tidefolk avatar (many)\n4. tidefolk commoner (one)\n5. tidefolk commoner (few)\n6. tidefolk commoner (many)\n7. tidefolk fighter (one)\n8. tidefolk fighter (few)\n9. tidefolk fighter (many)\n10. tidefolk impaler (one)\n11. tidefolk impaler (few)\n12. tidefolk impaler (many)\n13. tidefolk javelineer (one)\n14. tidefolk javelineer (few)\n15. tidefolk javelineer (many)\n16. fishwoman (one)\n17. fishwoman (few)\n18. fishwoman (many)\n19. fishman (one)\n20. fishman (few)\n21. fishman (many)\n22. reef serpent (one)\n23. reef serpent (few)\n24. reef serpent (many)\n25. reef serpent mage (one)\n26. reef serpent mage (few)\n27. reef serpent mage (many)\n28. reef serpent ritualist (one)\n29. reef serpent ritualist (few)\n30. reef serpent ritualist (many)\n31. reef serpent sharpshooter (one)\n32. reef serpent sharpshooter (few)\n33. reef serpent sharpshooter (many)\n34. reef serpent warrior (one)\n35. reef serpent warrior (few)\n36. reef serpent warrior (many)\n37. reef serpent spiritualist (one)\n38. reef serpent spiritualist (few)\n39. reef serpent spiritualist (many)\n40. tidefolk siren (one)\n41. tidefolk siren (few)\n42. tidefolk siren (many)\n43. water nymph (one)\n44. water nymph (few)\n45. water nymph (many)\n46. anubis (one)\n47. anubis (few)\n48. anubis (many)\n49. basilisk (one)\n50. basilisk (few)",
+  "order": [
+    "1. tidefolk avatar (one)",
+    "2. tidefolk avatar (few)",
+    "3. tidefolk avatar (many)",
+    "4. tidefolk commoner (one)",
+    "5. tidefolk commoner (few)",
+    "6. tidefolk commoner (many)",
+    "7. tidefolk fighter (one)",
+    "8. tidefolk fighter (few)",
+    "9. tidefolk fighter (many)",
+    "10. tidefolk impaler (one)",
+    "11. tidefolk impaler (few)",
+    "12. tidefolk impaler (many)",
+    "13. tidefolk javelineer (one)",
+    "14. tidefolk javelineer (few)",
+    "15. tidefolk javelineer (many)",
+    "16. fishwoman (one)",
+    "17. fishwoman (few)",
+    "18. fishwoman (many)",
+    "19. fishman (one)",
+    "20. fishman (few)",
+    "21. fishman (many)",
+    "22. reef serpent (one)",
+    "23. reef serpent (few)",
+    "24. reef serpent (many)",
+    "25. reef serpent mage (one)",
+    "26. reef serpent mage (few)",
+    "27. reef serpent mage (many)",
+    "28. reef serpent ritualist (one)",
+    "29. reef serpent ritualist (few)",
+    "30. reef serpent ritualist (many)",
+    "31. reef serpent sharpshooter (one)",
+    "32. reef serpent sharpshooter (few)",
+    "33. reef serpent sharpshooter (many)",
+    "34. reef serpent warrior (one)",
+    "35. reef serpent warrior (few)",
+    "36. reef serpent warrior (many)",
+    "37. reef serpent spiritualist (one)",
+    "38. reef serpent spiritualist (few)",
+    "39. reef serpent spiritualist (many)",
+    "40. tidefolk siren (one)",
+    "41. tidefolk siren (few)",
+    "42. tidefolk siren (many)",
+    "43. water nymph (one)",
+    "44. water nymph (few)",
+    "45. water nymph (many)",
+    "46. anubis (one)",
+    "47. anubis (few)",
+    "48. anubis (many)",
+    "49. basilisk (one)",
+    "50. basilisk (few)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 2801,
+      "itemIndex": 1258,
+      "itemNumber": 1259,
+      "itemName": "tidefolk avatar",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_avatar.png",
+      "output": "public/game-assets/items/seafood/tidefolk_avatar.png",
+      "prompt": "Create exactly one clear tidefolk avatar, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk avatar. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 2802,
+      "itemIndex": 1258,
+      "itemNumber": 1259,
+      "itemName": "tidefolk avatar",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_avatar.png",
+      "output": "public/game-assets/items/seafood/tidefolk_avatar_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated tidefolk avatar, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk avatar. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 2803,
+      "itemIndex": 1258,
+      "itemNumber": 1259,
+      "itemName": "tidefolk avatar",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_avatar.png",
+      "output": "public/game-assets/items/seafood/tidefolk_avatar_many.png",
+      "prompt": "Create a very abundant quantity of tidefolk avatar, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk avatar. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 2804,
+      "itemIndex": 1259,
+      "itemNumber": 1260,
+      "itemName": "tidefolk commoner",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_commoner.png",
+      "output": "public/game-assets/items/seafood/tidefolk_commoner.png",
+      "prompt": "Create exactly one clear tidefolk commoner, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk commoner. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 2805,
+      "itemIndex": 1259,
+      "itemNumber": 1260,
+      "itemName": "tidefolk commoner",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_commoner.png",
+      "output": "public/game-assets/items/seafood/tidefolk_commoner_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated tidefolk commoner, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk commoner. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 2806,
+      "itemIndex": 1259,
+      "itemNumber": 1260,
+      "itemName": "tidefolk commoner",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_commoner.png",
+      "output": "public/game-assets/items/seafood/tidefolk_commoner_many.png",
+      "prompt": "Create a very abundant quantity of tidefolk commoner, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk commoner. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 2807,
+      "itemIndex": 1260,
+      "itemNumber": 1261,
+      "itemName": "tidefolk fighter",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 15,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_fighter.png",
+      "output": "public/game-assets/items/seafood/tidefolk_fighter.png",
+      "prompt": "Create exactly one clear tidefolk fighter, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk fighter. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 2808,
+      "itemIndex": 1260,
+      "itemNumber": 1261,
+      "itemName": "tidefolk fighter",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 15,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_fighter.png",
+      "output": "public/game-assets/items/seafood/tidefolk_fighter_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated tidefolk fighter, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk fighter. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 2809,
+      "itemIndex": 1260,
+      "itemNumber": 1261,
+      "itemName": "tidefolk fighter",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 15,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_fighter.png",
+      "output": "public/game-assets/items/seafood/tidefolk_fighter_many.png",
+      "prompt": "Create a very abundant quantity of tidefolk fighter, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk fighter. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 2810,
+      "itemIndex": 1261,
+      "itemNumber": 1262,
+      "itemName": "tidefolk impaler",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "maritime",
+        "finished"
+      ],
+      "family": "maritime",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "maritime/tidefolk_impaler.png",
+      "output": "public/game-assets/items/maritime/tidefolk_impaler.png",
+      "prompt": "Create exactly one clear tidefolk impaler, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk impaler. Family: maritime. Subfamily: monster_parts. Trade role: finished. Bulk profile: crate. Category cues: maritime, monster_parts, finished, common, crate, none, monster_parts, aquatics, tidefolk, maritime, finished, crafted, common, port_specialty. It should feel medium-sized.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 2811,
+      "itemIndex": 1261,
+      "itemNumber": 1262,
+      "itemName": "tidefolk impaler",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "maritime",
+        "finished"
+      ],
+      "family": "maritime",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "maritime/tidefolk_impaler.png",
+      "output": "public/game-assets/items/maritime/tidefolk_impaler_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated tidefolk impaler, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk impaler. Family: maritime. Subfamily: monster_parts. Trade role: finished. Bulk profile: crate. Category cues: maritime, monster_parts, finished, common, crate, none, monster_parts, aquatics, tidefolk, maritime, finished, crafted, common, port_specialty. It should feel medium-sized.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 2812,
+      "itemIndex": 1261,
+      "itemNumber": 1262,
+      "itemName": "tidefolk impaler",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "maritime",
+        "finished"
+      ],
+      "family": "maritime",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "maritime/tidefolk_impaler.png",
+      "output": "public/game-assets/items/maritime/tidefolk_impaler_many.png",
+      "prompt": "Create a very abundant quantity of tidefolk impaler, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk impaler. Family: maritime. Subfamily: monster_parts. Trade role: finished. Bulk profile: crate. Category cues: maritime, monster_parts, finished, common, crate, none, monster_parts, aquatics, tidefolk, maritime, finished, crafted, common, port_specialty. It should feel medium-sized.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 2813,
+      "itemIndex": 1262,
+      "itemNumber": 1263,
+      "itemName": "tidefolk javelineer",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_javelineer.png",
+      "output": "public/game-assets/items/seafood/tidefolk_javelineer.png",
+      "prompt": "Create exactly one clear tidefolk javelineer, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk javelineer. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 2814,
+      "itemIndex": 1262,
+      "itemNumber": 1263,
+      "itemName": "tidefolk javelineer",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_javelineer.png",
+      "output": "public/game-assets/items/seafood/tidefolk_javelineer_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated tidefolk javelineer, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk javelineer. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 2815,
+      "itemIndex": 1262,
+      "itemNumber": 1263,
+      "itemName": "tidefolk javelineer",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_javelineer.png",
+      "output": "public/game-assets/items/seafood/tidefolk_javelineer_many.png",
+      "prompt": "Create a very abundant quantity of tidefolk javelineer, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk javelineer. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 2816,
+      "itemIndex": 1263,
+      "itemNumber": 1264,
+      "itemName": "fishwoman",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/fishwoman.png",
+      "output": "public/game-assets/items/seafood/fishwoman.png",
+      "prompt": "Create exactly one clear fishwoman, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fishwoman. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, seafood, finished, crafted, common, spoiled, chilled. It should feel medium-sized.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 2817,
+      "itemIndex": 1263,
+      "itemNumber": 1264,
+      "itemName": "fishwoman",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/fishwoman.png",
+      "output": "public/game-assets/items/seafood/fishwoman_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated fishwoman, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: fishwoman. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, seafood, finished, crafted, common, spoiled, chilled. It should feel medium-sized.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 2818,
+      "itemIndex": 1263,
+      "itemNumber": 1264,
+      "itemName": "fishwoman",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/fishwoman.png",
+      "output": "public/game-assets/items/seafood/fishwoman_many.png",
+      "prompt": "Create a very abundant quantity of fishwoman, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: fishwoman. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, seafood, finished, crafted, common, spoiled, chilled. It should feel medium-sized.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 2819,
+      "itemIndex": 1264,
+      "itemNumber": 1265,
+      "itemName": "fishman",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/fishman.png",
+      "output": "public/game-assets/items/seafood/fishman.png",
+      "prompt": "Create exactly one clear fishman, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fishman. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, seafood, finished, crafted, common, spoiled, chilled. It should feel medium-sized.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 2820,
+      "itemIndex": 1264,
+      "itemNumber": 1265,
+      "itemName": "fishman",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/fishman.png",
+      "output": "public/game-assets/items/seafood/fishman_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated fishman, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: fishman. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, seafood, finished, crafted, common, spoiled, chilled. It should feel medium-sized.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 2821,
+      "itemIndex": 1264,
+      "itemNumber": 1265,
+      "itemName": "fishman",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/fishman.png",
+      "output": "public/game-assets/items/seafood/fishman_many.png",
+      "prompt": "Create a very abundant quantity of fishman, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: fishman. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, seafood, finished, crafted, common, spoiled, chilled. It should feel medium-sized.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 2822,
+      "itemIndex": 1265,
+      "itemNumber": 1266,
+      "itemName": "reef serpent",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent.png",
+      "output": "public/game-assets/items/seafood/reef_serpent.png",
+      "prompt": "Create exactly one clear reef serpent, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 2823,
+      "itemIndex": 1265,
+      "itemNumber": 1266,
+      "itemName": "reef serpent",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated reef serpent, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 2824,
+      "itemIndex": 1265,
+      "itemNumber": 1266,
+      "itemName": "reef serpent",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_many.png",
+      "prompt": "Create a very abundant quantity of reef serpent, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 2825,
+      "itemIndex": 1266,
+      "itemNumber": 1267,
+      "itemName": "reef serpent mage",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_mage.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_mage.png",
+      "prompt": "Create exactly one clear reef serpent mage, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent mage. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 2826,
+      "itemIndex": 1266,
+      "itemNumber": 1267,
+      "itemName": "reef serpent mage",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_mage.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_mage_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated reef serpent mage, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent mage. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 2827,
+      "itemIndex": 1266,
+      "itemNumber": 1267,
+      "itemName": "reef serpent mage",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_mage.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_mage_many.png",
+      "prompt": "Create a very abundant quantity of reef serpent mage, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent mage. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 2828,
+      "itemIndex": 1267,
+      "itemNumber": 1268,
+      "itemName": "reef serpent ritualist",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_ritualist.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_ritualist.png",
+      "prompt": "Create exactly one clear reef serpent ritualist, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent ritualist. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 2829,
+      "itemIndex": 1267,
+      "itemNumber": 1268,
+      "itemName": "reef serpent ritualist",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_ritualist.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_ritualist_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated reef serpent ritualist, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent ritualist. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 2830,
+      "itemIndex": 1267,
+      "itemNumber": 1268,
+      "itemName": "reef serpent ritualist",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_ritualist.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_ritualist_many.png",
+      "prompt": "Create a very abundant quantity of reef serpent ritualist, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent ritualist. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 2831,
+      "itemIndex": 1268,
+      "itemNumber": 1269,
+      "itemName": "reef serpent sharpshooter",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_sharpshooter.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_sharpshooter.png",
+      "prompt": "Create exactly one clear reef serpent sharpshooter, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent sharpshooter. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 2832,
+      "itemIndex": 1268,
+      "itemNumber": 1269,
+      "itemName": "reef serpent sharpshooter",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_sharpshooter.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_sharpshooter_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated reef serpent sharpshooter, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent sharpshooter. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 2833,
+      "itemIndex": 1268,
+      "itemNumber": 1269,
+      "itemName": "reef serpent sharpshooter",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_sharpshooter.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_sharpshooter_many.png",
+      "prompt": "Create a very abundant quantity of reef serpent sharpshooter, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent sharpshooter. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 2834,
+      "itemIndex": 1269,
+      "itemNumber": 1270,
+      "itemName": "reef serpent warrior",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_warrior.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_warrior.png",
+      "prompt": "Create exactly one clear reef serpent warrior, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent warrior. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 2835,
+      "itemIndex": 1269,
+      "itemNumber": 1270,
+      "itemName": "reef serpent warrior",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_warrior.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_warrior_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated reef serpent warrior, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent warrior. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 2836,
+      "itemIndex": 1269,
+      "itemNumber": 1270,
+      "itemName": "reef serpent warrior",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_warrior.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_warrior_many.png",
+      "prompt": "Create a very abundant quantity of reef serpent warrior, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent warrior. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 2837,
+      "itemIndex": 1270,
+      "itemNumber": 1271,
+      "itemName": "reef serpent spiritualist",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_spiritualist.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_spiritualist.png",
+      "prompt": "Create exactly one clear reef serpent spiritualist, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent spiritualist. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 2838,
+      "itemIndex": 1270,
+      "itemNumber": 1271,
+      "itemName": "reef serpent spiritualist",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_spiritualist.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_spiritualist_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated reef serpent spiritualist, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent spiritualist. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 2839,
+      "itemIndex": 1270,
+      "itemNumber": 1271,
+      "itemName": "reef serpent spiritualist",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "reef_serpent",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 10,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/reef_serpent_spiritualist.png",
+      "output": "public/game-assets/items/seafood/reef_serpent_spiritualist_many.png",
+      "prompt": "Create a very abundant quantity of reef serpent spiritualist, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: reef serpent spiritualist. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, reef_serpent, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 2840,
+      "itemIndex": 1271,
+      "itemNumber": 1272,
+      "itemName": "tidefolk siren",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_siren.png",
+      "output": "public/game-assets/items/seafood/tidefolk_siren.png",
+      "prompt": "Create exactly one clear tidefolk siren, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk siren. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 2841,
+      "itemIndex": 1271,
+      "itemNumber": 1272,
+      "itemName": "tidefolk siren",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_siren.png",
+      "output": "public/game-assets/items/seafood/tidefolk_siren_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated tidefolk siren, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk siren. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 2842,
+      "itemIndex": 1271,
+      "itemNumber": 1272,
+      "itemName": "tidefolk siren",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "tidefolk",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tidefolk_siren.png",
+      "output": "public/game-assets/items/seafood/tidefolk_siren_many.png",
+      "prompt": "Create a very abundant quantity of tidefolk siren, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: tidefolk siren. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, tidefolk, seafood, finished, crafted, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 2843,
+      "itemIndex": 1272,
+      "itemNumber": 1273,
+      "itemName": "water nymph",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/water_nymph.png",
+      "output": "public/game-assets/items/seafood/water_nymph.png",
+      "prompt": "Create exactly one clear water nymph, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: water nymph. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, seafood, finished, crafted, common, spoiled, chilled. It should feel medium-sized.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 2844,
+      "itemIndex": 1272,
+      "itemNumber": 1273,
+      "itemName": "water nymph",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/water_nymph.png",
+      "output": "public/game-assets/items/seafood/water_nymph_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated water nymph, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: water nymph. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, seafood, finished, crafted, common, spoiled, chilled. It should feel medium-sized.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 2845,
+      "itemIndex": 1272,
+      "itemNumber": 1273,
+      "itemName": "water nymph",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "monster_parts",
+        "aquatics",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "monster_parts",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "monster_part",
+          "shellfish",
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "heavy",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 8,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/water_nymph.png",
+      "output": "public/game-assets/items/seafood/water_nymph_many.png",
+      "prompt": "Create a very abundant quantity of water nymph, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: water nymph. Family: seafood. Subfamily: monster_parts. Trade role: finished. Bulk profile: basket. Category cues: seafood, monster_parts, finished, common, basket, fresh, monster_parts, aquatics, seafood, finished, crafted, common, spoiled, chilled. It should feel medium-sized.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 2846,
+      "itemIndex": 1273,
+      "itemNumber": 1274,
+      "itemName": "anubis",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "beasts",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "monster_parts",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 35,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/anubis.png",
+      "output": "public/game-assets/items/animal_goods/anubis.png",
+      "prompt": "Create exactly one clear anubis, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: anubis. Family: animal_goods. Subfamily: monster_parts. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, monster_parts, raw, common, crate, none, monster_parts, beasts, animal_goods, raw, crafted, common, bulk_trade, monster_part. It should feel medium-sized.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 2847,
+      "itemIndex": 1273,
+      "itemNumber": 1274,
+      "itemName": "anubis",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "beasts",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "monster_parts",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 35,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/anubis.png",
+      "output": "public/game-assets/items/animal_goods/anubis_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated anubis, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: anubis. Family: animal_goods. Subfamily: monster_parts. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, monster_parts, raw, common, crate, none, monster_parts, beasts, animal_goods, raw, crafted, common, bulk_trade, monster_part. It should feel medium-sized.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 2848,
+      "itemIndex": 1273,
+      "itemNumber": 1274,
+      "itemName": "anubis",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "beasts",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "monster_parts",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 35,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/anubis.png",
+      "output": "public/game-assets/items/animal_goods/anubis_many.png",
+      "prompt": "Create a very abundant quantity of anubis, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: anubis. Family: animal_goods. Subfamily: monster_parts. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, monster_parts, raw, common, crate, none, monster_parts, beasts, animal_goods, raw, crafted, common, bulk_trade, monster_part. It should feel medium-sized.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 2849,
+      "itemIndex": 1274,
+      "itemNumber": 1275,
+      "itemName": "basilisk",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "beasts",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "monster_parts",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 160,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/basilisk.png",
+      "output": "public/game-assets/items/animal_goods/basilisk.png",
+      "prompt": "Create exactly one clear basilisk, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: basilisk. Family: animal_goods. Subfamily: monster_parts. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, monster_parts, raw, common, crate, none, monster_parts, beasts, animal_goods, raw, crafted, common, bulk_trade, monster_part. It should feel physically large and heavy.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 2850,
+      "itemIndex": 1274,
+      "itemNumber": 1275,
+      "itemName": "basilisk",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "monster_parts",
+        "beasts",
+        "animal_goods",
+        "raw"
+      ],
+      "family": "animal_goods",
+      "subfamily": "monster_parts",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "monster_part"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 160,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "animal_goods/basilisk.png",
+      "output": "public/game-assets/items/animal_goods/basilisk_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated basilisk, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: basilisk. Family: animal_goods. Subfamily: monster_parts. Trade role: raw. Bulk profile: crate. Category cues: animal_goods, monster_parts, raw, common, crate, none, monster_parts, beasts, animal_goods, raw, crafted, common, bulk_trade, monster_part. It should feel physically large and heavy.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

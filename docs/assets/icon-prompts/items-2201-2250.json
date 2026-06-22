@@ -1,0 +1,3827 @@
+{
+  "batch": {
+    "firstGlobalSlot": 2201,
+    "lastGlobalSlot": 2250,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. large light wooden door (one)\n2. large light wooden door (few)\n3. large light wooden door (many)\n4. massive doors (one)\n5. large wooden door (one)\n6. large wooden door (few)\n7. large wooden door (many)\n8. cloth table (one)\n9. cloth table (few)\n10. cloth table (many)\n11. large shelf (one)\n12. large shelf (few)\n13. large shelf (many)\n14. rough wooden chair (one)\n15. rough wooden chair (few)\n16. rough wooden chair (many)\n17. glass beaker (one)\n18. glass beaker (few)\n19. glass beaker (many)\n20. glass triangle beaker (one)\n21. glass triangle beaker (few)\n22. glass triangle beaker (many)\n23. glass flat bottle (one)\n24. glass flat bottle (few)\n25. glass flat bottle (many)\n26. large glass bottle (one)\n27. large glass bottle (few)\n28. large glass bottle (many)\n29. market glass bottle (one)\n30. market glass bottle (few)\n31. market glass bottle (many)\n32. glass rectangle bottle (one)\n33. glass rectangle bottle (few)\n34. glass rectangle bottle (many)\n35. glass round bottle (one)\n36. glass round bottle (few)\n37. glass round bottle (many)\n38. glass square bottle (one)\n39. glass square bottle (few)\n40. glass square bottle (many)\n41. glass triangle bottle (one)\n42. glass triangle bottle (few)\n43. glass triangle bottle (many)\n44. market glass cup (one)\n45. market glass cup (few)\n46. market glass cup (many)\n47. glass distiller (one)\n48. glass distiller (few)\n49. glass distiller (many)\n50. glass double flask (one)",
+  "order": [
+    "1. large light wooden door (one)",
+    "2. large light wooden door (few)",
+    "3. large light wooden door (many)",
+    "4. massive doors (one)",
+    "5. large wooden door (one)",
+    "6. large wooden door (few)",
+    "7. large wooden door (many)",
+    "8. cloth table (one)",
+    "9. cloth table (few)",
+    "10. cloth table (many)",
+    "11. large shelf (one)",
+    "12. large shelf (few)",
+    "13. large shelf (many)",
+    "14. rough wooden chair (one)",
+    "15. rough wooden chair (few)",
+    "16. rough wooden chair (many)",
+    "17. glass beaker (one)",
+    "18. glass beaker (few)",
+    "19. glass beaker (many)",
+    "20. glass triangle beaker (one)",
+    "21. glass triangle beaker (few)",
+    "22. glass triangle beaker (many)",
+    "23. glass flat bottle (one)",
+    "24. glass flat bottle (few)",
+    "25. glass flat bottle (many)",
+    "26. large glass bottle (one)",
+    "27. large glass bottle (few)",
+    "28. large glass bottle (many)",
+    "29. market glass bottle (one)",
+    "30. market glass bottle (few)",
+    "31. market glass bottle (many)",
+    "32. glass rectangle bottle (one)",
+    "33. glass rectangle bottle (few)",
+    "34. glass rectangle bottle (many)",
+    "35. glass round bottle (one)",
+    "36. glass round bottle (few)",
+    "37. glass round bottle (many)",
+    "38. glass square bottle (one)",
+    "39. glass square bottle (few)",
+    "40. glass square bottle (many)",
+    "41. glass triangle bottle (one)",
+    "42. glass triangle bottle (few)",
+    "43. glass triangle bottle (many)",
+    "44. market glass cup (one)",
+    "45. market glass cup (few)",
+    "46. market glass cup (many)",
+    "47. glass distiller (one)",
+    "48. glass distiller (few)",
+    "49. glass distiller (many)",
+    "50. glass double flask (one)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 2201,
+      "itemIndex": 960,
+      "itemNumber": 961,
+      "itemName": "large light wooden door",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "doors",
+        "wood",
+        "raw"
+      ],
+      "family": "wood",
+      "subfamily": "furniture",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 100,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "wood/large_light_wooden_door.png",
+      "output": "public/game-assets/items/wood/large_light_wooden_door.png",
+      "prompt": "Create exactly one clear large light wooden door, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large light wooden door. Family: wood. Subfamily: furniture. Trade role: raw. Bulk profile: crate. Category cues: wood, furniture, raw, common, crate, none, furniture, doors, wood, raw, foraged, common, craft_supply, wood. It should feel physically large and heavy.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 2202,
+      "itemIndex": 960,
+      "itemNumber": 961,
+      "itemName": "large light wooden door",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "doors",
+        "wood",
+        "raw"
+      ],
+      "family": "wood",
+      "subfamily": "furniture",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 100,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "wood/large_light_wooden_door.png",
+      "output": "public/game-assets/items/wood/large_light_wooden_door_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large light wooden door, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large light wooden door. Family: wood. Subfamily: furniture. Trade role: raw. Bulk profile: crate. Category cues: wood, furniture, raw, common, crate, none, furniture, doors, wood, raw, foraged, common, craft_supply, wood. It should feel physically large and heavy.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 2203,
+      "itemIndex": 960,
+      "itemNumber": 961,
+      "itemName": "large light wooden door",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "doors",
+        "wood",
+        "raw"
+      ],
+      "family": "wood",
+      "subfamily": "furniture",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 100,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "wood/large_light_wooden_door.png",
+      "output": "public/game-assets/items/wood/large_light_wooden_door_many.png",
+      "prompt": "Create a very abundant quantity of large light wooden door, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large light wooden door. Family: wood. Subfamily: furniture. Trade role: raw. Bulk profile: crate. Category cues: wood, furniture, raw, common, crate, none, furniture, doors, wood, raw, foraged, common, craft_supply, wood. It should feel physically large and heavy.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 2204,
+      "itemIndex": 961,
+      "itemNumber": 962,
+      "itemName": "massive doors",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "furniture",
+        "doors",
+        "wood",
+        "raw"
+      ],
+      "family": "wood",
+      "subfamily": "furniture",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "foraged"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 300,
+      "weight": 300,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "wood/massive_doors.png",
+      "output": "public/game-assets/items/wood/massive_doors.png",
+      "prompt": "Create exactly one clear massive doors, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: massive doors. Family: wood. Subfamily: furniture. Trade role: raw. Bulk profile: crate. Category cues: wood, furniture, raw, rare, crate, none, furniture, doors, wood, raw, foraged, common, fine, masterwork. It should feel physically large and heavy.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 2205,
+      "itemIndex": 962,
+      "itemNumber": 963,
+      "itemName": "large wooden door",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "doors",
+        "wood",
+        "raw"
+      ],
+      "family": "wood",
+      "subfamily": "furniture",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 100,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "wood/large_wooden_door_2.png",
+      "output": "public/game-assets/items/wood/large_wooden_door_2.png",
+      "prompt": "Create exactly one clear large wooden door, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large wooden door. Family: wood. Subfamily: furniture. Trade role: raw. Bulk profile: crate. Category cues: wood, furniture, raw, common, crate, none, furniture, doors, wood, raw, foraged, common, craft_supply, wood. It should feel physically large and heavy.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 2206,
+      "itemIndex": 962,
+      "itemNumber": 963,
+      "itemName": "large wooden door",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "doors",
+        "wood",
+        "raw"
+      ],
+      "family": "wood",
+      "subfamily": "furniture",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 100,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "wood/large_wooden_door_2.png",
+      "output": "public/game-assets/items/wood/large_wooden_door_2_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large wooden door, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large wooden door. Family: wood. Subfamily: furniture. Trade role: raw. Bulk profile: crate. Category cues: wood, furniture, raw, common, crate, none, furniture, doors, wood, raw, foraged, common, craft_supply, wood. It should feel physically large and heavy.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 2207,
+      "itemIndex": 962,
+      "itemNumber": 963,
+      "itemName": "large wooden door",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "doors",
+        "wood",
+        "raw"
+      ],
+      "family": "wood",
+      "subfamily": "furniture",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 100,
+      "weight": 60,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "wood/large_wooden_door_2.png",
+      "output": "public/game-assets/items/wood/large_wooden_door_2_many.png",
+      "prompt": "Create a very abundant quantity of large wooden door, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large wooden door. Family: wood. Subfamily: furniture. Trade role: raw. Bulk profile: crate. Category cues: wood, furniture, raw, common, crate, none, furniture, doors, wood, raw, foraged, common, craft_supply, wood. It should feel physically large and heavy.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 2208,
+      "itemIndex": 963,
+      "itemNumber": 964,
+      "itemName": "cloth table",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/cloth_table.png",
+      "output": "public/game-assets/items/household/cloth_table.png",
+      "prompt": "Create exactly one clear cloth table, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: cloth table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 2209,
+      "itemIndex": 963,
+      "itemNumber": 964,
+      "itemName": "cloth table",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/cloth_table.png",
+      "output": "public/game-assets/items/household/cloth_table_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated cloth table, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: cloth table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 2210,
+      "itemIndex": 963,
+      "itemNumber": 964,
+      "itemName": "cloth table",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/cloth_table.png",
+      "output": "public/game-assets/items/household/cloth_table_many.png",
+      "prompt": "Create a very abundant quantity of cloth table, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: cloth table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 2211,
+      "itemIndex": 964,
+      "itemNumber": 965,
+      "itemName": "large shelf",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 120,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_shelf.png",
+      "output": "public/game-assets/items/household/large_shelf.png",
+      "prompt": "Create exactly one clear large shelf, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large shelf. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 2212,
+      "itemIndex": 964,
+      "itemNumber": 965,
+      "itemName": "large shelf",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 120,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_shelf.png",
+      "output": "public/game-assets/items/household/large_shelf_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large shelf, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large shelf. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 2213,
+      "itemIndex": 964,
+      "itemNumber": 965,
+      "itemName": "large shelf",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 120,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_shelf.png",
+      "output": "public/game-assets/items/household/large_shelf_many.png",
+      "prompt": "Create a very abundant quantity of large shelf, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large shelf. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 2214,
+      "itemIndex": 965,
+      "itemNumber": 966,
+      "itemName": "rough wooden chair",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "wood",
+        "raw"
+      ],
+      "family": "wood",
+      "subfamily": "furniture",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 30,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "wood/rough_wooden_chair.png",
+      "output": "public/game-assets/items/wood/rough_wooden_chair.png",
+      "prompt": "Create exactly one clear rough wooden chair, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: rough wooden chair. Family: wood. Subfamily: furniture. Trade role: raw. Bulk profile: crate. Category cues: wood, furniture, raw, common, crate, none, furniture, wood, raw, foraged, common, craft_supply, wood, raw_material. It should feel medium-sized.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 2215,
+      "itemIndex": 965,
+      "itemNumber": 966,
+      "itemName": "rough wooden chair",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "wood",
+        "raw"
+      ],
+      "family": "wood",
+      "subfamily": "furniture",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 30,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "wood/rough_wooden_chair.png",
+      "output": "public/game-assets/items/wood/rough_wooden_chair_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated rough wooden chair, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: rough wooden chair. Family: wood. Subfamily: furniture. Trade role: raw. Bulk profile: crate. Category cues: wood, furniture, raw, common, crate, none, furniture, wood, raw, foraged, common, craft_supply, wood, raw_material. It should feel medium-sized.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 2216,
+      "itemIndex": 965,
+      "itemNumber": 966,
+      "itemName": "rough wooden chair",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "wood",
+        "raw"
+      ],
+      "family": "wood",
+      "subfamily": "furniture",
+      "tradeRole": "raw",
+      "categoryAxes": {
+        "material": [
+          "wood"
+        ],
+        "productionStage": [
+          "raw_material"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "craft_supply"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "craft_supply"
+      ],
+      "size": 30,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "wood/rough_wooden_chair.png",
+      "output": "public/game-assets/items/wood/rough_wooden_chair_many.png",
+      "prompt": "Create a very abundant quantity of rough wooden chair, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: rough wooden chair. Family: wood. Subfamily: furniture. Trade role: raw. Bulk profile: crate. Category cues: wood, furniture, raw, common, crate, none, furniture, wood, raw, foraged, common, craft_supply, wood, raw_material. It should feel medium-sized.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 2217,
+      "itemIndex": 966,
+      "itemNumber": 967,
+      "itemName": "glass beaker",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 7,
+      "weight": 7,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_beaker.png",
+      "output": "public/game-assets/items/art/glass_beaker.png",
+      "prompt": "Create exactly one clear glass beaker, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: glass beaker. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 2218,
+      "itemIndex": 966,
+      "itemNumber": 967,
+      "itemName": "glass beaker",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 7,
+      "weight": 7,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_beaker.png",
+      "output": "public/game-assets/items/art/glass_beaker_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated glass beaker, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: glass beaker. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 2219,
+      "itemIndex": 966,
+      "itemNumber": 967,
+      "itemName": "glass beaker",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 7,
+      "weight": 7,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_beaker.png",
+      "output": "public/game-assets/items/art/glass_beaker_many.png",
+      "prompt": "Create a very abundant quantity of glass beaker, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: glass beaker. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 2220,
+      "itemIndex": 967,
+      "itemNumber": 968,
+      "itemName": "glass triangle beaker",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_triangle_beaker.png",
+      "output": "public/game-assets/items/art/glass_triangle_beaker.png",
+      "prompt": "Create exactly one clear glass triangle beaker, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: glass triangle beaker. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 2221,
+      "itemIndex": 967,
+      "itemNumber": 968,
+      "itemName": "glass triangle beaker",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_triangle_beaker.png",
+      "output": "public/game-assets/items/art/glass_triangle_beaker_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated glass triangle beaker, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: glass triangle beaker. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 2222,
+      "itemIndex": 967,
+      "itemNumber": 968,
+      "itemName": "glass triangle beaker",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_triangle_beaker.png",
+      "output": "public/game-assets/items/art/glass_triangle_beaker_many.png",
+      "prompt": "Create a very abundant quantity of glass triangle beaker, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: glass triangle beaker. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 2223,
+      "itemIndex": 968,
+      "itemNumber": 969,
+      "itemName": "glass flat bottle",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 6,
+      "weight": 7,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_flat_bottle.png",
+      "output": "public/game-assets/items/art/glass_flat_bottle.png",
+      "prompt": "Create exactly one clear glass flat bottle, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: glass flat bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 2224,
+      "itemIndex": 968,
+      "itemNumber": 969,
+      "itemName": "glass flat bottle",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 6,
+      "weight": 7,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_flat_bottle.png",
+      "output": "public/game-assets/items/art/glass_flat_bottle_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated glass flat bottle, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: glass flat bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 2225,
+      "itemIndex": 968,
+      "itemNumber": 969,
+      "itemName": "glass flat bottle",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 6,
+      "weight": 7,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_flat_bottle.png",
+      "output": "public/game-assets/items/art/glass_flat_bottle_many.png",
+      "prompt": "Create a very abundant quantity of glass flat bottle, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: glass flat bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 2226,
+      "itemIndex": 969,
+      "itemNumber": 970,
+      "itemName": "large glass bottle",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/large_glass_bottle.png",
+      "output": "public/game-assets/items/art/large_glass_bottle.png",
+      "prompt": "Create exactly one clear large glass bottle, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large glass bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 2227,
+      "itemIndex": 969,
+      "itemNumber": 970,
+      "itemName": "large glass bottle",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/large_glass_bottle.png",
+      "output": "public/game-assets/items/art/large_glass_bottle_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large glass bottle, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large glass bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 2228,
+      "itemIndex": 969,
+      "itemNumber": 970,
+      "itemName": "large glass bottle",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 10,
+      "weight": 10,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/large_glass_bottle.png",
+      "output": "public/game-assets/items/art/large_glass_bottle_many.png",
+      "prompt": "Create a very abundant quantity of large glass bottle, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large glass bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 2229,
+      "itemIndex": 970,
+      "itemNumber": 971,
+      "itemName": "market glass bottle",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/market_glass_bottle.png",
+      "output": "public/game-assets/items/art/market_glass_bottle.png",
+      "prompt": "Create exactly one clear market glass bottle, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market glass bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 2230,
+      "itemIndex": 970,
+      "itemNumber": 971,
+      "itemName": "market glass bottle",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/market_glass_bottle.png",
+      "output": "public/game-assets/items/art/market_glass_bottle_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated market glass bottle, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: market glass bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 2231,
+      "itemIndex": 970,
+      "itemNumber": 971,
+      "itemName": "market glass bottle",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/market_glass_bottle.png",
+      "output": "public/game-assets/items/art/market_glass_bottle_many.png",
+      "prompt": "Create a very abundant quantity of market glass bottle, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: market glass bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 2232,
+      "itemIndex": 971,
+      "itemNumber": 972,
+      "itemName": "glass rectangle bottle",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_rectangle_bottle.png",
+      "output": "public/game-assets/items/art/glass_rectangle_bottle.png",
+      "prompt": "Create exactly one clear glass rectangle bottle, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: glass rectangle bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 2233,
+      "itemIndex": 971,
+      "itemNumber": 972,
+      "itemName": "glass rectangle bottle",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_rectangle_bottle.png",
+      "output": "public/game-assets/items/art/glass_rectangle_bottle_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated glass rectangle bottle, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: glass rectangle bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 2234,
+      "itemIndex": 971,
+      "itemNumber": 972,
+      "itemName": "glass rectangle bottle",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_rectangle_bottle.png",
+      "output": "public/game-assets/items/art/glass_rectangle_bottle_many.png",
+      "prompt": "Create a very abundant quantity of glass rectangle bottle, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: glass rectangle bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 2235,
+      "itemIndex": 972,
+      "itemNumber": 973,
+      "itemName": "glass round bottle",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_round_bottle.png",
+      "output": "public/game-assets/items/art/glass_round_bottle.png",
+      "prompt": "Create exactly one clear glass round bottle, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: glass round bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 2236,
+      "itemIndex": 972,
+      "itemNumber": 973,
+      "itemName": "glass round bottle",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_round_bottle.png",
+      "output": "public/game-assets/items/art/glass_round_bottle_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated glass round bottle, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: glass round bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 2237,
+      "itemIndex": 972,
+      "itemNumber": 973,
+      "itemName": "glass round bottle",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 5,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_round_bottle.png",
+      "output": "public/game-assets/items/art/glass_round_bottle_many.png",
+      "prompt": "Create a very abundant quantity of glass round bottle, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: glass round bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 2238,
+      "itemIndex": 973,
+      "itemNumber": 974,
+      "itemName": "glass square bottle",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_square_bottle.png",
+      "output": "public/game-assets/items/art/glass_square_bottle.png",
+      "prompt": "Create exactly one clear glass square bottle, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: glass square bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 2239,
+      "itemIndex": 973,
+      "itemNumber": 974,
+      "itemName": "glass square bottle",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_square_bottle.png",
+      "output": "public/game-assets/items/art/glass_square_bottle_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated glass square bottle, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: glass square bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 2240,
+      "itemIndex": 973,
+      "itemNumber": 974,
+      "itemName": "glass square bottle",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_square_bottle.png",
+      "output": "public/game-assets/items/art/glass_square_bottle_many.png",
+      "prompt": "Create a very abundant quantity of glass square bottle, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: glass square bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, art, luxury, crafted, common, fragile, noble_luxury. It should feel medium-sized.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 2241,
+      "itemIndex": 974,
+      "itemNumber": 975,
+      "itemName": "glass triangle bottle",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_triangle_bottle.png",
+      "output": "public/game-assets/items/art/glass_triangle_bottle.png",
+      "prompt": "Create exactly one clear glass triangle bottle, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: glass triangle bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 2242,
+      "itemIndex": 974,
+      "itemNumber": 975,
+      "itemName": "glass triangle bottle",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_triangle_bottle.png",
+      "output": "public/game-assets/items/art/glass_triangle_bottle_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated glass triangle bottle, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: glass triangle bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 2243,
+      "itemIndex": 974,
+      "itemNumber": 975,
+      "itemName": "glass triangle bottle",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_triangle_bottle.png",
+      "output": "public/game-assets/items/art/glass_triangle_bottle_many.png",
+      "prompt": "Create a very abundant quantity of glass triangle bottle, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: glass triangle bottle. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 2244,
+      "itemIndex": 975,
+      "itemNumber": 976,
+      "itemName": "market glass cup",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "tableware",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/market_glass_cup.png",
+      "output": "public/game-assets/items/art/market_glass_cup.png",
+      "prompt": "Create exactly one clear market glass cup, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: market glass cup. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, tableware, art, luxury, crafted, common, fragile. It should feel medium-sized.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 2245,
+      "itemIndex": 975,
+      "itemNumber": 976,
+      "itemName": "market glass cup",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "tableware",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/market_glass_cup.png",
+      "output": "public/game-assets/items/art/market_glass_cup_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated market glass cup, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: market glass cup. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, tableware, art, luxury, crafted, common, fragile. It should feel medium-sized.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 2246,
+      "itemIndex": 975,
+      "itemNumber": 976,
+      "itemName": "market glass cup",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "household",
+        "tableware",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "bulky",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 5,
+      "weight": 4,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/market_glass_cup.png",
+      "output": "public/game-assets/items/art/market_glass_cup_many.png",
+      "prompt": "Create a very abundant quantity of market glass cup, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: market glass cup. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, household, tableware, art, luxury, crafted, common, fragile. It should feel medium-sized.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 2247,
+      "itemIndex": 976,
+      "itemNumber": 977,
+      "itemName": "glass distiller",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "glass",
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "glass",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 25,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/glass_distiller.png",
+      "output": "public/game-assets/items/tool/glass_distiller.png",
+      "prompt": "Create exactly one clear glass distiller, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: glass distiller. Family: tool. Subfamily: glass. Trade role: tool. Bulk profile: rack. Category cues: tool, glass, tool, common, rack, rusts, glass, tools, tool, crafted, common, hazardous, bulk_trade, glass. It should feel medium-sized.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 2248,
+      "itemIndex": 976,
+      "itemNumber": 977,
+      "itemName": "glass distiller",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "glass",
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "glass",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 25,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/glass_distiller.png",
+      "output": "public/game-assets/items/tool/glass_distiller_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated glass distiller, arranged naturally as a few rack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: glass distiller. Family: tool. Subfamily: glass. Trade role: tool. Bulk profile: rack. Category cues: tool, glass, tool, common, rack, rusts, glass, tools, tool, crafted, common, hazardous, bulk_trade, glass. It should feel medium-sized.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 2249,
+      "itemIndex": 976,
+      "itemNumber": 977,
+      "itemName": "glass distiller",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "rack quantity",
+      "tags": [
+        "glass",
+        "tools",
+        "tool"
+      ],
+      "family": "tool",
+      "subfamily": "glass",
+      "tradeRole": "tool",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "tool"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "sharp"
+        ],
+        "artVariant": [
+          "rack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "repair_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "rack",
+      "storageNeeds": [
+        "hazardous"
+      ],
+      "decayProfile": "rusts",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 25,
+      "weight": 15,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "tool/glass_distiller.png",
+      "output": "public/game-assets/items/tool/glass_distiller_many.png",
+      "prompt": "Create a very abundant quantity of glass distiller, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many rack quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: glass distiller. Family: tool. Subfamily: glass. Trade role: tool. Bulk profile: rack. Category cues: tool, glass, tool, common, rack, rusts, glass, tools, tool, crafted, common, hazardous, bulk_trade, glass. It should feel medium-sized.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 2250,
+      "itemIndex": 977,
+      "itemNumber": 978,
+      "itemName": "glass double flask",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "glass",
+        "art",
+        "luxury"
+      ],
+      "family": "art",
+      "subfamily": "glass",
+      "tradeRole": "luxury",
+      "categoryAxes": {
+        "material": [
+          "glass"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "noble_luxury"
+        ],
+        "storageHandling": [
+          "heavy",
+          "fragile"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "gift"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "fragile"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "noble_luxury"
+      ],
+      "size": 8,
+      "weight": 8,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "art/glass_double_flask.png",
+      "output": "public/game-assets/items/art/glass_double_flask.png",
+      "prompt": "Create exactly one clear glass double flask, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: glass double flask. Family: art. Subfamily: glass. Trade role: luxury. Bulk profile: crate. Category cues: art, glass, luxury, common, crate, none, glass, art, luxury, crafted, common, fragile, noble_luxury, glass. It should feel medium-sized.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "name": "merchant-react-vite",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline React/Vite remake prototype.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "dev:web": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "test": "vitest run",
+    "test:barter": "vitest run src/lib/barter.test.ts src/lib/game-auto-offer.test.ts",
+    "test:economy": "vitest run src/lib/economy.test.ts",
+    "test:travel": "vitest run src/lib/travel-loop.test.ts",
+    "test:quests": "vitest run src/lib/quest-runtime.test.ts",
+    "audit:data": "node scripts/audit-data.cjs",
+    "audit:assets": "node scripts/audit-assets.cjs",
+    "audit:item-icons": "node scripts/audit-item-icons.cjs",
+    "audit:stock": "node scripts/audit-stock.cjs",
+    "review:stock": "node scripts/review-stock.cjs",
+    "verify:current-state": "node scripts/verify-current-state.cjs",
+    "rewrite:item-catalog": "node scripts/rewrite-item-catalog.cjs",
+    "enrich:item-catalog": "node scripts/enrich-item-catalog.cjs",
+    "generate:icon-prompts": "node scripts/generate-icon-prompts.cjs",
+    "rename:item-icons": "node scripts/rename-item-icons.cjs",
+    "sync:ui-assets": "node scripts/sync-ui-assets.cjs",
+    "extract:data": "node scripts/extract-data.cjs",
+    "cleanup:ui": "node scripts/cleanup-ui-mess.cjs",
+    "test:company": "vitest run src/lib/company.test.ts",
+    "test:ui-integration": "vitest run src/lib/ui-integration.test.ts",
+    "test:playtest": "vitest run src/lib/playtest-balance.test.ts",
+    "playtest:balance": "node scripts/playtest-balance.cjs"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.8",
+    "@vitejs/plugin-react": "^4.3.4",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.477.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-toastify": "^11.1.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.0.8",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  },
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "vitest": "^4.1.8"
+  }
+}

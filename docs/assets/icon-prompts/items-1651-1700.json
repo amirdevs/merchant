@@ -1,0 +1,4004 @@
+{
+  "batch": {
+    "firstGlobalSlot": 1651,
+    "lastGlobalSlot": 1700,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. coburg (one)\n2. coburg (few)\n3. coburg (many)\n4. muffin (one)\n5. muffin (few)\n6. muffin (many)\n7. kidney beans (one)\n8. kidney beans (few)\n9. kidney beans (many)\n10. pinto beans (one)\n11. pinto beans (few)\n12. pinto beans (many)\n13. black beans (one)\n14. black beans (few)\n15. black beans (many)\n16. coffee beans (one)\n17. coffee beans (few)\n18. coffee beans (many)\n19. black tea (one)\n20. black tea (few)\n21. black tea (many)\n22. green tea (one)\n23. green tea (few)\n24. green tea (many)\n25. hops (one)\n26. hops (few)\n27. hops (many)\n28. butter (one)\n29. butter (few)\n30. butter (many)\n31. mozarella cheese (one)\n32. mozarella cheese (few)\n33. mozarella cheese (many)\n34. feta cheese (one)\n35. feta cheese (few)\n36. feta cheese (many)\n37. notable gorgonzola cheese (one)\n38. notable gorgonzola cheese (few)\n39. notable gorgonzola cheese (many)\n40. notable muenster cheese (one)\n41. notable muenster cheese (few)\n42. notable muenster cheese (many)\n43. scarce smoked gruyere cheese (one)\n44. scarce smoked gruyere cheese (few)\n45. scarce smoked gruyere cheese (many)\n46. yellow swiss cheese (one)\n47. yellow swiss cheese (few)\n48. yellow swiss cheese (many)\n49. cheddar cheese (one)\n50. cheddar cheese (few)",
+  "order": [
+    "1. coburg (one)",
+    "2. coburg (few)",
+    "3. coburg (many)",
+    "4. muffin (one)",
+    "5. muffin (few)",
+    "6. muffin (many)",
+    "7. kidney beans (one)",
+    "8. kidney beans (few)",
+    "9. kidney beans (many)",
+    "10. pinto beans (one)",
+    "11. pinto beans (few)",
+    "12. pinto beans (many)",
+    "13. black beans (one)",
+    "14. black beans (few)",
+    "15. black beans (many)",
+    "16. coffee beans (one)",
+    "17. coffee beans (few)",
+    "18. coffee beans (many)",
+    "19. black tea (one)",
+    "20. black tea (few)",
+    "21. black tea (many)",
+    "22. green tea (one)",
+    "23. green tea (few)",
+    "24. green tea (many)",
+    "25. hops (one)",
+    "26. hops (few)",
+    "27. hops (many)",
+    "28. butter (one)",
+    "29. butter (few)",
+    "30. butter (many)",
+    "31. mozarella cheese (one)",
+    "32. mozarella cheese (few)",
+    "33. mozarella cheese (many)",
+    "34. feta cheese (one)",
+    "35. feta cheese (few)",
+    "36. feta cheese (many)",
+    "37. notable gorgonzola cheese (one)",
+    "38. notable gorgonzola cheese (few)",
+    "39. notable gorgonzola cheese (many)",
+    "40. notable muenster cheese (one)",
+    "41. notable muenster cheese (few)",
+    "42. notable muenster cheese (many)",
+    "43. scarce smoked gruyere cheese (one)",
+    "44. scarce smoked gruyere cheese (few)",
+    "45. scarce smoked gruyere cheese (many)",
+    "46. yellow swiss cheese (one)",
+    "47. yellow swiss cheese (few)",
+    "48. yellow swiss cheese (many)",
+    "49. cheddar cheese (one)",
+    "50. cheddar cheese (few)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 1651,
+      "itemIndex": 764,
+      "itemNumber": 765,
+      "itemName": "coburg",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "bread",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "bread",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/coburg.png",
+      "output": "public/game-assets/items/food/coburg.png",
+      "prompt": "Create exactly one clear coburg, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: coburg. Family: food. Subfamily: bread. Trade role: finished. Bulk profile: basket. Category cues: food, bread, finished, common, basket, expires, food, bread, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 1652,
+      "itemIndex": 764,
+      "itemNumber": 765,
+      "itemName": "coburg",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "bread",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "bread",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/coburg.png",
+      "output": "public/game-assets/items/food/coburg_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated coburg, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: coburg. Family: food. Subfamily: bread. Trade role: finished. Bulk profile: basket. Category cues: food, bread, finished, common, basket, expires, food, bread, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 1653,
+      "itemIndex": 764,
+      "itemNumber": 765,
+      "itemName": "coburg",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "bread",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "bread",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/coburg.png",
+      "output": "public/game-assets/items/food/coburg_many.png",
+      "prompt": "Create a very abundant quantity of coburg, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: coburg. Family: food. Subfamily: bread. Trade role: finished. Bulk profile: basket. Category cues: food, bread, finished, common, basket, expires, food, bread, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 1654,
+      "itemIndex": 765,
+      "itemNumber": 766,
+      "itemName": "muffin",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "bread",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "bread",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/muffin.png",
+      "output": "public/game-assets/items/food/muffin.png",
+      "prompt": "Create exactly one clear muffin, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: muffin. Family: food. Subfamily: bread. Trade role: finished. Bulk profile: basket. Category cues: food, bread, finished, common, basket, expires, food, bread, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 1655,
+      "itemIndex": 765,
+      "itemNumber": 766,
+      "itemName": "muffin",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "bread",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "bread",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/muffin.png",
+      "output": "public/game-assets/items/food/muffin_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated muffin, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: muffin. Family: food. Subfamily: bread. Trade role: finished. Bulk profile: basket. Category cues: food, bread, finished, common, basket, expires, food, bread, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 1656,
+      "itemIndex": 765,
+      "itemNumber": 766,
+      "itemName": "muffin",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "bread",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "bread",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "grain"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/muffin.png",
+      "output": "public/game-assets/items/food/muffin_many.png",
+      "prompt": "Create a very abundant quantity of muffin, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: muffin. Family: food. Subfamily: bread. Trade role: finished. Bulk profile: basket. Category cues: food, bread, finished, common, basket, expires, food, bread, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 1657,
+      "itemIndex": 766,
+      "itemNumber": 767,
+      "itemName": "kidney beans",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/kidney_beans.png",
+      "output": "public/game-assets/items/food/kidney_beans.png",
+      "prompt": "Create exactly one clear kidney beans, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: kidney beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 1658,
+      "itemIndex": 766,
+      "itemNumber": 767,
+      "itemName": "kidney beans",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/kidney_beans.png",
+      "output": "public/game-assets/items/food/kidney_beans_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated kidney beans, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: kidney beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 1659,
+      "itemIndex": 766,
+      "itemNumber": 767,
+      "itemName": "kidney beans",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/kidney_beans.png",
+      "output": "public/game-assets/items/food/kidney_beans_many.png",
+      "prompt": "Create a very abundant quantity of kidney beans, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: kidney beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 1660,
+      "itemIndex": 767,
+      "itemNumber": 768,
+      "itemName": "pinto beans",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/pinto_beans.png",
+      "output": "public/game-assets/items/food/pinto_beans.png",
+      "prompt": "Create exactly one clear pinto beans, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: pinto beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 1661,
+      "itemIndex": 767,
+      "itemNumber": 768,
+      "itemName": "pinto beans",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/pinto_beans.png",
+      "output": "public/game-assets/items/food/pinto_beans_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated pinto beans, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: pinto beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 1662,
+      "itemIndex": 767,
+      "itemNumber": 768,
+      "itemName": "pinto beans",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/pinto_beans.png",
+      "output": "public/game-assets/items/food/pinto_beans_many.png",
+      "prompt": "Create a very abundant quantity of pinto beans, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: pinto beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 1663,
+      "itemIndex": 768,
+      "itemNumber": 769,
+      "itemName": "black beans",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/black_beans.png",
+      "output": "public/game-assets/items/food/black_beans.png",
+      "prompt": "Create exactly one clear black beans, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: black beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 1664,
+      "itemIndex": 768,
+      "itemNumber": 769,
+      "itemName": "black beans",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/black_beans.png",
+      "output": "public/game-assets/items/food/black_beans_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated black beans, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: black beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 1665,
+      "itemIndex": 768,
+      "itemNumber": 769,
+      "itemName": "black beans",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/black_beans.png",
+      "output": "public/game-assets/items/food/black_beans_many.png",
+      "prompt": "Create a very abundant quantity of black beans, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: black beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 1666,
+      "itemIndex": 769,
+      "itemNumber": 770,
+      "itemName": "coffee beans",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "brewed",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/coffee_beans.png",
+      "output": "public/game-assets/items/food/coffee_beans.png",
+      "prompt": "Create exactly one clear coffee beans, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: coffee beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, brewed, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 1667,
+      "itemIndex": 769,
+      "itemNumber": 770,
+      "itemName": "coffee beans",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "brewed",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/coffee_beans.png",
+      "output": "public/game-assets/items/food/coffee_beans_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated coffee beans, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: coffee beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, brewed, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 1668,
+      "itemIndex": 769,
+      "itemNumber": 770,
+      "itemName": "coffee beans",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "beans",
+        "brewed",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "beans",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/coffee_beans.png",
+      "output": "public/game-assets/items/food/coffee_beans_many.png",
+      "prompt": "Create a very abundant quantity of coffee beans, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: coffee beans. Family: food. Subfamily: beans. Trade role: finished. Bulk profile: basket. Category cues: food, beans, finished, common, basket, expires, food, beans, brewed, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 1669,
+      "itemIndex": 770,
+      "itemNumber": 771,
+      "itemName": "black tea",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "food",
+        "brewed",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "brewed",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/black_tea.png",
+      "output": "public/game-assets/items/drink/black_tea.png",
+      "prompt": "Create exactly one clear black tea, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: black tea. Family: drink. Subfamily: brewed. Trade role: finished. Bulk profile: bottle. Category cues: drink, brewed, finished, common, bottle, expires, food, brewed, drink, finished, farmed, common, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 1670,
+      "itemIndex": 770,
+      "itemNumber": 771,
+      "itemName": "black tea",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "food",
+        "brewed",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "brewed",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/black_tea.png",
+      "output": "public/game-assets/items/drink/black_tea_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated black tea, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: black tea. Family: drink. Subfamily: brewed. Trade role: finished. Bulk profile: bottle. Category cues: drink, brewed, finished, common, bottle, expires, food, brewed, drink, finished, farmed, common, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 1671,
+      "itemIndex": 770,
+      "itemNumber": 771,
+      "itemName": "black tea",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "food",
+        "brewed",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "brewed",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/black_tea.png",
+      "output": "public/game-assets/items/drink/black_tea_many.png",
+      "prompt": "Create a very abundant quantity of black tea, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: black tea. Family: drink. Subfamily: brewed. Trade role: finished. Bulk profile: bottle. Category cues: drink, brewed, finished, common, bottle, expires, food, brewed, drink, finished, farmed, common, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 1672,
+      "itemIndex": 771,
+      "itemNumber": 772,
+      "itemName": "green tea",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "food",
+        "brewed",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "brewed",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/green_tea.png",
+      "output": "public/game-assets/items/drink/green_tea.png",
+      "prompt": "Create exactly one clear green tea, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: green tea. Family: drink. Subfamily: brewed. Trade role: finished. Bulk profile: bottle. Category cues: drink, brewed, finished, common, bottle, expires, food, brewed, drink, finished, farmed, common, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 1673,
+      "itemIndex": 771,
+      "itemNumber": 772,
+      "itemName": "green tea",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "food",
+        "brewed",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "brewed",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/green_tea.png",
+      "output": "public/game-assets/items/drink/green_tea_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated green tea, arranged naturally as a few bottle quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: green tea. Family: drink. Subfamily: brewed. Trade role: finished. Bulk profile: bottle. Category cues: drink, brewed, finished, common, bottle, expires, food, brewed, drink, finished, farmed, common, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 1674,
+      "itemIndex": 771,
+      "itemNumber": 772,
+      "itemName": "green tea",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "bottle quantity",
+      "tags": [
+        "food",
+        "brewed",
+        "drink",
+        "finished"
+      ],
+      "family": "drink",
+      "subfamily": "brewed",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "bottle",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "brewing_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "bottle",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "drink/green_tea.png",
+      "output": "public/game-assets/items/drink/green_tea_many.png",
+      "prompt": "Create a very abundant quantity of green tea, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many bottle quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: green tea. Family: drink. Subfamily: brewed. Trade role: finished. Bulk profile: bottle. Category cues: drink, brewed, finished, common, bottle, expires, food, brewed, drink, finished, farmed, common, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 1675,
+      "itemIndex": 772,
+      "itemNumber": 773,
+      "itemName": "hops",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "brewed",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "brewed",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/hops.png",
+      "output": "public/game-assets/items/food/hops.png",
+      "prompt": "Create exactly one clear hops, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: hops. Family: food. Subfamily: brewed. Trade role: finished. Bulk profile: basket. Category cues: food, brewed, finished, common, basket, expires, food, brewed, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 1676,
+      "itemIndex": 772,
+      "itemNumber": 773,
+      "itemName": "hops",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "brewed",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "brewed",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/hops.png",
+      "output": "public/game-assets/items/food/hops_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated hops, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: hops. Family: food. Subfamily: brewed. Trade role: finished. Bulk profile: basket. Category cues: food, brewed, finished, common, basket, expires, food, brewed, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 1677,
+      "itemIndex": 772,
+      "itemNumber": 773,
+      "itemName": "hops",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "brewed",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "brewed",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/hops.png",
+      "output": "public/game-assets/items/food/hops_many.png",
+      "prompt": "Create a very abundant quantity of hops, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: hops. Family: food. Subfamily: brewed. Trade role: finished. Bulk profile: basket. Category cues: food, brewed, finished, common, basket, expires, food, brewed, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 1678,
+      "itemIndex": 773,
+      "itemNumber": 774,
+      "itemName": "butter",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/butter.png",
+      "output": "public/game-assets/items/food/butter.png",
+      "prompt": "Create exactly one clear butter, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: butter. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 1679,
+      "itemIndex": 773,
+      "itemNumber": 774,
+      "itemName": "butter",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/butter.png",
+      "output": "public/game-assets/items/food/butter_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated butter, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: butter. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 1680,
+      "itemIndex": 773,
+      "itemNumber": 774,
+      "itemName": "butter",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/butter.png",
+      "output": "public/game-assets/items/food/butter_many.png",
+      "prompt": "Create a very abundant quantity of butter, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: butter. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, finished, farmed, common, spoiled, chilled, daily_staple. It should read clearly in a small inventory tile.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 1681,
+      "itemIndex": 774,
+      "itemNumber": 775,
+      "itemName": "mozarella cheese",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/mozarella_cheese.png",
+      "output": "public/game-assets/items/food/mozarella_cheese.png",
+      "prompt": "Create exactly one clear mozarella cheese, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: mozarella cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 1682,
+      "itemIndex": 774,
+      "itemNumber": 775,
+      "itemName": "mozarella cheese",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/mozarella_cheese.png",
+      "output": "public/game-assets/items/food/mozarella_cheese_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated mozarella cheese, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: mozarella cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 1683,
+      "itemIndex": 774,
+      "itemNumber": 775,
+      "itemName": "mozarella cheese",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/mozarella_cheese.png",
+      "output": "public/game-assets/items/food/mozarella_cheese_many.png",
+      "prompt": "Create a very abundant quantity of mozarella cheese, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: mozarella cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 1684,
+      "itemIndex": 775,
+      "itemNumber": 776,
+      "itemName": "feta cheese",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/feta_cheese.png",
+      "output": "public/game-assets/items/food/feta_cheese.png",
+      "prompt": "Create exactly one clear feta cheese, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: feta cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 1685,
+      "itemIndex": 775,
+      "itemNumber": 776,
+      "itemName": "feta cheese",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/feta_cheese.png",
+      "output": "public/game-assets/items/food/feta_cheese_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated feta cheese, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: feta cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 1686,
+      "itemIndex": 775,
+      "itemNumber": 776,
+      "itemName": "feta cheese",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/feta_cheese.png",
+      "output": "public/game-assets/items/food/feta_cheese_many.png",
+      "prompt": "Create a very abundant quantity of feta cheese, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: feta cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 1687,
+      "itemIndex": 776,
+      "itemNumber": 777,
+      "itemName": "notable gorgonzola cheese",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/notable_gorgonzola_cheese.png",
+      "output": "public/game-assets/items/food/notable_gorgonzola_cheese.png",
+      "prompt": "Create exactly one clear notable gorgonzola cheese, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: notable gorgonzola cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 1688,
+      "itemIndex": 776,
+      "itemNumber": 777,
+      "itemName": "notable gorgonzola cheese",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/notable_gorgonzola_cheese.png",
+      "output": "public/game-assets/items/food/notable_gorgonzola_cheese_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated notable gorgonzola cheese, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: notable gorgonzola cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 1689,
+      "itemIndex": 776,
+      "itemNumber": 777,
+      "itemName": "notable gorgonzola cheese",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/notable_gorgonzola_cheese.png",
+      "output": "public/game-assets/items/food/notable_gorgonzola_cheese_many.png",
+      "prompt": "Create a very abundant quantity of notable gorgonzola cheese, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: notable gorgonzola cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 1690,
+      "itemIndex": 777,
+      "itemNumber": 778,
+      "itemName": "notable muenster cheese",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/notable_muenster_cheese.png",
+      "output": "public/game-assets/items/food/notable_muenster_cheese.png",
+      "prompt": "Create exactly one clear notable muenster cheese, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: notable muenster cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 1691,
+      "itemIndex": 777,
+      "itemNumber": 778,
+      "itemName": "notable muenster cheese",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/notable_muenster_cheese.png",
+      "output": "public/game-assets/items/food/notable_muenster_cheese_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated notable muenster cheese, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: notable muenster cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 1692,
+      "itemIndex": 777,
+      "itemNumber": 778,
+      "itemName": "notable muenster cheese",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/notable_muenster_cheese.png",
+      "output": "public/game-assets/items/food/notable_muenster_cheese_many.png",
+      "prompt": "Create a very abundant quantity of notable muenster cheese, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: notable muenster cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 1693,
+      "itemIndex": 778,
+      "itemNumber": 779,
+      "itemName": "scarce smoked gruyere cheese",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "preserved"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/scarce_smoked_gruyere_cheese.png",
+      "output": "public/game-assets/items/food/scarce_smoked_gruyere_cheese.png",
+      "prompt": "Create exactly one clear scarce smoked gruyere cheese, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce smoked gruyere cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 1694,
+      "itemIndex": 778,
+      "itemNumber": 779,
+      "itemName": "scarce smoked gruyere cheese",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "preserved"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/scarce_smoked_gruyere_cheese.png",
+      "output": "public/game-assets/items/food/scarce_smoked_gruyere_cheese_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated scarce smoked gruyere cheese, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce smoked gruyere cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 1695,
+      "itemIndex": 778,
+      "itemNumber": 779,
+      "itemName": "scarce smoked gruyere cheese",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "preserved"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/scarce_smoked_gruyere_cheese.png",
+      "output": "public/game-assets/items/food/scarce_smoked_gruyere_cheese_many.png",
+      "prompt": "Create a very abundant quantity of scarce smoked gruyere cheese, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce smoked gruyere cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 1696,
+      "itemIndex": 779,
+      "itemNumber": 780,
+      "itemName": "yellow swiss cheese",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/yellow_swiss_cheese.png",
+      "output": "public/game-assets/items/food/yellow_swiss_cheese.png",
+      "prompt": "Create exactly one clear yellow swiss cheese, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: yellow swiss cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 1697,
+      "itemIndex": 779,
+      "itemNumber": 780,
+      "itemName": "yellow swiss cheese",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/yellow_swiss_cheese.png",
+      "output": "public/game-assets/items/food/yellow_swiss_cheese_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated yellow swiss cheese, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: yellow swiss cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 1698,
+      "itemIndex": 779,
+      "itemNumber": 780,
+      "itemName": "yellow swiss cheese",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/yellow_swiss_cheese.png",
+      "output": "public/game-assets/items/food/yellow_swiss_cheese_many.png",
+      "prompt": "Create a very abundant quantity of yellow swiss cheese, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: yellow swiss cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 1699,
+      "itemIndex": 780,
+      "itemNumber": 781,
+      "itemName": "cheddar cheese",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/cheddar_cheese.png",
+      "output": "public/game-assets/items/food/cheddar_cheese.png",
+      "prompt": "Create exactly one clear cheddar cheese, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: cheddar cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 1700,
+      "itemIndex": 780,
+      "itemNumber": 781,
+      "itemName": "cheddar cheese",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "dairy",
+        "cheese",
+        "finished"
+      ],
+      "family": "food",
+      "subfamily": "dairy",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "dairy"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "expires",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "food/cheddar_cheese.png",
+      "output": "public/game-assets/items/food/cheddar_cheese_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated cheddar cheese, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: cheddar cheese. Family: food. Subfamily: dairy. Trade role: finished. Bulk profile: basket. Category cues: food, dairy, finished, common, basket, expires, food, dairy, cheese, finished, farmed, common, spoiled, chilled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

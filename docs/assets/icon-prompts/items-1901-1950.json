@@ -1,0 +1,4083 @@
+{
+  "batch": {
+    "firstGlobalSlot": 1901,
+    "lastGlobalSlot": 1950,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. herring (one)\n2. herring (few)\n3. herring (many)\n4. lobster (one)\n5. lobster (few)\n6. lobster (many)\n7. mussel (one)\n8. mussel (few)\n9. mussel (many)\n10. oysters (one)\n11. oysters (few)\n12. oysters (many)\n13. perch (one)\n14. perch (few)\n15. perch (many)\n16. salmon (one)\n17. salmon (few)\n18. salmon (many)\n19. scallop (one)\n20. scallop (few)\n21. scallop (many)\n22. tilapia (one)\n23. tilapia (few)\n24. tilapia (many)\n25. trout (one)\n26. trout (few)\n27. trout (many)\n28. walleye (one)\n29. walleye (few)\n30. walleye (many)\n31. beets (one)\n32. beets (few)\n33. beets (many)\n34. broccoli (one)\n35. broccoli (few)\n36. broccoli (many)\n37. brussels sprouts (one)\n38. brussels sprouts (few)\n39. brussels sprouts (many)\n40. cabbage (one)\n41. cabbage (few)\n42. cabbage (many)\n43. carrot (one)\n44. carrot (few)\n45. carrot (many)\n46. cauliflower (one)\n47. cauliflower (few)\n48. cauliflower (many)\n49. celery (one)\n50. celery (few)",
+  "order": [
+    "1. herring (one)",
+    "2. herring (few)",
+    "3. herring (many)",
+    "4. lobster (one)",
+    "5. lobster (few)",
+    "6. lobster (many)",
+    "7. mussel (one)",
+    "8. mussel (few)",
+    "9. mussel (many)",
+    "10. oysters (one)",
+    "11. oysters (few)",
+    "12. oysters (many)",
+    "13. perch (one)",
+    "14. perch (few)",
+    "15. perch (many)",
+    "16. salmon (one)",
+    "17. salmon (few)",
+    "18. salmon (many)",
+    "19. scallop (one)",
+    "20. scallop (few)",
+    "21. scallop (many)",
+    "22. tilapia (one)",
+    "23. tilapia (few)",
+    "24. tilapia (many)",
+    "25. trout (one)",
+    "26. trout (few)",
+    "27. trout (many)",
+    "28. walleye (one)",
+    "29. walleye (few)",
+    "30. walleye (many)",
+    "31. beets (one)",
+    "32. beets (few)",
+    "33. beets (many)",
+    "34. broccoli (one)",
+    "35. broccoli (few)",
+    "36. broccoli (many)",
+    "37. brussels sprouts (one)",
+    "38. brussels sprouts (few)",
+    "39. brussels sprouts (many)",
+    "40. cabbage (one)",
+    "41. cabbage (few)",
+    "42. cabbage (many)",
+    "43. carrot (one)",
+    "44. carrot (few)",
+    "45. carrot (many)",
+    "46. cauliflower (one)",
+    "47. cauliflower (few)",
+    "48. cauliflower (many)",
+    "49. celery (one)",
+    "50. celery (few)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 1901,
+      "itemIndex": 856,
+      "itemNumber": 857,
+      "itemName": "herring",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/herring.png",
+      "output": "public/game-assets/items/seafood/herring.png",
+      "prompt": "Create exactly one clear herring, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: herring. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 1902,
+      "itemIndex": 856,
+      "itemNumber": 857,
+      "itemName": "herring",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/herring.png",
+      "output": "public/game-assets/items/seafood/herring_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated herring, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: herring. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 1903,
+      "itemIndex": 856,
+      "itemNumber": 857,
+      "itemName": "herring",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/herring.png",
+      "output": "public/game-assets/items/seafood/herring_many.png",
+      "prompt": "Create a very abundant quantity of herring, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: herring. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 1904,
+      "itemIndex": 857,
+      "itemNumber": 858,
+      "itemName": "lobster",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 3,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/lobster.png",
+      "output": "public/game-assets/items/seafood/lobster.png",
+      "prompt": "Create exactly one clear lobster, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: lobster. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 1905,
+      "itemIndex": 857,
+      "itemNumber": 858,
+      "itemName": "lobster",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 3,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/lobster.png",
+      "output": "public/game-assets/items/seafood/lobster_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated lobster, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: lobster. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 1906,
+      "itemIndex": 857,
+      "itemNumber": 858,
+      "itemName": "lobster",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 3,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/lobster.png",
+      "output": "public/game-assets/items/seafood/lobster_many.png",
+      "prompt": "Create a very abundant quantity of lobster, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: lobster. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 1907,
+      "itemIndex": 858,
+      "itemNumber": 859,
+      "itemName": "mussel",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/mussel.png",
+      "output": "public/game-assets/items/seafood/mussel.png",
+      "prompt": "Create exactly one clear mussel, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: mussel. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 1908,
+      "itemIndex": 858,
+      "itemNumber": 859,
+      "itemName": "mussel",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/mussel.png",
+      "output": "public/game-assets/items/seafood/mussel_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated mussel, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: mussel. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 1909,
+      "itemIndex": 858,
+      "itemNumber": 859,
+      "itemName": "mussel",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/mussel.png",
+      "output": "public/game-assets/items/seafood/mussel_many.png",
+      "prompt": "Create a very abundant quantity of mussel, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: mussel. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 1910,
+      "itemIndex": 859,
+      "itemNumber": 860,
+      "itemName": "oysters",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/oysters.png",
+      "output": "public/game-assets/items/seafood/oysters.png",
+      "prompt": "Create exactly one clear oysters, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: oysters. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 1911,
+      "itemIndex": 859,
+      "itemNumber": 860,
+      "itemName": "oysters",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/oysters.png",
+      "output": "public/game-assets/items/seafood/oysters_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated oysters, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: oysters. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 1912,
+      "itemIndex": 859,
+      "itemNumber": 860,
+      "itemName": "oysters",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/oysters.png",
+      "output": "public/game-assets/items/seafood/oysters_many.png",
+      "prompt": "Create a very abundant quantity of oysters, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: oysters. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 1913,
+      "itemIndex": 860,
+      "itemNumber": 861,
+      "itemName": "perch",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/perch.png",
+      "output": "public/game-assets/items/seafood/perch.png",
+      "prompt": "Create exactly one clear perch, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: perch. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 1914,
+      "itemIndex": 860,
+      "itemNumber": 861,
+      "itemName": "perch",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/perch.png",
+      "output": "public/game-assets/items/seafood/perch_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated perch, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: perch. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 1915,
+      "itemIndex": 860,
+      "itemNumber": 861,
+      "itemName": "perch",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/perch.png",
+      "output": "public/game-assets/items/seafood/perch_many.png",
+      "prompt": "Create a very abundant quantity of perch, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: perch. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 1916,
+      "itemIndex": 861,
+      "itemNumber": 862,
+      "itemName": "salmon",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 3,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/salmon.png",
+      "output": "public/game-assets/items/seafood/salmon.png",
+      "prompt": "Create exactly one clear salmon, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: salmon. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 1917,
+      "itemIndex": 861,
+      "itemNumber": 862,
+      "itemName": "salmon",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 3,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/salmon.png",
+      "output": "public/game-assets/items/seafood/salmon_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated salmon, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: salmon. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 1918,
+      "itemIndex": 861,
+      "itemNumber": 862,
+      "itemName": "salmon",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 3,
+      "weight": 3,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/salmon.png",
+      "output": "public/game-assets/items/seafood/salmon_many.png",
+      "prompt": "Create a very abundant quantity of salmon, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: salmon. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 1919,
+      "itemIndex": 862,
+      "itemNumber": 863,
+      "itemName": "scallop",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/scallop.png",
+      "output": "public/game-assets/items/seafood/scallop.png",
+      "prompt": "Create exactly one clear scallop, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scallop. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 1920,
+      "itemIndex": 862,
+      "itemNumber": 863,
+      "itemName": "scallop",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/scallop.png",
+      "output": "public/game-assets/items/seafood/scallop_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated scallop, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: scallop. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 1921,
+      "itemIndex": 862,
+      "itemNumber": 863,
+      "itemName": "scallop",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/scallop.png",
+      "output": "public/game-assets/items/seafood/scallop_many.png",
+      "prompt": "Create a very abundant quantity of scallop, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: scallop. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 1922,
+      "itemIndex": 863,
+      "itemNumber": 864,
+      "itemName": "tilapia",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tilapia.png",
+      "output": "public/game-assets/items/seafood/tilapia.png",
+      "prompt": "Create exactly one clear tilapia, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: tilapia. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 1923,
+      "itemIndex": 863,
+      "itemNumber": 864,
+      "itemName": "tilapia",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tilapia.png",
+      "output": "public/game-assets/items/seafood/tilapia_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated tilapia, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: tilapia. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 1924,
+      "itemIndex": 863,
+      "itemNumber": 864,
+      "itemName": "tilapia",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/tilapia.png",
+      "output": "public/game-assets/items/seafood/tilapia_many.png",
+      "prompt": "Create a very abundant quantity of tilapia, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: tilapia. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 1925,
+      "itemIndex": 864,
+      "itemNumber": 865,
+      "itemName": "trout",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/trout.png",
+      "output": "public/game-assets/items/seafood/trout.png",
+      "prompt": "Create exactly one clear trout, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: trout. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 1926,
+      "itemIndex": 864,
+      "itemNumber": 865,
+      "itemName": "trout",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/trout.png",
+      "output": "public/game-assets/items/seafood/trout_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated trout, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: trout. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 1927,
+      "itemIndex": 864,
+      "itemNumber": 865,
+      "itemName": "trout",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/trout.png",
+      "output": "public/game-assets/items/seafood/trout_many.png",
+      "prompt": "Create a very abundant quantity of trout, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: trout. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 1928,
+      "itemIndex": 865,
+      "itemNumber": 866,
+      "itemName": "walleye",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/walleye.png",
+      "output": "public/game-assets/items/seafood/walleye.png",
+      "prompt": "Create exactly one clear walleye, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: walleye. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 1929,
+      "itemIndex": 865,
+      "itemNumber": 866,
+      "itemName": "walleye",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/walleye.png",
+      "output": "public/game-assets/items/seafood/walleye_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated walleye, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: walleye. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 1930,
+      "itemIndex": 865,
+      "itemNumber": 866,
+      "itemName": "walleye",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "seafood",
+        "finished"
+      ],
+      "family": "seafood",
+      "subfamily": "seafood",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [
+          "fish"
+        ],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "port_specialty"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "port_specialty"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "seafood/walleye.png",
+      "output": "public/game-assets/items/seafood/walleye_many.png",
+      "prompt": "Create a very abundant quantity of walleye, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: walleye. Family: seafood. Subfamily: seafood. Trade role: finished. Bulk profile: basket. Category cues: seafood, seafood, finished, common, basket, fresh, food, seafood, finished, crafted, common, spoiled, chilled, port_specialty. It should read clearly in a small inventory tile.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 1931,
+      "itemIndex": 866,
+      "itemNumber": 867,
+      "itemName": "beets",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/beets.png",
+      "output": "public/game-assets/items/produce/beets.png",
+      "prompt": "Create exactly one clear beets, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: beets. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 1932,
+      "itemIndex": 866,
+      "itemNumber": 867,
+      "itemName": "beets",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/beets.png",
+      "output": "public/game-assets/items/produce/beets_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated beets, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: beets. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 1933,
+      "itemIndex": 866,
+      "itemNumber": 867,
+      "itemName": "beets",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/beets.png",
+      "output": "public/game-assets/items/produce/beets_many.png",
+      "prompt": "Create a very abundant quantity of beets, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: beets. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 1934,
+      "itemIndex": 867,
+      "itemNumber": 868,
+      "itemName": "broccoli",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/broccoli.png",
+      "output": "public/game-assets/items/produce/broccoli.png",
+      "prompt": "Create exactly one clear broccoli, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: broccoli. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 1935,
+      "itemIndex": 867,
+      "itemNumber": 868,
+      "itemName": "broccoli",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/broccoli.png",
+      "output": "public/game-assets/items/produce/broccoli_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated broccoli, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: broccoli. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 1936,
+      "itemIndex": 867,
+      "itemNumber": 868,
+      "itemName": "broccoli",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/broccoli.png",
+      "output": "public/game-assets/items/produce/broccoli_many.png",
+      "prompt": "Create a very abundant quantity of broccoli, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: broccoli. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 1937,
+      "itemIndex": 868,
+      "itemNumber": 869,
+      "itemName": "brussels sprouts",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/brussels_sprouts.png",
+      "output": "public/game-assets/items/produce/brussels_sprouts.png",
+      "prompt": "Create exactly one clear brussels sprouts, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: brussels sprouts. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 1938,
+      "itemIndex": 868,
+      "itemNumber": 869,
+      "itemName": "brussels sprouts",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/brussels_sprouts.png",
+      "output": "public/game-assets/items/produce/brussels_sprouts_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated brussels sprouts, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: brussels sprouts. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 1939,
+      "itemIndex": 868,
+      "itemNumber": 869,
+      "itemName": "brussels sprouts",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/brussels_sprouts.png",
+      "output": "public/game-assets/items/produce/brussels_sprouts_many.png",
+      "prompt": "Create a very abundant quantity of brussels sprouts, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: brussels sprouts. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 1940,
+      "itemIndex": 869,
+      "itemNumber": 870,
+      "itemName": "cabbage",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/cabbage.png",
+      "output": "public/game-assets/items/produce/cabbage.png",
+      "prompt": "Create exactly one clear cabbage, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: cabbage. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 1941,
+      "itemIndex": 869,
+      "itemNumber": 870,
+      "itemName": "cabbage",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/cabbage.png",
+      "output": "public/game-assets/items/produce/cabbage_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated cabbage, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: cabbage. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 1942,
+      "itemIndex": 869,
+      "itemNumber": 870,
+      "itemName": "cabbage",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 3,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/cabbage.png",
+      "output": "public/game-assets/items/produce/cabbage_many.png",
+      "prompt": "Create a very abundant quantity of cabbage, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: cabbage. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 1943,
+      "itemIndex": 870,
+      "itemNumber": 871,
+      "itemName": "carrot",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/carrot.png",
+      "output": "public/game-assets/items/produce/carrot.png",
+      "prompt": "Create exactly one clear carrot, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: carrot. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 1944,
+      "itemIndex": 870,
+      "itemNumber": 871,
+      "itemName": "carrot",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/carrot.png",
+      "output": "public/game-assets/items/produce/carrot_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated carrot, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: carrot. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 1945,
+      "itemIndex": 870,
+      "itemNumber": 871,
+      "itemName": "carrot",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/carrot.png",
+      "output": "public/game-assets/items/produce/carrot_many.png",
+      "prompt": "Create a very abundant quantity of carrot, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: carrot. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 1946,
+      "itemIndex": 871,
+      "itemNumber": 872,
+      "itemName": "cauliflower",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/cauliflower.png",
+      "output": "public/game-assets/items/produce/cauliflower.png",
+      "prompt": "Create exactly one clear cauliflower, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: cauliflower. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 1947,
+      "itemIndex": 871,
+      "itemNumber": 872,
+      "itemName": "cauliflower",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/cauliflower.png",
+      "output": "public/game-assets/items/produce/cauliflower_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated cauliflower, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: cauliflower. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 1948,
+      "itemIndex": 871,
+      "itemNumber": 872,
+      "itemName": "cauliflower",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 2,
+      "weight": 2,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/cauliflower.png",
+      "output": "public/game-assets/items/produce/cauliflower_many.png",
+      "prompt": "Create a very abundant quantity of cauliflower, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: cauliflower. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 1949,
+      "itemIndex": 872,
+      "itemNumber": 873,
+      "itemName": "celery",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/celery.png",
+      "output": "public/game-assets/items/produce/celery.png",
+      "prompt": "Create exactly one clear celery, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: celery. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 1950,
+      "itemIndex": 872,
+      "itemNumber": 873,
+      "itemName": "celery",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "food",
+        "veggies",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "veggies",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "vegetable"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/celery.png",
+      "output": "public/game-assets/items/produce/celery_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated celery, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: celery. Family: produce. Subfamily: veggies. Trade role: ingredient. Bulk profile: basket. Category cues: produce, veggies, ingredient, common, basket, fresh, food, veggies, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

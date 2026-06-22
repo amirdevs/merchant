@@ -1,0 +1,4167 @@
+{
+  "batch": {
+    "firstGlobalSlot": 1001,
+    "lastGlobalSlot": 1050,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. notable flat stomp (few)\n2. notable flat stomp (many)\n3. orange sunshines (one)\n4. orange sunshines (few)\n5. orange sunshines (many)\n6. fated star (one)\n7. palm leaf (one)\n8. palm leaf (few)\n9. palm leaf (many)\n10. notable pink paddies (one)\n11. notable pink paddies (few)\n12. notable pink paddies (many)\n13. notable saturhino (one)\n14. notable saturhino (few)\n15. notable saturhino (many)\n16. notable dephine (one)\n17. notable dephine (few)\n18. notable dephine (many)\n19. plenny pins (one)\n20. plenny pins (few)\n21. plenny pins (many)\n22. small besone (one)\n23. small besone (few)\n24. small besone (many)\n25. red padded pawn (one)\n26. red padded pawn (few)\n27. red padded pawn (many)\n28. red thorned dramni (one)\n29. red thorned dramni (few)\n30. red thorned dramni (many)\n31. red pillows (one)\n32. red pillows (few)\n33. red pillows (many)\n34. red and yellow bush (one)\n35. red and yellow bush (few)\n36. red and yellow bush (many)\n37. sea weed (one)\n38. sea weed (few)\n39. sea weed (many)\n40. scarce sharp lovey (one)\n41. scarce sharp lovey (few)\n42. scarce sharp lovey (many)\n43. small leaf (one)\n44. small leaf (few)\n45. small leaf (many)\n46. squiggle leafs (one)\n47. squiggle leafs (few)\n48. squiggle leafs (many)\n49. sugar cane (one)\n50. sugar cane (few)",
+  "order": [
+    "1. notable flat stomp (few)",
+    "2. notable flat stomp (many)",
+    "3. orange sunshines (one)",
+    "4. orange sunshines (few)",
+    "5. orange sunshines (many)",
+    "6. fated star (one)",
+    "7. palm leaf (one)",
+    "8. palm leaf (few)",
+    "9. palm leaf (many)",
+    "10. notable pink paddies (one)",
+    "11. notable pink paddies (few)",
+    "12. notable pink paddies (many)",
+    "13. notable saturhino (one)",
+    "14. notable saturhino (few)",
+    "15. notable saturhino (many)",
+    "16. notable dephine (one)",
+    "17. notable dephine (few)",
+    "18. notable dephine (many)",
+    "19. plenny pins (one)",
+    "20. plenny pins (few)",
+    "21. plenny pins (many)",
+    "22. small besone (one)",
+    "23. small besone (few)",
+    "24. small besone (many)",
+    "25. red padded pawn (one)",
+    "26. red padded pawn (few)",
+    "27. red padded pawn (many)",
+    "28. red thorned dramni (one)",
+    "29. red thorned dramni (few)",
+    "30. red thorned dramni (many)",
+    "31. red pillows (one)",
+    "32. red pillows (few)",
+    "33. red pillows (many)",
+    "34. red and yellow bush (one)",
+    "35. red and yellow bush (few)",
+    "36. red and yellow bush (many)",
+    "37. sea weed (one)",
+    "38. sea weed (few)",
+    "39. sea weed (many)",
+    "40. scarce sharp lovey (one)",
+    "41. scarce sharp lovey (few)",
+    "42. scarce sharp lovey (many)",
+    "43. small leaf (one)",
+    "44. small leaf (few)",
+    "45. small leaf (many)",
+    "46. squiggle leafs (one)",
+    "47. squiggle leafs (few)",
+    "48. squiggle leafs (many)",
+    "49. sugar cane (one)",
+    "50. sugar cane (few)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 1001,
+      "itemIndex": 531,
+      "itemNumber": 532,
+      "itemName": "notable flat stomp",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/notable_flat_stomp.png",
+      "output": "public/game-assets/items/produce/notable_flat_stomp_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated notable flat stomp, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: notable flat stomp. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 1002,
+      "itemIndex": 531,
+      "itemNumber": 532,
+      "itemName": "notable flat stomp",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/notable_flat_stomp.png",
+      "output": "public/game-assets/items/produce/notable_flat_stomp_many.png",
+      "prompt": "Create a very abundant quantity of notable flat stomp, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: notable flat stomp. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 1003,
+      "itemIndex": 532,
+      "itemNumber": 533,
+      "itemName": "orange sunshines",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/orange_sunshines.png",
+      "output": "public/game-assets/items/produce/orange_sunshines.png",
+      "prompt": "Create exactly one clear orange sunshines, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: orange sunshines. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 1004,
+      "itemIndex": 532,
+      "itemNumber": 533,
+      "itemName": "orange sunshines",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/orange_sunshines.png",
+      "output": "public/game-assets/items/produce/orange_sunshines_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated orange sunshines, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: orange sunshines. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 1005,
+      "itemIndex": 532,
+      "itemNumber": 533,
+      "itemName": "orange sunshines",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/orange_sunshines.png",
+      "output": "public/game-assets/items/produce/orange_sunshines_many.png",
+      "prompt": "Create a very abundant quantity of orange sunshines, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: orange sunshines. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 1006,
+      "itemIndex": 533,
+      "itemNumber": 534,
+      "itemName": "fated star",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary",
+          "licensed"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "unique",
+      "qualityBands": [
+        "common",
+        "antique",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": true,
+      "iconFile": "produce/fated_star.png",
+      "output": "public/game-assets/items/produce/fated_star.png",
+      "prompt": "Create exactly one clear fated star, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: fated star. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, unique, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, antique. It should read clearly in a small inventory tile.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 1007,
+      "itemIndex": 534,
+      "itemNumber": 535,
+      "itemName": "palm leaf",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "leaves",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/palm_leaf.png",
+      "output": "public/game-assets/items/produce/palm_leaf.png",
+      "prompt": "Create exactly one clear palm leaf, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: palm leaf. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, leaves, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 1008,
+      "itemIndex": 534,
+      "itemNumber": 535,
+      "itemName": "palm leaf",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "leaves",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/palm_leaf.png",
+      "output": "public/game-assets/items/produce/palm_leaf_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated palm leaf, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: palm leaf. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, leaves, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 1009,
+      "itemIndex": 534,
+      "itemNumber": 535,
+      "itemName": "palm leaf",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "leaves",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/palm_leaf.png",
+      "output": "public/game-assets/items/produce/palm_leaf_many.png",
+      "prompt": "Create a very abundant quantity of palm leaf, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: palm leaf. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, leaves, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 1010,
+      "itemIndex": 535,
+      "itemNumber": 536,
+      "itemName": "notable pink paddies",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/notable_pink_paddies.png",
+      "output": "public/game-assets/items/produce/notable_pink_paddies.png",
+      "prompt": "Create exactly one clear notable pink paddies, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: notable pink paddies. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 1011,
+      "itemIndex": 535,
+      "itemNumber": 536,
+      "itemName": "notable pink paddies",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/notable_pink_paddies.png",
+      "output": "public/game-assets/items/produce/notable_pink_paddies_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated notable pink paddies, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: notable pink paddies. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 1012,
+      "itemIndex": 535,
+      "itemNumber": 536,
+      "itemName": "notable pink paddies",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/notable_pink_paddies.png",
+      "output": "public/game-assets/items/produce/notable_pink_paddies_many.png",
+      "prompt": "Create a very abundant quantity of notable pink paddies, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: notable pink paddies. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 1013,
+      "itemIndex": 536,
+      "itemNumber": 537,
+      "itemName": "notable saturhino",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/notable_saturhino.png",
+      "output": "public/game-assets/items/produce/notable_saturhino.png",
+      "prompt": "Create exactly one clear notable saturhino, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: notable saturhino. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 1014,
+      "itemIndex": 536,
+      "itemNumber": 537,
+      "itemName": "notable saturhino",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/notable_saturhino.png",
+      "output": "public/game-assets/items/produce/notable_saturhino_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated notable saturhino, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: notable saturhino. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 1015,
+      "itemIndex": 536,
+      "itemNumber": 537,
+      "itemName": "notable saturhino",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/notable_saturhino.png",
+      "output": "public/game-assets/items/produce/notable_saturhino_many.png",
+      "prompt": "Create a very abundant quantity of notable saturhino, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: notable saturhino. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 1016,
+      "itemIndex": 537,
+      "itemNumber": 538,
+      "itemName": "notable dephine",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/notable_dephine.png",
+      "output": "public/game-assets/items/produce/notable_dephine.png",
+      "prompt": "Create exactly one clear notable dephine, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: notable dephine. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 1017,
+      "itemIndex": 537,
+      "itemNumber": 538,
+      "itemName": "notable dephine",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/notable_dephine.png",
+      "output": "public/game-assets/items/produce/notable_dephine_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated notable dephine, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: notable dephine. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 1018,
+      "itemIndex": 537,
+      "itemNumber": 538,
+      "itemName": "notable dephine",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/notable_dephine.png",
+      "output": "public/game-assets/items/produce/notable_dephine_many.png",
+      "prompt": "Create a very abundant quantity of notable dephine, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: notable dephine. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 1019,
+      "itemIndex": 538,
+      "itemNumber": 539,
+      "itemName": "plenny pins",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/plenny_pins.png",
+      "output": "public/game-assets/items/produce/plenny_pins.png",
+      "prompt": "Create exactly one clear plenny pins, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: plenny pins. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 1020,
+      "itemIndex": 538,
+      "itemNumber": 539,
+      "itemName": "plenny pins",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/plenny_pins.png",
+      "output": "public/game-assets/items/produce/plenny_pins_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated plenny pins, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: plenny pins. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 1021,
+      "itemIndex": 538,
+      "itemNumber": 539,
+      "itemName": "plenny pins",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/plenny_pins.png",
+      "output": "public/game-assets/items/produce/plenny_pins_many.png",
+      "prompt": "Create a very abundant quantity of plenny pins, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: plenny pins. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 1022,
+      "itemIndex": 539,
+      "itemNumber": 540,
+      "itemName": "small besone",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/small_besone.png",
+      "output": "public/game-assets/items/produce/small_besone.png",
+      "prompt": "Create exactly one clear small besone, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: small besone. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 1023,
+      "itemIndex": 539,
+      "itemNumber": 540,
+      "itemName": "small besone",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/small_besone.png",
+      "output": "public/game-assets/items/produce/small_besone_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated small besone, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: small besone. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 1024,
+      "itemIndex": 539,
+      "itemNumber": 540,
+      "itemName": "small besone",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/small_besone.png",
+      "output": "public/game-assets/items/produce/small_besone_many.png",
+      "prompt": "Create a very abundant quantity of small besone, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: small besone. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 1025,
+      "itemIndex": 540,
+      "itemNumber": 541,
+      "itemName": "red padded pawn",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_padded_pawn.png",
+      "output": "public/game-assets/items/produce/red_padded_pawn.png",
+      "prompt": "Create exactly one clear red padded pawn, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: red padded pawn. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 1026,
+      "itemIndex": 540,
+      "itemNumber": 541,
+      "itemName": "red padded pawn",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_padded_pawn.png",
+      "output": "public/game-assets/items/produce/red_padded_pawn_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated red padded pawn, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: red padded pawn. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 1027,
+      "itemIndex": 540,
+      "itemNumber": 541,
+      "itemName": "red padded pawn",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_padded_pawn.png",
+      "output": "public/game-assets/items/produce/red_padded_pawn_many.png",
+      "prompt": "Create a very abundant quantity of red padded pawn, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: red padded pawn. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 1028,
+      "itemIndex": 541,
+      "itemNumber": 542,
+      "itemName": "red thorned dramni",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_thorned_dramni.png",
+      "output": "public/game-assets/items/produce/red_thorned_dramni.png",
+      "prompt": "Create exactly one clear red thorned dramni, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: red thorned dramni. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 1029,
+      "itemIndex": 541,
+      "itemNumber": 542,
+      "itemName": "red thorned dramni",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_thorned_dramni.png",
+      "output": "public/game-assets/items/produce/red_thorned_dramni_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated red thorned dramni, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: red thorned dramni. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 1030,
+      "itemIndex": 541,
+      "itemNumber": 542,
+      "itemName": "red thorned dramni",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_thorned_dramni.png",
+      "output": "public/game-assets/items/produce/red_thorned_dramni_many.png",
+      "prompt": "Create a very abundant quantity of red thorned dramni, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: red thorned dramni. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 1031,
+      "itemIndex": 542,
+      "itemNumber": 543,
+      "itemName": "red pillows",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_pillows.png",
+      "output": "public/game-assets/items/produce/red_pillows.png",
+      "prompt": "Create exactly one clear red pillows, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: red pillows. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 1032,
+      "itemIndex": 542,
+      "itemNumber": 543,
+      "itemName": "red pillows",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_pillows.png",
+      "output": "public/game-assets/items/produce/red_pillows_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated red pillows, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: red pillows. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 1033,
+      "itemIndex": 542,
+      "itemNumber": 543,
+      "itemName": "red pillows",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_pillows.png",
+      "output": "public/game-assets/items/produce/red_pillows_many.png",
+      "prompt": "Create a very abundant quantity of red pillows, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: red pillows. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 1034,
+      "itemIndex": 543,
+      "itemNumber": 544,
+      "itemName": "red and yellow bush",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 5,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_and_yellow_bush.png",
+      "output": "public/game-assets/items/produce/red_and_yellow_bush.png",
+      "prompt": "Create exactly one clear red and yellow bush, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: red and yellow bush. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 1035,
+      "itemIndex": 543,
+      "itemNumber": 544,
+      "itemName": "red and yellow bush",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 5,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_and_yellow_bush.png",
+      "output": "public/game-assets/items/produce/red_and_yellow_bush_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated red and yellow bush, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: red and yellow bush. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 1036,
+      "itemIndex": 543,
+      "itemNumber": 544,
+      "itemName": "red and yellow bush",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "bulky",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 5,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/red_and_yellow_bush.png",
+      "output": "public/game-assets/items/produce/red_and_yellow_bush_many.png",
+      "prompt": "Create a very abundant quantity of red and yellow bush, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: red and yellow bush. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should feel medium-sized.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 1037,
+      "itemIndex": 544,
+      "itemNumber": 545,
+      "itemName": "sea weed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/sea_weed.png",
+      "output": "public/game-assets/items/produce/sea_weed.png",
+      "prompt": "Create exactly one clear sea weed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: sea weed. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 1038,
+      "itemIndex": 544,
+      "itemNumber": 545,
+      "itemName": "sea weed",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/sea_weed.png",
+      "output": "public/game-assets/items/produce/sea_weed_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated sea weed, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: sea weed. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 1039,
+      "itemIndex": 544,
+      "itemNumber": 545,
+      "itemName": "sea weed",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/sea_weed.png",
+      "output": "public/game-assets/items/produce/sea_weed_many.png",
+      "prompt": "Create a very abundant quantity of sea weed, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: sea weed. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 1040,
+      "itemIndex": 545,
+      "itemNumber": 546,
+      "itemName": "scarce sharp lovey",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/scarce_sharp_lovey.png",
+      "output": "public/game-assets/items/produce/scarce_sharp_lovey.png",
+      "prompt": "Create exactly one clear scarce sharp lovey, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: scarce sharp lovey. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 1041,
+      "itemIndex": 545,
+      "itemNumber": 546,
+      "itemName": "scarce sharp lovey",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/scarce_sharp_lovey.png",
+      "output": "public/game-assets/items/produce/scarce_sharp_lovey_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated scarce sharp lovey, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce sharp lovey. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 1042,
+      "itemIndex": 545,
+      "itemNumber": 546,
+      "itemName": "scarce sharp lovey",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/scarce_sharp_lovey.png",
+      "output": "public/game-assets/items/produce/scarce_sharp_lovey_many.png",
+      "prompt": "Create a very abundant quantity of scarce sharp lovey, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: scarce sharp lovey. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, plants, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 1043,
+      "itemIndex": 546,
+      "itemNumber": 547,
+      "itemName": "small leaf",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "leaves",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/small_leaf.png",
+      "output": "public/game-assets/items/produce/small_leaf.png",
+      "prompt": "Create exactly one clear small leaf, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: small leaf. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, leaves, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 1044,
+      "itemIndex": 546,
+      "itemNumber": 547,
+      "itemName": "small leaf",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "leaves",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/small_leaf.png",
+      "output": "public/game-assets/items/produce/small_leaf_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated small leaf, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: small leaf. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, leaves, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 1045,
+      "itemIndex": 546,
+      "itemNumber": 547,
+      "itemName": "small leaf",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "leaves",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/small_leaf.png",
+      "output": "public/game-assets/items/produce/small_leaf_many.png",
+      "prompt": "Create a very abundant quantity of small leaf, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: small leaf. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, leaves, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 1046,
+      "itemIndex": 547,
+      "itemNumber": 548,
+      "itemName": "squiggle leafs",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "leaves",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/squiggle_leafs.png",
+      "output": "public/game-assets/items/produce/squiggle_leafs.png",
+      "prompt": "Create exactly one clear squiggle leafs, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: squiggle leafs. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, leaves, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 1047,
+      "itemIndex": 547,
+      "itemNumber": 548,
+      "itemName": "squiggle leafs",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "leaves",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/squiggle_leafs.png",
+      "output": "public/game-assets/items/produce/squiggle_leafs_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated squiggle leafs, arranged naturally as a few basket quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: squiggle leafs. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, leaves, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 1048,
+      "itemIndex": 547,
+      "itemNumber": 548,
+      "itemName": "squiggle leafs",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "basket quantity",
+      "tags": [
+        "botanicals",
+        "leaves",
+        "produce",
+        "ingredient"
+      ],
+      "family": "produce",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "fresh"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "daily_staple"
+        ],
+        "storageHandling": [
+          "handheld",
+          "cool_storage"
+        ],
+        "artVariant": [
+          "basket",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "farmed",
+        "foraged"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common",
+        "spoiled"
+      ],
+      "bulkProfile": "basket",
+      "storageNeeds": [
+        "chilled"
+      ],
+      "decayProfile": "fresh",
+      "marketBehavior": [
+        "daily_staple"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "produce/squiggle_leafs.png",
+      "output": "public/game-assets/items/produce/squiggle_leafs_many.png",
+      "prompt": "Create a very abundant quantity of squiggle leafs, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many basket quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: squiggle leafs. Family: produce. Subfamily: botanicals. Trade role: ingredient. Bulk profile: basket. Category cues: produce, botanicals, ingredient, common, basket, fresh, botanicals, leaves, produce, ingredient, farmed, foraged, common, spoiled. It should read clearly in a small inventory tile.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 1049,
+      "itemIndex": 548,
+      "itemNumber": 549,
+      "itemName": "sugar cane",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/sugar_cane.png",
+      "output": "public/game-assets/items/spice/sugar_cane.png",
+      "prompt": "Create exactly one clear sugar cane, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: sugar cane. Family: spice. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: spice, botanicals, ingredient, common, sack, preserved, botanicals, plants, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 1050,
+      "itemIndex": 548,
+      "itemNumber": 549,
+      "itemName": "sugar cane",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "sack quantity",
+      "tags": [
+        "botanicals",
+        "plants",
+        "spice",
+        "ingredient"
+      ],
+      "family": "spice",
+      "subfamily": "botanicals",
+      "tradeRole": "ingredient",
+      "categoryAxes": {
+        "material": [
+          "plant"
+        ],
+        "productionStage": [
+          "component"
+        ],
+        "freshness": [
+          "shelf_stable"
+        ],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "handheld",
+          "dry_storage"
+        ],
+        "artVariant": [
+          "sack",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": [
+          "crafting_input",
+          "cooking_input"
+        ]
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "sack",
+      "storageNeeds": [
+        "dry"
+      ],
+      "decayProfile": "preserved",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 1,
+      "weight": 1,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "spice/sugar_cane.png",
+      "output": "public/game-assets/items/spice/sugar_cane_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated sugar cane, arranged naturally as a few sack quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: sugar cane. Family: spice. Subfamily: botanicals. Trade role: ingredient. Bulk profile: sack. Category cues: spice, botanicals, ingredient, common, sack, preserved, botanicals, plants, spice, ingredient, crafted, common, dry, bulk_trade. It should read clearly in a small inventory tile.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}

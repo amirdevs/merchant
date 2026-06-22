@@ -1,0 +1,3552 @@
+{
+  "batch": {
+    "firstGlobalSlot": 2051,
+    "lastGlobalSlot": 2100,
+    "slotCount": 50,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.",
+  "generationPrompt": "Create one sprite sheet containing exactly 50 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making similar items visually distinct by shape, color, material, rarity, decoration, magic effects, and quantity. Quantity rules are strict. For slots marked one, show exactly one main item only. For slots marked few, show exactly 3 to 5 clearly separated pieces and make the group obviously larger than one. For slots marked many, show at least 12 pieces or an overflowing pile, crate, bowl, sack, bundle, or cluster, making it obviously much more than few.\n\nSlot order:\n1. well crafted table (one)\n2. well crafted table (few)\n3. well crafted table (many)\n4. well crafted small table (one)\n5. well crafted small table (few)\n6. well crafted small table (many)\n7. large rough table (one)\n8. large rough table (few)\n9. large rough table (many)\n10. large dresser (one)\n11. large dresser (few)\n12. large dresser (many)\n13. large worn dresser (one)\n14. large worn dresser (few)\n15. large worn dresser (many)\n16. elegant low table (one)\n17. elegant low table (few)\n18. elegant low table (many)\n19. long dresser (one)\n20. long dresser (few)\n21. long dresser (many)\n22. long worn dresser (one)\n23. long worn dresser (few)\n24. long worn dresser (many)\n25. massive elegant table (one)\n26. well crafted low table (one)\n27. well crafted low table (few)\n28. well crafted low table (many)\n29. metal bed (one)\n30. metal bed (few)\n31. metal bed (many)\n32. worn nightstand (one)\n33. worn nightstand (few)\n34. worn nightstand (many)\n35. purple bed (one)\n36. purple bed (few)\n37. purple bed (many)\n38. narrow purple bed (one)\n39. narrow purple bed (few)\n40. narrow purple bed (many)\n41. red double bed (one)\n42. red double bed (few)\n43. red double bed (many)\n44. red bed (one)\n45. red bed (few)\n46. red bed (many)\n47. royal bed (one)\n48. shelf (one)\n49. shelf (few)\n50. shelf (many)",
+  "order": [
+    "1. well crafted table (one)",
+    "2. well crafted table (few)",
+    "3. well crafted table (many)",
+    "4. well crafted small table (one)",
+    "5. well crafted small table (few)",
+    "6. well crafted small table (many)",
+    "7. large rough table (one)",
+    "8. large rough table (few)",
+    "9. large rough table (many)",
+    "10. large dresser (one)",
+    "11. large dresser (few)",
+    "12. large dresser (many)",
+    "13. large worn dresser (one)",
+    "14. large worn dresser (few)",
+    "15. large worn dresser (many)",
+    "16. elegant low table (one)",
+    "17. elegant low table (few)",
+    "18. elegant low table (many)",
+    "19. long dresser (one)",
+    "20. long dresser (few)",
+    "21. long dresser (many)",
+    "22. long worn dresser (one)",
+    "23. long worn dresser (few)",
+    "24. long worn dresser (many)",
+    "25. massive elegant table (one)",
+    "26. well crafted low table (one)",
+    "27. well crafted low table (few)",
+    "28. well crafted low table (many)",
+    "29. metal bed (one)",
+    "30. metal bed (few)",
+    "31. metal bed (many)",
+    "32. worn nightstand (one)",
+    "33. worn nightstand (few)",
+    "34. worn nightstand (many)",
+    "35. purple bed (one)",
+    "36. purple bed (few)",
+    "37. purple bed (many)",
+    "38. narrow purple bed (one)",
+    "39. narrow purple bed (few)",
+    "40. narrow purple bed (many)",
+    "41. red double bed (one)",
+    "42. red double bed (few)",
+    "43. red double bed (many)",
+    "44. red bed (one)",
+    "45. red bed (few)",
+    "46. red bed (many)",
+    "47. royal bed (one)",
+    "48. shelf (one)",
+    "49. shelf (few)",
+    "50. shelf (many)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 2051,
+      "itemIndex": 906,
+      "itemNumber": 907,
+      "itemName": "well crafted table",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 75,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/well_crafted_table.png",
+      "output": "public/game-assets/items/household/well_crafted_table.png",
+      "prompt": "Create exactly one clear well crafted table, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: well crafted table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 2052,
+      "itemIndex": 906,
+      "itemNumber": 907,
+      "itemName": "well crafted table",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 75,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/well_crafted_table.png",
+      "output": "public/game-assets/items/household/well_crafted_table_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated well crafted table, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: well crafted table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 2053,
+      "itemIndex": 906,
+      "itemNumber": 907,
+      "itemName": "well crafted table",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 75,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/well_crafted_table.png",
+      "output": "public/game-assets/items/household/well_crafted_table_many.png",
+      "prompt": "Create a very abundant quantity of well crafted table, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: well crafted table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 2054,
+      "itemIndex": 907,
+      "itemNumber": 908,
+      "itemName": "well crafted small table",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 30,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/well_crafted_small_table.png",
+      "output": "public/game-assets/items/household/well_crafted_small_table.png",
+      "prompt": "Create exactly one clear well crafted small table, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: well crafted small table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel medium-sized.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 2055,
+      "itemIndex": 907,
+      "itemNumber": 908,
+      "itemName": "well crafted small table",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 30,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/well_crafted_small_table.png",
+      "output": "public/game-assets/items/household/well_crafted_small_table_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated well crafted small table, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: well crafted small table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel medium-sized.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 2056,
+      "itemIndex": 907,
+      "itemNumber": 908,
+      "itemName": "well crafted small table",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 30,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/well_crafted_small_table.png",
+      "output": "public/game-assets/items/household/well_crafted_small_table_many.png",
+      "prompt": "Create a very abundant quantity of well crafted small table, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: well crafted small table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel medium-sized.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 2057,
+      "itemIndex": 908,
+      "itemNumber": 909,
+      "itemName": "large rough table",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 80,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_rough_table.png",
+      "output": "public/game-assets/items/household/large_rough_table.png",
+      "prompt": "Create exactly one clear large rough table, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large rough table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 2058,
+      "itemIndex": 908,
+      "itemNumber": 909,
+      "itemName": "large rough table",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 80,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_rough_table.png",
+      "output": "public/game-assets/items/household/large_rough_table_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large rough table, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large rough table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 2059,
+      "itemIndex": 908,
+      "itemNumber": 909,
+      "itemName": "large rough table",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 80,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_rough_table.png",
+      "output": "public/game-assets/items/household/large_rough_table_many.png",
+      "prompt": "Create a very abundant quantity of large rough table, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large rough table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 2060,
+      "itemIndex": 909,
+      "itemNumber": 910,
+      "itemName": "large dresser",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_dresser.png",
+      "output": "public/game-assets/items/household/large_dresser.png",
+      "prompt": "Create exactly one clear large dresser, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    },
+    {
+      "globalSlot": 2061,
+      "itemIndex": 909,
+      "itemNumber": 910,
+      "itemName": "large dresser",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_dresser.png",
+      "output": "public/game-assets/items/household/large_dresser_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large dresser, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 11,
+      "row": 2,
+      "column": 1
+    },
+    {
+      "globalSlot": 2062,
+      "itemIndex": 909,
+      "itemNumber": 910,
+      "itemName": "large dresser",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_dresser.png",
+      "output": "public/game-assets/items/household/large_dresser_many.png",
+      "prompt": "Create a very abundant quantity of large dresser, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 12,
+      "row": 2,
+      "column": 2
+    },
+    {
+      "globalSlot": 2063,
+      "itemIndex": 910,
+      "itemNumber": 911,
+      "itemName": "large worn dresser",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_worn_dresser.png",
+      "output": "public/game-assets/items/household/large_worn_dresser.png",
+      "prompt": "Create exactly one clear large worn dresser, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: large worn dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 13,
+      "row": 2,
+      "column": 3
+    },
+    {
+      "globalSlot": 2064,
+      "itemIndex": 910,
+      "itemNumber": 911,
+      "itemName": "large worn dresser",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_worn_dresser.png",
+      "output": "public/game-assets/items/household/large_worn_dresser_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated large worn dresser, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: large worn dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 14,
+      "row": 2,
+      "column": 4
+    },
+    {
+      "globalSlot": 2065,
+      "itemIndex": 910,
+      "itemNumber": 911,
+      "itemName": "large worn dresser",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/large_worn_dresser.png",
+      "output": "public/game-assets/items/household/large_worn_dresser_many.png",
+      "prompt": "Create a very abundant quantity of large worn dresser, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: large worn dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 15,
+      "row": 2,
+      "column": 5
+    },
+    {
+      "globalSlot": 2066,
+      "itemIndex": 911,
+      "itemNumber": 912,
+      "itemName": "elegant low table",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 90,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/elegant_low_table.png",
+      "output": "public/game-assets/items/household/elegant_low_table.png",
+      "prompt": "Create exactly one clear elegant low table, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: elegant low table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, uncommon, crate, none, furniture, household, finished, crafted, common, fine, locked, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 16,
+      "row": 2,
+      "column": 6
+    },
+    {
+      "globalSlot": 2067,
+      "itemIndex": 911,
+      "itemNumber": 912,
+      "itemName": "elegant low table",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 90,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/elegant_low_table.png",
+      "output": "public/game-assets/items/household/elegant_low_table_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated elegant low table, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: elegant low table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, uncommon, crate, none, furniture, household, finished, crafted, common, fine, locked, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 17,
+      "row": 2,
+      "column": 7
+    },
+    {
+      "globalSlot": 2068,
+      "itemIndex": 911,
+      "itemNumber": 912,
+      "itemName": "elegant low table",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 90,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/elegant_low_table.png",
+      "output": "public/game-assets/items/household/elegant_low_table_many.png",
+      "prompt": "Create a very abundant quantity of elegant low table, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: elegant low table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, uncommon, crate, none, furniture, household, finished, crafted, common, fine, locked, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 18,
+      "row": 2,
+      "column": 8
+    },
+    {
+      "globalSlot": 2069,
+      "itemIndex": 912,
+      "itemNumber": 913,
+      "itemName": "long dresser",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/long_dresser.png",
+      "output": "public/game-assets/items/household/long_dresser.png",
+      "prompt": "Create exactly one clear long dresser, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: long dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 19,
+      "row": 2,
+      "column": 9
+    },
+    {
+      "globalSlot": 2070,
+      "itemIndex": 912,
+      "itemNumber": 913,
+      "itemName": "long dresser",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/long_dresser.png",
+      "output": "public/game-assets/items/household/long_dresser_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated long dresser, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: long dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 20,
+      "row": 2,
+      "column": 10
+    },
+    {
+      "globalSlot": 2071,
+      "itemIndex": 912,
+      "itemNumber": 913,
+      "itemName": "long dresser",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/long_dresser.png",
+      "output": "public/game-assets/items/household/long_dresser_many.png",
+      "prompt": "Create a very abundant quantity of long dresser, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: long dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 21,
+      "row": 3,
+      "column": 1
+    },
+    {
+      "globalSlot": 2072,
+      "itemIndex": 913,
+      "itemNumber": 914,
+      "itemName": "long worn dresser",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/long_worn_dresser.png",
+      "output": "public/game-assets/items/household/long_worn_dresser.png",
+      "prompt": "Create exactly one clear long worn dresser, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: long worn dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 22,
+      "row": 3,
+      "column": 2
+    },
+    {
+      "globalSlot": 2073,
+      "itemIndex": 913,
+      "itemNumber": 914,
+      "itemName": "long worn dresser",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/long_worn_dresser.png",
+      "output": "public/game-assets/items/household/long_worn_dresser_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated long worn dresser, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: long worn dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 23,
+      "row": 3,
+      "column": 3
+    },
+    {
+      "globalSlot": 2074,
+      "itemIndex": 913,
+      "itemNumber": 914,
+      "itemName": "long worn dresser",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/long_worn_dresser.png",
+      "output": "public/game-assets/items/household/long_worn_dresser_many.png",
+      "prompt": "Create a very abundant quantity of long worn dresser, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: long worn dresser. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 24,
+      "row": 3,
+      "column": 4
+    },
+    {
+      "globalSlot": 2075,
+      "itemIndex": 914,
+      "itemNumber": 915,
+      "itemName": "massive elegant table",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 250,
+      "weight": 125,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/massive_elegant_table.png",
+      "output": "public/game-assets/items/household/massive_elegant_table.png",
+      "prompt": "Create exactly one clear massive elegant table, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: massive elegant table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, rare, crate, none, furniture, household, finished, crafted, common, fine, masterwork, locked. It should feel physically large and heavy.",
+      "sheetSlot": 25,
+      "row": 3,
+      "column": 5
+    },
+    {
+      "globalSlot": 2076,
+      "itemIndex": 915,
+      "itemNumber": 916,
+      "itemName": "well crafted low table",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 85,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/well_crafted_low_table.png",
+      "output": "public/game-assets/items/household/well_crafted_low_table.png",
+      "prompt": "Create exactly one clear well crafted low table, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: well crafted low table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 26,
+      "row": 3,
+      "column": 6
+    },
+    {
+      "globalSlot": 2077,
+      "itemIndex": 915,
+      "itemNumber": 916,
+      "itemName": "well crafted low table",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 85,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/well_crafted_low_table.png",
+      "output": "public/game-assets/items/household/well_crafted_low_table_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated well crafted low table, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: well crafted low table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 27,
+      "row": 3,
+      "column": 7
+    },
+    {
+      "globalSlot": 2078,
+      "itemIndex": 915,
+      "itemNumber": 916,
+      "itemName": "well crafted low table",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 85,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/well_crafted_low_table.png",
+      "output": "public/game-assets/items/household/well_crafted_low_table_many.png",
+      "prompt": "Create a very abundant quantity of well crafted low table, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: well crafted low table. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 28,
+      "row": 3,
+      "column": 8
+    },
+    {
+      "globalSlot": 2079,
+      "itemIndex": 916,
+      "itemNumber": 917,
+      "itemName": "metal bed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 75,
+      "weight": 100,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/metal_bed.png",
+      "output": "public/game-assets/items/household/metal_bed.png",
+      "prompt": "Create exactly one clear metal bed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: metal bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 29,
+      "row": 3,
+      "column": 9
+    },
+    {
+      "globalSlot": 2080,
+      "itemIndex": 916,
+      "itemNumber": 917,
+      "itemName": "metal bed",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 75,
+      "weight": 100,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/metal_bed.png",
+      "output": "public/game-assets/items/household/metal_bed_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated metal bed, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: metal bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 30,
+      "row": 3,
+      "column": 10
+    },
+    {
+      "globalSlot": 2081,
+      "itemIndex": 916,
+      "itemNumber": 917,
+      "itemName": "metal bed",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 75,
+      "weight": 100,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/metal_bed.png",
+      "output": "public/game-assets/items/household/metal_bed_many.png",
+      "prompt": "Create a very abundant quantity of metal bed, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: metal bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 31,
+      "row": 4,
+      "column": 1
+    },
+    {
+      "globalSlot": 2082,
+      "itemIndex": 917,
+      "itemNumber": 918,
+      "itemName": "worn nightstand",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/worn_nightstand.png",
+      "output": "public/game-assets/items/household/worn_nightstand.png",
+      "prompt": "Create exactly one clear worn nightstand, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: worn nightstand. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 32,
+      "row": 4,
+      "column": 2
+    },
+    {
+      "globalSlot": 2083,
+      "itemIndex": 917,
+      "itemNumber": 918,
+      "itemName": "worn nightstand",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/worn_nightstand.png",
+      "output": "public/game-assets/items/household/worn_nightstand_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated worn nightstand, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: worn nightstand. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 33,
+      "row": 4,
+      "column": 3
+    },
+    {
+      "globalSlot": 2084,
+      "itemIndex": 917,
+      "itemNumber": 918,
+      "itemName": "worn nightstand",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 50,
+      "weight": 25,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/worn_nightstand.png",
+      "output": "public/game-assets/items/household/worn_nightstand_many.png",
+      "prompt": "Create a very abundant quantity of worn nightstand, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: worn nightstand. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 34,
+      "row": 4,
+      "column": 4
+    },
+    {
+      "globalSlot": 2085,
+      "itemIndex": 918,
+      "itemNumber": 919,
+      "itemName": "purple bed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/purple_bed.png",
+      "output": "public/game-assets/items/household/purple_bed.png",
+      "prompt": "Create exactly one clear purple bed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: purple bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, uncommon, crate, none, furniture, household, finished, crafted, common, fine, bulk_trade, finished_good. It should feel physically large and heavy.",
+      "sheetSlot": 35,
+      "row": 4,
+      "column": 5
+    },
+    {
+      "globalSlot": 2086,
+      "itemIndex": 918,
+      "itemNumber": 919,
+      "itemName": "purple bed",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/purple_bed.png",
+      "output": "public/game-assets/items/household/purple_bed_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated purple bed, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: purple bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, uncommon, crate, none, furniture, household, finished, crafted, common, fine, bulk_trade, finished_good. It should feel physically large and heavy.",
+      "sheetSlot": 36,
+      "row": 4,
+      "column": 6
+    },
+    {
+      "globalSlot": 2087,
+      "itemIndex": 918,
+      "itemNumber": 919,
+      "itemName": "purple bed",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/purple_bed.png",
+      "output": "public/game-assets/items/household/purple_bed_many.png",
+      "prompt": "Create a very abundant quantity of purple bed, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: purple bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, uncommon, crate, none, furniture, household, finished, crafted, common, fine, bulk_trade, finished_good. It should feel physically large and heavy.",
+      "sheetSlot": 37,
+      "row": 4,
+      "column": 7
+    },
+    {
+      "globalSlot": 2088,
+      "itemIndex": 919,
+      "itemNumber": 920,
+      "itemName": "narrow purple bed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 80,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/narrow_purple_bed.png",
+      "output": "public/game-assets/items/household/narrow_purple_bed.png",
+      "prompt": "Create exactly one clear narrow purple bed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: narrow purple bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 38,
+      "row": 4,
+      "column": 8
+    },
+    {
+      "globalSlot": 2089,
+      "itemIndex": 919,
+      "itemNumber": 920,
+      "itemName": "narrow purple bed",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 80,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/narrow_purple_bed.png",
+      "output": "public/game-assets/items/household/narrow_purple_bed_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated narrow purple bed, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: narrow purple bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 39,
+      "row": 4,
+      "column": 9
+    },
+    {
+      "globalSlot": 2090,
+      "itemIndex": 919,
+      "itemNumber": 920,
+      "itemName": "narrow purple bed",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 80,
+      "weight": 40,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/narrow_purple_bed.png",
+      "output": "public/game-assets/items/household/narrow_purple_bed_many.png",
+      "prompt": "Create a very abundant quantity of narrow purple bed, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: narrow purple bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 40,
+      "row": 4,
+      "column": 10
+    },
+    {
+      "globalSlot": 2091,
+      "itemIndex": 920,
+      "itemNumber": 921,
+      "itemName": "red double bed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 150,
+      "weight": 100,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/red_double_bed.png",
+      "output": "public/game-assets/items/household/red_double_bed.png",
+      "prompt": "Create exactly one clear red double bed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: red double bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, uncommon, crate, none, furniture, household, finished, crafted, common, fine, locked, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 41,
+      "row": 5,
+      "column": 1
+    },
+    {
+      "globalSlot": 2092,
+      "itemIndex": 920,
+      "itemNumber": 921,
+      "itemName": "red double bed",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 150,
+      "weight": 100,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/red_double_bed.png",
+      "output": "public/game-assets/items/household/red_double_bed_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated red double bed, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: red double bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, uncommon, crate, none, furniture, household, finished, crafted, common, fine, locked, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 42,
+      "row": 5,
+      "column": 2
+    },
+    {
+      "globalSlot": 2093,
+      "itemIndex": 920,
+      "itemNumber": 921,
+      "itemName": "red double bed",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "uncommon",
+      "qualityBands": [
+        "common",
+        "fine"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 150,
+      "weight": 100,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/red_double_bed.png",
+      "output": "public/game-assets/items/household/red_double_bed_many.png",
+      "prompt": "Create a very abundant quantity of red double bed, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: red double bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, uncommon, crate, none, furniture, household, finished, crafted, common, fine, locked, bulk_trade. It should feel physically large and heavy.",
+      "sheetSlot": 43,
+      "row": 5,
+      "column": 3
+    },
+    {
+      "globalSlot": 2094,
+      "itemIndex": 921,
+      "itemNumber": 922,
+      "itemName": "red bed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/red_bed.png",
+      "output": "public/game-assets/items/household/red_bed.png",
+      "prompt": "Create exactly one clear red bed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: red bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 44,
+      "row": 5,
+      "column": 4
+    },
+    {
+      "globalSlot": 2095,
+      "itemIndex": 921,
+      "itemNumber": 922,
+      "itemName": "red bed",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/red_bed.png",
+      "output": "public/game-assets/items/household/red_bed_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated red bed, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: red bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 45,
+      "row": 5,
+      "column": 5
+    },
+    {
+      "globalSlot": 2096,
+      "itemIndex": 921,
+      "itemNumber": 922,
+      "itemName": "red bed",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 80,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/red_bed.png",
+      "output": "public/game-assets/items/household/red_bed_many.png",
+      "prompt": "Create a very abundant quantity of red bed, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: red bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 46,
+      "row": 5,
+      "column": 6
+    },
+    {
+      "globalSlot": 2097,
+      "itemIndex": 922,
+      "itemNumber": 923,
+      "itemName": "royal bed",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single",
+      "variantReason": null,
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy",
+          "valuable_small"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "rare",
+      "qualityBands": [
+        "common",
+        "fine",
+        "masterwork"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [
+        "locked"
+      ],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 300,
+      "weight": 175,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/royal_bed.png",
+      "output": "public/game-assets/items/household/royal_bed.png",
+      "prompt": "Create exactly one clear royal bed, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: royal bed. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, rare, crate, none, furniture, household, finished, crafted, common, fine, masterwork, locked. It should feel physically large and heavy.",
+      "sheetSlot": 47,
+      "row": 5,
+      "column": 7
+    },
+    {
+      "globalSlot": 2098,
+      "itemIndex": 923,
+      "itemNumber": 924,
+      "itemName": "shelf",
+      "variant": "single",
+      "variantName": "one",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/shelf.png",
+      "output": "public/game-assets/items/household/shelf.png",
+      "prompt": "Create exactly one clear shelf, with no extra duplicate pieces. Make it an ultra-cartoony magical fantasy game icon. Item: shelf. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 48,
+      "row": 5,
+      "column": 8
+    },
+    {
+      "globalSlot": 2099,
+      "itemIndex": 923,
+      "itemNumber": 924,
+      "itemName": "shelf",
+      "variant": "few",
+      "variantName": "few",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/shelf.png",
+      "output": "public/game-assets/items/household/shelf_few.png",
+      "prompt": "Create exactly 3 to 5 clearly separated shelf, arranged naturally as a few crate quantity. It must visibly contain more pieces than the one version but far fewer than the many version. Make it an ultra-cartoony magical fantasy game icon. Item: shelf. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 49,
+      "row": 5,
+      "column": 9
+    },
+    {
+      "globalSlot": 2100,
+      "itemIndex": 923,
+      "itemNumber": 924,
+      "itemName": "shelf",
+      "variant": "many",
+      "variantName": "many",
+      "variantPolicy": "single_few_many",
+      "variantReason": "crate quantity",
+      "tags": [
+        "furniture",
+        "household",
+        "finished"
+      ],
+      "family": "household",
+      "subfamily": "furniture",
+      "tradeRole": "finished",
+      "categoryAxes": {
+        "material": [],
+        "productionStage": [
+          "finished_good"
+        ],
+        "freshness": [],
+        "legalSocial": [
+          "ordinary"
+        ],
+        "marketBehavior": [
+          "bulk_trade"
+        ],
+        "storageHandling": [
+          "heavy"
+        ],
+        "artVariant": [
+          "crate",
+          "single_object",
+          "separated_group",
+          "overflowing_pile"
+        ],
+        "featureHooks": []
+      },
+      "forms": [
+        "one",
+        "few",
+        "many"
+      ],
+      "sources": [
+        "crafted"
+      ],
+      "rarityBand": "common",
+      "qualityBands": [
+        "common"
+      ],
+      "bulkProfile": "crate",
+      "storageNeeds": [],
+      "decayProfile": "none",
+      "marketBehavior": [
+        "bulk_trade"
+      ],
+      "size": 100,
+      "weight": 50,
+      "rarity": 1,
+      "unique": false,
+      "iconFile": "household/shelf.png",
+      "output": "public/game-assets/items/household/shelf_many.png",
+      "prompt": "Create a very abundant quantity of shelf, at least 12 visible pieces or an overflowing pile, stack, bundle, cluster, crate, bowl, sack, or filled-container version that reads as many crate quantity. It must look much larger than the few version. Make it an ultra-cartoony magical fantasy game icon. Item: shelf. Family: household. Subfamily: furniture. Trade role: finished. Bulk profile: crate. Category cues: household, furniture, finished, common, crate, none, furniture, household, finished, crafted, common, bulk_trade, finished_good, ordinary. It should feel physically large and heavy.",
+      "sheetSlot": 50,
+      "row": 5,
+      "column": 10
+    }
+  ]
+}
