@@ -1,6 +1,6 @@
 # 03 - Game Logic And Roadmap
 
-This is the only roadmap doc. Keep current gameplay status, next UI work, and character/portrait gates here instead of adding per-step completion docs.
+This is the only roadmap doc. Keep current gameplay status, next UI work, character/portrait gates, quest-overhaul gates, and vertical-slice milestones here instead of adding per-step completion docs.
 
 ## Current foundation status
 
@@ -11,9 +11,19 @@ This is the only roadmap doc. Keep current gameplay status, next UI work, and ch
 - NPC stock is generated from stock tiers, archetypes, profession profiles, lifestyle baselines, named overrides, and generated-data bias.
 - Economy helpers cover wallet value, denominations, inventory value, capacity, affordability, and trade summaries.
 - Travel helpers cover route lookup, tolls, stallage, risk preview, capacity blockers, illegal cargo warnings, and arrival summaries.
-- Quest/runtime helpers support typed state transactions, contracts, item consumption, rewards, market unlocks, and dialogue logs.
+- Quest/runtime helpers currently support typed state transactions, contracts, item consumption, rewards, market unlocks, and dialogue logs, but quest content must be overhauled for the remake.
 - Company helpers support warehouses, shipments, insurance, cash, valuation, agents, shares, and dividends.
 - The Strategy Planner exposes the first playable UI integration pass for trade, cargo, routes, quests/contracts, company state, and action blockers.
+
+## Confirmed remake direction
+
+The remake should not keep old reference-game public-facing content as the creative target.
+
+Confirmed replacement areas:
+
+1. **Characters** - replace public-facing names, stories, portraits, role tags, and dialogue flavor while keeping mechanical anchors stable until runtime migration is safe.
+2. **Quests** - replace old marketplace quests with a new original rich quest system focused on merchant stories, meaningful choices, and campaign goals.
+3. **Playable loop** - after portraits and quests are integrated, focus on a vertical slice instead of producing more loose assets.
 
 ## Next playable UI work
 
@@ -73,20 +83,12 @@ Character work should move in larger useful chunks:
 2. legacy identity catalog and portrait manifests are complete;
 3. final visible roster, expression counts, and all-cast sheet order are normalized;
 4. generate full portrait sheets only after all character prompts are finished and reviewed;
-5. integrate remake identities and portraits into market, barter, quest, and company UI.
+5. crop and clean the generated sheets into runtime portrait assets;
+6. integrate remake identities and portraits into market, barter, quest, and company UI.
 
-## Portrait generation gate
+## Portrait generation and crop gate
 
-Do not generate full portrait sheets until all of these are true:
-
-- final visible roster is reviewed;
-- per-character identity catalog is complete;
-- expression counts and total image count are final;
-- sequential portrait JSON files exist under `docs/assets/character-prompts/`;
-- the small test sheet passes style, consistency, green-background, slot-order, and crop-safety checks;
-- the final all-cast production sequence uses clean 3x4 / 12-image sheets.
-
-Portrait prompts are batched by total image count, not by character count. A single character can have some expressions in one batch and remaining expressions in another batch, as long as every prompt repeats the same identity anchors.
+Portrait generation uses the final `docs/assets/character-prompts/characters-*.json` files.
 
 Approved sheet direction:
 
@@ -94,10 +96,164 @@ Approved sheet direction:
 3 columns x 4 rows
 12 portraits per sheet
 one continuous flat #00FF00 background
-no visible cells, panels, borders, or separators
+filename labels are allowed only as generation/cropping aids when required by the latest prompt JSON
 crop by JSON row/column/order/outputFile
 if generated resolution is smaller than the JSON canvas, scale the crop grid proportionally
 ```
+
+After cropping, final runtime portraits should be placed under:
+
+```text
+public/assets/portraits/characters/
+```
+
+The crop/integration gate passes only when:
+
+```text
+722 expected portrait files exist
+0 missing portrait files
+0 orphan portrait files
+0 duplicate output filenames
+0 visible magenta filename labels remain after cleanup
+all files are valid PNGs
+all filenames match JSON outputFile values
+```
+
+## Quest overhaul direction
+
+The current reference-style marketplace quests are not the remake target. They should be treated as legacy scaffolding until replaced.
+
+The new quest direction is defined in:
+
+```text
+docs/09_RICH_QUEST_SYSTEM_BIBLE.md
+```
+
+Core rule:
+
+```text
+A quest is not a todo.
+A quest is a merchant story with a person, a pressure, a trade problem, a choice, a consequence, and a reward.
+```
+
+The quest system should support three layers:
+
+| Layer | Purpose |
+|---|---|
+| Main campaign quests | Give the player long-term goals, progression, and endings. |
+| Character questlines | Make important NPCs memorable and relationship-driven. |
+| Side quests and contracts | Keep markets alive with rich side stories and repeatable trade work. |
+
+Confirmed main campaign premise:
+
+```text
+The Ledger That Bought a City
+```
+
+The player begins with an old merchant ledger containing debts, favors, forged contracts, hidden route rights, and guild crimes. Through trade, reputation, routes, company growth, and alliances, the player decides what kind of merchant world they will create.
+
+Confirmed campaign acts:
+
+1. **The First Ledger** - learning trade and discovering hidden obligations.
+2. **Roads and Debts** - travel, delivery, tolls, route risk, and disputed cargo.
+3. **The Guild War** - faction pressure, market manipulation, rival merchants, and moral choices.
+4. **The Company Charter** - company registration, warehouse, clerks, caravan rights, and guild seal.
+5. **The Final Market** - endgame decisions, guild vote, rival ledger, and final market future.
+
+Confirmed possible endings:
+
+```text
+Fair Trade Ending
+Guildmaster Ending
+Shadow Ledger Ending
+Free Roads Ending
+Coin Emperor Ending
+Quiet Partner Ending
+```
+
+Quest Overhaul V1 content target:
+
+```text
+25 rich main campaign quests
+10 important NPC questlines
+30 rich side quests
+20 repeatable trade contract templates
+5+ possible campaign endings
+```
+
+Do not implement 100 quests first. Build the quest system and a small vertical slice before expanding the catalog.
+
+## Quest Overhaul V1 milestone
+
+The first quest overhaul milestone should deliver:
+
+1. New quest schema and state model.
+2. New rich quest bible and writing rules.
+3. Main campaign act structure.
+4. First 25 main quest drafts.
+5. First 10 NPC questline outlines.
+6. First 30 side quest concepts.
+7. First 20 repeatable contract templates.
+8. Quest journal UI direction that shows story, stakes, choices, and consequences.
+9. Legacy quest data deprecated from creative/runtime direction.
+10. First vertical-slice quest chain implemented and testable.
+
+Target implementation split:
+
+```text
+src/data/quests/questCatalog.ts
+src/data/quests/mainCampaignQuests.ts
+src/data/quests/characterQuestlines.ts
+src/data/quests/sideQuests.ts
+src/data/quests/repeatableContractTemplates.ts
+src/lib/quest-state.ts
+src/lib/quest-effects.ts
+src/lib/quest-selectors.ts
+src/lib/quest-journal-view-model.ts
+```
+
+Exact file names can change during implementation, but content, state, effects, generated contracts, and UI view models should stay separated.
+
+## First vertical-slice quest chain
+
+After portraits are cropped and integrated, the first playable quest chain should be:
+
+1. **First Honest Profit** - teach trade margins through a story-framed sale.
+2. **Bread Before Dawn** - solve an urgent shortage with multiple approaches.
+3. **The False Scale** - expose, exploit, or ignore cheating market scales.
+4. **Warehouse Lease** - unlock storage using reputation, money, or leverage.
+5. **A Name on the Door** - register the first trading company.
+
+This chain should test:
+
+```text
+quest acceptance
+multi-stage objectives
+item delivery
+profit objective
+NPC trust changes
+city reputation changes
+choice consequences
+quest unlocks
+company unlock
+save/load persistence
+quest journal readability
+```
+
+## Post-crop to vertical-slice roadmap
+
+After cropped portraits are good, the game roadmap is:
+
+1. **Portrait asset lock** - verify all 722 portraits exist, are valid, and have no visible filename labels.
+2. **Runtime portrait manifest** - connect each character expression to the correct file path.
+3. **Character UI integration** - show new portraits/names/stories in markets, barter, dialogue, quests, and company screens.
+4. **Quest Overhaul V1** - replace old quest content direction with the new rich merchant quest system.
+5. **First vertical-slice quest chain** - implement the five-quest chain listed above.
+6. **Playable merchant loop v1** - start in one town, meet NPCs, buy goods, travel, sell for profit, complete a quest, unlock company progress, and save.
+7. **Relationship and consequence pass** - make NPC trust, city reputation, market prices, and route access react to quest choices.
+8. **Company progression pass** - register company, lease warehouse, hire first clerk, and unlock caravan papers.
+9. **Balance/playtest pass** - tune profit, deadlines, travel cost, risk, quest rewards, and reputation gains.
+10. **UI/UX polish pass** - make the loop readable, beautiful, and easy to understand.
 
 ## What is done / what remains
 
@@ -110,11 +266,16 @@ Done:
 - useful-new-NPC identity catalog, 48 characters / 194 portrait prompts;
 - legacy identity batches 001-004, 192 characters / 528 portrait prompts;
 - normalized character prompt files, 61 JSON files / 722 portrait prompts;
-- approved portrait style gate: charming, slightly cartoony, fantasy ancestry variety, single flat green background, crop-safe spacing.
+- approved portrait style gate: charming, slightly cartoony, fantasy ancestry variety, single flat green background, crop-safe spacing;
+- confirmed quest overhaul direction: original rich merchant stories, main campaign goals, character questlines, consequences, and multiple endings.
 
 Remaining:
 
-- review the final 240-character roster and expression counts;
-- only then generate/crop all portrait sheets;
+- review/crop/clean all generated portrait sheets into `public/assets/portraits/characters/`;
 - wire remake character identity and portraits into the runtime UI;
-- add audits for missing portraits, duplicate display names, original-name leaks, missing stories, missing role tags, and orphan files.
+- add audits for missing portraits, duplicate display names, original-name leaks, missing stories, missing role tags, and orphan files;
+- deprecate old reference quest content from gameplay direction;
+- create the new quest catalog and state/effect model;
+- implement the first five-quest vertical-slice chain;
+- connect quest consequences to NPC trust, reputation, market state, routes, and company unlocks;
+- polish the playable merchant loop v1.
