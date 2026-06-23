@@ -1,8 +1,8 @@
 {
   "batchId": "characters-0505-0516",
-  "version": "v4-approved-style-3x4-sequential-production-manifest",
-  "status": "ready_for_generation_in_filename_order_after_final_review",
-  "purpose": "Sequential character portrait production manifest. Generate files in filename order; crop left-to-right and top-to-bottom; name each crop by outputFile.",
+  "version": "v5-labeled-order-check-production-manifest",
+  "status": "ready_for_generation_in_filename_order_with_required_magenta_filename_labels",
+  "purpose": "Sequential character portrait production manifest. Generate files in filename order; include a magenta outputFile label in each cell to verify order; crop left-to-right and top-to-bottom; name each crop by outputFile.",
   "batch": {
     "firstGlobalSlot": 505,
     "lastGlobalSlot": 516,
@@ -14,7 +14,7 @@
     "rows": 4,
     "totalCells": 12,
     "background": "#00FF00",
-    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators",
+    "backgroundRule": "one continuous flat green background; no visible cell panels, grid lines, borders, gradients, or separators; only the required magenta filename label may appear as text",
     "fillOrder": "left-to-right top-to-bottom",
     "targetCanvas": {
       "width": 3072,
@@ -24,17 +24,46 @@
       "width": 1024,
       "height": 1024
     },
-    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters"
+    "visibleSpacingRule": "portraits should be scaled down inside each crop cell so there is clear green space between adjacent characters and a clear bottom-left label area"
+  },
+  "filenameLabelRules": {
+    "enabled": true,
+    "textSource": "outputFile",
+    "textColor": "#FF00FF",
+    "placement": "bottom-left corner inside each crop cell",
+    "font": "simple bold readable font",
+    "style": "no outline, no shadow, no glow, no gradient",
+    "separationRule": "Label must sit on empty #00FF00 green only and stay fully separated from the character art, clothing, hair, props, shadows, glow, and accessories.",
+    "safetyGapRule": "Keep a clear empty green safety gap around the label. Keep the character centered and scaled down so the label does not touch the portrait or props.",
+    "finalAssetWarning": "The filename label is intentionally part of the generated sheet to verify order. Crop outputs will include the label unless a later cleanup pass removes it."
   },
   "cropNamingRules": [
     "Generate sheets in filename order.",
     "Crop by row/column/cropCell from this JSON, not by visual guessing.",
     "Name each cropped file exactly as outputFile.",
     "If the generated sheet resolution differs, scale crop coordinates proportionally from the actual width/height while preserving 3 columns by 4 rows.",
-    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess."
+    "If a portrait touches a crop-cell edge or crosses a cell boundary, reject the sheet instead of naming by guess.",
+    "Every cell must include a small readable filename label using that image entry outputFile.",
+    "The filename label must be pure magenta #FF00FF and placed in the bottom-left corner of its crop cell.",
+    "The label must be fully separated from the character art and surrounded by empty green #00FF00 safety space.",
+    "If a label is missing, unreadable, wrong, or touches the character/props, reject the sheet instead of cropping it."
   ],
-  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified.",
+  "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified. Put a small readable filename label in the bottom-left corner of each cell. The label text must exactly match that entry outputFile, use pure magenta #FF00FF, simple bold readable font, no outline, no shadow, no glow, no gradient. Keep the label fully separated from the character art on empty green #00FF00 with a clear safety gap.",
   "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
+  "sheetOrderLock": [
+    "R1C1 = npc-legacy-112-suspicious.png — Pell Oatwhistle, grain futures clerk, suspicious, halfling",
+    "R1C2 = npc-legacy-112-worried.png — Pell Oatwhistle, grain futures clerk, worried, halfling",
+    "R1C3 = npc-legacy-112-angry.png — Pell Oatwhistle, grain futures clerk, angry, halfling",
+    "R2C1 = npc-legacy-113-neutral.png — Seraphine Bellwater, canal ferry master, neutral, river-elf",
+    "R2C2 = npc-legacy-113-happy.png — Seraphine Bellwater, canal ferry master, happy, river-elf",
+    "R2C3 = npc-legacy-113-suspicious.png — Seraphine Bellwater, canal ferry master, suspicious, river-elf",
+    "R3C1 = npc-legacy-113-worried.png — Seraphine Bellwater, canal ferry master, worried, river-elf",
+    "R3C2 = npc-legacy-113-angry.png — Seraphine Bellwater, canal ferry master, angry, river-elf",
+    "R3C3 = npc-legacy-114-neutral.png — Grinda Ashcake, festival cook, neutral, fire-touched dwarf",
+    "R4C1 = npc-legacy-114-happy.png — Grinda Ashcake, festival cook, happy, fire-touched dwarf",
+    "R4C2 = npc-legacy-114-suspicious.png — Grinda Ashcake, festival cook, suspicious, fire-touched dwarf",
+    "R4C3 = npc-legacy-114-worried.png — Grinda Ashcake, festival cook, worried, fire-touched dwarf"
+  ],
   "order": [
     "1. npc-legacy-112-suspicious",
     "2. npc-legacy-112-worried",
@@ -84,9 +113,17 @@
         "oat sample pouch"
       ],
       "prompt": "A tiny halfling man with sandy curls, oversized green coat, ink-stained fingers, and scrolls of grain contracts strapped like wings. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 505,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-112-suspicious.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     },
     {
       "order": 2,
@@ -122,9 +159,17 @@
         "oat sample pouch"
       ],
       "prompt": "A tiny halfling man with sandy curls, oversized green coat, ink-stained fingers, and scrolls of grain contracts strapped like wings. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 506,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-112-worried.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     },
     {
       "order": 3,
@@ -160,9 +205,17 @@
         "oat sample pouch"
       ],
       "prompt": "A tiny halfling man with sandy curls, oversized green coat, ink-stained fingers, and scrolls of grain contracts strapped like wings. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 507,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-112-angry.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     },
     {
       "order": 4,
@@ -200,9 +253,17 @@
         "reed pole"
       ],
       "prompt": "A tall blue-skinned river-elf woman with silver wet hair, lacquered reed hat, turquoise coat, and a chain of tiny brass ferry bells across her chest. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 508,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-113-neutral.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     },
     {
       "order": 5,
@@ -240,9 +301,17 @@
         "reed pole"
       ],
       "prompt": "A tall blue-skinned river-elf woman with silver wet hair, lacquered reed hat, turquoise coat, and a chain of tiny brass ferry bells across her chest. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 509,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-113-happy.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     },
     {
       "order": 6,
@@ -280,9 +349,17 @@
         "reed pole"
       ],
       "prompt": "A tall blue-skinned river-elf woman with silver wet hair, lacquered reed hat, turquoise coat, and a chain of tiny brass ferry bells across her chest. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 510,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-113-suspicious.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     },
     {
       "order": 7,
@@ -320,9 +397,17 @@
         "reed pole"
       ],
       "prompt": "A tall blue-skinned river-elf woman with silver wet hair, lacquered reed hat, turquoise coat, and a chain of tiny brass ferry bells across her chest. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 511,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-113-worried.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     },
     {
       "order": 8,
@@ -360,9 +445,17 @@
         "reed pole"
       ],
       "prompt": "A tall blue-skinned river-elf woman with silver wet hair, lacquered reed hat, turquoise coat, and a chain of tiny brass ferry bells across her chest. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 512,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-113-angry.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     },
     {
       "order": 9,
@@ -400,9 +493,17 @@
         "spice pouch"
       ],
       "prompt": "A stout fire-touched dwarf woman with cinnamon skin, soot-dusted cheeks, red scarf, enormous wooden spoon, and a copper pot lid used like a shield. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 513,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-114-neutral.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     },
     {
       "order": 10,
@@ -440,9 +541,17 @@
         "spice pouch"
       ],
       "prompt": "A stout fire-touched dwarf woman with cinnamon skin, soot-dusted cheeks, red scarf, enormous wooden spoon, and a copper pot lid used like a shield. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 514,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-114-happy.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     },
     {
       "order": 11,
@@ -480,9 +589,17 @@
         "spice pouch"
       ],
       "prompt": "A stout fire-touched dwarf woman with cinnamon skin, soot-dusted cheeks, red scarf, enormous wooden spoon, and a copper pot lid used like a shield. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 515,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-114-suspicious.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     },
     {
       "order": 12,
@@ -520,9 +637,17 @@
         "spice pouch"
       ],
       "prompt": "A stout fire-touched dwarf woman with cinnamon skin, soot-dusted cheeks, red scarf, enormous wooden spoon, and a copper pot lid used like a shield. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Keep the complete character and every prop inside the assigned invisible crop cell. Keep the visible bust slightly smaller than the cell, with clear green padding around all edges. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, or grid lines.",
-      "negativePrompt": "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
+      "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "globalOrder": 516,
-      "batchId": "characters-0505-0516"
+      "batchId": "characters-0505-0516",
+      "filenameLabel": {
+        "text": "npc-legacy-114-worried.png",
+        "color": "#FF00FF",
+        "placement": "bottom-left corner inside this crop cell",
+        "font": "simple bold readable font",
+        "style": "no outline, no shadow, no glow, no gradient",
+        "separationRule": "label sits on empty green #00FF00 only; do not let it touch clothing, hair, props, shadows, glow, or accessories"
+      }
     }
   ]
 }

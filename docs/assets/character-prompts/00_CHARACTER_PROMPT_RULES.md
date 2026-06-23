@@ -16,17 +16,19 @@ Generate sheets in filename order. Do not use old category words such as useful,
 
 ## Current approved direction
 
-Use the approved V4 test direction unless a later prompt manifest says otherwise:
+Use the approved labeled V5 direction unless a later prompt manifest says otherwise:
 
 ```text
 3 columns x 4 rows = 12 portraits per sheet
 One flat solid #00FF00 background
-No visible grid lines, borders, labels, text, or colored cell panels
-Large green empty space between visible characters
+No visible grid lines, borders, colored cell panels, separators, gradients, or watermarks
+Each cell includes one pure magenta #FF00FF filename label in the bottom-left corner
+The label text is exactly the JSON entry `outputFile`
+Large green empty space between visible characters, labels, and crop-cell edges
 Crop by JSON order / row / column / cropCell / outputFile
 ```
 
-The sheet can be visually one continuous green background. The cropper will use the JSON crop cells, so the image itself must not draw cell backgrounds, frames, or separators.
+The sheet can be visually one continuous green background. The cropper will use the JSON crop cells, so the image itself must not draw cell backgrounds, frames, or separators. The only allowed text in the image is the required magenta filename label.
 
 ## Core batching rule
 
@@ -47,6 +49,7 @@ Every portrait JSON entry must include:
 ```json
 {
   "order": 1,
+  "globalOrder": 1,
   "row": 1,
   "column": 1,
   "cell": "R1C1",
@@ -54,25 +57,49 @@ Every portrait JSON entry must include:
   "characterId": "npc-new-001",
   "expression": "neutral",
   "outputFile": "npc-new-001-neutral.png",
-  "cropCell": { "x": 0, "y": 0, "width": 1024, "height": 1024 }
+  "cropCell": { "x": 0, "y": 0, "width": 1024, "height": 1024 },
+  "filenameLabel": {
+    "text": "npc-new-001-neutral.png",
+    "color": "#FF00FF",
+    "placement": "bottom-left corner inside this crop cell"
+  }
 }
 ```
 
 The cropper must name files by `outputFile`, not by visual guessing.
+
+## Filename label rules
+
+The filename label exists to prevent order mistakes during generation and cropping.
+
+Rules:
+
+- Every generated portrait cell must include a small readable filename label.
+- Label text must exactly equal the entry `outputFile`.
+- Label color must be pure magenta `#FF00FF`.
+- Use a simple bold readable font.
+- No outline, no shadow, no glow, no gradient.
+- Place the label in the bottom-left corner of the crop cell only.
+- Keep the label fully separated from character art.
+- Do not let the label touch clothing, hair, props, shadows, glow, accessories, hands, or feet.
+- Keep a clear empty green safety gap around the label.
+- Keep the character centered and scaled down so the label has its own empty green area.
+- If a label is missing, unreadable, wrong, or touches the character/props, reject the sheet.
 
 ## Sheet generation rules
 
 - One sheet only per batch.
 - Generate `characters-*.json` files in filename order.
 - Use the exact grid, canvas, crop cells, and image order from the JSON.
+- The `sheetOrderLock` field is the highest-priority placement guide for cell identity/order.
 - Fill cells left-to-right by row, top-to-bottom.
 - Never reorder, skip, duplicate, merge, or invent images.
 - Use a single flat solid `#00FF00` background across the whole sheet.
-- No checkerboard, gradients, shadows on the background, visible grid lines, borders, labels, names, text, numbers, UI frames, or watermarks.
+- No checkerboard, gradients, shadows on the background, visible grid lines, borders, names beyond the required filename label, extra text, UI frames, or watermarks.
 - Each portrait must stay fully inside its own invisible square crop cell.
-- Keep visible green padding around head, hair, hats, shoulders, elbows, hands, tools, mugs, papers, plants, hooks, bells, weapons, bags, and accessories.
+- Keep visible green padding around head, hair, hats, shoulders, elbows, hands, tools, mugs, papers, plants, hooks, bells, weapons, bags, accessories, and the filename label.
 - If a character is broad or has big props, scale the bust down instead of cropping them.
-- Keep portraits slightly smaller than the cell so adjacent characters do not visually crowd each other.
+- Keep portraits slightly smaller than the cell so adjacent characters do not visually crowd each other and labels stay clear.
 
 ## Character style direction
 
@@ -129,5 +156,5 @@ special: custom expression list based on story role
 ## Negative prompt baseline
 
 ```text
-Do not change identity between expressions. No duplicate faces. No boring plain medieval worker. No modern clothing. No text. No labels. No letters. No numbers. No UI frame. No border. No watermark. No cropped-off head. No cropped shoulders. No cropped hands. No cropped props. No extra limbs. No full-body scene. No photorealism. No generic medieval peasant clone. No same face repeated for different characters. No flat muddy colors. No busy background.
+Do not change identity between expressions. No duplicate faces. No boring plain medieval worker. No modern clothing. No extra text beyond the required pure magenta outputFile filename label. No extra labels beyond the required outputFile filename label. No UI frame. No border. No watermark. No cropped-off head. No cropped shoulders. No cropped hands. No cropped props. No extra limbs. No full-body scene. No photorealism. No generic medieval peasant clone. No same face repeated for different characters. No flat muddy colors. No busy background.
 ```
