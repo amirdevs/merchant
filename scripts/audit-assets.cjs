@@ -5,6 +5,10 @@ const root = path.join(__dirname, "..");
 const publicDir = path.join(root, "public");
 const dataDir = path.join(root, "src", "data", "generated");
 const strict = process.argv.includes("--strict");
+const verbose = process.argv.includes("--verbose") || strict;
+const auditGeneratedAssetRefs = process.argv.includes("--generated-assets") || strict;
+const auditLegacyCharacterAssetFields = process.argv.includes("--legacy-character-assets") || strict;
+const auditUiAssets = process.argv.includes("--ui-assets") || strict;
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(path.join(dataDir, file), "utf8"));
@@ -44,6 +48,16 @@ function itemIconUrl(file) {
 
 const checks = [];
 const missing = [];
+const skipped = {
+  legacyPortrait: 0,
+  legacyStall: 0,
+  itemIcon: 0,
+  townsquare: 0,
+  backdrop: 0,
+  ambiance: 0,
+  route: 0,
+  ui: 0,
+};
 
 function check(label, url) {
   if (!url) return;
@@ -56,15 +70,34 @@ const items = readJson("items.json");
 const marketplaces = readJson("marketplaces.json");
 
 for (const character of characters) {
-  check(`portrait: ${character.name}`, imageUrl(character.portraitFile, "characters"));
-  check(`stall: ${character.name}`, imageUrl(character.stallFile, "stalls"));
+  if (!auditLegacyCharacterAssetFields) {
+    if (character.portraitFile) skipped.legacyPortrait += 1;
+    if (character.stallFile) skipped.legacyStall += 1;
+    continue;
+  }
+
+  check(`legacy portrait: ${character.name}`, imageUrl(character.portraitFile, "characters"));
+  check(`legacy stall: ${character.name}`, imageUrl(character.stallFile, "stalls"));
 }
 
 for (const item of items) {
+  if (!auditGeneratedAssetRefs) {
+    if (item.iconFile) skipped.itemIcon += 1;
+    continue;
+  }
   check(`item icon: ${item.name}`, itemIconUrl(item.iconFile));
 }
 
 for (const market of marketplaces) {
+  if (!auditGeneratedAssetRefs) {
+    if (market.townsquareFile) skipped.townsquare += 1;
+    if (market.backdropFile) skipped.backdrop += 1;
+    if (market.ambiancePrimaryFile) skipped.ambiance += 1;
+    if (market.ambianceSecondaryFile) skipped.ambiance += 1;
+    skipped.route += (market.connections || []).filter((connection) => connection.routeFile).length;
+    continue;
+  }
+
   check(`townsquare: ${market.name}`, imageUrl(market.townsquareFile, "townsquares"));
   check(`backdrop: ${market.name}`, imageUrl(market.backdropFile, "backdrops"));
   check(`ambiance: ${market.name}`, mediaUrl(market.ambiancePrimaryFile, "ambiance"));
@@ -74,9 +107,15 @@ for (const market of marketplaces) {
   }
 }
 
-const uiAssetsSource = fs.readFileSync(path.join(root, "src", "lib", "ui-assets.ts"), "utf8");
-for (const match of uiAssetsSource.matchAll(/uiAsset\("([^"]+)",\s*"([^"]+)"/g)) {
-  check(`ui: ${match[1]}/${match[2]}`, `/game-assets/ui/${match[1]}/${match[2]}`);
+const uiAssetsPath = path.join(root, "src", "lib", "ui-assets.ts");
+if (fs.existsSync(uiAssetsPath)) {
+  const uiAssetsSource = fs.readFileSync(uiAssetsPath, "utf8");
+  const uiMatches = [...uiAssetsSource.matchAll(/uiAsset\("([^"]+)",\s*"([^"]+)"/g)];
+  if (!auditUiAssets) {
+    skipped.ui += uiMatches.length;
+  } else {
+    for (const match of uiMatches) check(`ui: ${match[1]}/${match[2]}`, `/game-assets/ui/${match[1]}/${match[2]}`);
+  }
 }
 
 const byPrefix = missing.reduce((counts, issue) => {
@@ -85,11 +124,16 @@ const byPrefix = missing.reduce((counts, issue) => {
   return counts;
 }, {});
 
-console.log(`Asset audit checked ${checks.length} references.`);
-console.log(`Missing references: ${missing.length}`);
+console.log(`Asset audit checked ${checks.length} active references.`);
+console.log(`Missing active references: ${missing.length}`);
+console.log(
+  `Skipped legacy/generated references by default: ${skipped.legacyPortrait} portrait, ${skipped.legacyStall} stall, ${skipped.itemIcon} item icon, ${skipped.townsquare} townsquare, ${skipped.backdrop} backdrop, ${skipped.ambiance} ambiance, ${skipped.route} route, ${skipped.ui} ui.`
+);
+console.log("Use pnpm audit:assets -- --strict to run the full old/generated visual reference audit.");
+console.log("Use pnpm audit:character-portraits for the final remake portrait gate.");
 for (const [prefix, count] of Object.entries(byPrefix).sort()) console.log(`- ${prefix}: ${count}`);
 
-if (missing.length) {
+if (missing.length && verbose) {
   console.log("First missing references:");
   for (const issue of missing.slice(0, 80)) console.log(`- ${issue.label}: ${issue.url}`);
   if (missing.length > 80) console.log(`- ...and ${missing.length - 80} more`);

@@ -7,6 +7,15 @@ const imgsDir = path.join(publicDir, "game-assets", "imgs");
 const mediaDir = path.join(publicDir, "game-assets", "media");
 const dataDir = path.join(root, "src", "data", "generated");
 
+// Default audit:data is a structural/data-shape gate.
+// The original generated data still contains many old reference-game visual
+// filenames for townsquares, backdrops, ambiance, routes, portraits, and stalls.
+// Those are no longer the Phase 1 runtime source of truth. Keep strict legacy
+// visual checks opt-in so verify:current-state is not blocked by retired assets.
+const auditLegacyCharacterAssetFields = process.argv.includes("--legacy-character-assets");
+const auditLegacyWorldAssetFields = process.argv.includes("--legacy-world-assets") || process.argv.includes("--legacy-market-assets");
+const strictLegacyAssets = process.argv.includes("--strict-assets");
+
 function readJson(file) {
   return JSON.parse(fs.readFileSync(path.join(dataDir, file), "utf8"));
 }
@@ -43,6 +52,12 @@ const professions = readJson("professions.json");
 const manifest = readJson("manifest.json");
 
 const problems = [];
+let skippedLegacyPortraitFields = 0;
+let skippedLegacyStallFields = 0;
+let skippedLegacyTownsquareFields = 0;
+let skippedLegacyBackdropFields = 0;
+let skippedLegacyAmbianceFields = 0;
+let skippedLegacyRouteFields = 0;
 
 function expectCount(name, actual) {
   const expected = manifest.counts[name];
@@ -55,27 +70,45 @@ expectCount("marketplaces", marketplaces.length);
 expectCount("professions", Object.keys(professions).length);
 
 for (const character of characters) {
+  if (!auditLegacyCharacterAssetFields && !strictLegacyAssets) {
+    if (character.portraitFile) skippedLegacyPortraitFields += 1;
+    if (character.stallFile) skippedLegacyStallFields += 1;
+    continue;
+  }
+
   if (character.portraitFile && !exists(imagePath(character.portraitFile, "characters"))) {
-    problems.push(`Missing portrait for ${character.name}: ${character.portraitFile}`);
+    problems.push(`Missing legacy portrait for ${character.name}: ${character.portraitFile}`);
   }
   if (character.stallFile && !exists(imagePath(character.stallFile, "stalls"))) {
-    problems.push(`Missing stall for ${character.name}: ${character.stallFile}`);
+    problems.push(`Missing legacy stall for ${character.name}: ${character.stallFile}`);
   }
 }
 
 for (const market of marketplaces) {
+  if (!auditLegacyWorldAssetFields && !strictLegacyAssets) {
+    if (market.townsquareFile) skippedLegacyTownsquareFields += 1;
+    if (market.backdropFile) skippedLegacyBackdropFields += 1;
+    if (market.ambiancePrimaryFile) skippedLegacyAmbianceFields += 1;
+    if (market.ambianceSecondaryFile) skippedLegacyAmbianceFields += 1;
+    skippedLegacyRouteFields += (market.connections || []).filter((connection) => connection.routeFile).length;
+    continue;
+  }
+
   if (market.townsquareFile && !exists(imagePath(market.townsquareFile, "townsquares"))) {
-    problems.push(`Missing townsquare for ${market.name}: ${market.townsquareFile}`);
+    problems.push(`Missing legacy townsquare for ${market.name}: ${market.townsquareFile}`);
   }
   if (market.backdropFile && !exists(imagePath(market.backdropFile, "backdrops"))) {
-    problems.push(`Missing backdrop for ${market.name}: ${market.backdropFile}`);
+    problems.push(`Missing legacy backdrop for ${market.name}: ${market.backdropFile}`);
   }
   if (market.ambiancePrimaryFile && !exists(mediaPath(market.ambiancePrimaryFile, "ambiance"))) {
-    problems.push(`Missing ambiance for ${market.name}: ${market.ambiancePrimaryFile}`);
+    problems.push(`Missing legacy ambiance for ${market.name}: ${market.ambiancePrimaryFile}`);
+  }
+  if (market.ambianceSecondaryFile && !exists(mediaPath(market.ambianceSecondaryFile, "ambiance"))) {
+    problems.push(`Missing legacy ambiance for ${market.name}: ${market.ambianceSecondaryFile}`);
   }
   for (const connection of market.connections || []) {
-    if (!exists(imagePath(connection.routeFile, "routes"))) {
-      problems.push(`Missing route ${market.name} -> ${connection.marketplaceIndex}: ${connection.routeFile}`);
+    if (connection.routeFile && !exists(imagePath(connection.routeFile, "routes"))) {
+      problems.push(`Missing legacy route ${market.name} -> ${connection.marketplaceIndex}: ${connection.routeFile}`);
     }
   }
 }
@@ -92,3 +125,13 @@ console.log(`Characters: ${characters.length}`);
 console.log(`Items: ${items.length}`);
 console.log(`Marketplaces: ${marketplaces.length}`);
 console.log(`Professions: ${Object.keys(professions).length}`);
+if (!auditLegacyCharacterAssetFields && !strictLegacyAssets) {
+  console.log(`Skipped legacy character asset fields: ${skippedLegacyPortraitFields} portraitFile, ${skippedLegacyStallFields} stallFile.`);
+  console.log("Run pnpm audit:character-portraits for the final remake portrait gate.");
+}
+if (!auditLegacyWorldAssetFields && !strictLegacyAssets) {
+  console.log(
+    `Skipped legacy world asset fields: ${skippedLegacyTownsquareFields} townsquare, ${skippedLegacyBackdropFields} backdrop, ${skippedLegacyAmbianceFields} ambiance, ${skippedLegacyRouteFields} route.`
+  );
+  console.log("Run pnpm audit:data -- --legacy-world-assets to inspect retired/generated world visual references.");
+}

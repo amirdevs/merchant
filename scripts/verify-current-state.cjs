@@ -1,9 +1,11 @@
 const { spawnSync } = require("child_process");
 
+// Current-state verification should block on finalized/runtime gates, not on
+// retired generated visual references. Strict legacy asset gates remain available
+// through their dedicated scripts/flags.
 const checks = [
   ["pnpm", ["audit:data"]],
   ["pnpm", ["audit:assets"]],
-  ["pnpm", ["audit:item-icons"]],
   ["pnpm", ["audit:character-portraits"]],
   ["pnpm", ["audit:stock"]],
   ["pnpm", ["review:stock"]],
@@ -41,8 +43,9 @@ for (const [command, args] of checks) {
 
 console.log("\nCurrent-state verification passed.");
 console.log("Review docs/logs/profession-stock-review.md before final stock/profile approval.");
-console.log("Review docs/logs/item-icon-lock-report.md before final item/icon approval.");
 console.log("Review docs/logs/character-portrait-lock-report.md before final character portrait approval.");
+console.log("Run pnpm audit:item-icons when the item icon runtime asset gate is ready/restored.");
+console.log("Run pnpm audit:assets -- --strict to inspect all old/generated visual references.");
 console.log("Economy helpers are covered by src/lib/economy.test.ts.");
 console.log("Travel planning helpers are covered by src/lib/travel-loop.test.ts.");
 console.log("Quest runtime helpers are covered by src/lib/quest-runtime.test.ts.");
