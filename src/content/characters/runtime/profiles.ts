@@ -1,5 +1,6 @@
 import runtimeProfileDataJson from "./profiles.data.json";
 import { characterMerchandiseAssignmentById } from "../merchandise";
+import { resolveProfileStockPersona } from "../merchandise/stock-personas";
 import type { FinalCharacterIdentityProfile } from "../profiles/types";
 import type { Bias, Character, ObtainableItem } from "@/shared/types/game-data";
 import type { CharacterRuntimeProfileRecord } from "./types";
@@ -80,6 +81,7 @@ export function buildRuntimeCharacters(options: {
 
     const neutralPortrait = options.neutralPortraitByCharacterId?.get(profile.characterId) || `${profile.characterId}-neutral.png`;
     const merchandise = characterMerchandiseAssignmentById.get(profile.characterId);
+    const stockPersona = resolveProfileStockPersona(identity);
     const dialogue = profile.dialogueBehavior;
     const character: Character = {
       characterId: profile.characterId,
@@ -109,9 +111,9 @@ export function buildRuntimeCharacters(options: {
       reachingDealPercent: profile.reachingDealPercent,
       farFromDealPercent: profile.farFromDealPercent || undefined,
       dialogue: dialogue && Object.keys(dialogue).length ? { ...dialogue } : undefined,
-      bias: mergeBiases(profile.tradeBias, merchandise?.stockBias),
-      obtainableItems: mergeObtainableItems(profile.obtainableItems, merchandise?.stockPools),
-      excludedObtainItems: [...profile.excludedObtainItems],
+      bias: mergeBiases(mergeBiases(profile.tradeBias, stockPersona.stockBias), merchandise?.stockBias),
+      obtainableItems: mergeObtainableItems(mergeObtainableItems(profile.obtainableItems, stockPersona.stockPools), merchandise?.stockPools),
+      excludedObtainItems: [...new Set([...profile.excludedObtainItems, ...(stockPersona.forbiddenTags || [])])],
       inventory: [],
     };
     return character;

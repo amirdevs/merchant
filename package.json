@@ -45,7 +45,8 @@
     "playtest:economy-world": "node scripts/playtests/playtest-economy-world.cjs",
     "test:vertical-polish": "vitest run src/tests/vertical-slice/vertical-slice-polish.test.ts",
     "playtest:vertical-polish": "node scripts/playtests/playtest-vertical-slice-polish.cjs",
-    "audit:naming": "node scripts/audits/audit-naming-traces.cjs"
+    "audit:naming": "node scripts/audits/audit-naming-traces.cjs",
+    "test:character-stock-personas": "vitest run src/tests/characters/characterStockPersonas.test.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",

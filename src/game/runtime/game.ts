@@ -231,14 +231,22 @@ export function generateInventory(character: Character, day = 1) {
   const settings = resolvedStockSettings(character, day);
   if (settings.maxStacks <= 0) return [];
   const roll = seeded((character.index + 1) * 7919 + Math.max(1, day) * 104729 + (settings.profile.stockSeed || 0));
+  const characterPools = (character.obtainableItems || []).slice(0, 16);
   const professionPools = character.professionSlug ? professions[character.professionSlug]?.obtainableItems || [] : [];
-  const pools = [...(character.obtainableItems || []), ...professionPools].slice(0, 16);
+  const pools = [...characterPools, ...professionPools].slice(0, 24);
   const { weights, configs } = weightedArchetypeTags(settings.profile.archetypes);
   for (const [tag, weight] of Object.entries(settings.profile.stockBiasWeights || {})) {
     const normalized = normalizeStockToken(tag);
     weights.set(normalized, (weights.get(normalized) || 0) + weight);
   }
-  for (const pool of pools) weights.set(normalizeStockToken(pool.tag), (weights.get(normalizeStockToken(pool.tag)) || 0) + 4);
+  for (const pool of characterPools) {
+    const normalized = normalizeStockToken(pool.tag);
+    weights.set(normalized, (weights.get(normalized) || 0) + 80);
+  }
+  for (const pool of professionPools) {
+    const normalized = normalizeStockToken(pool.tag);
+    weights.set(normalized, (weights.get(normalized) || 0) + 4);
+  }
 
   const forbidden = new Set([
     ...(character.excludedObtainItems || []),
@@ -269,6 +277,7 @@ export function generateInventory(character: Character, day = 1) {
       : ["copper coins"];
   const guaranteedTags = [
     ...tierCoinGuarantees,
+    ...characterPools.map((pool) => pool.tag),
     ...(settings.profile.guaranteedTags || []),
     ...configs.flatMap((config) => config.guaranteedTags || []),
   ].map(normalizeStockToken);
