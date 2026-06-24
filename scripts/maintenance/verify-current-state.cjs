@@ -6,6 +6,7 @@ const { spawnSync } = require("child_process");
 const checks = [
   ["pnpm", ["audit:naming"]],
   ["pnpm", ["audit:runtime-characters"]],
+  ["pnpm", ["audit:character-merchandise"]],
   ["pnpm", ["audit:data"]],
   ["pnpm", ["audit:assets"]],
   ["pnpm", ["audit:character-portraits"]],
@@ -23,6 +24,7 @@ const checks = [
   ["pnpm", ["test:vertical-polish"]],
   ["pnpm", ["test:characters"]],
   ["pnpm", ["test:runtime-characters"]],
+  ["pnpm", ["test:character-merchandise"]],
   ["pnpm", ["test:company"]],
   ["pnpm", ["test:ui-integration"]],
   ["pnpm", ["test:playtest"]],
@@ -57,6 +59,7 @@ for (const [command, args] of checks) {
 
 console.log("\nCurrent-state verification passed.");
 console.log("Review docs/logs/profession-stock-review.md before final stock/profile approval.");
+console.log("Review docs/logs/character-merchandise-alignment-report.md before final character merchandise approval.");
 console.log("Review docs/logs/character-portrait-lock-report.md before final character portrait approval.");
 console.log("Run pnpm audit:item-icons when the item icon runtime asset gate is needed.");
 console.log("Run pnpm audit:assets -- --strict to run the full visual asset audit.");
@@ -64,6 +67,7 @@ console.log("Economy helpers are covered by src/tests/economy/economy.test.ts.")
 console.log("Travel planning helpers are covered by src/tests/travel/travel-loop.test.ts.");
 console.log("Quest runtime helpers, the rich quest foundation, the first playable story chain, the playable merchant loop, GameState runtime loop persistence, economy/world expansion helpers, and vertical-slice polish helpers are covered by pnpm test:quests, pnpm test:rich-quest-chain, pnpm test:merchant-loop, pnpm test:merchant-polish, pnpm test:runtime-loop, pnpm test:economy-world, and pnpm test:vertical-polish.");
 console.log("Character portrait manifest helpers are covered by src/tests/characters/characterPortraitManifest.test.ts.");
+console.log("Character merchandise assignments are covered by pnpm test:character-merchandise.");
 console.log("Company, warehouse, shipment, and stock helpers are covered by src/tests/company/company.test.ts.");
 console.log("UI integration view models are covered by src/tests/runtime/ui-integration.test.ts.");
 console.log("Playtest/balance checklist helpers are covered by src/tests/vertical-slice/playtest-balance.test.ts.");

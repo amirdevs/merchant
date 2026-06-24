@@ -1,12 +1,6618 @@
-{
-  "generatedBy": "pnpm audit:character-merchandise",
-  "note": "Review before wiring into runtime stock. Existing item matches should become character-specific stock. Missing concepts should be generated as item icons before being added to the item catalog.",
-  "summary": {
-    "characterProfilesScanned": 70,
-    "itemCatalogRecordsDetected": 0,
-    "charactersWithMerchandiseMentions": 58,
-    "charactersWithExistingItemMatches": 0,
-    "missingMerchandiseItemConcepts": 35
+[
+  {
+    "characterId": "character-001",
+    "displayName": "Mirella Brasscall",
+    "profession": "Auctioneer",
+    "stockPools": [
+      {
+        "tag": "maritime",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "magic",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "maritime",
+        "percent": 25
+      },
+      {
+        "tag": "magic",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "ship_bell",
+        "itemIndex": 2192,
+        "itemName": "ship bell",
+        "token": "maritime",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "wand_of_sound",
+        "itemIndex": 1239,
+        "itemName": "wand of sound",
+        "token": "magic",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_price_signal_rare_lots"
+    ],
+    "reviewNotes": [
+      "Review A Study of Common Weapons from portraitBasePrompt: matched 'sharp' in profile text.",
+      "Review A Study of Common Weapons from visualIdentity: matched 'sharp' in profile text.",
+      "Review A Study of Common Weapons from visualIdentity: matched 'weapon' in profile text.",
+      "Review Crowncards Tide Card from portraitBasePrompt: matched 'cards' in profile text.",
+      "Review Crowncards Tide Card from professionProps: matched 'cards' in profile text.",
+      "Review Ponderings of the Infinite Ledger from professionProps: matched 'ledger' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review matched item Crowncards Tide Card from professionProps: 'bid cards'.",
+      "Review matched item ship bell from professionProps: 'brass hand bell'.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review pottery black from portraitBasePrompt: matched 'black' in profile text.",
+      "Review pottery black from visualIdentity: matched 'black' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review ragged coat from portraitBasePrompt: matched 'coat' in profile text.",
+      "Review ragged coat from visualIdentity: matched 'coat' in profile text.",
+      "Review ship bell from portraitBasePrompt: matched 'bell' in profile text.",
+      "Review ship bell from professionProps: matched 'bell' in profile text.",
+      "Review ship bell from visualIdentity: matched 'bell' in profile text."
+    ]
   },
-  "assignments": []
-}
+  {
+    "characterId": "character-002",
+    "displayName": "Orren Scale-Eye",
+    "profession": "Appraiser",
+    "stockPools": [
+      {
+        "tag": "storage",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "copper",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "furniture",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "magic",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "storage",
+        "percent": 45
+      },
+      {
+        "tag": "copper",
+        "percent": 45
+      },
+      {
+        "tag": "furniture",
+        "percent": 45
+      },
+      {
+        "tag": "magic",
+        "percent": 45
+      },
+      {
+        "tag": "jewelry",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_pot_cracked",
+        "itemIndex": 1524,
+        "itemName": "black pot cracked",
+        "token": "storage",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "copper_still",
+        "itemIndex": 709,
+        "itemName": "copper still",
+        "token": "copper",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "damaged_throne",
+        "itemIndex": 903,
+        "itemName": "damaged throne",
+        "token": "furniture",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "fabled_scepter_of_the_octopus_king",
+        "itemIndex": 1220,
+        "itemName": "fabled scepter of the octopus king",
+        "token": "magic",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "gold_crown",
+        "itemIndex": 96,
+        "itemName": "gold crown",
+        "token": "jewelry",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review eye of devastation from visualIdentity: matched 'eyes' in profile text.",
+      "Review glass beaker from portraitBasePrompt: matched 'glass' in profile text.",
+      "Review glass beaker from professionProps: matched 'glass' in profile text.",
+      "Review glass beaker from visualIdentity: matched 'glass' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review large barrel from portraitBasePrompt: matched 'chest' in profile text.",
+      "Review matched item customs tag from professionProps: 'appraisal tags'.",
+      "Review matched item glass beaker from professionProps: 'green glass lens'.",
+      "Review missing phrase 'brass scale' from professionProps; not automatically added.",
+      "Review pottery blue from portraitBasePrompt: matched 'blue' in profile text.",
+      "Review pottery blue from visualIdentity: matched 'blue' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-003",
+    "displayName": "Basko Fencrate",
+    "profession": "Bulk Goods Broker",
+    "stockPools": [
+      {
+        "tag": "flags",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "game",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "weapons",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "gem",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "food",
+        "quantityMin": 2,
+        "quantityMax": 8
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "flags",
+        "percent": 25
+      },
+      {
+        "tag": "game",
+        "percent": 25
+      },
+      {
+        "tag": "jewelry",
+        "percent": 25
+      },
+      {
+        "tag": "weapons",
+        "percent": 45
+      },
+      {
+        "tag": "gem",
+        "percent": 25
+      },
+      {
+        "tag": "food",
+        "percent": 45
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "flag_of_the_exiled_order",
+        "itemIndex": 748,
+        "itemName": "flag of the exiled order",
+        "token": "flags",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "fortune_tiles",
+        "itemIndex": 2100,
+        "itemName": "fortune tiles",
+        "token": "game",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "gold_crown",
+        "itemIndex": 96,
+        "itemName": "gold crown",
+        "token": "jewelry",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "greatsling_strong",
+        "itemIndex": 1911,
+        "itemName": "greatsling strong",
+        "token": "weapons",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "mother_of_pearl_tile",
+        "itemIndex": 2060,
+        "itemName": "mother of pearl tile",
+        "token": "gem",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "onions",
+        "itemIndex": 880,
+        "itemName": "onions",
+        "token": "food",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_bulk_delivery_job"
+    ],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review fortune tiles from portraitBasePrompt: matched 'tiles' in profile text.",
+      "Review fortune tiles from visualIdentity: matched 'tiles' in profile text.",
+      "Review gold crown from portraitBasePrompt: matched 'crate' in profile text.",
+      "Review gold crown from visualIdentity: matched 'crate' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review pork shoulder from portraitBasePrompt: matched 'shoulder' in profile text.",
+      "Review pork shoulder from visualIdentity: matched 'shoulder' in profile text.",
+      "Review pottery brown from portraitBasePrompt: matched 'brown' in profile text.",
+      "Review pottery brown from visualIdentity: matched 'brown' in profile text.",
+      "Review pottery deep brown from portraitBasePrompt: matched 'deep brown' in profile text.",
+      "Review pottery deep brown from visualIdentity: matched 'deep brown' in profile text.",
+      "Review prop/tool phrase 'hook' from professionProps; not automatically treated as stock.",
+      "Review rope from portraitBasePrompt: matched 'rope' in profile text.",
+      "Review rope from visualIdentity: matched 'rope' in profile text.",
+      "Review vest from portraitBasePrompt: matched 'vest' in profile text.",
+      "Review vest from visualIdentity: matched 'vest' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-004",
+    "displayName": "Saffra Moonlock",
+    "profession": "Rare Item Collector",
+    "stockPools": [
+      {
+        "tag": "storage",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "coins",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "container",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "storage",
+        "percent": 45
+      },
+      {
+        "tag": "coins",
+        "percent": 25
+      },
+      {
+        "tag": "jewelry",
+        "percent": 25
+      },
+      {
+        "tag": "container",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_pot_cracked",
+        "itemIndex": 1524,
+        "itemName": "black pot cracked",
+        "token": "storage",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "silver_coins",
+        "itemIndex": 1,
+        "itemName": "silver coins",
+        "token": "coins",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "silver_ring",
+        "itemIndex": 167,
+        "itemName": "silver ring",
+        "token": "jewelry",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "waxed_pouch",
+        "itemIndex": 2069,
+        "itemName": "waxed pouch",
+        "token": "container",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_catalog_of_rumors"
+    ],
+    "reviewNotes": [
+      "Review agate ring from portraitBasePrompt: matched 'rings' in profile text.",
+      "Review agate ring from visualIdentity: matched 'rings' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review eye of devastation from visualIdentity: matched 'eyes' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review scarf from portraitBasePrompt: matched 'scarf' in profile text.",
+      "Review scarf from visualIdentity: matched 'scarf' in profile text.",
+      "Review silver coins from portraitBasePrompt: matched 'silver' in profile text.",
+      "Review silver coins from visualIdentity: matched 'silver' in profile text.",
+      "Review waxed pouch from portraitBasePrompt: matched 'pouch' in profile text.",
+      "Review waxed pouch from visualIdentity: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-005",
+    "displayName": "Joryn Crackbox",
+    "profession": "Damaged Goods Dealer",
+    "stockPools": [
+      {
+        "tag": "storage",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "tool",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "container",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 2,
+        "quantityMax": 8
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "storage",
+        "percent": 25
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "tool",
+        "percent": 25
+      },
+      {
+        "tag": "container",
+        "percent": 25
+      },
+      {
+        "tag": "botanicals",
+        "percent": 45
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_pot_cracked",
+        "itemIndex": 1524,
+        "itemName": "black pot cracked",
+        "token": "storage",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "butcher_twine",
+        "itemIndex": 2008,
+        "itemName": "butcher twine",
+        "token": "tool",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "deepforge_sample_box",
+        "itemIndex": 2162,
+        "itemName": "deepforge sample box",
+        "token": "container",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "fabled_thorn_hunter",
+        "itemIndex": 488,
+        "itemName": "fabled thorn hunter",
+        "token": "botanicals",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_lmostuseful_things",
+      "character_merchandise_patched_satchel"
+    ],
+    "reviewNotes": [
+      "Review black pot cracked from visualIdentity: matched 'cracked' in profile text.",
+      "Review copper coins from portraitBasePrompt: matched 'copper' in profile text.",
+      "Review copper coins from visualIdentity: matched 'copper' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review rough leather armor from portraitBasePrompt: matched 'leather' in profile text.",
+      "Review rough leather armor from visualIdentity: matched 'leather' in profile text.",
+      "Review rune of energy from portraitBasePrompt: matched 'energy' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-006",
+    "displayName": "Helva Quaystamp",
+    "profession": "Import Export Clerk",
+    "stockPools": [
+      {
+        "tag": "jewelry",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "storage",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "magic",
+        "quantityMin": 2,
+        "quantityMax": 8
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "jewelry",
+        "percent": 45
+      },
+      {
+        "tag": "storage",
+        "percent": 45
+      },
+      {
+        "tag": "magic",
+        "percent": 45
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "gold_crown",
+        "itemIndex": 96,
+        "itemName": "gold crown",
+        "token": "jewelry",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "large_crate",
+        "itemIndex": 1517,
+        "itemName": "large crate",
+        "token": "storage",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "scarce_wand_of_lies",
+        "itemIndex": 1231,
+        "itemName": "scarce wand of lies",
+        "token": "magic",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_paperwork_clarity",
+      "character_merchandise_paperwork_tariffs_origin_marks",
+      "character_merchandise_tariffs_customs_legality"
+    ],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from portraitBasePrompt: matched 'small' in profile text.",
+      "Review Sunwake Harbor Company Share from visualIdentity: matched 'small' in profile text.",
+      "Review apprentice papers from portraitBasePrompt: matched 'papers' in profile text.",
+      "Review apprentice papers from professionProps: matched 'papers' in profile text.",
+      "Review apprentice papers from visualIdentity: matched 'papers' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review matched item Painted Coast Annals I: First Lanterns from professionProps: 'dock papers'.",
+      "Review missing phrase 'origin stamps' from professionProps; not automatically added.",
+      "Review pine plank stack from portraitBasePrompt: matched 'stack' in profile text.",
+      "Review pine plank stack from visualIdentity: matched 'stack' in profile text.",
+      "Review prop/tool phrase 'ink pad' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-007",
+    "displayName": "Pella Brightspoon",
+    "profession": "Festival Trader",
+    "stockPools": [
+      {
+        "tag": "food",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "food",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "almond",
+        "itemIndex": 840,
+        "itemName": "almond",
+        "token": "food",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "book_of_springtide_in_gold_sleeve",
+        "itemIndex": 54,
+        "itemName": "Book of Springtide in Gold Sleeve",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review eye of devastation from visualIdentity: matched 'eyes' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review pottery ornate red yellow from portraitBasePrompt: matched 'yellow' in profile text.",
+      "Review pottery ornate red yellow from visualIdentity: matched 'yellow' in profile text.",
+      "Review scarf from portraitBasePrompt: matched 'scarf' in profile text.",
+      "Review scarf from visualIdentity: matched 'scarf' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-008",
+    "displayName": "Davin Ledgerhook",
+    "profession": "Market Inspector",
+    "stockPools": [
+      {
+        "tag": "weapons",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "document",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "magic",
+        "quantityMin": 2,
+        "quantityMax": 8
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "weapons",
+        "percent": 45
+      },
+      {
+        "tag": "document",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "magic",
+        "percent": 45
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "ankus",
+        "itemIndex": 1801,
+        "itemName": "ankus",
+        "token": "weapons",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "customs_tag",
+        "itemIndex": 2180,
+        "itemName": "customs tag",
+        "token": "document",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "scepter_of_fear",
+        "itemIndex": 1186,
+        "itemName": "scepter of fear",
+        "token": "magic",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_chained_stylus"
+    ],
+    "reviewNotes": [
+      "Review Ponderings of the Infinite Ledger from portraitBasePrompt: matched 'ledger' in profile text.",
+      "Review Sunwake Harbor Company Share from visualIdentity: matched 'book' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review gold crown from portraitBasePrompt: matched 'metal' in profile text.",
+      "Review gold crown from visualIdentity: matched 'metal' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review pottery brown from portraitBasePrompt: matched 'brown' in profile text.",
+      "Review pottery brown from visualIdentity: matched 'brown' in profile text.",
+      "Review ragged coat from portraitBasePrompt: matched 'coat' in profile text.",
+      "Review ragged coat from visualIdentity: matched 'coat' in profile text.",
+      "Review rune of light from portraitBasePrompt: matched 'light' in profile text.",
+      "Review rune of light from visualIdentity: matched 'light' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-009",
+    "displayName": "Kesta Far-Ridge",
+    "profession": "Route Scout",
+    "stockPools": [
+      {
+        "tag": "book",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "pack_animals",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "glyph_stones",
+        "quantityMin": 2,
+        "quantityMax": 8
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "book",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 45
+      },
+      {
+        "tag": "pack_animals",
+        "percent": 45
+      },
+      {
+        "tag": "glyph_stones",
+        "percent": 45
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "harbor_beasts_and_how_to_price_them",
+        "itemIndex": 2090,
+        "itemName": "Harbor Beasts and How to Price Them",
+        "token": "book",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "little_tide_words",
+        "itemIndex": 65,
+        "itemName": "little tide words",
+        "token": "books",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "oxen",
+        "itemIndex": 1394,
+        "itemName": "oxen",
+        "token": "pack_animals",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "words",
+        "itemIndex": 1037,
+        "itemName": "words",
+        "token": "glyph_stones",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_warnings_before_comfort"
+    ],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from portraitBasePrompt: matched 'small' in profile text.",
+      "Review Sunwake Harbor Company Share from visualIdentity: matched 'small' in profile text.",
+      "Review bone needle case from portraitBasePrompt: matched 'case' in profile text.",
+      "Review bone needle case from professionProps: matched 'case' in profile text.",
+      "Review bone needle case from visualIdentity: matched 'case' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review iron boots from portraitBasePrompt: matched 'boots' in profile text.",
+      "Review iron boots from professionProps: matched 'boots' in profile text.",
+      "Review iron boots from visualIdentity: matched 'boots' in profile text.",
+      "Review large barrel from portraitBasePrompt: matched 'chest' in profile text.",
+      "Review large barrel from visualIdentity: matched 'chest' in profile text.",
+      "Review matched item brass trade token from professionProps: 'trail tokens'.",
+      "Review matched item market Map from professionProps: 'map case'.",
+      "Review pottery black from portraitBasePrompt: matched 'black' in profile text.",
+      "Review pottery black from visualIdentity: matched 'black' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-010",
+    "displayName": "Brann Oxweather",
+    "profession": "Caravan Captain",
+    "stockPools": [
+      {
+        "tag": "pack_animals",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "travel",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "pack_animals",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "travel",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_horse",
+        "itemIndex": 1397,
+        "itemName": "black horse",
+        "token": "pack_animals",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "nine_lantern_signs",
+        "itemIndex": 50,
+        "itemName": "Nine Lantern Signs",
+        "token": "books",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "weather_charm",
+        "itemIndex": 2080,
+        "itemName": "weather charm",
+        "token": "travel",
+        "sourceField": "tradePersonality",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review burn remedy from portraitBasePrompt: matched 'heavy' in profile text.",
+      "Review burn remedy from professionProps: matched 'heavy' in profile text.",
+      "Review burn remedy from visualIdentity: matched 'heavy' in profile text.",
+      "Review ceremonial cloak from portraitBasePrompt: matched 'cloak' in profile text.",
+      "Review ceremonial cloak from professionProps: matched 'cloak' in profile text.",
+      "Review ceremonial cloak from visualIdentity: matched 'cloak' in profile text.",
+      "Review cooking board from portraitBasePrompt: matched 'board' in profile text.",
+      "Review cooking board from professionProps: matched 'board' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review horse wagon from portraitBasePrompt: matched 'wagon' in profile text.",
+      "Review horse wagon from professionProps: matched 'wagon' in profile text.",
+      "Review iron ingot from portraitBasePrompt: matched 'iron' in profile text.",
+      "Review iron ingot from professionProps: matched 'iron' in profile text.",
+      "Review iron ingot from visualIdentity: matched 'iron' in profile text.",
+      "Review matched item horse wagon from professionProps: 'wagon tally board'.",
+      "Review matched item iron ingot from professionProps: 'iron route badges'.",
+      "Review notable tally from portraitBasePrompt: matched 'tally' in profile text.",
+      "Review notable tally from professionProps: matched 'tally' in profile text.",
+      "Review oxen from portraitBasePrompt: matched 'travel' in profile text.",
+      "Review oxen from professionProps: matched 'travel' in profile text.",
+      "Review oxen from visualIdentity: matched 'travel' in profile text.",
+      "Review pottery skinny white from portraitBasePrompt: matched 'white' in profile text.",
+      "Review pottery skinny white from visualIdentity: matched 'white' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-011",
+    "displayName": "Nilo Gatecoin",
+    "profession": "Toll Officer",
+    "stockPools": [
+      {
+        "tag": "pack_animals",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "tools",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "storage",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "document",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "pack_animals",
+        "percent": 45
+      },
+      {
+        "tag": "tools",
+        "percent": 45
+      },
+      {
+        "tag": "jewelry",
+        "percent": 25
+      },
+      {
+        "tag": "storage",
+        "percent": 25
+      },
+      {
+        "tag": "document",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_horse",
+        "itemIndex": 1397,
+        "itemName": "black horse",
+        "token": "pack_animals",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "bridge",
+        "itemIndex": 1583,
+        "itemName": "bridge",
+        "token": "tools",
+        "sourceField": "questHooks",
+        "confidence": "high"
+      },
+      {
+        "itemId": "gold_ring_with_cyan_stone",
+        "itemIndex": 137,
+        "itemName": "gold ring with cyan stone",
+        "token": "jewelry",
+        "sourceField": "marketFlavor",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "pottery_blue",
+        "itemIndex": 1528,
+        "itemName": "pottery blue",
+        "token": "storage",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "warehouse_claim_ticket",
+        "itemIndex": 2179,
+        "itemName": "warehouse claim ticket",
+        "token": "document",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_coin_abacus"
+    ],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review pottery blue from portraitBasePrompt: matched 'blue' in profile text.",
+      "Review pottery blue from visualIdentity: matched 'blue' in profile text.",
+      "Review war gloves from portraitBasePrompt: matched 'gloves' in profile text.",
+      "Review war gloves from visualIdentity: matched 'gloves' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-157",
+    "displayName": "Lord Marrec Quillgate",
+    "profession": "Customs Magistrate",
+    "stockPools": [
+      {
+        "tag": "document",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 2,
+        "quantityMax": 8
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "document",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 45
+      },
+      {
+        "tag": "botanicals",
+        "percent": 45
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "import_permit",
+        "itemIndex": 2181,
+        "itemName": "import permit",
+        "token": "document",
+        "sourceField": "questHooks",
+        "confidence": "high"
+      },
+      {
+        "itemId": "painted_coast_annals_i_first_lanterns",
+        "itemIndex": 4,
+        "itemName": "Painted Coast Annals I: First Lanterns",
+        "token": "books",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "rose",
+        "itemIndex": 561,
+        "itemName": "rose",
+        "token": "botanicals",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_brass_monocle",
+      "character_merchandise_tax_stamp",
+      "character_merchandise_wax_customs_tablets"
+    ],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review pine plank stack from portraitBasePrompt: matched 'stack' in profile text.",
+      "Review pine plank stack from visualIdentity: matched 'stack' in profile text.",
+      "Review pottery blue from portraitBasePrompt: matched 'blue' in profile text.",
+      "Review pottery blue from visualIdentity: matched 'blue' in profile text.",
+      "Review pottery skinny white from portraitBasePrompt: matched 'white' in profile text.",
+      "Review pottery skinny white from visualIdentity: matched 'white' in profile text.",
+      "Review scarce blue robes from portraitBasePrompt: matched 'robe' in profile text.",
+      "Review scarce blue robes from visualIdentity: matched 'robe' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-158",
+    "displayName": "Tazmina Dragonmint",
+    "profession": "Dragonfruit Apothecary",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 2,
+        "quantityMax": 8
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 45
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "botanicals",
+        "percent": 45
+      },
+      {
+        "tag": "jewelry",
+        "percent": 45
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "amateur_alchemy",
+        "itemIndex": 71,
+        "itemName": "Amateur Alchemy",
+        "token": "books",
+        "sourceField": "roleTags",
+        "confidence": "high"
+      },
+      {
+        "itemId": "earthy_aromatic",
+        "itemIndex": 200,
+        "itemName": "earthy aromatic",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "fruit_branch",
+        "itemIndex": 525,
+        "itemName": "fruit branch",
+        "token": "botanicals",
+        "sourceField": "questHooks",
+        "confidence": "high"
+      },
+      {
+        "itemId": "gold_crown",
+        "itemIndex": 96,
+        "itemName": "gold crown",
+        "token": "jewelry",
+        "sourceField": "questHooks",
+        "confidence": "high"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_glowing_dragonfruit"
+    ],
+    "reviewNotes": [
+      "Review copper coins from portraitBasePrompt: matched 'copper' in profile text.",
+      "Review copper coins from visualIdentity: matched 'copper' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review vest from portraitBasePrompt: matched 'vest' in profile text.",
+      "Review vest from visualIdentity: matched 'vest' in profile text.",
+      "Review violet from portraitBasePrompt: matched 'violet' in profile text.",
+      "Review violet from visualIdentity: matched 'violet' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-159",
+    "displayName": "Captain Orvo Bluebanner",
+    "profession": "Caravan Banner Captain",
+    "stockPools": [
+      {
+        "tag": "paintings",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "curio",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "supplies",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "banners",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "storage",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "paintings",
+        "percent": 25
+      },
+      {
+        "tag": "curio",
+        "percent": 25
+      },
+      {
+        "tag": "supplies",
+        "percent": 25
+      },
+      {
+        "tag": "banners",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "storage",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "amateur_painting_of_desert",
+        "itemIndex": 1424,
+        "itemName": "amateur painting of desert",
+        "token": "paintings",
+        "sourceField": "marketFlavor",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "bottle_with_a_tiny_storm",
+        "itemIndex": 2140,
+        "itemName": "bottle with a tiny storm",
+        "token": "curio",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "iron_ingot",
+        "itemIndex": 1547,
+        "itemName": "iron ingot",
+        "token": "supplies",
+        "sourceField": "tradePersonality",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "long_banner",
+        "itemIndex": 470,
+        "itemName": "long banner",
+        "token": "banners",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "painted_coast_annals_ii_crownfall_roads",
+        "itemIndex": 5,
+        "itemName": "Painted Coast Annals II: Crownfall Roads",
+        "token": "books",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "pottery_blue",
+        "itemIndex": 1528,
+        "itemName": "pottery blue",
+        "token": "storage",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Painted Coast Annals III: Guild Charms from professionProps: matched 'charms' in profile text.",
+      "Review ceremonial cloak from portraitBasePrompt: matched 'cloak' in profile text.",
+      "Review ceremonial cloak from visualIdentity: matched 'cloak' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review double sided blunt staff from portraitBasePrompt: matched 'staff' in profile text.",
+      "Review double sided blunt staff from professionProps: matched 'staff' in profile text.",
+      "Review double sided blunt staff from visualIdentity: matched 'staff' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review long banner from portraitBasePrompt: matched 'banner' in profile text.",
+      "Review long banner from professionProps: matched 'banner' in profile text.",
+      "Review long banner from visualIdentity: matched 'banner' in profile text.",
+      "Review matched item double sided blunt staff from professionProps: 'route staff'.",
+      "Review matched item pottery blue from professionProps: 'blue caravan banner'.",
+      "Review matched item ship bell from professionProps: 'bell charms'.",
+      "Review pottery black from portraitBasePrompt: matched 'black' in profile text.",
+      "Review pottery black from visualIdentity: matched 'black' in profile text.",
+      "Review pottery blue from professionProps: matched 'blue' in profile text.",
+      "Review ship bell from professionProps: matched 'bell' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-160",
+    "displayName": "Madame Ivara Lacecoin",
+    "profession": "Luxury Pawnbroker",
+    "stockPools": [
+      {
+        "tag": "jewelry",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "document",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "jewelry",
+        "percent": 25
+      },
+      {
+        "tag": "botanicals",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      },
+      {
+        "tag": "document",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "agate_ring",
+        "itemIndex": 126,
+        "itemName": "agate ring",
+        "token": "jewelry",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "red_padded_pawn",
+        "itemIndex": 540,
+        "itemName": "red padded pawn",
+        "token": "botanicals",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "warehouse_claim_ticket",
+        "itemIndex": 2179,
+        "itemName": "warehouse claim ticket",
+        "token": "document",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_patience",
+      "character_merchandise_pearl_loupe"
+    ],
+    "reviewNotes": [
+      "Review agate ring from portraitBasePrompt: matched 'rings' in profile text.",
+      "Review agate ring from visualIdentity: matched 'rings' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review gold coins from portraitBasePrompt: matched 'gold' in profile text.",
+      "Review gold coins from visualIdentity: matched 'gold' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review pottery black from portraitBasePrompt: matched 'black' in profile text.",
+      "Review pottery black from visualIdentity: matched 'black' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-161",
+    "displayName": "Pell Oatwhistle",
+    "profession": "Grain Futures Clerk",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "tools",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "food",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "grain",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "container",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "botanicals",
+        "percent": 25
+      },
+      {
+        "tag": "tools",
+        "percent": 25
+      },
+      {
+        "tag": "food",
+        "percent": 25
+      },
+      {
+        "tag": "grain",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 45
+      },
+      {
+        "tag": "container",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "crownfall_seeds",
+        "itemIndex": 563,
+        "itemName": "Crownfall seeds",
+        "token": "botanicals",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ink_and_quill",
+        "itemIndex": 1589,
+        "itemName": "ink and quill",
+        "token": "tools",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "oats",
+        "itemIndex": 893,
+        "itemName": "oats",
+        "token": "food",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "orchard_graft_bundle",
+        "itemIndex": 1992,
+        "itemName": "orchard graft bundle",
+        "token": "grain",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "painted_coast_annals_i_first_lanterns",
+        "itemIndex": 4,
+        "itemName": "Painted Coast Annals I: First Lanterns",
+        "token": "books",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "waxed_pouch",
+        "itemIndex": 2069,
+        "itemName": "waxed pouch",
+        "token": "container",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Crownfall seeds from portraitBasePrompt: matched 'grain' in profile text.",
+      "Review Crownfall seeds from visualIdentity: matched 'grain' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review prop/tool phrase 'quill' from professionProps; not automatically treated as stock.",
+      "Review ragged coat from portraitBasePrompt: matched 'coat' in profile text.",
+      "Review ragged coat from visualIdentity: matched 'coat' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-162",
+    "displayName": "Seraphine Bellwater",
+    "profession": "Canal Ferry Master",
+    "stockPools": [
+      {
+        "tag": "book",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "tools",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "glyph_stones",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "magic",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "currency",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "maritime",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "book",
+        "percent": 25
+      },
+      {
+        "tag": "tools",
+        "percent": 25
+      },
+      {
+        "tag": "glyph_stones",
+        "percent": 25
+      },
+      {
+        "tag": "magic",
+        "percent": 25
+      },
+      {
+        "tag": "currency",
+        "percent": 25
+      },
+      {
+        "tag": "maritime",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "harbor_beasts_and_how_to_price_them",
+        "itemIndex": 2090,
+        "itemName": "Harbor Beasts and How to Price Them",
+        "token": "book",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "lock",
+        "itemIndex": 1611,
+        "itemName": "lock",
+        "token": "tools",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "master",
+        "itemIndex": 1026,
+        "itemName": "master",
+        "token": "glyph_stones",
+        "sourceField": "profession",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "scepter_of_water",
+        "itemIndex": 1179,
+        "itemName": "scepter of water",
+        "token": "magic",
+        "sourceField": "roleTags",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sealed_credit_note",
+        "itemIndex": 1973,
+        "itemName": "sealed credit note",
+        "token": "currency",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ship_bell",
+        "itemIndex": 2192,
+        "itemName": "ship bell",
+        "token": "maritime",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review fishing pole from professionProps: matched 'pole' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review large barrel from portraitBasePrompt: matched 'chest' in profile text.",
+      "Review large barrel from visualIdentity: matched 'chest' in profile text.",
+      "Review lock from professionProps: matched 'lock' in profile text.",
+      "Review matched item fishing pole from professionProps: 'reed pole'.",
+      "Review matched item lock from professionProps: 'lock key'.",
+      "Review matched item ship bell from professionProps: 'ferry bell chain'.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review ragged coat from portraitBasePrompt: matched 'coat' in profile text.",
+      "Review ragged coat from visualIdentity: matched 'coat' in profile text.",
+      "Review ship bell from professionProps: matched 'bell' in profile text.",
+      "Review silver coins from portraitBasePrompt: matched 'silver' in profile text.",
+      "Review silver coins from visualIdentity: matched 'silver' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-163",
+    "displayName": "Grinda Ashcake",
+    "profession": "Festival Cook",
+    "stockPools": [
+      {
+        "tag": "food",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "coins",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "tools",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "magic",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "copper",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "household",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "container",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "food",
+        "percent": 25
+      },
+      {
+        "tag": "coins",
+        "percent": 25
+      },
+      {
+        "tag": "botanicals",
+        "percent": 45
+      },
+      {
+        "tag": "tools",
+        "percent": 25
+      },
+      {
+        "tag": "magic",
+        "percent": 45
+      },
+      {
+        "tag": "copper",
+        "percent": 25
+      },
+      {
+        "tag": "household",
+        "percent": 25
+      },
+      {
+        "tag": "container",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_pepper",
+        "itemIndex": 174,
+        "itemName": "black pepper",
+        "token": "food",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "copper_coins",
+        "itemIndex": 2,
+        "itemName": "copper coins",
+        "token": "coins",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "crownfall_seeds",
+        "itemIndex": 563,
+        "itemName": "Crownfall seeds",
+        "token": "botanicals",
+        "sourceField": "questHooks",
+        "confidence": "high"
+      },
+      {
+        "itemId": "large_tent",
+        "itemIndex": 1593,
+        "itemName": "large tent",
+        "token": "tools",
+        "sourceField": "marketFlavor",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "market_scepter_of_celebration",
+        "itemIndex": 1214,
+        "itemName": "market scepter of celebration",
+        "token": "magic",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "small_copper_pot",
+        "itemIndex": 712,
+        "itemName": "small copper pot",
+        "token": "copper",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "table_spoon",
+        "itemIndex": 1044,
+        "itemName": "table spoon",
+        "token": "household",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "waxed_pouch",
+        "itemIndex": 2069,
+        "itemName": "waxed pouch",
+        "token": "container",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review cinnamon from portraitBasePrompt: matched 'cinnamon' in profile text.",
+      "Review cinnamon from visualIdentity: matched 'cinnamon' in profile text.",
+      "Review copper coins from portraitBasePrompt: matched 'copper' in profile text.",
+      "Review copper coins from visualIdentity: matched 'copper' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review scarf from portraitBasePrompt: matched 'scarf' in profile text.",
+      "Review scarf from visualIdentity: matched 'scarf' in profile text.",
+      "Review shield of Pearlgate from portraitBasePrompt: matched 'shield' in profile text.",
+      "Review shield of Pearlgate from visualIdentity: matched 'shield' in profile text.",
+      "Review small copper pot from portraitBasePrompt: matched 'copper pot' in profile text.",
+      "Review small copper pot from visualIdentity: matched 'copper pot' in profile text.",
+      "Review table spoon from portraitBasePrompt: matched 'spoon' in profile text.",
+      "Review table spoon from visualIdentity: matched 'spoon' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-164",
+    "displayName": "Master Noll Fenwick",
+    "profession": "Guild Inspector",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "tool",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 45
+      },
+      {
+        "tag": "tool",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "a_study_of_common_weapons",
+        "itemIndex": 83,
+        "itemName": "A Study of Common Weapons",
+        "token": "books",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "ledger_ruler",
+        "itemIndex": 2066,
+        "itemName": "ledger ruler",
+        "token": "tool",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_guild_checklist",
+      "character_merchandise_guild_stair",
+      "character_merchandise_quality_seal"
+    ],
+    "reviewNotes": [
+      "Review blessed blade of purity from portraitBasePrompt: matched 'sword' in profile text.",
+      "Review blessed blade of purity from visualIdentity: matched 'sword' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review ledger ruler from portraitBasePrompt: matched 'ruler' in profile text.",
+      "Review ledger ruler from visualIdentity: matched 'ruler' in profile text.",
+      "Review silver coins from portraitBasePrompt: matched 'silver' in profile text.",
+      "Review silver coins from visualIdentity: matched 'silver' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-165",
+    "displayName": "Nyx Lanternglass",
+    "profession": "Night Market Oracle",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "crowncards",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "magic",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "glass",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "paintings",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "monster_parts",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "travel",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 45
+      },
+      {
+        "tag": "crowncards",
+        "percent": 25
+      },
+      {
+        "tag": "botanicals",
+        "percent": 45
+      },
+      {
+        "tag": "magic",
+        "percent": 45
+      },
+      {
+        "tag": "jewelry",
+        "percent": 45
+      },
+      {
+        "tag": "glass",
+        "percent": 25
+      },
+      {
+        "tag": "paintings",
+        "percent": 45
+      },
+      {
+        "tag": "monster_parts",
+        "percent": 45
+      },
+      {
+        "tag": "travel",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blue_enamel_charms",
+        "itemIndex": 29,
+        "itemName": "Blue Enamel Charms",
+        "token": "books",
+        "sourceField": "roleTags",
+        "confidence": "high"
+      },
+      {
+        "itemId": "crowncards_tide_card",
+        "itemIndex": 1952,
+        "itemName": "Crowncards Tide Card",
+        "token": "crowncards",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "dead_leafs",
+        "itemIndex": 510,
+        "itemName": "dead leafs",
+        "token": "botanicals",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "fabled_magic_lamp",
+        "itemIndex": 1115,
+        "itemName": "fabled magic lamp",
+        "token": "magic",
+        "sourceField": "shortStory",
+        "confidence": "high"
+      },
+      {
+        "itemId": "fabled_ring_of_vision",
+        "itemIndex": 162,
+        "itemName": "fabled ring of vision",
+        "token": "jewelry",
+        "sourceField": "questHooks",
+        "confidence": "high"
+      },
+      {
+        "itemId": "glass_beaker",
+        "itemIndex": 966,
+        "itemName": "glass beaker",
+        "token": "glass",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "masterpiece_painting_of_embercourt_harbor_at_night",
+        "itemIndex": 1422,
+        "itemName": "masterpiece painting of Embercourt harbor at night",
+        "token": "paintings",
+        "sourceField": "roleTags",
+        "confidence": "high"
+      },
+      {
+        "itemId": "salamander_mystic",
+        "itemIndex": 1302,
+        "itemName": "salamander mystic",
+        "token": "monster_parts",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "trail_lantern",
+        "itemIndex": 2074,
+        "itemName": "trail lantern",
+        "token": "travel",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_hints",
+      "character_merchandise_inkblack_shawl",
+      "character_merchandise_rumors_warnings"
+    ],
+    "reviewNotes": [
+      "Review Crowncards Tide Card from portraitBasePrompt: matched 'cards' in profile text.",
+      "Review Crowncards Tide Card from visualIdentity: matched 'cards' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review glass beaker from portraitBasePrompt: matched 'glass' in profile text.",
+      "Review glass beaker from visualIdentity: matched 'glass' in profile text.",
+      "Review gold coins from portraitBasePrompt: matched 'gold' in profile text.",
+      "Review gold coins from visualIdentity: matched 'gold' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review trail lantern from portraitBasePrompt: matched 'lantern' in profile text.",
+      "Review trail lantern from visualIdentity: matched 'lantern' in profile text.",
+      "Review violet from portraitBasePrompt: matched 'violet' in profile text.",
+      "Review violet from visualIdentity: matched 'violet' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-166",
+    "displayName": "Marsa Clovejaw",
+    "profession": "Spice Dentist",
+    "stockPools": [
+      {
+        "tag": "food",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "weapons",
+        "quantityMin": 2,
+        "quantityMax": 8
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "food",
+        "percent": 25
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      },
+      {
+        "tag": "weapons",
+        "percent": 45
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_pepper",
+        "itemIndex": 174,
+        "itemName": "black pepper",
+        "token": "food",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "throwing_teeth",
+        "itemIndex": 1912,
+        "itemName": "throwing teeth",
+        "token": "weapons",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review cloves from portraitBasePrompt: matched 'clove' in profile text.",
+      "Review cloves from visualIdentity: matched 'clove' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review gold necklace with blue gem from portraitBasePrompt: matched 'necklace' in profile text.",
+      "Review gold necklace with blue gem from visualIdentity: matched 'necklace' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review lightning scales from portraitBasePrompt: matched 'scales' in profile text.",
+      "Review lightning scales from visualIdentity: matched 'scales' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review pottery skinny orange from portraitBasePrompt: matched 'orange' in profile text.",
+      "Review pottery skinny orange from visualIdentity: matched 'orange' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review vampires tooth from portraitBasePrompt: matched 'tooth' in profile text.",
+      "Review vampires tooth from visualIdentity: matched 'tooth' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-167",
+    "displayName": "Boro Thimbleback",
+    "profession": "Button Seller",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "clothes",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "clothes",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "scarf",
+        "itemIndex": 583,
+        "itemName": "scarf",
+        "token": "clothes",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review alligator snapping turtle shell from portraitBasePrompt: matched 'shell' in profile text.",
+      "Review alligator snapping turtle shell from visualIdentity: matched 'shell' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review pottery blue from portraitBasePrompt: matched 'blue' in profile text.",
+      "Review pottery blue from visualIdentity: matched 'blue' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-168",
+    "displayName": "Elka Rainbarrel",
+    "profession": "Barrel Cooper",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "storage",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "storage",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "jewelry",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "large_barrel",
+        "itemIndex": 1496,
+        "itemName": "large barrel",
+        "token": "storage",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "rough_wooden_ring",
+        "itemIndex": 173,
+        "itemName": "rough wooden ring",
+        "token": "jewelry",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review large barrel from portraitBasePrompt: matched 'barrel' in profile text.",
+      "Review large barrel from visualIdentity: matched 'barrel' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-169",
+    "displayName": "Jorin Plumwax",
+    "profession": "Seal Maker",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "household",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "household",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "large_candelabra",
+        "itemIndex": 1061,
+        "itemName": "large candelabra",
+        "token": "household",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review cooking board from portraitBasePrompt: matched 'board' in profile text.",
+      "Review cooking board from visualIdentity: matched 'board' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review plums from portraitBasePrompt: matched 'plum' in profile text.",
+      "Review plums from visualIdentity: matched 'plum' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review war gloves from portraitBasePrompt: matched 'gloves' in profile text.",
+      "Review war gloves from visualIdentity: matched 'gloves' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-170",
+    "displayName": "Vess Nimblehook",
+    "profession": "Fish Hook Peddler",
+    "stockPools": [
+      {
+        "tag": "food",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "food",
+        "percent": 25
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "anchovy",
+        "itemIndex": 846,
+        "itemName": "anchovy",
+        "token": "food",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review alligator snapping turtle shell from portraitBasePrompt: matched 'shell' in profile text.",
+      "Review alligator snapping turtle shell from visualIdentity: matched 'shell' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review pottery ornate red yellow from portraitBasePrompt: matched 'yellow' in profile text.",
+      "Review pottery ornate red yellow from visualIdentity: matched 'yellow' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review ragged coat from portraitBasePrompt: matched 'coat' in profile text.",
+      "Review ragged coat from visualIdentity: matched 'coat' in profile text.",
+      "Review silver coins from portraitBasePrompt: matched 'silver' in profile text.",
+      "Review silver coins from visualIdentity: matched 'silver' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-171",
+    "displayName": "Orelia Sunflour",
+    "profession": "Baker",
+    "stockPools": [
+      {
+        "tag": "food",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "food",
+        "percent": 45
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_pepper",
+        "itemIndex": 174,
+        "itemName": "black pepper",
+        "token": "food",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "early_economics_of_harbor_bread",
+        "itemIndex": 79,
+        "itemName": "Early Economics of Harbor Bread",
+        "token": "books",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review scarce delicate pink from portraitBasePrompt: matched 'pink' in profile text.",
+      "Review scarce delicate pink from visualIdentity: matched 'pink' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-172",
+    "displayName": "Pax Underbridge",
+    "profession": "Mushroom Forager",
+    "stockPools": [
+      {
+        "tag": "food",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "food",
+        "percent": 45
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "botanicals",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_pepper",
+        "itemIndex": 174,
+        "itemName": "black pepper",
+        "token": "food",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "notable_bright_red_mushrooms",
+        "itemIndex": 491,
+        "itemName": "notable bright red mushrooms",
+        "token": "botanicals",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Morning Glory from portraitBasePrompt: matched 'basket' in profile text.",
+      "Review Morning Glory from visualIdentity: matched 'basket' in profile text.",
+      "Review ceremonial cloak from portraitBasePrompt: matched 'cloak' in profile text.",
+      "Review ceremonial cloak from visualIdentity: matched 'cloak' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review notable bright red mushrooms from portraitBasePrompt: matched 'mushroom' in profile text.",
+      "Review notable bright red mushrooms from visualIdentity: matched 'mushroom' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review scarce lavender from portraitBasePrompt: matched 'lavender' in profile text.",
+      "Review scarce lavender from visualIdentity: matched 'lavender' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-173",
+    "displayName": "Tilda Brasswool",
+    "profession": "Blanket Weaver",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "monster_parts",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "clothes",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "household",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "fabrics",
+        "quantityMin": 2,
+        "quantityMax": 8
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "monster_parts",
+        "percent": 25
+      },
+      {
+        "tag": "clothes",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      },
+      {
+        "tag": "household",
+        "percent": 25
+      },
+      {
+        "tag": "fabrics",
+        "percent": 45
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "powerful_weaver",
+        "itemIndex": 1327,
+        "itemName": "powerful weaver",
+        "token": "monster_parts",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "scarf",
+        "itemIndex": 583,
+        "itemName": "scarf",
+        "token": "clothes",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "thin_blanket",
+        "itemIndex": 1051,
+        "itemName": "thin blanket",
+        "token": "household",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "wool",
+        "itemIndex": 1637,
+        "itemName": "wool",
+        "token": "fabrics",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-174",
+    "displayName": "Naveen Bluepoppy",
+    "profession": "Dye Merchant",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "clothes",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "jewelry",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "clothes",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "market_rose_quartz",
+        "itemIndex": 89,
+        "itemName": "market rose quartz",
+        "token": "jewelry",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "scarf",
+        "itemIndex": 583,
+        "itemName": "scarf",
+        "token": "clothes",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review pottery brown from portraitBasePrompt: matched 'brown' in profile text.",
+      "Review pottery brown from visualIdentity: matched 'brown' in profile text.",
+      "Review pottery deep brown from portraitBasePrompt: matched 'deep brown' in profile text.",
+      "Review pottery deep brown from visualIdentity: matched 'deep brown' in profile text.",
+      "Review pottery skinny white from portraitBasePrompt: matched 'white' in profile text.",
+      "Review pottery skinny white from visualIdentity: matched 'white' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-175",
+    "displayName": "Rikka Saltneedle",
+    "profession": "Sail Mender",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "clothes",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "clothes",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "scarf",
+        "itemIndex": 583,
+        "itemName": "scarf",
+        "token": "clothes",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review needle from portraitBasePrompt: matched 'needle' in profile text.",
+      "Review needle from visualIdentity: matched 'needle' in profile text.",
+      "Review pork shoulder from portraitBasePrompt: matched 'shoulder' in profile text.",
+      "Review pork shoulder from visualIdentity: matched 'shoulder' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-176",
+    "displayName": "Cori Finchcup",
+    "profession": "Tea Seller",
+    "stockPools": [
+      {
+        "tag": "food",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "food",
+        "percent": 25
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "jewelry",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_tea",
+        "itemIndex": 770,
+        "itemName": "black tea",
+        "token": "food",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "market_rose_quartz",
+        "itemIndex": 89,
+        "itemName": "market rose quartz",
+        "token": "jewelry",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-177",
+    "displayName": "Mavro Tinlaugh",
+    "profession": "Toy Tinker",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "tools",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "tools",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "large_gear",
+        "itemIndex": 1592,
+        "itemName": "large gear",
+        "token": "tools",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review ragged coat from portraitBasePrompt: matched 'coat' in profile text.",
+      "Review ragged coat from visualIdentity: matched 'coat' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-178",
+    "displayName": "Sela Moonpepper",
+    "profession": "Pickle Witch",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "food",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "food",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "scarce_smoked_gruyere_cheese",
+        "itemIndex": 778,
+        "itemName": "scarce smoked gruyere cheese",
+        "token": "food",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review fabled bow of the moon from portraitBasePrompt: matched 'moon' in profile text.",
+      "Review fabled bow of the moon from visualIdentity: matched 'moon' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review scarf from portraitBasePrompt: matched 'scarf' in profile text.",
+      "Review scarf from visualIdentity: matched 'scarf' in profile text.",
+      "Review violet from portraitBasePrompt: matched 'violet' in profile text.",
+      "Review violet from visualIdentity: matched 'violet' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-179",
+    "displayName": "Brann Oakfist",
+    "profession": "Timber Measurer",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "wood",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "wood",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "jewelry",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "pine_plank_stack",
+        "itemIndex": 2042,
+        "itemName": "pine plank stack",
+        "token": "wood",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "rough_wooden_ring",
+        "itemIndex": 173,
+        "itemName": "rough wooden ring",
+        "token": "jewelry",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review ceremonial cloak from portraitBasePrompt: matched 'cloak' in profile text.",
+      "Review ceremonial cloak from visualIdentity: matched 'cloak' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review large barrel from portraitBasePrompt: matched 'chest' in profile text.",
+      "Review large barrel from visualIdentity: matched 'chest' in profile text.",
+      "Review notable tally from portraitBasePrompt: matched 'tally' in profile text.",
+      "Review notable tally from visualIdentity: matched 'tally' in profile text.",
+      "Review oath cord from portraitBasePrompt: matched 'cord' in profile text.",
+      "Review oath cord from visualIdentity: matched 'cord' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review sticks from portraitBasePrompt: matched 'stick' in profile text.",
+      "Review sticks from visualIdentity: matched 'stick' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-180",
+    "displayName": "Yumi Goldscale",
+    "profession": "Pearl Buyer",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "jewelry",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "market_rose_quartz",
+        "itemIndex": 89,
+        "itemName": "market rose quartz",
+        "token": "jewelry",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review black dress from portraitBasePrompt: matched 'dress' in profile text.",
+      "Review black dress from visualIdentity: matched 'dress' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review lightning scales from portraitBasePrompt: matched 'scales' in profile text.",
+      "Review lightning scales from visualIdentity: matched 'scales' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review pottery skinny white from portraitBasePrompt: matched 'white' in profile text.",
+      "Review pottery skinny white from visualIdentity: matched 'white' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review war gloves from portraitBasePrompt: matched 'gloves' in profile text.",
+      "Review war gloves from visualIdentity: matched 'gloves' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-181",
+    "displayName": "Hasker Redroot",
+    "profession": "Beet Farmer",
+    "stockPools": [
+      {
+        "tag": "food",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "food",
+        "percent": 25
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "beets",
+        "itemIndex": 866,
+        "itemName": "beets",
+        "token": "food",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Morning Glory from portraitBasePrompt: matched 'basket' in profile text.",
+      "Review Morning Glory from visualIdentity: matched 'basket' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review iron boots from portraitBasePrompt: matched 'boots' in profile text.",
+      "Review iron boots from visualIdentity: matched 'boots' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-182",
+    "displayName": "Ilyen Starquill",
+    "profession": "Letter Writer",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "young_lovers_letter",
+        "itemIndex": 88,
+        "itemName": "Young Lovers' Letter",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review ink and quill from portraitBasePrompt: matched 'quill' in profile text.",
+      "Review ink and quill from visualIdentity: matched 'quill' in profile text.",
+      "Review pottery blue from portraitBasePrompt: matched 'blue' in profile text.",
+      "Review pottery blue from visualIdentity: matched 'blue' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review scarce blue robes from portraitBasePrompt: matched 'robe' in profile text.",
+      "Review scarce blue robes from visualIdentity: matched 'robe' in profile text.",
+      "Review silver coins from portraitBasePrompt: matched 'silver' in profile text.",
+      "Review silver coins from visualIdentity: matched 'silver' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-183",
+    "displayName": "Nora Oxbell",
+    "profession": "Pack Bell Seller",
+    "stockPools": [
+      {
+        "tag": "animals",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "pack_animals",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "maritime",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "animals",
+        "percent": 45
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "pack_animals",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "maritime",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "acidic_blob",
+        "itemIndex": 246,
+        "itemName": "acidic blob",
+        "token": "animals",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "oxen",
+        "itemIndex": 1394,
+        "itemName": "oxen",
+        "token": "pack_animals",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ship_bell",
+        "itemIndex": 2192,
+        "itemName": "ship bell",
+        "token": "maritime",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review acidic blob from portraitBasePrompt: matched 'animal' in profile text.",
+      "Review acidic blob from visualIdentity: matched 'animal' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review plenny pins from portraitBasePrompt: matched 'pins' in profile text.",
+      "Review plenny pins from visualIdentity: matched 'pins' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review pottery brown from portraitBasePrompt: matched 'brown' in profile text.",
+      "Review pottery brown from visualIdentity: matched 'brown' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review vest from portraitBasePrompt: matched 'vest' in profile text.",
+      "Review vest from visualIdentity: matched 'vest' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-184",
+    "displayName": "Kef Mosspocket",
+    "profession": "Seed Trader",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "botanicals",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "crownfall_seeds",
+        "itemIndex": 563,
+        "itemName": "Crownfall seeds",
+        "token": "botanicals",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Crownfall seeds from portraitBasePrompt: matched 'seed' in profile text.",
+      "Review Crownfall seeds from visualIdentity: matched 'seed' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review ragged coat from portraitBasePrompt: matched 'coat' in profile text.",
+      "Review ragged coat from visualIdentity: matched 'coat' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-185",
+    "displayName": "Daro Blackfig",
+    "profession": "Fruit Cart Owner",
+    "stockPools": [
+      {
+        "tag": "food",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "food",
+        "percent": 45
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "botanicals",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_pepper",
+        "itemIndex": 174,
+        "itemName": "black pepper",
+        "token": "food",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "fruit_branch",
+        "itemIndex": 525,
+        "itemName": "fruit branch",
+        "token": "botanicals",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review figs from portraitBasePrompt: matched 'figs' in profile text.",
+      "Review figs from visualIdentity: matched 'figs' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review pottery black from portraitBasePrompt: matched 'black' in profile text.",
+      "Review pottery black from visualIdentity: matched 'black' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-186",
+    "displayName": "Pippa Quicksole",
+    "profession": "Shoe Cobbler",
+    "stockPools": [
+      {
+        "tag": "clothes",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "armor",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "clothes",
+        "percent": 25
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "armor",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "assassin_boots",
+        "itemIndex": 642,
+        "itemName": "assassin boots",
+        "token": "clothes",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "rough_leather_armor",
+        "itemIndex": 409,
+        "itemName": "rough leather armor",
+        "token": "armor",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from portraitBasePrompt: matched 'small' in profile text.",
+      "Review Sunwake Harbor Company Share from visualIdentity: matched 'small' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review rough leather armor from portraitBasePrompt: matched 'leather' in profile text.",
+      "Review rough leather armor from visualIdentity: matched 'leather' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-187",
+    "displayName": "Galen Brightmug",
+    "profession": "Cup Potter",
+    "stockPools": [
+      {
+        "tag": "storage",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "glass",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "storage",
+        "percent": 45
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "glass",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_pot",
+        "itemIndex": 1523,
+        "itemName": "black pot",
+        "token": "storage",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "market_glass_cup",
+        "itemIndex": 975,
+        "itemName": "market glass cup",
+        "token": "glass",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review pine plank stack from portraitBasePrompt: matched 'stack' in profile text.",
+      "Review pine plank stack from visualIdentity: matched 'stack' in profile text.",
+      "Review pottery blue from portraitBasePrompt: matched 'blue' in profile text.",
+      "Review pottery blue from visualIdentity: matched 'blue' in profile text.",
+      "Review pottery skinny white from portraitBasePrompt: matched 'white' in profile text.",
+      "Review pottery skinny white from visualIdentity: matched 'white' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-188",
+    "displayName": "Suri Amberpin",
+    "profession": "Brooch Seller",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "jewelry",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "market_rose_quartz",
+        "itemIndex": 89,
+        "itemName": "market rose quartz",
+        "token": "jewelry",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review black dress from portraitBasePrompt: matched 'dress' in profile text.",
+      "Review black dress from visualIdentity: matched 'dress' in profile text.",
+      "Review cooking board from portraitBasePrompt: matched 'board' in profile text.",
+      "Review cooking board from visualIdentity: matched 'board' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review eye of devastation from portraitBasePrompt: matched 'eyes' in profile text.",
+      "Review eye of devastation from visualIdentity: matched 'eyes' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review pottery ornate red yellow from portraitBasePrompt: matched 'yellow' in profile text.",
+      "Review pottery ornate red yellow from visualIdentity: matched 'yellow' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review scarce boring beetle from portraitBasePrompt: matched 'insects' in profile text.",
+      "Review scarce boring beetle from visualIdentity: matched 'insects' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-189",
+    "displayName": "Old Moth Marn",
+    "profession": "Candle Wick Spinner",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "household",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "clothes",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "household",
+        "percent": 25
+      },
+      {
+        "tag": "clothes",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "large_candelabra",
+        "itemIndex": 1061,
+        "itemName": "large candelabra",
+        "token": "household",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "monk_robes",
+        "itemIndex": 676,
+        "itemName": "monk robes",
+        "token": "clothes",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review gold thread spool from portraitBasePrompt: matched 'spool' in profile text.",
+      "Review gold thread spool from visualIdentity: matched 'spool' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review large candelabra from portraitBasePrompt: matched 'candle' in profile text.",
+      "Review large candelabra from visualIdentity: matched 'candle' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-190",
+    "displayName": "Viko Thorncart",
+    "profession": "Cactus Fruit Seller",
+    "stockPools": [
+      {
+        "tag": "paintings",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "food",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "pack_animals",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "paintings",
+        "percent": 45
+      },
+      {
+        "tag": "food",
+        "percent": 45
+      },
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "botanicals",
+        "percent": 25
+      },
+      {
+        "tag": "pack_animals",
+        "percent": 45
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "amateur_painting_of_desert",
+        "itemIndex": 1424,
+        "itemName": "amateur painting of desert",
+        "token": "paintings",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "black_pepper",
+        "itemIndex": 174,
+        "itemName": "black pepper",
+        "token": "food",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "fruit_branch",
+        "itemIndex": 525,
+        "itemName": "fruit branch",
+        "token": "botanicals",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "oxen",
+        "itemIndex": 1394,
+        "itemName": "oxen",
+        "token": "pack_animals",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Morning Glory from portraitBasePrompt: matched 'basket' in profile text.",
+      "Review Morning Glory from visualIdentity: matched 'basket' in profile text.",
+      "Review amateur painting of desert from portraitBasePrompt: matched 'desert' in profile text.",
+      "Review amateur painting of desert from visualIdentity: matched 'desert' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review fabled ruby from portraitBasePrompt: matched 'ruby' in profile text.",
+      "Review fabled ruby from visualIdentity: matched 'ruby' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review pottery blue from portraitBasePrompt: matched 'blue' in profile text.",
+      "Review pottery blue from visualIdentity: matched 'blue' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review saguaro cactus from portraitBasePrompt: matched 'cactus' in profile text.",
+      "Review saguaro cactus from visualIdentity: matched 'cactus' in profile text.",
+      "Review scarf from portraitBasePrompt: matched 'scarf' in profile text.",
+      "Review scarf from visualIdentity: matched 'scarf' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-191",
+    "displayName": "Ansel Copperdrip",
+    "profession": "Oil Presser",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "food",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "food",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "olive_oil",
+        "itemIndex": 787,
+        "itemName": "olive oil",
+        "token": "food",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-192",
+    "displayName": "Mina Rosehook",
+    "profession": "Ribbon Hawker",
+    "stockPools": [
+      {
+        "tag": "ore",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "alchemy",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "clothes",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "religion",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "ore",
+        "percent": 25
+      },
+      {
+        "tag": "alchemy",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "clothes",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      },
+      {
+        "tag": "religion",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blueglass_ore_sample",
+        "itemIndex": 2161,
+        "itemName": "blueglass ore sample",
+        "token": "ore",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "cauldron",
+        "itemIndex": 239,
+        "itemName": "cauldron",
+        "token": "alchemy",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "ponderings_of_the_infinite_ledger",
+        "itemIndex": 78,
+        "itemName": "Ponderings of the Infinite Ledger",
+        "token": "books",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "scarf",
+        "itemIndex": 583,
+        "itemName": "scarf",
+        "token": "clothes",
+        "sourceField": "tradePersonality",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "votive_ribbon",
+        "itemIndex": 2118,
+        "itemName": "votive ribbon",
+        "token": "religion",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review prop/tool phrase 'ledger' from professionProps; not automatically treated as stock.",
+      "Review rose from portraitBasePrompt: matched 'rose' in profile text.",
+      "Review rose from visualIdentity: matched 'rose' in profile text.",
+      "Review scarce delicate pink from portraitBasePrompt: matched 'pink' in profile text.",
+      "Review scarce delicate pink from visualIdentity: matched 'pink' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-193",
+    "displayName": "Rook Ashbutton",
+    "profession": "Errand Boy",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Elder Orren's Indecent Errand from professionProps: matched 'errand' in profile text.",
+      "Review Morning Glory from portraitBasePrompt: matched 'basket' in profile text.",
+      "Review Morning Glory from visualIdentity: matched 'basket' in profile text.",
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review matched item Elder Orren's Indecent Errand from professionProps: 'errand boy prop'.",
+      "Review pottery brown from portraitBasePrompt: matched 'brown' in profile text.",
+      "Review pottery brown from visualIdentity: matched 'brown' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review vest from portraitBasePrompt: matched 'vest' in profile text.",
+      "Review vest from visualIdentity: matched 'vest' in profile text.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-194",
+    "displayName": "Nella Puddleboot",
+    "profession": "Rainwater Seller",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "container",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      },
+      {
+        "tag": "container",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "waxed_pouch",
+        "itemIndex": 2069,
+        "itemName": "waxed pouch",
+        "token": "container",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_rainwater_seller_prop"
+    ],
+    "reviewNotes": [
+      "Review bucket from portraitBasePrompt: matched 'bucket' in profile text.",
+      "Review bucket from visualIdentity: matched 'bucket' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review pottery blue from portraitBasePrompt: matched 'blue' in profile text.",
+      "Review pottery blue from visualIdentity: matched 'blue' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock."
+    ]
+  },
+  {
+    "characterId": "character-195",
+    "displayName": "Fenn Silverrat",
+    "profession": "Alley Rumor Kid",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review apple from portraitBasePrompt: matched 'apple' in profile text.",
+      "Review apple from visualIdentity: matched 'apple' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review missing phrase 'alley rumor kid prop' from professionProps; not automatically added.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review scarf from portraitBasePrompt: matched 'scarf' in profile text.",
+      "Review scarf from visualIdentity: matched 'scarf' in profile text.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-196",
+    "displayName": "Oma Lentilsmile",
+    "profession": "Soup Auntie",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review cooking ladle from portraitBasePrompt: matched 'ladle' in profile text.",
+      "Review cooking ladle from visualIdentity: matched 'ladle' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review missing phrase 'soup auntie prop' from professionProps; not automatically added.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review pottery ornate red yellow from portraitBasePrompt: matched 'yellow' in profile text.",
+      "Review pottery ornate red yellow from visualIdentity: matched 'yellow' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-197",
+    "displayName": "Bix Candletoe",
+    "profession": "Temple Sweeper",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review assassin boots from portraitBasePrompt: matched 'shoes' in profile text.",
+      "Review assassin boots from visualIdentity: matched 'shoes' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review large candelabra from portraitBasePrompt: matched 'candle' in profile text.",
+      "Review large candelabra from visualIdentity: matched 'candle' in profile text.",
+      "Review missing phrase 'temple sweeper prop' from professionProps; not automatically added.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-198",
+    "displayName": "Hanna Milkbell",
+    "profession": "Stable Helper",
+    "stockPools": [
+      {
+        "tag": "food",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "food",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "black_pepper",
+        "itemIndex": 174,
+        "itemName": "black pepper",
+        "token": "food",
+        "sourceField": "profession",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review black pepper from portraitBasePrompt: matched 'stable' in profile text.",
+      "Review black pepper from professionProps: matched 'stable' in profile text.",
+      "Review black pepper from visualIdentity: matched 'stable' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review matched item black pepper from professionProps: 'stable helper prop'.",
+      "Review pottery brown from portraitBasePrompt: matched 'brown' in profile text.",
+      "Review pottery brown from visualIdentity: matched 'brown' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review ship bell from portraitBasePrompt: matched 'bell' in profile text.",
+      "Review ship bell from visualIdentity: matched 'bell' in profile text.",
+      "Review silver coins from portraitBasePrompt: matched 'silver' in profile text.",
+      "Review silver coins from visualIdentity: matched 'silver' in profile text.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-199",
+    "displayName": "Torro Greycap",
+    "profession": "Old Porter",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review cooking board from portraitBasePrompt: matched 'board' in profile text.",
+      "Review cooking board from visualIdentity: matched 'board' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review missing phrase 'old porter prop' from professionProps; not automatically added.",
+      "Review pork shoulder from portraitBasePrompt: matched 'shoulder' in profile text.",
+      "Review pork shoulder from visualIdentity: matched 'shoulder' in profile text.",
+      "Review portrait of old man from portraitBasePrompt: matched 'old man' in profile text.",
+      "Review portrait of old man from visualIdentity: matched 'old man' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review rope from portraitBasePrompt: matched 'rope' in profile text.",
+      "Review rope from visualIdentity: matched 'rope' in profile text.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-200",
+    "displayName": "Lulu Finchseed",
+    "profession": "Bird Feed Girl",
+    "stockPools": [
+      {
+        "tag": "animals",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "animals",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "blackbird",
+        "itemIndex": 359,
+        "itemName": "blackbird",
+        "token": "animals",
+        "sourceField": "profession",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Crownfall seeds from portraitBasePrompt: matched 'seed' in profile text.",
+      "Review Crownfall seeds from visualIdentity: matched 'seed' in profile text.",
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review blackbird from portraitBasePrompt: matched 'bird' in profile text.",
+      "Review blackbird from professionProps: matched 'bird' in profile text.",
+      "Review blackbird from visualIdentity: matched 'bird' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review matched item blackbird from professionProps: 'bird feed girl prop'.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review sparrow from portraitBasePrompt: matched 'sparrow' in profile text.",
+      "Review sparrow from visualIdentity: matched 'sparrow' in profile text.",
+      "Review waxed pouch from portraitBasePrompt: matched 'pouch' in profile text.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text.",
+      "Review waxed pouch from visualIdentity: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-201",
+    "displayName": "Cricket Marigold",
+    "profession": "Flower Runner",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "botanicals",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "botanicals",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "morning_glory",
+        "itemIndex": 473,
+        "itemName": "Morning Glory",
+        "token": "botanicals",
+        "sourceField": "profession",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Morning Glory from portraitBasePrompt: matched 'flowers' in profile text.",
+      "Review Morning Glory from portraitBasePrompt: matched 'fresh' in profile text.",
+      "Review Morning Glory from professionProps: matched 'flower' in profile text.",
+      "Review Morning Glory from visualIdentity: matched 'flowers' in profile text.",
+      "Review Morning Glory from visualIdentity: matched 'fresh' in profile text.",
+      "Review Red Marigold from portraitBasePrompt: matched 'marigold' in profile text.",
+      "Review Red Marigold from visualIdentity: matched 'marigold' in profile text.",
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review cloth tunic from portraitBasePrompt: matched 'tunic' in profile text.",
+      "Review cloth tunic from visualIdentity: matched 'tunic' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review gold crown from portraitBasePrompt: matched 'crown' in profile text.",
+      "Review gold crown from visualIdentity: matched 'crown' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review matched item Morning Glory from professionProps: 'flower runner prop'.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-202",
+    "displayName": "Dumple Grin",
+    "profession": "Pie Shouter",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review matched item pie from professionProps: 'pie shouter prop'.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-203",
+    "displayName": "Sable Thread",
+    "profession": "Quiet Seamstress",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "container",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      },
+      {
+        "tag": "container",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "waxed_pouch",
+        "itemIndex": 2069,
+        "itemName": "waxed pouch",
+        "token": "container",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [
+      "character_merchandise_quiet_seamstress_prop"
+    ],
+    "reviewNotes": [
+      "Review bone needle case from portraitBasePrompt: matched 'case' in profile text.",
+      "Review bone needle case from portraitBasePrompt: matched 'needle case' in profile text.",
+      "Review bone needle case from visualIdentity: matched 'case' in profile text.",
+      "Review bone needle case from visualIdentity: matched 'needle case' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review gold necklace with blue gem from portraitBasePrompt: matched 'necklace' in profile text.",
+      "Review gold necklace with blue gem from visualIdentity: matched 'necklace' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review needle from portraitBasePrompt: matched 'needle' in profile text.",
+      "Review needle from visualIdentity: matched 'needle' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review pottery black from portraitBasePrompt: matched 'black' in profile text.",
+      "Review pottery black from visualIdentity: matched 'black' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review scarf from portraitBasePrompt: matched 'cloth' in profile text.",
+      "Review scarf from visualIdentity: matched 'cloth' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-204",
+    "displayName": "Porrin Mudthumb",
+    "profession": "Pot Washer",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review black pot from portraitBasePrompt: matched 'clay' in profile text.",
+      "Review black pot from visualIdentity: matched 'clay' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review matched item copper lidded pot from professionProps: 'pot washer prop'.",
+      "Review pine plank stack from portraitBasePrompt: matched 'stack' in profile text.",
+      "Review pine plank stack from visualIdentity: matched 'stack' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-205",
+    "displayName": "Vela Starling",
+    "profession": "Window Singer",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review ceremonial cloak from portraitBasePrompt: matched 'cloak' in profile text.",
+      "Review ceremonial cloak from visualIdentity: matched 'cloak' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review missing phrase 'window singer prop' from professionProps; not automatically added.",
+      "Review pottery blue from portraitBasePrompt: matched 'blue' in profile text.",
+      "Review pottery blue from visualIdentity: matched 'blue' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review ship bell from portraitBasePrompt: matched 'bell' in profile text.",
+      "Review ship bell from visualIdentity: matched 'bell' in profile text.",
+      "Review silver coins from portraitBasePrompt: matched 'silver' in profile text.",
+      "Review silver coins from visualIdentity: matched 'silver' in profile text.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-206",
+    "displayName": "Hobb Nettle",
+    "profession": "Goat Minder",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "animals",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "animals",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "goat",
+        "itemIndex": 358,
+        "itemName": "goat",
+        "token": "animals",
+        "sourceField": "profession",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review goat from portraitBasePrompt: matched 'goat' in profile text.",
+      "Review goat from professionProps: matched 'goat' in profile text.",
+      "Review goat from visualIdentity: matched 'goat' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review matched item goat from professionProps: 'goat minder prop'.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review vest from portraitBasePrompt: matched 'vest' in profile text.",
+      "Review vest from visualIdentity: matched 'vest' in profile text.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-207",
+    "displayName": "Miss Bristle",
+    "profession": "Brush Seller",
+    "stockPools": [
+      {
+        "tag": "maritime",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "books",
+        "quantityMin": 2,
+        "quantityMax": 8
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "container",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "maritime",
+        "percent": 25
+      },
+      {
+        "tag": "books",
+        "percent": 45
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      },
+      {
+        "tag": "container",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "deck_brush",
+        "itemIndex": 2199,
+        "itemName": "deck brush",
+        "token": "maritime",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "high"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "waxed_pouch",
+        "itemIndex": 2069,
+        "itemName": "waxed pouch",
+        "token": "container",
+        "sourceField": "professionProps",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review portrait of young woman from portraitBasePrompt: matched 'woman' in profile text.",
+      "Review portrait of young woman from visualIdentity: matched 'woman' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review scarce delicate pink from portraitBasePrompt: matched 'pink' in profile text.",
+      "Review scarce delicate pink from visualIdentity: matched 'pink' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-208",
+    "displayName": "Oti Pebblepalm",
+    "profession": "Stone Counter",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "jewelry",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "jewelry",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "gold_ring_with_cyan_stone",
+        "itemIndex": 137,
+        "itemName": "gold ring with cyan stone",
+        "token": "jewelry",
+        "sourceField": "profession",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review cooking board from portraitBasePrompt: matched 'board' in profile text.",
+      "Review cooking board from visualIdentity: matched 'board' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review gold necklace with blue gem from portraitBasePrompt: matched 'necklace' in profile text.",
+      "Review gold necklace with blue gem from visualIdentity: matched 'necklace' in profile text.",
+      "Review gold ring with cyan stone from professionProps: matched 'stone' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review matched item gold ring with cyan stone from professionProps: 'stone counter prop'.",
+      "Review moonstone pebble from portraitBasePrompt: matched 'pebble' in profile text.",
+      "Review moonstone pebble from visualIdentity: matched 'pebble' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-209",
+    "displayName": "Glim Tallow",
+    "profession": "Lamp Lighter",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "magic",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "magic",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "fabled_magic_lamp",
+        "itemIndex": 1115,
+        "itemName": "fabled magic lamp",
+        "token": "magic",
+        "sourceField": "profession",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review fabled magic lamp from portraitBasePrompt: matched 'lamp' in profile text.",
+      "Review fabled magic lamp from professionProps: matched 'lamp' in profile text.",
+      "Review fabled magic lamp from visualIdentity: matched 'lamp' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review matched item fabled magic lamp from professionProps: 'lamp lighter prop'.",
+      "Review pottery skinny orange from portraitBasePrompt: matched 'orange' in profile text.",
+      "Review pottery skinny orange from visualIdentity: matched 'orange' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review scarf from portraitBasePrompt: matched 'scarf' in profile text.",
+      "Review scarf from visualIdentity: matched 'scarf' in profile text.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  },
+  {
+    "characterId": "character-210",
+    "displayName": "Mera Softstep",
+    "profession": "Quiet Courier",
+    "stockPools": [
+      {
+        "tag": "books",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "company_stake",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "books",
+        "percent": 25
+      },
+      {
+        "tag": "company_stake",
+        "percent": 25
+      }
+    ],
+    "matchedItems": [
+      {
+        "itemId": "elder_orren_s_indecent_errand",
+        "itemIndex": 69,
+        "itemName": "Elder Orren's Indecent Errand",
+        "token": "books",
+        "sourceField": "questHooks",
+        "confidence": "medium"
+      },
+      {
+        "itemId": "sunwake_harbor_company_share",
+        "itemIndex": 3,
+        "itemName": "Sunwake Harbor Company Share",
+        "token": "company_stake",
+        "sourceField": "shortStory",
+        "confidence": "medium"
+      }
+    ],
+    "missingItemIds": [],
+    "reviewNotes": [
+      "Review Sunwake Harbor Company Share from professionProps: matched 'small' in profile text.",
+      "Review dice from portraitBasePrompt: matched 'game' in profile text.",
+      "Review granite bust from portraitBasePrompt: matched 'bust' in profile text.",
+      "Review missing phrase 'quiet courier prop' from professionProps; not automatically added.",
+      "Review moonpea seed packet from portraitBasePrompt: matched 'packet' in profile text.",
+      "Review moonpea seed packet from visualIdentity: matched 'packet' in profile text.",
+      "Review pottery blue from portraitBasePrompt: matched 'blue' in profile text.",
+      "Review pottery blue from visualIdentity: matched 'blue' in profile text.",
+      "Review prop/tool phrase 'pouch' from professionProps; not automatically treated as stock.",
+      "Review waxed pouch from professionProps: matched 'pouch' in profile text."
+    ]
+  }
+]

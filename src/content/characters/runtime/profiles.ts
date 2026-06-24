@@ -1,6 +1,7 @@
 import runtimeProfileDataJson from "./profiles.data.json";
+import { characterMerchandiseAssignmentById } from "../merchandise";
 import type { FinalCharacterIdentityProfile } from "../profiles/types";
-import type { Character } from "@/shared/types/game-data";
+import type { Bias, Character, ObtainableItem } from "@/shared/types/game-data";
 import type { CharacterRuntimeProfileRecord } from "./types";
 
 export type {
@@ -36,6 +37,37 @@ export function runtimeCharacterIdForIndex(index: number) {
   return runtimeCharacterProfileByIndex.get(index)?.characterId || null;
 }
 
+function mergeObtainableItems(base: ObtainableItem[], extra: ObtainableItem[] | undefined) {
+  const byTag = new Map<string, ObtainableItem>();
+  for (const entry of [...base, ...(extra || [])]) {
+    const tag = entry.tag.trim();
+    if (!tag) continue;
+    const current = byTag.get(tag);
+    if (!current) {
+      byTag.set(tag, { ...entry });
+      continue;
+    }
+    current.quantityMin = Math.max(0, Math.min(current.quantityMin || 0, entry.quantityMin || 0));
+    current.quantityMax = Math.max(current.quantityMax || 0, entry.quantityMax || 0);
+  }
+  return [...byTag.values()];
+}
+
+function mergeBiases(base: Bias[], extra: Bias[] | undefined) {
+  const byTag = new Map<string, Bias>();
+  for (const entry of [...base, ...(extra || [])]) {
+    const tag = entry.tag.trim();
+    if (!tag) continue;
+    const current = byTag.get(tag);
+    if (!current) {
+      byTag.set(tag, { ...entry });
+      continue;
+    }
+    current.percent = Math.max(current.percent, entry.percent);
+  }
+  return [...byTag.values()];
+}
+
 export function buildRuntimeCharacters(options: {
   identities: readonly FinalCharacterIdentityProfile[];
   neutralPortraitByCharacterId?: ReadonlyMap<string, string>;
@@ -47,6 +79,7 @@ export function buildRuntimeCharacters(options: {
     if (!identity) throw new Error(`Missing final character identity for runtime profile ${profile.characterId}`);
 
     const neutralPortrait = options.neutralPortraitByCharacterId?.get(profile.characterId) || `${profile.characterId}-neutral.png`;
+    const merchandise = characterMerchandiseAssignmentById.get(profile.characterId);
     const dialogue = profile.dialogueBehavior;
     const character: Character = {
       characterId: profile.characterId,
@@ -76,8 +109,8 @@ export function buildRuntimeCharacters(options: {
       reachingDealPercent: profile.reachingDealPercent,
       farFromDealPercent: profile.farFromDealPercent || undefined,
       dialogue: dialogue && Object.keys(dialogue).length ? { ...dialogue } : undefined,
-      bias: profile.tradeBias.map((entry) => ({ ...entry })),
-      obtainableItems: profile.obtainableItems.map((entry) => ({ ...entry })),
+      bias: mergeBiases(profile.tradeBias, merchandise?.stockBias),
+      obtainableItems: mergeObtainableItems(profile.obtainableItems, merchandise?.stockPools),
       excludedObtainItems: [...profile.excludedObtainItems],
       inventory: [],
     };
