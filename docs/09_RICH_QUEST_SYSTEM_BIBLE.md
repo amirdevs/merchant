@@ -403,3 +403,22 @@ quest journal view models show story and choices, not only todo text
 quest state/effect helpers can accept, advance, choose, resolve, and summarize quests
 first vertical-slice quest chain is defined and ready for playable implementation
 ```
+
+## Phase 3 implementation note - first playable chain
+
+The first playable rich quest chain is implemented as a Journal surface with state helpers and focused tests. The intent is to prove that the quest experience feels like story progression rather than a checklist before deeper economy locks are added.
+
+The first implementation deliberately supports:
+
+```text
+acceptance
+multi-stage progress
+choice resolution
+consequence preview and application
+quest notes
+ending pressure
+sequential unlocks
+company-registration readiness after the final quest
+```
+
+The first implementation does not yet require every economic action to be physically completed in the market. Phase 4 should connect the same chain to concrete inventory, trade, route, reputation, and company conditions.

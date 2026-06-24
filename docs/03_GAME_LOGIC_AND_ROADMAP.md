@@ -218,3 +218,59 @@ Remaining:
 - connect quest consequences to NPC trust, reputation, market state, routes, and company unlocks;
 - continue removing old visible flavor from screens not covered by Phase 1;
 - polish the playable merchant loop v1.
+
+## Phase 3 - First Playable Story Chain Pack
+
+Phase 3 turns the first five approved rich quests into a playable vertical-slice quest chain inside the Journal.
+
+Implemented source files:
+
+```text
+src/lib/first-playable-quest-chain.ts
+src/lib/first-playable-quest-chain.test.ts
+src/features/journal/RichQuestChainPanel.tsx
+src/features/journal/JournalView.tsx
+```
+
+Implemented gameplay scope:
+
+```text
+First Honest Profit -> Bread Before Dawn -> The False Scale -> Warehouse Lease -> A Name on the Door
+```
+
+Implemented runtime behavior:
+
+```text
+first quest starts available
+later quests unlock only after the previous quest completes
+quests can be accepted
+quest stages can be advanced
+quest choices can resolve the quest
+choice rewards, consequences, unlocks, and ending pressure are applied through the rich quest effect helpers
+final quest completion marks company registration readiness
+progress is persisted in local browser storage under merchant-rich-quest-chain-v1 while deeper GameState save/export migration remains planned for Phase 4
+```
+
+Implemented UI behavior:
+
+```text
+Journal now puts the rich story chain above legacy local notices
+quest cards show order, status, lock state, story hook, stage, stakes, merchant conflict, approaches, rewards, consequences, quest notes, ending pressure, and giver portrait
+legacy local quest scaffolding remains visible but explicitly marked as migration-only
+```
+
+Validation:
+
+```powershell
+pnpm test:rich-quest-chain
+pnpm test:rich-quests
+pnpm test:quests
+pnpm verify:current-state
+```
+
+Important note:
+
+```text
+Phase 3 uses browser-local rich quest persistence so the chain is playable immediately without risking the existing save schema.
+Phase 4 should move this progress into GameState save/export and connect quest consequences to real inventory, city reputation, market state, route access, NPC trust, and company systems.
+```

@@ -11,8 +11,8 @@
     "test:barter": "vitest run src/lib/barter.test.ts src/lib/game-auto-offer.test.ts",
     "test:economy": "vitest run src/lib/economy.test.ts",
     "test:travel": "vitest run src/lib/travel-loop.test.ts",
-    "test:quests": "vitest run src/lib/quest-runtime.test.ts src/lib/rich-quest-system.test.ts",
-    "test:rich-quests": "vitest run src/lib/rich-quest-system.test.ts",
+    "test:quests": "vitest run src/lib/quest-runtime.test.ts src/lib/rich-quest-system.test.ts src/lib/first-playable-quest-chain.test.ts",
+    "test:rich-quests": "vitest run src/lib/rich-quest-system.test.ts src/lib/first-playable-quest-chain.test.ts",
     "test:characters": "vitest run src/data/characters/characterPortraitManifest.test.ts",
     "audit:data": "node scripts/audit-data.cjs",
     "audit:assets": "node scripts/audit-assets.cjs",
@@ -31,7 +31,8 @@
     "test:company": "vitest run src/lib/company.test.ts",
     "test:ui-integration": "vitest run src/lib/ui-integration.test.ts",
     "test:playtest": "vitest run src/lib/playtest-balance.test.ts",
-    "playtest:balance": "node scripts/playtest-balance.cjs"
+    "playtest:balance": "node scripts/playtest-balance.cjs",
+    "test:rich-quest-chain": "vitest run src/lib/first-playable-quest-chain.test.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",

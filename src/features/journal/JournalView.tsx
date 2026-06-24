@@ -1,14 +1,14 @@
 import { BookOpen, Building2, CheckCircle2, Map, Menu, PackageSearch, ScrollText, Store } from "lucide-react";
 import type { GameView } from "@/app/types";
-import { currentKingdom, currentMarket, kingdoms, marketplaces, type GameState } from "@/lib/game";
-import { items } from "@/lib/game";
+import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
+import { currentKingdom, currentMarket, items, kingdoms, marketplaces, type GameState } from "@/lib/game";
 import { marketEventPreviews } from "@/lib/events";
 import { contractDeadline, contractItemProgress, generatedContracts, resolveContract } from "@/lib/contracts";
 import { questCanComplete, questItemProgress, questReward } from "@/lib/quests";
-import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
-import { uiAssets } from "@/lib/ui-assets";
 import { marketRumorLedger, seasonalMarketReport } from "@/lib/market-simulation";
 import { createBalanceReport } from "@/lib/balance";
+import { uiAssets } from "@/lib/ui-assets";
+import { RichQuestChainPanel } from "./RichQuestChainPanel";
 
 type QuestStatus = GameState["questStates"][string];
 
@@ -23,9 +23,10 @@ type JournalViewProps = {
 export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSetContractStatus }: JournalViewProps) {
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
-  const questMarkets = marketplaces.filter((nextMarket) => nextMarket.quest);
   const currentStatus: QuestStatus = state.questStates[String(market.index)] || (market.quest ? "offered" : "unseen");
-  const notes = state.dialogueLog.slice(0, 12);
+  const currentQuestProgress = questItemProgress(market, state.playerInventory, items);
+  const currentQuestReady = questCanComplete(market, state.playerInventory, items);
+  const currentQuestReward = questReward(market, items);
   const eventPreviews = marketEventPreviews(marketplaces, state.day).slice(0, 8);
   const localContracts = generatedContracts(market, marketplaces, kingdom);
   const trackedContracts = Object.entries(state.contractStates)
@@ -33,15 +34,13 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
     .map(([contractId]) => resolveContract(contractId, marketplaces, kingdoms))
     .filter((contract): contract is NonNullable<typeof contract> => Boolean(contract));
   const contracts = [...localContracts, ...trackedContracts.filter((tracked) => !localContracts.some((local) => local.id === tracked.id))];
-  const currentQuestProgress = questItemProgress(market, state.playerInventory, items);
-  const currentQuestReady = questCanComplete(market, state.playerInventory, items);
-  const currentQuestReward = questReward(market, items);
+  const notes = state.dialogueLog.slice(0, 8);
   const dynamicRumors = marketRumorLedger(state.marketSimulation, market, state.day);
   const season = seasonalMarketReport(state.day);
   const balance = createBalanceReport(state);
 
   return (
-    <ScreenFrame title="Journal" eyebrow="Quests, Notices, Rumors" backdrop={uiAssets.backplates.marketTown} overlay="light">
+    <ScreenFrame title="Journal" eyebrow="Rich Quests, Notices, Contracts, Rumors" backdrop={uiAssets.backplates.marketTown} overlay="light">
       <nav className="mb-2 flex flex-wrap justify-end gap-2 pt-7">
         <Button size="sm" onClick={onBack}><Store size={15} /> Stall</Button>
         <Button size="sm" variant="secondary" onClick={() => onNavigate("travel")}><Map size={15} /> Map</Button>
@@ -49,56 +48,49 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
         <Button size="sm" variant="secondary" onClick={() => onNavigate("company")}><Building2 size={15} /> Company</Button>
         <Button size="sm" subtle onClick={() => onNavigate("system")}><Menu size={15} /> Menu</Button>
       </nav>
+
       <div className="grid flex-1 gap-4 xl:grid-cols-[minmax(0,1fr)_420px]">
-        <Panel title={<span className="inline-flex items-center gap-2"><ScrollText size={18} /> Notice Board</span>} variant="parchment">
-          <div className="mb-4 grid grid-cols-3 gap-2">
-            <StatChip label="Market" value={market.name} />
-            <StatChip label="Kingdom" value={kingdom.name} />
-            <StatChip label="Local Quest" value={market.quest?.name || "None"} />
-          </div>
+        <main className="grid content-start gap-4">
+          <RichQuestChainPanel day={state.day} />
 
-          {market.quest ? (
-            <div className="mb-4 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/60 p-4 text-[#3b260f]">
-              <h2 className="font-display text-3xl text-[#26170a]">{market.quest.name}</h2>
-              <p className="mt-2 text-base">{market.quest.todo || "No written objective yet. Ask around the market for details."}</p>
-              {currentQuestProgress.length ? (
-                <div className="mt-3 grid gap-1 text-sm">
-                  {currentQuestProgress.map((entry) => (
-                    <span className={entry.complete ? "font-bold text-[#1f6f38]" : "font-bold text-[#8d271f]"} key={entry.token}>
-                      {entry.token}: held {entry.held}
-                    </span>
-                  ))}
-                </div>
-              ) : null}
-              <p className="mt-2 text-sm font-bold text-[#75501f]">
-                Reward: {currentQuestReward.copper} copper
-                {currentQuestReward.items.length ? ` / ${currentQuestReward.items.map((entry) => `${entry.quantity} ${items[entry.itemIndex]?.name || "item"}`).join(", ")}` : ""}
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <Button onClick={() => onSetQuestStatus(market.index, "accepted")}>Accept</Button>
-                <Button disabled={!currentQuestReady} variant="secondary" onClick={() => onSetQuestStatus(market.index, "ready")}>Mark Ready</Button>
-                <Button disabled={!currentQuestReady} subtle onClick={() => onSetQuestStatus(market.index, "finished")}><CheckCircle2 size={16} /> Finish</Button>
-              </div>
-              <p className="mt-2 text-sm font-bold uppercase tracking-wide text-[#75501f]">Status: {currentStatus}</p>
+          <Panel title={<span className="inline-flex items-center gap-2"><ScrollText size={18} /> Legacy Local Notice Board</span>} variant="parchment">
+            <div className="mb-4 grid grid-cols-3 gap-2">
+              <StatChip label="Market" value={market.name} />
+              <StatChip label="Kingdom" value={kingdom.name} />
+              <StatChip label="Local Notice" value={market.quest?.name || "None"} />
             </div>
-          ) : (
-            <div className="mb-4 rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/60 p-4 text-[#3b260f]">No authored notice is posted in this market yet.</div>
-          )}
-
-          <div className="grid max-h-[46vh] gap-2 overflow-auto pr-1">
-            {questMarkets.map((questMarket) => {
-              const status = state.questStates[String(questMarket.index)] || "offered";
-              return (
-                <LedgerRow
-                  key={questMarket.index}
-                  title={questMarket.quest?.name || questMarket.name}
-                  subtitle={`${questMarket.name} / ${questMarket.quest?.todo || "Ask locally for details."}`}
-                  trailing={<span className="rounded-full border border-[#9a7138]/60 bg-[#fff6d7]/70 px-2 py-1 text-[0.68rem] font-bold uppercase text-[#75501f]">{status}</span>}
-                />
-              );
-            })}
-          </div>
-        </Panel>
+            <p className="mb-4 rounded-sm border border-[#9a7138]/50 bg-[#fff6d7]/55 p-3 text-sm font-bold leading-snug text-[#5b3b17]">
+              This panel keeps the older local quest scaffolding reachable during migration. The remake target is the rich quest chain above.
+            </p>
+            {market.quest ? (
+              <div className="rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/60 p-4 text-[#3b260f]">
+                <h2 className="font-display text-3xl text-[#26170a]">{market.quest.name}</h2>
+                <p className="mt-2 text-base">{market.quest.todo || "No written objective yet. Ask around the market for details."}</p>
+                {currentQuestProgress.length ? (
+                  <div className="mt-3 grid gap-1 text-sm">
+                    {currentQuestProgress.map((entry) => (
+                      <span className={entry.complete ? "font-bold text-[#1f6f38]" : "font-bold text-[#8d271f]"} key={entry.token}>
+                        {entry.token}: held {entry.held}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+                <p className="mt-2 text-sm font-bold text-[#75501f]">
+                  Reward: {currentQuestReward.copper} copper
+                  {currentQuestReward.items.length ? ` / ${currentQuestReward.items.map((entry) => `${entry.quantity} ${items[entry.itemIndex]?.name || "item"}`).join(", ")}` : ""}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <Button onClick={() => onSetQuestStatus(market.index, "accepted")}>Accept</Button>
+                  <Button disabled={!currentQuestReady} variant="secondary" onClick={() => onSetQuestStatus(market.index, "ready")}>Mark Ready</Button>
+                  <Button disabled={!currentQuestReady} subtle onClick={() => onSetQuestStatus(market.index, "finished")}><CheckCircle2 size={16} /> Finish</Button>
+                </div>
+                <p className="mt-2 text-sm font-bold uppercase tracking-wide text-[#75501f]">Status: {currentStatus}</p>
+              </div>
+            ) : (
+              <div className="rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/60 p-4 text-[#3b260f]">No older local notice is posted in this market.</div>
+            )}
+          </Panel>
+        </main>
 
         <aside className="grid content-start gap-4">
           <Panel title="Contracts" variant="parchment">
@@ -128,6 +120,7 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
               })}
             </div>
           </Panel>
+
           <Panel title="Event Calendar" variant="parchment">
             {eventPreviews.length ? (
               <div className="grid gap-2">
@@ -140,34 +133,9 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
                   />
                 ))}
               </div>
-            ) : (
-              <p className="text-[#3b260f]">No market events are recorded yet.</p>
-            )}
+            ) : <p className="text-[#3b260f]">No market events are recorded yet.</p>}
           </Panel>
-          <Panel title="Rival Merchants" variant="parchment">
-            <div className="grid max-h-56 gap-2 overflow-auto">
-              {state.rivals.merchants.map((rival) => (
-                <div className="rounded-sm border border-[#9a7138]/45 bg-[#fff6d7]/55 p-3 text-sm text-[#3b260f]" key={rival.id}>
-                  <div className="flex items-start justify-between gap-2">
-                    <span>
-                      <strong className="block text-[#26170a]">{rival.name}</strong>
-                      <span className="font-bold text-[#75501f]">{rival.personality} / {rival.strategy} / {marketplaces[rival.marketIndex]?.name || "on the road"}</span>
-                    </span>
-                    <span className="text-right text-xs font-bold text-[#75501f]">{rival.wealth} cash<br />{rival.debt} debt</span>
-                  </div>
-                  <p className="mt-1">{rival.routeHabit || "route unknown"}</p>
-                  <div className="mt-2 flex flex-wrap gap-1">
-                    {(rival.cargoManifest || []).slice(0, 4).map((cargo) => (
-                      <span className="rounded-full border border-[#9a7138]/50 bg-[#fff8df]/75 px-2 py-1 text-[0.68rem] font-black uppercase text-[#75501f]" key={`${rival.id}-${cargo.tag}`}>
-                        {cargo.quantity} {cargo.tag} / {cargo.value}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-              {state.rivals.activityLog.slice(0, 5).map((activity, index) => <p className="rounded-sm border border-[#9a7138]/45 bg-[#fff6d7]/55 p-2 text-sm text-[#3b260f]" key={`${index}-${activity}`}>{activity}</p>)}
-            </div>
-          </Panel>
+
           <Panel title="Balance Inspector" variant="parchment">
             <div className="grid grid-cols-2 gap-2">
               <StatChip label="Cargo Value" value={balance.playerCargoValue} />
@@ -175,14 +143,8 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
               <StatChip label="Max Drift" value={`${balance.maximumMarketShift}%`} />
               <StatChip label="Max Heat" value={balance.maximumHeat} />
             </div>
-            <div className="mt-3 grid gap-2">
-              {balance.warnings.map((warning) => (
-                <div className={warning.severity === "danger" ? "rounded-sm border border-[#8d271f]/55 bg-[#fff6d7]/70 p-2 text-sm text-[#8d271f]" : warning.severity === "warning" ? "rounded-sm border border-[#b98b37]/60 bg-[#fff6d7]/70 p-2 text-sm text-[#75501f]" : "rounded-sm border border-[#1f5960]/40 bg-[#fff6d7]/70 p-2 text-sm text-[#1f5960]"} key={warning.label}>
-                  <strong className="block">{warning.label}</strong>{warning.detail}
-                </div>
-              ))}
-            </div>
           </Panel>
+
           <Panel title="Economy Report" variant="parchment">
             <strong className="block font-display text-2xl text-[#26170a]">{season.name}</strong>
             <p className="mt-1 text-sm font-bold text-[#3b260f]">{season.report}</p>
@@ -194,6 +156,7 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
               ))}
             </div>
           </Panel>
+
           <Panel title={<span className="inline-flex items-center gap-2"><BookOpen size={18} /> Rumor Ledger</span>} variant="parchment">
             {dynamicRumors.length ? (
               <div className="mb-3 grid gap-2">
@@ -213,7 +176,7 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
               </div>
             ) : null}
             {notes.length ? (
-              <div className="grid max-h-[62vh] gap-2 overflow-auto pr-1">
+              <div className="grid max-h-[42vh] gap-2 overflow-auto pr-1">
                 {notes.map((note) => (
                   <div className="rounded-sm border border-[#9a7138]/50 bg-[#fff6d7]/55 p-3 text-sm text-[#3b260f]" key={`${note.day}-${note.characterIndex}-${note.topic}`}>
                     <strong className="block text-[#26170a]">Day {note.day}: {note.characterName}</strong>
@@ -222,9 +185,7 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
                   </div>
                 ))}
               </div>
-            ) : (
-              <p className="text-[#3b260f]">Ask customers about routes, laws, prices, and their trade history to build this ledger.</p>
-            )}
+            ) : <p className="text-[#3b260f]">Ask customers about routes, laws, prices, and their trade history to build this ledger.</p>}
             <Button className="mt-4 w-full" variant="secondary" onClick={onBack}>Back</Button>
           </Panel>
         </aside>
