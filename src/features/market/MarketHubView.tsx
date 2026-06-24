@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Building2, ClipboardList, Gavel, Handshake, Map, Menu, PackageSearch, ScrollText, UserRoundPlus } from "lucide-react";
 import type { Character, Marketplace } from "@/data/types";
-import { characterPortraitAssetForCharacter, characterProfileView } from "@/data/characters/characterPortraitManifest";
+import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
 import type { GameState } from "@/lib/game";
 import { eventBiases, eventIsActive, nextEventDay } from "@/lib/events";
 import { money } from "@/lib/format";
@@ -10,8 +10,9 @@ import type { GameView } from "@/app/types";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 
 export function MarketHubView({ state, market, people, onNavigate, onSelectCustomer, onNextCustomer, onPackup }: { state: GameState; market: Marketplace; people: Character[]; onNavigate: (view: GameView) => void; onSelectCustomer: (person: Character) => void; onNextCustomer: () => void; onPackup: () => void; onUnavailable: (message: string) => void }) {
+  const { getPortraitAsset, getProfileView } = useCharacterProfiles();
   const currentCustomer = people.find((person) => person.index === state.selectedCharacterIndex) || null;
-  const currentCustomerView = currentCustomer ? characterProfileView(currentCustomer) : null;
+  const currentCustomerView = getProfileView(currentCustomer);
   const seenToday = state.customerQueueDay === state.day ? new Set(state.seenCharacterIndexes || []) : new Set<number>();
   const waitingPeople = people.filter((person) => person.index !== currentCustomer?.index && !seenToday.has(person.index)).slice(0, 3);
   const eventActive = eventIsActive(market, state.day);
@@ -58,7 +59,7 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
             {currentCustomer && currentCustomerView ? (
               <div className="grid gap-3">
                 <div className="grid grid-cols-[5rem_minmax(0,1fr)] gap-3 rounded-sm border-2 border-[#c89d55] bg-[#fff4c5]/85 p-3 shadow-inner">
-                  <CustomerPortrait person={currentCustomer} />
+                  <CustomerPortrait person={currentCustomer} getPortraitAsset={getPortraitAsset} getProfileView={getProfileView} />
                   <div className="min-w-0">
                     <p className="text-[0.68rem] font-black uppercase tracking-[0.18em] text-[#7b5726]">Current Customer</p>
                     <h2 className="truncate font-display text-3xl leading-none text-[#2b1a0b]">{currentCustomerView.name}</h2>
@@ -76,7 +77,7 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
                 {waitingPeople.length ? (
                   <div className="grid gap-1.5">
                     {waitingPeople.map((person) => {
-                      const view = characterProfileView(person);
+                      const view = getProfileView(person);
                       return (
                         <LedgerRow
                           key={person.index}
@@ -129,12 +130,20 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
   );
 }
 
-function CustomerPortrait({ person }: { person: Character }) {
-  const view = characterProfileView(person);
-  const src = characterPortraitAssetForCharacter(person);
+function CustomerPortrait({
+  person,
+  getPortraitAsset,
+  getProfileView,
+}: {
+  person: Character;
+  getPortraitAsset: ReturnType<typeof useCharacterProfiles>["getPortraitAsset"];
+  getProfileView: ReturnType<typeof useCharacterProfiles>["getProfileView"];
+}) {
+  const view = getProfileView(person);
+  const src = getPortraitAsset(person);
   return (
     <span className="grid h-20 w-20 place-items-center overflow-hidden rounded-sm border border-[#9a7138]/70 bg-[#f2ddb1] text-[#26170a] shadow-inner">
-      {src ? <img className="h-full w-full object-cover object-top" src={src} alt={view.name} /> : <UserRoundPlus />}
+      {src ? <img className="h-full w-full object-cover object-top" src={src} alt={view?.name || person.name} /> : <UserRoundPlus />}
     </span>
   );
 }

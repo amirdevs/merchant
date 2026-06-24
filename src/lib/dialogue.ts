@@ -1,5 +1,5 @@
 import type { Character, Kingdom, Marketplace } from "../data/types";
-import { characterProfileView } from "@/data/characters/characterPortraitManifest";
+import { fallbackCharacterProfileView } from "@/data/characters/characterProfileShared";
 import type { NpcRelation } from "./reputation";
 import { compactBiasText, routeLedger } from "./travel";
 
@@ -47,28 +47,27 @@ export type DialogueContext = {
 };
 
 export function customerIntro(character: Character) {
-  const view = characterProfileView(character);
+  const view = fallbackCharacterProfileView(character);
   return `${view.name} steps up to the counter. ${view.marketFlavor}`;
 }
 
 export function customerPreference(character: Character) {
-  const view = characterProfileView(character);
+  const view = fallbackCharacterProfileView(character);
   return view.tradePersonality || "They bargain by instinct and watch your ledger closely.";
 }
 
 export function customerPrompt(character: Character) {
-  const view = characterProfileView(character);
+  const view = fallbackCharacterProfileView(character);
   if (view.roleTags.length) return `Ask about ${view.roleTags[0].replace(/[-_]/g, " ")}.`;
-  return "What is your place in this market?";
+  return character.dialogue?.customQuestion || "What is your place in this market?";
 }
 
 export function customerReply(character: Character) {
-  const view = characterProfileView(character);
-  return view.story;
+  return character.dialogue?.customReply || fallbackCharacterProfileView(character).story;
 }
 
 function displayName(character: Character) {
-  return characterProfileView(character).name;
+  return fallbackCharacterProfileView(character).name;
 }
 
 function strongestBias(character: Character, direction: "like" | "dislike") {

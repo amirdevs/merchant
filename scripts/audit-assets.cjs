@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { loadGeneratedItems } = require("./item-catalog.cjs");
 
 const root = path.join(__dirname, "..");
 const publicDir = path.join(root, "public");
@@ -66,7 +67,7 @@ function check(label, url) {
 }
 
 const characters = readJson("characters.json");
-const items = readJson("items.json");
+const items = loadGeneratedItems(root);
 const marketplaces = readJson("marketplaces.json");
 
 for (const character of characters) {

@@ -1,6 +1,6 @@
 import { Building2, Handshake, Map, PackageSearch, ScrollText, ShieldAlert, UserRoundPlus } from "lucide-react";
 import type { Character } from "@/data/types";
-import { characterProfileView } from "@/data/characters/characterPortraitManifest";
+import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
 import type { GameView } from "@/app/types";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { actionChecklist, companyUiPanel, inventoryUiPanel, questUiCard, travelUiCard, type UiMessage } from "@/lib/ui-integration";
@@ -16,10 +16,11 @@ export function StrategyDashboardView({ state, onNavigate, onSelectCustomer, onN
   onSelectCustomer: (person: Character) => void;
   onNextCustomer: () => void;
 }) {
+  const { getProfileView } = useCharacterProfiles();
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
   const customer = selectedCharacter(state);
-  const customerView = customer ? characterProfileView(customer) : null;
+  const customerView = getProfileView(customer);
   const inventory = inventoryUiPanel(state.playerInventory, items);
   const company = companyUiPanel(state.company, items);
   const marketClock = marketCloseStatus(state.timeOfDayMinutes);

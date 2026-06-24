@@ -1,6 +1,6 @@
 import { Users } from "lucide-react";
 import type { Character, Marketplace } from "@/data/types";
-import { characterPortraitAssetForCharacter, characterProfileView } from "@/data/characters/characterPortraitManifest";
+import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
 import { townAsset } from "@/lib/assets";
 import { Panel } from "@/components/ui";
 
@@ -15,6 +15,7 @@ export function CustomerList({
   market: Marketplace;
   onSelect: (character: Character) => void;
 }) {
+  const { getPortraitAsset, getProfileView } = useCharacterProfiles();
   return (
     <Panel className="bg-cover bg-center p-0" title={null}>
       <div className="border-b border-brass/45 bg-panel/90 p-3">
@@ -25,8 +26,8 @@ export function CustomerList({
       <div className="bg-cover bg-center" style={{ backgroundImage: `url("${townAsset(market.townsquareFile)}")` }}>
         <div className="grid max-h-[230px] grid-cols-3 content-start gap-2 overflow-auto bg-gradient-to-b from-black/10 to-black/65 p-2 max-[760px]:grid-cols-2">
           {people.map((person) => {
-            const portraitSrc = characterPortraitAssetForCharacter(person);
-            const view = characterProfileView(person);
+            const portraitSrc = getPortraitAsset(person);
+            const view = getProfileView(person);
             return (
               <button
                 key={person.index}

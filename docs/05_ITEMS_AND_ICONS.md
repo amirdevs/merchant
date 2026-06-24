@@ -2,7 +2,7 @@
 
 ## Item catalog
 
-The item catalog is generated under `src/data/generated/items.json` and now carries richer item metadata such as family, subfamily, forms, trade role, rarity, storage needs, market behavior, and icon file.
+The item catalog runtime source now lives in chunked files under `src/data/generated/items-*.json`, with [src/data/generated/items.chunked.ts](C:\Freelance\merchant-react-electron\src\data\generated\items.chunked.ts) as the runtime aggregator. Script-side reads and writes should go through `scripts/item-catalog.cjs`.
 
 Inventory still references item indexes in current runtime structures, so save schema v2 blocks older saves after the catalog rewrite.
 

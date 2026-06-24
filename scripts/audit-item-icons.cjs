@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { loadGeneratedItems } = require("./item-catalog.cjs");
 
 const root = path.join(__dirname, "..");
 const dataDir = path.join(root, "src", "data", "generated");
@@ -122,8 +123,7 @@ function makeReportTable(rows, columns) {
 
 fs.mkdirSync(outDir, { recursive: true });
 
-const itemsPath = path.join(dataDir, "items.json");
-const items = readJson(itemsPath);
+const items = loadGeneratedItems(root);
 const issues = [];
 const warnings = [];
 

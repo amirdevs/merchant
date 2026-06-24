@@ -1,8 +1,9 @@
 const fs = require("fs");
 const path = require("path");
+const { loadGeneratedItems } = require("./item-catalog.cjs");
 
 const root = path.join(__dirname, "..");
-const items = require(path.join(root, "src", "data", "generated", "items.json"));
+const items = loadGeneratedItems(root);
 const outDir = path.join(root, "docs", "assets", "icon-prompts");
 const slotsPerSheet = 50;
 const columns = 10;

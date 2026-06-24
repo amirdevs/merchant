@@ -1,6 +1,6 @@
 import { HandCoins, UserRound } from "lucide-react";
 import type { Character } from "@/data/types";
-import { characterPortraitAssetForCharacter, characterProfileView } from "@/data/characters/characterPortraitManifest";
+import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
 import { customerIntro, customerPreference, customerPrompt, customerReply } from "@/lib/dialogue";
 import { money } from "@/lib/format";
 import { Button } from "@/components/ui";
@@ -19,12 +19,13 @@ export function CharacterCard({
   onTrade: () => void;
   onNextCustomer: () => void;
 }) {
+  const { getPortraitAsset, getProfileView } = useCharacterProfiles();
   const likes = character.bias?.filter((bias) => bias.percent > 0).slice(0, 5) || [];
   const dislikes = character.bias?.filter((bias) => bias.percent < 0).slice(0, 4) || [];
   const difference = Math.round(playerOffer - characterOffer);
   const offerStatus = difference >= 0 ? `Ahead by ${money(difference)}` : `Missing ${money(Math.abs(difference))}`;
-  const portraitSrc = characterPortraitAssetForCharacter(character);
-  const view = characterProfileView(character);
+  const portraitSrc = getPortraitAsset(character);
+  const view = getProfileView(character);
 
   return (
     <div className="grid min-h-[360px] grid-cols-[35%_65%] border-2 border-brass-soft bg-panel/90 shadow-2xl max-[760px]:grid-cols-1">

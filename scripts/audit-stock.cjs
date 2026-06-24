@@ -1,9 +1,10 @@
 const fs = require("fs");
 const path = require("path");
+const { loadGeneratedItems } = require("./item-catalog.cjs");
 
 const root = path.join(__dirname, "..");
 const dataDir = path.join(root, "src", "data", "generated");
-const items = JSON.parse(fs.readFileSync(path.join(dataDir, "items.json"), "utf8"));
+const items = loadGeneratedItems(root);
 const professions = JSON.parse(fs.readFileSync(path.join(dataDir, "professions.json"), "utf8"));
 
 function normalize(value) {

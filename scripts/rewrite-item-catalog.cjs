@@ -1,9 +1,9 @@
 const fs = require("fs");
 const path = require("path");
+const { loadGeneratedItems, writeGeneratedItems } = require("./item-catalog.cjs");
 
 const root = path.join(__dirname, "..");
 const dataDir = path.join(root, "src", "data", "generated");
-const itemsFile = path.join(dataDir, "items.json");
 const manifestFile = path.join(dataDir, "manifest.json");
 const charactersFile = path.join(dataDir, "characters.json");
 const professionsFile = path.join(dataDir, "professions.json");
@@ -604,7 +604,7 @@ const additions = [
   ["silvered prayer pin", ["religion", "luxury"], 55, 1, 1, 2],
 ].map((entry) => addedItem(...entry));
 
-const items = readJson(itemsFile);
+const items = loadGeneratedItems(root);
 const manifest = readJson(manifestFile);
 const characters = readJson(charactersFile);
 const professions = readJson(professionsFile);
@@ -713,7 +713,7 @@ for (const market of marketplaces) {
 
 manifest.counts.items = items.length;
 
-writeJson(itemsFile, items);
+writeGeneratedItems(root, items);
 writeJson(manifestFile, manifest);
 writeJson(charactersFile, characters);
 writeJson(professionsFile, professions);

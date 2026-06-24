@@ -1,6 +1,6 @@
 import { MessageSquare, Search, UserRound } from "lucide-react";
 import type { Character } from "@/data/types";
-import { characterPortraitAssetForCharacter, characterProfileView } from "@/data/characters/characterPortraitManifest";
+import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
 import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { relationFor } from "@/lib/reputation";
@@ -11,10 +11,11 @@ import type { GameView } from "@/app/types";
 import { Button, Panel, ScreenFrame, StatChip, TabButton } from "@/components/ui";
 
 export function CustomersView({ state, people, selected, onSelect, onNext, onNavigate, onSpeak }: { state: GameState; people: Character[]; selected: Character | null; onSelect: (person: Character) => void; onNext: () => void; onNavigate: (view: GameView) => void; onSpeak: (character: Character, topic: string, reply: string, nextNode?: DialogueNodeId, effect?: DialogueEffect) => void }) {
+  const { getPortraitAsset, getProfileView } = useCharacterProfiles();
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
   const selectedRelation = relationFor(state.npcRelations, selected);
-  const selectedView = selected ? characterProfileView(selected) : null;
+  const selectedView = getProfileView(selected);
   const recentNotes = selected ? state.dialogueLog.filter((entry) => entry.characterIndex === selected.index).slice(0, 5) : [];
 
   return (
@@ -35,14 +36,14 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
               <span>Portrait</span><span>Name</span><span>Profession</span><span>Story Hook</span><span>Role Tags</span><span>Stock</span><span>Status</span>
             </div>
             {people.map((person) => {
-              const view = characterProfileView(person);
+              const view = getProfileView(person);
               return (
                 <button
                   key={person.index}
                   className={`grid min-w-[860px] grid-cols-[78px_1.15fr_0.9fr_1.35fr_1fr_100px_92px] items-center gap-2 border-b border-[#9a7138]/35 px-3 py-2 text-left text-sm text-[#2a1a0c] transition hover:bg-[#f7e5bc]/70 ${selected?.index === person.index ? "bg-[#dcb96d]/45" : "bg-transparent"}`}
                   onClick={() => onSelect(person)}
                 >
-                  <Portrait person={person} />
+                  <Portrait person={person} getPortraitAsset={getPortraitAsset} getProfileView={getProfileView} />
                   <strong className="truncate font-display text-lg leading-none text-[#26170a]">{view.name}</strong>
                   <span className="truncate">{view.profession}</span>
                   <span className="line-clamp-2 text-[#725331]">{view.marketFlavor}</span>
@@ -59,7 +60,7 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
         <Panel title="Customer Dossier" variant="parchment">
           {selected && selectedView ? (
             <div>
-              <div className="flex justify-center"><Portrait person={selected} large /></div>
+              <div className="flex justify-center"><Portrait person={selected} large getPortraitAsset={getPortraitAsset} getProfileView={getProfileView} /></div>
               <h2 className="mt-3 text-center font-display text-3xl text-[#26170a]">{selectedView.name}</h2>
               <p className="text-center font-bold text-[#75501f]">{selectedView.profession}</p>
               <p className="mt-2 text-center text-xs font-black uppercase tracking-[0.16em] text-[#9a7138]">
@@ -100,12 +101,22 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
   );
 }
 
-function Portrait({ person, large }: { person: Character; large?: boolean }) {
-  const src = characterPortraitAssetForCharacter(person);
-  const view = characterProfileView(person);
+function Portrait({
+  person,
+  large,
+  getPortraitAsset,
+  getProfileView,
+}: {
+  person: Character;
+  large?: boolean;
+  getPortraitAsset: ReturnType<typeof useCharacterProfiles>["getPortraitAsset"];
+  getProfileView: ReturnType<typeof useCharacterProfiles>["getProfileView"];
+}) {
+  const src = getPortraitAsset(person);
+  const view = getProfileView(person);
   return (
     <span className={`${large ? "h-40 w-40" : "h-12 w-12"} grid shrink-0 place-items-center overflow-hidden rounded-md border border-[#9a7138]/70 bg-[#f2ddb1] text-[#26170a]`}>
-      {src ? <img className="h-full w-full object-cover object-top" src={src} alt={view.name} /> : <UserRound />}
+      {src ? <img className="h-full w-full object-cover object-top" src={src} alt={view?.name || person.name} /> : <UserRound />}
     </span>
   );
 }

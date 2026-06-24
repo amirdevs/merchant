@@ -1,7 +1,8 @@
 import { useState, type ReactNode } from "react";
 import { Handshake, HelpCircle, MessageCircle } from "lucide-react";
 import type { Character, InventoryEntry } from "@/data/types";
-import { characterPortraitAssetForCharacter, characterProfileView, tradePortraitExpression } from "@/data/characters/characterPortraitManifest";
+import { tradePortraitExpression } from "@/data/characters/characterProfileShared";
+import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { moodLabel, patienceLabel, relationFor, trustLabel, ultimatumActive } from "@/lib/reputation";
 import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
@@ -35,6 +36,7 @@ type BarterConversationViewProps = {
 };
 
 export function BarterConversationView({ state, character, playerOffer, characterOffer, message, onMovePlayer, onMoveCharacter, onSetPlayerOfferQuantity, onSetCharacterOfferQuantity, onTogglePlayerProtect, onTrade, onAskPrice, onAskOffer, onClearOffers, onGoodbye, onHelp, onSpeak }: BarterConversationViewProps) {
+  const { getPortraitAsset, getProfileView } = useCharacterProfiles();
   const [conversationOpen, setConversationOpen] = useState(false);
   const advantage = playerOffer - characterOffer;
   const market = currentMarket(state);
@@ -51,8 +53,9 @@ export function BarterConversationView({ state, character, playerOffer, characte
   }, dialogueNode) : [];
   const recentNotes = character ? state.dialogueLog.filter((entry) => entry.characterIndex === character.index).slice(0, 3) : [];
   const dealReaction = reactionForAdvantage(advantage, playerOffer, characterOffer);
-  const characterView = character ? characterProfileView(character, tradePortraitExpression(advantage, relation?.mood || 0)) : null;
-  const portraitSrc = character ? characterPortraitAssetForCharacter(character, tradePortraitExpression(advantage, relation?.mood || 0)) : "";
+  const portraitExpression = tradePortraitExpression(advantage, relation?.mood || 0);
+  const characterView = getProfileView(character, portraitExpression);
+  const portraitSrc = getPortraitAsset(character, portraitExpression);
   const chooseDialogue = (choice: ReturnType<typeof dialogueChoices>[number]) => {
     if (choice.id === "ask-price") onAskPrice();
     else if (choice.id === "ask-offer" || choice.id === "barter") onAskOffer();

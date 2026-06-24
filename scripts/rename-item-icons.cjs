@@ -1,9 +1,9 @@
 const fs = require("node:fs");
 const path = require("node:path");
+const { loadGeneratedItems, writeGeneratedItems } = require("./item-catalog.cjs");
 
 const root = path.resolve(__dirname, "..");
 const promptDir = path.join(root, "docs", "assets", "icon-prompts");
-const itemsFile = path.join(root, "src", "data", "generated", "items.json");
 const publicPrefix = "public/game-assets/items/";
 const reportFile = path.join(root, "docs", "assets", "icon-rename-report.json");
 
@@ -136,7 +136,7 @@ for (const oldPublicPath of oldAssetPaths) {
   }
 }
 
-const items = readJson(itemsFile);
+const items = loadGeneratedItems(root);
 let updatedItems = 0;
 for (const item of items) {
   const nextIcon = itemIconByIndex.get(item.index);
@@ -145,7 +145,7 @@ for (const item of items) {
     updatedItems += 1;
   }
 }
-writeJson(itemsFile, items);
+writeGeneratedItems(root, items);
 
 let updatedPromptItems = 0;
 for (const file of promptFiles) {

@@ -1,5 +1,5 @@
 import charactersJson from "../data/generated/characters.json";
-import itemsJson from "../data/generated/items.json";
+import { itemsChunked } from "../data/generated/items.chunked";
 import kingdomsJson from "../data/generated/kingdoms.json";
 import marketplacesJson from "../data/generated/marketplaces.json";
 import professionsJson from "../data/generated/professions.json";
@@ -39,7 +39,7 @@ import type { StockArchetype, WeightedArchetype } from "../data/stock/types";
 import { resolvedStockSettings } from "./stock-profiles";
 import { itemCatalogTokens, itemMatchesCatalogToken, normalizeItemToken } from "./item-catalog";
 
-export const items = itemsJson as Item[];
+export const items = itemsChunked as Item[];
 export const kingdoms = kingdomsJson as Kingdom[];
 export const marketplaces = marketplacesJson as Marketplace[];
 export const professions = professionsJson as Record<string, Profession>;

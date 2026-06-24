@@ -2,6 +2,7 @@ import type { Character } from "@/data/types";
 import { characterIdentityCatalogBatches } from "./characterIdentityCatalog";
 import type { FinalCharacterIdentityProfile } from "./characterIdentityTypes";
 import type { CharacterExpression } from "./characterProfileTypes";
+import { fallbackCharacterProfileView, tradePortraitExpression, type CharacterProfileView } from "./characterProfileShared";
 import sheet0001_0012 from "../../../docs/assets/character-prompts/characters-0001-0012.json";
 import sheet0013_0024 from "../../../docs/assets/character-prompts/characters-0013-0024.json";
 import sheet0025_0036 from "../../../docs/assets/character-prompts/characters-0025-0036.json";
@@ -184,51 +185,30 @@ export function characterPortraitAssetForCharacter(character: Character | null |
   return characterExpressionPortrait(id, expression)?.assetPath || "";
 }
 
-export type CharacterProfileView = {
-  readonly id: string | null;
-  readonly name: string;
-  readonly profession: string;
-  readonly portraitSrc: string;
-  readonly story: string;
-  readonly marketFlavor: string;
-  readonly tradePersonality: string;
-  readonly roleTags: readonly string[];
-  readonly gameplayGroups: readonly string[];
-  readonly ancestryOrSpecies?: string;
-  readonly magicalTraits: readonly string[];
-  readonly visualIdentity: string;
-};
-
 export function characterProfileView(character: Character, expression: CharacterExpression = "neutral"): CharacterProfileView {
+  const fallback = fallbackCharacterProfileView(character);
   const id = characterIdForCharacter(character);
   const profile = id ? characterIdentityById.get(id) || null : null;
   const portraitSrc = profile ? characterExpressionPortrait(profile.characterId, expression)?.assetPath || "" : "";
   return {
     id,
-    name: profile?.finalDisplayName || character.name,
-    profession: profile?.profession || character.profession,
+    name: profile?.finalDisplayName || fallback.name,
+    profession: profile?.profession || fallback.profession,
     portraitSrc,
-    story: profile?.shortStory || character.dialogue?.who || "A trader with unfinished business at the stall.",
-    marketFlavor: profile?.marketFlavor || character.dialogue?.preference || "A customer watches the market and weighs the deal carefully.",
-    tradePersonality: profile?.tradePersonality || character.dialogue?.preference || "Practical and price-conscious.",
+    story: profile?.shortStory || fallback.story,
+    marketFlavor: profile?.marketFlavor || fallback.marketFlavor,
+    tradePersonality: profile?.tradePersonality || fallback.tradePersonality,
     roleTags: profile?.roleTags || [],
     gameplayGroups: profile?.gameplayGroups || [],
     ancestryOrSpecies: profile?.ancestryOrSpecies,
     magicalTraits: profile?.magicalTraits || [],
-    visualIdentity: profile?.visualIdentity || "Character profile pending.",
+    visualIdentity: profile?.visualIdentity || fallback.visualIdentity,
   };
 }
 
 export function characterCustomerIntro(character: Character) {
   const view = characterProfileView(character);
   return `${view.name} steps up to the counter. ${view.marketFlavor}`;
-}
-
-export function tradePortraitExpression(playerAdvantage: number, mood = 0): CharacterExpression {
-  if (mood <= -3) return "angry";
-  if (mood < 0 || playerAdvantage < -200) return "suspicious";
-  if (playerAdvantage >= 250) return "happy";
-  return "neutral";
 }
 
 function expressionSortKey(expression: CharacterExpression) {

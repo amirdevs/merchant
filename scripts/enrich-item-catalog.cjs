@@ -1,10 +1,10 @@
 const fs = require("fs");
 const path = require("path");
+const { loadGeneratedItems, writeGeneratedItems } = require("./item-catalog.cjs");
 
 const root = path.join(__dirname, "..");
-const itemsFile = path.join(root, "src", "data", "generated", "items.json");
 
-const items = JSON.parse(fs.readFileSync(itemsFile, "utf8"));
+const items = loadGeneratedItems(root);
 
 function normalize(value) {
   return String(value || "").toLowerCase().replace(/[_-]+/g, " ").trim();
@@ -364,7 +364,7 @@ const enriched = items.map((item) => {
   };
 });
 
-fs.writeFileSync(itemsFile, `${JSON.stringify(enriched, null, 2)}\n`);
+writeGeneratedItems(root, enriched);
 
 const familyCounts = enriched.reduce((counts, item) => {
   counts[item.family] = (counts[item.family] || 0) + 1;
