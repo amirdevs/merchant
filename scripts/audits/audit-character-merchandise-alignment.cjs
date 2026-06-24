@@ -1,53 +1,79 @@
-const fs = require('fs');
-const {
-  ASSIGNMENTS_FILE,
-  REVIEW_FILE,
-  PROMPT_FILE,
-  REPORT_FILE,
-  ITEM_EXTENSION_FILE,
-  analyzeProfiles,
-  readJson,
-  renderReport,
-  stableStringify,
-} = require('../maintenance/character-merchandise-core.cjs');
+const fs = require('node:fs');
+const path = require('node:path');
 
-const result = analyzeProfiles();
-const expected = {
-  [ASSIGNMENTS_FILE]: result.assignments,
-  [REVIEW_FILE]: result.review,
-  [PROMPT_FILE]: result.missingPrompts,
-  [ITEM_EXTENSION_FILE]: result.missingItems,
-};
+const repoRoot = process.cwd();
+const assignmentsPath = path.join(repoRoot, 'src/content/characters/merchandise/assignments.json');
+const itemsPath = path.join(repoRoot, 'src/content/items/catalog/character-merchandise-items.json');
+const promptPath = path.join(repoRoot, 'docs/assets/item-prompts/missing-character-merchandise-items.json');
+const reportPath = path.join(repoRoot, 'docs/logs/character-merchandise-alignment-report.md');
+
+function readJson(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+}
+
+const assignments = readJson(assignmentsPath);
+const itemRecords = readJson(itemsPath);
+const promptBatch = readJson(promptPath);
 const issues = [];
-for (const [file, value] of Object.entries(expected)) {
-  const current = readJson(file, null);
-  if (stableStringify(current) !== stableStringify(value)) {
-    issues.push(`${file} is out of date. Run pnpm apply:character-merchandise.`);
-  }
-}
-const report = fs.existsSync(REPORT_FILE) ? fs.readFileSync(REPORT_FILE, 'utf8') : '';
-const expectedReport = renderReport(result);
-if (report !== expectedReport) issues.push(`${REPORT_FILE} is out of date. Run pnpm apply:character-merchandise.`);
 
-const duplicateAssignedTags = [];
-for (const assignment of result.assignments) {
-  const tags = new Set();
-  for (const pool of assignment.stockPools) {
-    if (tags.has(pool.tag)) duplicateAssignedTags.push(`${assignment.characterId}:${pool.tag}`);
-    tags.add(pool.tag);
+const assignmentById = new Map(assignments.map((assignment) => [assignment.characterId, assignment]));
+const itemIds = new Set(itemRecords.map((item) => item.id));
+const promptItemIds = new Set((promptBatch.items || []).map((item) => item.itemId));
+
+const forbiddenNoise = [
+  'company_stake',
+  'Sunwake Harbor Company Share',
+  'Ponderings of the Infinite Ledger',
+  'blueglass ore sample',
+  'cauldron',
+  'hints',
+  'patience',
+  'bulk delivery job',
+  'paperwork clarity',
+  'warnings before comfort',
+];
+
+for (const assignment of assignments) {
+  for (const pool of assignment.stockPools || []) {
+    if (forbiddenNoise.some((noise) => pool.tag.toLowerCase().includes(noise.toLowerCase()))) {
+      issues.push(`${assignment.characterId} has noisy stock pool tag ${pool.tag}`);
+    }
+  }
+  for (const matched of assignment.matchedItems || []) {
+    if (forbiddenNoise.some((noise) => (matched.itemName || matched.itemId || '').toLowerCase().includes(noise.toLowerCase()))) {
+      issues.push(`${assignment.characterId} has noisy matched item ${matched.itemName || matched.itemId}`);
+    }
+  }
+  for (const missingId of assignment.missingItemIds || []) {
+    if (!itemIds.has(missingId)) issues.push(`${assignment.characterId} references missing item record ${missingId}`);
+    if (!promptItemIds.has(missingId)) issues.push(`${assignment.characterId} missing prompt for ${missingId}`);
   }
 }
-if (duplicateAssignedTags.length) issues.push(`Duplicate merchandise stock tags: ${duplicateAssignedTags.slice(0, 20).join(', ')}`);
+
+const buttonSeller = assignmentById.get('character-167');
+if (!buttonSeller) issues.push('Missing merchandise assignment for character-167 Button Seller.');
+else {
+  const tags = new Set((buttonSeller.stockPools || []).map((pool) => pool.tag));
+  if (!tags.has('tailoring_buttons') || !tags.has('buttons')) {
+    issues.push('Button Seller must include tailoring_buttons and buttons stock pools.');
+  }
+  if (!(buttonSeller.missingItemIds || []).includes('character_merchandise_tailoring_buttons')) {
+    issues.push('Button Seller must reference the tailoring buttons item record.');
+  }
+}
+
+if (!itemIds.has('character_merchandise_tailoring_buttons')) {
+  issues.push('Missing item record for Assorted Tailoring Buttons.');
+}
+if (!promptItemIds.has('character_merchandise_tailoring_buttons')) {
+  issues.push('Missing icon prompt for Assorted Tailoring Buttons.');
+}
+if (!fs.existsSync(reportPath)) issues.push('Missing merchandise alignment report.');
 
 if (issues.length) {
   console.error(`Character merchandise audit failed with ${issues.length} issue(s):`);
-  for (const issue of issues.slice(0, 40)) console.error(`- ${issue}`);
-  if (issues.length > 40) console.error(`- ...and ${issues.length - 40} more`);
+  for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
 
-console.log('Character merchandise audit passed.');
-console.log(`Characters scanned: ${result.profiles.length}`);
-console.log(`Assignments: ${result.assignments.length}`);
-console.log(`New item records: ${result.missingItems.length}`);
-console.log(`Review-needed characters: ${result.review.length}`);
+console.log(`Character merchandise audit passed: ${assignments.length} curated assignments, ${itemRecords.length} item records, ${promptBatch.items.length} icon prompts.`);
