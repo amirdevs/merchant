@@ -1,0 +1,923 @@
+{
+  "batchId": "missing-character-merchandise-items",
+  "purpose": "Generate item icons for character-described merchandise that is not present in the current item catalog.",
+  "background": "#00FF00",
+  "itemPromptRules": {
+    "layout": "individual item icons or grid sheets as preferred by the item icon pipeline",
+    "background": "pure green #00FF00",
+    "noText": true,
+    "style": "ultra-cartoony magical fantasy game art, collectible trading item icon, readable silhouette"
+  },
+  "items": [
+    {
+      "order": 1,
+      "itemId": "character_merchandise_wax",
+      "displayName": "Wax Sticks",
+      "productKey": "wax",
+      "category": "stationery",
+      "neededBy": [
+        {
+          "characterId": "character-001",
+          "name": "Mirella Brasscall",
+          "profession": "Auctioneer"
+        },
+        {
+          "characterId": "character-157",
+          "name": "Lord Marrec Quillgate",
+          "profession": "Customs Magistrate"
+        },
+        {
+          "characterId": "character-169",
+          "name": "Jorin Plumwax",
+          "profession": "Seal Maker"
+        },
+        {
+          "characterId": "character-189",
+          "name": "Old Moth Marn",
+          "profession": "Candle Wick Spinner"
+        },
+        {
+          "characterId": "character-197",
+          "name": "Bix Candletoe",
+          "profession": "Temple Sweeper"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of sealing wax sticks, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 2,
+      "itemId": "character_merchandise_ledger",
+      "displayName": "Ledgers",
+      "productKey": "ledger",
+      "category": "documents",
+      "neededBy": [
+        {
+          "characterId": "character-001",
+          "name": "Mirella Brasscall",
+          "profession": "Auctioneer"
+        },
+        {
+          "characterId": "character-008",
+          "name": "Davin Ledgerhook",
+          "profession": "Market Inspector"
+        },
+        {
+          "characterId": "character-013",
+          "name": "Tovin Hearthmile",
+          "profession": "Roadside Innkeeper"
+        },
+        {
+          "characterId": "character-161",
+          "name": "Pell Oatwhistle",
+          "profession": "Grain Futures Clerk"
+        },
+        {
+          "characterId": "character-166",
+          "name": "Marsa Clovejaw",
+          "profession": "Spice Dentist"
+        },
+        {
+          "characterId": "character-167",
+          "name": "Boro Thimbleback",
+          "profession": "Button Seller"
+        },
+        {
+          "characterId": "character-168",
+          "name": "Elka Rainbarrel",
+          "profession": "Barrel Cooper"
+        },
+        {
+          "characterId": "character-169",
+          "name": "Jorin Plumwax",
+          "profession": "Seal Maker"
+        },
+        {
+          "characterId": "character-170",
+          "name": "Vess Nimblehook",
+          "profession": "Fish Hook Peddler"
+        },
+        {
+          "characterId": "character-171",
+          "name": "Orelia Sunflour",
+          "profession": "Baker"
+        },
+        {
+          "characterId": "character-172",
+          "name": "Pax Underbridge",
+          "profession": "Mushroom Forager"
+        },
+        {
+          "characterId": "character-173",
+          "name": "Tilda Brasswool",
+          "profession": "Blanket Weaver"
+        },
+        {
+          "characterId": "character-174",
+          "name": "Naveen Bluepoppy",
+          "profession": "Dye Merchant"
+        },
+        {
+          "characterId": "character-175",
+          "name": "Rikka Saltneedle",
+          "profession": "Sail Mender"
+        },
+        {
+          "characterId": "character-176",
+          "name": "Cori Finchcup",
+          "profession": "Tea Seller"
+        },
+        {
+          "characterId": "character-177",
+          "name": "Mavro Tinlaugh",
+          "profession": "Toy Tinker"
+        },
+        {
+          "characterId": "character-178",
+          "name": "Sela Moonpepper",
+          "profession": "Pickle Witch"
+        },
+        {
+          "characterId": "character-179",
+          "name": "Brann Oakfist",
+          "profession": "Timber Measurer"
+        },
+        {
+          "characterId": "character-180",
+          "name": "Yumi Goldscale",
+          "profession": "Pearl Buyer"
+        },
+        {
+          "characterId": "character-181",
+          "name": "Hasker Redroot",
+          "profession": "Beet Farmer"
+        },
+        {
+          "characterId": "character-182",
+          "name": "Ilyen Starquill",
+          "profession": "Letter Writer"
+        },
+        {
+          "characterId": "character-183",
+          "name": "Nora Oxbell",
+          "profession": "Pack Bell Seller"
+        },
+        {
+          "characterId": "character-184",
+          "name": "Kef Mosspocket",
+          "profession": "Seed Trader"
+        },
+        {
+          "characterId": "character-185",
+          "name": "Daro Blackfig",
+          "profession": "Fruit Cart Owner"
+        },
+        {
+          "characterId": "character-186",
+          "name": "Pippa Quicksole",
+          "profession": "Shoe Cobbler"
+        },
+        {
+          "characterId": "character-187",
+          "name": "Galen Brightmug",
+          "profession": "Cup Potter"
+        },
+        {
+          "characterId": "character-188",
+          "name": "Suri Amberpin",
+          "profession": "Brooch Seller"
+        },
+        {
+          "characterId": "character-189",
+          "name": "Old Moth Marn",
+          "profession": "Candle Wick Spinner"
+        },
+        {
+          "characterId": "character-190",
+          "name": "Viko Thorncart",
+          "profession": "Cactus Fruit Seller"
+        },
+        {
+          "characterId": "character-191",
+          "name": "Ansel Copperdrip",
+          "profession": "Oil Presser"
+        },
+        {
+          "characterId": "character-192",
+          "name": "Mina Rosehook",
+          "profession": "Ribbon Hawker"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of bound trade ledger, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 3,
+      "itemId": "character_merchandise_bell",
+      "displayName": "Hand Bell",
+      "productKey": "bell",
+      "category": "market tools",
+      "neededBy": [
+        {
+          "characterId": "character-001",
+          "name": "Mirella Brasscall",
+          "profession": "Auctioneer"
+        },
+        {
+          "characterId": "character-007",
+          "name": "Pella Brightspoon",
+          "profession": "Festival Trader"
+        },
+        {
+          "characterId": "character-159",
+          "name": "Captain Orvo Bluebanner",
+          "profession": "Caravan Banner Captain"
+        },
+        {
+          "characterId": "character-162",
+          "name": "Seraphine Bellwater",
+          "profession": "Canal Ferry Master"
+        },
+        {
+          "characterId": "character-183",
+          "name": "Nora Oxbell",
+          "profession": "Pack Bell Seller"
+        },
+        {
+          "characterId": "character-198",
+          "name": "Hanna Milkbell",
+          "profession": "Stable Helper"
+        },
+        {
+          "characterId": "character-205",
+          "name": "Vela Starling",
+          "profession": "Window Singer"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of brass hand bell, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 4,
+      "itemId": "character_merchandise_card",
+      "displayName": "Deck",
+      "productKey": "card",
+      "category": "games",
+      "neededBy": [
+        {
+          "characterId": "character-001",
+          "name": "Mirella Brasscall",
+          "profession": "Auctioneer"
+        },
+        {
+          "characterId": "character-165",
+          "name": "Nyx Lanternglass",
+          "profession": "Night Market Oracle"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of playing cards, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 5,
+      "itemId": "character_merchandise_tag",
+      "displayName": "Appraisal Tags",
+      "productKey": "tag",
+      "category": "market tools",
+      "neededBy": [
+        {
+          "characterId": "character-002",
+          "name": "Orren Scale-Eye",
+          "profession": "Appraiser"
+        },
+        {
+          "characterId": "character-008",
+          "name": "Davin Ledgerhook",
+          "profession": "Market Inspector"
+        },
+        {
+          "characterId": "character-014",
+          "name": "Madu Long-Ear",
+          "profession": "Pack Animal Trader"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of appraisal tags, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 6,
+      "itemId": "character_merchandise_scale",
+      "displayName": "Brass Scale",
+      "productKey": "scale",
+      "category": "market tools",
+      "neededBy": [
+        {
+          "characterId": "character-002",
+          "name": "Orren Scale-Eye",
+          "profession": "Appraiser"
+        },
+        {
+          "characterId": "character-008",
+          "name": "Davin Ledgerhook",
+          "profession": "Market Inspector"
+        },
+        {
+          "characterId": "character-180",
+          "name": "Yumi Goldscale",
+          "profession": "Pearl Buyer"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of tiny brass scale, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 7,
+      "itemId": "character_merchandise_lens",
+      "displayName": "Glass Lens",
+      "productKey": "lens",
+      "category": "market tools",
+      "neededBy": [
+        {
+          "characterId": "character-002",
+          "name": "Orren Scale-Eye",
+          "profession": "Appraiser"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of green glass lens, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 8,
+      "itemId": "character_merchandise_crate",
+      "displayName": "Crates",
+      "productKey": "crate",
+      "category": "containers",
+      "neededBy": [
+        {
+          "characterId": "character-003",
+          "name": "Basko Fencrate",
+          "profession": "Bulk Goods Broker"
+        },
+        {
+          "characterId": "character-006",
+          "name": "Helva Quaystamp",
+          "profession": "Import Export Clerk"
+        },
+        {
+          "characterId": "character-158",
+          "name": "Tazmina Dragonmint",
+          "profession": "Dragonfruit Apothecary"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of wooden trade crate, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 9,
+      "itemId": "character_merchandise_hook",
+      "displayName": "Crate Hook",
+      "productKey": "hook",
+      "category": "market tools",
+      "neededBy": [
+        {
+          "characterId": "character-003",
+          "name": "Basko Fencrate",
+          "profession": "Bulk Goods Broker"
+        },
+        {
+          "characterId": "character-005",
+          "name": "Joryn Crackbox",
+          "profession": "Damaged Goods Dealer"
+        },
+        {
+          "characterId": "character-012",
+          "name": "Arra Stonepassport",
+          "profession": "Border Customs Guard"
+        },
+        {
+          "characterId": "character-165",
+          "name": "Nyx Lanternglass",
+          "profession": "Night Market Oracle"
+        },
+        {
+          "characterId": "character-170",
+          "name": "Vess Nimblehook",
+          "profession": "Fish Hook Peddler"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of iron crate hook, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 10,
+      "itemId": "character_merchandise_rope",
+      "displayName": "Ropes",
+      "productKey": "rope",
+      "category": "trade supplies",
+      "neededBy": [
+        {
+          "characterId": "character-003",
+          "name": "Basko Fencrate",
+          "profession": "Bulk Goods Broker"
+        },
+        {
+          "characterId": "character-014",
+          "name": "Madu Long-Ear",
+          "profession": "Pack Animal Trader"
+        },
+        {
+          "characterId": "character-199",
+          "name": "Torro Greycap",
+          "profession": "Old Porter"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of coiled rope, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 11,
+      "itemId": "character_merchandise_gem",
+      "displayName": "Jewels",
+      "productKey": "gem",
+      "category": "luxury",
+      "neededBy": [
+        {
+          "characterId": "character-004",
+          "name": "Saffra Moonlock",
+          "profession": "Rare Item Collector"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of polished gem, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 12,
+      "itemId": "character_merchandise_leather",
+      "displayName": "Hides",
+      "productKey": "leather",
+      "category": "materials",
+      "neededBy": [
+        {
+          "characterId": "character-005",
+          "name": "Joryn Crackbox",
+          "profession": "Damaged Goods Dealer"
+        },
+        {
+          "characterId": "character-186",
+          "name": "Pippa Quicksole",
+          "profession": "Shoe Cobbler"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of worked leather roll, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 13,
+      "itemId": "character_merchandise_ink",
+      "displayName": "Inkpots",
+      "productKey": "ink",
+      "category": "stationery",
+      "neededBy": [
+        {
+          "characterId": "character-006",
+          "name": "Helva Quaystamp",
+          "profession": "Import Export Clerk"
+        },
+        {
+          "characterId": "character-161",
+          "name": "Pell Oatwhistle",
+          "profession": "Grain Futures Clerk"
+        },
+        {
+          "characterId": "character-165",
+          "name": "Nyx Lanternglass",
+          "profession": "Night Market Oracle"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of black ink bottle, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 14,
+      "itemId": "character_merchandise_iron",
+      "displayName": "Ingots",
+      "productKey": "iron",
+      "category": "materials",
+      "neededBy": [
+        {
+          "characterId": "character-010",
+          "name": "Brann Oxweather",
+          "profession": "Caravan Captain"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of iron ingot, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 15,
+      "itemId": "character_merchandise_lantern",
+      "displayName": "Lanterns",
+      "productKey": "lantern",
+      "category": "household goods",
+      "neededBy": [
+        {
+          "characterId": "character-016",
+          "name": "Vaska LowLantern",
+          "profession": "Smuggler Guide"
+        },
+        {
+          "characterId": "character-165",
+          "name": "Nyx Lanternglass",
+          "profession": "Night Market Oracle"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of brass lantern, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 16,
+      "itemId": "character_merchandise_bottle",
+      "displayName": "Vials",
+      "productKey": "bottle",
+      "category": "containers",
+      "neededBy": [
+        {
+          "characterId": "character-158",
+          "name": "Tazmina Dragonmint",
+          "profession": "Dragonfruit Apothecary"
+        },
+        {
+          "characterId": "character-194",
+          "name": "Nella Puddleboot",
+          "profession": "Rainwater Seller"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of glass vial, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 17,
+      "itemId": "character_merchandise_charm",
+      "displayName": "Charms",
+      "productKey": "charm",
+      "category": "trinkets",
+      "neededBy": [
+        {
+          "characterId": "character-159",
+          "name": "Captain Orvo Bluebanner",
+          "profession": "Caravan Banner Captain"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of market charms, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 18,
+      "itemId": "character_merchandise_lace",
+      "displayName": "Laces",
+      "productKey": "lace",
+      "category": "tailoring notions",
+      "neededBy": [
+        {
+          "characterId": "character-160",
+          "name": "Madame Ivara Lacecoin",
+          "profession": "Luxury Pawnbroker"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of lace trim, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 19,
+      "itemId": "character_merchandise_paper",
+      "displayName": "Scrolls",
+      "productKey": "paper",
+      "category": "stationery",
+      "neededBy": [
+        {
+          "characterId": "character-161",
+          "name": "Pell Oatwhistle",
+          "profession": "Grain Futures Clerk"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of parchment sheets, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 20,
+      "itemId": "character_merchandise_spice",
+      "displayName": "Spices",
+      "productKey": "spice",
+      "category": "food luxury",
+      "neededBy": [
+        {
+          "characterId": "character-163",
+          "name": "Grinda Ashcake",
+          "profession": "Festival Cook"
+        },
+        {
+          "characterId": "character-166",
+          "name": "Marsa Clovejaw",
+          "profession": "Spice Dentist"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of mixed spice pouch, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 21,
+      "itemId": "character_merchandise_button",
+      "displayName": "Buttons",
+      "productKey": "button",
+      "category": "tailoring notions",
+      "neededBy": [
+        {
+          "characterId": "character-167",
+          "name": "Boro Thimbleback",
+          "profession": "Button Seller"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of small carved clothing buttons, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 22,
+      "itemId": "character_merchandise_cloth",
+      "displayName": "Textiles",
+      "productKey": "cloth",
+      "category": "textiles",
+      "neededBy": [
+        {
+          "characterId": "character-167",
+          "name": "Boro Thimbleback",
+          "profession": "Button Seller"
+        },
+        {
+          "characterId": "character-173",
+          "name": "Tilda Brasswool",
+          "profession": "Blanket Weaver"
+        },
+        {
+          "characterId": "character-174",
+          "name": "Naveen Bluepoppy",
+          "profession": "Dye Merchant"
+        },
+        {
+          "characterId": "character-175",
+          "name": "Rikka Saltneedle",
+          "profession": "Sail Mender"
+        },
+        {
+          "characterId": "character-192",
+          "name": "Mina Rosehook",
+          "profession": "Ribbon Hawker"
+        },
+        {
+          "characterId": "character-203",
+          "name": "Sable Thread",
+          "profession": "Quiet Seamstress"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of folded cloth bolt, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 23,
+      "itemId": "character_merchandise_wood",
+      "displayName": "Planks",
+      "productKey": "wood",
+      "category": "materials",
+      "neededBy": [
+        {
+          "characterId": "character-168",
+          "name": "Elka Rainbarrel",
+          "profession": "Barrel Cooper"
+        },
+        {
+          "characterId": "character-179",
+          "name": "Brann Oakfist",
+          "profession": "Timber Measurer"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of timber planks, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 24,
+      "itemId": "character_merchandise_fish",
+      "displayName": "Fishes",
+      "productKey": "fish",
+      "category": "food",
+      "neededBy": [
+        {
+          "characterId": "character-170",
+          "name": "Vess Nimblehook",
+          "profession": "Fish Hook Peddler"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of fresh river fish, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 25,
+      "itemId": "character_merchandise_flour",
+      "displayName": "Flour",
+      "productKey": "flour",
+      "category": "food staple",
+      "neededBy": [
+        {
+          "characterId": "character-171",
+          "name": "Orelia Sunflour",
+          "profession": "Baker"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of sack of flour, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 26,
+      "itemId": "character_merchandise_bread",
+      "displayName": "Loaves",
+      "productKey": "bread",
+      "category": "prepared food",
+      "neededBy": [
+        {
+          "characterId": "character-171",
+          "name": "Orelia Sunflour",
+          "profession": "Baker"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of fresh bread loaf, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 27,
+      "itemId": "character_merchandise_jar",
+      "displayName": "Jars",
+      "productKey": "jar",
+      "category": "containers",
+      "neededBy": [
+        {
+          "characterId": "character-174",
+          "name": "Naveen Bluepoppy",
+          "profession": "Dye Merchant"
+        },
+        {
+          "characterId": "character-178",
+          "name": "Sela Moonpepper",
+          "profession": "Pickle Witch"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of clay jar, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 28,
+      "itemId": "character_merchandise_needle",
+      "displayName": "Needles",
+      "productKey": "needle",
+      "category": "tailoring notions",
+      "neededBy": [
+        {
+          "characterId": "character-175",
+          "name": "Rikka Saltneedle",
+          "profession": "Sail Mender"
+        },
+        {
+          "characterId": "character-203",
+          "name": "Sable Thread",
+          "profession": "Quiet Seamstress"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of tailor needles, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 29,
+      "itemId": "character_merchandise_herb",
+      "displayName": "Herbs",
+      "productKey": "herb",
+      "category": "alchemy/herbal",
+      "neededBy": [
+        {
+          "characterId": "character-176",
+          "name": "Cori Finchcup",
+          "profession": "Tea Seller"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of bundled herbs, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 30,
+      "itemId": "character_merchandise_seed",
+      "displayName": "Seeds",
+      "productKey": "seed",
+      "category": "farm supplies",
+      "neededBy": [
+        {
+          "characterId": "character-184",
+          "name": "Kef Mosspocket",
+          "profession": "Seed Trader"
+        },
+        {
+          "characterId": "character-200",
+          "name": "Lulu Finchseed",
+          "profession": "Bird Feed Girl"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of seed pouch, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 31,
+      "itemId": "character_merchandise_candle",
+      "displayName": "Candles",
+      "productKey": "candle",
+      "category": "household goods",
+      "neededBy": [
+        {
+          "characterId": "character-189",
+          "name": "Old Moth Marn",
+          "profession": "Candle Wick Spinner"
+        },
+        {
+          "characterId": "character-197",
+          "name": "Bix Candletoe",
+          "profession": "Temple Sweeper"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of tallow candle, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 32,
+      "itemId": "character_merchandise_basket",
+      "displayName": "Baskets",
+      "productKey": "basket",
+      "category": "containers",
+      "neededBy": [
+        {
+          "characterId": "character-190",
+          "name": "Viko Thorncart",
+          "profession": "Cactus Fruit Seller"
+        },
+        {
+          "characterId": "character-193",
+          "name": "Rook Ashbutton",
+          "profession": "Errand Boy"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of woven market basket, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 33,
+      "itemId": "character_merchandise_ribbon",
+      "displayName": "Trims",
+      "productKey": "ribbon",
+      "category": "tailoring notions",
+      "neededBy": [
+        {
+          "characterId": "character-192",
+          "name": "Mina Rosehook",
+          "profession": "Ribbon Hawker"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of dyed ribbons, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 34,
+      "itemId": "character_merchandise_flower",
+      "displayName": "Bouquet",
+      "productKey": "flower",
+      "category": "flora",
+      "neededBy": [
+        {
+          "characterId": "character-201",
+          "name": "Cricket Marigold",
+          "profession": "Flower Runner"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of market bouquet, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    },
+    {
+      "order": 35,
+      "itemId": "character_merchandise_thread",
+      "displayName": "Spools",
+      "productKey": "thread",
+      "category": "tailoring notions",
+      "neededBy": [
+        {
+          "characterId": "character-203",
+          "name": "Sable Thread",
+          "profession": "Quiet Seamstress"
+        }
+      ],
+      "prompt": "Ultra-cartoony magical fantasy game item icon of thread spools, collectible readable RPG trading item, isolated object centered with generous padding, pure green #00FF00 background, no text, no label, no border, no UI frame, not realistic, not photorealistic.",
+      "negativePrompt": "no text, no labels, no numbers, no watermark, no border, no frame, no character, no hand, no photorealism, no modern packaging, no busy background"
+    }
+  ]
+}
