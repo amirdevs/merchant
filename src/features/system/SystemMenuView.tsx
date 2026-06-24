@@ -1,10 +1,10 @@
 import { CircleHelp, Download, Home, RotateCcw, Save, Settings, Volume2, VolumeX, X } from "lucide-react";
 import type { MerchantController, MerchantProfile } from "@/app/types";
-import { inventoryTotals } from "@/lib/economy";
-import { money } from "@/lib/format";
-import { items } from "@/lib/game";
-import { uiAssets } from "@/lib/ui-assets";
-import { Button, HudResource, IconButton, ModalShell, Muted } from "@/components/ui";
+import { inventoryTotals } from "@/game/economy/economy";
+import { money } from "@/shared/utils/format";
+import { items } from "@/game/runtime/game";
+import { uiAssets } from "@/shared/utils/ui-assets";
+import { Button, HudResource, IconButton, ModalShell, Muted } from "@/shared/components/ui";
 
 function currentTime(minutes: number) {
   const normalized = ((Math.floor(minutes) % 1440) + 1440) % 1440;

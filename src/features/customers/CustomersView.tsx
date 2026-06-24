@@ -1,14 +1,14 @@
 import { MessageSquare, Search, UserRound } from "lucide-react";
-import type { Character } from "@/data/types";
-import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
-import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
-import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
-import { relationFor } from "@/lib/reputation";
-import { uiAssets } from "@/lib/ui-assets";
-import { canUseBlackMarket } from "@/lib/law";
-import { npcRoles } from "@/lib/npc-behavior";
+import type { Character } from "@/shared/types/game-data";
+import { useCharacterProfiles } from "@/game/characters/useCharacterProfiles";
+import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/game/characters/dialogue";
+import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/game/runtime/game";
+import { relationFor } from "@/game/characters/reputation";
+import { uiAssets } from "@/shared/utils/ui-assets";
+import { canUseBlackMarket } from "@/game/company/law";
+import { npcRoles } from "@/game/characters/npc-behavior";
 import type { GameView } from "@/app/types";
-import { Button, Panel, ScreenFrame, StatChip, TabButton } from "@/components/ui";
+import { Button, Panel, ScreenFrame, StatChip, TabButton } from "@/shared/components/ui";
 
 export function CustomersView({ state, people, selected, onSelect, onNext, onNavigate, onSpeak }: { state: GameState; people: Character[]; selected: Character | null; onSelect: (person: Character) => void; onNext: () => void; onNavigate: (view: GameView) => void; onSpeak: (character: Character, topic: string, reply: string, nextNode?: DialogueNodeId, effect?: DialogueEffect) => void }) {
   const { getPortraitAsset, getProfileView } = useCharacterProfiles();

@@ -1,6 +1,6 @@
-import type { Marketplace } from "@/data/types";
-import { mapAsset } from "@/lib/assets";
-import { marketplaces } from "@/lib/game";
+import type { Marketplace } from "@/shared/types/game-data";
+import { mapAsset } from "@/shared/utils/assets";
+import { marketplaces } from "@/game/runtime/game";
 
 export function MarketMap({ market, onTravel }: { market: Marketplace; onTravel: (marketIndex: number) => void }) {
   const connected = new Set(market.connections.map((connection) => connection.marketplaceIndex));

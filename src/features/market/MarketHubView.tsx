@@ -1,13 +1,13 @@
 import type { ReactNode } from "react";
 import { Building2, ClipboardList, Gavel, Handshake, Map, Menu, PackageSearch, ScrollText, UserRoundPlus } from "lucide-react";
-import type { Character, Marketplace } from "@/data/types";
-import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
-import type { GameState } from "@/lib/game";
-import { eventBiases, eventIsActive, nextEventDay } from "@/lib/events";
-import { money } from "@/lib/format";
-import { uiAssets } from "@/lib/ui-assets";
+import type { Character, Marketplace } from "@/shared/types/game-data";
+import { useCharacterProfiles } from "@/game/characters/useCharacterProfiles";
+import type { GameState } from "@/game/runtime/game";
+import { eventBiases, eventIsActive, nextEventDay } from "@/game/market/events";
+import { money } from "@/shared/utils/format";
+import { uiAssets } from "@/shared/utils/ui-assets";
 import type { GameView } from "@/app/types";
-import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
+import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/shared/components/ui";
 
 export function MarketHubView({ state, market, people, onNavigate, onSelectCustomer, onNextCustomer, onPackup }: { state: GameState; market: Marketplace; people: Character[]; onNavigate: (view: GameView) => void; onSelectCustomer: (person: Character) => void; onNextCustomer: () => void; onPackup: () => void; onUnavailable: (message: string) => void }) {
   const { getPortraitAsset, getProfileView } = useCharacterProfiles();

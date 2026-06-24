@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { BadgeCheck, Banknote, Building2, PackageOpen, ShieldCheck, ShipWheel, Wrench } from "lucide-react";
-import type { GameState } from "@/lib/game";
-import { currentKingdom, currentMarket, items, marketplaces } from "@/lib/game";
-import { coinQuantity } from "@/lib/economy";
-import { money } from "@/lib/format";
-import { uiAssets } from "@/lib/ui-assets";
-import { activePermit, kingdomHeat } from "@/lib/law";
-import { marketWarehouse, warehouseCapacityStatus } from "@/lib/company";
-import { visibleQuantity } from "@/lib/inventory";
-import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
+import type { GameState } from "@/game/runtime/game";
+import { currentKingdom, currentMarket, items, marketplaces } from "@/game/runtime/game";
+import { coinQuantity } from "@/game/economy/economy";
+import { money } from "@/shared/utils/format";
+import { uiAssets } from "@/shared/utils/ui-assets";
+import { activePermit, kingdomHeat } from "@/game/company/law";
+import { marketWarehouse, warehouseCapacityStatus } from "@/game/company/company";
+import { visibleQuantity } from "@/game/trade/inventory";
+import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/shared/components/ui";
 
 type CompanyViewProps = {
   state: GameState;

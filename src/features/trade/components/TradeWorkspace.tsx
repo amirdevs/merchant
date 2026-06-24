@@ -1,5 +1,5 @@
-import { InventoryPanel } from "@/components/InventoryPanel";
-import { Panel } from "@/components/ui";
+import { InventoryPanel } from "@/features/inventory/components/InventoryPanel";
+import { Panel } from "@/shared/components/ui";
 import type { MerchantController } from "@/app/types/MerchantController";
 import { CustomerList } from "@/features/customers/components/CustomerList";
 import { CharacterCard } from "@/features/customers/components/CharacterCard";

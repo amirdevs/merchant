@@ -3,8 +3,8 @@ import { GameShell } from "@/app/components";
 import { AppErrorBoundary } from "@/app/components/AppErrorBoundary";
 import { useMerchantController } from "@/app/hooks/useMerchantController";
 import type { GameView, MerchantProfile, UiPreferences } from "@/app/types";
-import { HelpModal } from "@/components/HelpModal";
-import { loadGame } from "@/lib/game";
+import { HelpModal } from "@/app/components/HelpModal";
+import { loadGame } from "@/game/runtime/game";
 
 const BarterConversationView = lazy(() => import("@/features/trade/BarterConversationView").then((module) => ({ default: module.BarterConversationView })));
 const CompanyView = lazy(() => import("@/features/company/CompanyView").then((module) => ({ default: module.CompanyView })));

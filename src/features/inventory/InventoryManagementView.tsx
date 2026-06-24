@@ -1,20 +1,20 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { BookOpen, Box, Building2, Eye, Grid3X3, Map, Menu, PackageCheck, PackageSearch, Search, Shield, ShieldCheck, Star, Store, XCircle } from "lucide-react";
-import type { InventoryEntry } from "@/data/types";
+import type { InventoryEntry } from "@/shared/types/game-data";
 import type { GameView } from "@/app/types";
-import type { GameState } from "@/lib/game";
-import type { MoveAmount } from "@/lib/inventory";
-import { itemIconAsset } from "@/lib/assets";
-import { currentKingdom, items, marketplaces, visibleQuantity } from "@/lib/game";
-import { money } from "@/lib/format";
-import { inventoryTotals } from "@/lib/economy";
-import { uiAssets } from "@/lib/ui-assets";
-import { InventoryPanel } from "@/components/InventoryPanel";
-import { Button, ItemSlot, Panel, ScreenFrame, StatChip } from "@/components/ui";
-import { cn } from "@/lib/cn";
-import { itemIsQuestNeeded } from "@/lib/quests";
-import { itemCatalogTokens, itemMatchesCatalogToken } from "@/lib/item-catalog";
-import { itemIsIllegal } from "@/lib/legal";
+import type { GameState } from "@/game/runtime/game";
+import type { MoveAmount } from "@/game/trade/inventory";
+import { itemIconAsset } from "@/shared/utils/assets";
+import { currentKingdom, items, marketplaces, visibleQuantity } from "@/game/runtime/game";
+import { money } from "@/shared/utils/format";
+import { inventoryTotals } from "@/game/economy/economy";
+import { uiAssets } from "@/shared/utils/ui-assets";
+import { InventoryPanel } from "@/features/inventory/components/InventoryPanel";
+import { Button, ItemSlot, Panel, ScreenFrame, StatChip } from "@/shared/components/ui";
+import { cn } from "@/shared/utils/cn";
+import { itemIsQuestNeeded } from "@/game/quests/quests";
+import { itemCatalogTokens, itemMatchesCatalogToken } from "@/game/trade/item-catalog";
+import { itemIsIllegal } from "@/game/trade/legal";
 
 type InventoryManagementViewProps = {
   state: GameState;

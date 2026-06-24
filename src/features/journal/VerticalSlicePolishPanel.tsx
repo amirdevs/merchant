@@ -1,8 +1,8 @@
 import { CheckCircle2, ClipboardCheck, Sparkles, TriangleAlert } from "lucide-react";
-import { Panel, StatChip } from "@/components/ui";
-import type { GameState } from "@/lib/game";
-import { buildVerticalSlicePolishReport } from "@/lib/vertical-slice-polish";
-import type { GameStateWithPlayableLoop } from "@/lib/game-runtime-loop";
+import { Panel, StatChip } from "@/shared/components/ui";
+import type { GameState } from "@/game/runtime/game";
+import { buildVerticalSlicePolishReport } from "@/game/vertical-slice/vertical-slice-polish";
+import type { GameStateWithPlayableLoop } from "@/game/vertical-slice/game-runtime-loop";
 
 function statusClass(status: string) {
   if (status === "done") return "border-[#1f6f38]/45 bg-[#fff6d7]/70 text-[#1f6f38]";

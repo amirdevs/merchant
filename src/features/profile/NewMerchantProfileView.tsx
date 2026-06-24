@@ -1,9 +1,9 @@
 import { useState, type ReactNode } from "react";
 import { CheckCircle2, RotateCcw } from "lucide-react";
-import type { Marketplace } from "@/data/types";
+import type { Marketplace } from "@/shared/types/game-data";
 import type { MerchantProfile } from "@/app/types";
-import { Button, Panel, ScreenFrame, StatChip } from "@/components/ui";
-import { uiAssets } from "@/lib/ui-assets";
+import { Button, Panel, ScreenFrame, StatChip } from "@/shared/components/ui";
+import { uiAssets } from "@/shared/utils/ui-assets";
 
 const starterChoices = ["Balanced Pack", "Food Trader", "Textile Runner", "Curio Dealer", "Hard Bargain Kit"];
 

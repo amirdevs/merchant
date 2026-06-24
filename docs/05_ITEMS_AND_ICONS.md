@@ -2,7 +2,7 @@
 
 ## Item catalog
 
-The current item data module uses chunked files under `src/data/generated/items-*.json`, with `src/data/generated/items.chunked.ts` as the runtime aggregator. Script-side reads and writes should go through `scripts/item-catalog.cjs`.
+The current item data module uses chunked files under `src/content/items/items-*.json`, with `src/content/items/items.chunked.ts` as the runtime aggregator. Script-side reads and writes should go through `scripts/maintenance/item-catalog.cjs`.
 
 Inventory still references item indexes in current runtime structures, so save schema v2 blocks incompatible saves from earlier schema versions.
 
@@ -17,8 +17,8 @@ Important folders:
 - `docs/assets/icon-prompts/` - prompt configs and manifest
 - `docs/assets/icon-sheets/` - icon sheet images for review/cropping
 - `public/assets/items/` - final runtime item icons
-- `scripts/generate-icon-prompts.cjs` - creates prompt configs
-- `scripts/audit-item-icons.cjs` - structural icon lock audit
+- `scripts/generators/generate-icon-prompts.cjs` - creates prompt configs
+- `scripts/audits/audit-item-icons.cjs` - structural icon lock audit
 
 ## Icon standards
 

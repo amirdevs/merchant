@@ -1,9 +1,9 @@
 import type { ButtonHTMLAttributes } from "react";
-import type { Marketplace } from "@/data/types";
-import { visibleQuantity, type GameState } from "@/lib/game";
-import { uiAssets } from "@/lib/ui-assets";
+import type { Marketplace } from "@/shared/types/game-data";
+import { visibleQuantity, type GameState } from "@/game/runtime/game";
+import { uiAssets } from "@/shared/utils/ui-assets";
 import type { MerchantProfile } from "@/app/types";
-import { Muted, ScreenFrame } from "@/components/ui";
+import { Muted, ScreenFrame } from "@/shared/components/ui";
 
 type MainMenuViewProps = {
   state: GameState;

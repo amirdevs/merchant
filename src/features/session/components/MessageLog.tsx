@@ -1,4 +1,4 @@
-import { Panel } from "@/components/ui";
+import { Panel } from "@/shared/components/ui";
 
 export function MessageLog({ message, modStatus }: { message: string; modStatus: string }) {
   return (

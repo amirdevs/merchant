@@ -1,9 +1,9 @@
 import { Map } from "lucide-react";
-import type { Marketplace } from "@/data/types";
-import { routeAsset } from "@/lib/assets";
-import { marketplaces } from "@/lib/game";
-import { compactBiasText, routeLedger } from "@/lib/travel";
-import { Panel } from "@/components/ui";
+import type { Marketplace } from "@/shared/types/game-data";
+import { routeAsset } from "@/shared/utils/assets";
+import { marketplaces } from "@/game/runtime/game";
+import { compactBiasText, routeLedger } from "@/game/travel/travel";
+import { Panel } from "@/shared/components/ui";
 import { MarketMap } from "@/features/travel/components/MarketMap";
 
 export function TravelPanel({ market, onTravel }: { market: Marketplace; onTravel: (marketIndex: number) => void }) {

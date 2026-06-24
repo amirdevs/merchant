@@ -1,10 +1,10 @@
 import type { Dispatch, RefObject, SetStateAction } from "react";
-import type { Character, InventoryEntry, Marketplace } from "@/data/types";
-import type { GameState } from "@/lib/game";
-import type { MoveAmount } from "@/lib/inventory";
-import type { SaveSlotSummary } from "@/lib/save";
-import type { DialogueEffect, DialogueNodeId } from "@/lib/dialogue";
-import type { TravelStrategy } from "@/lib/travel-risk";
+import type { Character, InventoryEntry, Marketplace } from "@/shared/types/game-data";
+import type { GameState } from "@/game/runtime/game";
+import type { MoveAmount } from "@/game/trade/inventory";
+import type { SaveSlotSummary } from "@/game/runtime/save";
+import type { DialogueEffect, DialogueNodeId } from "@/game/characters/dialogue";
+import type { TravelStrategy } from "@/game/travel/travel-risk";
 
 export type GameView =
   | "main-menu"

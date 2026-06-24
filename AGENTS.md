@@ -71,26 +71,26 @@ Keep stable internal IDs/indexes until the runtime has a safe migration path. Cu
 Primary cast additions should be planned before portrait generation so portrait sheets only need to be generated/cropped once. The current primary cast roster lives in:
 
 ```text
-src/data/characters/primaryCastSeeds.ts
+src/content/characters/primaryCastSeeds.ts
 ```
 
 The current roster planning files and runtime validation files live in:
 
 ```text
-src/data/characters/characterCatalogAuditPlan.ts
-src/data/characters/finalCharacterRosterPlan.ts
+src/content/characters/characterCatalogAuditPlan.ts
+src/content/characters/finalCharacterRosterPlan.ts
 ```
 
 The identity catalog batches live in:
 
 ```text
-src/data/characters/characterIdentityCatalogCastBatch01.ts
-src/data/characters/characterIdentityCatalogCastBatch02.ts
-src/data/characters/characterIdentityCatalogCastBatch03.ts
-src/data/characters/characterIdentityCatalogCastBatch04.ts
-src/data/characters/characterIdentityCatalogCastBatch05.ts
-src/data/characters/characterIdentityCatalogCastBatch06.ts
-src/data/characters/characterIdentityCatalog.ts
+src/content/characters/characterIdentityCatalogCastBatch01.ts
+src/content/characters/characterIdentityCatalogCastBatch02.ts
+src/content/characters/characterIdentityCatalogCastBatch03.ts
+src/content/characters/characterIdentityCatalogCastBatch04.ts
+src/content/characters/characterIdentityCatalogCastBatch05.ts
+src/content/characters/characterIdentityCatalogCastBatch06.ts
+src/content/characters/characterIdentityCatalog.ts
 ```
 
 Character portrait prompts must live beside item prompts under:
@@ -108,7 +108,7 @@ Final cropped runtime portraits must live under:
 The runtime portrait manifest and character selectors live in:
 
 ```text
-src/data/characters/characterPortraitManifest.ts
+src/game/characters/characterPortraitManifest.ts
 ```
 
 Character prompt batches are batched by total portrait images, not by total characters. Example: 200 characters with 5 expression portraits each means 1000 portrait images to batch. A single character may have some expressions in one batch and the remaining expressions in another batch.

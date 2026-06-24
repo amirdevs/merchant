@@ -1,16 +1,16 @@
 import { CalendarDays, Gavel, HandCoins, StepForward } from "lucide-react";
 import { useState } from "react";
-import type { GameState } from "@/lib/game";
-import { currentMarket, items } from "@/lib/game";
-import { currentAuctionLot, nextAuctionBid, rivalTell } from "@/lib/auction";
-import { eventBiases, eventIsActive, nextEventDay } from "@/lib/events";
-import { coinQuantity } from "@/lib/economy";
-import { money } from "@/lib/format";
-import { raceEntries } from "@/lib/racing";
-import { currentDraftRound } from "@/lib/draft";
-import { filterMythCards, type MythCardFilter, type MythSuit } from "@/lib/myth";
-import { uiAssets } from "@/lib/ui-assets";
-import { Button, Panel, ScreenFrame, StatChip } from "@/components/ui";
+import type { GameState } from "@/game/runtime/game";
+import { currentMarket, items } from "@/game/runtime/game";
+import { currentAuctionLot, nextAuctionBid, rivalTell } from "@/game/trade/auction";
+import { eventBiases, eventIsActive, nextEventDay } from "@/game/market/events";
+import { coinQuantity } from "@/game/economy/economy";
+import { money } from "@/shared/utils/format";
+import { raceEntries } from "@/game/market/racing";
+import { currentDraftRound } from "@/game/trade/draft";
+import { filterMythCards, type MythCardFilter, type MythSuit } from "@/game/market/myth";
+import { uiAssets } from "@/shared/utils/ui-assets";
+import { Button, Panel, ScreenFrame, StatChip } from "@/shared/components/ui";
 
 type EventViewProps = {
   state: GameState;

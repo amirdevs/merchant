@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { BookOpen, Gem, Highlighter, Save, Shield, Star, X } from "lucide-react";
-import type { InventoryEntry, Marketplace } from "@/data/types";
-import { itemIconAsset } from "@/lib/assets";
-import { kingdoms, items, type GameState, visibleQuantity } from "@/lib/game";
-import { itemIsIllegal } from "@/lib/legal";
-import { itemCatalogTokens, itemMatchesCatalogToken } from "@/lib/item-catalog";
-import { money } from "@/lib/format";
-import type { MoveAmount } from "@/lib/inventory";
-import { uiAssets } from "@/lib/ui-assets";
-import { Button, IconButton, ItemSlot, Panel, ScreenFrame, StatChip } from "@/components/ui";
+import type { InventoryEntry, Marketplace } from "@/shared/types/game-data";
+import { itemIconAsset } from "@/shared/utils/assets";
+import { kingdoms, items, type GameState, visibleQuantity } from "@/game/runtime/game";
+import { itemIsIllegal } from "@/game/trade/legal";
+import { itemCatalogTokens, itemMatchesCatalogToken } from "@/game/trade/item-catalog";
+import { money } from "@/shared/utils/format";
+import type { MoveAmount } from "@/game/trade/inventory";
+import { uiAssets } from "@/shared/utils/ui-assets";
+import { Button, IconButton, ItemSlot, Panel, ScreenFrame, StatChip } from "@/shared/components/ui";
 
 function selectedVisibleEntry(state: GameState): InventoryEntry | null {
   return state.playerInventory.find((entry) => entry.itemIndex === state.selectedItemIndex && visibleQuantity(entry) > 0)

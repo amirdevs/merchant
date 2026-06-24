@@ -2,7 +2,7 @@
 
 ## Quest, contract, and dialogue runtime
 
-Quest helpers live in `src/lib/quest-runtime.ts`.
+Quest helpers live in `src/game/quests/quest-runtime.ts`.
 
 They cover:
 
@@ -24,7 +24,7 @@ pnpm test:quests
 
 ## Company, warehouses, shipments, and stock ownership
 
-Company helpers live in `src/lib/company.ts`.
+Company helpers live in `src/game/company/company.ts`.
 
 They cover:
 
@@ -50,7 +50,7 @@ pnpm test:company
 
 ## UI integration helpers
 
-UI-facing view model helpers live in `src/lib/ui-integration.ts`.
+UI-facing view model helpers live in `src/game/vertical-slice/ui-integration.ts`.
 
 They cover:
 

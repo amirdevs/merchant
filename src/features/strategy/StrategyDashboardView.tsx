@@ -1,14 +1,14 @@
 import { Building2, Handshake, Map, PackageSearch, ScrollText, ShieldAlert, UserRoundPlus } from "lucide-react";
-import type { Character } from "@/data/types";
-import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
+import type { Character } from "@/shared/types/game-data";
+import { useCharacterProfiles } from "@/game/characters/useCharacterProfiles";
 import type { GameView } from "@/app/types";
-import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
-import { actionChecklist, companyUiPanel, inventoryUiPanel, questUiCard, travelUiCard, type UiMessage } from "@/lib/ui-integration";
-import { currentKingdom, currentMarket, items, kingdoms, marketplaces, offerValue, selectedCharacter, type GameState } from "@/lib/game";
-import { money } from "@/lib/format";
-import { planTravel, marketCloseStatus } from "@/lib/travel-loop";
-import { summarizeQuestWork } from "@/lib/quest-runtime";
-import { uiAssets } from "@/lib/ui-assets";
+import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/shared/components/ui";
+import { actionChecklist, companyUiPanel, inventoryUiPanel, questUiCard, travelUiCard, type UiMessage } from "@/game/vertical-slice/ui-integration";
+import { currentKingdom, currentMarket, items, kingdoms, marketplaces, offerValue, selectedCharacter, type GameState } from "@/game/runtime/game";
+import { money } from "@/shared/utils/format";
+import { planTravel, marketCloseStatus } from "@/game/travel/travel-loop";
+import { summarizeQuestWork } from "@/game/quests/quest-runtime";
+import { uiAssets } from "@/shared/utils/ui-assets";
 
 export function StrategyDashboardView({ state, onNavigate, onSelectCustomer, onNextCustomer }: {
   state: GameState;

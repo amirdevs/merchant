@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Building2, CheckCircle2, Coins, DatabaseZap, Map, PackagePlus, Play, RotateCcw, Route, Scale, ShieldCheck, Store, TrendingUp } from "lucide-react";
-import { Button, LedgerRow, Panel, StatChip } from "@/components/ui";
-import { saveGame, type GameState } from "@/lib/game";
+import { Button, LedgerRow, Panel, StatChip } from "@/shared/components/ui";
+import { saveGame, type GameState } from "@/game/runtime/game";
 import {
   acceptLoopStoryQuest,
   buildPlayableMerchantLoopView,
@@ -14,9 +14,9 @@ import {
   type LoopItemId,
   type LoopTownId,
   type PlayableMerchantLoopState,
-} from "@/lib/playable-merchant-loop";
-import { buildGameRuntimeLoopSnapshot, commitGamePlayableLoopState, resetGamePlayableLoopState, type GameStateWithPlayableLoop } from "@/lib/game-runtime-loop";
-import { richQuestStatus } from "@/lib/quest-state";
+} from "@/game/vertical-slice/playable-merchant-loop";
+import { buildGameRuntimeLoopSnapshot, commitGamePlayableLoopState, resetGamePlayableLoopState, type GameStateWithPlayableLoop } from "@/game/vertical-slice/game-runtime-loop";
+import { richQuestStatus } from "@/game/quests/quest-state";
 
 function shortStatus(done: boolean) {
   return done ? "Done" : "Open";

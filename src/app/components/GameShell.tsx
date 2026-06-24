@@ -1,6 +1,6 @@
 import { useEffect, type ReactNode } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import { backdropAsset, townAsset } from "@/lib/assets";
+import { backdropAsset, townAsset } from "@/shared/utils/assets";
 import type { GameView, MerchantController, UiPreferences } from "@/app/types";
 
 const titleViews = new Set<GameView>(["main-menu", "new-profile", "load-game", "settings"]);

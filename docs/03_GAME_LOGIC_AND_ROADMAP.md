@@ -49,9 +49,9 @@ all filenames match JSON outputFile values
 The runtime manifest and audit live in:
 
 ```text
-src/data/characters/characterPortraitManifest.ts
-src/data/characters/characterPortraitManifest.test.ts
-scripts/audit-character-portraits.cjs
+src/game/characters/characterPortraitManifest.ts
+src/tests/characters/characterPortraitManifest.test.ts
+scripts/audits/audit-character-portraits.cjs
 ```
 
 Character sheet files under `docs/assets/character-sheets/` are supporting art assets, not runtime assets. After final portraits are locked, they can stay as optional production files unless the user wants a slimmer repository.
@@ -157,11 +157,11 @@ Journal UI polish for the loop panel
 Implemented source files:
 
 ```text
-src/lib/game-runtime-loop.ts
-src/lib/game-runtime-loop.test.ts
+src/game/vertical-slice/game-runtime-loop.ts
+src/tests/runtime/game-runtime-loop.test.ts
 src/features/journal/PlayableMerchantLoopPanel.tsx
 src/features/journal/JournalView.tsx
-scripts/playtest-runtime-loop.cjs
+scripts/playtests/playtest-runtime-loop.cjs
 docs/logs/runtime-loop-save-report.md
 ```
 
@@ -180,10 +180,10 @@ Development-only manual test paths can exist only when they do not compete with 
 Implemented source files:
 
 ```text
-src/lib/economy-world-expansion.ts
-src/lib/economy-world-expansion.test.ts
+src/game/vertical-slice/economy-world-expansion.ts
+src/tests/vertical-slice/economy-world-expansion.test.ts
 src/features/journal/EconomyWorldExpansionPanel.tsx
-scripts/playtest-economy-world.cjs
+scripts/playtests/playtest-economy-world.cjs
 docs/logs/economy-world-expansion-report.md
 ```
 
@@ -206,11 +206,11 @@ Journal UI panel for economy/world expansion visibility
 Implemented source files:
 
 ```text
-src/lib/vertical-slice-polish.ts
-src/lib/vertical-slice-polish.test.ts
+src/game/vertical-slice/vertical-slice-polish.ts
+src/tests/vertical-slice/vertical-slice-polish.test.ts
 src/features/journal/VerticalSlicePolishPanel.tsx
 src/features/journal/JournalView.tsx
-scripts/playtest-vertical-slice-polish.cjs
+scripts/playtests/playtest-vertical-slice-polish.cjs
 docs/logs/vertical-slice-polish-report.md
 ```
 

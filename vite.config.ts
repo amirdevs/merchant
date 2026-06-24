@@ -24,9 +24,9 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           const normalizedId = id.replace(/\\/g, "/");
-          const itemChunkMatch = normalizedId.match(/\/src\/data\/generated\/items-(\d{4})-(\d{4})\.json$/);
+          const itemChunkMatch = normalizedId.match(/\/src\/content\/items\/items-(\d{4})-(\d{4})\.json$/);
           const portraitPromptMatch = normalizedId.match(/\/docs\/assets\/character-prompts\/characters-(\d{4})-(\d{4})\.json$/);
-          const characterBatchMatch = normalizedId.match(/\/src\/data\/characters\/characterIdentityCatalogCastBatch(\d{2})\.ts$/);
+          const characterBatchMatch = normalizedId.match(/\/src\/content\/characters\/characterIdentityCatalogCastBatch(\d{2})\.ts$/);
 
           if (normalizedId.includes("/node_modules/react/") || normalizedId.includes("/node_modules/react-dom/")) {
             return "react-vendor";
@@ -43,15 +43,15 @@ export default defineConfig({
             return `items-data-${itemChunkMatch[1]}`;
           }
 
-          if (normalizedId.includes("/src/data/generated/characters.json")) {
+          if (normalizedId.includes("/src/content/characters/characters.json")) {
             return "characters-data";
           }
 
           if (
-            normalizedId.includes("/src/data/generated/marketplaces.json") ||
-            normalizedId.includes("/src/data/generated/professions.json") ||
-            normalizedId.includes("/src/data/generated/kingdoms.json") ||
-            normalizedId.includes("/src/data/stock/")
+            normalizedId.includes("/src/content/market/marketplaces.json") ||
+            normalizedId.includes("/src/content/market/professions.json") ||
+            normalizedId.includes("/src/content/world/kingdoms.json") ||
+            normalizedId.includes("/src/content/market/stock/")
           ) {
             return "world-data";
           }
@@ -67,17 +67,17 @@ export default defineConfig({
           }
 
           if (
-            normalizedId.includes("/src/lib/item-static-description.ts") ||
-            normalizedId.includes("/src/data/generated/item-written-descriptions")
+            normalizedId.includes("/src/game/trade/item-static-description.ts") ||
+            normalizedId.includes("/src/content/items/item-written-descriptions")
           ) {
             return "item-description-data";
           }
 
           if (
-            normalizedId.includes("/src/data/quests/") ||
-            normalizedId.includes("/src/lib/quest-") ||
-            normalizedId.includes("/src/lib/quests.ts") ||
-            normalizedId.includes("/src/lib/contracts.ts")
+            normalizedId.includes("/src/content/quests/") ||
+            normalizedId.includes("/src/game/quests/quest-") ||
+            normalizedId.includes("/src/game/quests/quests.ts") ||
+            normalizedId.includes("/src/game/quests/contracts.ts")
           ) {
             return "quest-data";
           }

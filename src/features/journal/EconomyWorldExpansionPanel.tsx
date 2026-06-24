@@ -1,8 +1,8 @@
 import { Boxes, Building2, Compass, PackageSearch, Route, Sparkles, Store, TrendingUp } from "lucide-react";
-import { LedgerRow, Panel, StatChip } from "@/components/ui";
-import type { GameState } from "@/lib/game";
-import { buildEconomyWorldExpansionView } from "@/lib/economy-world-expansion";
-import { buildGameRuntimeLoopSnapshot, type GameStateWithPlayableLoop } from "@/lib/game-runtime-loop";
+import { LedgerRow, Panel, StatChip } from "@/shared/components/ui";
+import type { GameState } from "@/game/runtime/game";
+import { buildEconomyWorldExpansionView } from "@/game/vertical-slice/economy-world-expansion";
+import { buildGameRuntimeLoopSnapshot, type GameStateWithPlayableLoop } from "@/game/vertical-slice/game-runtime-loop";
 
 function toneClass(tone: "safe" | "watch" | "risk" | "opportunity") {
   if (tone === "safe") return "border-[#397a45]/50 bg-[#e7f3d4]/70 text-[#264b25]";

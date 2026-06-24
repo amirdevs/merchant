@@ -9,7 +9,7 @@ Sample days: 1, 3, 7, 14.
 ### alchemist
 
 - Profile: tier `stocked`; lifestyle `shopkeeper`; archetypes alchemist 0.82, magic 0.1, books 0.08, general 0.14, food 0.06, tools 0.04.
-- Generated-data stock bias preview: magic -11.0, monster parts -8.3, fated star plant 6.0, fabled amulet of vitality 3.7, botanicals 2.6, animals 1.6, dragons 1.6, potions -1.6.
+- Runtime stock bias preview: magic -11.0, monster parts -8.3, fated star plant 6.0, fabled amulet of vitality 3.7, botanicals 2.6, animals 1.6, dragons 1.6, potions -1.6.
 - Balance status: PASS.
 - Balance shares: identity 64%, raw 11%, consumable 52%, finished 12%, luxury/rare 16%, illegal 3%.
 - Sampled NPCs: Sarah, Yuma, Kaitlyn O'Callaghan.
@@ -24,7 +24,7 @@ Sample days: 1, 3, 7, 14.
 ### baker
 
 - Profile: tier `modest`; lifestyle `shopkeeper`; archetypes baker 0.9, food 0.1, general 0.14, tools 0.04.
-- Generated-data stock bias preview: magic -10.0, bread -3.1, scarce sugar cane 2.6, dairy 2.6, spices 2.1, grains 1.6, weapons -1.6, copper 1.0.
+- Runtime stock bias preview: magic -10.0, bread -3.1, scarce sugar cane 2.6, dairy 2.6, spices 2.1, grains 1.6, weapons -1.6, copper 1.0.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Mary, Jo, Caelan Gibson.
 - Average visible stacks across sampled days: 18.
@@ -37,7 +37,7 @@ Sample days: 1, 3, 7, 14.
 ### bard
 
 - Profile: tier `light`; lifestyle `traveler`; archetypes bard 0.82, traveler 0.17, art 0.01, food 0.08.
-- Generated-data stock bias preview: magic -10.0, jewelry 1.6, music 1.6, paints 1.6, statues 1.6, clothes 1.4, crowncards 1.4, weapons -1.3.
+- Runtime stock bias preview: magic -10.0, jewelry 1.6, music 1.6, paints 1.6, statues 1.6, clothes 1.4, crowncards 1.4, weapons -1.3.
 - Balance status: PASS.
 - Balance shares: identity 71%, raw 5%, consumable 21%, finished 65%, luxury/rare 37%, illegal 0%.
 - Sampled NPCs: Terric Nash, Pedal, Paul.
@@ -52,7 +52,7 @@ Sample days: 1, 3, 7, 14.
 ### barkeep
 
 - Profile: tier `standard`; lifestyle `shopkeeper`; archetypes barkeep 0.88, food 0.12, general 0.14, tools 0.04.
-- Generated-data stock bias preview: magic -10.0, monster parts -10.0, furniture 2.1, drinks -1.3, books -1.0, copper 1.0, daggers 1.0, food -1.0.
+- Runtime stock bias preview: magic -10.0, monster parts -10.0, furniture 2.1, drinks -1.3, books -1.0, copper 1.0, daggers 1.0, food -1.0.
 - Balance status: PASS.
 - Balance shares: identity 82%, raw 9%, consumable 57%, finished 16%, luxury/rare 8%, illegal 0%.
 - Sampled NPCs: Kella Flynn, Zyla, Adeline Wilson.
@@ -67,7 +67,7 @@ Sample days: 1, 3, 7, 14.
 ### beggar
 
 - Profile: tier `pocket`; lifestyle `poor`; archetypes salvage 0.78, food 0.22.
-- Generated-data stock bias preview: magic -10.0, food 2.1, dagger 1.6, furniture -0.4, copper coins -0.2.
+- Runtime stock bias preview: magic -10.0, food 2.1, dagger 1.6, furniture -0.4, copper coins -0.2.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Annora, Yarl, Bonnie.
 - Average visible stacks across sampled days: 3.
@@ -80,7 +80,7 @@ Sample days: 1, 3, 7, 14.
 ### blacksmith
 
 - Profile: tier `stocked`; lifestyle `worker`; archetypes blacksmith 0.94, tools 0.04, weapons 0.0125, armor 0.0075, food 0.08, general 0.06.
-- Generated-data stock bias preview: ore 1.6, scarce nova ingot 1.4, scarce nova ore 1.4, weapons -1.3, armor -1.0, copper 1.0, dragons 1.0, food 1.0.
+- Runtime stock bias preview: ore 1.6, scarce nova ingot 1.4, scarce nova ore 1.4, weapons -1.3, armor -1.0, copper 1.0, dragons 1.0, food 1.0.
 - Balance status: PASS.
 - Balance shares: identity 67%, raw 33%, consumable 6%, finished 22%, luxury/rare 5%, illegal 0%.
 - Sampled NPCs: Kris, George Smith, Esther.
@@ -95,7 +95,7 @@ Sample days: 1, 3, 7, 14.
 ### butcher
 
 - Profile: tier `modest`; lifestyle `shopkeeper`; archetypes butcher 0.9, food 0.1, general 0.14, tools 0.04.
-- Generated-data stock bias preview: magic -10.0, livestock 2.6, spices 1.6, weapons -1.6, meat -1.3, furniture 1.0, clothing -0.4.
+- Runtime stock bias preview: magic -10.0, livestock 2.6, spices 1.6, weapons -1.6, meat -1.3, furniture 1.0, clothing -0.4.
 - Balance status: PASS.
 - Balance shares: identity 77%, raw 19%, consumable 52%, finished 8%, luxury/rare 0%, illegal 0%.
 - Sampled NPCs: Hart Kitchener, Joey Buckets, Agnes.
@@ -110,7 +110,7 @@ Sample days: 1, 3, 7, 14.
 ### cook
 
 - Profile: tier `modest`; lifestyle `shopkeeper`; archetypes cook 0.86, food 0.14, general 0.14, tools 0.04.
-- Generated-data stock bias preview: magic -11.9, copper 1.6, glass 1.6, silver 1.6, spice 1.6, furniture 1.1, drinks -1.0, food 1.0.
+- Runtime stock bias preview: magic -11.9, copper 1.6, glass 1.6, silver 1.6, spice 1.6, furniture 1.1, drinks -1.0, food 1.0.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Matilda, Blake Bailey, Charlie Murphy.
 - Average visible stacks across sampled days: 19.
@@ -123,7 +123,7 @@ Sample days: 1, 3, 7, 14.
 ### farmer
 
 - Profile: tier `standard`; lifestyle `worker`; archetypes farmer 0.86, livestock 0.14, food 0.08, tools 0.08, general 0.06.
-- Generated-data stock bias preview: magic -10.0, monster parts -10.0, botanicals -1.6, food -1.6, animals -1.0, clothes 1.0, furniture 1.0, household 1.0.
+- Runtime stock bias preview: magic -10.0, monster parts -10.0, botanicals -1.6, food -1.6, animals -1.0, clothes 1.0, furniture 1.0, household 1.0.
 - Balance status: PASS.
 - Balance shares: identity 81%, raw 33%, consumable 73%, finished 4%, luxury/rare 0%, illegal 0%.
 - Sampled NPCs: Ryane Fitzpatrick, John, Alison Sweeney.
@@ -138,7 +138,7 @@ Sample days: 1, 3, 7, 14.
 ### fighter
 
 - Profile: tier `light`; lifestyle `military`; archetypes weapons 0.44, armor 0.3, traveler 0.26, soldier 0.12, food 0.05.
-- Generated-data stock bias preview: magic -9.0, potions 2.9, poison 1.9, armor 1.0, arrows 1.0, coins -1.0, food 1.0, furniture -1.0.
+- Runtime stock bias preview: magic -9.0, potions 2.9, poison 1.9, armor 1.0, arrows 1.0, coins -1.0, food 1.0, furniture -1.0.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Eve, Kudo, Mackenzie.
 - Average visible stacks across sampled days: 12.
@@ -151,7 +151,7 @@ Sample days: 1, 3, 7, 14.
 ### fisher
 
 - Profile: tier `stocked`; lifestyle `worker`; archetypes fisher 0.84, maritime 0.16, food 0.08, tools 0.08, general 0.06.
-- Generated-data stock bias preview: magic -11.0, monster parts -10.0, religion 2.6, seafood -2.3, shoes 1.9, spears 1.6, barrels 1.0, drinks 1.0.
+- Runtime stock bias preview: magic -11.0, monster parts -10.0, religion 2.6, seafood -2.3, shoes 1.9, spears 1.6, barrels 1.0, drinks 1.0.
 - Balance status: PASS.
 - Balance shares: identity 66%, raw 10%, consumable 48%, finished 15%, luxury/rare 3%, illegal 0%.
 - Sampled NPCs: Sam Fisher, Ano, Panuk.
@@ -166,7 +166,7 @@ Sample days: 1, 3, 7, 14.
 ### fletcher
 
 - Profile: tier `standard`; lifestyle `worker`; archetypes fletcher 0.96, tools 0.04, food 0.08, general 0.06.
-- Generated-data stock bias preview: magic -10.0, wood 1.6, heartwood arrow 1.4, arrows -1.3, bows -1.3, armor 1.0, drinks 1.0, food 1.0.
+- Runtime stock bias preview: magic -10.0, wood 1.6, heartwood arrow 1.4, arrows -1.3, bows -1.3, armor 1.0, drinks 1.0, food 1.0.
 - Balance status: PASS.
 - Balance shares: identity 69%, raw 34%, consumable 24%, finished 39%, luxury/rare 0%, illegal 0%.
 - Sampled NPCs: Robin, Boyd O'Connell, Alvezi.
@@ -181,7 +181,7 @@ Sample days: 1, 3, 7, 14.
 ### hunter
 
 - Profile: tier `light`; lifestyle `traveler`; archetypes hunter 0.78, traveler 0.14, salvage 0.08, food 0.08.
-- Generated-data stock bias preview: magic -10.0, meat -2.0, hunting box trap 1.6, hunting foot trap 1.6, arrows 1.5, bows 1.5, daggers 1.0, food 1.0.
+- Runtime stock bias preview: magic -10.0, meat -2.0, hunting box trap 1.6, hunting foot trap 1.6, arrows 1.5, bows 1.5, daggers 1.0, food 1.0.
 - Balance status: PASS.
 - Balance shares: identity 80%, raw 23%, consumable 35%, finished 37%, luxury/rare 6%, illegal 1%.
 - Sampled NPCs: Jai, Uki, Anubis.
@@ -196,7 +196,7 @@ Sample days: 1, 3, 7, 14.
 ### knight
 
 - Profile: tier `light`; lifestyle `military`; archetypes knight 0.78, royal 0.22, soldier 0.12, traveler 0.05, food 0.05.
-- Generated-data stock bias preview: magic -10.0, religion 2.6, armor 2.6, dragons 1.6, drinks 1.6, potions 1.6, furniture 1.3, coins -1.0.
+- Runtime stock bias preview: magic -10.0, religion 2.6, armor 2.6, dragons 1.6, drinks 1.6, potions 1.6, furniture 1.3, coins -1.0.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Blacwin Gregory, Arthur Godsen, Tavis Kennedy.
 - Average visible stacks across sampled days: 12.
@@ -209,7 +209,7 @@ Sample days: 1, 3, 7, 14.
 ### magic
 
 - Profile: tier `grand`; lifestyle `shopkeeper`; archetypes magic 0.78, luxury 0.22, general 0.14, food 0.06, tools 0.04.
-- Generated-data stock bias preview: food 2.4, armor 2.3, gems 2.3, alchemy 1.6, weapons 1.3, coins -1.0, dragons 1.0, jewelry 1.0.
+- Runtime stock bias preview: food 2.4, armor 2.3, gems 2.3, alchemy 1.6, weapons 1.3, coins -1.0, dragons 1.0, jewelry 1.0.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Incantato, Zalia, Ascilia The White.
 - Average visible stacks across sampled days: 43.
@@ -222,7 +222,7 @@ Sample days: 1, 3, 7, 14.
 ### merchant
 
 - Profile: tier `large`; lifestyle `shopkeeper`; archetypes general 0.62, luxury 0.2, traveler 0.18, food 0.06, tools 0.04.
-- Generated-data stock bias preview: magic -10.0, furniture -1.6, food -1.0, giants -1.0, alchemy -0.7, animals -0.7, armor -0.7, botanicals -0.7.
+- Runtime stock bias preview: magic -10.0, furniture -1.6, food -1.0, giants -1.0, alchemy -0.7, animals -0.7, armor -0.7, botanicals -0.7.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Edward, Nevin Quinn, Baldric.
 - Average visible stacks across sampled days: 45.
@@ -235,7 +235,7 @@ Sample days: 1, 3, 7, 14.
 ### miner
 
 - Profile: tier `modest`; lifestyle `worker`; archetypes miner 0.88, tools 0.12, food 0.08, general 0.06.
-- Generated-data stock bias preview: magic -10.0, rocks -1.6, tools 1.5, jewelry -1.3, clothes 1.0, food 1.0, supplies -1.0, ore -0.9.
+- Runtime stock bias preview: magic -10.0, rocks -1.6, tools 1.5, jewelry -1.3, clothes 1.0, food 1.0, supplies -1.0, ore -0.9.
 - Balance status: PASS.
 - Balance shares: identity 87%, raw 68%, consumable 3%, finished 14%, luxury/rare 1%, illegal 0%.
 - Sampled NPCs: Joseph, Barnabas.
@@ -250,7 +250,7 @@ Sample days: 1, 3, 7, 14.
 ### noble
 
 - Profile: tier `light`; lifestyle `noble`; archetypes royal 0.62, luxury 0.38.
-- Generated-data stock bias preview: magic -10.0, furniture 2.2, deeds 1.6, dragons 1.6, flags 1.6, flowers 1.6, heraldic art 1.6, household 1.6.
+- Runtime stock bias preview: magic -10.0, furniture 2.2, deeds 1.6, dragons 1.6, flags 1.6, flowers 1.6, heraldic art 1.6, household 1.6.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Katherine Notting, William Rockly, Roark Sheehan.
 - Average visible stacks across sampled days: 11.
@@ -263,7 +263,7 @@ Sample days: 1, 3, 7, 14.
 ### quartermaster
 
 - Profile: tier `wholesale`; lifestyle `military`; archetypes quartermaster 0.84, tools 0.08, traveler 0.08, soldier 0.12, food 0.05.
-- Generated-data stock bias preview: magic -10.0, religion 2.6, food 2.4, drink 1.4, armor 1.0, drinks 1.0, furniture 1.0, grains 1.0.
+- Runtime stock bias preview: magic -10.0, religion 2.6, food 2.4, drink 1.4, armor 1.0, drinks 1.0, furniture 1.0, grains 1.0.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Cooper, Drake, Potter.
 - Average visible stacks across sampled days: 58.
@@ -276,7 +276,7 @@ Sample days: 1, 3, 7, 14.
 ### religious
 
 - Profile: tier `light`; lifestyle `religious`; archetypes religious 0.78, books 0.22, food 0.04.
-- Generated-data stock bias preview: magic -13.0, monster parts -10.0, drinks -3.3, furniture 1.6, religion -1.6, statues 1.4, books -1.0, fabrics 1.0.
+- Runtime stock bias preview: magic -13.0, monster parts -10.0, drinks -3.3, furniture 1.6, religion -1.6, statues 1.4, books -1.0, fabrics 1.0.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Pauric Martin, Catriona, Fiona O'Doherty.
 - Average visible stacks across sampled days: 14.
@@ -289,7 +289,7 @@ Sample days: 1, 3, 7, 14.
 ### sailor
 
 - Profile: tier `modest`; lifestyle `traveler`; archetypes maritime 0.74, fisher 0.16, traveler 0.1, food 0.08.
-- Generated-data stock bias preview: magic -10.0, drinks 1.9, coins -1.3, alchemy 1.0, food 1.0, gloves 1.0, religion 1.0, shoes 1.0.
+- Runtime stock bias preview: magic -10.0, drinks 1.9, coins -1.3, alchemy 1.0, food 1.0, gloves 1.0, religion 1.0, shoes 1.0.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Jack Bennett, Dead Red Sadie, Long Legs Logan.
 - Average visible stacks across sampled days: 19.
@@ -302,7 +302,7 @@ Sample days: 1, 3, 7, 14.
 ### seamstress
 
 - Profile: tier `standard`; lifestyle `shopkeeper`; archetypes seamstress 0.88, fabrics 0.08, luxury 0.04, general 0.14, food 0.06, tools 0.04.
-- Generated-data stock bias preview: magic -10.0, weapons -1.6, clothes -1.3, fabrics 1.1, fibers 1.0, flags -1.0, food 1.0, furniture 1.0.
+- Runtime stock bias preview: magic -10.0, weapons -1.6, clothes -1.3, fabrics 1.1, fibers 1.0, flags -1.0, food 1.0, furniture 1.0.
 - Balance status: PASS.
 - Balance shares: identity 76%, raw 47%, consumable 21%, finished 26%, luxury/rare 4%, illegal 0%.
 - Sampled NPCs: Susanna Taylor, Tapeesa, Caden Kennedy.
@@ -317,7 +317,7 @@ Sample days: 1, 3, 7, 14.
 ### soldier
 
 - Profile: tier `sparse`; lifestyle `military`; archetypes soldier 0.84, traveler 0.16, food 0.05.
-- Generated-data stock bias preview: magic -10.0, armor 2.6, swords 2.6, drinks 1.6, monster parts -1.6, religion 1.6, alchemy 1.0, coins -1.0.
+- Runtime stock bias preview: magic -10.0, armor 2.6, swords 2.6, drinks 1.6, monster parts -1.6, religion 1.6, alchemy 1.0, coins -1.0.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Adam, Mathew, Ronald Hughes.
 - Average visible stacks across sampled days: 7.
@@ -330,7 +330,7 @@ Sample days: 1, 3, 7, 14.
 ### thief
 
 - Profile: tier `light`; lifestyle `criminal`; archetypes contraband 0.64, salvage 0.24, jewelry 0.12.
-- Generated-data stock bias preview: magic 4.3, books -2.6, jewelry -1.6, daggers 1.5, drinks 1.0, food -1.0, games 1.0, coins 0.2.
+- Runtime stock bias preview: magic 4.3, books -2.6, jewelry -1.6, daggers 1.5, drinks 1.0, food -1.0, games 1.0, coins 0.2.
 - Balance status: no explicit target yet; inspect manually.
 - Sampled NPCs: Sebastian, Sato, Collin.
 - Average visible stacks across sampled days: 13.
@@ -343,7 +343,7 @@ Sample days: 1, 3, 7, 14.
 ### toolmaker
 
 - Profile: tier `standard`; lifestyle `worker`; archetypes toolmaker 0.9, blacksmith 0.1, food 0.08, tools 0.08, general 0.06.
-- Generated-data stock bias preview: supplies 1.9, furniture -1.3, tools -1.3, fabrics -1.0, food 1.0, weapons -1.0, wood 1.0, bread 0.4.
+- Runtime stock bias preview: supplies 1.9, furniture -1.3, tools -1.3, fabrics -1.0, food 1.0, weapons -1.0, wood 1.0, bread 0.4.
 - Balance status: PASS.
 - Balance shares: identity 71%, raw 42%, consumable 15%, finished 12%, luxury/rare 2%, illegal 0%.
 - Sampled NPCs: Toklo, Savannah.
@@ -360,7 +360,7 @@ Sample days: 1, 3, 7, 14.
 - This review samples deterministic generated stock for days 1, 3, 7, and 14. Restock blending and existing save-state stock can still change what a player sees.
 - `Average coin reserve value` is estimated from currency-like items in generated inventory, not from a separate future NPC wallet system.
 - Composition buckets are token-based diagnostics, so one item can count in multiple buckets.
-- Generated-data stock bias uses local `stockBiasWeights` on each resolved profile: character and profession biases are strongest, market and kingdom biases are lighter, and illegal kingdom tags discourage legal merchants while helping criminal stock.
+- Runtime stock bias uses local `stockBiasWeights` on each resolved profile: character and profession biases are strongest, market and kingdom biases are lighter, and illegal kingdom tags discourage legal merchants while helping criminal stock.
 - Step 3.6 balance targets are intentionally stack-share heuristics. PASS means the generated stock shape is acceptable for moving to barter tests; REVIEW means the profession may need manual visual/gameplay inspection.
 - Broad merchant-style professions intentionally carry mixed goods until named merchant subtypes are designed.
 - Inspect high-priority professions manually after every item catalog rewrite: blacksmith, fletcher, miner, barkeep, bard, farmer, butcher, and toolmaker.

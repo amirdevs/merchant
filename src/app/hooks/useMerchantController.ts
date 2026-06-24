@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { Character, InventoryEntry } from "@/data/types";
+import type { Character, InventoryEntry } from "@/shared/types/game-data";
 import {
   charactersAtMarket,
   autoAskOffer,
@@ -26,26 +26,26 @@ import {
   travelToMarket,
   advanceGameClock,
   type GameState,
-} from "@/lib/game";
-import { markCustomerSeen, resetCustomerQueueForDay } from "@/lib/npc-flow";
-import { setOfferQuantity, type MoveAmount } from "@/lib/inventory";
-import { expireQuests, questCanComplete, questReward } from "@/lib/quests";
-import { customerIntro } from "@/lib/dialogue";
-import type { DialogueEffect, DialogueNodeId } from "@/lib/dialogue";
-import { applyDialogueEffect } from "@/lib/dialogue-runtime";
-import { audioEnabled, playAmbient, playItemSound, playOfferReaction, playUiSound, setAudioEnabled } from "@/lib/audio";
-import { appraiseOffer } from "@/lib/barter";
+} from "@/game/runtime/game";
+import { markCustomerSeen, resetCustomerQueueForDay } from "@/game/characters/npc-flow";
+import { setOfferQuantity, type MoveAmount } from "@/game/trade/inventory";
+import { expireQuests, questCanComplete, questReward } from "@/game/quests/quests";
+import { customerIntro } from "@/game/characters/dialogue";
+import type { DialogueEffect, DialogueNodeId } from "@/game/characters/dialogue";
+import { applyDialogueEffect } from "@/game/characters/dialogue-runtime";
+import { audioEnabled, playAmbient, playItemSound, playOfferReaction, playUiSound, setAudioEnabled } from "@/shared/utils/audio";
+import { appraiseOffer } from "@/game/trade/barter";
 import type { MerchantController } from "@/app/types/MerchantController";
-import { listSaveSlots } from "@/lib/save";
-import { completeContract, expireContracts, resolveContract } from "@/lib/contracts";
-import { createAuctionSession, passAuctionLot, placeAuctionBid } from "@/lib/auction";
-import { eventIsActive } from "@/lib/events";
-import { coinQuantity, spendCopperToll } from "@/lib/economy";
-import { addInventory } from "@/lib/inventory";
-import type { TravelStrategy } from "@/lib/travel-risk";
-import { runHorseRace as calculateHorseRace } from "@/lib/racing";
-import { activeMythDeck, addMythCard, loadMythDeckPreset as loadProgressionDeckPreset, mythDeck, playMythCard as resolveMythCard, saveMythDeckPreset as saveProgressionDeckPreset, startMythGame as createMythGame, toggleMythDeckCard as toggleProgressionDeckCard } from "@/lib/myth";
-import { advanceMarketSimulation } from "@/lib/market-simulation";
+import { listSaveSlots } from "@/game/runtime/save";
+import { completeContract, expireContracts, resolveContract } from "@/game/quests/contracts";
+import { createAuctionSession, passAuctionLot, placeAuctionBid } from "@/game/trade/auction";
+import { eventIsActive } from "@/game/market/events";
+import { coinQuantity, spendCopperToll } from "@/game/economy/economy";
+import { addInventory } from "@/game/trade/inventory";
+import type { TravelStrategy } from "@/game/travel/travel-risk";
+import { runHorseRace as calculateHorseRace } from "@/game/market/racing";
+import { activeMythDeck, addMythCard, loadMythDeckPreset as loadProgressionDeckPreset, mythDeck, playMythCard as resolveMythCard, saveMythDeckPreset as saveProgressionDeckPreset, startMythGame as createMythGame, toggleMythDeckCard as toggleProgressionDeckCard } from "@/game/market/myth";
+import { advanceMarketSimulation } from "@/game/market/market-simulation";
 import {
   createShipment,
   depositWarehouse as storeInWarehouse,
@@ -54,13 +54,13 @@ import {
   settleShipments,
   takeLoan as takeCompanyLoan,
   withdrawWarehouse as retrieveFromWarehouse,
-} from "@/lib/company";
-import { createDraftSession, pickDraftItem as resolveDraftPick } from "@/lib/draft";
-import { repairPackhorses as repairCaravanPackhorses, setRouteNote as updateCaravanRouteNote, toggleRouteBookmark as toggleCaravanRouteBookmark, upgradeConcealment as upgradeCaravanConcealment } from "@/lib/caravan";
-import { canUseBlackMarket, issuePermit } from "@/lib/law";
-import { advanceRivals } from "@/lib/rivals";
-import { npcRoles } from "@/lib/npc-behavior";
-import { ensureRelation } from "@/lib/reputation";
+} from "@/game/company/company";
+import { createDraftSession, pickDraftItem as resolveDraftPick } from "@/game/trade/draft";
+import { repairPackhorses as repairCaravanPackhorses, setRouteNote as updateCaravanRouteNote, toggleRouteBookmark as toggleCaravanRouteBookmark, upgradeConcealment as upgradeCaravanConcealment } from "@/game/company/caravan";
+import { canUseBlackMarket, issuePermit } from "@/game/company/law";
+import { advanceRivals } from "@/game/company/rivals";
+import { npcRoles } from "@/game/characters/npc-behavior";
+import { ensureRelation } from "@/game/characters/reputation";
 
 export function useMerchantController(): MerchantController {
   const [state, setState] = useState<GameState>(() => loadGame() || newGame());

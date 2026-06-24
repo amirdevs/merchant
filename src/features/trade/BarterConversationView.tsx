@@ -1,18 +1,18 @@
 import { useState, type ReactNode } from "react";
 import { Handshake, HelpCircle, MessageCircle } from "lucide-react";
-import type { Character, InventoryEntry } from "@/data/types";
-import { tradePortraitExpression } from "@/data/characters/characterProfileShared";
-import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
-import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
-import { moodLabel, patienceLabel, relationFor, trustLabel, ultimatumActive } from "@/lib/reputation";
-import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
-import { roleLabel } from "@/lib/npc-behavior";
-import type { MoveAmount } from "@/lib/inventory";
-import { townAsset } from "@/lib/assets";
-import { money } from "@/lib/format";
-import { uiAssets } from "@/lib/ui-assets";
-import { InventoryPanel } from "@/components/InventoryPanel";
-import { Button, ModalShell, Panel, ScreenFrame, StatChip } from "@/components/ui";
+import type { Character, InventoryEntry } from "@/shared/types/game-data";
+import { tradePortraitExpression } from "@/game/characters/characterProfileShared";
+import { useCharacterProfiles } from "@/game/characters/useCharacterProfiles";
+import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/game/runtime/game";
+import { moodLabel, patienceLabel, relationFor, trustLabel, ultimatumActive } from "@/game/characters/reputation";
+import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/game/characters/dialogue";
+import { roleLabel } from "@/game/characters/npc-behavior";
+import type { MoveAmount } from "@/game/trade/inventory";
+import { townAsset } from "@/shared/utils/assets";
+import { money } from "@/shared/utils/format";
+import { uiAssets } from "@/shared/utils/ui-assets";
+import { InventoryPanel } from "@/features/inventory/components/InventoryPanel";
+import { Button, ModalShell, Panel, ScreenFrame, StatChip } from "@/shared/components/ui";
 
 type BarterConversationViewProps = {
   state: GameState;

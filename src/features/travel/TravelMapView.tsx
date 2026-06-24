@@ -1,16 +1,16 @@
 import { BookOpen, Bookmark, MapPinned, Route } from "lucide-react";
 import { useState } from "react";
-import type { GameState } from "@/lib/game";
-import { items, kingdoms, marketplaces } from "@/lib/game";
-import { routeAsset } from "@/lib/assets";
-import { canPayCopperToll, inventoryTotals } from "@/lib/economy";
-import { inventoryIllegalEntries } from "@/lib/legal";
-import { money } from "@/lib/format";
-import { uiAssets } from "@/lib/ui-assets";
-import { routeRiskPreview } from "@/lib/travel-risk";
-import type { TravelStrategy } from "@/lib/travel-risk";
-import { masteryRiskReduction, routeKey, routeMasteryLevel, routeProfitSummary, routeTravelConditions } from "@/lib/caravan";
-import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, StatChip } from "@/components/ui";
+import type { GameState } from "@/game/runtime/game";
+import { items, kingdoms, marketplaces } from "@/game/runtime/game";
+import { routeAsset } from "@/shared/utils/assets";
+import { canPayCopperToll, inventoryTotals } from "@/game/economy/economy";
+import { inventoryIllegalEntries } from "@/game/trade/legal";
+import { money } from "@/shared/utils/format";
+import { uiAssets } from "@/shared/utils/ui-assets";
+import { routeRiskPreview } from "@/game/travel/travel-risk";
+import type { TravelStrategy } from "@/game/travel/travel-risk";
+import { masteryRiskReduction, routeKey, routeMasteryLevel, routeProfitSummary, routeTravelConditions } from "@/game/company/caravan";
+import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, StatChip } from "@/shared/components/ui";
 
 export function TravelMapView({ state, onTravel, onEnterMarket, onOpenJournal, onClearTravelResult, onToggleRouteBookmark, onSetRouteNote, onBuySupplies }: { state: GameState; onTravel: (marketIndex: number, strategy?: TravelStrategy) => void; onEnterMarket: () => void; onOpenJournal: () => void; onClearTravelResult: () => void; onToggleRouteBookmark: (marketIndex: number) => void; onSetRouteNote: (routeId: string, note: string) => void; onBuySupplies: (quantity?: number) => void }) {
   const [pendingDestination, setPendingDestination] = useState<number | null>(null);

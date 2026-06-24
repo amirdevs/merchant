@@ -19,13 +19,13 @@ Runtime stock bias is mild flavor, not the main stock driver. It uses local `sto
 
 ## Current stock files
 
-- `src/data/stock/types.ts`
-- `src/data/stock/tiers.ts`
-- `src/data/stock/archetypes.ts`
-- `src/data/stock/profiles.ts`
-- `src/lib/stock-profiles.ts`
-- `scripts/audit-stock.cjs`
-- `scripts/review-stock.cjs`
+- `src/content/market/stock/types.ts`
+- `src/content/market/stock/tiers.ts`
+- `src/content/market/stock/archetypes.ts`
+- `src/content/market/stock/profiles.ts`
+- `src/game/economy/stock-profiles.ts`
+- `scripts/audits/audit-stock.cjs`
+- `scripts/audits/review-stock.cjs`
 
 ## Stock validation
 

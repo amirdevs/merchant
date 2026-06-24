@@ -1,10 +1,10 @@
 import { HandCoins, UserRound } from "lucide-react";
-import type { Character } from "@/data/types";
-import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
-import { customerIntro, customerPreference, customerPrompt, customerReply } from "@/lib/dialogue";
-import { money } from "@/lib/format";
-import { Button } from "@/components/ui";
-import { TypewriterText } from "@/components/TypewriterText";
+import type { Character } from "@/shared/types/game-data";
+import { useCharacterProfiles } from "@/game/characters/useCharacterProfiles";
+import { customerIntro, customerPreference, customerPrompt, customerReply } from "@/game/characters/dialogue";
+import { money } from "@/shared/utils/format";
+import { Button } from "@/shared/components/ui";
+import { TypewriterText } from "@/shared/components/TypewriterText";
 
 export function CharacterCard({
   character,

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import type { UiPreferences } from "@/app/types";
-import { setAudioChannelVolume, type AudioChannel } from "@/lib/audio";
-import { uiAssets } from "@/lib/ui-assets";
-import { Button, Panel, ScreenFrame, TabButton } from "@/components/ui";
+import { setAudioChannelVolume, type AudioChannel } from "@/shared/utils/audio";
+import { uiAssets } from "@/shared/utils/ui-assets";
+import { Button, Panel, ScreenFrame, TabButton } from "@/shared/components/ui";
 
 type SettingsViewProps = {
   soundOn: boolean;

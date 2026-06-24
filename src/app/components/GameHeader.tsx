@@ -1,6 +1,6 @@
 import { BookOpen, CircleHelp, Download, RotateCcw, Save, Upload, Volume2, VolumeX } from "lucide-react";
 import type { MerchantController } from "@/app/types/MerchantController";
-import { Button, IconButton, Muted } from "@/components/ui";
+import { Button, IconButton, Muted } from "@/shared/components/ui";
 
 export function GameHeader({ controller }: { controller: MerchantController }) {
   const { market, state, soundOn, importInputRef, actions } = controller;

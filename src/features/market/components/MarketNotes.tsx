@@ -1,6 +1,6 @@
 import { ScrollText } from "lucide-react";
-import type { Marketplace } from "@/data/types";
-import { Panel } from "@/components/ui";
+import type { Marketplace } from "@/shared/types/game-data";
+import { Panel } from "@/shared/components/ui";
 
 export function MarketNotes({ market }: { market: Marketplace }) {
   const event = market.event;

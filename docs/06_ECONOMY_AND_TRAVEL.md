@@ -2,7 +2,7 @@
 
 ## Economy foundation
 
-Shared economy helpers live in `src/lib/economy.ts`.
+Shared economy helpers live in `src/game/economy/economy.ts`.
 
 They cover:
 
@@ -26,7 +26,7 @@ pnpm test:economy
 
 ## Travel foundation
 
-Travel helpers live in `src/lib/travel-loop.ts`.
+Travel helpers live in `src/game/travel/travel-loop.ts`.
 
 They cover:
 

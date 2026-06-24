@@ -1,7 +1,7 @@
 import { Search, X } from "lucide-react";
-import { items, type GameState, visibleQuantity } from "@/lib/game";
-import { uiAssets } from "@/lib/ui-assets";
-import { Button, IconButton, Panel, ScreenFrame, TabButton } from "@/components/ui";
+import { items, type GameState, visibleQuantity } from "@/game/runtime/game";
+import { uiAssets } from "@/shared/utils/ui-assets";
+import { Button, IconButton, Panel, ScreenFrame, TabButton } from "@/shared/components/ui";
 
 const categoryChips = ["food", "weapons", "armor", "books", "magic", "alchemy", "clothes", "jewelry"];
 const statusChips = ["Protected", "Concealed", "Illegal", "Quest", "Highlighted"];

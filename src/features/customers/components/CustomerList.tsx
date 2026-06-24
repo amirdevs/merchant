@@ -1,8 +1,8 @@
 import { Users } from "lucide-react";
-import type { Character, Marketplace } from "@/data/types";
-import { useCharacterProfiles } from "@/data/characters/useCharacterProfiles";
-import { townAsset } from "@/lib/assets";
-import { Panel } from "@/components/ui";
+import type { Character, Marketplace } from "@/shared/types/game-data";
+import { useCharacterProfiles } from "@/game/characters/useCharacterProfiles";
+import { townAsset } from "@/shared/utils/assets";
+import { Panel } from "@/shared/components/ui";
 
 export function CustomerList({
   people,

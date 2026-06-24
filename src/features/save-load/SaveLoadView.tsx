@@ -1,11 +1,11 @@
 import { useState, type RefObject } from "react";
 import { AlertTriangle, BookOpen, Download, Save, Search, Trash2, Upload } from "lucide-react";
 import type { MerchantProfile } from "@/app/types";
-import type { GameState } from "@/lib/game";
-import { marketplaces } from "@/lib/game";
-import type { SaveSlotSummary } from "@/lib/save";
-import { uiAssets } from "@/lib/ui-assets";
-import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, TabButton } from "@/components/ui";
+import type { GameState } from "@/game/runtime/game";
+import { marketplaces } from "@/game/runtime/game";
+import type { SaveSlotSummary } from "@/game/runtime/save";
+import { uiAssets } from "@/shared/utils/ui-assets";
+import { Button, LedgerRow, ModalShell, Panel, ScreenFrame, TabButton } from "@/shared/components/ui";
 
 type SaveLoadViewProps = {
   state: GameState;

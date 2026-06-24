@@ -78,21 +78,21 @@ Endings should be based on accumulated choices, not a single final button.
 ## Current implementation files
 
 ```text
-src/data/quests/questTypes.ts
-src/data/quests/questCatalog.ts
-src/data/quests/mainCampaignQuests.ts
-src/data/quests/characterQuestlines.ts
-src/data/quests/sideQuests.ts
-src/data/quests/repeatableContractTemplates.ts
-src/data/quests/index.ts
-src/lib/quest-state.ts
-src/lib/quest-effects.ts
-src/lib/quest-selectors.ts
-src/lib/quest-journal-view-model.ts
-src/lib/first-playable-quest-chain.ts
-src/lib/playable-merchant-loop.ts
-src/lib/game-runtime-loop.ts
-src/lib/economy-world-expansion.ts
+src/content/quests/questTypes.ts
+src/content/quests/questCatalog.ts
+src/content/quests/mainCampaignQuests.ts
+src/content/quests/characterQuestlines.ts
+src/content/quests/sideQuests.ts
+src/content/quests/repeatableContractTemplates.ts
+src/content/quests/index.ts
+src/game/quests/quest-state.ts
+src/game/quests/quest-effects.ts
+src/game/quests/quest-selectors.ts
+src/game/quests/quest-journal-view-model.ts
+src/game/quests/first-playable-quest-chain.ts
+src/game/vertical-slice/playable-merchant-loop.ts
+src/game/vertical-slice/game-runtime-loop.ts
+src/game/vertical-slice/economy-world-expansion.ts
 ```
 
 Content currently defined:
