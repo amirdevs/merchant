@@ -1,4 +1,4 @@
-const ASSET_ROOT = "/game-assets";
+const ASSET_ROOT = "/assets";
 export const GAME_ASSET_ROOT = ASSET_ROOT;
 
 function extOf(file: string) {

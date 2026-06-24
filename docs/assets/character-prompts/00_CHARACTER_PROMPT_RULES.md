@@ -1,6 +1,6 @@
 # Character Portrait Prompt Rules
 
-Character portrait prompt files live beside item prompts in `docs/assets/character-prompts/`. Final cropped portraits belong under `public/game-assets/portraits/`.
+Character portrait prompt files live beside item prompts in `docs/assets/character-prompts/`. Final cropped portraits belong under `public/assets/portraits/`.
 
 Production character prompt JSON files are named like item prompt ranges:
 

@@ -1,4 +1,4 @@
-const UI_ROOT = "/game-assets/ui";
+const UI_ROOT = "/assets/ui";
 
 export type UiAssetScale = "original" | "4x";
 

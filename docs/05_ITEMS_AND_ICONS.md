@@ -16,7 +16,7 @@ Important folders:
 
 - `docs/assets/icon-prompts/` - prompt configs and manifest
 - `docs/assets/icon-sheets/` - generated sheet images for review/cropping
-- `public/game-assets/items/` - final runtime item icons
+- `public/assets/items/` - final runtime item icons
 - `scripts/generate-icon-prompts.cjs` - creates prompt configs
 - `scripts/audit-item-icons.cjs` - structural icon lock audit
 
