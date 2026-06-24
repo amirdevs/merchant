@@ -16,6 +16,7 @@ const checks = [
   ["pnpm", ["test:rich-quest-chain"]],
   ["pnpm", ["test:merchant-loop"]],
   ["pnpm", ["test:merchant-polish"]],
+  ["pnpm", ["test:runtime-loop"]],
   ["pnpm", ["test:characters"]],
   ["pnpm", ["test:company"]],
   ["pnpm", ["test:ui-integration"]],
@@ -23,6 +24,7 @@ const checks = [
   ["pnpm", ["playtest:balance"]],
   ["pnpm", ["playtest:merchant-loop"]],
   ["pnpm", ["playtest:merchant-loop-polish"]],
+  ["pnpm", ["playtest:runtime-loop"]],
   ["pnpm", ["build"]],
 ];
 
@@ -53,9 +55,9 @@ console.log("Run pnpm audit:item-icons when the item icon runtime asset gate is 
 console.log("Run pnpm audit:assets -- --strict to inspect all old/generated visual references.");
 console.log("Economy helpers are covered by src/lib/economy.test.ts.");
 console.log("Travel planning helpers are covered by src/lib/travel-loop.test.ts.");
-console.log("Legacy quest runtime helpers, the rich quest foundation, the first playable story chain, and the playable merchant loop are covered by pnpm test:quests, pnpm test:rich-quest-chain, pnpm test:merchant-loop, and pnpm test:merchant-polish.");
+console.log("Legacy quest runtime helpers, the rich quest foundation, the first playable story chain, the playable merchant loop, and GameState runtime loop persistence are covered by pnpm test:quests, pnpm test:rich-quest-chain, pnpm test:merchant-loop, pnpm test:merchant-polish, and pnpm test:runtime-loop.");
 console.log("Character portrait manifest helpers are covered by src/data/characters/characterPortraitManifest.test.ts.");
 console.log("Company, warehouse, shipment, and stock helpers are covered by src/lib/company.test.ts.");
 console.log("UI integration view models are covered by src/lib/ui-integration.test.ts.");
 console.log("Playtest/balance checklist helpers are covered by src/lib/playtest-balance.test.ts.");
-console.log("Review docs/logs/playtest-balance-report.md and docs/logs/playable-merchant-loop-v1-report.md, docs/logs/playable-merchant-loop-polish-report.md before the final manual pass.");
+console.log("Review docs/logs/playtest-balance-report.md, docs/logs/playable-merchant-loop-v1-report.md, docs/logs/playable-merchant-loop-polish-report.md, and docs/logs/runtime-loop-save-report.md before the final manual pass.");

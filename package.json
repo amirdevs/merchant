@@ -14,6 +14,7 @@
     "test:quests": "vitest run src/lib/quest-runtime.test.ts src/lib/rich-quest-system.test.ts src/lib/first-playable-quest-chain.test.ts",
     "test:rich-quests": "vitest run src/lib/rich-quest-system.test.ts src/lib/first-playable-quest-chain.test.ts",
     "test:characters": "vitest run src/data/characters/characterPortraitManifest.test.ts",
+    "test:runtime-loop": "vitest run src/lib/game-runtime-loop.test.ts",
     "audit:data": "node scripts/audit-data.cjs",
     "audit:assets": "node scripts/audit-assets.cjs",
     "audit:item-icons": "node scripts/audit-item-icons.cjs",
@@ -36,7 +37,8 @@
     "test:merchant-loop": "vitest run src/lib/playable-merchant-loop.test.ts src/lib/playable-merchant-loop-polish.test.ts",
     "playtest:merchant-loop": "node scripts/playtest-merchant-loop.cjs",
     "test:merchant-polish": "vitest run src/lib/playable-merchant-loop-polish.test.ts",
-    "playtest:merchant-loop-polish": "node scripts/playtest-merchant-loop-polish.cjs"
+    "playtest:merchant-loop-polish": "node scripts/playtest-merchant-loop-polish.cjs",
+    "playtest:runtime-loop": "node scripts/playtest-runtime-loop.cjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",

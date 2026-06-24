@@ -52,7 +52,7 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
 
       <div className="grid flex-1 gap-4 xl:grid-cols-[minmax(0,1fr)_420px]">
         <main className="grid content-start gap-4">
-          <PlayableMerchantLoopPanel day={state.day} />
+          <PlayableMerchantLoopPanel day={state.day} gameState={state} />
 
           <RichQuestChainPanel day={state.day} />
 

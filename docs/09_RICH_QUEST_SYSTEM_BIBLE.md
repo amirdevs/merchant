@@ -34,6 +34,7 @@ Every important quest should make the player feel like a merchant making a meani
 5. **Main goals to finish the game** - players need several long-term objectives so they always know what they are working toward.
 6. **Side content supports the campaign** - side quests and NPC questlines should feed into the main campaign, not feel detached.
 7. **Repeatable work still has flavor** - generated trade contracts can be shorter, but they should still have a reason, a client, a deadline, and a visible effect.
+8. **Runtime memory matters** - a quest consequence is not complete until it is stored in GameState/save/export and can affect later play.
 
 ## Quest layers
 
@@ -74,9 +75,7 @@ Endings should be based on accumulated choices, not a single final button.
 | Coin Emperor Ending | The player becomes extremely rich and powerful, but feared and distrusted. |
 | Quiet Partner Ending | The player avoids public power and controls the economy through trusted allies. |
 
-## Phase 2 implementation files
-
-The Phase 2 source implementation lives in:
+## Current implementation files
 
 ```text
 src/data/quests/questTypes.ts
@@ -90,7 +89,9 @@ src/lib/quest-state.ts
 src/lib/quest-effects.ts
 src/lib/quest-selectors.ts
 src/lib/quest-journal-view-model.ts
-src/lib/rich-quest-system.test.ts
+src/lib/first-playable-quest-chain.ts
+src/lib/playable-merchant-loop.ts
+src/lib/game-runtime-loop.ts
 ```
 
 Content currently defined:
@@ -170,19 +171,6 @@ failed
 expired
 blocked
 ```
-
-| State | Meaning |
-|---|---|
-| locked | The player cannot see or start the quest yet. |
-| available | The quest can appear in dialogue, notices, or world events. |
-| offered | An NPC has introduced the quest, but the player has not accepted. |
-| accepted | The player has accepted the quest. |
-| in_progress | The quest has active objectives or stages. |
-| ready_to_turn_in | Requirements are met and the player can resolve it. |
-| completed | The quest is finished successfully. |
-| failed | The quest failed due to choice, condition, or consequence. |
-| expired | The deadline passed. |
-| blocked | The quest is blocked by another pending decision or missing system. |
 
 ## Requirement types
 
@@ -274,6 +262,37 @@ Exploitative solution: high profit, lower trust, possible future enemy.
 Risky solution: high reward, legal heat, route danger, or faction anger.
 ```
 
+## Runtime persistence rule
+
+From Phase 6 onward, implemented playable questlines should not live only in private component state or private local-storage keys.
+
+The first playable merchant loop is stored on GameState as:
+
+```text
+playableLoop
+```
+
+The `playableLoop` payload contains:
+
+```text
+day
+current town
+money/copper
+cargo
+profit and completed trades
+rich quest chain state
+company state
+town reputation
+NPC trust
+public trust
+shadow heat
+company readiness
+consequence flags
+loop ledger
+```
+
+This means save/load/export should preserve the first playable loop. The older component-local fallback is allowed only for isolated testing.
+
 ## Example rich quest: Bread Before Dawn
 
 Mara, a night baker, keeps her ovens running for dockworkers, guards, and travelers who cannot afford tavern meals. Her flour shipment has vanished. By sunrise, the workers' guild will cancel her contract, and the city will accuse her of hoarding grain.
@@ -292,53 +311,6 @@ Choices:
 | Steal back the redirected flour | Strong worker reputation, noble anger, legal heat. |
 | Sell Mara expensive replacement flour | Good profit, lower trust, Mara remembers the player's greed. |
 | Expose the warehouse clerk | City reputation gain, clerk becomes a future enemy. |
-
-## Character questlines
-
-Important NPCs should have multi-step arcs. A character questline should show how the relationship changes over time.
-
-NPC questline outcomes can unlock:
-
-```text
-supplier contracts
-special discounts
-unique stock
-company employees
-rumors
-quest evidence
-ending support
-rival actions
-```
-
-## Repeatable trade contracts
-
-Repeatable contracts provide replayability but should not feel empty.
-
-A repeatable contract needs:
-
-```text
-client NPC
-reason for request
-item or category demanded
-quantity
-deadline
-origin/target market
-reward formula
-failure consequence
-small flavor text
-```
-
-Even a repeatable contract should read like:
-
-```text
-A dye-house owner needs blue pigment before the festival banners are inspected. She can pay more than market rate, but if the shipment is late, her guild license may be suspended.
-```
-
-Not:
-
-```text
-Deliver 4 blue pigment.
-```
 
 ## UI requirements
 
@@ -373,6 +345,7 @@ current objective
 optional approaches
 consequence preview when appropriate
 turn-in options
+runtime memory / what changed after the choice
 ```
 
 ## Writing checklist for every authored quest
@@ -389,43 +362,17 @@ Before a quest is accepted into the catalog, it should answer:
 8. What changes in the world after the quest?
 9. Which future quest, discount, route, NPC trust, or ending score can it affect?
 10. Does the quest text make the player curious?
+11. Where is the consequence stored in GameState/save/export?
 
-## Acceptance criteria for Quest Overhaul V1
+## Phase implementation notes
 
-The quest overhaul is ready for the vertical-slice implementation only when:
-
-```text
-old reference quest content is not used as the creative source
-a new quest catalog exists
-main campaign act structure exists
-25 main quests, 10 character questlines, 30 side quests, and 20 repeatable templates exist
-quest journal view models show story and choices, not only todo text
-quest state/effect helpers can accept, advance, choose, resolve, and summarize quests
-first vertical-slice quest chain is defined and ready for playable implementation
-```
-
-## Phase 3 implementation note - first playable chain
+### Phase 3 - first playable chain
 
 The first playable rich quest chain is implemented as a Journal surface with state helpers and focused tests. The intent is to prove that the quest experience feels like story progression rather than a checklist before deeper economy locks are added.
 
-The first implementation deliberately supports:
+### Phase 4 - playable merchant loop v1
 
-```text
-acceptance
-multi-stage progress
-choice resolution
-consequence preview and application
-quest notes
-ending pressure
-sequential unlocks
-company-registration readiness after the final quest
-```
-
-The first implementation does not yet require every economic action to be physically completed in the market. Phase 4 should connect the same chain to concrete inventory, trade, route, reputation, and company conditions.
-
-## Phase 4 note - playable merchant loop v1
-
-The quest system is now connected to a small merchant loop rather than existing only as a story panel. The first playable loop is intentionally narrow:
+The quest system is connected to a small merchant loop:
 
 ```text
 buy cargo
@@ -436,39 +383,11 @@ unlock warehouse/company readiness
 register the first company
 ```
 
-This confirms that rich quests should continue to be written around merchant actions. A good quest should create pressure for at least one of these actions:
+### Phase 5 - consequences must be visible
 
-```text
-buy something at the right place
-sell something under pressure
-move goods through route risk
-protect or exploit an NPC relationship
-stabilize or manipulate a local price
-unlock company infrastructure
-choose an ending pressure path
-```
-
-When writing future quests, do not treat the merchant loop as separate from the story. The story should explain why a trade matters, who remembers it, what changes after it, and why the player should care beyond the reward amount.
-
-Phase 5 should judge the first loop by feel:
-
-```text
-Is the profit route understandable?
-Does the story make the action feel meaningful?
-Does the player understand what changed after a choice?
-Does the company unlock feel earned?
-Is the Journal readable without becoming a checklist?
-```
-
-## Phase 5 note - consequences must be visible
-
-Phase 5 confirms an important writing and runtime rule:
-
-```text
 A consequence does not count if the player cannot see or feel it.
-```
 
-The first playable loop now exposes consequence categories directly in the Journal:
+The first playable loop exposes:
 
 ```text
 public trust
@@ -479,24 +398,8 @@ NPC trust
 named consequence flags
 ```
 
-Quest writing should use those categories deliberately. A quest choice should not only say `+reputation` or `-trust`; the story should explain who notices the choice, why they care, and how the player can use or repair that consequence later.
+### Phase 6 - consequences must persist
 
-Every future playable questline should answer these questions before implementation:
+A visible consequence still is not complete if it disappears after save/load/export.
 
-1. Which town remembers this?
-2. Which NPC remembers this?
-3. Does the choice improve public trust, create shadow heat, or prepare the company?
-4. What will the player see immediately after the choice?
-5. What later opportunity, discount, risk, route, contract, or ending pressure can use this memory?
-
-The first loop also adds balance signals. Future questlines should be tested against them:
-
-```text
-money pressure
-profit clarity
-route use
-story progress
-company readiness
-```
-
-A rich questline is not ready for expansion if it creates story text but does not make the trade loop clearer, riskier, more emotional, or more consequential.
+Phase 6 stores the first loop in the main game save payload so future expansion can build on persistent memory instead of a prototype panel.
