@@ -9,6 +9,7 @@ import { marketRumorLedger, seasonalMarketReport } from "@/lib/market-simulation
 import { createBalanceReport } from "@/lib/balance";
 import { uiAssets } from "@/lib/ui-assets";
 import { RichQuestChainPanel } from "./RichQuestChainPanel";
+import { PlayableMerchantLoopPanel } from "./PlayableMerchantLoopPanel";
 
 type QuestStatus = GameState["questStates"][string];
 
@@ -51,6 +52,8 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
 
       <div className="grid flex-1 gap-4 xl:grid-cols-[minmax(0,1fr)_420px]">
         <main className="grid content-start gap-4">
+          <PlayableMerchantLoopPanel day={state.day} />
+
           <RichQuestChainPanel day={state.day} />
 
           <Panel title={<span className="inline-flex items-center gap-2"><ScrollText size={18} /> Legacy Local Notice Board</span>} variant="parchment">

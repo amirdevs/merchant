@@ -32,7 +32,9 @@
     "test:ui-integration": "vitest run src/lib/ui-integration.test.ts",
     "test:playtest": "vitest run src/lib/playtest-balance.test.ts",
     "playtest:balance": "node scripts/playtest-balance.cjs",
-    "test:rich-quest-chain": "vitest run src/lib/first-playable-quest-chain.test.ts"
+    "test:rich-quest-chain": "vitest run src/lib/first-playable-quest-chain.test.ts",
+    "test:merchant-loop": "vitest run src/lib/playable-merchant-loop.test.ts",
+    "playtest:merchant-loop": "node scripts/playtest-merchant-loop.cjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",

@@ -274,3 +274,89 @@ Important note:
 Phase 3 uses browser-local rich quest persistence so the chain is playable immediately without risking the existing save schema.
 Phase 4 should move this progress into GameState save/export and connect quest consequences to real inventory, city reputation, market state, route access, NPC trust, and company systems.
 ```
+
+## Phase 4 - Playable Merchant Loop v1 Pack
+
+Phase 4 turns the portrait + quest foundation into the first complete merchant loop. The goal is not to expand the whole world yet; the goal is to prove the real game rhythm in a small region before more towns, more items, and more questlines are added.
+
+Implemented source files:
+
+```text
+src/lib/playable-merchant-loop.ts
+src/lib/playable-merchant-loop.test.ts
+src/features/journal/PlayableMerchantLoopPanel.tsx
+src/features/journal/JournalView.tsx
+scripts/playtest-merchant-loop.cjs
+```
+
+Implemented vertical-slice scope:
+
+```text
+3 towns:
+- Sunwake Harbor
+- Riverwake Mill
+- Brasskeep Gate
+
+6 loop items:
+- Coastal Salt
+- Mill Flour
+- Lamp Oil
+- Dyed Wool
+- Ledger Paper
+- Iron Nails
+
+first route/profit loop:
+Sunwake Harbor -> buy Coastal Salt -> travel to Riverwake Mill -> sell for profit
+
+first story loop:
+First Honest Profit -> Bread Before Dawn -> The False Scale -> Warehouse Lease -> A Name on the Door
+
+first company unlock:
+finish the story chain -> open company ledger -> register Sunwake Ledger Company
+```
+
+Implemented runtime behavior:
+
+```text
+buy cargo
+sell cargo
+track average cost and realized profit
+travel between vertical-slice towns
+charge travel cost and advance day
+record visited towns and route history
+show best nearby profit routes
+bridge the first rich quest chain into the merchant loop
+block company registration before story readiness
+register the first company after the chain completes
+write a readable ledger entry for each meaningful action
+persist the loop in browser local storage under merchant-playable-loop-v1
+```
+
+Implemented UI behavior:
+
+```text
+Journal now shows Playable Merchant Loop v1 above the standalone rich quest chain.
+The loop panel shows current town, copper, profit, cargo, local prices, best nearby routes, story gate, loop goals, company readiness, and ledger entries.
+The panel includes quick vertical-slice actions for buy, travel, sell, resolve story gate, register company, run demo, and reset.
+```
+
+Validation:
+
+```powershell
+pnpm test:merchant-loop
+pnpm playtest:merchant-loop
+pnpm verify:current-state
+```
+
+Important note:
+
+```text
+Phase 4 is still a focused vertical-slice runtime. It intentionally keeps the loop small and readable so balance, UI, and consequence clarity can be judged before expanding the full world.
+Phase 5 should polish consequences, balance, UI readability, and save/export integration before adding more towns or questlines.
+```
+
+## Large implementation roadmap from here
+
+Remaining large phase:
+
+1. **Phase 5 - Consequence, Balance, and UI Polish Pack**: tune profit margins, quest rewards, deadlines, travel cost, route risk, company unlock pacing, and consequence visibility; polish the market, barter, journal, and company surfaces around the new character portraits and story-rich quests; connect save/export more cleanly; hide or retire old quest UI paths that no longer match the remake; prepare the expansion plan after the vertical slice feels good.

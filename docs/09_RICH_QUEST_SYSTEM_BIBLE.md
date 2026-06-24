@@ -422,3 +422,40 @@ company-registration readiness after the final quest
 ```
 
 The first implementation does not yet require every economic action to be physically completed in the market. Phase 4 should connect the same chain to concrete inventory, trade, route, reputation, and company conditions.
+
+## Phase 4 note - playable merchant loop v1
+
+The quest system is now connected to a small merchant loop rather than existing only as a story panel. The first playable loop is intentionally narrow:
+
+```text
+buy cargo
+travel
+sell for profit
+resolve rich quest stages and choices
+unlock warehouse/company readiness
+register the first company
+```
+
+This confirms that rich quests should continue to be written around merchant actions. A good quest should create pressure for at least one of these actions:
+
+```text
+buy something at the right place
+sell something under pressure
+move goods through route risk
+protect or exploit an NPC relationship
+stabilize or manipulate a local price
+unlock company infrastructure
+choose an ending pressure path
+```
+
+When writing future quests, do not treat the merchant loop as separate from the story. The story should explain why a trade matters, who remembers it, what changes after it, and why the player should care beyond the reward amount.
+
+Phase 5 should judge the first loop by feel:
+
+```text
+Is the profit route understandable?
+Does the story make the action feel meaningful?
+Does the player understand what changed after a choice?
+Does the company unlock feel earned?
+Is the Journal readable without becoming a checklist?
+```

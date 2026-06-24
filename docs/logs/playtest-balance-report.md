@@ -1,6 +1,6 @@
 # Playtest And Balance Report
 
-Generated: 2026-06-24T07:42:47.897Z
+Generated: 2026-06-24T07:52:43.554Z
 
 This report is a lightweight checkpoint after the item, stock, barter, economy, travel, quest, company, and UI-integration foundation work.
 
