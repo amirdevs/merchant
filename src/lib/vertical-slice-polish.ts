@@ -169,7 +169,7 @@ export function buildVerticalSlicePolishReport(value: GameStateWithPlayableLoop 
       "Record any confusing UI text before adding more towns or quests.",
     ],
     cleanupGuards: [
-      "Do not delete legacy quest/data panels until replacement UI covers the same gameplay need.",
+      "Do not delete inactive quest/data panels until replacement UI covers the same gameplay need.",
       "Do not expand beyond the starter region until the alpha readiness score is stable.",
       "Do not add random items or towns unless they support trade, quests, company progression, or consequence visibility.",
       "Keep debug/reset controls out of the main player path when preparing a demo build.",

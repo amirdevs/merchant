@@ -8,7 +8,7 @@ const dataDir = path.join(root, "src", "data", "generated");
 const strict = process.argv.includes("--strict");
 const verbose = process.argv.includes("--verbose") || strict;
 const auditGeneratedAssetRefs = process.argv.includes("--generated-assets") || strict;
-const auditCatalogCharacterAssetFields = process.argv.includes("--legacy-character-assets") || strict;
+const auditCatalogCharacterAssetFields = process.argv.includes("--catalog-character-assets") || strict;
 const auditUiAssets = process.argv.includes("--ui-assets") || strict;
 
 function readJson(file) {
@@ -50,8 +50,8 @@ function itemIconUrl(file) {
 const checks = [];
 const missing = [];
 const skipped = {
-  legacyPortrait: 0,
-  legacyStall: 0,
+  inactivePortrait: 0,
+  inactiveStall: 0,
   itemIcon: 0,
   townsquare: 0,
   backdrop: 0,
@@ -72,13 +72,13 @@ const marketplaces = readJson("marketplaces.json");
 
 for (const character of characters) {
   if (!auditCatalogCharacterAssetFields) {
-    if (character.portraitFile) skipped.legacyPortrait += 1;
-    if (character.stallFile) skipped.legacyStall += 1;
+    if (character.portraitFile) skipped.inactivePortrait += 1;
+    if (character.stallFile) skipped.inactiveStall += 1;
     continue;
   }
 
-  check(`legacy portrait: ${character.name}`, imageUrl(character.portraitFile, "characters"));
-  check(`legacy stall: ${character.name}`, imageUrl(character.stallFile, "stalls"));
+  check(`inactive portrait: ${character.name}`, imageUrl(character.portraitFile, "characters"));
+  check(`inactive stall: ${character.name}`, imageUrl(character.stallFile, "stalls"));
 }
 
 for (const item of items) {
@@ -128,10 +128,10 @@ const byPrefix = missing.reduce((counts, issue) => {
 console.log(`Asset audit checked ${checks.length} active references.`);
 console.log(`Missing active references: ${missing.length}`);
 console.log(
-  `Skipped legacy/generated references by default: ${skipped.legacyPortrait} portrait, ${skipped.legacyStall} stall, ${skipped.itemIcon} item icon, ${skipped.townsquare} townsquare, ${skipped.backdrop} backdrop, ${skipped.ambiance} ambiance, ${skipped.route} route, ${skipped.ui} ui.`
+  `Skipped inactive/generated references by default: ${skipped.inactivePortrait} portrait, ${skipped.inactiveStall} stall, ${skipped.itemIcon} item icon, ${skipped.townsquare} townsquare, ${skipped.backdrop} backdrop, ${skipped.ambiance} ambiance, ${skipped.route} route, ${skipped.ui} ui.`
 );
-console.log("Use pnpm audit:assets -- --strict to run the full old/generated visual reference audit.");
-console.log("Use pnpm audit:character-portraits for the final remake portrait gate.");
+console.log("Use pnpm audit:assets -- --strict to run the full inactive/generated visual reference audit.");
+console.log("Use pnpm audit:character-portraits for the final portrait gate.");
 for (const [prefix, count] of Object.entries(byPrefix).sort()) console.log(`- ${prefix}: ${count}`);
 
 if (missing.length && verbose) {

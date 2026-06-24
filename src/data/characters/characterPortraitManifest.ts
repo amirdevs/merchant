@@ -139,8 +139,8 @@ export const characterIdentityById = new Map(
 
 export const characterIdByRuntimeIndex = new Map<number, string>();
 for (const identity of characterIdentityProfiles) {
-  if (identity.rosterGroup === "supporting_cast" && typeof identity.originalIndex === "number") {
-    characterIdByRuntimeIndex.set(identity.originalIndex, identity.characterId);
+  if (identity.rosterGroup === "supporting_cast" && typeof identity.runtimeIndex === "number") {
+    characterIdByRuntimeIndex.set(identity.runtimeIndex, identity.characterId);
   }
 }
 

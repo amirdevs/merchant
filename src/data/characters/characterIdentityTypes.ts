@@ -3,9 +3,9 @@ import type { CharacterExpression, CharacterExpressionTier, CharacterGameplayGro
 export type CharacterRosterGroup = "supporting_cast" | "primary_cast";
 
 export type CharacterIdentityBatchStatus =
-  | "identity_draft"
-  | "ready_for_prompt_manifest"
-  | "portrait_generation_blocked";
+  | "catalog_profile_batch"
+  | "portrait_manifest_ready"
+  | "profile_locked";
 
 export interface CharacterExpressionProfile {
   readonly expression: CharacterExpression;
@@ -16,8 +16,8 @@ export interface CharacterExpressionProfile {
 export interface FinalCharacterIdentityProfile {
   readonly characterId: string;
   readonly rosterGroup: CharacterRosterGroup;
-  readonly originalIndex: number | null;
-  readonly seedId: string | null;
+  readonly runtimeIndex: number | null;
+  readonly catalogKey: string | null;
   readonly finalDisplayName: string;
   readonly profession: string;
   readonly gameplayGroups: readonly CharacterGameplayGroup[];

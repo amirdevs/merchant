@@ -41,8 +41,8 @@ function writeGeneratedItems(root, items) {
     writeJson(file, items.slice(index, end));
   }
 
-  const legacyItemsFile = path.join(dataDir, "items.json");
-  if (fs.existsSync(legacyItemsFile)) fs.rmSync(legacyItemsFile, { force: true });
+  const retiredItemsFile = path.join(dataDir, "items.json");
+  if (fs.existsSync(retiredItemsFile)) fs.rmSync(retiredItemsFile, { force: true });
 }
 
 module.exports = {

@@ -29,7 +29,7 @@ export const finalCharacterRosterPlan = {
       hiddenOrMergedCount: targetHiddenOrMergedSupportingCastCount,
       defaultStatus: "REPLACE_VISIBLE_ROLE",
       planningNotes: [
-        "Keep stable internal generated indexes until runtime migration is safe.",
+        "Keep stable internal runtime indexes until the current runtime mapping is fully integrated.",
         "Replace every public name, story, portrait, outfit, and dialogue flavor.",
         "Use 11 hidden/merged slots as the first cleanup target for weak, inactive, duplicate, or mechanically empty characters.",
       ],

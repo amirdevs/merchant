@@ -208,7 +208,7 @@ const drafts: SideDraft[] = [
     giver: "character-019",
     origin: "market-brasskeep",
     goals: ["buy_sell", "npc_trust", "city_reputation"],
-    choices: [["replace-silk", "Replace the silk", "honest", "Absorb cost and save reputation."], ["rework-design", "Rework the garments honestly", "practical", "Turn loss into a different sale."], ["pass-fake", "Pass the fake onward", "exploit", "Protect one seller by deceiving another." ]],
+    choices: [["replace-silk", "Replace the silk", "honest", "Absorb cost and save reputation."], ["refit-design", "Refit the garments honestly", "practical", "Turn loss into a different sale."], ["pass-fake", "Pass the fake onward", "exploit", "Protect one seller by deceiving another." ]],
   },
   {
     id: "side-11-the-candle-makers-tallow",

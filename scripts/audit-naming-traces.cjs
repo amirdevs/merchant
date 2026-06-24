@@ -3,7 +3,18 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = process.cwd();
-const SKIP_DIRS = new Set(['.git', 'node_modules', 'dist', 'build', '.vite']);
+const SKIP_DIRS = new Set([
+  '.git',
+  'node_modules',
+  'dist',
+  'build',
+  '.vite',
+  'docs/logs',
+  'docs/assets/icon-prompts',
+  'docs/assets/icon-sheets',
+  'src/data/generated',
+  'public',
+]);
 const TEXT_EXTS = new Set(['.ts', '.tsx', '.js', '.jsx', '.cjs', '.mjs', '.json', '.md', '.css', '.html']);
 
 const forbidden = [
@@ -23,20 +34,27 @@ const forbidden = [
   'old public-facing',
   'rebuild-era',
   'rebuilt project',
+  'originalIndex',
+  'seedId',
+  'archived seed',
+  'reference data',
+  'old marketplace',
+  'old character',
+  'old standalone',
+  'old scaffolding',
+  'test-batch seed',
+  'portrait_generation_blocked',
 ];
 
-const allowedFiles = new Set([
-  'PROJECT_TRACELESS_NAMING_CLEANUP_PLAN.md',
-  'scripts/audit-naming-traces.cjs',
-]);
+const allowedFiles = new Set(['scripts/audit-naming-traces.cjs']);
 
 const issues = [];
 
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (SKIP_DIRS.has(entry.name)) continue;
     const full = path.join(dir, entry.name);
     const rel = path.relative(ROOT, full).replace(/\\/g, '/');
+    if (SKIP_DIRS.has(entry.name) || SKIP_DIRS.has(rel)) continue;
     if (entry.isDirectory()) {
       walk(full);
       continue;

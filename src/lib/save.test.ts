@@ -49,18 +49,18 @@ describe("save slots", () => {
   });
 
   it("blocks pre-v2 saves without mutating or loading them", () => {
-    const legacy = {
+    const incompatibleSave = {
       marketIndex: 0,
       day: 2,
       selectedCharacterIndex: null,
       characters: [],
       playerInventory: [],
-      message: "legacy",
+      message: "outdated",
     };
 
-    localStorage.setItem("merchant-react-save-slot-0", JSON.stringify(legacy));
+    localStorage.setItem("merchant-react-save-slot-0", JSON.stringify(incompatibleSave));
 
-    expect(parseGameSave(JSON.stringify(legacy))).toBeNull();
+    expect(parseGameSave(JSON.stringify(incompatibleSave))).toBeNull();
     expect(loadGame(0)).toBeNull();
     expect(listSaveSlots()[0]).toMatchObject({
       status: "incompatible",

@@ -33,7 +33,7 @@ Phase 8 turns the current saved merchant loop into a clean alpha-style vertical 
 - Current-state verification passes.
 - The player can understand the loop: buy, travel, sell, quest, company, save, continue.
 - The alpha-readiness panel does not hide blockers; it surfaces them as visible checks.
-- Remaining old-system panels are clearly marked as legacy or migration scaffolding.
+- Remaining inactive-system panels are clearly marked as development-only support UI.
 - No new content is added unless it supports trade, story, company progression, or visible consequences.
 
 ## Next expansion rule

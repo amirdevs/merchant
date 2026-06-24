@@ -12,7 +12,7 @@ characters-0025-0036.json
 characters-0721-0722.json
 ```
 
-Generate sheets in filename order. Do not use old category words such as useful, legacy, new-npcs, identity, batch group, test, template, or manifest to decide generation order.
+Generate sheets in filename order. Do not use retired catalog labels such as useful, prior-cast, batch group, test, template, or manifest to decide generation order.
 
 ## Current approved direction
 

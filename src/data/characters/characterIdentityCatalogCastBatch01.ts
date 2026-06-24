@@ -6,20 +6,20 @@ const sharedNegativePrompt = "no text, no labels, no watermark, no UI frame, no 
 
 export const characterIdentityCatalogCastBatch01 = {
   batchId: "identity-catalog-cast-batch-001",
-  status: "portrait_generation_blocked",
+  status: "profile_locked",
   rosterScope: "First 16 primary cast characters: trade, travel, market service, collector, law, customs, and risk contacts.",
   portraitGenerationAllowed: false,
   notes: [
-    "This is an identity catalog batch, not a final portrait-generation manifest.",
-    "Portrait generation stays blocked until every final character identity and image manifest is reviewed.",
-    "The matching prompt-plan JSON under docs/assets/character-prompts is a draft test-batch seed, not approval to generate all portraits.",
+    "This is a catalog profile batch, not the final portrait manifest.",
+    "Portrait work stays locked until every final character identity and image manifest is reviewed.",
+    "The matching prompt-plan JSON under docs/assets/character-prompts supports catalog review only and does not mark the full portrait set ready for generation.",
   ],
   identities: [
     {
         "characterId": "character-001",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-001",
+        "runtimeIndex": null,
+        "catalogKey": "character-001",
         "finalDisplayName": "Mirella Brasscall",
         "profession": "Auctioneer",
         "gameplayGroups": [
@@ -100,8 +100,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-002",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-002",
+        "runtimeIndex": null,
+        "catalogKey": "character-002",
         "finalDisplayName": "Orren Scale-Eye",
         "profession": "Appraiser",
         "gameplayGroups": [
@@ -171,8 +171,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-003",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-003",
+        "runtimeIndex": null,
+        "catalogKey": "character-003",
         "finalDisplayName": "Basko Fencrate",
         "profession": "Bulk Goods Broker",
         "gameplayGroups": [
@@ -242,8 +242,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-004",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-004",
+        "runtimeIndex": null,
+        "catalogKey": "character-004",
         "finalDisplayName": "Saffra Moonlock",
         "profession": "Rare Item Collector",
         "gameplayGroups": [
@@ -324,8 +324,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-005",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-005",
+        "runtimeIndex": null,
+        "catalogKey": "character-005",
         "finalDisplayName": "Joryn Crackbox",
         "profession": "Damaged Goods Dealer",
         "gameplayGroups": [
@@ -393,8 +393,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-006",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-006",
+        "runtimeIndex": null,
+        "catalogKey": "character-006",
         "finalDisplayName": "Helva Quaystamp",
         "profession": "Import Export Clerk",
         "gameplayGroups": [
@@ -474,8 +474,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-007",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-007",
+        "runtimeIndex": null,
+        "catalogKey": "character-007",
         "finalDisplayName": "Pella Brightspoon",
         "profession": "Festival Trader",
         "gameplayGroups": [
@@ -545,8 +545,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-008",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-008",
+        "runtimeIndex": null,
+        "catalogKey": "character-008",
         "finalDisplayName": "Davin Ledgerhook",
         "profession": "Market Inspector",
         "gameplayGroups": [
@@ -626,8 +626,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-009",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-009",
+        "runtimeIndex": null,
+        "catalogKey": "character-009",
         "finalDisplayName": "Kesta Far-Ridge",
         "profession": "Route Scout",
         "gameplayGroups": [
@@ -707,8 +707,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-010",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-010",
+        "runtimeIndex": null,
+        "catalogKey": "character-010",
         "finalDisplayName": "Brann Oxweather",
         "profession": "Caravan Captain",
         "gameplayGroups": [
@@ -788,8 +788,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-011",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-011",
+        "runtimeIndex": null,
+        "catalogKey": "character-011",
         "finalDisplayName": "Nilo Gatecoin",
         "profession": "Toll Officer",
         "gameplayGroups": [
@@ -859,8 +859,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-012",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-012",
+        "runtimeIndex": null,
+        "catalogKey": "character-012",
         "finalDisplayName": "Arra Stonepassport",
         "profession": "Border Customs Guard",
         "gameplayGroups": [
@@ -940,8 +940,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-013",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-013",
+        "runtimeIndex": null,
+        "catalogKey": "character-013",
         "finalDisplayName": "Tovin Hearthmile",
         "profession": "Roadside Innkeeper",
         "gameplayGroups": [
@@ -1011,8 +1011,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-014",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-014",
+        "runtimeIndex": null,
+        "catalogKey": "character-014",
         "finalDisplayName": "Madu Long-Ear",
         "profession": "Pack Animal Trader",
         "gameplayGroups": [
@@ -1082,8 +1082,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-015",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-015",
+        "runtimeIndex": null,
+        "catalogKey": "character-015",
         "finalDisplayName": "Suren Reedwake",
         "profession": "Ferry Master",
         "gameplayGroups": [
@@ -1164,8 +1164,8 @@ export const characterIdentityCatalogCastBatch01 = {
     {
         "characterId": "character-016",
         "rosterGroup": "primary_cast",
-        "originalIndex": null,
-        "seedId": "character-016",
+        "runtimeIndex": null,
+        "catalogKey": "character-016",
         "finalDisplayName": "Vaska LowLantern",
         "profession": "Smuggler Guide",
         "gameplayGroups": [

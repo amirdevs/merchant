@@ -1,6 +1,6 @@
 # Playtest And Balance Report
 
-Generated: 2026-06-24T09:38:00.848Z
+Generated: 2026-06-24T10:29:53.422Z
 
 This report is a lightweight checkpoint after the item, stock, barter, economy, travel, quest, company, and UI-integration foundation work.
 
@@ -11,11 +11,11 @@ This report is a lightweight checkpoint after the item, stock, barter, economy, 
 - Stock REVIEW sections: 0
 - Item icon report present: yes
 - Item icon metrics rosterGroup: JSON
-- Missing runtime icon files: 0
+- Missing runtime icon files: 2206
 - Orphan item icon files: 0
-- Icon errors: 0
-- Icon warnings: 0
-- Icon issues total: 0
+- Icon errors: 2308
+- Icon warnings: 2206
+- Icon issues total: 6720
 
 ## Manual Smoke Checklist
 

@@ -57,12 +57,12 @@ const minorExpressions = [
 
 const sharedNegativePrompt = "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background";
 
-const legacyBatch04Identities = [
+const finalSupportingCastIdentities = [
   {
     characterId: "character-211",
     rosterGroup: "supporting_cast",
-    originalIndex: 162,
-    seedId: null,
+    runtimeIndex: 162,
+    catalogKey: null,
     finalDisplayName: "Duchess Nima Glassvale",
     profession: "Noble Investor",
     gameplayGroups: ["company", "guild_noble", "quest"],
@@ -89,8 +89,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-212",
     rosterGroup: "supporting_cast",
-    originalIndex: 163,
-    seedId: null,
+    runtimeIndex: 163,
+    catalogKey: null,
     finalDisplayName: "Master Threlk Mudhorn",
     profession: "Quarry Factor",
     gameplayGroups: ["trade", "company", "travel"],
@@ -117,8 +117,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-213",
     rosterGroup: "supporting_cast",
-    originalIndex: 164,
-    seedId: null,
+    runtimeIndex: 164,
+    catalogKey: null,
     finalDisplayName: "Sister Pavi Embermoth",
     profession: "Relic Hospice Keeper",
     gameplayGroups: ["quest", "trade", "market_service"],
@@ -145,8 +145,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-214",
     rosterGroup: "supporting_cast",
-    originalIndex: 165,
-    seedId: null,
+    runtimeIndex: 165,
+    catalogKey: null,
     finalDisplayName: "Veyra Knotsong",
     profession: "Witch Cartographer",
     gameplayGroups: ["travel", "quest", "collector_specialist"],
@@ -173,8 +173,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-215",
     rosterGroup: "supporting_cast",
-    originalIndex: 166,
-    seedId: null,
+    runtimeIndex: 166,
+    catalogKey: null,
     finalDisplayName: "Captain Salo Redwake",
     profession: "Retired Privateer Fence",
     gameplayGroups: ["risk_crime", "trade", "quest"],
@@ -201,8 +201,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-216",
     rosterGroup: "supporting_cast",
-    originalIndex: 167,
-    seedId: null,
+    runtimeIndex: 167,
+    catalogKey: null,
     finalDisplayName: "Miri Ninekeys",
     profession: "Vault Banker",
     gameplayGroups: ["company", "market_service", "guild_noble"],
@@ -229,8 +229,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-217",
     rosterGroup: "supporting_cast",
-    originalIndex: 168,
-    seedId: null,
+    runtimeIndex: 168,
+    catalogKey: null,
     finalDisplayName: "Jorun Sweetbarrel",
     profession: "Preserve Maker",
     gameplayGroups: ["trade", "quest"],
@@ -257,8 +257,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-218",
     rosterGroup: "supporting_cast",
-    originalIndex: 169,
-    seedId: null,
+    runtimeIndex: 169,
+    catalogKey: null,
     finalDisplayName: "Laleh Copperkettle",
     profession: "Coffee And Tea Brewer",
     gameplayGroups: ["trade", "market_service"],
@@ -285,8 +285,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-219",
     rosterGroup: "supporting_cast",
-    originalIndex: 170,
-    seedId: null,
+    runtimeIndex: 170,
+    catalogKey: null,
     finalDisplayName: "Fen Bristlecap",
     profession: "Mushroom Forager",
     gameplayGroups: ["trade", "travel"],
@@ -313,8 +313,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-220",
     rosterGroup: "supporting_cast",
-    originalIndex: 171,
-    seedId: null,
+    runtimeIndex: 171,
+    catalogKey: null,
     finalDisplayName: "Osha Moonneedle",
     profession: "Moonlit Tailor",
     gameplayGroups: ["trade", "guild_noble"],
@@ -341,8 +341,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-221",
     rosterGroup: "supporting_cast",
-    originalIndex: 172,
-    seedId: null,
+    runtimeIndex: 172,
+    catalogKey: null,
     finalDisplayName: "Darnik Stonehush",
     profession: "Mason",
     gameplayGroups: ["trade", "company"],
@@ -369,8 +369,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-222",
     rosterGroup: "supporting_cast",
-    originalIndex: 173,
-    seedId: null,
+    runtimeIndex: 173,
+    catalogKey: null,
     finalDisplayName: "Yul Saffronveil",
     profession: "Spice Veil Trader",
     gameplayGroups: ["trade", "collector_specialist"],
@@ -397,8 +397,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-223",
     rosterGroup: "supporting_cast",
-    originalIndex: 174,
-    seedId: null,
+    runtimeIndex: 174,
+    catalogKey: null,
     finalDisplayName: "Rook Threecrows",
     profession: "Bone And Rag Picker",
     gameplayGroups: ["risk_crime", "trade"],
@@ -425,8 +425,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-224",
     rosterGroup: "supporting_cast",
-    originalIndex: 175,
-    seedId: null,
+    runtimeIndex: 175,
+    catalogKey: null,
     finalDisplayName: "Tamsin Brightspoon",
     profession: "Street Cook",
     gameplayGroups: ["trade", "market_service"],
@@ -453,8 +453,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-225",
     rosterGroup: "supporting_cast",
-    originalIndex: 176,
-    seedId: null,
+    runtimeIndex: 176,
+    catalogKey: null,
     finalDisplayName: "Berek Snowhoop",
     profession: "Pack Harness Maker",
     gameplayGroups: ["travel", "trade", "company"],
@@ -481,8 +481,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-226",
     rosterGroup: "supporting_cast",
-    originalIndex: 177,
-    seedId: null,
+    runtimeIndex: 177,
+    catalogKey: null,
     finalDisplayName: "Cela Reedwhistle",
     profession: "Basket Weaver",
     gameplayGroups: ["trade", "market_service"],
@@ -509,8 +509,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-227",
     rosterGroup: "supporting_cast",
-    originalIndex: 178,
-    seedId: null,
+    runtimeIndex: 178,
+    catalogKey: null,
     finalDisplayName: "Idris Starbrass",
     profession: "Astrolabe Seller",
     gameplayGroups: ["travel", "collector_specialist", "quest"],
@@ -537,8 +537,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-228",
     rosterGroup: "supporting_cast",
-    originalIndex: 179,
-    seedId: null,
+    runtimeIndex: 179,
+    catalogKey: null,
     finalDisplayName: "Mora Pindrop",
     profession: "Needle Locksmith",
     gameplayGroups: ["market_service", "risk_crime", "trade"],
@@ -565,8 +565,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-229",
     rosterGroup: "supporting_cast",
-    originalIndex: 180,
-    seedId: null,
+    runtimeIndex: 180,
+    catalogKey: null,
     finalDisplayName: "Varo Ashpalm",
     profession: "Charcoal Burner",
     gameplayGroups: ["trade", "travel"],
@@ -593,8 +593,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-230",
     rosterGroup: "supporting_cast",
-    originalIndex: 181,
-    seedId: null,
+    runtimeIndex: 181,
+    catalogKey: null,
     finalDisplayName: "Keffi Bluefin",
     profession: "Canal Fishmonger",
     gameplayGroups: ["trade", "market_service"],
@@ -621,8 +621,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-231",
     rosterGroup: "supporting_cast",
-    originalIndex: 182,
-    seedId: null,
+    runtimeIndex: 182,
+    catalogKey: null,
     finalDisplayName: "Gunda Hearthcoil",
     profession: "Stove Tinker",
     gameplayGroups: ["trade", "company"],
@@ -649,8 +649,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-232",
     rosterGroup: "supporting_cast",
-    originalIndex: 183,
-    seedId: null,
+    runtimeIndex: 183,
+    catalogKey: null,
     finalDisplayName: "Alwin Silkfern",
     profession: "Flower And Dye Seller",
     gameplayGroups: ["trade", "guild_noble"],
@@ -677,8 +677,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-233",
     rosterGroup: "supporting_cast",
-    originalIndex: 184,
-    seedId: null,
+    runtimeIndex: 184,
+    catalogKey: null,
     finalDisplayName: "Safra Bellsand",
     profession: "Glassblower",
     gameplayGroups: ["trade", "collector_specialist"],
@@ -705,8 +705,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-234",
     rosterGroup: "supporting_cast",
-    originalIndex: 185,
-    seedId: null,
+    runtimeIndex: 185,
+    catalogKey: null,
     finalDisplayName: "Ottek Mossboot",
     profession: "Mud Healer",
     gameplayGroups: ["trade", "quest", "travel"],
@@ -733,8 +733,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-235",
     rosterGroup: "supporting_cast",
-    originalIndex: 186,
-    seedId: null,
+    runtimeIndex: 186,
+    catalogKey: null,
     finalDisplayName: "Piero Paintedmask",
     profession: "Festival Mask Carver",
     gameplayGroups: ["trade", "quest", "market_service"],
@@ -761,8 +761,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-236",
     rosterGroup: "supporting_cast",
-    originalIndex: 187,
-    seedId: null,
+    runtimeIndex: 187,
+    catalogKey: null,
     finalDisplayName: "Deya Thistlequill",
     profession: "Street Scribe",
     gameplayGroups: ["market_service", "quest", "trade"],
@@ -789,8 +789,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-237",
     rosterGroup: "supporting_cast",
-    originalIndex: 188,
-    seedId: null,
+    runtimeIndex: 188,
+    catalogKey: null,
     finalDisplayName: "Brannox Gulltoe",
     profession: "Dock Porter",
     gameplayGroups: ["company", "travel", "trade"],
@@ -817,8 +817,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-238",
     rosterGroup: "supporting_cast",
-    originalIndex: 189,
-    seedId: null,
+    runtimeIndex: 189,
+    catalogKey: null,
     finalDisplayName: "Noll Pebblecap",
     profession: "Market Sweeper",
     gameplayGroups: ["market_service"],
@@ -845,8 +845,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-239",
     rosterGroup: "supporting_cast",
-    originalIndex: 190,
-    seedId: null,
+    runtimeIndex: 190,
+    catalogKey: null,
     finalDisplayName: "Auntie Vessa Rainbowl",
     profession: "Well Watcher",
     gameplayGroups: ["market_service", "quest"],
@@ -873,8 +873,8 @@ const legacyBatch04Identities = [
   {
     characterId: "character-240",
     rosterGroup: "supporting_cast",
-    originalIndex: 191,
-    seedId: null,
+    runtimeIndex: 191,
+    catalogKey: null,
     finalDisplayName: "Qadir Mothlamp",
     profession: "Night Lamplighter",
     gameplayGroups: ["travel", "market_service"],
@@ -902,15 +902,15 @@ const legacyBatch04Identities = [
 
 export const characterIdentityCatalogCastBatch06 = {
   batchId: "identity-catalog-cast-batch-006",
-  status: "portrait_generation_blocked",
-  rosterScope: "Final 30 supporting cast slots: original indexes 162-191. This completes the 192 visible supporting cast target while preserving generated indexes as mechanical anchors.",
+  status: "profile_locked",
+  rosterScope: "Final 30 supporting cast slots: runtime indexes 162-191. This completes the 192 visible supporting cast target while preserving runtime anchors as mechanical anchors.",
   portraitGenerationAllowed: false,
   notes: [
-    "This final supporting cast batch rewrites public-facing identity only; original generated indexes stay stable until runtime migration is safe.",
+    "This final supporting cast batch defines current runtime-facing identity data while runtime anchors stay stable.",
     "The 30 identities produce 96 portrait prompts arranged as eight complete 3x4 sheets.",
-    "Portrait generation remains blocked until the final all-character manifest is reviewed for exact production order.",
+    "Portrait work remains locked until the final all-character manifest is reviewed for exact production order.",
   ],
-  identities: legacyBatch04Identities,
+  identities: finalSupportingCastIdentities,
 } as const satisfies CharacterIdentityCatalogBatch;
 
 export const characterIdentityCatalogCastBatch06PortraitImageCount = getIdentityBatchPortraitImageCount(

@@ -3,20 +3,20 @@ import { getIdentityBatchPortraitImageCount } from "./characterIdentityTypes";
 
 export const characterIdentityCatalogCastBatch05 = {
   "batchId": "identity-catalog-cast-batch-005",
-  "status": "portrait_generation_blocked",
-  "rosterScope": "Third 54 supporting cast slots: original indexes 108-161, expanding law, route, market-service, food, craft, dock, fantasy ancestry, and atmosphere identities while keeping generated indexes stable.",
+  "status": "profile_locked",
+  "rosterScope": "Third 54 supporting cast slots: runtime indexes 108-161, expanding law, route, market-service, food, craft, dock, fantasy ancestry, and atmosphere identities while keeping runtime anchors stable.",
   "portraitGenerationAllowed": false,
   "notes": [
-    "This batch rewrites public-facing identity only; generated originalIndex values stay as stable mechanical anchors.",
-    "Portrait generation stays blocked until every supporting cast batch and the final portrait manifest are complete.",
+    "This batch defines current runtime-facing identity data while keeping runtime anchors stable.",
+    "Portrait work stays locked until every supporting cast batch and the final portrait manifest are complete.",
     "The JSON prompt sheets under docs/assets/character-prompts are final-layout manifests for later production, not a signal to generate before the full character set is ready."
   ],
   "identities": [
     {
       "characterId": "character-157",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 108,
-      "seedId": null,
+      "runtimeIndex": 108,
+      "catalogKey": null,
       "finalDisplayName": "Lord Marrec Quillgate",
       "profession": "Customs Magistrate",
       "gameplayGroups": [
@@ -98,8 +98,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-158",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 109,
-      "seedId": null,
+      "runtimeIndex": 109,
+      "catalogKey": null,
       "finalDisplayName": "Tazmina Dragonmint",
       "profession": "Dragonfruit Apothecary",
       "gameplayGroups": [
@@ -182,8 +182,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-159",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 110,
-      "seedId": null,
+      "runtimeIndex": 110,
+      "catalogKey": null,
       "finalDisplayName": "Captain Orvo Bluebanner",
       "profession": "Caravan Banner Captain",
       "gameplayGroups": [
@@ -267,8 +267,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-160",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 111,
-      "seedId": null,
+      "runtimeIndex": 111,
+      "catalogKey": null,
       "finalDisplayName": "Madame Ivara Lacecoin",
       "profession": "Luxury Pawnbroker",
       "gameplayGroups": [
@@ -352,8 +352,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-161",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 112,
-      "seedId": null,
+      "runtimeIndex": 112,
+      "catalogKey": null,
       "finalDisplayName": "Pell Oatwhistle",
       "profession": "Grain Futures Clerk",
       "gameplayGroups": [
@@ -435,8 +435,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-162",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 113,
-      "seedId": null,
+      "runtimeIndex": 113,
+      "catalogKey": null,
       "finalDisplayName": "Seraphine Bellwater",
       "profession": "Canal Ferry Master",
       "gameplayGroups": [
@@ -520,8 +520,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-163",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 114,
-      "seedId": null,
+      "runtimeIndex": 114,
+      "catalogKey": null,
       "finalDisplayName": "Grinda Ashcake",
       "profession": "Festival Cook",
       "gameplayGroups": [
@@ -605,8 +605,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-164",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 115,
-      "seedId": null,
+      "runtimeIndex": 115,
+      "catalogKey": null,
       "finalDisplayName": "Master Noll Fenwick",
       "profession": "Guild Inspector",
       "gameplayGroups": [
@@ -688,8 +688,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-165",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 116,
-      "seedId": null,
+      "runtimeIndex": 116,
+      "catalogKey": null,
       "finalDisplayName": "Nyx Lanternglass",
       "profession": "Night Market Oracle",
       "gameplayGroups": [
@@ -773,8 +773,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-166",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 117,
-      "seedId": null,
+      "runtimeIndex": 117,
+      "catalogKey": null,
       "finalDisplayName": "Marsa Clovejaw",
       "profession": "Spice Dentist",
       "gameplayGroups": [
@@ -841,8 +841,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-167",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 118,
-      "seedId": null,
+      "runtimeIndex": 118,
+      "catalogKey": null,
       "finalDisplayName": "Boro Thimbleback",
       "profession": "Button Seller",
       "gameplayGroups": [
@@ -909,8 +909,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-168",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 119,
-      "seedId": null,
+      "runtimeIndex": 119,
+      "catalogKey": null,
       "finalDisplayName": "Elka Rainbarrel",
       "profession": "Barrel Cooper",
       "gameplayGroups": [
@@ -977,8 +977,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-169",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 120,
-      "seedId": null,
+      "runtimeIndex": 120,
+      "catalogKey": null,
       "finalDisplayName": "Jorin Plumwax",
       "profession": "Seal Maker",
       "gameplayGroups": [
@@ -1047,8 +1047,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-170",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 121,
-      "seedId": null,
+      "runtimeIndex": 121,
+      "catalogKey": null,
       "finalDisplayName": "Vess Nimblehook",
       "profession": "Fish Hook Peddler",
       "gameplayGroups": [
@@ -1115,8 +1115,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-171",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 122,
-      "seedId": null,
+      "runtimeIndex": 122,
+      "catalogKey": null,
       "finalDisplayName": "Orelia Sunflour",
       "profession": "Baker",
       "gameplayGroups": [
@@ -1183,8 +1183,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-172",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 123,
-      "seedId": null,
+      "runtimeIndex": 123,
+      "catalogKey": null,
       "finalDisplayName": "Pax Underbridge",
       "profession": "Mushroom Forager",
       "gameplayGroups": [
@@ -1251,8 +1251,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-173",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 124,
-      "seedId": null,
+      "runtimeIndex": 124,
+      "catalogKey": null,
       "finalDisplayName": "Tilda Brasswool",
       "profession": "Blanket Weaver",
       "gameplayGroups": [
@@ -1321,8 +1321,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-174",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 125,
-      "seedId": null,
+      "runtimeIndex": 125,
+      "catalogKey": null,
       "finalDisplayName": "Naveen Bluepoppy",
       "profession": "Dye Merchant",
       "gameplayGroups": [
@@ -1389,8 +1389,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-175",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 126,
-      "seedId": null,
+      "runtimeIndex": 126,
+      "catalogKey": null,
       "finalDisplayName": "Rikka Saltneedle",
       "profession": "Sail Mender",
       "gameplayGroups": [
@@ -1457,8 +1457,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-176",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 127,
-      "seedId": null,
+      "runtimeIndex": 127,
+      "catalogKey": null,
       "finalDisplayName": "Cori Finchcup",
       "profession": "Tea Seller",
       "gameplayGroups": [
@@ -1525,8 +1525,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-177",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 128,
-      "seedId": null,
+      "runtimeIndex": 128,
+      "catalogKey": null,
       "finalDisplayName": "Mavro Tinlaugh",
       "profession": "Toy Tinker",
       "gameplayGroups": [
@@ -1595,8 +1595,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-178",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 129,
-      "seedId": null,
+      "runtimeIndex": 129,
+      "catalogKey": null,
       "finalDisplayName": "Sela Moonpepper",
       "profession": "Pickle Witch",
       "gameplayGroups": [
@@ -1663,8 +1663,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-179",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 130,
-      "seedId": null,
+      "runtimeIndex": 130,
+      "catalogKey": null,
       "finalDisplayName": "Brann Oakfist",
       "profession": "Timber Measurer",
       "gameplayGroups": [
@@ -1731,8 +1731,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-180",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 131,
-      "seedId": null,
+      "runtimeIndex": 131,
+      "catalogKey": null,
       "finalDisplayName": "Yumi Goldscale",
       "profession": "Pearl Buyer",
       "gameplayGroups": [
@@ -1799,8 +1799,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-181",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 132,
-      "seedId": null,
+      "runtimeIndex": 132,
+      "catalogKey": null,
       "finalDisplayName": "Hasker Redroot",
       "profession": "Beet Farmer",
       "gameplayGroups": [
@@ -1869,8 +1869,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-182",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 133,
-      "seedId": null,
+      "runtimeIndex": 133,
+      "catalogKey": null,
       "finalDisplayName": "Ilyen Starquill",
       "profession": "Letter Writer",
       "gameplayGroups": [
@@ -1937,8 +1937,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-183",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 134,
-      "seedId": null,
+      "runtimeIndex": 134,
+      "catalogKey": null,
       "finalDisplayName": "Nora Oxbell",
       "profession": "Pack Bell Seller",
       "gameplayGroups": [
@@ -2005,8 +2005,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-184",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 135,
-      "seedId": null,
+      "runtimeIndex": 135,
+      "catalogKey": null,
       "finalDisplayName": "Kef Mosspocket",
       "profession": "Seed Trader",
       "gameplayGroups": [
@@ -2073,8 +2073,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-185",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 136,
-      "seedId": null,
+      "runtimeIndex": 136,
+      "catalogKey": null,
       "finalDisplayName": "Daro Blackfig",
       "profession": "Fruit Cart Owner",
       "gameplayGroups": [
@@ -2143,8 +2143,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-186",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 137,
-      "seedId": null,
+      "runtimeIndex": 137,
+      "catalogKey": null,
       "finalDisplayName": "Pippa Quicksole",
       "profession": "Shoe Cobbler",
       "gameplayGroups": [
@@ -2211,8 +2211,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-187",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 138,
-      "seedId": null,
+      "runtimeIndex": 138,
+      "catalogKey": null,
       "finalDisplayName": "Galen Brightmug",
       "profession": "Cup Potter",
       "gameplayGroups": [
@@ -2279,8 +2279,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-188",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 139,
-      "seedId": null,
+      "runtimeIndex": 139,
+      "catalogKey": null,
       "finalDisplayName": "Suri Amberpin",
       "profession": "Brooch Seller",
       "gameplayGroups": [
@@ -2347,8 +2347,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-189",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 140,
-      "seedId": null,
+      "runtimeIndex": 140,
+      "catalogKey": null,
       "finalDisplayName": "Old Moth Marn",
       "profession": "Candle Wick Spinner",
       "gameplayGroups": [
@@ -2417,8 +2417,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-190",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 141,
-      "seedId": null,
+      "runtimeIndex": 141,
+      "catalogKey": null,
       "finalDisplayName": "Viko Thorncart",
       "profession": "Cactus Fruit Seller",
       "gameplayGroups": [
@@ -2485,8 +2485,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-191",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 142,
-      "seedId": null,
+      "runtimeIndex": 142,
+      "catalogKey": null,
       "finalDisplayName": "Ansel Copperdrip",
       "profession": "Oil Presser",
       "gameplayGroups": [
@@ -2553,8 +2553,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-192",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 143,
-      "seedId": null,
+      "runtimeIndex": 143,
+      "catalogKey": null,
       "finalDisplayName": "Mina Rosehook",
       "profession": "Ribbon Hawker",
       "gameplayGroups": [
@@ -2621,8 +2621,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-193",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 144,
-      "seedId": null,
+      "runtimeIndex": 144,
+      "catalogKey": null,
       "finalDisplayName": "Rook Ashbutton",
       "profession": "Errand Boy",
       "gameplayGroups": [
@@ -2678,8 +2678,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-194",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 145,
-      "seedId": null,
+      "runtimeIndex": 145,
+      "catalogKey": null,
       "finalDisplayName": "Nella Puddleboot",
       "profession": "Rainwater Seller",
       "gameplayGroups": [
@@ -2735,8 +2735,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-195",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 146,
-      "seedId": null,
+      "runtimeIndex": 146,
+      "catalogKey": null,
       "finalDisplayName": "Fenn Silverrat",
       "profession": "Alley Rumor Kid",
       "gameplayGroups": [
@@ -2792,8 +2792,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-196",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 147,
-      "seedId": null,
+      "runtimeIndex": 147,
+      "catalogKey": null,
       "finalDisplayName": "Oma Lentilsmile",
       "profession": "Soup Auntie",
       "gameplayGroups": [
@@ -2849,8 +2849,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-197",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 148,
-      "seedId": null,
+      "runtimeIndex": 148,
+      "catalogKey": null,
       "finalDisplayName": "Bix Candletoe",
       "profession": "Temple Sweeper",
       "gameplayGroups": [
@@ -2906,8 +2906,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-198",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 149,
-      "seedId": null,
+      "runtimeIndex": 149,
+      "catalogKey": null,
       "finalDisplayName": "Hanna Milkbell",
       "profession": "Stable Helper",
       "gameplayGroups": [
@@ -2963,8 +2963,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-199",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 150,
-      "seedId": null,
+      "runtimeIndex": 150,
+      "catalogKey": null,
       "finalDisplayName": "Torro Greycap",
       "profession": "Old Porter",
       "gameplayGroups": [
@@ -3020,8 +3020,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-200",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 151,
-      "seedId": null,
+      "runtimeIndex": 151,
+      "catalogKey": null,
       "finalDisplayName": "Lulu Finchseed",
       "profession": "Bird Feed Girl",
       "gameplayGroups": [
@@ -3077,8 +3077,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-201",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 152,
-      "seedId": null,
+      "runtimeIndex": 152,
+      "catalogKey": null,
       "finalDisplayName": "Cricket Marigold",
       "profession": "Flower Runner",
       "gameplayGroups": [
@@ -3134,8 +3134,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-202",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 153,
-      "seedId": null,
+      "runtimeIndex": 153,
+      "catalogKey": null,
       "finalDisplayName": "Dumple Grin",
       "profession": "Pie Shouter",
       "gameplayGroups": [
@@ -3191,8 +3191,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-203",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 154,
-      "seedId": null,
+      "runtimeIndex": 154,
+      "catalogKey": null,
       "finalDisplayName": "Sable Thread",
       "profession": "Quiet Seamstress",
       "gameplayGroups": [
@@ -3248,8 +3248,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-204",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 155,
-      "seedId": null,
+      "runtimeIndex": 155,
+      "catalogKey": null,
       "finalDisplayName": "Porrin Mudthumb",
       "profession": "Pot Washer",
       "gameplayGroups": [
@@ -3305,8 +3305,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-205",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 156,
-      "seedId": null,
+      "runtimeIndex": 156,
+      "catalogKey": null,
       "finalDisplayName": "Vela Starling",
       "profession": "Window Singer",
       "gameplayGroups": [
@@ -3362,8 +3362,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-206",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 157,
-      "seedId": null,
+      "runtimeIndex": 157,
+      "catalogKey": null,
       "finalDisplayName": "Hobb Nettle",
       "profession": "Goat Minder",
       "gameplayGroups": [
@@ -3419,8 +3419,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-207",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 158,
-      "seedId": null,
+      "runtimeIndex": 158,
+      "catalogKey": null,
       "finalDisplayName": "Miss Bristle",
       "profession": "Brush Seller",
       "gameplayGroups": [
@@ -3476,8 +3476,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-208",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 159,
-      "seedId": null,
+      "runtimeIndex": 159,
+      "catalogKey": null,
       "finalDisplayName": "Oti Pebblepalm",
       "profession": "Stone Counter",
       "gameplayGroups": [
@@ -3533,8 +3533,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-209",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 160,
-      "seedId": null,
+      "runtimeIndex": 160,
+      "catalogKey": null,
       "finalDisplayName": "Glim Tallow",
       "profession": "Lamp Lighter",
       "gameplayGroups": [
@@ -3590,8 +3590,8 @@ export const characterIdentityCatalogCastBatch05 = {
     {
       "characterId": "character-210",
       "rosterGroup": "supporting_cast",
-      "originalIndex": 161,
-      "seedId": null,
+      "runtimeIndex": 161,
+      "catalogKey": null,
       "finalDisplayName": "Mera Softstep",
       "profession": "Quiet Courier",
       "gameplayGroups": [
@@ -3647,6 +3647,6 @@ export const characterIdentityCatalogCastBatch05 = {
   ]
 } as const satisfies CharacterIdentityCatalogBatch;
 
-export const legacyIdentityCatalogBatch03PortraitImageCount = getIdentityBatchPortraitImageCount(
+export const characterIdentityCatalogCastBatch05PortraitImageCount = getIdentityBatchPortraitImageCount(
   characterIdentityCatalogCastBatch05,
 );

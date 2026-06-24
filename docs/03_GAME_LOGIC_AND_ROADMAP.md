@@ -4,7 +4,7 @@ This is the only roadmap doc. Keep current gameplay status, character/portrait g
 
 ## Current foundation status
 
-- Loads generated reference data from `src/data/generated`, with current character-profile systems layered over archived seed content.
+- Loads core game data from `src/data/generated`, with current character-profile systems layered over current runtime identity data.
 - Supports local save/load/import/export with the current save envelope.
 - Inventory, barter, stock, economy, travel, company, law, rivals, contracts, and transitional quest helpers exist as foundation systems.
 - Character portrait runtime integration is complete enough for gameplay: final cropped portraits live under `public/assets/portraits/characters/`, have a manifest, and pass the portrait audit gate.
@@ -16,15 +16,15 @@ This is the only roadmap doc. Keep current gameplay status, character/portrait g
 
 ## Confirmed project direction
 
-The project should not keep archived source public-facing content as the creative target.
+The project should not keep inactive runtime-facing content as the creative target.
 
 Confirmed replacement areas:
 
-1. **Characters** - use the current production names, portraits, stories, role tags, and dialogue flavor while keeping mechanical anchors stable until deeper runtime migration is safe.
-2. **Quests** - replace old marketplace quests with original rich merchant stories, meaningful choices, and campaign goals.
+1. **Characters** - use the current production names, portraits, stories, role tags, and dialogue flavor while keeping mechanical anchors stable during runtime integration work.
+2. **Quests** - replace current quest placeholders with original rich merchant stories, meaningful choices, and campaign goals.
 3. **Playable loop** - prioritize a real playable vertical slice before producing more loose assets.
 4. **GameState runtime** - playable features should persist through the main save/export model instead of private local-only prototype slots.
-5. **Expansion** - expand the actual game after cleanup, not the old scaffolding.
+5. **Expansion** - expand the actual game after cleanup, not development-only support files.
 
 ## Character runtime integration status
 
@@ -172,7 +172,7 @@ GameState receives a `playableLoop` field when the Journal loop is opened.
 Loop actions commit to the live GameState object.
 Loop actions autosave the primary ledger through the normal save system.
 The serialized save/export payload includes loop town, day, copper, cargo, profit, rich quest chain, company state, consequences, town reputation, NPC trust, and loop ledger.
-The old standalone local-storage loop should now be treated as a cleanup candidate, not a long-term runtime path.
+The retired standalone local-storage loop should now be treated as a cleanup candidate, not a long-term runtime path.
 ```
 
 ### Phase 7 - Economy, World, and Content Expansion Pack
@@ -240,7 +240,7 @@ Before adding more content, clean the project.
 Goal:
 
 ```text
-remove stale prototype files, old public visual assets, obsolete fallbacks, duplicate runtime paths, unused UI images, and retired handoff/prod files so the next expansion phase starts from a lean codebase.
+remove stale prototype files, inactive visual assets, obsolete fallbacks, duplicate runtime paths, unused UI images, and retired handoff/prod files so the next expansion phase starts from a lean codebase.
 ```
 
 The root work order for Codex is:
@@ -255,10 +255,10 @@ Cleanup priorities:
 
 ```text
 1. Remove unnecessary runtime fallbacks now that GameState runtime persistence exists.
-2. Stop exposing old marketplace quests as current gameplay.
-3. Remove old character portrait/stall runtime paths and public assets after the portrait gate passes.
+2. Stop exposing current quest placeholders as current gameplay.
+3. Remove retired character portrait/stall runtime paths and public assets after the portrait gate passes.
 4. Delete generated character sheet production images if final cropped portraits are locked.
-5. Delete unused public UI images after a reference-based audit.
+5. Delete unused public UI images after an active-runtime audit.
 6. Remove obsolete one-time scripts and package commands.
 7. Remove duplicate/debug-only UI panels or gate them behind development-only paths.
 8. Keep all current gates green: verify:current-state and build must pass.

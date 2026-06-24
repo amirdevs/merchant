@@ -35,7 +35,7 @@ describe("character portrait manifest", () => {
     expect(runtimePortraitAsset("character-001-neutral.png")).toBe("/assets/portraits/characters/character-001-neutral.png");
   });
 
-  it("links generated indexes to character profiles and portrait paths", () => {
+  it("links runtime indexes to character profiles and portrait paths", () => {
     const generatedReferenceCharacter = {
       index: 0,
       name: "Guard",
