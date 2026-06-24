@@ -4,9 +4,9 @@ This is the only roadmap doc. Keep current gameplay status, character/portrait g
 
 ## Current foundation status
 
-- Loads core game data from `src/data/generated`, with current character-profile systems layered over current runtime identity data.
+- Loads core runtime data, with current character-profile systems layered over current runtime identity data.
 - Supports local save/load/import/export with the current save envelope.
-- Inventory, barter, stock, economy, travel, company, law, rivals, contracts, and transitional quest helpers exist as foundation systems.
+- Inventory, barter, stock, economy, travel, company, law, rivals, contracts, and quest foundation helpers exist as foundation systems.
 - Character portrait runtime integration is complete enough for gameplay: final cropped portraits live under `public/assets/portraits/characters/`, have a manifest, and pass the portrait audit gate.
 - Rich Quest System Foundation exists as source data, state helpers, effect helpers, selectors, journal view models, and focused tests.
 - The first playable merchant loop now exists as a small story-rich vertical slice: buy, travel, sell, progress rich quests, see consequences, and register the first company.
@@ -21,7 +21,7 @@ The project should not keep inactive runtime-facing content as the creative targ
 Confirmed replacement areas:
 
 1. **Characters** - use the current production names, portraits, stories, role tags, and dialogue flavor while keeping mechanical anchors stable during runtime integration work.
-2. **Quests** - replace current quest placeholders with original rich merchant stories, meaningful choices, and campaign goals.
+2. **Quests** - expand the current quest foundation into original rich merchant stories, meaningful choices, and campaign goals.
 3. **Playable loop** - prioritize a real playable vertical slice before producing more loose assets.
 4. **GameState runtime** - playable features should persist through the main save/export model instead of private local-only prototype slots.
 5. **Expansion** - expand the actual game after cleanup, not development-only support files.
@@ -54,11 +54,11 @@ src/data/characters/characterPortraitManifest.test.ts
 scripts/audit-character-portraits.cjs
 ```
 
-Generated character sheet PNGs under `docs/assets/character-sheets/` are production intermediates, not runtime assets. After final portraits are locked, they are cleanup candidates unless the user explicitly wants to keep them in the repo.
+Character sheet production files under `docs/assets/character-sheets/` are production intermediates, not runtime assets. After final portraits are locked, they can stay as optional production references unless the user wants a slimmer project structure.
 
 ## Quest overhaul direction
 
-The current placeholder marketplace quests are not the final target. They should be treated as temporary scaffolding until replaced.
+The current marketplace quest foundation is not the final target. It should be treated as a starting content layer until richer stories replace it.
 
 The new quest direction is defined in:
 
@@ -172,7 +172,7 @@ GameState receives a `playableLoop` field when the Journal loop is opened.
 Loop actions commit to the live GameState object.
 Loop actions autosave the primary ledger through the normal save system.
 The serialized save/export payload includes loop town, day, copper, cargo, profit, rich quest chain, company state, consequences, town reputation, NPC trust, and loop ledger.
-The retired standalone local-storage loop should now be treated as a cleanup candidate, not a long-term runtime path.
+The standalone local-storage loop should now be treated as an inactive support path, not a long-term runtime path.
 ```
 
 ### Phase 7 - Economy, World, and Content Expansion Pack
@@ -243,19 +243,19 @@ Goal:
 remove stale prototype files, inactive visual assets, obsolete fallbacks, duplicate runtime paths, unused UI images, and retired handoff/prod files so the next expansion phase starts from a lean codebase.
 ```
 
-The root work order for Codex is:
+The current development-only cleanup note for Codex is:
 
 ```text
-PROJECT_CLEANUP_REMOVAL_PLAN.md
+development-only cleanup note in the project root
 ```
 
-That file is temporary and should be deleted or moved to `docs/logs/` after the cleanup pass is completed.
+That file should be deleted or moved to `docs/logs/` after the cleanup pass is completed.
 
 Cleanup priorities:
 
 ```text
 1. Remove unnecessary runtime fallbacks now that GameState runtime persistence exists.
-2. Stop exposing current quest placeholders as current gameplay.
+2. Stop exposing the current quest foundation as if it were final gameplay.
 3. Remove retired character portrait/stall runtime paths and public assets after the portrait gate passes.
 4. Delete generated character sheet production images if final cropped portraits are locked.
 5. Delete unused public UI images after an active-runtime audit.
@@ -323,5 +323,5 @@ first ending path
 
 ```text
 Clean first.
-Then expand the actual game, not the old scaffold.
+Then expand the actual game, not inactive support structure.
 ```

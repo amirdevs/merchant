@@ -31,7 +31,7 @@ export interface CharacterIdentityCatalogProgress {
   readonly batchId: string;
   readonly characterCount: number;
   readonly plannedPortraitImageCount: number;
-  readonly portraitGenerationAllowed: boolean;
+  readonly portraitManifestLocked: boolean;
 }
 
 export interface FinalCharacterRosterPlan {

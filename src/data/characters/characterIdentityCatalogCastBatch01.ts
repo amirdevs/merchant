@@ -8,11 +8,12 @@ export const characterIdentityCatalogCastBatch01 = {
   batchId: "identity-catalog-cast-batch-001",
   status: "profile_locked",
   rosterScope: "First 16 primary cast characters: trade, travel, market service, collector, law, customs, and risk contacts.",
-  portraitGenerationAllowed: false,
+  portraitManifestLocked: true,
   notes: [
     "This is a catalog profile batch, not the final portrait manifest.",
-    "Portrait work stays locked until every final character identity and image manifest is reviewed.",
-    "The matching prompt-plan JSON under docs/assets/character-prompts supports catalog review only and does not mark the full portrait set ready for generation.",
+    "Character profiles are locked against accidental manifest drift.",
+    "Character prompt files support portrait manifest validation.",
+    "The runtime portrait gate controls asset readiness.",
   ],
   identities: [
     {
@@ -1248,5 +1249,5 @@ export const characterIdentityCatalogCastBatch01Summary = {
   batchId: characterIdentityCatalogCastBatch01.batchId,
   characterCount: characterIdentityCatalogCastBatch01.identities.length,
   plannedPortraitImageCount: getIdentityBatchPortraitImageCount(characterIdentityCatalogCastBatch01),
-  portraitGenerationAllowed: characterIdentityCatalogCastBatch01.portraitGenerationAllowed,
+  portraitManifestLocked: characterIdentityCatalogCastBatch01.portraitManifestLocked,
 } as const;

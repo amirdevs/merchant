@@ -48,7 +48,7 @@ export interface CharacterIdentityCatalogBatch {
   readonly batchId: string;
   readonly status: CharacterIdentityBatchStatus;
   readonly rosterScope: string;
-  readonly portraitGenerationAllowed: false;
+  readonly portraitManifestLocked: true;
   readonly notes: readonly string[];
   readonly identities: readonly FinalCharacterIdentityProfile[];
 }

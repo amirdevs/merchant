@@ -8,11 +8,12 @@ export const characterIdentityCatalogCastBatch02 = {
   batchId: "identity-catalog-cast-batch-002-mega",
   status: "profile_locked",
   rosterScope: "Remaining 32 primary cast characters: company, warehouse, contracts, guild, risk, crime, collectors, and specialist market services.",
-  portraitGenerationAllowed: false,
+  portraitManifestLocked: true,
   notes: [
     "This batch completes the primary cast catalog from character-017 through character-048.",
-    "This batch remains profile-locked: no full portrait sheet should be generated from it until the final portrait manifest and review gate are approved.",
-    "The prompt-plan JSON under docs/assets/character-prompts supports catalog review only and does not mark the full portrait set ready for generation.",
+    "Character profiles are locked against accidental manifest drift.",
+    "Character prompt files support portrait manifest validation.",
+    "The runtime portrait gate controls asset readiness.",
   ],
   identities: [
     {

@@ -904,11 +904,13 @@ export const characterIdentityCatalogCastBatch06 = {
   batchId: "identity-catalog-cast-batch-006",
   status: "profile_locked",
   rosterScope: "Final 30 supporting cast slots: runtime indexes 162-191. This completes the 192 visible supporting cast target while preserving runtime anchors as mechanical anchors.",
-  portraitGenerationAllowed: false,
+  portraitManifestLocked: true,
   notes: [
     "This final supporting cast batch defines current runtime-facing identity data while runtime anchors stay stable.",
     "The 30 identities produce 96 portrait prompts arranged as eight complete 3x4 sheets.",
-    "Portrait work remains locked until the final all-character manifest is reviewed for exact production order.",
+    "Character profiles are locked against accidental manifest drift.",
+    "Character prompt files support portrait manifest validation.",
+    "The runtime portrait gate controls asset readiness.",
   ],
   identities: finalSupportingCastIdentities,
 } as const satisfies CharacterIdentityCatalogBatch;

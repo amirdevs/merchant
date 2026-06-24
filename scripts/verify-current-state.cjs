@@ -4,6 +4,7 @@ const { spawnSync } = require("child_process");
 // retired generated visual references. Strict inactive-asset gates remain
 // available through their dedicated scripts/flags.
 const checks = [
+  ["pnpm", ["audit:naming"]],
   ["pnpm", ["audit:data"]],
   ["pnpm", ["audit:assets"]],
   ["pnpm", ["audit:character-portraits"]],

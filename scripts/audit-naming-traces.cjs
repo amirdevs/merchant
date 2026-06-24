@@ -42,8 +42,16 @@ const forbidden = [
   'old character',
   'old standalone',
   'old scaffolding',
+  'temporary scaffolding',
+  'transitional quest',
+  'retired standalone',
+  'old scaffold',
   'test-batch seed',
   'portrait_generation_blocked',
+  'PROJECT_CLEANUP_REMOVAL_PLAN.md',
+  'portraitGenerationAllowed',
+  'prompt-plan JSON',
+  'full portrait set ready for generation',
 ];
 
 const allowedFiles = new Set(['scripts/audit-naming-traces.cjs']);

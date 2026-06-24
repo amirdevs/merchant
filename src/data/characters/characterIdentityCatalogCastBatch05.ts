@@ -5,11 +5,12 @@ export const characterIdentityCatalogCastBatch05 = {
   "batchId": "identity-catalog-cast-batch-005",
   "status": "profile_locked",
   "rosterScope": "Third 54 supporting cast slots: runtime indexes 108-161, expanding law, route, market-service, food, craft, dock, fantasy ancestry, and atmosphere identities while keeping runtime anchors stable.",
-  "portraitGenerationAllowed": false,
+  "portraitManifestLocked": true,
   "notes": [
     "This batch defines current runtime-facing identity data while keeping runtime anchors stable.",
-    "Portrait work stays locked until every supporting cast batch and the final portrait manifest are complete.",
-    "The JSON prompt sheets under docs/assets/character-prompts are final-layout manifests for later production, not a signal to generate before the full character set is ready."
+    "Character profiles are locked against accidental manifest drift.",
+    "Character prompt files support portrait manifest validation.",
+    "The runtime portrait gate controls asset readiness."
   ],
   "identities": [
     {
