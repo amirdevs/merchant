@@ -1,30 +1,30 @@
 # 03 - Game Logic And Roadmap
 
-This is the only roadmap doc. Keep current gameplay status, character/portrait gates, quest-overhaul gates, and vertical-slice milestones here instead of adding per-step completion docs.
+This is the only roadmap doc. Keep gameplay status, character/portrait gates, quest-system gates, vertical-slice milestones, cleanup status, and expansion milestones here instead of adding per-step completion docs.
 
 ## Current foundation status
 
-- Loads core runtime data, with current character-profile systems layered over current runtime identity data.
-- Supports local save/load/import/export with the current save envelope.
+- The app loads core runtime data and current character-profile systems.
+- Save, load, import, and export use the current save envelope.
 - Inventory, barter, stock, economy, travel, company, law, rivals, contracts, and quest foundation helpers exist as foundation systems.
-- Character portrait runtime integration is complete enough for gameplay: final cropped portraits live under `public/assets/portraits/characters/`, have a manifest, and pass the portrait audit gate.
-- Rich Quest System Foundation exists as source data, state helpers, effect helpers, selectors, journal view models, and focused tests.
-- The first playable merchant loop now exists as a small story-rich vertical slice: buy, travel, sell, progress rich quests, see consequences, and register the first company.
-- The playable loop is now persisted through the project-wide `GameState.playableLoop` runtime field instead of being only a local-only flow.
-- Economy/world expansion helpers exist for stock pressure, dynamic prices, route risk events, tuned regional items, company upgrade candidates, expansion towns, and next quest seeds.
+- Runtime character portraits live under `public/assets/portraits/characters/`, have a manifest, and pass the portrait audit gate.
+- Rich quest foundations exist as authored quest data, state helpers, effect helpers, selectors, journal view models, and focused tests.
+- The first merchant loop exists as a story-rich vertical slice: buy, travel, sell, progress rich quests, see consequences, and register the first company.
+- The playable loop persists through `GameState.playableLoop`.
+- Economy and world helpers exist for stock pressure, dynamic prices, route risk events, tuned regional items, company upgrade candidates, expansion towns, and upcoming quest seeds.
 - Vertical-slice polish helpers exist for alpha-readiness scoring, player-flow checklist, save/load readiness, consequence visibility, and release/playtest guidance.
 
 ## Confirmed project direction
 
-The project should not keep inactive runtime-facing content as the creative target.
+The project should prioritize playable, original merchant-game systems over loose asset production.
 
-Confirmed replacement areas:
+Confirmed areas:
 
-1. **Characters** - use the current production names, portraits, stories, role tags, and dialogue flavor while keeping mechanical anchors stable during runtime integration work.
-2. **Quests** - expand the current quest foundation into original rich merchant stories, meaningful choices, and campaign goals.
+1. **Characters** - use current production names, portraits, stories, role tags, and dialogue flavor while keeping mechanical anchors stable during runtime integration work.
+2. **Quests** - expand the quest foundation into rich merchant stories, meaningful choices, and campaign goals.
 3. **Playable loop** - prioritize a real playable vertical slice before producing more loose assets.
-4. **GameState runtime** - playable features should persist through the main save/export model instead of private local-only slots.
-5. **Expansion** - expand the actual game after cleanup, not development-only support files.
+4. **GameState runtime** - playable features should persist through the main save/export model.
+5. **Expansion** - expand the actual game after the structure pass, not support-only files.
 
 ## Character runtime integration status
 
@@ -54,13 +54,13 @@ src/data/characters/characterPortraitManifest.test.ts
 scripts/audit-character-portraits.cjs
 ```
 
-Character sheet production files under `docs/assets/character-sheets/` are supporting art assets, not runtime assets. After final portraits are locked, they can stay as optional production references unless the user wants a slimmer project structure.
+Character sheet files under `docs/assets/character-sheets/` are supporting art assets, not runtime assets. After final portraits are locked, they can stay as optional production files unless the user wants a slimmer repository.
 
-## Quest overhaul direction
+## Quest direction
 
 The current marketplace quest foundation is a starting content layer that should keep expanding into richer stories over time.
 
-The new quest direction is defined in:
+The quest direction is defined in:
 
 ```text
 docs/09_RICH_QUEST_SYSTEM_BIBLE.md
@@ -79,7 +79,7 @@ Confirmed campaign premise:
 The Ledger That Bought a City
 ```
 
-The player begins with an old merchant ledger containing debts, favors, forged contracts, hidden route rights, and guild crimes. Through trade, reputation, routes, company growth, and alliances, the player decides what kind of merchant world they will create.
+The player begins with a merchant ledger containing debts, favors, forged contracts, hidden route rights, and guild crimes. Through trade, reputation, routes, company growth, and alliances, the player decides what kind of merchant world they will create.
 
 ## Implemented large phases
 
@@ -92,7 +92,7 @@ character portrait manifest
 runtime portrait selectors
 portrait audit gate
 first UI surfaces using production character identities
-AGENTS/docs order fix for the new quest bible
+AGENTS/docs order fix for the quest bible
 ```
 
 ### Phase 2 - Rich Quest System Foundation + Content Pack
@@ -172,7 +172,7 @@ GameState receives a `playableLoop` field when the Journal loop is opened.
 Loop actions commit to the live GameState object.
 Loop actions autosave the primary ledger through the normal save system.
 The serialized save/export payload includes loop town, day, copper, cargo, profit, rich quest chain, company state, consequences, town reputation, NPC trust, and loop ledger.
-The standalone local-storage loop is a secondary runtime path, not the main long-term runtime path.
+Development-only manual test paths can exist only when they do not compete with the main GameState runtime.
 ```
 
 ### Phase 7 - Economy, World, and Content Expansion Pack
@@ -196,7 +196,7 @@ dynamic prices affected by scarcity, public trust, shadow heat, and company regi
 route risk events affected by saved consequence state
 company upgrade candidates after registration
 three expansion-town identities: Appleford Orchard, Glassmere Court, Wolfhook Bay
-8 next playable quest seeds from the quest bible
+8 upcoming playable quest seeds from the quest bible
 world-readiness score for deciding when the slice is ready to expand
 Journal UI panel for economy/world expansion visibility
 ```
@@ -235,36 +235,30 @@ manual vertical-slice playtest report
 
 ## Current next milestone - Project Structure Pass
 
-Before adding more content, clean the project.
+Before adding more content, clean the project structure.
 
 Goal:
 
 ```text
-remove outdated temporary files, optional visual assets, extra runtime paths, unused UI images, and old delivery notes so the next expansion phase starts from a lean codebase.
+organize files by domain, remove unused support files, trim optional visual assets, reduce duplicate runtime paths, and prepare a lean structure for expansion.
 ```
 
-The current development-only cleanup note for Codex is:
+Structure priorities:
 
 ```text
-development-only cleanup note in the project root
+1. Move gameplay logic into clear domain folders.
+2. Separate content data, runtime logic, feature UI, tests, scripts, and docs.
+3. Remove unnecessary runtime fallbacks now that GameState runtime persistence exists.
+4. Keep quest foundation helpers as real system files, not loose experiments.
+5. Remove inactive character asset paths and unused public assets after the portrait gate passes.
+6. Delete character sheet art files if final cropped portraits are locked and the user wants the slimmer repository.
+7. Delete unused public UI images after an active-runtime audit.
+8. Remove inactive maintenance scripts and package commands.
+9. Remove or dev-gate extra debug panels.
+10. Keep all current gates green: verify:current-state and build must pass.
 ```
 
-That file should be deleted or moved to `docs/logs/` after the cleanup pass is completed.
-
-Cleanup priorities:
-
-```text
-1. Remove unnecessary runtime fallbacks now that GameState runtime persistence exists.
-2. Stop exposing the current quest foundation as if it were final gameplay.
-3. Remove older character portrait/stall runtime paths and public assets after the portrait gate passes.
-4. Delete character sheet production images if final cropped portraits are locked.
-5. Delete unused public UI images after an active-runtime audit.
-6. Remove obsolete one-time scripts and package commands.
-7. Remove extra debug-only UI panels or gate them behind development-only paths.
-8. Keep all current gates green: verify:current-state and build must pass.
-```
-
-## Expansion roadmap after cleanup
+## Expansion roadmap after structure cleanup
 
 Do not expand content randomly. Each expansion should make the playable merchant loop deeper, more readable, more story-rich, or more consequential.
 
@@ -322,6 +316,6 @@ first ending path
 ## Rule for future expansion
 
 ```text
-Clean first.
-Then expand the actual game, not inactive support structure.
+Clean structure first.
+Then expand the actual game, not support-only files.
 ```

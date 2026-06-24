@@ -68,6 +68,16 @@ const forbidden = [
   'production intermediates',
   'not the final target',
   'inactive support path',
+  'old delivery notes',
+  'older character',
+  'older saves',
+  'old catalog identity',
+  'one-time phase notes',
+  'migration notes',
+  'secondary runtime path',
+  'standalone local-storage loop',
+  'obsolete one-time scripts',
+  'development-only cleanup note',
 ];
 
 const allowedFiles = new Set(['scripts/audit-naming-traces.cjs']);

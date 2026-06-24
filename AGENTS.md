@@ -31,13 +31,13 @@ Only one roadmap doc exists:
 /docs/03_GAME_LOGIC_AND_ROADMAP.md
 ```
 
-Do not add per-step completion docs. Do not add root delivery-note docs such as `README_STEP*.md`, `README_NEXT_*.md`, or temporary patch handoffs. Update the existing roadmap/system docs instead of creating new docs.
+Do not add per-step completion docs. Do not add root delivery-note docs such as `README_STEP*.md`, `README_NEXT_*.md`, or patch handoffs. Update the existing roadmap/system docs instead of creating new docs.
 
 Every ZIP/root-overlay response should not include `README_STEP*` files or temporary delivery notes as repo files.
 
 Do not add new unnumbered Markdown docs directly under `/docs`, `/docs/game`, `/docs/systems`, or `/docs/development`.
 
-Log-only docs, generated reports, temporary phase notes, audits, and historical handoffs must go under:
+Log-only docs, generated reports, implementation notes, audits, and archived validation notes must go under:
 
 ```text
 /docs/logs/
@@ -49,8 +49,8 @@ Examples of log-only docs:
 - generated item icon audit reports
 - generated character portrait lock reports
 - generated playtest/balance reports
-- one-time phase notes
-- migration notes that are no longer source-of-truth
+- implementation notes
+- archived validation notes that are no longer source-of-truth
 
 Asset production folders are allowed to remain under `/docs/assets/` when they contain working assets/configs, prompt manifests, sheet plans, or cropping guides rather than prose source-of-truth docs:
 
@@ -164,9 +164,9 @@ Do not use npm for installs or scripts unless the user explicitly asks.
 - Ask before doing if there is a real product/architecture choice awaiting the user's call.
 - The user prefers ZIP/root-overlay patches unless they ask for direct Git commits.
 - Every ZIP response should include a suggested Git commit message.
-- The user is fine with creating new saves; do not preserve old save compatibility unless requested.
+- The user is fine with fresh saves; do not preserve save compatibility unless requested.
 - Dist/release build output should not be committed.
-- Do not use one-time patch scripts for docs organization; provide direct files or a clear delete list.
+- Do not use patch scripts for docs organization; provide direct files or a clear delete list.
 - Character prompt files should be created before portrait generation so sheets and cropping stay consistent.
 
 ## Validation

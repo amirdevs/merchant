@@ -2,13 +2,13 @@
 
 ## Item catalog
 
-The current item data module uses chunked files under `src/data/generated/items-*.json`, with [src/data/generated/items.chunked.ts](C:\Freelance\merchant-react-electron\src\data\generated\items.chunked.ts) as the runtime aggregator. Script-side reads and writes should go through `scripts/item-catalog.cjs`.
+The current item data module uses chunked files under `src/data/generated/items-*.json`, with `src/data/generated/items.chunked.ts` as the runtime aggregator. Script-side reads and writes should go through `scripts/item-catalog.cjs`.
 
-Inventory still references item indexes in current runtime structures, so save schema v2 blocks older saves after the catalog rewrite.
+Inventory still references item indexes in current runtime structures, so save schema v2 blocks incompatible saves from earlier schema versions.
 
 Catalog design should keep items original to this project, practical for trade, and structured enough for stock, quests, market demand, icon generation, and future economy systems. Prefer bright coastal fantasy merchant goods with clear families, subfamilies, trade roles, storage needs, market behavior, quantity forms, and profession uses.
 
-Avoid lore names that feel imported from a different content set, borrowed book/company/faction naming, and thin synonym swaps that leave the old catalog identity visible.
+Avoid lore names that feel imported from a different content set, borrowed book/company/faction naming, and thin synonym swaps that leave a previous catalog identity visible.
 
 ## Icon pipeline
 
@@ -33,7 +33,7 @@ Important folders:
 - Do not crop failed, unmatched, semantically wrong, or unsafe sheets into runtime assets.
 - Use object-aware safe cropping when exact grid cropping would clip an item or include a neighboring item fragment.
 - Final accepted item icons should be 1024x1024 transparent PNGs unless a future runtime requirement changes the target.
-- Large generated image assets should be Git LFS tracked; reports, CSVs, HTML indexes, JSON configs, and source code stay in normal Git.
+- Large image assets should be Git LFS tracked; reports, CSVs, HTML indexes, JSON configs, and source code stay in normal Git.
 
 ## Validation
 
