@@ -8,7 +8,7 @@ This is the first doc to read.
 2. `01_PROJECT_OVERVIEW.md` - what the project is and current scope.
 3. `02_DEVELOPMENT_SETUP.md` - commands, scripts, validation, and repo hygiene.
 4. `03_GAME_LOGIC_AND_ROADMAP.md` - implemented game logic, playable UI roadmap, character profile plan, portrait gates, quest overhaul gates, and vertical-slice milestones.
-5. `04_TRADING_AND_STOCK.md` - NPC stock, generated-data bias, barter, Ask Price, Ask Offer.
+5. `04_TRADING_AND_STOCK.md` - NPC stock, runtime stock bias, barter, Ask Price, Ask Offer.
 6. `05_ITEMS_AND_ICONS.md` - item catalog, icon pipeline, and item-art lock rules.
 7. `06_ECONOMY_AND_TRAVEL.md` - money, capacity, travel, risk, market loop.
 8. `07_QUESTS_COMPANY_AND_UI.md` - current quest/runtime helpers, contracts, dialogue runtime, company layer, UI view models.
@@ -21,7 +21,7 @@ The numbered docs above are the current source-of-truth docs. `03_GAME_LOGIC_AND
 
 ## What is not source of truth
 
-`docs/logs/` is for generated reports, old phase notes, temporary audits, one-time handoffs, and historical context. Read logs only when debugging a specific report or past migration.
+`docs/logs/` is for automated reports, archived reports, validation logs, temporary audits, one-time handoffs, and development logs. Read logs only when debugging a specific report or validation run.
 
 ## Documentation rules
 

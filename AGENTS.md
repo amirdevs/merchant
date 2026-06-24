@@ -4,7 +4,7 @@ This repo is `C:\Freelance\merchant-react-electron`.
 
 Always treat `C:\Freelance\merchant-react-electron` as the only valid project root for this app. Do not use, inspect, edit, sync from, or infer project state from any `D:\game\...` checkout unless the user explicitly asks for work in that path. If Codex is launched from another directory, change to `C:\Freelance\merchant-react-electron` before reading or editing project files.
 
-The project is an offline React/Vite fantasy trading game prototype. The user wants a local-only app that uses original extracted data as reference while replacing/overhauling systems, UI, item art, character identities, character portraits, and visible narrative flavor.
+The project is an offline React/Vite fantasy trading game. The user wants a local-only app that uses current runtime data while evolving systems, UI, item art, character identities, character portraits, and visible narrative flavor.
 
 ## Documentation Rules
 
@@ -52,7 +52,7 @@ Examples of log-only docs:
 - one-time phase notes
 - migration notes that are no longer source-of-truth
 
-Asset production folders are allowed to remain under `/docs/assets/` when they contain working assets/configs, prompt manifests, generated sheet plans, or cropping references rather than prose source-of-truth docs:
+Asset production folders are allowed to remain under `/docs/assets/` when they contain working assets/configs, prompt manifests, sheet plans, or cropping guides rather than prose source-of-truth docs:
 
 - `/docs/assets/icon-prompts/`
 - `/docs/assets/icon-sheets/`
@@ -64,17 +64,17 @@ Before adding docs, update the numbered reading order if the doc is permanent; o
 
 ## Character Profile Rules
 
-Visible character identity must be original. Do not preserve original public-facing names, portraits, dialogue flavor, or lookalike visual designs from the source game.
+Visible character identity must be original. Do not preserve prior public-facing names, portraits, dialogue flavor, or lookalike visual designs from earlier content sets.
 
-Keep stable internal IDs/indexes until the runtime has a safe migration path. The original generated character data may remain as mechanical reference, but UI-facing identity should come from the character profile layer.
+Keep stable internal IDs/indexes until the runtime has a safe migration path. Current character profile data may continue to provide mechanical anchors, but UI-facing identity should come from the character profile layer.
 
-Primary cast additions should be planned before portrait generation so portrait sheets only need to be generated/cropped once. The current seed roster lives in:
+Primary cast additions should be planned before portrait generation so portrait sheets only need to be generated/cropped once. The current primary cast roster lives in:
 
 ```text
 src/data/characters/primaryCastSeeds.ts
 ```
 
-The existing generated-character audit and final roster-map planning live in:
+The current roster planning files and runtime validation files live in:
 
 ```text
 src/data/characters/characterCatalogAuditPlan.ts

@@ -1,6 +1,6 @@
 # Merchant React/Vite
 
-Offline React/Vite fantasy trading game prototype using core game data, local assets, and current production systems for trading, stock, items, travel, quests, company management, UI integration, and original character portraits.
+Offline React/Vite fantasy trading game using core game data, local assets, and current production systems for trading, stock, items, travel, quests, company management, UI integration, and original character portraits.
 
 ## Commands
 

@@ -1,8 +1,8 @@
 const { spawnSync } = require("child_process");
 
-// Current-state verification should block on finalized/runtime gates, not on
-// retired generated visual references. Strict inactive-asset gates remain
-// available through their dedicated scripts/flags.
+// Current-state verification should block on finalized runtime gates, not on
+// optional visual asset gates. The full visual asset audit remains available
+// through dedicated scripts and flags.
 const checks = [
   ["pnpm", ["audit:naming"]],
   ["pnpm", ["audit:data"]],
@@ -56,8 +56,8 @@ for (const [command, args] of checks) {
 console.log("\nCurrent-state verification passed.");
 console.log("Review docs/logs/profession-stock-review.md before final stock/profile approval.");
 console.log("Review docs/logs/character-portrait-lock-report.md before final character portrait approval.");
-console.log("Run pnpm audit:item-icons when the item icon runtime asset gate is ready/restored.");
-console.log("Run pnpm audit:assets -- --strict to inspect all inactive/generated visual references.");
+console.log("Run pnpm audit:item-icons when the item icon runtime asset gate is needed.");
+console.log("Run pnpm audit:assets -- --strict to run the full visual asset audit.");
 console.log("Economy helpers are covered by src/lib/economy.test.ts.");
 console.log("Travel planning helpers are covered by src/lib/travel-loop.test.ts.");
 console.log("Quest runtime helpers, the rich quest foundation, the first playable story chain, the playable merchant loop, GameState runtime loop persistence, economy/world expansion helpers, and vertical-slice polish helpers are covered by pnpm test:quests, pnpm test:rich-quest-chain, pnpm test:merchant-loop, pnpm test:merchant-polish, pnpm test:runtime-loop, pnpm test:economy-world, and pnpm test:vertical-polish.");

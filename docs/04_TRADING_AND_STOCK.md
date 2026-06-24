@@ -8,14 +8,14 @@ Final NPC stock is built from multiple layers:
 profession stock profile
 + lifestyle baseline
 + named character override
-+ generated-data stock bias
++ runtime stock bias
 + legal/illegal rules
 + value/rarity/quantity limits
 ```
 
 The stock profile is the main identity layer. A blacksmith should still look like a blacksmith, a fisher like a fisher, and a barkeep like a barkeep.
 
-Generated-data bias is mild flavor, not the main stock driver. It uses local `stockBiasWeights` on each resolved stock profile. Character and profession bias are strongest; market and kingdom bias are lighter. Illegal kingdom tags discourage legal merchants and can support criminal/contraband stock.
+Runtime stock bias is mild flavor, not the main stock driver. It uses local `stockBiasWeights` on each resolved stock profile. Character and profession bias are strongest; market and kingdom bias are lighter. Illegal kingdom tags discourage legal merchants and can support criminal/contraband stock.
 
 ## Current stock files
 

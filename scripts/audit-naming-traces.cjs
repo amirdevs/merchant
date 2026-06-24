@@ -52,6 +52,22 @@ const forbidden = [
   'portraitGenerationAllowed',
   'prompt-plan JSON',
   'full portrait set ready for generation',
+  'source game',
+  'original extracted data',
+  'extracted original data',
+  'extracted items',
+  'extracted characters',
+  'original generated character data',
+  'generated-character audit',
+  'generated-data',
+  'original-game parity',
+  'stale prototype',
+  'obsolete fallback',
+  'retired handoff',
+  'retired character',
+  'production intermediates',
+  'not the final target',
+  'inactive support path',
 ];
 
 const allowedFiles = new Set(['scripts/audit-naming-traces.cjs']);

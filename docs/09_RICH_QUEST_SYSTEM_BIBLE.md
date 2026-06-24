@@ -428,7 +428,7 @@ named consequence flags
 
 A visible consequence still is not complete if it disappears after save/load/export.
 
-Phase 6 stores the first loop in the main game save payload so future expansion can build on persistent memory instead of a prototype panel.
+Phase 6 stores the first loop in the main game save payload so future expansion can build on persistent memory instead of an isolated panel.
 
 ### Phase 8 - full vertical slice polish
 
