@@ -206,7 +206,7 @@ export function App() {
       case "customers":
         return <CustomersView state={controller.state} people={controller.people} selected={controller.character} onSelect={controller.actions.selectCharacter} onNext={controller.actions.nextCustomer} onNavigate={navigate} onSpeak={controller.actions.speakWith} />;
       case "journal":
-        return <JournalView state={controller.state} onBack={() => navigate("market")} onNavigate={navigate} onSetQuestStatus={controller.actions.setQuestStatus} onSetContractStatus={controller.actions.setContractStatus} />;
+        return <JournalView state={controller.state} onBack={() => navigate("market")} onNavigate={navigate} onSetContractStatus={controller.actions.setContractStatus} />;
       case "event":
         return <EventView state={controller.state} onBack={() => navigate("market")} onAdvanceDay={controller.actions.advanceDay} onStartAuction={controller.actions.startAuction} onBidAuction={controller.actions.bidAuction} onPassAuction={controller.actions.passAuction} onCloseAuction={controller.actions.closeAuction} onRunHorseRace={controller.actions.runHorseRace} onStartMythGame={controller.actions.startMythGame} onPlayMythCard={controller.actions.playMythCard} onCloseMythGame={controller.actions.closeMythGame} onStartDraft={controller.actions.startDraft} onPickDraftItem={controller.actions.pickDraftItem} onCloseDraft={controller.actions.closeDraft} onToggleMythDeckCard={controller.actions.toggleMythDeckCard} onSaveMythDeckPreset={controller.actions.saveMythDeckPreset} onLoadMythDeckPreset={controller.actions.loadMythDeckPreset} />;
       case "company":

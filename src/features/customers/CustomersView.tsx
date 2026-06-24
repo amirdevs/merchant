@@ -1,6 +1,5 @@
 import { MessageSquare, Search, UserRound } from "lucide-react";
 import type { Character } from "@/data/types";
-import { portraitAsset } from "@/lib/assets";
 import { remakeCharacterPortraitAsset, remakeCharacterView } from "@/data/characters/characterPortraitManifest";
 import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
@@ -102,7 +101,7 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
 }
 
 function Portrait({ person, large }: { person: Character; large?: boolean }) {
-  const src = remakeCharacterPortraitAsset(person) || portraitAsset(person.portraitFile);
+  const src = remakeCharacterPortraitAsset(person);
   const view = remakeCharacterView(person);
   return (
     <span className={`${large ? "h-40 w-40" : "h-12 w-12"} grid shrink-0 place-items-center overflow-hidden rounded-md border border-[#9a7138]/70 bg-[#f2ddb1] text-[#26170a]`}>

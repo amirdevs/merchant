@@ -10,8 +10,9 @@ This is the only roadmap doc. Keep current gameplay status, character/portrait g
 - Character portrait runtime integration is complete enough for gameplay: final cropped portraits live under `public/assets/portraits/characters/`, have a manifest, and pass the portrait audit gate.
 - Rich Quest System Foundation exists as source data, state helpers, effect helpers, selectors, journal view models, and focused tests.
 - The first playable merchant loop now exists as a small story-rich vertical slice: buy, travel, sell, progress rich quests, see consequences, and register the first company.
-- Phase 6 moves that loop into the main GameState/save/export model through the `playableLoop` runtime field.
-- Phase 7 adds the first economy/world expansion layer: town stock pressure, dynamic prices, route risk events, tuned regional items, company upgrade candidates, expansion towns, and next quest seeds.
+- The playable loop is now persisted through the project-wide `GameState.playableLoop` runtime field instead of being only a local prototype.
+- Economy/world expansion helpers exist for stock pressure, dynamic prices, route risk events, tuned regional items, company upgrade candidates, expansion towns, and next quest seeds.
+- Vertical-slice polish helpers exist for alpha-readiness scoring, player-flow checklist, save/load readiness, consequence visibility, and release/playtest guidance.
 
 ## Confirmed remake direction
 
@@ -23,6 +24,7 @@ Confirmed replacement areas:
 2. **Quests** - replace old marketplace quests with original rich merchant stories, meaningful choices, and campaign goals.
 3. **Playable loop** - prioritize a real playable vertical slice before producing more loose assets.
 4. **GameState runtime** - playable features should persist through the main save/export model instead of private local-only prototype slots.
+5. **Expansion** - expand the actual game after cleanup, not the old scaffolding.
 
 ## Character runtime integration status
 
@@ -51,6 +53,8 @@ src/data/characters/characterPortraitManifest.ts
 src/data/characters/characterPortraitManifest.test.ts
 scripts/audit-character-portraits.cjs
 ```
+
+Generated character sheet PNGs under `docs/assets/character-sheets/` are production intermediates, not runtime assets. After final portraits are locked, they are cleanup candidates unless the user explicitly wants to keep them in the repo.
 
 ## Quest overhaul direction
 
@@ -150,8 +154,6 @@ Journal UI polish for the loop panel
 
 ### Phase 6 - Real Game Runtime Integration Pack
 
-Phase 6 moves the playable loop from a standalone/local-only prototype into the project-wide runtime model.
-
 Implemented source files:
 
 ```text
@@ -170,21 +172,10 @@ GameState receives a `playableLoop` field when the Journal loop is opened.
 Loop actions commit to the live GameState object.
 Loop actions autosave the primary ledger through the normal save system.
 The serialized save/export payload includes loop town, day, copper, cargo, profit, rich quest chain, company state, consequences, town reputation, NPC trust, and loop ledger.
-The old standalone local-storage loop remains only as a fallback for isolated component testing.
-```
-
-Validation:
-
-```powershell
-pnpm test:runtime-loop
-pnpm playtest:runtime-loop
-pnpm verify:current-state
-pnpm build
+The old standalone local-storage loop should now be treated as a cleanup candidate, not a long-term runtime path.
 ```
 
 ### Phase 7 - Economy, World, and Content Expansion Pack
-
-Phase 7 expands the saved playable merchant loop into a richer merchant-world foundation without adding random filler.
 
 Implemented source files:
 
@@ -210,42 +201,7 @@ world-readiness score for deciding when the slice is ready to expand
 Journal UI panel for economy/world expansion visibility
 ```
 
-Validation:
-
-```powershell
-pnpm test:economy-world
-pnpm playtest:economy-world
-pnpm verify:current-state
-pnpm build
-```
-
-## Compact roadmap from here
-
-Keep phases large so the user does not need constant ZIP/unZIP work.
-
-### Phase 8 - Full Vertical Slice Polish
-
-Goal: make the current game feel like a proper demo/alpha.
-
-Includes:
-
-```text
-market/travel/journal/company/inventory flow polish
-tutorial guidance inside story UI
-balance tuning
-consequence visibility polish
-save/load/export edge-case pass
-old-system cleanup where migration is complete
-manual release/playtest checklist
-```
-
-## Rule for future expansion
-
-Do not expand content randomly. Each expansion should make the playable merchant loop deeper, more readable, more story-rich, or more consequential.
-
 ### Phase 8 - Full Vertical Slice Polish Pack
-
-Phase 8 turns the current saved merchant loop into a clean alpha-style vertical slice before more content is added.
 
 Implemented source files:
 
@@ -262,8 +218,8 @@ Implemented behavior:
 
 ```text
 alpha-readiness score for the current playable loop
-large player-flow checklist from start to company registration
-save/load runtime check
+player-flow checklist from start to company registration
+save/load runtime readiness check
 trade-profit clarity check
 travel-purpose check
 rich quest chain engagement check
@@ -271,27 +227,101 @@ company milestone check
 visible consequence check
 economy/world hook check
 player guidance check
-release checklist and cleanup guards
 Journal UI panel for full vertical-slice polish
+release checklist and cleanup guards
+focused vertical-slice polish tests
+manual vertical-slice playtest report
 ```
 
-Validation:
+## Current next milestone - Project Cleanup Gate
 
-```powershell
-pnpm test:vertical-polish
-pnpm playtest:vertical-polish
-pnpm verify:current-state
-pnpm build
-```
+Before adding more content, clean the project.
 
-## Compact roadmap after Phase 8
-
-The foundation is now character-integrated, quest-rich, persistent, consequence-visible, economy-aware, and alpha-polished. Future work should not be another foundation rewrite. Use larger expansion packs only:
+Goal:
 
 ```text
-1. Expand playable content only when it supports the current loop.
-2. Add more real quests from the quest bible.
-3. Expand towns/routes/items after the starter loop remains stable.
-4. Replace old world visuals and remaining legacy scaffolding when the new runtime equivalent exists.
-5. Keep every new feature tied to trade, story, company progression, or visible consequences.
+remove stale prototype files, old public visual assets, obsolete fallbacks, duplicate runtime paths, unused UI images, and retired handoff/prod files so the next expansion phase starts from a lean codebase.
+```
+
+The root work order for Codex is:
+
+```text
+PROJECT_CLEANUP_REMOVAL_PLAN.md
+```
+
+That file is temporary and should be deleted or moved to `docs/logs/` after the cleanup pass is completed.
+
+Cleanup priorities:
+
+```text
+1. Remove unnecessary runtime fallbacks now that GameState runtime persistence exists.
+2. Stop exposing old marketplace quests as current gameplay.
+3. Remove old character portrait/stall runtime paths and public assets after the portrait gate passes.
+4. Delete generated character sheet production images if final cropped portraits are locked.
+5. Delete unused public UI images after a reference-based audit.
+6. Remove obsolete one-time scripts and package commands.
+7. Remove duplicate/debug-only UI panels or gate them behind development-only paths.
+8. Keep all current gates green: verify:current-state and build must pass.
+```
+
+## Expansion roadmap after cleanup
+
+Do not expand content randomly. Each expansion should make the playable merchant loop deeper, more readable, more story-rich, or more consequential.
+
+### Expansion Pack 1 - Starter Region Expansion
+
+Goal: make the first region feel real.
+
+Includes:
+
+```text
+6-8 towns
+40-60 tuned trade items
+15-20 playable quests
+10-15 important NPCs
+route events
+town-specific supply/demand
+more company unlocks
+starter-region balance pass
+```
+
+### Expansion Pack 2 - Campaign + NPC Questlines
+
+Goal: make the game story-driven.
+
+Includes:
+
+```text
+Act 1 fully playable
+Act 2 partly playable
+5-10 NPC personal questlines
+rival merchant introduction
+choice consequences
+alternate quest endings
+stronger journal/dialogue presentation
+```
+
+### Expansion Pack 3 - Company / Economy Endgame
+
+Goal: make long-term progression worth playing.
+
+Includes:
+
+```text
+warehouse levels
+clerks
+caravans
+guild rank
+branch offices
+bulk contracts
+market control
+rival company pressure
+first ending path
+```
+
+## Rule for future expansion
+
+```text
+Clean first.
+Then expand the actual game, not the old scaffold.
 ```

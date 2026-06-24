@@ -178,8 +178,6 @@ export const LOOP_ROUTES: LoopRoute[] = [
   { id: "brasskeep-sunwake", from: "brasskeep-gate", to: "sunwake-harbor", days: 2, travelCost: 5, risk: 3, story: "A guarded road for registered traders returning toward the sea." },
 ];
 
-const STORAGE_KEY = "merchant-playable-loop-v1";
-
 function clone<T>(value: T): T {
   return JSON.parse(JSON.stringify(value)) as T;
 }
@@ -627,26 +625,5 @@ export function runRecommendedLoopDemo(): PlayableMerchantLoopState {
   }
   state = travelLoopRoute(state, "brasskeep-gate");
   state = registerLoopCompany(state, "Sunwake Ledger Company");
-  return state;
-}
-
-export function savePlayableMerchantLoopState(state: PlayableMerchantLoopState) {
-  if (typeof window === "undefined") return;
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-}
-
-export function loadPlayableMerchantLoopState(day = 1) {
-  if (typeof window === "undefined") return createPlayableMerchantLoopState(day);
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    return ensurePlayableMerchantLoopState(raw ? JSON.parse(raw) : null, day);
-  } catch {
-    return createPlayableMerchantLoopState(day);
-  }
-}
-
-export function resetPlayableMerchantLoopState(day = 1) {
-  const state = createPlayableMerchantLoopState(day);
-  savePlayableMerchantLoopState(state);
   return state;
 }

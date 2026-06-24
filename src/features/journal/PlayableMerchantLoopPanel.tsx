@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Building2, CheckCircle2, Coins, DatabaseZap, Map, PackagePlus, Play, RotateCcw, Route, Scale, ShieldCheck, Store, TrendingUp } from "lucide-react";
 import { Button, LedgerRow, Panel, StatChip } from "@/components/ui";
 import { saveGame, type GameState } from "@/lib/game";
@@ -6,20 +6,16 @@ import {
   acceptLoopStoryQuest,
   buildPlayableMerchantLoopView,
   buyLoopItem,
-  loadPlayableMerchantLoopState,
   LOOP_ITEMS,
   registerLoopCompany,
-  resetPlayableMerchantLoopState,
   resolveLoopStoryQuest,
-  runRecommendedLoopDemo,
-  savePlayableMerchantLoopState,
   sellLoopItem,
   travelLoopRoute,
   type LoopItemId,
   type LoopTownId,
   type PlayableMerchantLoopState,
 } from "@/lib/playable-merchant-loop";
-import { buildGameRuntimeLoopSnapshot, commitGamePlayableLoopState, type GameStateWithPlayableLoop } from "@/lib/game-runtime-loop";
+import { buildGameRuntimeLoopSnapshot, commitGamePlayableLoopState, resetGamePlayableLoopState, type GameStateWithPlayableLoop } from "@/lib/game-runtime-loop";
 import { richQuestStatus } from "@/lib/quest-state";
 
 function shortStatus(done: boolean) {
@@ -33,44 +29,27 @@ function signalTone(status: "good" | "watch" | "risk") {
 }
 
 type PlayableMerchantLoopPanelProps = {
-  day: number;
-  gameState?: GameState;
+  gameState: GameState;
 };
 
-export function PlayableMerchantLoopPanel({ day, gameState }: PlayableMerchantLoopPanelProps) {
-  const runtimeGameState = gameState as GameStateWithPlayableLoop | undefined;
-  const [localState, setLocalState] = useState<PlayableMerchantLoopState>(() => loadPlayableMerchantLoopState(day));
+export function PlayableMerchantLoopPanel({ gameState }: PlayableMerchantLoopPanelProps) {
+  const runtimeGameState = gameState as GameStateWithPlayableLoop;
   const [runtimeRevision, setRuntimeRevision] = useState(0);
   const runtimeSnapshot = useMemo(
-    () => runtimeGameState ? buildGameRuntimeLoopSnapshot(runtimeGameState) : null,
-    [runtimeGameState, day, runtimeRevision],
+    () => buildGameRuntimeLoopSnapshot(runtimeGameState),
+    [runtimeGameState, runtimeRevision],
   );
-  const loopState = runtimeSnapshot?.loop || localState;
+  const loopState = runtimeSnapshot.loop;
   const view = useMemo(() => buildPlayableMerchantLoopView(loopState), [loopState, runtimeRevision]);
   const selectedQuest = view.questView.selectedQuest;
   const selectedStatus = richQuestStatus(loopState.questChain, selectedQuest.id);
   const consequence = view.consequenceSummary;
   const balance = view.balanceReport;
-  const runtimeMode = Boolean(runtimeGameState);
-
-  useEffect(() => {
-    if (runtimeMode) return;
-    setLocalState((current) => ({ ...current, day }));
-  }, [day, runtimeMode]);
-
-  useEffect(() => {
-    if (runtimeMode) return;
-    savePlayableMerchantLoopState(localState);
-  }, [localState, runtimeMode]);
 
   function commit(next: PlayableMerchantLoopState) {
-    if (runtimeGameState) {
-      commitGamePlayableLoopState(runtimeGameState, next);
-      saveGame(runtimeGameState);
-      setRuntimeRevision((current) => current + 1);
-      return;
-    }
-    setLocalState(next);
+    commitGamePlayableLoopState(runtimeGameState, next);
+    saveGame(runtimeGameState);
+    setRuntimeRevision((current) => current + 1);
   }
 
   function update(mutator: (current: PlayableMerchantLoopState) => PlayableMerchantLoopState) {
@@ -101,18 +80,16 @@ export function PlayableMerchantLoopPanel({ day, gameState }: PlayableMerchantLo
         <StatChip label="Profit" value={view.cargoList.length ? `${loopState.totalProfit}` : loopState.totalProfit} />
         <StatChip label="Loop Goals" value={`${view.completedGoals}/${view.totalGoals}`} />
         <StatChip label="Company" value={view.company.registered ? "Registered" : view.company.ledgerOpened ? "Ready" : "Locked"} />
-        <StatChip label="Runtime" value={runtimeMode ? "GameState" : "Local"} />
+        <StatChip label="Save Field" value={runtimeSnapshot.saveField} />
       </div>
 
       <p className="mb-4 rounded-sm border border-[#9a7138]/50 bg-[#fff6d7]/55 p-3 text-sm font-bold leading-snug text-[#3b260f]">
-        Phase 6 stores the playable merchant loop inside the main GameState/save/export payload. The old local-only fallback remains only for isolated component testing.
+        Phase 6 stores the playable merchant loop inside the main GameState save and export payload. This panel now edits the primary runtime directly.
       </p>
 
-      {runtimeMode ? (
-        <p className="mb-4 rounded-sm border border-[#1f5960]/45 bg-[#dff4ef]/70 p-3 text-sm font-bold leading-snug text-[#1f5960]">
-          <DatabaseZap className="mr-1 inline" size={15} /> Runtime save field: <code>playableLoop</code>. Actions in this panel update the game save state and autosave the primary ledger.
-        </p>
-      ) : null}
+      <p className="mb-4 rounded-sm border border-[#1f5960]/45 bg-[#dff4ef]/70 p-3 text-sm font-bold leading-snug text-[#1f5960]">
+        <DatabaseZap className="mr-1 inline" size={15} /> Runtime save field: <code>playableLoop</code>. Actions in this panel update the main save state and autosave the primary ledger.
+      </p>
 
       <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_380px]">
         <div className="grid gap-4">
@@ -240,8 +217,17 @@ export function PlayableMerchantLoopPanel({ day, gameState }: PlayableMerchantLo
             <p>Clerk: {view.company.clerkHired ? "hired" : "not hired"}</p>
             <div className="mt-3 flex flex-wrap gap-2">
               <Button disabled={view.company.registered} size="sm" onClick={() => update((current) => registerLoopCompany(current))}><Building2 size={15} /> Register</Button>
-              <Button size="sm" variant="secondary" onClick={() => commit(runRecommendedLoopDemo())}>Run Demo</Button>
-              <Button size="sm" subtle onClick={() => commit(resetPlayableMerchantLoopState(day))}><RotateCcw size={15} /> Reset</Button>
+              <Button
+                size="sm"
+                subtle
+                onClick={() => {
+                  resetGamePlayableLoopState(runtimeGameState);
+                  saveGame(runtimeGameState);
+                  setRuntimeRevision((current) => current + 1);
+                }}
+              >
+                <RotateCcw size={15} /> Reset
+              </Button>
             </div>
           </div>
 

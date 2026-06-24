@@ -1,10 +1,9 @@
-import { BookOpen, Building2, CheckCircle2, Map, Menu, PackageSearch, ScrollText, Store } from "lucide-react";
+import { BookOpen, Building2, Map, Menu, PackageSearch, Store } from "lucide-react";
 import type { GameView } from "@/app/types";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { currentKingdom, currentMarket, items, kingdoms, marketplaces, type GameState } from "@/lib/game";
 import { marketEventPreviews } from "@/lib/events";
 import { contractDeadline, contractItemProgress, generatedContracts, resolveContract } from "@/lib/contracts";
-import { questCanComplete, questItemProgress, questReward } from "@/lib/quests";
 import { marketRumorLedger, seasonalMarketReport } from "@/lib/market-simulation";
 import { createBalanceReport } from "@/lib/balance";
 import { uiAssets } from "@/lib/ui-assets";
@@ -13,23 +12,16 @@ import { PlayableMerchantLoopPanel } from "./PlayableMerchantLoopPanel";
 import { EconomyWorldExpansionPanel } from "./EconomyWorldExpansionPanel";
 import { VerticalSlicePolishPanel } from "./VerticalSlicePolishPanel";
 
-type QuestStatus = GameState["questStates"][string];
-
 type JournalViewProps = {
   state: GameState;
   onBack: () => void;
   onNavigate: (view: GameView) => void;
-  onSetQuestStatus: (marketIndex: number, status: QuestStatus) => void;
   onSetContractStatus: (contractId: string, status: GameState["contractStates"][string]) => void;
 };
 
-export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSetContractStatus }: JournalViewProps) {
+export function JournalView({ state, onBack, onNavigate, onSetContractStatus }: JournalViewProps) {
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
-  const currentStatus: QuestStatus = state.questStates[String(market.index)] || (market.quest ? "offered" : "unseen");
-  const currentQuestProgress = questItemProgress(market, state.playerInventory, items);
-  const currentQuestReady = questCanComplete(market, state.playerInventory, items);
-  const currentQuestReward = questReward(market, items);
   const eventPreviews = marketEventPreviews(marketplaces, state.day).slice(0, 8);
   const localContracts = generatedContracts(market, marketplaces, kingdom);
   const trackedContracts = Object.entries(state.contractStates)
@@ -54,51 +46,13 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
 
       <div className="grid flex-1 gap-4 xl:grid-cols-[minmax(0,1fr)_420px]">
         <main className="grid content-start gap-4">
-          <PlayableMerchantLoopPanel day={state.day} gameState={state} />
+          <PlayableMerchantLoopPanel gameState={state} />
 
           <EconomyWorldExpansionPanel state={state} />
 
           <VerticalSlicePolishPanel state={state} />
 
           <RichQuestChainPanel day={state.day} />
-
-          <Panel title={<span className="inline-flex items-center gap-2"><ScrollText size={18} /> Legacy Local Notice Board</span>} variant="parchment">
-            <div className="mb-4 grid grid-cols-3 gap-2">
-              <StatChip label="Market" value={market.name} />
-              <StatChip label="Kingdom" value={kingdom.name} />
-              <StatChip label="Local Notice" value={market.quest?.name || "None"} />
-            </div>
-            <p className="mb-4 rounded-sm border border-[#9a7138]/50 bg-[#fff6d7]/55 p-3 text-sm font-bold leading-snug text-[#5b3b17]">
-              This panel keeps the older local quest scaffolding reachable during migration. The remake target is the rich quest chain above.
-            </p>
-            {market.quest ? (
-              <div className="rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/60 p-4 text-[#3b260f]">
-                <h2 className="font-display text-3xl text-[#26170a]">{market.quest.name}</h2>
-                <p className="mt-2 text-base">{market.quest.todo || "No written objective yet. Ask around the market for details."}</p>
-                {currentQuestProgress.length ? (
-                  <div className="mt-3 grid gap-1 text-sm">
-                    {currentQuestProgress.map((entry) => (
-                      <span className={entry.complete ? "font-bold text-[#1f6f38]" : "font-bold text-[#8d271f]"} key={entry.token}>
-                        {entry.token}: held {entry.held}
-                      </span>
-                    ))}
-                  </div>
-                ) : null}
-                <p className="mt-2 text-sm font-bold text-[#75501f]">
-                  Reward: {currentQuestReward.copper} copper
-                  {currentQuestReward.items.length ? ` / ${currentQuestReward.items.map((entry) => `${entry.quantity} ${items[entry.itemIndex]?.name || "item"}`).join(", ")}` : ""}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  <Button onClick={() => onSetQuestStatus(market.index, "accepted")}>Accept</Button>
-                  <Button disabled={!currentQuestReady} variant="secondary" onClick={() => onSetQuestStatus(market.index, "ready")}>Mark Ready</Button>
-                  <Button disabled={!currentQuestReady} subtle onClick={() => onSetQuestStatus(market.index, "finished")}><CheckCircle2 size={16} /> Finish</Button>
-                </div>
-                <p className="mt-2 text-sm font-bold uppercase tracking-wide text-[#75501f]">Status: {currentStatus}</p>
-              </div>
-            ) : (
-              <div className="rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/60 p-4 text-[#3b260f]">No older local notice is posted in this market.</div>
-            )}
-          </Panel>
         </main>
 
         <aside className="grid content-start gap-4">

@@ -16,6 +16,11 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
   const waitingPeople = people.filter((person) => person.index !== currentCustomer?.index && !seenToday.has(person.index)).slice(0, 3);
   const eventActive = eventIsActive(market, state.day);
   const activeBiases = eventBiases(market, state.day);
+  const newsAndTips = eventActive && market.event?.name
+    ? `${market.event.name} is moving demand today. Check event-sensitive goods before locking your cargo.`
+    : currentCustomerView
+      ? `${currentCustomerView.name} is at the stall now. Read the customer before you commit stock.`
+      : "Prices shift quickly near the harbor. Check customers before committing cargo.";
 
   return (
     <ScreenFrame backdrop={uiAssets.backplates.marketTown} overlay="light" contentClassName="p-2 lg:p-3">
@@ -44,7 +49,7 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
             </dl>
           </Panel>
           <Panel className="mt-4 p-4" title="News and Tips" variant="parchment">
-            <p className="text-base leading-snug text-[#3b260f]">{market.quest?.todo || "Prices shift quickly near the harbor. Check customers before committing cargo."}</p>
+            <p className="text-base leading-snug text-[#3b260f]">{newsAndTips}</p>
           </Panel>
         </div>
 
