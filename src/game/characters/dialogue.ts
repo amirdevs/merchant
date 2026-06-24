@@ -1,5 +1,6 @@
 import type { Character, Kingdom, Marketplace } from "@/shared/types/game-data";
-import { fallbackCharacterProfileView } from "@/game/characters/characterProfileShared";
+import { characterProfileView } from "@/game/characters/characterPortraitManifest";
+import type { CharacterProfileView } from "@/game/characters/characterProfileShared";
 import type { NpcRelation } from "@/game/characters/reputation";
 import { compactBiasText, routeLedger } from "@/game/travel/travel";
 
@@ -46,28 +47,36 @@ export type DialogueContext = {
   day?: number;
 };
 
+function viewFor(character: Character): CharacterProfileView {
+  return characterProfileView(character);
+}
+
 export function customerIntro(character: Character) {
-  const view = fallbackCharacterProfileView(character);
+  const view = viewFor(character);
   return `${view.name} steps up to the counter. ${view.marketFlavor}`;
 }
 
 export function customerPreference(character: Character) {
-  const view = fallbackCharacterProfileView(character);
+  const view = viewFor(character);
   return view.tradePersonality || "They bargain by instinct and watch your ledger closely.";
 }
 
 export function customerPrompt(character: Character) {
-  const view = fallbackCharacterProfileView(character);
+  const view = viewFor(character);
   if (view.roleTags.length) return `Ask about ${view.roleTags[0].replace(/[-_]/g, " ")}.`;
   return character.dialogue?.customQuestion || "What is your place in this market?";
 }
 
 export function customerReply(character: Character) {
-  return character.dialogue?.customReply || fallbackCharacterProfileView(character).story;
+  return character.dialogue?.customReply || viewFor(character).story;
+}
+
+export function customerDisplayName(character: Character) {
+  return viewFor(character).name;
 }
 
 function displayName(character: Character) {
-  return fallbackCharacterProfileView(character).name;
+  return customerDisplayName(character);
 }
 
 function strongestBias(character: Character, direction: "like" | "dislike") {
@@ -219,49 +228,50 @@ export function dialogueChoices(character: Character, context: DialogueContext =
       reply: `${name} turns toward the scales.`,
       tone: "business",
     },
-    {
-      id: "goodbye",
-      label: "Goodbye.",
-      reply: `${name} nods farewell.`,
-      tone: "friendly",
-    },
   ];
-  if (context.relation?.secretsUnlocked?.length) {
-    choices.splice(4, 0, {
-      id: "secret",
-      label: "You said you trusted me. What are you hiding?",
-      reply: secretReply(character, context),
-      tone: "gossip",
-    });
-  }
-  const back: DialogueChoice = { id: "back", label: "Back to main topics.", reply: `${name} waits for your next question.`, nextNode: "root", tone: "friendly" };
-  if (node === "personal") return choices.filter((choice) => ["who", "custom", "relationship", "secret"].includes(choice.id)).concat(back);
-  if (node === "trade") return choices.filter((choice) => ["preference", "stock", "haggle"].includes(choice.id)).concat(back);
-  if (node === "world") return choices.filter((choice) => ["market-demand", "market-discounts", "route-gossip", "local-law", "risk"].includes(choice.id)).concat(back);
-  if (node === "work") {
-    const workChoices: DialogueChoice[] = [];
-    if (context.market?.quest) {
-      workChoices.push({
-        id: "custom",
-        label: `Tell me about ${context.market.quest.name}.`,
-        reply: context.market.quest.todo || `${name} points you toward the local notice board.`,
-        effect: "accept-local-quest",
-        tone: "business",
-      });
-    }
-    workChoices.push({
-      id: "route-gossip",
-      label: "Any paid work or useful rumors?",
-      reply: `Check the ${marketName} notice board for timed contracts. ${routeReply(context)}`,
-      tone: "gossip",
-    });
-    return workChoices.concat(back);
-  }
-  return [
-    { id: "topics-personal", label: "Let us talk about you.", reply: `${name} opens up cautiously.`, nextNode: "personal", tone: "friendly" },
-    { id: "topics-trade", label: "Tell me about your trading.", reply: `${name} turns the conversation toward goods and prices.`, nextNode: "trade", tone: "business" },
-    { id: "topics-world", label: "What is happening in the world?", reply: `${name} shares local news and road gossip.`, nextNode: "world", tone: "gossip" },
-    { id: "topics-work", label: "Do you know of any work?", reply: `${name} considers the notices and rumors around ${marketName}.`, nextNode: "work", tone: "business" },
-    ...choices.filter((choice) => choice.id === "goodbye"),
-  ];
+
+  const branchChoices: Record<DialogueNodeId, DialogueChoice[]> = {
+    root: [
+      { id: "topics-personal", label: "Personal matters", reply: `${name} gives you their attention.`, nextNode: "personal" },
+      { id: "topics-trade", label: "Trade talk", reply: `${name} taps the ledger beside the scale.`, nextNode: "trade" },
+      { id: "topics-world", label: "World and roads", reply: `${name} lowers their voice and glances toward the street.`, nextNode: "world" },
+      { id: "topics-work", label: "Work and contracts", reply: `${name} considers what kind of work you can handle.`, nextNode: "work" },
+      ...choices.slice(0, 3),
+      choices[13],
+    ],
+    personal: [
+      choices[0],
+      choices[2],
+      choices[3],
+      { id: "secret", label: "Any private opportunities?", reply: secretReply(character, context), tone: "gossip" },
+      { id: "back", label: "Back to main topics", reply: `${name} returns to the trade at hand.`, nextNode: "root" },
+    ],
+    trade: [
+      choices[1],
+      choices[8],
+      choices[9],
+      choices[10],
+      choices[11],
+      choices[12],
+      choices[13],
+      { id: "back", label: "Back to main topics", reply: `${name} closes that line of bargaining for now.`, nextNode: "root" },
+    ],
+    world: [
+      choices[4],
+      choices[5],
+      choices[6],
+      choices[7],
+      { id: "secret", label: "Any rumors off the ledger?", reply: secretReply(character, context), tone: "gossip" },
+      { id: "back", label: "Back to main topics", reply: `${name} lets the market noise cover the rest.`, nextNode: "root" },
+    ],
+    work: [
+      choices[8],
+      choices[9],
+      choices[10],
+      { id: "secret", label: "Any special work?", reply: secretReply(character, context), tone: "gossip" },
+      { id: "back", label: "Back to main topics", reply: `${name} waits for your next offer.`, nextNode: "root" },
+    ],
+  };
+
+  return branchChoices[node] || branchChoices.root;
 }
