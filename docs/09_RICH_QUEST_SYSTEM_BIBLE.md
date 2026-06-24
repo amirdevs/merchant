@@ -1,6 +1,6 @@
 # 09 - Rich Quest System Bible
 
-This document defines the confirmed direction for the new original quest system.
+This document defines the confirmed direction and implementation rules for the new original quest system.
 
 The remake should not keep the old reference-game quest content. Old marketplace quests may remain temporarily as legacy data while migration is in progress, but they are not the creative or runtime target for the remake.
 
@@ -37,25 +37,11 @@ Every important quest should make the player feel like a merchant making a meani
 
 ## Quest layers
 
-The quest system has three layers.
-
 | Layer | Purpose | Content type |
 |---|---|---|
 | Main campaign quests | Give the player direction, progression, and endings | Long-form authored story quests |
 | Character questlines | Make NPCs memorable and create relationships | Multi-step NPC arcs |
 | Side quests and contracts | Keep markets alive and create replayability | Rich side quests plus repeatable trade contracts |
-
-## Main game goals
-
-The player should look forward to these major achievements:
-
-1. Become a recognized merchant instead of a street trader.
-2. Build a registered trading company.
-3. Secure warehouses, clerks, caravans, and route rights.
-4. Win allies among important NPCs and guilds.
-5. Outplay or defeat rival merchants and corrupt market powers.
-6. Control or liberate important trade routes.
-7. Reach one of several campaign endings based on the player's trade ethics, reputation, company structure, and alliances.
 
 ## Main campaign premise
 
@@ -67,143 +53,13 @@ As the player trades, travels, and investigates, the ledger proves to be dangero
 
 The player must use trade, trust, contracts, and company power to survive rivals and decide what kind of merchant world they will build.
 
-The campaign is not about saving the world with weapons. It is about changing the world through:
-
-```text
-contracts
-credit
-debt
-supply
-scarcity
-route control
-reputation
-alliances
-company power
-market access
-```
-
 ## Campaign acts
 
-### Act 1 - The First Ledger
-
-The player learns basic trade and discovers that the merchant world is built on hidden obligations.
-
-Main quests:
-
-1. **A Name in the Margin** - the player discovers a name in the ledger that every merchant refuses to discuss.
-2. **First Honest Profit** - the player learns the buy/sell loop through a small but story-framed deal.
-3. **The Debt Nobody Claimed** - an unpaid debt points to a missing shipment and a nervous clerk.
-4. **A Price Too Clean** - an item is being sold suspiciously cheap because its true owner is missing.
-5. **The Clerk Who Lied** - the player catches the first clear sign that official records are being altered.
-
-Gameplay introduced:
-
-```text
-buying
-selling
-basic profit
-market demand
-NPC trust
-simple choices
-quest consequences
-```
-
-### Act 2 - Roads and Debts
-
-The player begins traveling between markets and learns that roads are controlled by toll collectors, guilds, smugglers, nobles, and rival companies.
-
-Main quests:
-
-6. **The Road Tax** - a toll office charges different merchants different prices, and the player must find out why.
-7. **Salt Before Rainfall** - a coastal shipment must move before weather closes the route.
-8. **Three Seals on One Crate** - three factions claim legal ownership of the same cargo.
-9. **The Missing Caravan** - a vanished caravan exposes route risk, false insurance claims, and rival interference.
-10. **Debt Written in Red Ink** - the ledger reveals a debt that was paid in blood, not coin.
-
-Gameplay introduced:
-
-```text
-travel risk
-delivery deadlines
-route unlocks
-cargo insurance
-scarcity
-city shortages
-competing merchants
-```
-
-### Act 3 - The Guild War
-
-The player is now important enough to become useful, threatening, and targeted.
-
-Main quests:
-
-11. **The False Scale** - official scales are being manipulated to ruin independent merchants.
-12. **A Friend in the Auction House** - the player can gain inside access, but only by helping someone with their own secret.
-13. **The Price-Fixing Dinner** - powerful traders invite the player into a profitable conspiracy.
-14. **The Warehouse Fire** - a fire destroys stock, but the ashes reveal it was not an accident.
-15. **A Contract Signed Twice** - the same contract appears in two ledgers with two different legal owners.
-
-Gameplay introduced:
-
-```text
-faction reputation
-NPC loyalty
-moral trade choices
-market manipulation
-enemy merchants
-audit evidence
-legal risk
-```
-
-### Act 4 - The Company Charter
-
-The player stops being a wandering merchant and becomes a company owner with employees, assets, and political weight.
-
-Main quests:
-
-16. **A Name on the Door** - the player registers a trading company and chooses its public identity.
-17. **The First Clerk** - the player hires or rejects a clerk whose loyalty depends on earlier choices.
-18. **Warehouse Lease** - the player secures storage by proving reliability or exploiting leverage.
-19. **Caravan Papers** - the player gains the right to send goods without personally traveling.
-20. **The Guild Seal** - the player earns, buys, steals, or forges recognition from the merchant guild.
-
-Gameplay unlocked:
-
-```text
-company registration
-warehouse ownership
-clerks and agents
-bulk trade
-remote contracts
-caravan dispatch
-company reputation
-shareholder or investor hooks
-```
-
-### Act 5 - The Final Market
-
-The endgame resolves who controls trade and what the player's company becomes.
-
-Main quests:
-
-21. **The Last Empty Stall** - the final independent market space becomes a symbol of who gets to trade freely.
-22. **A City for Sale** - a city government quietly auctions influence over its trade laws.
-23. **The Rival's Ledger** - the player's main rival has a second ledger that can ruin or redeem several factions.
-24. **The Vote of the Guildmasters** - the player must use alliances, evidence, wealth, and reputation to shape the guild's future.
-25. **The Final Market** - the player chooses the ending path and faces the consequences of their trade history.
-
-Gameplay resolved:
-
-```text
-ending conditions
-alliances
-company power
-route control
-market freedom vs monopoly
-public reputation
-rival defeat or alliance
-```
+1. **The First Ledger** - basic trade, hidden obligations, altered records, suspicious prices.
+2. **Roads and Debts** - tolls, weather, delivery deadlines, disputed cargo, route risk.
+3. **The Guild War** - false standards, auction access, price fixing, warehouse fraud, rival pressure.
+4. **The Company Charter** - company registration, clerks, warehouse, caravan papers, guild recognition.
+5. **The Final Market** - market access, city law, rival ledger, guild vote, and final ending choice.
 
 ## Possible endings
 
@@ -218,9 +74,48 @@ Endings should be based on accumulated choices, not a single final button.
 | Coin Emperor Ending | The player becomes extremely rich and powerful, but feared and distrusted. |
 | Quiet Partner Ending | The player avoids public power and controls the economy through trusted allies. |
 
+## Phase 2 implementation files
+
+The Phase 2 source implementation lives in:
+
+```text
+src/data/quests/questTypes.ts
+src/data/quests/questCatalog.ts
+src/data/quests/mainCampaignQuests.ts
+src/data/quests/characterQuestlines.ts
+src/data/quests/sideQuests.ts
+src/data/quests/repeatableContractTemplates.ts
+src/data/quests/index.ts
+src/lib/quest-state.ts
+src/lib/quest-effects.ts
+src/lib/quest-selectors.ts
+src/lib/quest-journal-view-model.ts
+src/lib/rich-quest-system.test.ts
+```
+
+Content currently defined:
+
+```text
+25 rich main campaign quest drafts
+10 important NPC questline outlines
+30 rich side quest concepts
+20 repeatable trade contract templates
+6 possible campaign endings
+```
+
+The approved first vertical-slice chain is:
+
+```text
+main-02-first-honest-profit
+side-01-bread-before-dawn
+main-11-the-false-scale
+main-18-warehouse-lease
+main-16-a-name-on-the-door
+```
+
 ## Rich quest structure
 
-Important quests should be represented as rich data, not only as objective text.
+Important quests are represented as rich data, not only as objective text.
 
 ```ts
 type RichQuest = {
@@ -261,28 +156,6 @@ type RichQuest = {
 }
 ```
 
-## Quest categories
-
-```text
-main_campaign
-character_questline
-trade_contract
-delivery_contract
-procurement
-arbitrage
-shortage_relief
-auction
-warehouse_problem
-guild_request
-npc_favor
-rumor_investigation
-company_contract
-city_event
-story_arc
-rival_scheme
-route_unlock
-```
-
 ## Quest states
 
 ```text
@@ -297,8 +170,6 @@ failed
 expired
 blocked
 ```
-
-State meanings:
 
 | State | Meaning |
 |---|---|
@@ -405,34 +276,15 @@ Risky solution: high reward, legal heat, route danger, or faction anger.
 
 ## Example rich quest: Bread Before Dawn
 
-### Premise
-
 Mara, a night baker, keeps her ovens running for dockworkers, guards, and travelers who cannot afford tavern meals. Her flour shipment has vanished. By sunrise, the workers' guild will cancel her contract, and the city will accuse her of hoarding grain.
 
-### Player hook
+Player hook:
 
 ```text
 Find my flour, replace it, or tell me who stole it. I do not care which truth you bring me, so long as my ovens are hot before dawn.
 ```
 
-### Emotional conflict
-
-Mara is proud and exhausted. She does not want charity. She wants the player to solve a trade problem before her reputation collapses.
-
-### Merchant conflict
-
-The flour was redirected to a noble banquet through a forged warehouse order. The player can treat it as a supply problem, a corruption problem, a theft opportunity, or a profit opportunity.
-
-### Stages
-
-1. Speak with Mara at the bakery.
-2. Inspect the warehouse ledger.
-3. Question the warehouse clerk or check the loading yard.
-4. Discover the flour was redirected.
-5. Choose a solution before dawn.
-6. Return to Mara and accept the consequences.
-
-### Choices
+Choices:
 
 | Choice | Result |
 |---|---|
@@ -441,28 +293,9 @@ The flour was redirected to a noble banquet through a forged warehouse order. Th
 | Sell Mara expensive replacement flour | Good profit, lower trust, Mara remembers the player's greed. |
 | Expose the warehouse clerk | City reputation gain, clerk becomes a future enemy. |
 
-### Rewards and consequences
-
-```text
-honest path: +Mara trust, +worker reputation, small gold reward
-exploit path: high gold, -Mara trust, +shadow reputation
-expose path: +city reputation, unlock investigation arc, clerk rivalry
-steal path: +worker reputation, +legal heat, noble faction anger
-```
-
 ## Character questlines
 
 Important NPCs should have multi-step arcs. A character questline should show how the relationship changes over time.
-
-Example:
-
-### Mara the Night Baker
-
-1. **Bread Before Dawn** - save or exploit her bakery contract.
-2. **The Burned Oven** - decide whether to help rebuild after sabotage.
-3. **A Contract of Crumbs** - negotiate her supply contract with the workers' guild.
-4. **The Baker's Guild Vote** - help Mara win influence or push her into dependence.
-5. **Final relationship result** - Mara becomes a loyal supplier, a cautious ally, a bitter rival, or a public critic.
 
 NPC questline outcomes can unlock:
 
@@ -476,23 +309,6 @@ quest evidence
 ending support
 rival actions
 ```
-
-## Side quest types
-
-Side quests should still be rich. They can be shorter than campaign quests, but they need a story reason and consequence.
-
-Recommended side quest families:
-
-1. **Shortage stories** - a city lacks food, medicine, cloth, fuel, tools, or luxury goods.
-2. **Supplier disputes** - two NPCs disagree over price, quality, debt, or delivery.
-3. **Suspicious bargains** - an item is too cheap because it is stolen, cursed, fake, damaged, or politically dangerous.
-4. **Route problems** - weather, bandits, tolls, inspections, or broken bridges change trade value.
-5. **Auction stories** - preview lots, influence bidders, detect fakes, or decide whether to expose fraud.
-6. **Warehouse stories** - spoilage, theft, false ledgers, missing crates, or insurance fraud.
-7. **Guild politics** - help, oppose, or manipulate guild officials.
-8. **NPC favors** - personal problems solved through trade instead of combat.
-9. **Rumor investigations** - follow price rumors, fake shortages, or hidden stockpiles.
-10. **Company opportunities** - hire agents, earn routes, lease warehouses, secure investors.
 
 ## Repeatable trade contracts
 
@@ -512,23 +328,6 @@ failure consequence
 small flavor text
 ```
 
-Example template:
-
-```ts
-type RepeatableContractTemplate = {
-  id: string
-  category: 'delivery' | 'procurement' | 'arbitrage' | 'bulk_supply' | 'urgent_shortage'
-  clientArchetypes: string[]
-  itemTags: string[]
-  quantityRange: [number, number]
-  deadlineDaysRange: [number, number]
-  rewardMultiplierRange: [number, number]
-  reputationReward: string
-  failurePenalty: string
-  flavorHooks: string[]
-}
-```
-
 Even a repeatable contract should read like:
 
 ```text
@@ -539,74 +338,6 @@ Not:
 
 ```text
 Deliver 4 blue pigment.
-```
-
-## First quest content target
-
-Quest Overhaul V1 should define and eventually implement:
-
-```text
-25 rich main campaign quests
-10 important NPC questlines
-30 rich side quests
-20 repeatable trade contract templates
-5 possible campaign endings
-```
-
-This is enough to create a complete game direction without immediately writing hundreds of quests.
-
-## First vertical-slice quest chain
-
-Before building the whole campaign, implement a small complete chain:
-
-1. **First Honest Profit** - learn trade margins through a story-framed sale.
-2. **Bread Before Dawn** - solve a deadline shortage with multiple approaches.
-3. **The False Scale** - expose, exploit, or ignore market cheating.
-4. **Warehouse Lease** - use reputation, money, or leverage to unlock storage.
-5. **A Name on the Door** - register the first trading company.
-
-This vertical slice should test:
-
-```text
-quest acceptance
-multi-stage objectives
-item delivery
-profit objective
-NPC trust changes
-city reputation changes
-choice consequences
-quest unlocks
-company unlock
-save/load persistence
-UI quest journal readability
-```
-
-## Runtime migration direction
-
-The old marketplace quest field should not remain the long-term source of truth.
-
-Target files for the new implementation phase:
-
-```text
-src/data/quests/questCatalog.ts
-src/data/quests/mainCampaignQuests.ts
-src/data/quests/characterQuestlines.ts
-src/data/quests/sideQuests.ts
-src/data/quests/repeatableContractTemplates.ts
-src/lib/quest-state.ts
-src/lib/quest-effects.ts
-src/lib/quest-selectors.ts
-src/lib/quest-journal-view-model.ts
-```
-
-The exact file names can change during implementation, but the system should separate:
-
-```text
-quest content
-quest state
-quest effects
-quest UI view models
-repeatable contract generation
 ```
 
 ## UI requirements
@@ -661,17 +392,14 @@ Before a quest is accepted into the catalog, it should answer:
 
 ## Acceptance criteria for Quest Overhaul V1
 
-The first implementation pass is ready only when:
+The quest overhaul is ready for the vertical-slice implementation only when:
 
 ```text
 old reference quest content is not used as the creative source
 a new quest catalog exists
 main campaign act structure exists
-at least 5 vertical-slice quests are playable
-quest journal shows story and choices, not only todo text
-quest state persists in save/load
-quest consequences affect NPC trust or market state
-company unlock can be triggered by quest progress
-repeatable contracts are separated from authored quests
-manual playtest can complete the first merchant loop
+25 main quests, 10 character questlines, 30 side quests, and 20 repeatable templates exist
+quest journal view models show story and choices, not only todo text
+quest state/effect helpers can accept, advance, choose, resolve, and summarize quests
+first vertical-slice quest chain is defined and ready for playable implementation
 ```

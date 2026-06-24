@@ -48,7 +48,7 @@ console.log("Run pnpm audit:item-icons when the item icon runtime asset gate is 
 console.log("Run pnpm audit:assets -- --strict to inspect all old/generated visual references.");
 console.log("Economy helpers are covered by src/lib/economy.test.ts.");
 console.log("Travel planning helpers are covered by src/lib/travel-loop.test.ts.");
-console.log("Quest runtime helpers are covered by src/lib/quest-runtime.test.ts.");
+console.log("Legacy quest runtime helpers and the new rich quest foundation are covered by pnpm test:quests.");
 console.log("Character portrait manifest helpers are covered by src/data/characters/characterPortraitManifest.test.ts.");
 console.log("Company, warehouse, shipment, and stock helpers are covered by src/lib/company.test.ts.");
 console.log("UI integration view models are covered by src/lib/ui-integration.test.ts.");
