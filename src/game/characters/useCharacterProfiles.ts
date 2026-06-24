@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { Character } from "@/shared/types/game-data";
 import { fallbackCharacterProfileView } from "./characterProfileShared";
 import type { CharacterProfileView } from "./characterProfileShared";
-import type { CharacterExpression } from "@/content/characters/characterProfileTypes";
+import type { CharacterExpression } from "@/content/characters/planning";
 
 type CharacterPortraitManifestModule = typeof import("./characterPortraitManifest");
 

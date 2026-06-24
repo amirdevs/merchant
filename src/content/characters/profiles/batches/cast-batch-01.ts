@@ -1,5 +1,5 @@
-import type { CharacterIdentityCatalogBatch } from "./characterIdentityTypes";
-import { getIdentityBatchPortraitImageCount } from "./characterIdentityTypes";
+import type { CharacterIdentityCatalogBatch } from "../types";
+import { getIdentityBatchPortraitImageCount } from "../types";
 
 const sharedPortraitStyle = "ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders";
 const sharedNegativePrompt = "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background";

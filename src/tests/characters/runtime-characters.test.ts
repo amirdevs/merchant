@@ -11,7 +11,7 @@ import {
   characterRuntimeProfiles,
   runtimeCharacterProfileByIndex,
   runtimeCharacterProfileSummary,
-} from "@/content/characters/characterRuntimeProfiles";
+} from "@/content/characters/runtime";
 import { autoAskPrice, newGame } from "@/game/runtime/game";
 
 describe("runtime character roster", () => {

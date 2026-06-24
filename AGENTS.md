@@ -96,8 +96,8 @@ Keep stable internal IDs/indexes until the runtime has a safe migration path. Cu
 Runtime character behavior now lives in typed character runtime profiles under:
 
 ```text
-src/content/characters/characterRuntimeProfiles.ts
-src/content/characters/characterRuntimeProfiles.data.json
+src/content/characters/runtime/profiles.ts
+src/content/characters/runtime/profiles.data.json
 ```
 
 Visible runtime identity must resolve through the final character profile catalog and runtime portrait manifest, not from raw roster files or stale asset filenames.
@@ -105,26 +105,26 @@ Visible runtime identity must resolve through the final character profile catalo
 Primary cast additions should be planned before portrait generation so portrait sheets only need to be generated/cropped once. The current primary cast roster lives in:
 
 ```text
-src/content/characters/primaryCastSeeds.ts
+src/content/characters/planning/primary-cast-seeds.ts
 ```
 
 The current roster planning files and runtime validation files live in:
 
 ```text
-src/content/characters/characterCatalogAuditPlan.ts
-src/content/characters/finalCharacterRosterPlan.ts
+src/content/characters/planning/character-catalog-audit-plan.ts
+src/content/characters/planning/final-character-roster-plan.ts
 ```
 
 The identity catalog batches live in:
 
 ```text
-src/content/characters/characterIdentityCatalogCastBatch01.ts
-src/content/characters/characterIdentityCatalogCastBatch02.ts
-src/content/characters/characterIdentityCatalogCastBatch03.ts
-src/content/characters/characterIdentityCatalogCastBatch04.ts
-src/content/characters/characterIdentityCatalogCastBatch05.ts
-src/content/characters/characterIdentityCatalogCastBatch06.ts
-src/content/characters/characterIdentityCatalog.ts
+src/content/characters/profiles/batches/cast-batch-01.ts
+src/content/characters/profiles/batches/cast-batch-02.ts
+src/content/characters/profiles/batches/cast-batch-03.ts
+src/content/characters/profiles/batches/cast-batch-04.ts
+src/content/characters/profiles/batches/cast-batch-05.ts
+src/content/characters/profiles/batches/cast-batch-06.ts
+src/content/characters/profiles/catalog.ts
 ```
 
 Character portrait prompts must live beside item prompts under:

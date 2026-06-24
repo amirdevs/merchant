@@ -7,7 +7,7 @@ const root = process.cwd();
 const promptDir = path.join(root, "docs", "assets", "character-prompts");
 const portraitDir = path.join(root, "public", "assets", "portraits", "characters");
 const blockedRosterPath = path.join(root, "src", "content", "characters", "characters.json");
-const identityDir = path.join(root, "src", "content", "characters");
+const identityDir = path.join(root, "src", "content", "characters", "profiles");
 const logDir = path.join(root, "docs", "logs");
 const reportPath = path.join(logDir, "character-portrait-lock-report.md");
 
@@ -46,6 +46,16 @@ function uniqueDuplicates(values) {
     seen.add(value);
   }
   return [...duplicates].sort();
+}
+
+function walkFiles(dir, acc = []) {
+  if (!fs.existsSync(dir)) return acc;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) walkFiles(fullPath, acc);
+    else acc.push(fullPath);
+  }
+  return acc;
 }
 
 function collectPromptRecords() {
@@ -236,10 +246,8 @@ function auditIdentityCatalog(records) {
     .filter((record) => runtimeProfileCharacterIds.has(record.characterId) && runtimeByCharacterId.get(record.characterId)?.name !== record.displayName)
     .map((record) => `${record.characterId}: runtime name mismatch`);
 
-  const identityFiles = fs.existsSync(identityDir)
-    ? fs.readdirSync(identityDir).filter((file) => /^characterIdentityCatalog.*\.ts$/.test(file) && !file.includes("Types"))
-    : [];
-  const identitySource = identityFiles.map((file) => fs.readFileSync(path.join(identityDir, file), "utf8")).join("\n");
+  const identityFiles = walkFiles(identityDir).filter((file) => /catalog\.ts$|cast-batch-\d{2}\.ts$/.test(path.basename(file)));
+  const identitySource = identityFiles.map((file) => fs.readFileSync(file, "utf8")).join("\n");
   const finalDisplayNameCount = (identitySource.match(/finalDisplayName:/g) || []).length;
   const shortStoryCount = (identitySource.match(/shortStory:/g) || []).length;
   const roleTagsCount = (identitySource.match(/roleTags:/g) || []).length;

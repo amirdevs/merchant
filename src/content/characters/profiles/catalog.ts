@@ -1,10 +1,10 @@
-import { characterIdentityCatalogCastBatch01 } from "./characterIdentityCatalogCastBatch01";
-import { characterIdentityCatalogCastBatch02 } from "./characterIdentityCatalogCastBatch02";
-import { characterIdentityCatalogCastBatch03 } from "./characterIdentityCatalogCastBatch03";
-import { characterIdentityCatalogCastBatch04 } from "./characterIdentityCatalogCastBatch04";
-import { characterIdentityCatalogCastBatch05 } from "./characterIdentityCatalogCastBatch05";
-import { characterIdentityCatalogCastBatch06 } from "./characterIdentityCatalogCastBatch06";
-import { getIdentityBatchPortraitImageCount } from "./characterIdentityTypes";
+import { characterIdentityCatalogCastBatch01 } from "./batches/cast-batch-01";
+import { characterIdentityCatalogCastBatch02 } from "./batches/cast-batch-02";
+import { characterIdentityCatalogCastBatch03 } from "./batches/cast-batch-03";
+import { characterIdentityCatalogCastBatch04 } from "./batches/cast-batch-04";
+import { characterIdentityCatalogCastBatch05 } from "./batches/cast-batch-05";
+import { characterIdentityCatalogCastBatch06 } from "./batches/cast-batch-06";
+import { getIdentityBatchPortraitImageCount } from "./types";
 
 export const characterIdentityCatalogBatches = [
   characterIdentityCatalogCastBatch01,

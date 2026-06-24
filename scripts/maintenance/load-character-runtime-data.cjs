@@ -4,8 +4,8 @@ const ts = require("typescript");
 
 const root = process.cwd();
 const characterDir = path.join(root, "src", "content", "characters");
-const runtimeProfileDataPath = path.join(characterDir, "characterRuntimeProfiles.data.json");
-const identityCatalogPath = path.join(characterDir, "characterIdentityCatalog.ts");
+const runtimeProfileDataPath = path.join(characterDir, "runtime", "profiles.data.json");
+const identityCatalogPath = path.join(characterDir, "profiles", "catalog.ts");
 const promptDir = path.join(root, "docs", "assets", "character-prompts");
 
 function createTsLoader() {

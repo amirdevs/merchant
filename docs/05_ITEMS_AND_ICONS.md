@@ -2,11 +2,11 @@
 
 ## Item catalog
 
-The current item data module uses chunked files under `src/content/items/items-*.json`, with `src/content/items/items.chunked.ts` as the runtime aggregator. Script-side reads and writes should go through `scripts/maintenance/item-catalog.cjs`.
+The current item data module uses chunked files under `src/content/items/catalog/chunks/items-*.json`, with `src/content/items/catalog/items.chunked.ts` as the runtime aggregator. Script-side reads and writes should go through `scripts/maintenance/item-catalog.cjs`.
 
 Inventory still references item indexes in current runtime structures, so save schema v2 blocks incompatible saves from earlier schema versions.
 
-Runtime character behavior references item tags through typed character runtime profiles under `src/content/characters/characterRuntimeProfiles.ts` and `src/content/characters/characterRuntimeProfiles.data.json`. Item-token rewrites that touch character stock bias, obtainable pools, or exclusions must update those runtime profiles along with professions, kingdoms, and marketplaces.
+Runtime character behavior references item tags through typed character runtime profiles under `src/content/characters/runtime/profiles.ts` and `src/content/characters/runtime/profiles.data.json`. Item-token rewrites that touch character stock bias, obtainable pools, or exclusions must update those runtime profiles along with professions, kingdoms, and marketplaces.
 
 Catalog design should keep items original to this project, practical for trade, and structured enough for stock, quests, market demand, icon generation, and future economy systems. Prefer bright coastal fantasy merchant goods with clear families, subfamilies, trade roles, storage needs, market behavior, quantity forms, and profession uses.
 

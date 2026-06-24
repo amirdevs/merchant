@@ -51,7 +51,7 @@ all filenames match JSON outputFile values
 The runtime manifest and audit live in:
 
 ```text
-src/content/characters/characterRuntimeProfiles.ts
+src/content/characters/runtime/profiles.ts
 src/game/characters/characterPortraitManifest.ts
 src/tests/characters/characterPortraitManifest.test.ts
 scripts/audits/audit-character-portraits.cjs

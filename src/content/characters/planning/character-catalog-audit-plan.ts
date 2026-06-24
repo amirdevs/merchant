@@ -1,4 +1,4 @@
-import type { CharacterCatalogAuditSummary } from "./characterCatalogAuditTypes";
+import type { CharacterCatalogAuditSummary } from "./character-catalog-audit-types";
 
 export const characterCatalogAuditSummary = {
   generatedCharacterRecordCount: 203,

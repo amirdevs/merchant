@@ -1,8 +1,8 @@
 import type { Character } from "@/shared/types/game-data";
-import { characterIdentityCatalogBatches } from "@/content/characters/characterIdentityCatalog";
-import { runtimeCharacterIdForIndex } from "@/content/characters/characterRuntimeProfiles";
-import type { FinalCharacterIdentityProfile } from "@/content/characters/characterIdentityTypes";
-import type { CharacterExpression } from "@/content/characters/characterProfileTypes";
+import { characterIdentityCatalogBatches } from "@/content/characters/profiles";
+import { runtimeCharacterIdForIndex } from "@/content/characters/runtime";
+import type { FinalCharacterIdentityProfile } from "@/content/characters/profiles/types";
+import type { CharacterExpression } from "@/content/characters/planning";
 import { fallbackCharacterProfileView, tradePortraitExpression, type CharacterProfileView } from "./characterProfileShared";
 import sheet0001_0012 from "../../../docs/assets/character-prompts/characters-0001-0012.json";
 import sheet0013_0024 from "../../../docs/assets/character-prompts/characters-0013-0024.json";

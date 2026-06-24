@@ -4,7 +4,7 @@ const path = require("path");
 const ITEM_CHUNK_SIZE = 300;
 
 function generatedDataDir(root) {
-  return path.join(root, "src", "content", "items");
+  return path.join(root, "src", "content", "items", "catalog", "chunks");
 }
 
 function itemChunkFiles(root) {

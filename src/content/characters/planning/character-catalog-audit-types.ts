@@ -1,4 +1,4 @@
-import type { CharacterExpressionTier, CharacterRosterStatus } from "./characterProfileTypes";
+import type { CharacterExpressionTier, CharacterRosterStatus } from "./character-profile-types";
 
 export type CharacterCatalogAuditPriority = "core" | "standard" | "low" | "reference_check";
 

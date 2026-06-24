@@ -4,7 +4,7 @@
  *
  * Outputs:
  * - docs/logs/character-merchandise-alignment-report.md
- * - src/content/characters/characterMerchandiseAssignments.json
+ * - src/content/characters/merchandise/assignments.json
  * - docs/assets/item-prompts/missing-character-merchandise-items.json
  */
 
@@ -15,7 +15,7 @@ const repoRoot = process.cwd();
 const CONTENT_ROOT = path.join(repoRoot, 'src', 'content');
 const CHARACTER_ROOT = path.join(CONTENT_ROOT, 'characters');
 const REPORT_PATH = path.join(repoRoot, 'docs', 'logs', 'character-merchandise-alignment-report.md');
-const ASSIGNMENTS_PATH = path.join(CHARACTER_ROOT, 'characterMerchandiseAssignments.json');
+const ASSIGNMENTS_PATH = path.join(CHARACTER_ROOT, 'merchandise', 'assignments.json');
 const PROMPT_PATH = path.join(repoRoot, 'docs', 'assets', 'item-prompts', 'missing-character-merchandise-items.json');
 
 const PRODUCT_LEXICON = [
@@ -167,7 +167,7 @@ function parseObject(objectText, file) {
 }
 
 function loadCharacters() {
-  const files = walkFiles(CHARACTER_ROOT, (file) => /characterIdentityCatalog.*\.ts$/.test(path.basename(file)) && !file.endsWith('characterIdentityCatalog.ts'));
+  const files = walkFiles(CHARACTER_ROOT, (file) => /cast-batch-\d{2}\.ts$/.test(path.basename(file)));
   const characters = [];
   for (const file of files) {
     const text = readText(file);

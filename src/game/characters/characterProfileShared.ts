@@ -1,5 +1,5 @@
 import type { Character } from "@/shared/types/game-data";
-import type { CharacterExpression } from "@/content/characters/characterProfileTypes";
+import type { CharacterExpression } from "@/content/characters/planning";
 
 export type CharacterProfileView = {
   readonly id: string | null;

@@ -1,4 +1,4 @@
-import type { PrimaryCastSeed } from "./characterProfileTypes";
+import type { PrimaryCastSeed } from "./character-profile-types";
 
 const sharedNegativePrompt = "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face";
 

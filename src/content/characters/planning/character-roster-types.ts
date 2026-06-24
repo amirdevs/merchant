@@ -1,4 +1,4 @@
-import type { CharacterExpressionTier, CharacterRosterStatus } from "./characterProfileTypes";
+import type { CharacterExpressionTier, CharacterRosterStatus } from "./character-profile-types";
 
 export type CharacterRosterGroup = "supporting_cast_pool" | "primary_cast" | "future_story_cast";
 

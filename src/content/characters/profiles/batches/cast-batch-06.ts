@@ -1,5 +1,5 @@
-import type { CharacterExpressionProfile, CharacterIdentityCatalogBatch, FinalCharacterIdentityProfile } from "./characterIdentityTypes";
-import { getIdentityBatchPortraitImageCount } from "./characterIdentityTypes";
+import type { CharacterExpressionProfile, CharacterIdentityCatalogBatch, FinalCharacterIdentityProfile } from "../types";
+import { getIdentityBatchPortraitImageCount } from "../types";
 
 const majorExpressions = [
   {

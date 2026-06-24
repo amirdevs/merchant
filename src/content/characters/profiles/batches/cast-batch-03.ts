@@ -1,5 +1,5 @@
-import type { CharacterIdentityCatalogBatch } from "./characterIdentityTypes";
-import { getIdentityBatchPortraitImageCount } from "./characterIdentityTypes";
+import type { CharacterIdentityCatalogBatch } from "../types";
+import { getIdentityBatchPortraitImageCount } from "../types";
 
 export const characterIdentityCatalogCastBatch03 = {
   batchId: "identity-catalog-cast-batch-003",

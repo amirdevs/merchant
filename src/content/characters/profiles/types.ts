@@ -1,4 +1,4 @@
-import type { CharacterExpression, CharacterExpressionTier, CharacterGameplayGroup } from "./characterProfileTypes";
+import type { CharacterExpression, CharacterExpressionTier, CharacterGameplayGroup } from "../planning/character-profile-types";
 
 export type CharacterRosterGroup = "supporting_cast" | "primary_cast";
 

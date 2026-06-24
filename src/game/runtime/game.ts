@@ -1,6 +1,6 @@
-import { characterIdentityCatalogBatches } from "@/content/characters/characterIdentityCatalog";
-import { buildRuntimeCharacters } from "@/content/characters/characterRuntimeProfiles";
-import { itemsChunked } from "@/content/items/items.chunked";
+import { characterIdentityCatalogBatches } from "@/content/characters/profiles";
+import { buildRuntimeCharacters } from "@/content/characters/runtime";
+import { itemsChunked } from "@/content/items/catalog";
 import kingdomsJson from "@/content/world/kingdoms.json";
 import marketplacesJson from "@/content/market/marketplaces.json";
 import professionsJson from "@/content/market/professions.json";

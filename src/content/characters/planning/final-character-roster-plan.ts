@@ -1,7 +1,7 @@
-import { getPlannedPortraitImageCount } from "./characterProfileTypes";
-import { primaryCastSeeds } from "./primaryCastSeeds";
-import { characterIdentityCatalogCastBatch01Summary } from "./characterIdentityCatalogCastBatch01";
-import type { FinalCharacterRosterPlan } from "./characterRosterTypes";
+import { getPlannedPortraitImageCount } from "./character-profile-types";
+import { primaryCastSeeds } from "./primary-cast-seeds";
+import { characterIdentityCatalogCastBatch01Summary } from "../profiles/batches/cast-batch-01";
+import type { FinalCharacterRosterPlan } from "./character-roster-types";
 
 export const catalogCharacterCount = 203;
 export const targetVisibleSupportingCastCount = 192;
