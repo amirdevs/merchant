@@ -7,7 +7,6 @@ import { contractDeadline, contractItemProgress, generatedContracts, resolveCont
 import { marketRumorLedger, seasonalMarketReport } from "@/lib/market-simulation";
 import { createBalanceReport } from "@/lib/balance";
 import { uiAssets } from "@/lib/ui-assets";
-import { RichQuestChainPanel } from "./RichQuestChainPanel";
 import { PlayableMerchantLoopPanel } from "./PlayableMerchantLoopPanel";
 import { EconomyWorldExpansionPanel } from "./EconomyWorldExpansionPanel";
 import { VerticalSlicePolishPanel } from "./VerticalSlicePolishPanel";
@@ -51,8 +50,6 @@ export function JournalView({ state, onBack, onNavigate, onSetContractStatus }: 
           <EconomyWorldExpansionPanel state={state} />
 
           <VerticalSlicePolishPanel state={state} />
-
-          <RichQuestChainPanel day={state.day} />
         </main>
 
         <aside className="grid content-start gap-4">
