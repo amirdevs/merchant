@@ -22,6 +22,7 @@ Current source-of-truth docs must be numbered in reading order:
 /docs/06_ECONOMY_AND_TRAVEL.md
 /docs/07_QUESTS_COMPANY_AND_UI.md
 /docs/08_UI_UX_DIRECTION.md
+/docs/09_RICH_QUEST_SYSTEM_BIBLE.md
 ```
 
 Only one roadmap doc exists:
@@ -46,6 +47,7 @@ Examples of log-only docs:
 
 - generated stock reviews
 - generated item icon audit reports
+- generated character portrait lock reports
 - generated playtest/balance reports
 - one-time phase notes
 - migration notes that are no longer source-of-truth
@@ -79,16 +81,34 @@ src/data/characters/legacyCharacterAuditPlan.ts
 src/data/characters/finalCharacterRosterPlan.ts
 ```
 
-The first identity-catalog batch lives in:
+The identity catalog batches live in:
 
 ```text
 src/data/characters/characterIdentityCatalogBatch01.ts
+src/data/characters/characterIdentityCatalogBatch02.ts
+src/data/characters/characterIdentityCatalogLegacyBatch01.ts
+src/data/characters/characterIdentityCatalogLegacyBatch02.ts
+src/data/characters/characterIdentityCatalogLegacyBatch03.ts
+src/data/characters/characterIdentityCatalogLegacyBatch04.ts
+src/data/characters/characterIdentityCatalog.ts
 ```
 
 Character portrait prompts must live beside item prompts under:
 
 ```text
 /docs/assets/character-prompts/
+```
+
+Final cropped runtime portraits must live under:
+
+```text
+/public/assets/portraits/characters/
+```
+
+The runtime portrait manifest and remake selectors live in:
+
+```text
+src/data/characters/characterPortraitManifest.ts
 ```
 
 Character prompt batches are batched by total portrait images, not by total characters. Example: 200 characters with 5 expression portraits each means 1000 portrait images to batch. A single character may have some expressions in one batch and the remaining expressions in another batch.
@@ -111,6 +131,8 @@ Each expression prompt must preserve the same identity anchors and change only e
 
 Do not generate portrait sheets until the final roster, per-character identity catalog, and portrait manifest batches have been reviewed. Portrait generation/cropping is expensive and should happen after weak old characters, useful new NPCs, and expression counts are planned.
 
+After cropping, run `pnpm audit:character-portraits` and review `docs/logs/character-portrait-lock-report.md` before treating portraits as locked.
+
 ## Current UI Direction
 
 Use `docs/ui_parts/` as the current UI visual reference. The target look is bright painterly fantasy merchant UI: sunlit coastal town scenes, parchment ledgers, carved dark wood shells, blue enamel title plates, brass trim, heraldic seals, gold status chips, polished NPC portraits, collectible item art, and beveled green/blue/red command buttons.
@@ -130,6 +152,7 @@ Common commands:
 pnpm dev
 pnpm build
 pnpm verify:current-state
+pnpm audit:character-portraits
 ```
 
 Do not use npm for installs or scripts unless the user explicitly asks.
@@ -155,16 +178,8 @@ pnpm verify:current-state
 pnpm build
 ```
 
-`verify:current-state` should include data, asset, item icon, stock, barter, economy, travel, quest, company, UI-integration, playtest checks, and reports.
+`verify:current-state` should include data, asset, item icon, character portrait, stock, barter, economy, travel, quest, character manifest, company, UI-integration, playtest checks, and reports.
 
 ## UI Architecture Rules
 
-- Tailwind CSS is the default styling system.
-- Keep `src/styles.css` minimal.
-- Do not add broad global override files such as `ui-cooking.css`, `ui-gamefit.css`, or similar patch-layer CSS.
-- Build each screen as real React components that fit the game viewport by design.
-- Use small modular React files. Avoid giant components, giant utility files, and multi-component dump files.
-- Use component-local CSS modules only when Tailwind cannot cleanly express the effect.
-- Do not introduce duplicate architecture roots. The current clean base uses `src/app`, `src/features`, `src/components`, `src/lib`, and `src/data`.
-- Do not recreate `src/sub-domains` unless the user explicitly asks.
-- Before returning a patch, check imports for stale references to deleted folders and removed CSS layers.
+Keep reusable UI components under `src/components` or feature-specific component folders. Keep pure data transforms, audits, and view models outside React components where possible.

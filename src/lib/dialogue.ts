@@ -1,4 +1,5 @@
 import type { Character, Kingdom, Marketplace } from "../data/types";
+import { remakeCharacterView } from "@/data/characters/characterPortraitManifest";
 import type { NpcRelation } from "./reputation";
 import { compactBiasText, routeLedger } from "./travel";
 
@@ -46,19 +47,28 @@ export type DialogueContext = {
 };
 
 export function customerIntro(character: Character) {
-  return character.dialogue?.who || `${character.name} is ready to trade.`;
+  const view = remakeCharacterView(character);
+  return `${view.name} steps up to the counter. ${view.marketFlavor}`;
 }
 
 export function customerPreference(character: Character) {
-  return character.dialogue?.preference || "No stated preference.";
+  const view = remakeCharacterView(character);
+  return view.tradePersonality || "They bargain by instinct and watch your ledger closely.";
 }
 
 export function customerPrompt(character: Character) {
-  return character.dialogue?.customQuestion || "What are you looking for?";
+  const view = remakeCharacterView(character);
+  if (view.roleTags.length) return `Ask about ${view.roleTags[0].replace(/[-_]/g, " ")}.`;
+  return "What is your place in this market?";
 }
 
 export function customerReply(character: Character) {
-  return character.dialogue?.customReply || customerPreference(character);
+  const view = remakeCharacterView(character);
+  return view.story;
+}
+
+function displayName(character: Character) {
+  return remakeCharacterView(character).name;
 }
 
 function strongestBias(character: Character, direction: "like" | "dislike") {
@@ -71,19 +81,20 @@ function strongestBias(character: Character, direction: "like" | "dislike") {
 }
 
 function relationshipReply(character: Character, relation: NpcRelation | null | undefined) {
+  const name = displayName(character);
   if (!relation || relation.trades === 0 && relation.failedOffers === 0) {
-    return `${character.name} does not know your ledger yet. Fair trades will build trust; repeated weak offers will drain patience.`;
+    return `${name} does not know your ledger yet. Fair trades will build trust; repeated weak offers will drain patience.`;
   }
   const tradeLine = relation.trades ? `${relation.trades} completed trade${relation.trades === 1 ? "" : "s"}` : "no completed trades";
   const failedLine = relation.failedOffers ? `${relation.failedOffers} recent failed offer${relation.failedOffers === 1 ? "" : "s"}` : "no recent failed offers";
-  return `${character.name} remembers ${tradeLine} and ${failedLine}. Trust ${relation.trust}, mood ${relation.mood}, patience ${relation.patience}.`;
+  return `${name} remembers ${tradeLine} and ${failedLine}. Trust ${relation.trust}, mood ${relation.mood}, patience ${relation.patience}.`;
 }
 
 function secretReply(character: Character, context: DialogueContext) {
-  const secrets = context.relation?.secretsUnlocked || [];
-  if (secrets.includes("underworld-contact")) return `${character.name} names a discreet intermediary who watches for contraband and forged papers after sunset.`;
-  if (secrets.includes("trusted-route")) return `${character.name} shares a favored route: repeat journeys become safer as landmarks, patrols, and reliable stops become familiar.`;
-  return `${character.name} is not ready to share anything private yet.`;
+  const name = displayName(character);
+  if (context.relation?.secretsUnlocked?.includes("underworld-contact")) return `${name} names a discreet intermediary who watches for contraband and forged papers after sunset.`;
+  if (context.relation?.secretsUnlocked?.includes("trusted-route")) return `${name} shares a favored route: repeat journeys become safer as landmarks, patrols, and reliable stops become familiar.`;
+  return `${name} is not ready to share anything private yet.`;
 }
 
 function routeReply(context: DialogueContext) {
@@ -107,20 +118,23 @@ function riskReply(context: DialogueContext) {
 }
 
 function stockReply(character: Character) {
+  const name = displayName(character);
   const pools = (character.obtainableItems || []).slice(0, 5);
   const poolText = pools.length ? pools.map((pool) => `${pool.tag} (${pool.quantityMin}-${pool.quantityMax})`).join(", ") : "their stock is unpredictable";
   const visibleStock = character.inventory.length ? `${character.inventory.length} stock stack${character.inventory.length === 1 ? "" : "s"} visible now` : "no visible stock";
-  return `${character.name} can usually source ${poolText}; ${visibleStock}.`;
+  return `${name} can usually source ${poolText}; ${visibleStock}.`;
 }
 
 function haggleReply(character: Character, relation: NpcRelation | null | undefined) {
+  const name = displayName(character);
   const pressure = relation?.failedOffers ? `You have ${relation.failedOffers} failed offer${relation.failedOffers === 1 ? "" : "s"} in memory, so patience is tighter.` : "No failed offers are weighing on this conversation yet.";
-  return `${character.name} is ${character.frugalPercent}% frugal and haggles at ${character.hagglePercent || 0}%. Close offers keep the conversation alive; insulting ones damage trust. ${pressure}`;
+  return `${name} is ${character.frugalPercent}% frugal and haggles at ${character.hagglePercent || 0}%. Close offers keep the conversation alive; insulting ones damage trust. ${pressure}`;
 }
 
 export function dialogueChoices(character: Character, context: DialogueContext = {}, node: DialogueNodeId = "root"): DialogueChoice[] {
   const marketName = context.market?.name || "this market";
   const day = context.day ? `day ${context.day}` : "today";
+  const name = displayName(character);
   const choices: DialogueChoice[] = [
     {
       id: "who",
@@ -130,7 +144,7 @@ export function dialogueChoices(character: Character, context: DialogueContext =
     },
     {
       id: "preference",
-      label: "What are you looking for?",
+      label: "What kind of trade do you favor?",
       reply: `${customerPreference(character)} Strong likes: ${strongestBias(character, "like")}`,
       tone: "business",
     },
@@ -191,25 +205,25 @@ export function dialogueChoices(character: Character, context: DialogueContext =
     {
       id: "ask-price",
       label: "Name your price for those goods.",
-      reply: `${character.name} studies what you selected from their stock.`,
+      reply: `${name} studies what you selected from their stock.`,
       tone: "business",
     },
     {
       id: "ask-offer",
       label: "Make me a counteroffer.",
-      reply: `${character.name} looks over your side of the scale.`,
+      reply: `${name} looks over your side of the scale.`,
       tone: "business",
     },
     {
       id: "barter",
       label: "Let us trade.",
-      reply: `${character.name} turns toward the scales.`,
+      reply: `${name} turns toward the scales.`,
       tone: "business",
     },
     {
       id: "goodbye",
       label: "Goodbye.",
-      reply: `${character.name} nods farewell.`,
+      reply: `${name} nods farewell.`,
       tone: "friendly",
     },
   ];
@@ -221,7 +235,7 @@ export function dialogueChoices(character: Character, context: DialogueContext =
       tone: "gossip",
     });
   }
-  const back: DialogueChoice = { id: "back", label: "Back to main topics.", reply: `${character.name} waits for your next question.`, nextNode: "root", tone: "friendly" };
+  const back: DialogueChoice = { id: "back", label: "Back to main topics.", reply: `${name} waits for your next question.`, nextNode: "root", tone: "friendly" };
   if (node === "personal") return choices.filter((choice) => ["who", "custom", "relationship", "secret"].includes(choice.id)).concat(back);
   if (node === "trade") return choices.filter((choice) => ["preference", "stock", "haggle"].includes(choice.id)).concat(back);
   if (node === "world") return choices.filter((choice) => ["market-demand", "market-discounts", "route-gossip", "local-law", "risk"].includes(choice.id)).concat(back);
@@ -231,7 +245,7 @@ export function dialogueChoices(character: Character, context: DialogueContext =
       workChoices.push({
         id: "custom",
         label: `Tell me about ${context.market.quest.name}.`,
-        reply: context.market.quest.todo || `${character.name} points you toward the local notice board.`,
+        reply: context.market.quest.todo || `${name} points you toward the local notice board.`,
         effect: "accept-local-quest",
         tone: "business",
       });
@@ -245,10 +259,10 @@ export function dialogueChoices(character: Character, context: DialogueContext =
     return workChoices.concat(back);
   }
   return [
-    { id: "topics-personal", label: "Let us talk about you.", reply: `${character.name} opens up cautiously.`, nextNode: "personal", tone: "friendly" },
-    { id: "topics-trade", label: "Tell me about your trading.", reply: `${character.name} turns the conversation toward goods and prices.`, nextNode: "trade", tone: "business" },
-    { id: "topics-world", label: "What is happening in the world?", reply: `${character.name} shares local news and road gossip.`, nextNode: "world", tone: "gossip" },
-    { id: "topics-work", label: "Do you know of any work?", reply: `${character.name} considers the notices and rumors around ${marketName}.`, nextNode: "work", tone: "business" },
+    { id: "topics-personal", label: "Let us talk about you.", reply: `${name} opens up cautiously.`, nextNode: "personal", tone: "friendly" },
+    { id: "topics-trade", label: "Tell me about your trading.", reply: `${name} turns the conversation toward goods and prices.`, nextNode: "trade", tone: "business" },
+    { id: "topics-world", label: "What is happening in the world?", reply: `${name} shares local news and road gossip.`, nextNode: "world", tone: "gossip" },
+    { id: "topics-work", label: "Do you know of any work?", reply: `${name} considers the notices and rumors around ${marketName}.`, nextNode: "work", tone: "business" },
     ...choices.filter((choice) => choice.id === "goodbye"),
   ];
 }

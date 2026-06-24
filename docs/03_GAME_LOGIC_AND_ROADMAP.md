@@ -14,6 +14,7 @@ This is the only roadmap doc. Keep current gameplay status, next UI work, charac
 - Quest/runtime helpers currently support typed state transactions, contracts, item consumption, rewards, market unlocks, and dialogue logs, but quest content must be overhauled for the remake.
 - Company helpers support warehouses, shipments, insurance, cash, valuation, agents, shares, and dividends.
 - The Strategy Planner exposes the first playable UI integration pass for trade, cargo, routes, quests/contracts, company state, and action blockers.
+- Character portrait runtime integration now has a manifest, selectors, tests, and an audit gate for the final cropped portrait assets.
 
 ## Confirmed remake direction
 
@@ -51,6 +52,7 @@ src/data/characters/characterIdentityCatalogLegacyBatch02.ts
 src/data/characters/characterIdentityCatalogLegacyBatch03.ts
 src/data/characters/characterIdentityCatalogLegacyBatch04.ts
 src/data/characters/characterIdentityCatalog.ts
+src/data/characters/characterPortraitManifest.ts
 ```
 
 Current planning targets:
@@ -86,7 +88,7 @@ Character work should move in larger useful chunks:
 5. crop and clean the generated sheets into runtime portrait assets;
 6. integrate remake identities and portraits into market, barter, quest, and company UI.
 
-## Portrait generation and crop gate
+## Portrait generation, crop, and runtime gate
 
 Portrait generation uses the final `docs/assets/character-prompts/characters-*.json` files.
 
@@ -118,6 +120,40 @@ The crop/integration gate passes only when:
 all files are valid PNGs
 all filenames match JSON outputFile values
 ```
+
+The runtime manifest and audit now live in:
+
+```text
+src/data/characters/characterPortraitManifest.ts
+src/data/characters/characterPortraitManifest.test.ts
+scripts/audit-character-portraits.cjs
+```
+
+The generated portrait lock report is:
+
+```text
+docs/logs/character-portrait-lock-report.md
+```
+
+## Character runtime integration status
+
+Phase 1 connects the cropped portrait set to runtime selectors instead of requiring screens to guess file paths.
+
+Implemented Phase 1 scope:
+
+1. Runtime manifest imports the final `characters-*.json` prompt files and exposes 722 output-file records.
+2. Character identity profiles are connected to portrait expressions by `characterId`.
+3. Legacy generated indexes map to `npc-legacy-###` identities while keeping mechanical indexes stable.
+4. Runtime portrait paths resolve to `/assets/portraits/characters/*.png`.
+5. Market hub, customer dossier, barter screen, and dialogue helpers use remake-facing names, professions, stories, market flavor, role tags, and portraits.
+6. The audit checks prompt count/order, missing portraits, orphan portraits, invalid PNG/LFS pointer files, nonsquare crops, remaining pure magenta labels, duplicate display names, old generated-name leaks, and identity catalog story/tag field coverage.
+
+Remaining character/UI follow-up after Phase 1:
+
+- Continue replacing old visible flavor in screens not touched by the first runtime integration pass.
+- Use expression switching more deeply once quest choices and barter outcomes drive richer emotional states.
+- Add important useful-new-NPC placement into the first vertical-slice region when the quest system needs them.
+- Retire old portrait asset paths after the new screens no longer need fallbacks.
 
 ## Quest overhaul direction
 
@@ -185,18 +221,18 @@ Do not implement 100 quests first. Build the quest system and a small vertical s
 
 ## Quest Overhaul V1 milestone
 
-The first quest overhaul milestone should deliver:
+The next large implementation phase should deliver:
 
 1. New quest schema and state model.
-2. New rich quest bible and writing rules.
-3. Main campaign act structure.
+2. New rich quest bible and writing rules reflected in source quest data.
+3. Main campaign act structure in data files.
 4. First 25 main quest drafts.
 5. First 10 NPC questline outlines.
 6. First 30 side quest concepts.
 7. First 20 repeatable contract templates.
 8. Quest journal UI direction that shows story, stakes, choices, and consequences.
 9. Legacy quest data deprecated from creative/runtime direction.
-10. First vertical-slice quest chain implemented and testable.
+10. First vertical-slice quest chain prepared for implementation.
 
 Target implementation split:
 
@@ -216,7 +252,7 @@ Exact file names can change during implementation, but content, state, effects, 
 
 ## First vertical-slice quest chain
 
-After portraits are cropped and integrated, the first playable quest chain should be:
+After portraits are integrated, the first playable quest chain should be:
 
 1. **First Honest Profit** - teach trade margins through a story-framed sale.
 2. **Bread Before Dawn** - solve an urgent shortage with multiple approaches.
@@ -240,20 +276,14 @@ save/load persistence
 quest journal readability
 ```
 
-## Post-crop to vertical-slice roadmap
+## Large implementation roadmap from here
 
-After cropped portraits are good, the game roadmap is:
+Keep these phases large so the user does not need constant ZIP/unZIP work.
 
-1. **Portrait asset lock** - verify all 722 portraits exist, are valid, and have no visible filename labels.
-2. **Runtime portrait manifest** - connect each character expression to the correct file path.
-3. **Character UI integration** - show new portraits/names/stories in markets, barter, dialogue, quests, and company screens.
-4. **Quest Overhaul V1** - replace old quest content direction with the new rich merchant quest system.
-5. **First vertical-slice quest chain** - implement the five-quest chain listed above.
-6. **Playable merchant loop v1** - start in one town, meet NPCs, buy goods, travel, sell for profit, complete a quest, unlock company progress, and save.
-7. **Relationship and consequence pass** - make NPC trust, city reputation, market prices, and route access react to quest choices.
-8. **Company progression pass** - register company, lease warehouse, hire first clerk, and unlock caravan papers.
-9. **Balance/playtest pass** - tune profit, deadlines, travel cost, risk, quest rewards, and reputation gains.
-10. **UI/UX polish pass** - make the loop readable, beautiful, and easy to understand.
+1. **Phase 2 - Rich Quest System Foundation + Content Pack**: schema, states, requirements, rewards, consequences, effect engine, quest selectors, journal view models, 25 main quest drafts, 10 NPC questlines, 30 side quests, 20 repeatable contract templates, tests, and docs updates.
+2. **Phase 3 - First Playable Story Chain Pack**: implement the first five-quest chain as actual gameplay with acceptance, stages, choices, outcomes, persistence, dialogue text, expression switching, and tests.
+3. **Phase 4 - Playable Merchant Loop v1 Pack**: tune a two/three-town vertical-slice region with 10-20 items, 10-15 important NPCs, travel, profit routes, quest consequences, first company unlock, onboarding, and a manual playtest report.
+4. **Phase 5 - Consequence, Balance, and UI Polish Pack**: tune profit/rewards/deadlines/travel risk, show consequences clearly, polish quest/cards/market/barter/company UI, fix save/load rough edges, and prepare expansion.
 
 ## What is done / what remains
 
@@ -267,13 +297,15 @@ Done:
 - legacy identity batches 001-004, 192 characters / 528 portrait prompts;
 - normalized character prompt files, 61 JSON files / 722 portrait prompts;
 - approved portrait style gate: charming, slightly cartoony, fantasy ancestry variety, single flat green background, crop-safe spacing;
+- cropped portrait assets placed under `public/assets/portraits/characters/`;
+- runtime character portrait manifest, selectors, audit script, and focused manifest tests;
+- first UI integration pass for remake character names, portraits, stories, market flavor, and dialogue helpers;
 - confirmed quest overhaul direction: original rich merchant stories, main campaign goals, character questlines, consequences, and multiple endings.
 
 Remaining:
 
-- review/crop/clean all generated portrait sheets into `public/assets/portraits/characters/`;
-- wire remake character identity and portraits into the runtime UI;
-- add audits for missing portraits, duplicate display names, original-name leaks, missing stories, missing role tags, and orphan files;
+- run and review `pnpm audit:character-portraits` after `git lfs pull` on the local machine;
+- continue removing old visible flavor from screens not covered by Phase 1;
 - deprecate old reference quest content from gameplay direction;
 - create the new quest catalog and state/effect model;
 - implement the first five-quest vertical-slice chain;

@@ -4,12 +4,14 @@ const checks = [
   ["pnpm", ["audit:data"]],
   ["pnpm", ["audit:assets"]],
   ["pnpm", ["audit:item-icons"]],
+  ["pnpm", ["audit:character-portraits"]],
   ["pnpm", ["audit:stock"]],
   ["pnpm", ["review:stock"]],
   ["pnpm", ["test:barter"]],
   ["pnpm", ["test:economy"]],
   ["pnpm", ["test:travel"]],
   ["pnpm", ["test:quests"]],
+  ["pnpm", ["test:characters"]],
   ["pnpm", ["test:company"]],
   ["pnpm", ["test:ui-integration"]],
   ["pnpm", ["test:playtest"]],
@@ -40,9 +42,11 @@ for (const [command, args] of checks) {
 console.log("\nCurrent-state verification passed.");
 console.log("Review docs/logs/profession-stock-review.md before final stock/profile approval.");
 console.log("Review docs/logs/item-icon-lock-report.md before final item/icon approval.");
+console.log("Review docs/logs/character-portrait-lock-report.md before final character portrait approval.");
 console.log("Economy helpers are covered by src/lib/economy.test.ts.");
 console.log("Travel planning helpers are covered by src/lib/travel-loop.test.ts.");
 console.log("Quest runtime helpers are covered by src/lib/quest-runtime.test.ts.");
+console.log("Character portrait manifest helpers are covered by src/data/characters/characterPortraitManifest.test.ts.");
 console.log("Company, warehouse, shipment, and stock helpers are covered by src/lib/company.test.ts.");
 console.log("UI integration view models are covered by src/lib/ui-integration.test.ts.");
 console.log("Playtest/balance checklist helpers are covered by src/lib/playtest-balance.test.ts.");

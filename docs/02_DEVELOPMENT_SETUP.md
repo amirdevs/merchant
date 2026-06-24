@@ -38,6 +38,7 @@ Targeted validation:
 pnpm audit:data
 pnpm audit:assets
 pnpm audit:item-icons
+pnpm audit:character-portraits
 pnpm audit:stock
 pnpm review:stock
 pnpm playtest:balance
@@ -45,6 +46,7 @@ pnpm test:barter
 pnpm test:economy
 pnpm test:travel
 pnpm test:quests
+pnpm test:characters
 pnpm test:company
 pnpm test:ui-integration
 pnpm test:playtest
@@ -58,8 +60,23 @@ Important reports:
 
 - stock review
 - item icon lock report
+- character portrait lock report
 - item icon manual review CSV
 - playtest/balance report
+
+## Character portrait validation
+
+After cropped portraits are in `public/assets/portraits/characters/`, run:
+
+```powershell
+pnpm audit:character-portraits
+```
+
+The audit reads the final prompt JSON files, checks the runtime portrait folder, rejects missing/orphan files, catches Git LFS pointer files that were not pulled, checks square PNG dimensions, scans for remaining pure magenta `#FF00FF` filename-label pixels, and writes:
+
+```text
+docs/logs/character-portrait-lock-report.md
+```
 
 ## Git hygiene
 

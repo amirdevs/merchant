@@ -1,5 +1,6 @@
 import { Building2, Handshake, Map, PackageSearch, ScrollText, ShieldAlert, UserRoundPlus } from "lucide-react";
 import type { Character } from "@/data/types";
+import { remakeCharacterView } from "@/data/characters/characterPortraitManifest";
 import type { GameView } from "@/app/types";
 import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui";
 import { actionChecklist, companyUiPanel, inventoryUiPanel, questUiCard, travelUiCard, type UiMessage } from "@/lib/ui-integration";
@@ -18,6 +19,7 @@ export function StrategyDashboardView({ state, onNavigate, onSelectCustomer, onN
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
   const customer = selectedCharacter(state);
+  const customerView = customer ? remakeCharacterView(customer) : null;
   const inventory = inventoryUiPanel(state.playerInventory, items);
   const company = companyUiPanel(state.company, items);
   const marketClock = marketCloseStatus(state.timeOfDayMinutes);
@@ -66,16 +68,16 @@ export function StrategyDashboardView({ state, onNavigate, onSelectCustomer, onN
       <div className="grid min-h-0 flex-1 gap-3 xl:grid-cols-[minmax(0,1fr)_420px]">
         <div className="grid min-h-0 gap-3 overflow-auto pr-1 xl:grid-cols-2">
           <Panel title={<span className="inline-flex items-center gap-2"><Handshake size={18} /> Trade Desk</span>} variant="parchment">
-            {customer ? (
+            {customer && customerView ? (
               <div className="grid gap-3 text-[#3b260f]">
                 <div className="grid grid-cols-2 gap-2">
-                  <StatChip label="Customer" value={customer.name} />
-                  <StatChip label="Profession" value={customer.profession} />
+                  <StatChip label="Customer" value={customerView.name} />
+                  <StatChip label="Profession" value={customerView.profession} />
                   <StatChip label="Your Offer" value={money(selectedPlayerOffer)} />
                   <StatChip label="Their Offer" value={money(selectedNpcOffer)} />
                 </div>
                 <p className="rounded-sm border border-[#9a7138]/55 bg-[#fff6d7]/60 p-2 text-sm font-bold">
-                  {state.message || "Use Ask Price and Ask Offer on the barter table to test the current deal."}
+                  {state.message || customerView.marketFlavor || "Use Ask Price and Ask Offer on the barter table to test the current deal."}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Button onClick={() => onNavigate("barter")}><Handshake size={16} /> Open Barter</Button>

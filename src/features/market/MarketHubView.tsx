@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Building2, ClipboardList, Gavel, Handshake, Map, Menu, PackageSearch, ScrollText, UserRoundPlus } from "lucide-react";
 import type { Character, Marketplace } from "@/data/types";
+import { remakeCharacterPortraitAsset, remakeCharacterView } from "@/data/characters/characterPortraitManifest";
 import type { GameState } from "@/lib/game";
 import { eventBiases, eventIsActive, nextEventDay } from "@/lib/events";
 import { money } from "@/lib/format";
@@ -10,6 +11,7 @@ import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui
 
 export function MarketHubView({ state, market, people, onNavigate, onSelectCustomer, onNextCustomer, onPackup }: { state: GameState; market: Marketplace; people: Character[]; onNavigate: (view: GameView) => void; onSelectCustomer: (person: Character) => void; onNextCustomer: () => void; onPackup: () => void; onUnavailable: (message: string) => void }) {
   const currentCustomer = people.find((person) => person.index === state.selectedCharacterIndex) || null;
+  const currentCustomerView = currentCustomer ? remakeCharacterView(currentCustomer) : null;
   const seenToday = state.customerQueueDay === state.day ? new Set(state.seenCharacterIndexes || []) : new Set<number>();
   const waitingPeople = people.filter((person) => person.index !== currentCustomer?.index && !seenToday.has(person.index)).slice(0, 3);
   const eventActive = eventIsActive(market, state.day);
@@ -46,17 +48,19 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
           </Panel>
         </div>
 
-        <div className="absolute right-4 top-auto bottom-24 w-[28rem] max-w-[40vw]">
+        <div className="absolute right-4 top-auto bottom-24 w-[30rem] max-w-[42vw]">
           <Panel className="p-4" title="At Your Stall" variant="parchment">
-            {currentCustomer ? (
+            {currentCustomer && currentCustomerView ? (
               <div className="grid gap-3">
-                <div className="rounded-sm border-2 border-[#c89d55] bg-[#fff4c5]/85 p-3 shadow-inner">
-                  <p className="text-[0.68rem] font-black uppercase tracking-[0.18em] text-[#7b5726]">Current Customer</p>
-                  <h2 className="font-display text-3xl leading-none text-[#2b1a0b]">{currentCustomer.name}</h2>
-                  <p className="text-sm font-bold text-[#5b3b17]">{currentCustomer.profession}</p>
-                  <p className="mt-2 text-sm leading-snug text-[#3b260f]">
-                    {currentCustomer.isMerchant ? "A trader studies your shelves and waits for terms." : "They step up to the counter, watching your hands and the goods on display."}
-                  </p>
+                <div className="grid grid-cols-[5rem_minmax(0,1fr)] gap-3 rounded-sm border-2 border-[#c89d55] bg-[#fff4c5]/85 p-3 shadow-inner">
+                  <CustomerPortrait person={currentCustomer} />
+                  <div className="min-w-0">
+                    <p className="text-[0.68rem] font-black uppercase tracking-[0.18em] text-[#7b5726]">Current Customer</p>
+                    <h2 className="truncate font-display text-3xl leading-none text-[#2b1a0b]">{currentCustomerView.name}</h2>
+                    <p className="truncate text-sm font-bold text-[#5b3b17]">{currentCustomerView.profession}</p>
+                    <p className="mt-2 line-clamp-3 text-sm leading-snug text-[#3b260f]">{currentCustomerView.marketFlavor}</p>
+                    <p className="mt-2 truncate text-[0.68rem] font-black uppercase tracking-wide text-[#7b5726]">{currentCustomerView.roleTags.slice(0, 3).join(" / ") || "market regular"}</p>
+                  </div>
                 </div>
                 <Button size="lg" onClick={() => onSelectCustomer(currentCustomer)}>
                   <Handshake size={18} /> Barter With Customer
@@ -66,16 +70,19 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
                 </Button>
                 {waitingPeople.length ? (
                   <div className="grid gap-1.5">
-                    {waitingPeople.map((person) => (
-                      <LedgerRow
-                        key={person.index}
-                        className="py-1.5"
-                        title={person.name}
-                        subtitle={person.profession}
-                        trailing={<span className="text-[0.62rem] font-bold uppercase tracking-wide text-[#75501f]">Waiting</span>}
-                        onClick={() => onSelectCustomer(person)}
-                      />
-                    ))}
+                    {waitingPeople.map((person) => {
+                      const view = remakeCharacterView(person);
+                      return (
+                        <LedgerRow
+                          key={person.index}
+                          className="py-1.5"
+                          title={view.name}
+                          subtitle={`${view.profession} - ${view.marketFlavor}`}
+                          trailing={<span className="text-[0.62rem] font-bold uppercase tracking-wide text-[#75501f]">Waiting</span>}
+                          onClick={() => onSelectCustomer(person)}
+                        />
+                      );
+                    })}
                   </div>
                 ) : null}
               </div>
@@ -114,6 +121,16 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
         </div>
       </div>
     </ScreenFrame>
+  );
+}
+
+function CustomerPortrait({ person }: { person: Character }) {
+  const view = remakeCharacterView(person);
+  const src = remakeCharacterPortraitAsset(person);
+  return (
+    <span className="grid h-20 w-20 place-items-center overflow-hidden rounded-sm border border-[#9a7138]/70 bg-[#f2ddb1] text-[#26170a] shadow-inner">
+      {src ? <img className="h-full w-full object-cover object-top" src={src} alt={view.name} /> : <UserRoundPlus />}
+    </span>
   );
 }
 

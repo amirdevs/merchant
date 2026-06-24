@@ -1,6 +1,7 @@
 import { MessageSquare, Search, UserRound } from "lucide-react";
 import type { Character } from "@/data/types";
 import { portraitAsset } from "@/lib/assets";
+import { remakeCharacterPortraitAsset, remakeCharacterView } from "@/data/characters/characterPortraitManifest";
 import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { relationFor } from "@/lib/reputation";
@@ -14,6 +15,7 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
   const selectedRelation = relationFor(state.npcRelations, selected);
+  const selectedView = selected ? remakeCharacterView(selected) : null;
   const recentNotes = selected ? state.dialogueLog.filter((entry) => entry.characterIndex === selected.index).slice(0, 5) : [];
 
   return (
@@ -30,46 +32,53 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
             </div>
           </div>
           <div className="overflow-auto rounded-md border border-[#9a7138]/65 bg-[#fff6d7]/45 shadow-inner shadow-[#6c4418]/20">
-            <div className="grid min-w-[760px] grid-cols-[78px_1.2fr_1fr_1fr_100px_100px_92px] gap-2 border-b border-[#9a7138]/55 bg-[#5b3a18]/20 px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#75501f]">
-              <span>Portrait</span><span>Name</span><span>Profession</span><span>Talk Style</span><span>Likes</span><span>Stock</span><span>Status</span>
+            <div className="grid min-w-[860px] grid-cols-[78px_1.15fr_0.9fr_1.35fr_1fr_100px_92px] gap-2 border-b border-[#9a7138]/55 bg-[#5b3a18]/20 px-3 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#75501f]">
+              <span>Portrait</span><span>Name</span><span>Profession</span><span>Story Hook</span><span>Role Tags</span><span>Stock</span><span>Status</span>
             </div>
-            {people.map((person) => (
-              <button
-                key={person.index}
-                className={`grid min-w-[760px] grid-cols-[78px_1.2fr_1fr_1fr_100px_100px_92px] items-center gap-2 border-b border-[#9a7138]/35 px-3 py-2 text-left text-sm text-[#2a1a0c] transition hover:bg-[#f7e5bc]/70 ${selected?.index === person.index ? "bg-[#dcb96d]/45" : "bg-transparent"}`}
-                onClick={() => onSelect(person)}
-              >
-                <Portrait person={person} />
-                <strong className="truncate font-display text-lg leading-none text-[#26170a]">{person.name}</strong>
-                <span className="truncate">{person.profession}</span>
-                <span className="truncate text-[#725331]">{person.dialogue?.preference || person.dialogue?.customQuestion || "No notes"}</span>
-                <span>{person.bias.filter((bias) => bias.percent > 0).length || "-"}</span>
-                <span>{person.inventory.length || "-"}</span>
-                <span className="rounded-full border border-[#9a7138]/60 bg-[#fff6d7]/70 px-2 py-1 text-center text-[0.68rem] font-bold uppercase tracking-wide text-[#75501f]">
-                  {canUseBlackMarket(state.law, relationFor(state.npcRelations, person)?.trust || 0, npcRoles(person).includes("thief")) ? "Black Market" : "Normal"}
-                </span>
-              </button>
-            ))}
+            {people.map((person) => {
+              const view = remakeCharacterView(person);
+              return (
+                <button
+                  key={person.index}
+                  className={`grid min-w-[860px] grid-cols-[78px_1.15fr_0.9fr_1.35fr_1fr_100px_92px] items-center gap-2 border-b border-[#9a7138]/35 px-3 py-2 text-left text-sm text-[#2a1a0c] transition hover:bg-[#f7e5bc]/70 ${selected?.index === person.index ? "bg-[#dcb96d]/45" : "bg-transparent"}`}
+                  onClick={() => onSelect(person)}
+                >
+                  <Portrait person={person} />
+                  <strong className="truncate font-display text-lg leading-none text-[#26170a]">{view.name}</strong>
+                  <span className="truncate">{view.profession}</span>
+                  <span className="line-clamp-2 text-[#725331]">{view.marketFlavor}</span>
+                  <span className="truncate text-[#725331]">{view.roleTags.slice(0, 3).join(", ") || "market regular"}</span>
+                  <span>{person.inventory.length || "-"}</span>
+                  <span className="rounded-full border border-[#9a7138]/60 bg-[#fff6d7]/70 px-2 py-1 text-center text-[0.68rem] font-bold uppercase tracking-wide text-[#75501f]">
+                    {canUseBlackMarket(state.law, relationFor(state.npcRelations, person)?.trust || 0, npcRoles(person).includes("thief")) ? "Black Market" : "Normal"}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </Panel>
         <Panel title="Customer Dossier" variant="parchment">
-          {selected ? (
+          {selected && selectedView ? (
             <div>
               <div className="flex justify-center"><Portrait person={selected} large /></div>
-              <h2 className="mt-3 text-center font-display text-3xl text-[#26170a]">{selected.name}</h2>
-              <p className="text-center font-bold text-[#75501f]">{selected.profession}</p>
+              <h2 className="mt-3 text-center font-display text-3xl text-[#26170a]">{selectedView.name}</h2>
+              <p className="text-center font-bold text-[#75501f]">{selectedView.profession}</p>
+              <p className="mt-2 text-center text-xs font-black uppercase tracking-[0.16em] text-[#9a7138]">
+                {[selectedView.ancestryOrSpecies, ...selectedView.magicalTraits].filter(Boolean).join(" / ") || "Original remake identity"}
+              </p>
               <dl className="mt-3 grid grid-cols-2 gap-2">
                 <StatChip label="Wealth" value="Budget hint" />
-                <StatChip label="Trade style" value="Preference hint" />
-                <StatChip label="Likes" value="Known tags" />
-                <StatChip label="Dislikes" value="Known tags" />
+                <StatChip label="Trade style" value={selectedView.tradePersonality} />
+                <StatChip label="Role tags" value={selectedView.roleTags.slice(0, 2).join(", ") || "None"} />
+                <StatChip label="Story hooks" value={selectedView.gameplayGroups.slice(0, 2).join(", ") || "Market"} />
                 <StatChip label="Favors" value={selectedRelation?.favors || 0} />
                 <StatChip label="Secrets" value={selectedRelation?.secretsUnlocked?.length || 0} />
               </dl>
               <div className="mt-3 grid grid-cols-2 gap-2 text-sm text-[#3b260f]">
-                {(selected.obtainableItems || []).slice(0, 4).map((pool) => <span key={pool.tag} className="rounded border border-[#9a7138]/45 bg-[#fff6d7]/55 px-2 py-1">{pool.tag}</span>)}
+                {selectedView.roleTags.slice(0, 4).map((tag) => <span key={tag} className="rounded border border-[#9a7138]/45 bg-[#fff6d7]/55 px-2 py-1">{tag}</span>)}
               </div>
-              <p className="mt-3 rounded-md border border-[#9a7138]/60 bg-[#fff6d7]/45 p-3 text-sm text-[#3b260f]">{selected.dialogue?.who || selected.dialogue?.customReply || "A market customer waiting to bargain."}</p>
+              <p className="mt-3 rounded-md border border-[#9a7138]/60 bg-[#fff6d7]/45 p-3 text-sm leading-snug text-[#3b260f]">{selectedView.story}</p>
+              <p className="mt-2 rounded-md border border-[#9a7138]/60 bg-[#fff6d7]/45 p-3 text-sm leading-snug text-[#3b260f]">{selectedView.marketFlavor}</p>
               <div className="mt-4 grid max-h-80 gap-2 overflow-auto pr-1">
                 {dialogueChoices(selected, { market, markets: marketplaces, kingdom, relation: selectedRelation, day: state.day }, state.dialogueNodes[String(selected.index)] || "root").filter((choice) => !["ask-price", "ask-offer", "barter", "goodbye"].includes(choice.id)).map((choice) => (
                   <Button key={`${state.dialogueNodes[String(selected.index)] || "root"}-${choice.id}`} subtle onClick={() => onSpeak(selected, choice.label, choice.reply, choice.nextNode, choice.effect)}><MessageSquare size={16} /> {choice.label}</Button>
@@ -93,10 +102,11 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
 }
 
 function Portrait({ person, large }: { person: Character; large?: boolean }) {
-  const src = portraitAsset(person.portraitFile);
+  const src = remakeCharacterPortraitAsset(person) || portraitAsset(person.portraitFile);
+  const view = remakeCharacterView(person);
   return (
     <span className={`${large ? "h-40 w-40" : "h-12 w-12"} grid shrink-0 place-items-center overflow-hidden rounded-md border border-[#9a7138]/70 bg-[#f2ddb1] text-[#26170a]`}>
-      {src ? <img className="h-full w-full object-cover" src={src} alt="" /> : <UserRound />}
+      {src ? <img className="h-full w-full object-cover object-top" src={src} alt={view.name} /> : <UserRound />}
     </span>
   );
 }

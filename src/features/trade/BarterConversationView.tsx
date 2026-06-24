@@ -1,12 +1,13 @@
 import { useState, type ReactNode } from "react";
 import { Handshake, HelpCircle, MessageCircle } from "lucide-react";
 import type { Character, InventoryEntry } from "@/data/types";
+import { remakeCharacterPortraitAsset, remakeCharacterView, tradePortraitExpression } from "@/data/characters/characterPortraitManifest";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { moodLabel, patienceLabel, relationFor, trustLabel, ultimatumActive } from "@/lib/reputation";
 import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
 import { roleLabel } from "@/lib/npc-behavior";
 import type { MoveAmount } from "@/lib/inventory";
-import { portraitAsset, townAsset } from "@/lib/assets";
+import { townAsset } from "@/lib/assets";
 import { money } from "@/lib/format";
 import { uiAssets } from "@/lib/ui-assets";
 import { InventoryPanel } from "@/components/InventoryPanel";
@@ -50,6 +51,8 @@ export function BarterConversationView({ state, character, playerOffer, characte
   }, dialogueNode) : [];
   const recentNotes = character ? state.dialogueLog.filter((entry) => entry.characterIndex === character.index).slice(0, 3) : [];
   const dealReaction = reactionForAdvantage(advantage, playerOffer, characterOffer);
+  const characterView = character ? remakeCharacterView(character, tradePortraitExpression(advantage, relation?.mood || 0)) : null;
+  const portraitSrc = character ? remakeCharacterPortraitAsset(character, tradePortraitExpression(advantage, relation?.mood || 0)) : "";
   const chooseDialogue = (choice: ReturnType<typeof dialogueChoices>[number]) => {
     if (choice.id === "ask-price") onAskPrice();
     else if (choice.id === "ask-offer" || choice.id === "barter") onAskOffer();
@@ -75,7 +78,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
           }}
         >
           <div className="pointer-events-none absolute inset-1 rounded-sm border border-[#f7d987]/30" />
-          {character ? (
+          {character && characterView ? (
             <div className="relative z-10 flex h-full min-h-0 flex-col p-2">
               <div className="absolute right-3 top-3 z-20 rounded-sm border border-[#d0a65a]/80 bg-[#160d05]/85 px-3 py-2 text-right text-[#fff3bd] shadow-lg backdrop-blur-sm">
                 <strong className="block font-display text-lg leading-none">{sceneLight.time}</strong>
@@ -83,16 +86,17 @@ export function BarterConversationView({ state, character, playerOffer, characte
               </div>
 
               <div className="mx-auto grid h-[38%] min-h-[13rem] w-[44%] min-w-[12rem] max-w-[19rem] place-items-center overflow-hidden rounded-sm border-2 border-[#b98b37]/90 bg-[#f2ddb1]/90 p-1 shadow-2xl shadow-black/45">
-                  {character.portraitFile ? <img className="h-full w-full rounded object-cover object-top" src={portraitAsset(character.portraitFile)} alt="" /> : null}
+                {portraitSrc ? <img className="h-full w-full rounded object-cover object-top" src={portraitSrc} alt={characterView.name} /> : null}
               </div>
 
               <div className="mt-auto rounded-sm border-2 border-[#b98b37]/85 bg-[#f2ddb1]/92 p-2 text-[#26170a] shadow-2xl shadow-black/50 backdrop-blur-[2px]">
                 <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-3">
                   <div className="min-w-0">
-                    <h1 className="truncate font-display text-3xl leading-none">{character.name}</h1>
-                    <p className="truncate text-sm font-bold text-[#75501f]">{character.profession} / {roleLabel(character)}</p>
+                    <h1 className="truncate font-display text-3xl leading-none">{characterView.name}</h1>
+                    <p className="truncate text-sm font-bold text-[#75501f]">{characterView.profession} / {roleLabel(character)}</p>
+                    <p className="mt-1 line-clamp-2 text-xs leading-snug text-[#5b3b17]">{characterView.marketFlavor}</p>
                   </div>
-                  <Button size="sm" variant="secondary" onClick={() => setConversationOpen(true)}>Talk With {character.name}</Button>
+                  <Button size="sm" variant="secondary" onClick={() => setConversationOpen(true)}>Talk With {characterView.name}</Button>
                 </div>
 
                 <dl className="mt-2 grid grid-cols-3 gap-1.5">
@@ -136,20 +140,21 @@ export function BarterConversationView({ state, character, playerOffer, characte
                           backgroundSize: "100% 100%",
                         }}
                       >
-                        {character.portraitFile ? <img className="h-full w-full rounded object-cover object-top" src={portraitAsset(character.portraitFile)} alt="" /> : null}
+                        {portraitSrc ? <img className="h-full w-full rounded object-cover object-top" src={portraitSrc} alt={characterView.name} /> : null}
                         <div className="absolute inset-x-2 bottom-2 bg-[#160d05]/90 px-3 py-2 text-center text-[#fff3bd] shadow-lg">
-                          <strong className="block truncate font-display text-xl">{character.name}</strong>
-                          <span className="block truncate text-[0.65rem] font-black uppercase tracking-wide text-[#e8d39d]">{character.profession} / {roleLabel(character)}</span>
+                          <strong className="block truncate font-display text-xl">{characterView.name}</strong>
+                          <span className="block truncate text-[0.65rem] font-black uppercase tracking-wide text-[#e8d39d]">{characterView.profession} / {roleLabel(character)}</span>
                         </div>
                       </div>
                       <div className="flex min-h-0 flex-col gap-3">
                         <header>
                           <span className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.2em] text-[#75501f]"><MessageCircle size={15} /> Conversation</span>
-                          <h2 className="mt-1 font-display text-4xl leading-none text-[#26170a]">{character.name}</h2>
+                          <h2 className="mt-1 font-display text-4xl leading-none text-[#26170a]">{characterView.name}</h2>
                         </header>
                         <div className="relative rounded-sm border-2 border-[#9a7138]/65 bg-[#fff8df]/90 px-5 py-4 text-lg leading-relaxed text-[#3b260f] shadow-inner shadow-[#6c4418]/15 before:absolute before:-left-3 before:top-8 before:h-5 before:w-5 before:rotate-45 before:border-b-2 before:border-l-2 before:border-[#9a7138]/65 before:bg-[#fff8df]">
                           {message}
                         </div>
+                        <p className="rounded-sm border border-[#9a7138]/60 bg-[#fff6d7]/70 p-3 text-sm leading-snug text-[#3b260f]">{characterView.story}</p>
                         <dl className="grid grid-cols-3 gap-2">
                           <StatChip label="Mood" value={moodLabel(relation)} icon={uiAssets.town.moodPositive} tone={relation && relation.mood <= -2 ? "danger" : "parchment"} />
                           <StatChip label="Trust" value={trustLabel(relation)} icon={uiAssets.town.relationshipBadge} />
@@ -175,7 +180,7 @@ export function BarterConversationView({ state, character, playerOffer, characte
                 </ModalShell>
               ) : null}
             </div>
-          ) : <div className="relative z-10 grid min-h-[26rem] place-items-center bg-black/45 p-8 text-center text-xl text-[#fff3bd]">Choose a customer first.</div>}
+          ) : null}
         </section>
 
         <div className="flex min-h-0 flex-col gap-2">
