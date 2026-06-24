@@ -8,7 +8,7 @@ Inventory still references item indexes in current runtime structures, so save s
 
 Catalog design should keep items original to this project, practical for trade, and structured enough for stock, quests, market demand, icon generation, and future economy systems. Prefer bright coastal fantasy merchant goods with clear families, subfamilies, trade roles, storage needs, market behavior, quantity forms, and profession uses.
 
-Avoid lore names that feel imported from a different content set, borrowed book/company/faction naming, and thin synonym swaps that leave a previous catalog identity visible.
+Avoid lore names that feel imported from a different content set, borrowed book/company/faction naming, and thin synonym swaps that make catalog identity inconsistent.
 
 ## Icon pipeline
 

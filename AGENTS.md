@@ -64,7 +64,7 @@ Before adding docs, update the numbered reading order if the doc is permanent; o
 
 ## Character Profile Rules
 
-Visible character identity must be original. Do not preserve prior public-facing names, portraits, dialogue flavor, or lookalike visual designs from earlier content sets.
+Visible character identity must stay original to this game. Keep character-facing names, portraits, dialogue flavor, and visual designs consistent with the approved character profile catalog.
 
 Keep stable internal IDs/indexes until the runtime has a safe migration path. Current character profile data may continue to provide mechanical anchors, but UI-facing identity should come from the character profile layer.
 
@@ -177,9 +177,3 @@ Run focused tests for the area changed. For broad changes, run:
 pnpm verify:current-state
 pnpm build
 ```
-
-`verify:current-state` should include data, asset, item icon, character portrait, stock, barter, economy, travel, quest, character manifest, company, UI-integration, playtest checks, and reports.
-
-## UI Architecture Rules
-
-Keep reusable UI components under `src/components` or feature-specific component folders. Keep pure data transforms, audits, and view models outside React components where possible.

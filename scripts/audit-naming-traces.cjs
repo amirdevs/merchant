@@ -78,6 +78,9 @@ const forbidden = [
   'standalone local-storage loop',
   'obsolete one-time scripts',
   'development-only cleanup note',
+  'prior public-facing',
+  'earlier content sets',
+  'previous catalog identity',
 ];
 
 const allowedFiles = new Set(['scripts/audit-naming-traces.cjs']);
