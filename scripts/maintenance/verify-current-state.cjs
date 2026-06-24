@@ -5,6 +5,7 @@ const { spawnSync } = require("child_process");
 // through dedicated scripts and flags.
 const checks = [
   ["pnpm", ["audit:naming"]],
+  ["pnpm", ["audit:runtime-characters"]],
   ["pnpm", ["audit:data"]],
   ["pnpm", ["audit:assets"]],
   ["pnpm", ["audit:character-portraits"]],
@@ -21,6 +22,7 @@ const checks = [
   ["pnpm", ["test:economy-world"]],
   ["pnpm", ["test:vertical-polish"]],
   ["pnpm", ["test:characters"]],
+  ["pnpm", ["test:runtime-characters"]],
   ["pnpm", ["test:company"]],
   ["pnpm", ["test:ui-integration"]],
   ["pnpm", ["test:playtest"]],

@@ -93,6 +93,15 @@ Visible character identity must stay original to this game. Keep character-facin
 
 Keep stable internal IDs/indexes until the runtime has a safe migration path. Current character profile data may continue to provide mechanical anchors, but UI-facing identity should come from the character profile layer.
 
+Runtime character behavior now lives in typed character runtime profiles under:
+
+```text
+src/content/characters/characterRuntimeProfiles.ts
+src/content/characters/characterRuntimeProfiles.data.json
+```
+
+Visible runtime identity must resolve through the final character profile catalog and runtime portrait manifest, not from raw roster files or stale asset filenames.
+
 Primary cast additions should be planned before portrait generation so portrait sheets only need to be generated/cropped once. The current primary cast roster lives in:
 
 ```text
@@ -135,6 +144,8 @@ The runtime portrait manifest and character selectors live in:
 ```text
 src/game/characters/characterPortraitManifest.ts
 ```
+
+Runtime character validation blocks raw roster files, direct raw-roster imports, stale portrait/stall filenames, and runtime/profile mapping drift.
 
 Character prompt batches are batched by total portrait images, not by total characters. Example: 200 characters with 5 expression portraits each means 1000 portrait images to batch. A single character may have some expressions in one batch and the remaining expressions in another batch.
 

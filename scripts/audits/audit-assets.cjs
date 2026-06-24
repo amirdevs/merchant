@@ -8,7 +8,6 @@ const dataDir = path.join(root, "src", "content");
 const strict = process.argv.includes("--strict");
 const verbose = process.argv.includes("--verbose") || strict;
 const auditGeneratedAssetRefs = process.argv.includes("--generated-assets") || strict;
-const auditCatalogCharacterAssetFields = process.argv.includes("--catalog-character-assets") || strict;
 const auditUiAssets = process.argv.includes("--ui-assets") || strict;
 
 function readJson(file) {
@@ -50,8 +49,6 @@ function itemIconUrl(file) {
 const checks = [];
 const missing = [];
 const skipped = {
-  inactivePortrait: 0,
-  inactiveStall: 0,
   itemIcon: 0,
   townsquare: 0,
   backdrop: 0,
@@ -66,20 +63,8 @@ function check(label, url) {
   if (!existsFromPublic(url)) missing.push({ label, url });
 }
 
-const characters = readJson(path.join("characters", "characters.json"));
 const items = loadGeneratedItems(root);
 const marketplaces = readJson(path.join("market", "marketplaces.json"));
-
-for (const character of characters) {
-  if (!auditCatalogCharacterAssetFields) {
-    if (character.portraitFile) skipped.inactivePortrait += 1;
-    if (character.stallFile) skipped.inactiveStall += 1;
-    continue;
-  }
-
-  check(`inactive portrait: ${character.name}`, imageUrl(character.portraitFile, "characters"));
-  check(`inactive stall: ${character.name}`, imageUrl(character.stallFile, "stalls"));
-}
 
 for (const item of items) {
   if (!auditGeneratedAssetRefs) {
@@ -128,7 +113,7 @@ const byPrefix = missing.reduce((counts, issue) => {
 console.log(`Asset audit checked ${checks.length} active references.`);
 console.log(`Missing active references: ${missing.length}`);
 console.log(
-  `Skipped inactive/generated references by default: ${skipped.inactivePortrait} portrait, ${skipped.inactiveStall} stall, ${skipped.itemIcon} item icon, ${skipped.townsquare} townsquare, ${skipped.backdrop} backdrop, ${skipped.ambiance} ambiance, ${skipped.route} route, ${skipped.ui} ui.`
+  `Skipped inactive/generated references by default: ${skipped.itemIcon} item icon, ${skipped.townsquare} townsquare, ${skipped.backdrop} backdrop, ${skipped.ambiance} ambiance, ${skipped.route} route, ${skipped.ui} ui.`
 );
 console.log("Use pnpm audit:assets -- --strict to run the full visual reference audit.");
 console.log("Use pnpm audit:character-portraits for the final portrait gate.");

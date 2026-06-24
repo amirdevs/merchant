@@ -1,11 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 const zlib = require("zlib");
+const { buildRuntimeCharacters, loadCharacterRuntimeProfiles } = require("../maintenance/load-character-runtime-data.cjs");
 
 const root = process.cwd();
 const promptDir = path.join(root, "docs", "assets", "character-prompts");
 const portraitDir = path.join(root, "public", "assets", "portraits", "characters");
-const generatedCharactersPath = path.join(root, "src", "content", "characters", "characters.json");
+const blockedRosterPath = path.join(root, "src", "content", "characters", "characters.json");
 const identityDir = path.join(root, "src", "content", "characters");
 const logDir = path.join(root, "docs", "logs");
 const reportPath = path.join(logDir, "character-portrait-lock-report.md");
@@ -223,29 +224,17 @@ function auditIdentityCatalog(records) {
   const missingNames = uniqueCharacters.filter((record) => !record.displayName).map((record) => record.characterId);
   const missingProfessions = uniqueCharacters.filter((record) => !record.profession).map((record) => record.characterId);
 
-  let runtimeNameCollisions = [];
-  if (fs.existsSync(generatedCharactersPath)) {
-    const generatedCharacters = readJson(generatedCharactersPath);
-    const runtimeIndexByCharacterId = new Map();
-    const identityFiles = fs.existsSync(identityDir)
-      ? fs.readdirSync(identityDir).filter((file) => /^characterIdentityCatalog.*\.ts$/.test(file) && !file.includes("Types"))
-      : [];
-    for (const file of identityFiles) {
-      const source = fs.readFileSync(path.join(identityDir, file), "utf8");
-      for (const match of source.matchAll(/characterId:\s*"([^"]+)"[\s\S]*?runtimeIndex:\s*(null|\d+)/g)) {
-        const [, characterId, runtimeIndex] = match;
-        if (runtimeIndex !== "null") runtimeIndexByCharacterId.set(characterId, Number(runtimeIndex));
-      }
-    }
-    runtimeNameCollisions = uniqueCharacters
-      .filter((record) => {
-        const index = runtimeIndexByCharacterId.get(record.characterId);
-        if (typeof index !== "number") return false;
-        const generated = generatedCharacters[index];
-        return generated && generated.name && generated.name === record.displayName;
-      })
-      .map((record) => `${record.characterId}: ${record.displayName}`);
-  }
+  const runtimeProfiles = loadCharacterRuntimeProfiles();
+  const runtimeCharacters = buildRuntimeCharacters();
+  const runtimeByCharacterId = new Map(runtimeCharacters.map((character) => [character.characterId, character]));
+  const runtimeProfileCharacterIds = new Set(
+    Object.values(runtimeProfiles)
+      .filter((profile) => profile.runtimeIndex !== null)
+      .map((profile) => profile.characterId),
+  );
+  const runtimeNameCollisions = uniqueCharacters
+    .filter((record) => runtimeProfileCharacterIds.has(record.characterId) && runtimeByCharacterId.get(record.characterId)?.name !== record.displayName)
+    .map((record) => `${record.characterId}: runtime name mismatch`);
 
   const identityFiles = fs.existsSync(identityDir)
     ? fs.readdirSync(identityDir).filter((file) => /^characterIdentityCatalog.*\.ts$/.test(file) && !file.includes("Types"))
@@ -280,6 +269,8 @@ function markdownList(items, empty = "None") {
 
 function main() {
   const { promptFiles, records, sheetIssues } = collectPromptRecords();
+  const runtimeProfiles = loadCharacterRuntimeProfiles();
+  const activeRuntimeProfileCount = Object.values(runtimeProfiles).filter((profile) => profile.runtimeIndex !== null).length;
   const expectedOutputFiles = records.map((record) => record.outputFile).sort();
   const promptIssues = [];
   const globalOrders = records.map((record) => record.globalOrder).sort((a, b) => a - b);
@@ -295,6 +286,7 @@ function main() {
   const portraits = auditPortraitFiles(expectedOutputFiles);
   const identities = auditIdentityCatalog(records);
   const allIssues = [
+    ...(fs.existsSync(blockedRosterPath) ? [`Blocked runtime roster file still exists: ${relative(blockedRosterPath)}`] : []),
     ...sheetIssues,
     ...promptIssues,
     ...portraits.missing.map((file) => `Missing portrait: ${file}`),
@@ -306,6 +298,9 @@ function main() {
     ...identities.missingNames.map((id) => `Missing display name: ${id}`),
     ...identities.missingProfessions.map((id) => `Missing profession: ${id}`),
     ...identities.runtimeNameCollisions.map((issue) => `Runtime name collision: ${issue}`),
+    ...(activeRuntimeProfileCount !== 203
+      ? [`Runtime profile count changed: ${activeRuntimeProfileCount}/203`]
+      : []),
   ];
 
   fs.mkdirSync(logDir, { recursive: true });

@@ -1,5 +1,6 @@
 import type { Character } from "@/shared/types/game-data";
 import { characterIdentityCatalogBatches } from "@/content/characters/characterIdentityCatalog";
+import { runtimeCharacterIdForIndex } from "@/content/characters/characterRuntimeProfiles";
 import type { FinalCharacterIdentityProfile } from "@/content/characters/characterIdentityTypes";
 import type { CharacterExpression } from "@/content/characters/characterProfileTypes";
 import { fallbackCharacterProfileView, tradePortraitExpression, type CharacterProfileView } from "./characterProfileShared";
@@ -137,13 +138,6 @@ export const characterIdentityById = new Map(
   characterIdentityProfiles.map((identity) => [identity.characterId, identity] as const),
 );
 
-export const characterIdByRuntimeIndex = new Map<number, string>();
-for (const identity of characterIdentityProfiles) {
-  if (identity.rosterGroup === "supporting_cast" && typeof identity.runtimeIndex === "number") {
-    characterIdByRuntimeIndex.set(identity.runtimeIndex, identity.characterId);
-  }
-}
-
 export const characterPortraitManifestSummary = {
   promptSheetCount: promptSheets.length,
   portraitCount: characterPortraitRecords.length,
@@ -154,7 +148,7 @@ export const characterPortraitManifestSummary = {
 } as const;
 
 export function characterIdForRuntimeIndex(index: number) {
-  return characterIdByRuntimeIndex.get(index) || null;
+  return runtimeCharacterIdForIndex(index);
 }
 
 export function characterIdForCharacter(character: Character | null | undefined) {

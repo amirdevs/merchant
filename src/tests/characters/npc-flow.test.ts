@@ -18,7 +18,7 @@ describe("daily customer queue", () => {
     state.marketIndex = 10;
     state.questStates[String(state.marketIndex)] = "offered";
 
-    expect(charactersAtMarket(state)[0]?.name).toBe("Faraday Casey");
+    expect(charactersAtMarket(state)[0]?.name).toBe("Jarek Thornboot");
   });
 
   it("returns a named quest contact to the shuffled pool after completion", () => {
@@ -26,6 +26,6 @@ describe("daily customer queue", () => {
     state.marketIndex = 10;
     state.questStates[String(state.marketIndex)] = "finished";
 
-    expect(charactersAtMarket(state).map((character) => character.name)).toContain("Faraday Casey");
+    expect(charactersAtMarket(state).map((character) => character.name)).toContain("Jarek Thornboot");
   });
 });

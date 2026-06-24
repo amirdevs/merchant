@@ -1,11 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 const { loadGeneratedItems, writeGeneratedItems } = require("../maintenance/item-catalog.cjs");
+const { loadCharacterRuntimeProfiles } = require("../maintenance/load-character-runtime-data.cjs");
 
 const root = process.cwd();
 const dataDir = path.join(root, "src", "content");
 const manifestFile = path.join(dataDir, "manifest.json");
-const charactersFile = path.join(dataDir, "characters", "characters.json");
+const runtimeProfilesFile = path.join(dataDir, "characters", "characterRuntimeProfiles.data.json");
 const professionsFile = path.join(dataDir, "market", "professions.json");
 const marketplacesFile = path.join(dataDir, "market", "marketplaces.json");
 const kingdomsFile = path.join(dataDir, "world", "kingdoms.json");
@@ -606,7 +607,7 @@ const additions = [
 
 const items = loadGeneratedItems(root);
 const manifest = readJson(manifestFile);
-const characters = readJson(charactersFile);
+const runtimeProfiles = loadCharacterRuntimeProfiles();
 const professions = readJson(professionsFile);
 const marketplaces = readJson(marketplacesFile);
 const kingdoms = readJson(kingdomsFile);
@@ -673,10 +674,10 @@ function remapPools(pools) {
   return pools;
 }
 
-for (const character of characters) {
-  remapBiases(character.bias);
-  remapPools(character.obtainableItems);
-  character.excludedObtainItems = (character.excludedObtainItems || []).map((token) => remapToken(token, { allowItemTokens: true }));
+for (const profile of Object.values(runtimeProfiles)) {
+  remapBiases(profile.tradeBias);
+  remapPools(profile.obtainableItems);
+  profile.excludedObtainItems = (profile.excludedObtainItems || []).map((token) => remapToken(token, { allowItemTokens: true }));
 }
 
 for (const profession of Object.values(professions)) {
@@ -715,7 +716,7 @@ manifest.counts.items = items.length;
 
 writeGeneratedItems(root, items);
 writeJson(manifestFile, manifest);
-writeJson(charactersFile, characters);
+writeJson(runtimeProfilesFile, runtimeProfiles);
 writeJson(professionsFile, professions);
 writeJson(marketplacesFile, marketplaces);
 writeJson(kingdomsFile, kingdoms);

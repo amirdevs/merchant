@@ -12,7 +12,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: magic -11.0, monster parts -8.3, fated star plant 6.0, fabled amulet of vitality 3.7, botanicals 2.6, animals 1.6, dragons 1.6, potions -1.6.
 - Balance status: PASS.
 - Balance shares: identity 64%, raw 11%, consumable 52%, finished 12%, luxury/rare 16%, illegal 3%.
-- Sampled NPCs: Sarah, Yuma, Kaitlyn O'Callaghan.
+- Sampled NPCs: Pippa Candlebrook, Tovan Gristlen, Omi Claythumb.
 - Average visible stacks across sampled days: 31.
 - Average total stock value across sampled days: 186,094 loaf-value.
 - Average coin reserve value across sampled days: 134,625 loaf-value.
@@ -26,7 +26,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `modest`; lifestyle `shopkeeper`; archetypes baker 0.9, food 0.1, general 0.14, tools 0.04.
 - Runtime stock bias preview: magic -10.0, bread -3.1, scarce sugar cane 2.6, dairy 2.6, spices 2.1, grains 1.6, weapons -1.6, copper 1.0.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Mary, Jo, Caelan Gibson.
+- Sampled NPCs: Varka Glasshook, Alwin Silkfern, Safra Bellsand.
 - Average visible stacks across sampled days: 18.
 - Average total stock value across sampled days: 3,777 loaf-value.
 - Average coin reserve value across sampled days: 71 loaf-value.
@@ -40,7 +40,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: magic -10.0, jewelry 1.6, music 1.6, paints 1.6, statues 1.6, clothes 1.4, crowncards 1.4, weapons -1.3.
 - Balance status: PASS.
 - Balance shares: identity 71%, raw 5%, consumable 21%, finished 65%, luxury/rare 37%, illegal 0%.
-- Sampled NPCs: Terric Nash, Pedal, Paul.
+- Sampled NPCs: Varek Crowmask, Belli Thimblethorn, Pell Oatwhistle.
 - Average visible stacks across sampled days: 13.
 - Average total stock value across sampled days: 2,080 loaf-value.
 - Average coin reserve value across sampled days: 33 loaf-value.
@@ -55,7 +55,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: magic -10.0, monster parts -10.0, furniture 2.1, drinks -1.3, books -1.0, copper 1.0, daggers 1.0, food -1.0.
 - Balance status: PASS.
 - Balance shares: identity 82%, raw 9%, consumable 57%, finished 16%, luxury/rare 8%, illegal 0%.
-- Sampled NPCs: Kella Flynn, Zyla, Adeline Wilson.
+- Sampled NPCs: Davi Goldthread, Rook Threecrows, Ottek Mossboot.
 - Average visible stacks across sampled days: 26.
 - Average total stock value across sampled days: 48,685 loaf-value.
 - Average coin reserve value across sampled days: 6,108 loaf-value.
@@ -69,7 +69,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `pocket`; lifestyle `poor`; archetypes salvage 0.78, food 0.22.
 - Runtime stock bias preview: magic -10.0, food 2.1, dagger 1.6, furniture -0.4, copper coins -0.2.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Annora, Yarl, Bonnie.
+- Sampled NPCs: Odelia Sunhusk, Porrin Mudthumb, Fen Bristlecap.
 - Average visible stacks across sampled days: 3.
 - Average total stock value across sampled days: 119 loaf-value.
 - Average coin reserve value across sampled days: 0 loaf-value.
@@ -83,7 +83,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: ore 1.6, scarce nova ingot 1.4, scarce nova ore 1.4, weapons -1.3, armor -1.0, copper 1.0, dragons 1.0, food 1.0.
 - Balance status: PASS.
 - Balance shares: identity 67%, raw 33%, consumable 6%, finished 22%, luxury/rare 5%, illegal 0%.
-- Sampled NPCs: Kris, George Smith, Esther.
+- Sampled NPCs: Selka Warmhide, Nax Twocopper, Sella Redmoss.
 - Average visible stacks across sampled days: 35.
 - Average total stock value across sampled days: 104,009 loaf-value.
 - Average coin reserve value across sampled days: 12,732 loaf-value.
@@ -98,7 +98,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: magic -10.0, livestock 2.6, spices 1.6, weapons -1.6, meat -1.3, furniture 1.0, clothing -0.4.
 - Balance status: PASS.
 - Balance shares: identity 77%, raw 19%, consumable 52%, finished 8%, luxury/rare 0%, illegal 0%.
-- Sampled NPCs: Hart Kitchener, Joey Buckets, Agnes.
+- Sampled NPCs: Thera Quillglass, Brannox Gulltoe, Noll Pebblecap.
 - Average visible stacks across sampled days: 18.
 - Average total stock value across sampled days: 6,142 loaf-value.
 - Average coin reserve value across sampled days: 141 loaf-value.
@@ -112,7 +112,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `modest`; lifestyle `shopkeeper`; archetypes cook 0.86, food 0.14, general 0.14, tools 0.04.
 - Runtime stock bias preview: magic -11.9, copper 1.6, glass 1.6, silver 1.6, spice 1.6, furniture 1.1, drinks -1.0, food 1.0.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Matilda, Blake Bailey, Charlie Murphy.
+- Sampled NPCs: Kiva Moonmoth, Cela Reedwhistle, Varo Ashpalm.
 - Average visible stacks across sampled days: 19.
 - Average total stock value across sampled days: 9,313 loaf-value.
 - Average coin reserve value across sampled days: 196 loaf-value.
@@ -126,7 +126,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: magic -10.0, monster parts -10.0, botanicals -1.6, food -1.6, animals -1.0, clothes 1.0, furniture 1.0, household 1.0.
 - Balance status: PASS.
 - Balance shares: identity 81%, raw 33%, consumable 73%, finished 4%, luxury/rare 0%, illegal 0%.
-- Sampled NPCs: Ryane Fitzpatrick, John, Alison Sweeney.
+- Sampled NPCs: Marek Saltfront, Rallo Turnipnose, Kesh Riverjaw.
 - Average visible stacks across sampled days: 26.
 - Average total stock value across sampled days: 37,029 loaf-value.
 - Average coin reserve value across sampled days: 185 loaf-value.
@@ -140,7 +140,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `light`; lifestyle `military`; archetypes weapons 0.44, armor 0.3, traveler 0.26, soldier 0.12, food 0.05.
 - Runtime stock bias preview: magic -9.0, potions 2.9, poison 1.9, armor 1.0, arrows 1.0, coins -1.0, food 1.0, furniture -1.0.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Eve, Kudo, Mackenzie.
+- Sampled NPCs: Nahla Sandglass, Velia Mothscribe, Rana Silverbite.
 - Average visible stacks across sampled days: 12.
 - Average total stock value across sampled days: 4,375 loaf-value.
 - Average coin reserve value across sampled days: 503 loaf-value.
@@ -154,7 +154,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: magic -11.0, monster parts -10.0, religion 2.6, seafood -2.3, shoes 1.9, spears 1.6, barrels 1.0, drinks 1.0.
 - Balance status: PASS.
 - Balance shares: identity 66%, raw 10%, consumable 48%, finished 15%, luxury/rare 3%, illegal 0%.
-- Sampled NPCs: Sam Fisher, Ano, Panuk.
+- Sampled NPCs: Ula Flintseed, Madame Ivara Lacecoin, Tilda Brasswool.
 - Average visible stacks across sampled days: 34.
 - Average total stock value across sampled days: 85,500 loaf-value.
 - Average coin reserve value across sampled days: 1,029 loaf-value.
@@ -169,7 +169,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: magic -10.0, wood 1.6, heartwood arrow 1.4, arrows -1.3, bows -1.3, armor 1.0, drinks 1.0, food 1.0.
 - Balance status: PASS.
 - Balance shares: identity 69%, raw 34%, consumable 24%, finished 39%, luxury/rare 0%, illegal 0%.
-- Sampled NPCs: Robin, Boyd O'Connell, Alvezi.
+- Sampled NPCs: Padrig Nailroot, Jessa Flamefig, Galen Brightmug.
 - Average visible stacks across sampled days: 25.
 - Average total stock value across sampled days: 48,263 loaf-value.
 - Average coin reserve value across sampled days: 398 loaf-value.
@@ -184,7 +184,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: magic -10.0, meat -2.0, hunting box trap 1.6, hunting foot trap 1.6, arrows 1.5, bows 1.5, daggers 1.0, food 1.0.
 - Balance status: PASS.
 - Balance shares: identity 80%, raw 23%, consumable 35%, finished 37%, luxury/rare 6%, illegal 1%.
-- Sampled NPCs: Jai, Uki, Anubis.
+- Sampled NPCs: Ressa Blueash, Jorin Plumwax, Orelia Sunflour.
 - Average visible stacks across sampled days: 13.
 - Average total stock value across sampled days: 4,247 loaf-value.
 - Average coin reserve value across sampled days: 0 loaf-value.
@@ -198,7 +198,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `light`; lifestyle `military`; archetypes knight 0.78, royal 0.22, soldier 0.12, traveler 0.05, food 0.05.
 - Runtime stock bias preview: magic -10.0, religion 2.6, armor 2.6, dragons 1.6, drinks 1.6, potions 1.6, furniture 1.3, coins -1.0.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Blacwin Gregory, Arthur Godsen, Tavis Kennedy.
+- Sampled NPCs: Sola Bellfern, Kara Roofsalt, Quillo Brassroot.
 - Average visible stacks across sampled days: 12.
 - Average total stock value across sampled days: 8,080 loaf-value.
 - Average coin reserve value across sampled days: 569 loaf-value.
@@ -211,7 +211,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `grand`; lifestyle `shopkeeper`; archetypes magic 0.78, luxury 0.22, general 0.14, food 0.06, tools 0.04.
 - Runtime stock bias preview: food 2.4, armor 2.3, gems 2.3, alchemy 1.6, weapons 1.3, coins -1.0, dragons 1.0, jewelry 1.0.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Incantato, Zalia, Ascilia The White.
+- Sampled NPCs: Orvik Bellows, Rusk Ironbelly, Gorrum Bellowsong.
 - Average visible stacks across sampled days: 43.
 - Average total stock value across sampled days: 1,132,096 loaf-value.
 - Average coin reserve value across sampled days: 326,493 loaf-value.
@@ -224,7 +224,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `large`; lifestyle `shopkeeper`; archetypes general 0.62, luxury 0.2, traveler 0.18, food 0.06, tools 0.04.
 - Runtime stock bias preview: magic -10.0, furniture -1.6, food -1.0, giants -1.0, alchemy -0.7, animals -0.7, armor -0.7, botanicals -0.7.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Edward, Nevin Quinn, Baldric.
+- Sampled NPCs: Lysaro Vellthorn, Marta Honeyjaw, Ysolde Nightquill.
 - Average visible stacks across sampled days: 45.
 - Average total stock value across sampled days: 178,050 loaf-value.
 - Average coin reserve value across sampled days: 54,884 loaf-value.
@@ -238,7 +238,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: magic -10.0, rocks -1.6, tools 1.5, jewelry -1.3, clothes 1.0, food 1.0, supplies -1.0, ore -0.9.
 - Balance status: PASS.
 - Balance shares: identity 87%, raw 68%, consumable 3%, finished 14%, luxury/rare 1%, illegal 0%.
-- Sampled NPCs: Joseph, Barnabas.
+- Sampled NPCs: Nell Copperbloom, Nell Hushbasket.
 - Average visible stacks across sampled days: 19.
 - Average total stock value across sampled days: 39,662 loaf-value.
 - Average coin reserve value across sampled days: 67 loaf-value.
@@ -252,7 +252,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `light`; lifestyle `noble`; archetypes royal 0.62, luxury 0.38.
 - Runtime stock bias preview: magic -10.0, furniture 2.2, deeds 1.6, dragons 1.6, flags 1.6, flowers 1.6, heraldic art 1.6, household 1.6.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Katherine Notting, William Rockly, Roark Sheehan.
+- Sampled NPCs: Lumi Starling, Bela Fernstep, Pim Hollowcheek.
 - Average visible stacks across sampled days: 11.
 - Average total stock value across sampled days: 21,279 loaf-value.
 - Average coin reserve value across sampled days: 9,071 loaf-value.
@@ -265,7 +265,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `wholesale`; lifestyle `military`; archetypes quartermaster 0.84, tools 0.08, traveler 0.08, soldier 0.12, food 0.05.
 - Runtime stock bias preview: magic -10.0, religion 2.6, food 2.4, drink 1.4, armor 1.0, drinks 1.0, furniture 1.0, grains 1.0.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Cooper, Drake, Potter.
+- Sampled NPCs: Mavro Tinlaugh, Hasker Redroot, Ilyen Starquill.
 - Average visible stacks across sampled days: 58.
 - Average total stock value across sampled days: 1,450,551 loaf-value.
 - Average coin reserve value across sampled days: 219,441 loaf-value.
@@ -278,7 +278,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `light`; lifestyle `religious`; archetypes religious 0.78, books 0.22, food 0.04.
 - Runtime stock bias preview: magic -13.0, monster parts -10.0, drinks -3.3, furniture 1.6, religion -1.6, statues 1.4, books -1.0, fabrics 1.0.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Pauric Martin, Catriona, Fiona O'Doherty.
+- Sampled NPCs: Dox Lintwhistle, Rashka Copperpaw, Chara Sunhook.
 - Average visible stacks across sampled days: 14.
 - Average total stock value across sampled days: 2,943 loaf-value.
 - Average coin reserve value across sampled days: 46 loaf-value.
@@ -291,7 +291,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `modest`; lifestyle `traveler`; archetypes maritime 0.74, fisher 0.16, traveler 0.1, food 0.08.
 - Runtime stock bias preview: magic -10.0, drinks 1.9, coins -1.3, alchemy 1.0, food 1.0, gloves 1.0, religion 1.0, shoes 1.0.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Jack Bennett, Dead Red Sadie, Long Legs Logan.
+- Sampled NPCs: Miri Softstep, Fito Quicklime, Grinda Ashcake.
 - Average visible stacks across sampled days: 19.
 - Average total stock value across sampled days: 6,448 loaf-value.
 - Average coin reserve value across sampled days: 193 loaf-value.
@@ -305,7 +305,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: magic -10.0, weapons -1.6, clothes -1.3, fabrics 1.1, fibers 1.0, flags -1.0, food 1.0, furniture 1.0.
 - Balance status: PASS.
 - Balance shares: identity 76%, raw 47%, consumable 21%, finished 26%, luxury/rare 4%, illegal 0%.
-- Sampled NPCs: Susanna Taylor, Tapeesa, Caden Kennedy.
+- Sampled NPCs: Imri Lockspoke, Elka Rainbarrel, Auntie Vessa Rainbowl.
 - Average visible stacks across sampled days: 25.
 - Average total stock value across sampled days: 37,641 loaf-value.
 - Average coin reserve value across sampled days: 155 loaf-value.
@@ -319,7 +319,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `sparse`; lifestyle `military`; archetypes soldier 0.84, traveler 0.16, food 0.05.
 - Runtime stock bias preview: magic -10.0, armor 2.6, swords 2.6, drinks 1.6, monster parts -1.6, religion 1.6, alchemy 1.0, coins -1.0.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Adam, Mathew, Ronald Hughes.
+- Sampled NPCs: Brindle Mossback, Etti Goldpin, Fennel Quickpurse.
 - Average visible stacks across sampled days: 7.
 - Average total stock value across sampled days: 1,946 loaf-value.
 - Average coin reserve value across sampled days: 104 loaf-value.
@@ -332,7 +332,7 @@ Sample days: 1, 3, 7, 14.
 - Profile: tier `light`; lifestyle `criminal`; archetypes contraband 0.64, salvage 0.24, jewelry 0.12.
 - Runtime stock bias preview: magic 4.3, books -2.6, jewelry -1.6, daggers 1.5, drinks 1.0, food -1.0, games 1.0, coins 0.2.
 - Balance status: no explicit target yet; inspect manually.
-- Sampled NPCs: Sebastian, Sato, Collin.
+- Sampled NPCs: Sister Caldra Waxveil, Brindle Oaknail, Miri Cloudmilk.
 - Average visible stacks across sampled days: 13.
 - Average total stock value across sampled days: 7,189 loaf-value.
 - Average coin reserve value across sampled days: 372 loaf-value.
@@ -346,7 +346,7 @@ Sample days: 1, 3, 7, 14.
 - Runtime stock bias preview: supplies 1.9, furniture -1.3, tools -1.3, fabrics -1.0, food 1.0, weapons -1.0, wood 1.0, bread 0.4.
 - Balance status: PASS.
 - Balance shares: identity 71%, raw 42%, consumable 15%, finished 12%, luxury/rare 2%, illegal 0%.
-- Sampled NPCs: Toklo, Savannah.
+- Sampled NPCs: Rikka Saltneedle, Tamsin Brightspoon.
 - Average visible stacks across sampled days: 26.
 - Average total stock value across sampled days: 17,473 loaf-value.
 - Average coin reserve value across sampled days: 33 loaf-value.

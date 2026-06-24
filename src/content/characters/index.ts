@@ -12,3 +12,4 @@ export * from "./characterIdentityCatalogCastBatch04";
 export * from "./characterIdentityCatalogCastBatch05";
 export * from "./characterIdentityCatalogCastBatch06";
 export * from "./characterIdentityCatalog";
+export * from "./characterRuntimeProfiles";

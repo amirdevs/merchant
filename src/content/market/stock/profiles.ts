@@ -251,9 +251,9 @@ export const professionStockProfiles: Record<string, StockProfile> = {
   },
 };
 
-export const characterStockOverrides: Record<string, StockProfileOverride> = {
-  "Faraday Casey": { tier: "grand", archetypes: [{ id: "books", weight: 0.4 }, { id: "luxury", weight: 0.35 }, { id: "general", weight: 0.25 }], lifestyleBaseline: "noble", coinMultiplier: 1.35 },
-  Incantato: { tier: "grand", archetypes: [{ id: "magic", weight: 0.78 }, { id: "luxury", weight: 0.22 }], lifestyleBaseline: "shopkeeper", coinMultiplier: 1.25 },
-  "Nevin Quinn": { tier: "large", archetypes: [{ id: "books", weight: 0.82 }, { id: "art", weight: 0.18 }], lifestyleBaseline: "shopkeeper" },
-  Saida: { tier: "large", archetypes: [{ id: "fabrics", weight: 0.84 }, { id: "luxury", weight: 0.16 }], lifestyleBaseline: "shopkeeper" },
+export const characterStockOverridesById: Record<string, StockProfileOverride> = {
+  "character-056": { tier: "grand", archetypes: [{ id: "books", weight: 0.4 }, { id: "luxury", weight: 0.35 }, { id: "general", weight: 0.25 }], lifestyleBaseline: "noble", coinMultiplier: 1.35 },
+  "character-064": { tier: "grand", archetypes: [{ id: "magic", weight: 0.78 }, { id: "luxury", weight: 0.22 }], lifestyleBaseline: "shopkeeper", coinMultiplier: 1.25 },
+  "character-052": { tier: "large", archetypes: [{ id: "books", weight: 0.82 }, { id: "art", weight: 0.18 }], lifestyleBaseline: "shopkeeper" },
+  "character-076": { tier: "large", archetypes: [{ id: "fabrics", weight: 0.84 }, { id: "luxury", weight: 0.16 }], lifestyleBaseline: "shopkeeper" },
 };

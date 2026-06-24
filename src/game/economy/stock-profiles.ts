@@ -1,9 +1,10 @@
-import charactersJson from "@/content/characters/characters.json";
+import { characterIdentityCatalogBatches } from "@/content/characters/characterIdentityCatalog";
+import { buildRuntimeCharacters } from "@/content/characters/characterRuntimeProfiles";
 import kingdomsJson from "@/content/world/kingdoms.json";
 import marketplacesJson from "@/content/market/marketplaces.json";
 import professionsJson from "@/content/market/professions.json";
 import type { Bias, Character, Kingdom, Marketplace, Profession } from "@/shared/types/game-data";
-import { characterStockOverrides, fallbackStockProfile, lifestyleStockBaselines, merchantFallbackProfile, professionStockProfiles } from "@/content/market/stock/profiles";
+import { characterStockOverridesById, fallbackStockProfile, lifestyleStockBaselines, merchantFallbackProfile, professionStockProfiles } from "@/content/market/stock/profiles";
 import { stockTiers } from "@/content/market/stock/tiers";
 import type { LifestyleStockBaselineId, StockBiasWeights, StockProfile, StockProfileOverride, StockTierId } from "@/content/market/stock/types";
 import { normalizeItemToken } from "@/game/trade/item-catalog";
@@ -12,7 +13,8 @@ const tierOrder: StockTierId[] = ["empty", "pocket", "sparse", "light", "modest"
 const professions = professionsJson as Record<string, Profession>;
 const marketplaces = marketplacesJson as Marketplace[];
 const kingdoms = kingdomsJson as Kingdom[];
-const baseCharacters = charactersJson as Character[];
+const runtimeIdentityProfiles = characterIdentityCatalogBatches.flatMap((batch) => batch.identities);
+const baseCharacters = buildRuntimeCharacters({ identities: runtimeIdentityProfiles });
 
 const BIAS_SOURCE_MULTIPLIERS = {
   character: 0.85,
@@ -119,7 +121,7 @@ export function resolveStockProfile(character: Character): StockProfile {
   // `isMerchant` is only a commercial-capacity default. It does not choose item types.
   if (character.isMerchant) profile = { ...profile, tier: atLeastTier(profile.tier, "stocked") };
 
-  profile = mergeProfile(profile, characterStockOverrides[character.name]);
+  profile = mergeProfile(profile, character.characterId ? characterStockOverridesById[character.characterId] : undefined);
   profile = applyLifestyleBaseline(character, profile);
   return applyGeneratedBiasWeights(character, profile);
 }
@@ -147,7 +149,7 @@ export function debugStockBiasWeights(characterIndex: number) {
   const profession = character.professionSlug ? professionStockProfiles[character.professionSlug] : undefined;
   let profile = profession ? mergeProfile(profession) : mergeProfile(character.isMerchant ? merchantFallbackProfile : fallbackStockProfile);
   if (character.isMerchant) profile = { ...profile, tier: atLeastTier(profile.tier, "stocked") };
-  profile = mergeProfile(profile, characterStockOverrides[character.name]);
+  profile = mergeProfile(profile, character.characterId ? characterStockOverridesById[character.characterId] : undefined);
   profile = applyLifestyleBaseline(character, profile);
   return collectGeneratedBiasWeights(character, profile);
 }

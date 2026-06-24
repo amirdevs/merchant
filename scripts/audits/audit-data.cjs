@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { loadGeneratedItems } = require("../maintenance/item-catalog.cjs");
+const { loadCharacterRuntimeProfiles } = require("../maintenance/load-character-runtime-data.cjs");
 
 const root = process.cwd();
 const publicDir = path.join(root, "public");
@@ -45,15 +46,14 @@ function exists(file) {
   return Boolean(file) && fs.existsSync(file);
 }
 
-const characters = readJson(path.join("characters", "characters.json"));
+const characterRuntimeProfiles = loadCharacterRuntimeProfiles();
+const runtimeCharacters = Object.values(characterRuntimeProfiles).filter((profile) => profile.runtimeIndex !== null);
 const items = loadGeneratedItems(root);
 const marketplaces = readJson(path.join("market", "marketplaces.json"));
 const professions = readJson(path.join("market", "professions.json"));
 const manifest = readJson("manifest.json");
 
 const problems = [];
-let skippedLegacyPortraitFields = 0;
-let skippedLegacyStallFields = 0;
 let skippedLegacyTownsquareFields = 0;
 let skippedLegacyBackdropFields = 0;
 let skippedLegacyAmbianceFields = 0;
@@ -64,25 +64,10 @@ function expectCount(name, actual) {
   if (actual !== expected) problems.push(`${name} count changed: expected ${expected}, got ${actual}`);
 }
 
-expectCount("characters", characters.length);
+expectCount("characters", runtimeCharacters.length);
 expectCount("items", items.length);
 expectCount("marketplaces", marketplaces.length);
 expectCount("professions", Object.keys(professions).length);
-
-for (const character of characters) {
-  if (!auditCatalogCharacterAssetFields && !strictInactiveAssets) {
-    if (character.portraitFile) skippedLegacyPortraitFields += 1;
-    if (character.stallFile) skippedLegacyStallFields += 1;
-    continue;
-  }
-
-  if (character.portraitFile && !exists(imagePath(character.portraitFile, "characters"))) {
-    problems.push(`Missing inactive portrait path for ${character.name}: ${character.portraitFile}`);
-  }
-  if (character.stallFile && !exists(imagePath(character.stallFile, "stalls"))) {
-    problems.push(`Missing inactive stall path for ${character.name}: ${character.stallFile}`);
-  }
-}
 
 for (const market of marketplaces) {
   if (!auditInactiveWorldAssetFields && !strictInactiveAssets) {
@@ -121,17 +106,16 @@ if (problems.length) {
 }
 
 console.log("Data audit passed.");
-console.log(`Characters: ${characters.length}`);
+console.log(`Characters: ${runtimeCharacters.length}`);
 console.log(`Items: ${items.length}`);
 console.log(`Marketplaces: ${marketplaces.length}`);
 console.log(`Professions: ${Object.keys(professions).length}`);
-if (!auditCatalogCharacterAssetFields && !strictInactiveAssets) {
-  console.log(`Skipped inactive character asset fields: ${skippedLegacyPortraitFields} portraitFile, ${skippedLegacyStallFields} stallFile.`);
-  console.log("Run pnpm audit:character-portraits for the final portrait gate.");
-}
 if (!auditInactiveWorldAssetFields && !strictInactiveAssets) {
   console.log(
     `Skipped inactive world asset fields: ${skippedLegacyTownsquareFields} townsquare, ${skippedLegacyBackdropFields} backdrop, ${skippedLegacyAmbianceFields} ambiance, ${skippedLegacyRouteFields} route.`
   );
   console.log("Run pnpm audit:data -- --inactive-world-assets to inspect inactive world visual references.");
+}
+if (!auditCatalogCharacterAssetFields && !strictInactiveAssets) {
+  console.log("Run pnpm audit:character-portraits for the final portrait gate.");
 }

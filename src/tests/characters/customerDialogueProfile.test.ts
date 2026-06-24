@@ -6,10 +6,11 @@ import { characterProfileView } from "@/game/characters/characterPortraitManifes
 function sampleRuntimeCharacter(): Character {
   return {
     index: 0,
-    name: "Guard",
+    name: "Placeholder Guard",
     profession: "Guard",
     professionSlug: null,
-    portraitFile: "male_notting_soldier_high.png",
+    portraitFile: "character-049-neutral.png",
+    stallFile: null,
     isActive: true,
     isMerchant: false,
     marketplaceIndex: 0,

@@ -6,6 +6,8 @@ The current item data module uses chunked files under `src/content/items/items-*
 
 Inventory still references item indexes in current runtime structures, so save schema v2 blocks incompatible saves from earlier schema versions.
 
+Runtime character behavior references item tags through typed character runtime profiles under `src/content/characters/characterRuntimeProfiles.ts` and `src/content/characters/characterRuntimeProfiles.data.json`. Item-token rewrites that touch character stock bias, obtainable pools, or exclusions must update those runtime profiles along with professions, kingdoms, and marketplaces.
+
 Catalog design should keep items original to this project, practical for trade, and structured enough for stock, quests, market demand, icon generation, and future economy systems. Prefer bright coastal fantasy merchant goods with clear families, subfamilies, trade roles, storage needs, market behavior, quantity forms, and profession uses.
 
 Avoid lore names that feel imported from a different content set, borrowed book/company/faction naming, and thin synonym swaps that make catalog identity inconsistent.

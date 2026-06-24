@@ -1,12 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 const { loadGeneratedItems } = require("../maintenance/item-catalog.cjs");
+const { buildRuntimeCharacters } = require("../maintenance/load-character-runtime-data.cjs");
 
 const root = process.cwd();
 const dataDir = path.join(root, "src", "content");
 const outFile = path.join(root, "docs", "logs", "profession-stock-review.md");
 
-const characters = JSON.parse(fs.readFileSync(path.join(dataDir, "characters", "characters.json"), "utf8"));
+const characters = buildRuntimeCharacters();
 const items = loadGeneratedItems(root);
 const kingdoms = JSON.parse(fs.readFileSync(path.join(dataDir, "world", "kingdoms.json"), "utf8"));
 const marketplaces = JSON.parse(fs.readFileSync(path.join(dataDir, "market", "marketplaces.json"), "utf8"));
@@ -47,7 +48,7 @@ const stockDir = path.join(root, "src", "content", "market", "stock");
 const stockArchetypes = extractObject(path.join(stockDir, "archetypes.ts"), "stockArchetypes");
 const stockTiers = extractObject(path.join(stockDir, "tiers.ts"), "stockTiers");
 const professionStockProfiles = extractObject(path.join(stockDir, "profiles.ts"), "professionStockProfiles");
-const characterStockOverrides = extractObject(path.join(stockDir, "profiles.ts"), "characterStockOverrides");
+const characterStockOverridesById = extractObject(path.join(stockDir, "profiles.ts"), "characterStockOverridesById");
 const fallbackStockProfile = extractObject(path.join(stockDir, "profiles.ts"), "fallbackStockProfile");
 const merchantFallbackProfile = extractObject(path.join(stockDir, "profiles.ts"), "merchantFallbackProfile");
 const lifestyleStockBaselines = extractObject(path.join(stockDir, "profiles.ts"), "lifestyleStockBaselines");
@@ -188,7 +189,7 @@ function resolveStockProfile(character) {
   const profession = character.professionSlug ? professionStockProfiles[character.professionSlug] : undefined;
   let profile = profession ? mergeProfile(profession) : mergeProfile(character.isMerchant ? merchantFallbackProfile : fallbackStockProfile);
   if (character.isMerchant) profile = { ...profile, tier: atLeastTier(profile.tier, "stocked") };
-  profile = mergeProfile(profile, characterStockOverrides[character.name]);
+  profile = mergeProfile(profile, character.characterId ? characterStockOverridesById[character.characterId] : undefined);
   profile = applyLifestyleBaseline(character, profile);
   return applyGeneratedBiasWeights(character, profile);
 }

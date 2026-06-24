@@ -43,7 +43,7 @@ export default defineConfig({
             return `items-data-${itemChunkMatch[1]}`;
           }
 
-          if (normalizedId.includes("/src/content/characters/characters.json")) {
+          if (normalizedId.includes("/src/content/characters/characterRuntimeProfiles.data.json")) {
             return "characters-data";
           }
 

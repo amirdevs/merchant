@@ -61,6 +61,7 @@ export type ObtainableItem = {
 };
 
 export type Character = {
+  characterId?: string;
   index: number;
   name: string;
   profession: string;

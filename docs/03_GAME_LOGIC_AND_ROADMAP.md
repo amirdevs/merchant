@@ -5,6 +5,7 @@ This is the only roadmap doc. Keep gameplay status, character/portrait gates, qu
 ## Current foundation status
 
 - The app loads core runtime data and current character-profile systems.
+- Runtime character behavior now lives in typed character runtime profiles, while visible identity resolves through the final character profile catalog and portrait manifest.
 - Save, load, import, and export use the current save envelope.
 - Inventory, barter, stock, economy, travel, company, law, rivals, contracts, and quest foundation helpers exist as foundation systems.
 - Runtime character portraits live under `public/assets/portraits/characters/`, have a manifest, and pass the portrait audit gate.
@@ -50,10 +51,14 @@ all filenames match JSON outputFile values
 The runtime manifest and audit live in:
 
 ```text
+src/content/characters/characterRuntimeProfiles.ts
 src/game/characters/characterPortraitManifest.ts
 src/tests/characters/characterPortraitManifest.test.ts
 scripts/audits/audit-character-portraits.cjs
+scripts/audits/audit-runtime-characters.cjs
 ```
+
+Runtime character validation blocks raw roster files, direct `characters.json` imports, stale portrait/stall filenames, and runtime/profile mapping drift.
 
 Character sheet files under `docs/assets/character-sheets/` are supporting art assets, not runtime assets. After final portraits are locked, they can stay as optional production files unless the user wants a slimmer repository.
 

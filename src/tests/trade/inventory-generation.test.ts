@@ -39,7 +39,7 @@ describe("inventory generation", () => {
 
   it("gives profession specialists general goods and tier-appropriate money", () => {
     const state = newGame();
-    const blacksmith = state.characters.find((character) => character.name === "George Smith")!;
+    const blacksmith = state.characters.find((character) => character.characterId === "character-087")!;
     const stock = generateInventory(blacksmith, 2);
     const stockItems = stock.map((entry) => entry.itemIndex);
     const names = stockItems.map((itemIndex) => items[itemIndex].name.toLowerCase());

@@ -1,4 +1,5 @@
-import charactersJson from "@/content/characters/characters.json";
+import { characterIdentityCatalogBatches } from "@/content/characters/characterIdentityCatalog";
+import { buildRuntimeCharacters } from "@/content/characters/characterRuntimeProfiles";
 import { itemsChunked } from "@/content/items/items.chunked";
 import kingdomsJson from "@/content/world/kingdoms.json";
 import marketplacesJson from "@/content/market/marketplaces.json";
@@ -38,6 +39,7 @@ import { stockArchetypes } from "@/content/market/stock/archetypes";
 import type { StockArchetype, WeightedArchetype } from "@/content/market/stock/types";
 import { resolvedStockSettings } from "@/game/economy/stock-profiles";
 import { itemCatalogTokens, itemMatchesCatalogToken, normalizeItemToken } from "@/game/trade/item-catalog";
+import { characterPortraitRecords } from "@/game/characters/characterPortraitManifest";
 
 export const items = itemsChunked as Item[];
 export const kingdoms = kingdomsJson as Kingdom[];
@@ -47,7 +49,16 @@ export const GAME_DAY_MINUTES = 24 * 60;
 export const MARKET_OPEN_MINUTES = 8 * 60;
 export const MARKET_CLOSE_MINUTES = 20 * 60;
 
-const baseCharacters = charactersJson as Character[];
+const runtimeIdentityProfiles = characterIdentityCatalogBatches.flatMap((batch) => batch.identities);
+const neutralPortraitByCharacterId = new Map(
+  characterPortraitRecords
+    .filter((portrait) => portrait.expression === "neutral")
+    .map((portrait) => [portrait.characterId, portrait.outputFile] as const),
+);
+const baseCharacters = buildRuntimeCharacters({
+  identities: runtimeIdentityProfiles,
+  neutralPortraitByCharacterId,
+});
 const stockItemRecords = items.map((item) => ({
   item,
   name: normalizeStockToken(item.name),
