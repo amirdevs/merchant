@@ -92,6 +92,7 @@ src/lib/quest-journal-view-model.ts
 src/lib/first-playable-quest-chain.ts
 src/lib/playable-merchant-loop.ts
 src/lib/game-runtime-loop.ts
+src/lib/economy-world-expansion.ts
 ```
 
 Content currently defined:
@@ -102,6 +103,9 @@ Content currently defined:
 30 rich side quest concepts
 20 repeatable trade contract templates
 6 possible campaign endings
+18 tuned economy/world expansion items
+3 expansion-town identities
+8 next playable quest seeds
 ```
 
 The approved first vertical-slice chain is:
@@ -292,6 +296,28 @@ loop ledger
 ```
 
 This means save/load/export should preserve the first playable loop. The older component-local fallback is allowed only for isolated testing.
+
+### Phase 7 - economy/world expansion must stay quest-aware
+
+The economy expansion exists to make quests and company progression more meaningful, not to add random item lists.
+
+Phase 7 defines:
+
+```text
+18 tuned trade items
+current-town stock pressure
+dynamic prices tied to shortage, trust, heat, and company registration
+route risk events tied to saved consequences
+company upgrade candidates
+Appleford Orchard, Glassmere Court, and Wolfhook Bay as expansion-town candidates
+8 next playable quest seeds
+```
+
+Quest design rule for this phase:
+
+```text
+Every added item, town, route, or market pressure should support a story quest, a company upgrade, a readable profit route, or a visible consequence.
+```
 
 ## Example rich quest: Bread Before Dawn
 

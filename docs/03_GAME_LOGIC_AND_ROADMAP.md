@@ -11,6 +11,7 @@ This is the only roadmap doc. Keep current gameplay status, character/portrait g
 - Rich Quest System Foundation exists as source data, state helpers, effect helpers, selectors, journal view models, and focused tests.
 - The first playable merchant loop now exists as a small story-rich vertical slice: buy, travel, sell, progress rich quests, see consequences, and register the first company.
 - Phase 6 moves that loop into the main GameState/save/export model through the `playableLoop` runtime field.
+- Phase 7 adds the first economy/world expansion layer: town stock pressure, dynamic prices, route risk events, tuned regional items, company upgrade candidates, expansion towns, and next quest seeds.
 
 ## Confirmed remake direction
 
@@ -181,26 +182,46 @@ pnpm verify:current-state
 pnpm build
 ```
 
+### Phase 7 - Economy, World, and Content Expansion Pack
+
+Phase 7 expands the saved playable merchant loop into a richer merchant-world foundation without adding random filler.
+
+Implemented source files:
+
+```text
+src/lib/economy-world-expansion.ts
+src/lib/economy-world-expansion.test.ts
+src/features/journal/EconomyWorldExpansionPanel.tsx
+scripts/playtest-economy-world.cjs
+docs/logs/economy-world-expansion-report.md
+```
+
+Implemented behavior:
+
+```text
+18 tuned trade items split between starter, regional, and company-use goods
+current-town stock pressure rows
+dynamic prices affected by scarcity, public trust, shadow heat, and company registration
+route risk events affected by saved consequence state
+company upgrade candidates after registration
+three expansion-town identities: Appleford Orchard, Glassmere Court, Wolfhook Bay
+8 next playable quest seeds from the quest bible
+world-readiness score for deciding when the slice is ready to expand
+Journal UI panel for economy/world expansion visibility
+```
+
+Validation:
+
+```powershell
+pnpm test:economy-world
+pnpm playtest:economy-world
+pnpm verify:current-state
+pnpm build
+```
+
 ## Compact roadmap from here
 
 Keep phases large so the user does not need constant ZIP/unZIP work.
-
-### Phase 7 - Economy, World, and Content Expansion
-
-Goal: expand the playable slice into a richer merchant world.
-
-Includes:
-
-```text
-real town stock for the vertical-slice towns
-dynamic prices tied to shortages, surplus, and quest consequences
-route risk/events for the starter region
-original town identities replacing old visible world flavor where it affects gameplay
-NPC trade personalities affecting deals
-more playable rich quests from the quest bible
-more company upgrades after registration
-10-20 tuned trade items that support readable profit routes
-```
 
 ### Phase 8 - Full Vertical Slice Polish
 
