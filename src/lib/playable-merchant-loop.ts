@@ -50,7 +50,7 @@ export type LoopCargoEntry = {
 
 export type LoopLedgerEntry = {
   day: number;
-  type: "buy" | "sell" | "travel" | "quest" | "company";
+  type: "buy" | "sell" | "travel" | "quest" | "company" | "consequence";
   text: string;
   copperDelta?: number;
   townId?: LoopTownId;
@@ -62,6 +62,35 @@ export type LoopCompanyState = {
   warehouseLeased: boolean;
   clerkHired: boolean;
   ledgerOpened: boolean;
+};
+
+export type LoopConsequenceScore = {
+  publicTrust: number;
+  shadowHeat: number;
+  companyReadiness: number;
+};
+
+export type LoopBalanceSignal = {
+  id: string;
+  label: string;
+  status: "good" | "watch" | "risk";
+  detail: string;
+};
+
+export type LoopConsequenceSummary = {
+  townReputation: { townId: LoopTownId; townName: string; score: number }[];
+  npcTrust: { npcId: string; score: number }[];
+  publicTrust: number;
+  shadowHeat: number;
+  companyReadiness: number;
+  visibleConsequences: string[];
+};
+
+export type LoopBalanceReport = {
+  score: number;
+  summary: string;
+  signals: LoopBalanceSignal[];
+  nextRecommendedAction: string;
 };
 
 export type PlayableMerchantLoopState = {
@@ -76,6 +105,10 @@ export type PlayableMerchantLoopState = {
   questChain: FirstPlayableQuestChainState;
   company: LoopCompanyState;
   tutorialFlags: Record<string, boolean>;
+  reputation: Record<LoopTownId, number>;
+  npcTrust: Record<string, number>;
+  consequences: LoopConsequenceScore;
+  consequenceFlags: Record<string, boolean>;
   ledger: LoopLedgerEntry[];
 };
 
@@ -181,6 +214,39 @@ function ensureCargoEntry(state: PlayableMerchantLoopState, itemId: LoopItemId):
   return state.cargo[itemId];
 }
 
+function defaultLoopReputation(): Record<LoopTownId, number> {
+  return {
+    "sunwake-harbor": 0,
+    "riverwake-mill": 0,
+    "brasskeep-gate": 0,
+  };
+}
+
+function defaultLoopConsequences(): LoopConsequenceScore {
+  return { publicTrust: 0, shadowHeat: 0, companyReadiness: 0 };
+}
+
+function clampScore(value: number, min = -20, max = 20) {
+  return Math.max(min, Math.min(max, Math.round(value)));
+}
+
+function bumpTownReputation(state: PlayableMerchantLoopState, townId: LoopTownId, amount: number) {
+  state.reputation[townId] = clampScore((state.reputation[townId] || 0) + amount);
+}
+
+function bumpNpcTrust(state: PlayableMerchantLoopState, npcId: string | undefined, amount: number) {
+  if (!npcId) return;
+  state.npcTrust[npcId] = clampScore((state.npcTrust[npcId] || 0) + amount);
+}
+
+function bumpConsequenceScore(state: PlayableMerchantLoopState, key: keyof LoopConsequenceScore, amount: number) {
+  state.consequences[key] = clampScore((state.consequences[key] || 0) + amount, -50, 50);
+}
+
+function rememberConsequence(state: PlayableMerchantLoopState, flag: string) {
+  state.consequenceFlags[flag] = true;
+}
+
 export function createPlayableMerchantLoopState(day = 1): PlayableMerchantLoopState {
   return {
     day,
@@ -200,6 +266,10 @@ export function createPlayableMerchantLoopState(day = 1): PlayableMerchantLoopSt
       ledgerOpened: false,
     },
     tutorialFlags: {},
+    reputation: defaultLoopReputation(),
+    npcTrust: {},
+    consequences: defaultLoopConsequences(),
+    consequenceFlags: {},
     ledger: [
       {
         day,
@@ -230,6 +300,10 @@ export function ensurePlayableMerchantLoopState(value: unknown, day = 1): Playab
     questChain: ensureFirstPlayableQuestChainState(candidate.questChain, typeof candidate.day === "number" ? candidate.day : day),
     company: { ...fallback.company, ...(candidate.company || {}) },
     tutorialFlags: candidate.tutorialFlags || {},
+    reputation: { ...fallback.reputation, ...(candidate.reputation || {}) },
+    npcTrust: candidate.npcTrust || {},
+    consequences: { ...fallback.consequences, ...(candidate.consequences || {}) },
+    consequenceFlags: candidate.consequenceFlags || {},
     ledger: Array.isArray(candidate.ledger) ? candidate.ledger.slice(0, 30) : fallback.ledger,
   };
 }
@@ -257,6 +331,7 @@ export function buyLoopItem(state: PlayableMerchantLoopState, itemId: LoopItemId
   cargo.averageCost = Math.round(((existingValue + total) / cargo.quantity) * 100) / 100;
   next.copper -= total;
   next.tutorialFlags.boughtFirstCargo = true;
+  if (quantity >= 4) rememberConsequence(next, "bulk-first-purchase");
   addLedger(next, { type: "buy", townId: next.currentTownId, copperDelta: -total, text: `Bought ${quantity} ${itemById(itemId).name} for ${total} copper.` });
   return next;
 }
@@ -279,6 +354,14 @@ export function sellLoopItem(state: PlayableMerchantLoopState, itemId: LoopItemI
   next.totalProfit += profit;
   next.completedTrades += profit > 0 ? 1 : 0;
   next.tutorialFlags.soldForProfit ||= profit > 0;
+  if (profit > 0) {
+    bumpTownReputation(next, next.currentTownId, 1);
+    bumpConsequenceScore(next, "publicTrust", 1);
+    rememberConsequence(next, "first-visible-profit");
+  } else if (profit < 0) {
+    bumpConsequenceScore(next, "companyReadiness", -1);
+    rememberConsequence(next, "sold-at-a-loss");
+  }
   addLedger(next, { type: "sell", townId: next.currentTownId, copperDelta: revenue, text: `Sold ${sold} ${itemById(itemId).name} for ${revenue} copper (${profit >= 0 ? "+" : ""}${profit} profit).` });
   return maybeMarkFirstProfitReady(next);
 }
@@ -302,6 +385,10 @@ export function travelLoopRoute(state: PlayableMerchantLoopState, to: LoopTownId
   uniquePush(next.routeHistory, route.id);
   next.questChain = ensureFirstPlayableQuestChainState({ ...next.questChain, day: next.day }, next.day);
   next.tutorialFlags.completedFirstTravel = true;
+  if (route.risk >= 3) {
+    bumpConsequenceScore(next, "shadowHeat", 1);
+    rememberConsequence(next, "high-risk-road-seen");
+  }
   addLedger(next, { type: "travel", townId: to, copperDelta: -route.travelCost, text: `Traveled to ${townById(to).name}. ${route.story}` });
   return next;
 }
@@ -338,6 +425,30 @@ export function resolveLoopStoryQuest(state: PlayableMerchantLoopState, approach
   const card = buildFirstPlayableQuestChainView(next.questChain).cards.find((entry) => entry.id === targetQuestId);
   const choice = card?.quest.choices.find((entry) => entry.approach === approach) || card?.quest.choices[0];
   next.questChain = choice ? chooseFirstPlayableQuestOutcome(next.questChain, targetQuestId, choice.id) : completeFirstPlayableQuestWithDefaultChoice(next.questChain, targetQuestId);
+
+  const giverNpcId = card?.quest.giverNpcId;
+  if (approach === "honest" || approach === "diplomatic") {
+    bumpTownReputation(next, next.currentTownId, 2);
+    bumpNpcTrust(next, giverNpcId, 2);
+    bumpConsequenceScore(next, "publicTrust", 2);
+    rememberConsequence(next, "public-trust-path");
+  } else if (approach === "practical") {
+    bumpTownReputation(next, next.currentTownId, 1);
+    bumpNpcTrust(next, giverNpcId, 1);
+    bumpConsequenceScore(next, "companyReadiness", 2);
+    rememberConsequence(next, "practical-company-path");
+  } else if (approach === "exploit" || approach === "shadow") {
+    bumpTownReputation(next, next.currentTownId, -2);
+    bumpNpcTrust(next, giverNpcId, -1);
+    bumpConsequenceScore(next, "shadowHeat", 3);
+    rememberConsequence(next, "shadow-profit-path");
+  } else if (approach === "risky") {
+    bumpTownReputation(next, next.currentTownId, 1);
+    bumpConsequenceScore(next, "shadowHeat", 1);
+    bumpConsequenceScore(next, "companyReadiness", 1);
+    rememberConsequence(next, "risky-solution-path");
+  }
+
   addLedger(next, { type: "quest", townId: next.currentTownId, text: `Resolved ${targetQuestId} by ${approach} approach.` });
   return applyLoopUnlocks(next);
 }
@@ -363,6 +474,9 @@ export function registerLoopCompany(state: PlayableMerchantLoopState, name = "Su
   next.company.registered = true;
   next.company.name = name.trim() || "Sunwake Ledger Company";
   next.company.clerkHired = true;
+  bumpTownReputation(next, next.currentTownId, 3);
+  bumpConsequenceScore(next, "companyReadiness", 5);
+  rememberConsequence(next, "first-company-registered");
   addLedger(next, { type: "company", townId: next.currentTownId, text: `${next.company.name} is registered. Warehouse, clerk, and company ledger are ready for the next expansion pass.` });
   return next;
 }
@@ -391,12 +505,89 @@ export function bestLoopTradeRoutes(from: LoopTownId = "sunwake-harbor") {
   }).sort((a, b) => b.netProfit - a.netProfit);
 }
 
+export function buildLoopConsequenceSummary(state: PlayableMerchantLoopState): LoopConsequenceSummary {
+  const safe = ensurePlayableMerchantLoopState(state);
+  const townReputation = LOOP_TOWNS.map((town) => ({ townId: town.id, townName: town.name, score: safe.reputation[town.id] || 0 }));
+  const npcTrust = Object.entries(safe.npcTrust).map(([npcId, score]) => ({ npcId, score })).sort((a, b) => b.score - a.score);
+  const visibleConsequences = Object.keys(safe.consequenceFlags).sort();
+  return {
+    townReputation,
+    npcTrust,
+    publicTrust: safe.consequences.publicTrust,
+    shadowHeat: safe.consequences.shadowHeat,
+    companyReadiness: safe.consequences.companyReadiness,
+    visibleConsequences,
+  };
+}
+
+export function buildLoopBalanceReport(state: PlayableMerchantLoopState): LoopBalanceReport {
+  const safe = ensurePlayableMerchantLoopState(state);
+  const cargoValue = Object.values(safe.cargo).reduce((total, entry) => total + entry.quantity * loopPrice(safe.currentTownId, entry.itemId), 0);
+  const netWorth = safe.copper + cargoValue;
+  const routeCount = new Set(safe.routeHistory).size;
+  const completedQuestCount = FIRST_PLAYABLE_QUEST_CHAIN_IDS.filter((questId) => richQuestStatus(safe.questChain, questId) === "completed").length;
+  const signals: LoopBalanceSignal[] = [
+    {
+      id: "money",
+      label: "Money pressure",
+      status: safe.copper >= 80 ? "good" : safe.copper >= 35 ? "watch" : "risk",
+      detail: `${safe.copper} copper cash / ${netWorth} copper including cargo`,
+    },
+    {
+      id: "profit",
+      label: "Profit clarity",
+      status: safe.totalProfit > 0 ? "good" : safe.completedTrades ? "watch" : "risk",
+      detail: `${safe.totalProfit} copper realized profit across ${safe.completedTrades} profitable trade(s)`,
+    },
+    {
+      id: "routes",
+      label: "Route use",
+      status: routeCount >= 2 ? "good" : routeCount === 1 ? "watch" : "risk",
+      detail: `${routeCount} unique vertical-slice route(s) used`,
+    },
+    {
+      id: "quests",
+      label: "Story progress",
+      status: completedQuestCount >= 5 ? "good" : completedQuestCount >= 2 ? "watch" : "risk",
+      detail: `${completedQuestCount}/5 first-chain quests completed`,
+    },
+    {
+      id: "company",
+      label: "Company readiness",
+      status: safe.company.registered ? "good" : safe.company.ledgerOpened ? "watch" : "risk",
+      detail: safe.company.registered ? `${safe.company.name} registered` : safe.company.ledgerOpened ? "ledger ready, registration pending" : "registration still locked",
+    },
+  ];
+  const good = signals.filter((entry) => entry.status === "good").length;
+  const watch = signals.filter((entry) => entry.status === "watch").length;
+  const score = good * 2 + watch;
+  const nextRecommendedAction = !safe.tutorialFlags.boughtFirstCargo
+    ? "Buy a low-risk harbor good."
+    : !safe.tutorialFlags.completedFirstTravel
+      ? "Travel to Riverwake Mill and compare sale prices."
+      : safe.totalProfit <= 0
+        ? "Sell cargo where the net route profit is positive."
+        : completedQuestCount < 5
+          ? "Resolve the rich story chain and watch how trust changes."
+          : !safe.company.registered
+            ? "Travel to Brasskeep Gate and register the company."
+            : "Replay with a different quest approach to compare public trust and shadow heat.";
+  return {
+    score,
+    summary: `${good}/${signals.length} balance signals are healthy.`,
+    signals,
+    nextRecommendedAction,
+  };
+}
+
 export function buildPlayableMerchantLoopView(state: PlayableMerchantLoopState) {
   const safe = ensurePlayableMerchantLoopState(state);
   const town = currentLoopTown(safe);
   const questView = buildFirstPlayableQuestChainView(safe.questChain);
   const cargoList = Object.values(safe.cargo).filter((entry) => entry.quantity > 0).map((entry) => ({ ...entry, itemName: itemById(entry.itemId).name, currentSellPrice: loopPrice(safe.currentTownId, entry.itemId) }));
   const tradeRoutes = bestLoopTradeRoutes(safe.currentTownId).slice(0, 5);
+  const consequenceSummary = buildLoopConsequenceSummary(safe);
+  const balanceReport = buildLoopBalanceReport(safe);
   const goals = [
     { id: "buy", label: "Buy a low-risk good", done: Boolean(safe.tutorialFlags.boughtFirstCargo) },
     { id: "travel", label: "Travel to a second town", done: Boolean(safe.tutorialFlags.completedFirstTravel) },
@@ -413,6 +604,8 @@ export function buildPlayableMerchantLoopView(state: PlayableMerchantLoopState) 
     tradeRoutes,
     questView,
     company: safe.company,
+    consequenceSummary,
+    balanceReport,
     completedGoals: goals.filter((entry) => entry.done).length,
     totalGoals: goals.length,
     goals,

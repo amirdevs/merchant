@@ -360,3 +360,56 @@ Phase 5 should polish consequences, balance, UI readability, and save/export int
 Remaining large phase:
 
 1. **Phase 5 - Consequence, Balance, and UI Polish Pack**: tune profit margins, quest rewards, deadlines, travel cost, route risk, company unlock pacing, and consequence visibility; polish the market, barter, journal, and company surfaces around the new character portraits and story-rich quests; connect save/export more cleanly; hide or retire old quest UI paths that no longer match the remake; prepare the expansion plan after the vertical slice feels good.
+
+## Phase 5 completed - consequence, balance, and UI polish pack
+
+Phase 5 turns the first playable merchant loop from a functional prototype into a clearer playtest surface. It also fixes the Phase 4 JSX build blocker caused by a raw `>` character inside JSX route text.
+
+Implemented scope:
+
+```text
+build blocker fixed:
+- route cards now render the town arrow safely with JSX-safe text
+
+consequence visibility:
+- town reputation per vertical-slice town
+- NPC trust tracking for quest givers
+- public trust score
+- shadow heat score
+- company readiness score
+- named consequence flags for important player actions
+
+balance visibility:
+- money pressure signal
+- profit clarity signal
+- route-use signal
+- story progress signal
+- company readiness signal
+- next recommended player action
+
+UI polish:
+- Journal merchant loop panel now surfaces balance signals and consequences beside the trade loop
+- route cards show risk and use a safe arrow
+- consequence cards explain why player choices matter
+- ledger remains readable and story-friendly
+```
+
+Validation:
+
+```powershell
+pnpm test:merchant-polish
+pnpm test:merchant-loop
+pnpm playtest:merchant-loop-polish
+pnpm verify:current-state
+pnpm build
+```
+
+Large roadmap after Phase 5:
+
+1. **Save / GameState Integration Pack**: move the playable merchant loop and rich quest states from local-storage-only prototype state into the project-wide game state/save/export model, while preserving backward compatibility for existing local test saves.
+2. **World Expansion Pack 1**: expand the vertical slice from 3 towns to a larger connected region with more original towns, route events, regional shortages, and market consequences.
+3. **Questline Expansion Pack 1**: implement more rich questlines from the quest bible as playable chains, not only drafts. Each chain must include story scenes, trade pressure, choices, consequences, and follow-up memory.
+4. **Company Systems Pack 1**: deepen the first company after registration with warehouse capacity, first clerk tasks, contracts, remote shipments, ledger summaries, and company reputation.
+5. **Full UI/UX Cohesion Pack**: polish market, barter, journal, company, and strategy screens around the new portraits, rich quests, consequences, and company progression.
+
+Do not expand content randomly. Each expansion should make the playable merchant loop deeper, more readable, and more story-rich.

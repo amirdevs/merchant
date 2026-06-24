@@ -33,8 +33,10 @@
     "test:playtest": "vitest run src/lib/playtest-balance.test.ts",
     "playtest:balance": "node scripts/playtest-balance.cjs",
     "test:rich-quest-chain": "vitest run src/lib/first-playable-quest-chain.test.ts",
-    "test:merchant-loop": "vitest run src/lib/playable-merchant-loop.test.ts",
-    "playtest:merchant-loop": "node scripts/playtest-merchant-loop.cjs"
+    "test:merchant-loop": "vitest run src/lib/playable-merchant-loop.test.ts src/lib/playable-merchant-loop-polish.test.ts",
+    "playtest:merchant-loop": "node scripts/playtest-merchant-loop.cjs",
+    "test:merchant-polish": "vitest run src/lib/playable-merchant-loop-polish.test.ts",
+    "playtest:merchant-loop-polish": "node scripts/playtest-merchant-loop-polish.cjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",

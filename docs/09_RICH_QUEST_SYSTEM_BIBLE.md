@@ -459,3 +459,44 @@ Does the player understand what changed after a choice?
 Does the company unlock feel earned?
 Is the Journal readable without becoming a checklist?
 ```
+
+## Phase 5 note - consequences must be visible
+
+Phase 5 confirms an important writing and runtime rule:
+
+```text
+A consequence does not count if the player cannot see or feel it.
+```
+
+The first playable loop now exposes consequence categories directly in the Journal:
+
+```text
+public trust
+shadow heat
+company readiness
+town reputation
+NPC trust
+named consequence flags
+```
+
+Quest writing should use those categories deliberately. A quest choice should not only say `+reputation` or `-trust`; the story should explain who notices the choice, why they care, and how the player can use or repair that consequence later.
+
+Every future playable questline should answer these questions before implementation:
+
+1. Which town remembers this?
+2. Which NPC remembers this?
+3. Does the choice improve public trust, create shadow heat, or prepare the company?
+4. What will the player see immediately after the choice?
+5. What later opportunity, discount, risk, route, contract, or ending pressure can use this memory?
+
+The first loop also adds balance signals. Future questlines should be tested against them:
+
+```text
+money pressure
+profit clarity
+route use
+story progress
+company readiness
+```
+
+A rich questline is not ready for expansion if it creates story text but does not make the trade loop clearer, riskier, more emotional, or more consequential.
