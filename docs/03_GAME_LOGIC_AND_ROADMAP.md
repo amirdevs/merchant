@@ -1,6 +1,6 @@
 # 03 - Game Logic And Roadmap
 
-This is the only roadmap doc. Keep gameplay status, character/portrait gates, quest-system gates, vertical-slice milestones, cleanup status, and expansion milestones here instead of adding per-step completion docs.
+This is the only roadmap doc. Keep gameplay status, character/portrait gates, quest-system gates, vertical-slice milestones, structure status, and expansion milestones here instead of adding per-step completion docs.
 
 ## Current foundation status
 
@@ -13,6 +13,7 @@ This is the only roadmap doc. Keep gameplay status, character/portrait gates, qu
 - The playable loop persists through `GameState.playableLoop`.
 - Economy and world helpers exist for stock pressure, dynamic prices, route risk events, tuned regional items, company upgrade candidates, expansion towns, and upcoming quest seeds.
 - Vertical-slice polish helpers exist for alpha-readiness scoring, player-flow checklist, save/load readiness, consequence visibility, and release/playtest guidance.
+- The project now uses the domain-based structure described in `docs/02_DEVELOPMENT_SETUP.md`.
 
 ## Confirmed project direction
 
@@ -24,7 +25,7 @@ Confirmed areas:
 2. **Quests** - expand the quest foundation into rich merchant stories, meaningful choices, and campaign goals.
 3. **Playable loop** - prioritize a real playable vertical slice before producing more loose assets.
 4. **GameState runtime** - playable features should persist through the main save/export model.
-5. **Expansion** - expand the actual game after the structure pass, not support-only files.
+5. **Expansion** - expand the actual game using the current domain-based structure.
 
 ## Character runtime integration status
 
@@ -233,36 +234,39 @@ focused vertical-slice polish tests
 manual vertical-slice playtest report
 ```
 
-## Current next milestone - Project Structure Pass
+## Project Structure Pass status
 
-Before adding more content, clean the project structure.
-
-Goal:
+The project structure is now organized by domain:
 
 ```text
-organize files by domain, remove unused support files, trim optional visual assets, reduce duplicate runtime paths, and prepare a lean structure for expansion.
+src/app/       app shell and app-specific state/control code
+src/content/   authored/static game content and catalogs
+src/game/      pure gameplay/domain logic and runtime helpers
+src/features/  screen-level UI surfaces
+src/shared/    reusable utilities, types, hooks, constants, and generic components
+src/tests/     grouped tests by domain
+scripts/audits/       audit gates
+scripts/playtests/    playtest/report generators
+scripts/generators/   content and asset generation helpers
+scripts/maintenance/  validation and maintenance orchestrators
 ```
 
-Structure priorities:
+Structure rules going forward:
 
 ```text
-1. Move gameplay logic into clear domain folders.
-2. Separate content data, runtime logic, feature UI, tests, scripts, and docs.
-3. Remove unnecessary runtime fallbacks now that GameState runtime persistence exists.
-4. Keep quest foundation helpers as real system files, not loose experiments.
-5. Remove inactive character asset paths and unused public assets after the portrait gate passes.
-6. Delete character sheet art files if final cropped portraits are locked and the user wants the slimmer repository.
-7. Delete unused public UI images after an active-runtime audit.
-8. Remove inactive maintenance scripts and package commands.
-9. Remove or dev-gate extra debug panels.
-10. Keep all current gates green: verify:current-state and build must pass.
+1. Put gameplay rules in src/game/.
+2. Put authored content in src/content/.
+3. Put screen-level UI in src/features/.
+4. Put generic utilities and shared UI in src/shared/.
+5. Put grouped tests in src/tests/.
+6. Keep scripts grouped by task type.
+7. Do not add root handoff docs or temporary notes.
+8. Keep all current gates green: verify:current-state and build must pass.
 ```
 
-## Expansion roadmap after structure cleanup
+## Current next milestone - Expansion Pack 1: Starter Region Expansion
 
 Do not expand content randomly. Each expansion should make the playable merchant loop deeper, more readable, more story-rich, or more consequential.
-
-### Expansion Pack 1 - Starter Region Expansion
 
 Goal: make the first region feel real.
 
@@ -278,6 +282,8 @@ town-specific supply/demand
 more company unlocks
 starter-region balance pass
 ```
+
+## Later expansion roadmap
 
 ### Expansion Pack 2 - Campaign + NPC Questlines
 
@@ -316,6 +322,6 @@ first ending path
 ## Rule for future expansion
 
 ```text
-Clean structure first.
+Keep the domain structure clean.
 Then expand the actual game, not support-only files.
 ```

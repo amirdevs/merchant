@@ -62,6 +62,31 @@ Asset production folders are allowed to remain under `/docs/assets/` when they c
 
 Before adding docs, update the numbered reading order if the doc is permanent; otherwise put it in `/docs/logs/`.
 
+## Project Structure Rules
+
+Use the current domain-based structure:
+
+```text
+src/app/       app shell, controllers, providers, app-only hooks, and app types
+src/content/   authored/static game content and catalogs
+src/game/      pure gameplay/domain logic and runtime helpers
+src/features/  screen-level feature UI and panels
+src/shared/    reusable components, types, constants, hooks, and generic utilities
+src/tests/     grouped Vitest tests by domain
+scripts/audits/       audit gates
+scripts/playtests/    manual/runtime playtest report generators
+scripts/generators/   content and asset generation helpers
+scripts/maintenance/  validation orchestrators and maintenance utilities
+```
+
+Keep authored content, gameplay rules, feature UI, shared utilities, tests, and scripts separated. Do not put broad gameplay rules inside feature components when the rule is reused elsewhere. Do not put tests beside domain logic; place them under `src/tests/`.
+
+`verify:current-state` lives under:
+
+```text
+scripts/maintenance/verify-current-state.cjs
+```
+
 ## Character Profile Rules
 
 Visible character identity must stay original to this game. Keep character-facing names, portraits, dialogue flavor, and visual designs consistent with the approved character profile catalog.
@@ -138,42 +163,3 @@ After cropping, run `pnpm audit:character-portraits` and review `docs/logs/chara
 Use `docs/ui_parts/` as the current UI visual reference. The target look is bright painterly fantasy merchant UI: sunlit coastal town scenes, parchment ledgers, carved dark wood shells, blue enamel title plates, brass trim, heraldic seals, gold status chips, polished NPC portraits, collectible item art, and beveled green/blue/red command buttons.
 
 Do not describe or implement the UI as a generic dense medieval app. Keep it compact and practical for repeated trading, but match the premium PC merchant RPG mockups in `docs/ui_parts`.
-
-## Stack
-
-- Package manager: `pnpm`
-- App: React 18, TypeScript, Vite
-- Styling: Tailwind CSS v4
-- UI icons: `lucide-react`
-
-Common commands:
-
-```powershell
-pnpm dev
-pnpm build
-pnpm verify:current-state
-pnpm audit:character-portraits
-```
-
-Do not use npm for installs or scripts unless the user explicitly asks.
-
-## Current User Preferences
-
-- The user wants practical implementation, not long proposals.
-- The user often says "continue"; continue the current task from local context.
-- Ask before doing if there is a real product/architecture choice awaiting the user's call.
-- The user prefers ZIP/root-overlay patches unless they ask for direct Git commits.
-- Every ZIP response should include a suggested Git commit message.
-- The user is fine with fresh saves; do not preserve save compatibility unless requested.
-- Dist/release build output should not be committed.
-- Do not use patch scripts for docs organization; provide direct files or a clear delete list.
-- Character prompt files should be created before portrait generation so sheets and cropping stay consistent.
-
-## Validation
-
-Run focused tests for the area changed. For broad changes, run:
-
-```powershell
-pnpm verify:current-state
-pnpm build
-```

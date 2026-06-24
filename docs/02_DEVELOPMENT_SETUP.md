@@ -52,6 +52,37 @@ pnpm test:ui-integration
 pnpm test:playtest
 ```
 
+## Project structure
+
+The source tree is organized by purpose:
+
+```text
+src/app/       app shell, controllers, providers, app-only hooks, and app types
+src/content/   authored/static game content and catalogs
+src/game/      pure gameplay/domain logic and runtime helpers
+src/features/  screen-level feature UI and panels
+src/shared/    reusable components, types, constants, hooks, and generic utilities
+src/tests/     grouped Vitest tests by domain
+```
+
+Script folders are grouped by task type:
+
+```text
+scripts/audits/       audit gates
+scripts/playtests/    manual/runtime playtest report generators
+scripts/generators/   content and asset generation helpers
+scripts/maintenance/  validation orchestrators and maintenance utilities
+```
+
+Rules:
+
+- Content data belongs in `src/content/`.
+- Reusable gameplay/domain rules belong in `src/game/`.
+- Screen/panel UI belongs in `src/features/`.
+- Shared UI/utilities/types belong in `src/shared/`.
+- Tests belong under `src/tests/`, grouped by domain.
+- Package scripts must point to the grouped script folders.
+
 ## Generated reports
 
 Generated reports are logs. They should live under `docs/logs/`.
@@ -81,7 +112,7 @@ docs/logs/character-portrait-lock-report.md
 ## Git hygiene
 
 - Do not commit `dist/`.
-- Do not restore intentionally deleted/remade item assets unless asked.
+- Do not restore intentionally removed item assets unless asked.
 - Do not add one-time patch scripts for docs organization.
 - Prefer small commits with Conventional Commit style.
 - Run focused tests for localized changes and full validation for broad changes.
