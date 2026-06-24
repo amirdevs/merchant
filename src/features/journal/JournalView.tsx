@@ -11,6 +11,7 @@ import { uiAssets } from "@/lib/ui-assets";
 import { RichQuestChainPanel } from "./RichQuestChainPanel";
 import { PlayableMerchantLoopPanel } from "./PlayableMerchantLoopPanel";
 import { EconomyWorldExpansionPanel } from "./EconomyWorldExpansionPanel";
+import { VerticalSlicePolishPanel } from "./VerticalSlicePolishPanel";
 
 type QuestStatus = GameState["questStates"][string];
 
@@ -56,6 +57,8 @@ export function JournalView({ state, onBack, onNavigate, onSetQuestStatus, onSet
           <PlayableMerchantLoopPanel day={state.day} gameState={state} />
 
           <EconomyWorldExpansionPanel state={state} />
+
+          <VerticalSlicePolishPanel state={state} />
 
           <RichQuestChainPanel day={state.day} />
 

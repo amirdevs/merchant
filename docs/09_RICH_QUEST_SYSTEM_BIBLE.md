@@ -429,3 +429,26 @@ named consequence flags
 A visible consequence still is not complete if it disappears after save/load/export.
 
 Phase 6 stores the first loop in the main game save payload so future expansion can build on persistent memory instead of a prototype panel.
+
+### Phase 8 - full vertical slice polish
+
+Phase 8 adds the alpha-readiness pass for the rich quest and merchant loop foundation.
+
+A playable quest chain is not considered healthy only because it has data and buttons. It must also pass these player-facing checks:
+
+```text
+The player knows why they are trading.
+The player understands what to buy and where to sell it.
+Travel changes the situation.
+Quest choices create visible consequences.
+NPC trust, town reputation, public trust, or shadow heat visibly react.
+Company registration feels like the end of the starter act.
+Save/load preserves the story and economy state.
+The Journal gives the player a clear next action.
+```
+
+Quest expansion after this point should follow this rule:
+
+```text
+Do not add a quest unless it creates a story memory, a trade reason, a relationship change, a company milestone, a route/town consequence, or a meaningful ending pressure.
+```

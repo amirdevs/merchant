@@ -242,3 +242,56 @@ manual release/playtest checklist
 ## Rule for future expansion
 
 Do not expand content randomly. Each expansion should make the playable merchant loop deeper, more readable, more story-rich, or more consequential.
+
+### Phase 8 - Full Vertical Slice Polish Pack
+
+Phase 8 turns the current saved merchant loop into a clean alpha-style vertical slice before more content is added.
+
+Implemented source files:
+
+```text
+src/lib/vertical-slice-polish.ts
+src/lib/vertical-slice-polish.test.ts
+src/features/journal/VerticalSlicePolishPanel.tsx
+src/features/journal/JournalView.tsx
+scripts/playtest-vertical-slice-polish.cjs
+docs/logs/vertical-slice-polish-report.md
+```
+
+Implemented behavior:
+
+```text
+alpha-readiness score for the current playable loop
+large player-flow checklist from start to company registration
+save/load runtime check
+trade-profit clarity check
+travel-purpose check
+rich quest chain engagement check
+company milestone check
+visible consequence check
+economy/world hook check
+player guidance check
+release checklist and cleanup guards
+Journal UI panel for full vertical-slice polish
+```
+
+Validation:
+
+```powershell
+pnpm test:vertical-polish
+pnpm playtest:vertical-polish
+pnpm verify:current-state
+pnpm build
+```
+
+## Compact roadmap after Phase 8
+
+The foundation is now character-integrated, quest-rich, persistent, consequence-visible, economy-aware, and alpha-polished. Future work should not be another foundation rewrite. Use larger expansion packs only:
+
+```text
+1. Expand playable content only when it supports the current loop.
+2. Add more real quests from the quest bible.
+3. Expand towns/routes/items after the starter loop remains stable.
+4. Replace old world visuals and remaining legacy scaffolding when the new runtime equivalent exists.
+5. Keep every new feature tied to trade, story, company progression, or visible consequences.
+```

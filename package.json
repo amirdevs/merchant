@@ -40,7 +40,9 @@
     "playtest:merchant-loop-polish": "node scripts/playtest-merchant-loop-polish.cjs",
     "playtest:runtime-loop": "node scripts/playtest-runtime-loop.cjs",
     "test:economy-world": "vitest run src/lib/economy-world-expansion.test.ts",
-    "playtest:economy-world": "node scripts/playtest-economy-world.cjs"
+    "playtest:economy-world": "node scripts/playtest-economy-world.cjs",
+    "test:vertical-polish": "vitest run src/lib/vertical-slice-polish.test.ts",
+    "playtest:vertical-polish": "node scripts/playtest-vertical-slice-polish.cjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",
