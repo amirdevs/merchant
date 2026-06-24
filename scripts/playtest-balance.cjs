@@ -28,7 +28,7 @@ function readIconMetrics() {
       const warnings = Array.isArray(report.warnings) ? report.warnings : [];
       const orphanFiles = Array.isArray(report.orphanFiles) ? report.orphanFiles : [];
       return {
-        source: "JSON",
+        rosterGroup: "JSON",
         missingRuntimeIcons: issues.filter((issue) => issue?.code === "missing-runtime-icon-file").length,
         orphanIcons: Number(report.summary?.orphanItemIconFileCount ?? orphanFiles.length),
         errors: Number(report.summary?.issueCount ?? issues.length),
@@ -41,7 +41,7 @@ function readIconMetrics() {
 
   const markdown = readIfExists("docs/logs/item-icon-lock-report.md");
   return {
-    source: markdown ? "markdown" : "unavailable",
+    rosterGroup: markdown ? "markdown" : "unavailable",
     missingRuntimeIcons: parseMarkdownMetric(markdown, "Missing runtime icon files") ?? 0,
     orphanIcons: parseMarkdownMetric(markdown, "Orphan item icon files") ?? 0,
     errors: parseMarkdownMetric(markdown, "Errors") ?? 0,
@@ -71,7 +71,7 @@ const lines = [
   `- Stock PASS sections: ${stockPasses}`,
   `- Stock REVIEW sections: ${stockReviews}`,
   `- Item icon report present: ${iconReport ? "yes" : "no"}`,
-  `- Item icon metrics source: ${iconMetrics.source}`,
+  `- Item icon metrics rosterGroup: ${iconMetrics.rosterGroup}`,
   `- Missing runtime icon files: ${iconMetrics.missingRuntimeIcons}`,
   `- Orphan item icon files: ${iconMetrics.orphanIcons}`,
   `- Icon errors: ${iconMetrics.errors}`,

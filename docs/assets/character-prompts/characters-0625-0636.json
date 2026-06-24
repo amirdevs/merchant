@@ -51,32 +51,32 @@
   "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified. Put a small readable filename label in the bottom-left corner of each cell. The label text must exactly match that entry outputFile, use pure magenta #FF00FF, simple bold readable font, no outline, no shadow, no glow, no gradient. Keep the label fully separated from the character art on empty green #00FF00 with a clear safety gap.",
   "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
   "sheetOrderLock": [
-    "R1C1 = npc-legacy-160-neutral.png — Glim Tallow, lamp lighter, neutral, human",
-    "R1C2 = npc-legacy-161-neutral.png — Mera Softstep, quiet courier, neutral, cat-kin",
-    "R1C3 = npc-legacy-162-neutral.png — Duchess Nima Glassvale, Noble Investor, neutral, moon-touched half-elf",
-    "R2C1 = npc-legacy-162-happy.png — Duchess Nima Glassvale, Noble Investor, happy, moon-touched half-elf",
-    "R2C2 = npc-legacy-162-suspicious.png — Duchess Nima Glassvale, Noble Investor, suspicious, moon-touched half-elf",
-    "R2C3 = npc-legacy-162-worried.png — Duchess Nima Glassvale, Noble Investor, worried, moon-touched half-elf",
-    "R3C1 = npc-legacy-162-angry.png — Duchess Nima Glassvale, Noble Investor, angry, moon-touched half-elf",
-    "R3C2 = npc-legacy-163-neutral.png — Master Threlk Mudhorn, Quarry Factor, neutral, ogre-kin",
-    "R3C3 = npc-legacy-163-happy.png — Master Threlk Mudhorn, Quarry Factor, happy, ogre-kin",
-    "R4C1 = npc-legacy-163-suspicious.png — Master Threlk Mudhorn, Quarry Factor, suspicious, ogre-kin",
-    "R4C2 = npc-legacy-163-worried.png — Master Threlk Mudhorn, Quarry Factor, worried, ogre-kin",
-    "R4C3 = npc-legacy-163-angry.png — Master Threlk Mudhorn, Quarry Factor, angry, ogre-kin"
+    "R1C1 = character-209-neutral.png — Glim Tallow, lamp lighter, neutral, human",
+    "R1C2 = character-210-neutral.png — Mera Softstep, quiet courier, neutral, cat-kin",
+    "R1C3 = character-211-neutral.png — Duchess Nima Glassvale, Noble Investor, neutral, moon-touched half-elf",
+    "R2C1 = character-211-happy.png — Duchess Nima Glassvale, Noble Investor, happy, moon-touched half-elf",
+    "R2C2 = character-211-suspicious.png — Duchess Nima Glassvale, Noble Investor, suspicious, moon-touched half-elf",
+    "R2C3 = character-211-worried.png — Duchess Nima Glassvale, Noble Investor, worried, moon-touched half-elf",
+    "R3C1 = character-211-angry.png — Duchess Nima Glassvale, Noble Investor, angry, moon-touched half-elf",
+    "R3C2 = character-212-neutral.png — Master Threlk Mudhorn, Quarry Factor, neutral, ogre-kin",
+    "R3C3 = character-212-happy.png — Master Threlk Mudhorn, Quarry Factor, happy, ogre-kin",
+    "R4C1 = character-212-suspicious.png — Master Threlk Mudhorn, Quarry Factor, suspicious, ogre-kin",
+    "R4C2 = character-212-worried.png — Master Threlk Mudhorn, Quarry Factor, worried, ogre-kin",
+    "R4C3 = character-212-angry.png — Master Threlk Mudhorn, Quarry Factor, angry, ogre-kin"
   ],
   "order": [
-    "1. npc-legacy-160-neutral",
-    "2. npc-legacy-161-neutral",
-    "3. npc-legacy-162-neutral",
-    "4. npc-legacy-162-happy",
-    "5. npc-legacy-162-suspicious",
-    "6. npc-legacy-162-worried",
-    "7. npc-legacy-162-angry",
-    "8. npc-legacy-163-neutral",
-    "9. npc-legacy-163-happy",
-    "10. npc-legacy-163-suspicious",
-    "11. npc-legacy-163-worried",
-    "12. npc-legacy-163-angry"
+    "1. character-209-neutral",
+    "2. character-210-neutral",
+    "3. character-211-neutral",
+    "4. character-211-happy",
+    "5. character-211-suspicious",
+    "6. character-211-worried",
+    "7. character-211-angry",
+    "8. character-212-neutral",
+    "9. character-212-happy",
+    "10. character-212-suspicious",
+    "11. character-212-worried",
+    "12. character-212-angry"
   ],
   "images": [
     {
@@ -84,12 +84,12 @@
       "row": 1,
       "column": 1,
       "cell": "R1C1",
-      "imageId": "npc-legacy-160-neutral",
-      "characterId": "npc-legacy-160",
+      "imageId": "character-209-neutral",
+      "characterId": "character-209",
       "displayName": "Glim Tallow",
       "profession": "lamp lighter",
       "expression": "neutral",
-      "outputFile": "npc-legacy-160-neutral.png",
+      "outputFile": "character-209-neutral.png",
       "cropCell": {
         "x": 0,
         "y": 0,
@@ -98,7 +98,7 @@
       },
       "ancestryOrSpecies": "human",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-160: lamp lighter silhouette, distinct small prop, expressive face, local outfit, lamp lighter, human, lamp lighter prop",
+      "identityAnchor": "same person as character-209: lamp lighter silhouette, distinct small prop, expressive face, local outfit, lamp lighter, human, lamp lighter prop",
       "visualTraits": [
         "lamp lighter silhouette",
         "distinct small prop",
@@ -114,7 +114,7 @@
       "globalOrder": 625,
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-160-neutral.png",
+        "text": "character-209-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -127,12 +127,12 @@
       "row": 1,
       "column": 2,
       "cell": "R1C2",
-      "imageId": "npc-legacy-161-neutral",
-      "characterId": "npc-legacy-161",
+      "imageId": "character-210-neutral",
+      "characterId": "character-210",
       "displayName": "Mera Softstep",
       "profession": "quiet courier",
       "expression": "neutral",
-      "outputFile": "npc-legacy-161-neutral.png",
+      "outputFile": "character-210-neutral.png",
       "cropCell": {
         "x": 1024,
         "y": 0,
@@ -141,7 +141,7 @@
       },
       "ancestryOrSpecies": "cat-kin",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-161: quiet courier silhouette, distinct small prop, expressive face, local outfit, quiet courier, cat-kin, quiet courier prop",
+      "identityAnchor": "same person as character-210: quiet courier silhouette, distinct small prop, expressive face, local outfit, quiet courier, cat-kin, quiet courier prop",
       "visualTraits": [
         "quiet courier silhouette",
         "distinct small prop",
@@ -157,7 +157,7 @@
       "globalOrder": 626,
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-161-neutral.png",
+        "text": "character-210-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -166,17 +166,17 @@
       }
     },
     {
-      "imageId": "npc-legacy-162-neutral",
-      "characterId": "npc-legacy-162",
+      "imageId": "character-211-neutral",
+      "characterId": "character-211",
       "displayName": "Duchess Nima Glassvale",
       "profession": "Noble Investor",
       "expression": "neutral",
-      "outputFile": "npc-legacy-162-neutral.png",
+      "outputFile": "character-211-neutral.png",
       "ancestryOrSpecies": "moon-touched half-elf",
       "magicalTraits": [
         "faint moonlit glints in the glass beads"
       ],
-      "identityAnchor": "same person as npc-legacy-162: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
+      "identityAnchor": "same person as character-211: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
       "visualTraits": [
         "moon-touched half-elf elegance",
         "silver-lavender eyes",
@@ -205,7 +205,7 @@
       },
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-162-neutral.png",
+        "text": "character-211-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -214,17 +214,17 @@
       }
     },
     {
-      "imageId": "npc-legacy-162-happy",
-      "characterId": "npc-legacy-162",
+      "imageId": "character-211-happy",
+      "characterId": "character-211",
       "displayName": "Duchess Nima Glassvale",
       "profession": "Noble Investor",
       "expression": "happy",
-      "outputFile": "npc-legacy-162-happy.png",
+      "outputFile": "character-211-happy.png",
       "ancestryOrSpecies": "moon-touched half-elf",
       "magicalTraits": [
         "faint moonlit glints in the glass beads"
       ],
-      "identityAnchor": "same person as npc-legacy-162: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
+      "identityAnchor": "same person as character-211: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
       "visualTraits": [
         "moon-touched half-elf elegance",
         "silver-lavender eyes",
@@ -253,7 +253,7 @@
       },
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-162-happy.png",
+        "text": "character-211-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -262,17 +262,17 @@
       }
     },
     {
-      "imageId": "npc-legacy-162-suspicious",
-      "characterId": "npc-legacy-162",
+      "imageId": "character-211-suspicious",
+      "characterId": "character-211",
       "displayName": "Duchess Nima Glassvale",
       "profession": "Noble Investor",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-162-suspicious.png",
+      "outputFile": "character-211-suspicious.png",
       "ancestryOrSpecies": "moon-touched half-elf",
       "magicalTraits": [
         "faint moonlit glints in the glass beads"
       ],
-      "identityAnchor": "same person as npc-legacy-162: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
+      "identityAnchor": "same person as character-211: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
       "visualTraits": [
         "moon-touched half-elf elegance",
         "silver-lavender eyes",
@@ -301,7 +301,7 @@
       },
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-162-suspicious.png",
+        "text": "character-211-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -310,17 +310,17 @@
       }
     },
     {
-      "imageId": "npc-legacy-162-worried",
-      "characterId": "npc-legacy-162",
+      "imageId": "character-211-worried",
+      "characterId": "character-211",
       "displayName": "Duchess Nima Glassvale",
       "profession": "Noble Investor",
       "expression": "worried",
-      "outputFile": "npc-legacy-162-worried.png",
+      "outputFile": "character-211-worried.png",
       "ancestryOrSpecies": "moon-touched half-elf",
       "magicalTraits": [
         "faint moonlit glints in the glass beads"
       ],
-      "identityAnchor": "same person as npc-legacy-162: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
+      "identityAnchor": "same person as character-211: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
       "visualTraits": [
         "moon-touched half-elf elegance",
         "silver-lavender eyes",
@@ -349,7 +349,7 @@
       },
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-162-worried.png",
+        "text": "character-211-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -358,17 +358,17 @@
       }
     },
     {
-      "imageId": "npc-legacy-162-angry",
-      "characterId": "npc-legacy-162",
+      "imageId": "character-211-angry",
+      "characterId": "character-211",
       "displayName": "Duchess Nima Glassvale",
       "profession": "Noble Investor",
       "expression": "angry",
-      "outputFile": "npc-legacy-162-angry.png",
+      "outputFile": "character-211-angry.png",
       "ancestryOrSpecies": "moon-touched half-elf",
       "magicalTraits": [
         "faint moonlit glints in the glass beads"
       ],
-      "identityAnchor": "same person as npc-legacy-162: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
+      "identityAnchor": "same person as character-211: moon-touched half-elf elegance, silver-lavender eyes, glass bead hair pins, emerald velvet sleeves, crystal abacus, noble investor, moon-touched half-elf, crystal abacus",
       "visualTraits": [
         "moon-touched half-elf elegance",
         "silver-lavender eyes",
@@ -397,7 +397,7 @@
       },
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-162-angry.png",
+        "text": "character-211-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -406,15 +406,15 @@
       }
     },
     {
-      "imageId": "npc-legacy-163-neutral",
-      "characterId": "npc-legacy-163",
+      "imageId": "character-212-neutral",
+      "characterId": "character-212",
       "displayName": "Master Threlk Mudhorn",
       "profession": "Quarry Factor",
       "expression": "neutral",
-      "outputFile": "npc-legacy-163-neutral.png",
+      "outputFile": "character-212-neutral.png",
       "ancestryOrSpecies": "ogre-kin",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-163: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
+      "identityAnchor": "same person as character-212: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
       "visualTraits": [
         "massive ogre-kin build",
         "mossy grey skin",
@@ -443,7 +443,7 @@
       },
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-163-neutral.png",
+        "text": "character-212-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -452,15 +452,15 @@
       }
     },
     {
-      "imageId": "npc-legacy-163-happy",
-      "characterId": "npc-legacy-163",
+      "imageId": "character-212-happy",
+      "characterId": "character-212",
       "displayName": "Master Threlk Mudhorn",
       "profession": "Quarry Factor",
       "expression": "happy",
-      "outputFile": "npc-legacy-163-happy.png",
+      "outputFile": "character-212-happy.png",
       "ancestryOrSpecies": "ogre-kin",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-163: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
+      "identityAnchor": "same person as character-212: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
       "visualTraits": [
         "massive ogre-kin build",
         "mossy grey skin",
@@ -489,7 +489,7 @@
       },
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-163-happy.png",
+        "text": "character-212-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -498,15 +498,15 @@
       }
     },
     {
-      "imageId": "npc-legacy-163-suspicious",
-      "characterId": "npc-legacy-163",
+      "imageId": "character-212-suspicious",
+      "characterId": "character-212",
       "displayName": "Master Threlk Mudhorn",
       "profession": "Quarry Factor",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-163-suspicious.png",
+      "outputFile": "character-212-suspicious.png",
       "ancestryOrSpecies": "ogre-kin",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-163: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
+      "identityAnchor": "same person as character-212: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
       "visualTraits": [
         "massive ogre-kin build",
         "mossy grey skin",
@@ -535,7 +535,7 @@
       },
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-163-suspicious.png",
+        "text": "character-212-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -544,15 +544,15 @@
       }
     },
     {
-      "imageId": "npc-legacy-163-worried",
-      "characterId": "npc-legacy-163",
+      "imageId": "character-212-worried",
+      "characterId": "character-212",
       "displayName": "Master Threlk Mudhorn",
       "profession": "Quarry Factor",
       "expression": "worried",
-      "outputFile": "npc-legacy-163-worried.png",
+      "outputFile": "character-212-worried.png",
       "ancestryOrSpecies": "ogre-kin",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-163: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
+      "identityAnchor": "same person as character-212: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
       "visualTraits": [
         "massive ogre-kin build",
         "mossy grey skin",
@@ -581,7 +581,7 @@
       },
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-163-worried.png",
+        "text": "character-212-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -590,15 +590,15 @@
       }
     },
     {
-      "imageId": "npc-legacy-163-angry",
-      "characterId": "npc-legacy-163",
+      "imageId": "character-212-angry",
+      "characterId": "character-212",
       "displayName": "Master Threlk Mudhorn",
       "profession": "Quarry Factor",
       "expression": "angry",
-      "outputFile": "npc-legacy-163-angry.png",
+      "outputFile": "character-212-angry.png",
       "ancestryOrSpecies": "ogre-kin",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-163: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
+      "identityAnchor": "same person as character-212: massive ogre-kin build, mossy grey skin, blunt tusks, chalk-marked forearms, cracked leather apron, quarry factor, ogre-kin, stone sample",
       "visualTraits": [
         "massive ogre-kin build",
         "mossy grey skin",
@@ -627,7 +627,7 @@
       },
       "batchId": "characters-0625-0636",
       "filenameLabel": {
-        "text": "npc-legacy-163-angry.png",
+        "text": "character-212-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",

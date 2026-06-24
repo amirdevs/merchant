@@ -51,32 +51,32 @@
   "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified. Put a small readable filename label in the bottom-left corner of each cell. The label text must exactly match that entry outputFile, use pure magenta #FF00FF, simple bold readable font, no outline, no shadow, no glow, no gradient. Keep the label fully separated from the character art on empty green #00FF00 with a clear safety gap.",
   "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
   "sheetOrderLock": [
-    "R1C1 = npc-new-041-suspicious.png — Drava Bitterroot, Apothecary Buyer, suspicious, moss-touched human",
-    "R1C2 = npc-new-042-neutral.png — Iven Starfold, Mapmaker, neutral, star-touched elf",
-    "R1C3 = npc-new-042-happy.png — Iven Starfold, Mapmaker, happy, star-touched elf",
-    "R2C1 = npc-new-042-suspicious.png — Iven Starfold, Mapmaker, suspicious, star-touched elf",
-    "R2C2 = npc-new-042-worried.png — Iven Starfold, Mapmaker, worried, star-touched elf",
-    "R2C3 = npc-new-042-angry.png — Iven Starfold, Mapmaker, angry, star-touched elf",
-    "R3C1 = npc-new-043-neutral.png — Sorna Maneclip, Beast Handler, neutral, beast-kin",
-    "R3C2 = npc-new-043-happy.png — Sorna Maneclip, Beast Handler, happy, beast-kin",
-    "R3C3 = npc-new-043-suspicious.png — Sorna Maneclip, Beast Handler, suspicious, beast-kin",
-    "R4C1 = npc-new-044-neutral.png — Qadir Saffron-Tongue, Spice Authenticator, neutral, desert djinn-blooded human",
-    "R4C2 = npc-new-044-happy.png — Qadir Saffron-Tongue, Spice Authenticator, happy, desert djinn-blooded human",
-    "R4C3 = npc-new-044-suspicious.png — Qadir Saffron-Tongue, Spice Authenticator, suspicious, desert djinn-blooded human"
+    "R1C1 = character-041-suspicious.png — Drava Bitterroot, Apothecary Buyer, suspicious, moss-touched human",
+    "R1C2 = character-042-neutral.png — Iven Starfold, Mapmaker, neutral, star-touched elf",
+    "R1C3 = character-042-happy.png — Iven Starfold, Mapmaker, happy, star-touched elf",
+    "R2C1 = character-042-suspicious.png — Iven Starfold, Mapmaker, suspicious, star-touched elf",
+    "R2C2 = character-042-worried.png — Iven Starfold, Mapmaker, worried, star-touched elf",
+    "R2C3 = character-042-angry.png — Iven Starfold, Mapmaker, angry, star-touched elf",
+    "R3C1 = character-043-neutral.png — Sorna Maneclip, Beast Handler, neutral, beast-kin",
+    "R3C2 = character-043-happy.png — Sorna Maneclip, Beast Handler, happy, beast-kin",
+    "R3C3 = character-043-suspicious.png — Sorna Maneclip, Beast Handler, suspicious, beast-kin",
+    "R4C1 = character-044-neutral.png — Qadir Saffron-Tongue, Spice Authenticator, neutral, desert djinn-blooded human",
+    "R4C2 = character-044-happy.png — Qadir Saffron-Tongue, Spice Authenticator, happy, desert djinn-blooded human",
+    "R4C3 = character-044-suspicious.png — Qadir Saffron-Tongue, Spice Authenticator, suspicious, desert djinn-blooded human"
   ],
   "order": [
-    "1. npc-new-041-suspicious",
-    "2. npc-new-042-neutral",
-    "3. npc-new-042-happy",
-    "4. npc-new-042-suspicious",
-    "5. npc-new-042-worried",
-    "6. npc-new-042-angry",
-    "7. npc-new-043-neutral",
-    "8. npc-new-043-happy",
-    "9. npc-new-043-suspicious",
-    "10. npc-new-044-neutral",
-    "11. npc-new-044-happy",
-    "12. npc-new-044-suspicious"
+    "1. character-041-suspicious",
+    "2. character-042-neutral",
+    "3. character-042-happy",
+    "4. character-042-suspicious",
+    "5. character-042-worried",
+    "6. character-042-angry",
+    "7. character-043-neutral",
+    "8. character-043-happy",
+    "9. character-043-suspicious",
+    "10. character-044-neutral",
+    "11. character-044-happy",
+    "12. character-044-suspicious"
   ],
   "images": [
     {
@@ -85,18 +85,18 @@
       "row": 1,
       "column": 1,
       "cell": "R1C1",
-      "imageId": "npc-new-041-suspicious",
-      "characterId": "npc-new-041",
+      "imageId": "character-041-suspicious",
+      "characterId": "character-041",
       "displayName": "Drava Bitterroot",
       "profession": "Apothecary Buyer",
       "expression": "suspicious",
-      "outputFile": "npc-new-041-suspicious.png",
+      "outputFile": "character-041-suspicious.png",
       "ancestryOrSpecies": "moss-touched human",
       "magicalTraits": [
         "leaf-green stains",
         "herbal aura"
       ],
-      "identityAnchor": "same person as npc-new-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze",
+      "identityAnchor": "same person as character-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze",
       "visualTraits": [
         "stooped fragrant silhouette",
         "elder",
@@ -116,7 +116,7 @@
         "glass blue",
         "brown"
       ],
-      "prompt": "A stooped elderly apothecary with dark olive skin, cloud-white brows, green-stained fingertips, layered moss shawl, and glass vials braided into her hair. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: moss-touched human. Visible magical traits that must remain consistent: leaf-green stains, herbal aura. Identity anchors must remain unchanged: same person as npc-new-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A stooped elderly apothecary with dark olive skin, cloud-white brows, green-stained fingertips, layered moss shawl, and glass vials braided into her hair. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: moss-touched human. Visible magical traits that must remain consistent: leaf-green stains, herbal aura. Identity anchors must remain unchanged: same person as character-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -126,7 +126,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-041-suspicious.png",
+        "text": "character-041-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -140,18 +140,18 @@
       "row": 1,
       "column": 2,
       "cell": "R1C2",
-      "imageId": "npc-new-042-neutral",
-      "characterId": "npc-new-042",
+      "imageId": "character-042-neutral",
+      "characterId": "character-042",
       "displayName": "Iven Starfold",
       "profession": "Mapmaker",
       "expression": "neutral",
-      "outputFile": "npc-new-042-neutral.png",
+      "outputFile": "character-042-neutral.png",
       "ancestryOrSpecies": "star-touched elf",
       "magicalTraits": [
         "star-map freckles",
         "faint starlight ink"
       ],
-      "identityAnchor": "same person as npc-new-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes",
+      "identityAnchor": "same person as character-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes",
       "visualTraits": [
         "thin ink-dusted silhouette",
         "young adult",
@@ -171,7 +171,7 @@
         "ink",
         "brass"
       ],
-      "prompt": "A thin young mapmaker with light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on his left wrist, and route pins stuck into his cuffs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: star-touched elf. Visible magical traits that must remain consistent: star-map freckles, faint starlight ink. Identity anchors must remain unchanged: same person as npc-new-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin young mapmaker with light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on his left wrist, and route pins stuck into his cuffs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: star-touched elf. Visible magical traits that must remain consistent: star-map freckles, faint starlight ink. Identity anchors must remain unchanged: same person as character-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -181,7 +181,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-042-neutral.png",
+        "text": "character-042-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -195,18 +195,18 @@
       "row": 1,
       "column": 3,
       "cell": "R1C3",
-      "imageId": "npc-new-042-happy",
-      "characterId": "npc-new-042",
+      "imageId": "character-042-happy",
+      "characterId": "character-042",
       "displayName": "Iven Starfold",
       "profession": "Mapmaker",
       "expression": "happy",
-      "outputFile": "npc-new-042-happy.png",
+      "outputFile": "character-042-happy.png",
       "ancestryOrSpecies": "star-touched elf",
       "magicalTraits": [
         "star-map freckles",
         "faint starlight ink"
       ],
-      "identityAnchor": "same person as npc-new-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes",
+      "identityAnchor": "same person as character-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes",
       "visualTraits": [
         "thin ink-dusted silhouette",
         "young adult",
@@ -226,7 +226,7 @@
         "ink",
         "brass"
       ],
-      "prompt": "A thin young mapmaker with light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on his left wrist, and route pins stuck into his cuffs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: star-touched elf. Visible magical traits that must remain consistent: star-map freckles, faint starlight ink. Identity anchors must remain unchanged: same person as npc-new-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin young mapmaker with light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on his left wrist, and route pins stuck into his cuffs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: star-touched elf. Visible magical traits that must remain consistent: star-map freckles, faint starlight ink. Identity anchors must remain unchanged: same person as character-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -236,7 +236,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-042-happy.png",
+        "text": "character-042-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -250,18 +250,18 @@
       "row": 2,
       "column": 1,
       "cell": "R2C1",
-      "imageId": "npc-new-042-suspicious",
-      "characterId": "npc-new-042",
+      "imageId": "character-042-suspicious",
+      "characterId": "character-042",
       "displayName": "Iven Starfold",
       "profession": "Mapmaker",
       "expression": "suspicious",
-      "outputFile": "npc-new-042-suspicious.png",
+      "outputFile": "character-042-suspicious.png",
       "ancestryOrSpecies": "star-touched elf",
       "magicalTraits": [
         "star-map freckles",
         "faint starlight ink"
       ],
-      "identityAnchor": "same person as npc-new-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes",
+      "identityAnchor": "same person as character-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes",
       "visualTraits": [
         "thin ink-dusted silhouette",
         "young adult",
@@ -281,7 +281,7 @@
         "ink",
         "brass"
       ],
-      "prompt": "A thin young mapmaker with light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on his left wrist, and route pins stuck into his cuffs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: star-touched elf. Visible magical traits that must remain consistent: star-map freckles, faint starlight ink. Identity anchors must remain unchanged: same person as npc-new-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin young mapmaker with light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on his left wrist, and route pins stuck into his cuffs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: star-touched elf. Visible magical traits that must remain consistent: star-map freckles, faint starlight ink. Identity anchors must remain unchanged: same person as character-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -291,7 +291,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-042-suspicious.png",
+        "text": "character-042-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -305,18 +305,18 @@
       "row": 2,
       "column": 2,
       "cell": "R2C2",
-      "imageId": "npc-new-042-worried",
-      "characterId": "npc-new-042",
+      "imageId": "character-042-worried",
+      "characterId": "character-042",
       "displayName": "Iven Starfold",
       "profession": "Mapmaker",
       "expression": "worried",
-      "outputFile": "npc-new-042-worried.png",
+      "outputFile": "character-042-worried.png",
       "ancestryOrSpecies": "star-touched elf",
       "magicalTraits": [
         "star-map freckles",
         "faint starlight ink"
       ],
-      "identityAnchor": "same person as npc-new-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes",
+      "identityAnchor": "same person as character-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes",
       "visualTraits": [
         "thin ink-dusted silhouette",
         "young adult",
@@ -336,7 +336,7 @@
         "ink",
         "brass"
       ],
-      "prompt": "A thin young mapmaker with light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on his left wrist, and route pins stuck into his cuffs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: star-touched elf. Visible magical traits that must remain consistent: star-map freckles, faint starlight ink. Identity anchors must remain unchanged: same person as npc-new-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin young mapmaker with light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on his left wrist, and route pins stuck into his cuffs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: star-touched elf. Visible magical traits that must remain consistent: star-map freckles, faint starlight ink. Identity anchors must remain unchanged: same person as character-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -346,7 +346,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-042-worried.png",
+        "text": "character-042-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -360,18 +360,18 @@
       "row": 2,
       "column": 3,
       "cell": "R2C3",
-      "imageId": "npc-new-042-angry",
-      "characterId": "npc-new-042",
+      "imageId": "character-042-angry",
+      "characterId": "character-042",
       "displayName": "Iven Starfold",
       "profession": "Mapmaker",
       "expression": "angry",
-      "outputFile": "npc-new-042-angry.png",
+      "outputFile": "character-042-angry.png",
       "ancestryOrSpecies": "star-touched elf",
       "magicalTraits": [
         "star-map freckles",
         "faint starlight ink"
       ],
-      "identityAnchor": "same person as npc-new-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes",
+      "identityAnchor": "same person as character-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes",
       "visualTraits": [
         "thin ink-dusted silhouette",
         "young adult",
@@ -391,7 +391,7 @@
         "ink",
         "brass"
       ],
-      "prompt": "A thin young mapmaker with light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on his left wrist, and route pins stuck into his cuffs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: star-touched elf. Visible magical traits that must remain consistent: star-map freckles, faint starlight ink. Identity anchors must remain unchanged: same person as npc-new-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin young mapmaker with light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on his left wrist, and route pins stuck into his cuffs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: star-touched elf. Visible magical traits that must remain consistent: star-map freckles, faint starlight ink. Identity anchors must remain unchanged: same person as character-042: thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -401,7 +401,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-042-angry.png",
+        "text": "character-042-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -415,18 +415,18 @@
       "row": 3,
       "column": 1,
       "cell": "R3C1",
-      "imageId": "npc-new-043-neutral",
-      "characterId": "npc-new-043",
+      "imageId": "character-043-neutral",
+      "characterId": "character-043",
       "displayName": "Sorna Maneclip",
       "profession": "Beast Handler",
       "expression": "neutral",
-      "outputFile": "npc-new-043-neutral.png",
+      "outputFile": "character-043-neutral.png",
       "ancestryOrSpecies": "beast-kin",
       "magicalTraits": [
         "animal-like ears",
         "mane-like hair"
       ],
-      "identityAnchor": "same person as npc-new-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence",
+      "identityAnchor": "same person as character-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence",
       "visualTraits": [
         "muscular relaxed silhouette",
         "copper skin",
@@ -446,7 +446,7 @@
         "red",
         "copper"
       ],
-      "prompt": "A muscular relaxed beast handler with copper skin, shaved head, patterned red arm tattoos, heavy hide apron, and a scar crossing one eyebrow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: beast-kin. Visible magical traits that must remain consistent: animal-like ears, mane-like hair. Identity anchors must remain unchanged: same person as npc-new-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A muscular relaxed beast handler with copper skin, shaved head, patterned red arm tattoos, heavy hide apron, and a scar crossing one eyebrow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: beast-kin. Visible magical traits that must remain consistent: animal-like ears, mane-like hair. Identity anchors must remain unchanged: same person as character-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -456,7 +456,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-043-neutral.png",
+        "text": "character-043-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -470,18 +470,18 @@
       "row": 3,
       "column": 2,
       "cell": "R3C2",
-      "imageId": "npc-new-043-happy",
-      "characterId": "npc-new-043",
+      "imageId": "character-043-happy",
+      "characterId": "character-043",
       "displayName": "Sorna Maneclip",
       "profession": "Beast Handler",
       "expression": "happy",
-      "outputFile": "npc-new-043-happy.png",
+      "outputFile": "character-043-happy.png",
       "ancestryOrSpecies": "beast-kin",
       "magicalTraits": [
         "animal-like ears",
         "mane-like hair"
       ],
-      "identityAnchor": "same person as npc-new-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence",
+      "identityAnchor": "same person as character-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence",
       "visualTraits": [
         "muscular relaxed silhouette",
         "copper skin",
@@ -501,7 +501,7 @@
         "red",
         "copper"
       ],
-      "prompt": "A muscular relaxed beast handler with copper skin, shaved head, patterned red arm tattoos, heavy hide apron, and a scar crossing one eyebrow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: beast-kin. Visible magical traits that must remain consistent: animal-like ears, mane-like hair. Identity anchors must remain unchanged: same person as npc-new-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A muscular relaxed beast handler with copper skin, shaved head, patterned red arm tattoos, heavy hide apron, and a scar crossing one eyebrow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: beast-kin. Visible magical traits that must remain consistent: animal-like ears, mane-like hair. Identity anchors must remain unchanged: same person as character-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -511,7 +511,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-043-happy.png",
+        "text": "character-043-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -525,18 +525,18 @@
       "row": 3,
       "column": 3,
       "cell": "R3C3",
-      "imageId": "npc-new-043-suspicious",
-      "characterId": "npc-new-043",
+      "imageId": "character-043-suspicious",
+      "characterId": "character-043",
       "displayName": "Sorna Maneclip",
       "profession": "Beast Handler",
       "expression": "suspicious",
-      "outputFile": "npc-new-043-suspicious.png",
+      "outputFile": "character-043-suspicious.png",
       "ancestryOrSpecies": "beast-kin",
       "magicalTraits": [
         "animal-like ears",
         "mane-like hair"
       ],
-      "identityAnchor": "same person as npc-new-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence",
+      "identityAnchor": "same person as character-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence",
       "visualTraits": [
         "muscular relaxed silhouette",
         "copper skin",
@@ -556,7 +556,7 @@
         "red",
         "copper"
       ],
-      "prompt": "A muscular relaxed beast handler with copper skin, shaved head, patterned red arm tattoos, heavy hide apron, and a scar crossing one eyebrow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: beast-kin. Visible magical traits that must remain consistent: animal-like ears, mane-like hair. Identity anchors must remain unchanged: same person as npc-new-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A muscular relaxed beast handler with copper skin, shaved head, patterned red arm tattoos, heavy hide apron, and a scar crossing one eyebrow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: beast-kin. Visible magical traits that must remain consistent: animal-like ears, mane-like hair. Identity anchors must remain unchanged: same person as character-043: muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -566,7 +566,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-043-suspicious.png",
+        "text": "character-043-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -580,17 +580,17 @@
       "row": 4,
       "column": 1,
       "cell": "R4C1",
-      "imageId": "npc-new-044-neutral",
-      "characterId": "npc-new-044",
+      "imageId": "character-044-neutral",
+      "characterId": "character-044",
       "displayName": "Qadir Saffron-Tongue",
       "profession": "Spice Authenticator",
       "expression": "neutral",
-      "outputFile": "npc-new-044-neutral.png",
+      "outputFile": "character-044-neutral.png",
       "ancestryOrSpecies": "desert djinn-blooded human",
       "magicalTraits": [
         "golden spice-smoke eyes"
       ],
-      "identityAnchor": "same person as npc-new-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile",
+      "identityAnchor": "same person as character-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile",
       "visualTraits": [
         "round perfumed silhouette",
         "warm brown skin",
@@ -610,7 +610,7 @@
         "emerald",
         "gold"
       ],
-      "prompt": "A round perfumed spice authenticator with warm brown skin, hennaed beard, saffron turban, emerald robe, and tiny golden tasting spoon on a chain. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: desert djinn-blooded human. Visible magical traits that must remain consistent: golden spice-smoke eyes. Identity anchors must remain unchanged: same person as npc-new-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A round perfumed spice authenticator with warm brown skin, hennaed beard, saffron turban, emerald robe, and tiny golden tasting spoon on a chain. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: desert djinn-blooded human. Visible magical traits that must remain consistent: golden spice-smoke eyes. Identity anchors must remain unchanged: same person as character-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -620,7 +620,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-044-neutral.png",
+        "text": "character-044-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -634,17 +634,17 @@
       "row": 4,
       "column": 2,
       "cell": "R4C2",
-      "imageId": "npc-new-044-happy",
-      "characterId": "npc-new-044",
+      "imageId": "character-044-happy",
+      "characterId": "character-044",
       "displayName": "Qadir Saffron-Tongue",
       "profession": "Spice Authenticator",
       "expression": "happy",
-      "outputFile": "npc-new-044-happy.png",
+      "outputFile": "character-044-happy.png",
       "ancestryOrSpecies": "desert djinn-blooded human",
       "magicalTraits": [
         "golden spice-smoke eyes"
       ],
-      "identityAnchor": "same person as npc-new-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile",
+      "identityAnchor": "same person as character-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile",
       "visualTraits": [
         "round perfumed silhouette",
         "warm brown skin",
@@ -664,7 +664,7 @@
         "emerald",
         "gold"
       ],
-      "prompt": "A round perfumed spice authenticator with warm brown skin, hennaed beard, saffron turban, emerald robe, and tiny golden tasting spoon on a chain. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: desert djinn-blooded human. Visible magical traits that must remain consistent: golden spice-smoke eyes. Identity anchors must remain unchanged: same person as npc-new-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A round perfumed spice authenticator with warm brown skin, hennaed beard, saffron turban, emerald robe, and tiny golden tasting spoon on a chain. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: desert djinn-blooded human. Visible magical traits that must remain consistent: golden spice-smoke eyes. Identity anchors must remain unchanged: same person as character-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -674,7 +674,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-044-happy.png",
+        "text": "character-044-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -688,17 +688,17 @@
       "row": 4,
       "column": 3,
       "cell": "R4C3",
-      "imageId": "npc-new-044-suspicious",
-      "characterId": "npc-new-044",
+      "imageId": "character-044-suspicious",
+      "characterId": "character-044",
       "displayName": "Qadir Saffron-Tongue",
       "profession": "Spice Authenticator",
       "expression": "suspicious",
-      "outputFile": "npc-new-044-suspicious.png",
+      "outputFile": "character-044-suspicious.png",
       "ancestryOrSpecies": "desert djinn-blooded human",
       "magicalTraits": [
         "golden spice-smoke eyes"
       ],
-      "identityAnchor": "same person as npc-new-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile",
+      "identityAnchor": "same person as character-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile",
       "visualTraits": [
         "round perfumed silhouette",
         "warm brown skin",
@@ -718,7 +718,7 @@
         "emerald",
         "gold"
       ],
-      "prompt": "A round perfumed spice authenticator with warm brown skin, hennaed beard, saffron turban, emerald robe, and tiny golden tasting spoon on a chain. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: desert djinn-blooded human. Visible magical traits that must remain consistent: golden spice-smoke eyes. Identity anchors must remain unchanged: same person as npc-new-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A round perfumed spice authenticator with warm brown skin, hennaed beard, saffron turban, emerald robe, and tiny golden tasting spoon on a chain. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: desert djinn-blooded human. Visible magical traits that must remain consistent: golden spice-smoke eyes. Identity anchors must remain unchanged: same person as character-044: round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -728,7 +728,7 @@
       },
       "batchId": "characters-0169-0180",
       "filenameLabel": {
-        "text": "npc-new-044-suspicious.png",
+        "text": "character-044-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",

@@ -1,20 +1,20 @@
 import type { CharacterIdentityCatalogBatch } from "./characterIdentityTypes";
 import { getIdentityBatchPortraitImageCount } from "./characterIdentityTypes";
 
-export const characterIdentityCatalogLegacyBatch01 = {
-  batchId: "identity-catalog-legacy-batch-001",
+export const characterIdentityCatalogCastBatch03 = {
+  batchId: "identity-catalog-cast-batch-003",
   status: "portrait_generation_blocked",
-  rosterScope: "First 54 reworked legacy slots: original indexes 0-53, replacing public-facing names, stories, looks, portraits, ancestry/species flavor, and expression plans while keeping generated indexes stable.",
+  rosterScope: "First 54 supporting cast slots: original indexes 0-53, replacing public-facing names, stories, looks, portraits, ancestry/species flavor, and expression plans while keeping generated indexes stable.",
   portraitGenerationAllowed: false,
   notes: [
     "This batch rewrites public-facing identity only; generated originalIndex values stay as stable mechanical anchors.",
-    "Portrait generation stays blocked until every legacy identity batch and the final portrait manifest are complete.",
+    "Portrait generation stays blocked until every supporting cast batch and the final portrait manifest are complete.",
     "The JSON prompt sheets under docs/assets/character-prompts are final-layout manifests for later production, not a signal to generate before the full character set is ready."
   ],
   identities: [
     {
-      characterId: "npc-legacy-000",
-      source: "legacy_reworked",
+      characterId: "character-049",
+      rosterGroup: "supporting_cast",
       originalIndex: 0,
       seedId: null,
       finalDisplayName: "Captain Rowan Ashveil",
@@ -82,8 +82,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-000",
-      identityAnchor: "same person as npc-legacy-000: tall disciplined silhouette, silver-threaded black hair, scar under one eye, blue-black cloak, iron gate pin, gate captain, human, iron gate pin",
+      portraitFilePrefix: "character-049",
+      identityAnchor: "same person as character-049: tall disciplined silhouette, silver-threaded black hair, scar under one eye, blue-black cloak, iron gate pin, gate captain, human, iron gate pin",
       portraitBasePrompt: "A tall ash-brown human gate captain with silver-threaded black hair, a hawk nose, scar under one eye, blue-black cloak clasped with an iron gate pin, and a ledger of route permits tucked under his arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -91,13 +91,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "permit inspection",
         "guard favor"
       ],
-      integrationNotes: "Primary law/travel legacy contact for gates and toll warnings.",
+      integrationNotes: "Primary law/travel core contact for gates and toll warnings.",
       ancestryOrSpecies: "human",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-001",
-      source: "legacy_reworked",
+      characterId: "character-050",
+      rosterGroup: "supporting_cast",
       originalIndex: 1,
       seedId: null,
       finalDisplayName: "Brenna Coalbright",
@@ -164,8 +164,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-001",
-      identityAnchor: "same person as npc-legacy-001: broad dwarf silhouette, flame-orange braids, soot freckles, muscular forearms, burnt leather apron, blacksmith, dwarf, small forge hammer",
+      portraitFilePrefix: "character-050",
+      identityAnchor: "same person as character-050: broad dwarf silhouette, flame-orange braids, soot freckles, muscular forearms, burnt leather apron, blacksmith, dwarf, small forge hammer",
       portraitBasePrompt: "A broad dwarf blacksmith woman with copper-brown skin, muscular forearms, soot freckles, flame-orange braids tied with iron beads, a leather apron burned at the edges, and a small hammer held like a favorite spoon. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -173,15 +173,15 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "rare ore sample",
         "rival smith insult"
       ],
-      integrationNotes: "Important trade/repair legacy contact.",
+      integrationNotes: "Important trade/repair core contact.",
       ancestryOrSpecies: "dwarf",
       magicalTraits: [
         "soft ember glow in braids"
       ]
     },
     {
-      characterId: "npc-legacy-002",
-      source: "legacy_reworked",
+      characterId: "character-051",
+      rosterGroup: "supporting_cast",
       originalIndex: 2,
       seedId: null,
       finalDisplayName: "Lysaro Vellthorn",
@@ -248,8 +248,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-002",
-      identityAnchor: "same person as npc-legacy-002: slender half-elf silhouette, violet eyes, silver-black hair, lacquered nails, emerald and plum scarves, silk factor, half-elf, fabric swatches",
+      portraitFilePrefix: "character-051",
+      identityAnchor: "same person as character-051: slender half-elf silhouette, violet eyes, silver-black hair, lacquered nails, emerald and plum scarves, silk factor, half-elf, fabric swatches",
       portraitBasePrompt: "A graceful violet-eyed half-elf silk factor with long silver-black hair, narrow shoulders, lacquered nails, layered emerald and plum scarves, and a fan of fabric swatches that flutter like bright birds. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -257,15 +257,15 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "dyer rivalry",
         "festival cloth shortage"
       ],
-      integrationNotes: "Luxury cloth legacy merchant contact.",
+      integrationNotes: "Luxury cloth trade merchant contact.",
       ancestryOrSpecies: "half-elf",
       magicalTraits: [
         "faint shimmer on silk edges"
       ]
     },
     {
-      characterId: "npc-legacy-003",
-      source: "legacy_reworked",
+      characterId: "character-052",
+      rosterGroup: "supporting_cast",
       originalIndex: 3,
       seedId: null,
       finalDisplayName: "Marta Honeyjaw",
@@ -331,8 +331,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-003",
-      identityAnchor: "same person as npc-legacy-003: round halfling silhouette, flour-dusted cheeks, golden curls, red kerchief, honey apron, baker matron, halfling, basket of rolls",
+      portraitFilePrefix: "character-052",
+      identityAnchor: "same person as character-052: round halfling silhouette, flour-dusted cheeks, golden curls, red kerchief, honey apron, baker matron, halfling, basket of rolls",
       portraitBasePrompt: "A round cheerful halfling baker with flour-dusted cheeks, golden curls escaping a red kerchief, dimpled hands, a honey-colored apron, and a basket of moon-shaped rolls held high. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -340,13 +340,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "hidden message loaf",
         "festival pastry order"
       ],
-      integrationNotes: "Food supply and rumor legacy contact.",
+      integrationNotes: "Food supply and rumor core contact.",
       ancestryOrSpecies: "halfling",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-004",
-      source: "legacy_reworked",
+      characterId: "character-053",
+      rosterGroup: "supporting_cast",
       originalIndex: 4,
       seedId: null,
       finalDisplayName: "Ysolde Nightquill",
@@ -414,8 +414,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-004",
-      identityAnchor: "same person as npc-legacy-004: tall elegant scribe, raven hair, crescent spectacles, ink-blue lips, teal robe, scribe of ledgers, human, silver pen",
+      portraitFilePrefix: "character-053",
+      identityAnchor: "same person as character-053: tall elegant scribe, raven hair, crescent spectacles, ink-blue lips, teal robe, scribe of ledgers, human, silver pen",
       portraitBasePrompt: "A tall raven-haired human scribe with deep umber skin, crescent spectacles, ink-blue lips, crisp teal robe, a stack of sealed contracts, and a silver pen tucked behind one ear. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -423,15 +423,15 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "forged seal",
         "company charter"
       ],
-      integrationNotes: "Company/legal document legacy contact.",
+      integrationNotes: "Company/legal document core contact.",
       ancestryOrSpecies: "human",
       magicalTraits: [
         "tiny ink motes around pen nib"
       ]
     },
     {
-      characterId: "npc-legacy-005",
-      source: "legacy_reworked",
+      characterId: "character-054",
+      rosterGroup: "supporting_cast",
       originalIndex: 5,
       seedId: null,
       finalDisplayName: "Old Marrow Finn",
@@ -498,8 +498,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-005",
-      identityAnchor: "same person as npc-legacy-005: wiry sea-gnome silhouette, blue-grey skin, seaweed-white beard, one pearl eye, patched wet apron, fishmonger, sea-gnome, fish charm string",
+      portraitFilePrefix: "character-054",
+      identityAnchor: "same person as character-054: wiry sea-gnome silhouette, blue-grey skin, seaweed-white beard, one pearl eye, patched wet apron, fishmonger, sea-gnome, fish charm string",
       portraitBasePrompt: "A wiry elderly sea-gnome fishmonger with blue-grey skin, seaweed-white beard, one cloudy pearl eye, patched rubbery apron, and a string of silver fish charms across his chest. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -507,7 +507,7 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "missing boat",
         "rare shellfish"
       ],
-      integrationNotes: "Port/fisher legacy contact.",
+      integrationNotes: "Port/fisher core contact.",
       ancestryOrSpecies: "sea-gnome",
       magicalTraits: [
         "pearl-clouded eye",
@@ -515,8 +515,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       ]
     },
     {
-      characterId: "npc-legacy-006",
-      source: "legacy_reworked",
+      characterId: "character-055",
+      rosterGroup: "supporting_cast",
       originalIndex: 6,
       seedId: null,
       finalDisplayName: "Nera Flintcup",
@@ -571,8 +571,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-006",
-      identityAnchor: "same person as npc-legacy-006: compact quick silhouette, sharp green eyes, short black curls, rolled burgundy sleeves, crowded tavern belt, tavern keeper, human, tankard",
+      portraitFilePrefix: "character-055",
+      identityAnchor: "same person as character-055: compact quick silhouette, sharp green eyes, short black curls, rolled burgundy sleeves, crowded tavern belt, tavern keeper, human, tankard",
       portraitBasePrompt: "A compact human tavern keeper with warm tan skin, sharp green eyes, short black curls, rolled burgundy sleeves, and a belt crowded with corkscrews, keys, and chalk tabs. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -580,13 +580,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "gossip payment",
         "tavern brawl debt"
       ],
-      integrationNotes: "Tavern legacy contact.",
+      integrationNotes: "Tavern core contact.",
       ancestryOrSpecies: "human",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-007",
-      source: "legacy_reworked",
+      characterId: "character-056",
+      rosterGroup: "supporting_cast",
       originalIndex: 7,
       seedId: null,
       finalDisplayName: "Jarek Thornboot",
@@ -641,8 +641,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-007",
-      identityAnchor: "same person as npc-legacy-007: lean long-armed silhouette, shaved head, braided beard, patched green vest, boot lasts, caravan cobbler, human, boot last",
+      portraitFilePrefix: "character-056",
+      identityAnchor: "same person as character-056: lean long-armed silhouette, shaved head, braided beard, patched green vest, boot lasts, caravan cobbler, human, boot last",
       portraitBasePrompt: "A lean brown-skinned cobbler with long arms, shaved head, braided beard, patched green vest, and a cluster of tiny boot lasts hanging from his shoulder strap. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -655,8 +655,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-008",
-      source: "legacy_reworked",
+      characterId: "character-057",
+      rosterGroup: "supporting_cast",
       originalIndex: 8,
       seedId: null,
       finalDisplayName: "Pippa Candlebrook",
@@ -711,8 +711,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-008",
-      identityAnchor: "same person as npc-legacy-008: small gentle silhouette, lavender head wrap, wax-spotted sleeves, sleepy eyes, colored candles, candle maker, human, candle tray",
+      portraitFilePrefix: "character-057",
+      identityAnchor: "same person as character-057: small gentle silhouette, lavender head wrap, wax-spotted sleeves, sleepy eyes, colored candles, candle maker, human, candle tray",
       portraitBasePrompt: "A small round-faced human candle maker with pale brown skin, dark sleepy eyes, lavender head wrap, wax droplets on her sleeves, and a tray of crooked colored candles. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -720,15 +720,15 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "mourning order",
         "horse-calming tapers"
       ],
-      integrationNotes: "Wax/oil legacy contact.",
+      integrationNotes: "Wax/oil core contact.",
       ancestryOrSpecies: "human",
       magicalTraits: [
         "tiny warm candle glow"
       ]
     },
     {
-      characterId: "npc-legacy-009",
-      source: "legacy_reworked",
+      characterId: "character-058",
+      rosterGroup: "supporting_cast",
       originalIndex: 9,
       seedId: null,
       finalDisplayName: "Tovan Gristlen",
@@ -782,8 +782,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-009",
-      identityAnchor: "same person as npc-legacy-009: broad dusty silhouette, wheat-straw hair, dusty eyebrows, faded blue smock, wooden scoop, miller, human, wooden scoop",
+      portraitFilePrefix: "character-058",
+      identityAnchor: "same person as character-058: broad dusty silhouette, wheat-straw hair, dusty eyebrows, faded blue smock, wooden scoop, miller, human, wooden scoop",
       portraitBasePrompt: "A broad pale human miller with dusty eyebrows, heavy shoulders, wheat-straw hair, faded blue smock, and a wooden scoop tucked under one elbow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -791,13 +791,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "millstone repair",
         "bulk flour order"
       ],
-      integrationNotes: "Food bulk legacy contact.",
+      integrationNotes: "Food bulk core contact.",
       ancestryOrSpecies: "human",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-010",
-      source: "legacy_reworked",
+      characterId: "character-059",
+      rosterGroup: "supporting_cast",
       originalIndex: 10,
       seedId: null,
       finalDisplayName: "Suri Amberleaf",
@@ -852,8 +852,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-010",
-      identityAnchor: "same person as npc-legacy-010: petite dryad-touched silhouette, amber eyes, leaf freckles, green shawl, living vine bracelets, herbalist, dryad-touched human, potted herb",
+      portraitFilePrefix: "character-059",
+      identityAnchor: "same person as character-059: petite dryad-touched silhouette, amber eyes, leaf freckles, green shawl, living vine bracelets, herbalist, dryad-touched human, potted herb",
       portraitBasePrompt: "A petite dryad-touched herbalist with moss-brown skin, amber eyes, leaf-shaped freckles, loose green shawl, and living vine bracelets that curl toward her herb pots. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -861,7 +861,7 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "sick child remedy",
         "poisoned herb bundle"
       ],
-      integrationNotes: "Herbal medicine legacy contact.",
+      integrationNotes: "Herbal medicine core contact.",
       ancestryOrSpecies: "dryad-touched human",
       magicalTraits: [
         "living vine bracelets",
@@ -869,8 +869,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       ]
     },
     {
-      characterId: "npc-legacy-011",
-      source: "legacy_reworked",
+      characterId: "character-060",
+      rosterGroup: "supporting_cast",
       originalIndex: 11,
       seedId: null,
       finalDisplayName: "Kellan Sootwink",
@@ -925,8 +925,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-011",
-      identityAnchor: "same person as npc-legacy-011: skinny vertical silhouette, soot-blackened face, bright grin, messy curls, patched charcoal coat, chimney sweep, human, chimney brush",
+      portraitFilePrefix: "character-060",
+      identityAnchor: "same person as character-060: skinny vertical silhouette, soot-blackened face, bright grin, messy curls, patched charcoal coat, chimney sweep, human, chimney brush",
       portraitBasePrompt: "A skinny soot-blackened youth with bright white grin, copper skin under ash, messy curls, patched charcoal coat, and a tiny brush taller than his shoulder. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -934,13 +934,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "roof route rumor",
         "coal shortage"
       ],
-      integrationNotes: "Urban service legacy contact.",
+      integrationNotes: "Urban service core contact.",
       ancestryOrSpecies: "human",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-012",
-      source: "legacy_reworked",
+      characterId: "character-061",
+      rosterGroup: "supporting_cast",
       originalIndex: 12,
       seedId: null,
       finalDisplayName: "Dalla Reefsong",
@@ -995,8 +995,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-012",
-      identityAnchor: "same person as npc-legacy-012: graceful sea-blood silhouette, turquoise eyes, shell-braided hair, scaled teal collar, pearl tray, pearl trader, merfolk-blooded human, velvet pearl tray",
+      portraitFilePrefix: "character-061",
+      identityAnchor: "same person as character-061: graceful sea-blood silhouette, turquoise eyes, shell-braided hair, scaled teal collar, pearl tray, pearl trader, merfolk-blooded human, velvet pearl tray",
       portraitBasePrompt: "A graceful merfolk-blooded trader with bronze skin, turquoise eyes, black hair braided with shells, a scaled teal collar, and a velvet tray of pale pearls. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1011,8 +1011,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       ]
     },
     {
-      characterId: "npc-legacy-013",
-      source: "legacy_reworked",
+      characterId: "character-062",
+      rosterGroup: "supporting_cast",
       originalIndex: 13,
       seedId: null,
       finalDisplayName: "Hobb Ashbarrel",
@@ -1067,8 +1067,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-013",
-      identityAnchor: "same person as npc-legacy-013: squat dwarf silhouette, ash-stained cheeks, grey beard, smoky hood, thick gloves, charcoal burner, dwarf, iron ember pot",
+      portraitFilePrefix: "character-062",
+      identityAnchor: "same person as character-062: squat dwarf silhouette, ash-stained cheeks, grey beard, smoky hood, thick gloves, charcoal burner, dwarf, iron ember pot",
       portraitBasePrompt: "A squat grey-bearded dwarf charcoal burner with ash-stained cheeks, smoky wool hood, thick gloves, and a small iron ember pot hanging from his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1076,15 +1076,15 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "forest kiln trouble",
         "fuel contract"
       ],
-      integrationNotes: "Fuel legacy merchant.",
+      integrationNotes: "Fuel trade merchant.",
       ancestryOrSpecies: "dwarf",
       magicalTraits: [
         "faint ember glow inside belt pot"
       ]
     },
     {
-      characterId: "npc-legacy-014",
-      source: "legacy_reworked",
+      characterId: "character-063",
+      rosterGroup: "supporting_cast",
       originalIndex: 14,
       seedId: null,
       finalDisplayName: "Rima Glasslark",
@@ -1139,8 +1139,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-014",
-      identityAnchor: "same person as npc-legacy-014: slim careful silhouette, amber spectacles, short blue-black bob, translucent cuffs, colored bottles, glass seller, human, colored bottles",
+      portraitFilePrefix: "character-063",
+      identityAnchor: "same person as character-063: slim careful silhouette, amber spectacles, short blue-black bob, translucent cuffs, colored bottles, glass seller, human, colored bottles",
       portraitBasePrompt: "A slim human glass seller with honey skin, short blue-black bob, amber spectacles, translucent sleeve cuffs, and a crate of colored bottles padded with straw. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1155,8 +1155,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       ]
     },
     {
-      characterId: "npc-legacy-015",
-      source: "legacy_reworked",
+      characterId: "character-064",
+      rosterGroup: "supporting_cast",
       originalIndex: 15,
       seedId: null,
       finalDisplayName: "Orvik Bellows",
@@ -1211,8 +1211,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-015",
-      identityAnchor: "same person as npc-legacy-015: wiry goblin silhouette, lime-tinted skin, huge ears, brass goggles, patched orange coat, tinker, goblin, spiral screwdrivers",
+      portraitFilePrefix: "character-064",
+      identityAnchor: "same person as character-064: wiry goblin silhouette, lime-tinted skin, huge ears, brass goggles, patched orange coat, tinker, goblin, spiral screwdrivers",
       portraitBasePrompt: "A wiry goblin tinker with lime-tinted skin, enormous ears, brass goggles on his forehead, patched orange coat, and a spiral screwdriver tucked behind each ear. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1220,13 +1220,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "missing spring",
         "experimental tool"
       ],
-      integrationNotes: "Tool/oddity legacy contact.",
+      integrationNotes: "Tool/oddity core contact.",
       ancestryOrSpecies: "goblin",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-016",
-      source: "legacy_reworked",
+      characterId: "character-065",
+      rosterGroup: "supporting_cast",
       originalIndex: 16,
       seedId: null,
       finalDisplayName: "Selka Warmhide",
@@ -1281,8 +1281,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-016",
-      identityAnchor: "same person as npc-legacy-016: tall broad silhouette, copper skin, thick braid, white fur collar, scarred hands, furrier, human, fur collar",
+      portraitFilePrefix: "character-065",
+      identityAnchor: "same person as character-065: tall broad silhouette, copper skin, thick braid, white fur collar, scarred hands, furrier, human, fur collar",
       portraitBasePrompt: "A tall broad-shouldered woman with copper skin, thick black braid, white fur collar, scarred hands, and a measuring strap wrapped around her wrist. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1295,8 +1295,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-017",
-      source: "legacy_reworked",
+      characterId: "character-066",
+      rosterGroup: "supporting_cast",
       originalIndex: 17,
       seedId: null,
       finalDisplayName: "Ivo Plumspice",
@@ -1352,8 +1352,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-017",
-      identityAnchor: "same person as npc-legacy-017: slim fox-kin silhouette, russet ears, gold eyes, curled moustache, purple sash, spice hawker, fox-kin, spice pouches",
+      portraitFilePrefix: "character-066",
+      identityAnchor: "same person as character-066: slim fox-kin silhouette, russet ears, gold eyes, curled moustache, purple sash, spice hawker, fox-kin, spice pouches",
       portraitBasePrompt: "A slim fox-kin spice hawker with russet ears, gold eyes, curled moustache, purple sash, and dozens of tiny spice pouches fanning from his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1361,13 +1361,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "festival curry order",
         "fake saffron"
       ],
-      integrationNotes: "Import/spice legacy contact.",
+      integrationNotes: "Import/spice core contact.",
       ancestryOrSpecies: "fox-kin",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-018",
-      source: "legacy_reworked",
+      characterId: "character-067",
+      rosterGroup: "supporting_cast",
       originalIndex: 18,
       seedId: null,
       finalDisplayName: "Coro Bluecap",
@@ -1422,8 +1422,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-018",
-      identityAnchor: "same person as npc-legacy-018: round gnome silhouette, pale violet skin, huge blue cap-hat, soft beard, mossy vest, mushroom farmer, gnome, glowing mushrooms",
+      portraitFilePrefix: "character-067",
+      identityAnchor: "same person as character-067: round gnome silhouette, pale violet skin, huge blue cap-hat, soft beard, mossy vest, mushroom farmer, gnome, glowing mushrooms",
       portraitBasePrompt: "A round blue-capped gnome mushroom farmer with pale violet skin, soft beard, huge blue cap-hat, mossy vest, and a basket of glowing cave mushrooms. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1431,15 +1431,15 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "cellar monster rumor",
         "rare spore sample"
       ],
-      integrationNotes: "Cave/food legacy merchant.",
+      integrationNotes: "Cave/food trade merchant.",
       ancestryOrSpecies: "gnome",
       magicalTraits: [
         "gentle glow from cave mushrooms"
       ]
     },
     {
-      characterId: "npc-legacy-019",
-      source: "legacy_reworked",
+      characterId: "character-068",
+      rosterGroup: "supporting_cast",
       originalIndex: 19,
       seedId: null,
       finalDisplayName: "Anja Threadmere",
@@ -1494,8 +1494,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-019",
-      identityAnchor: "same person as npc-legacy-019: lean elegant silhouette, silver locs, tiny gold spectacles, measuring tape, needle-filled sleeves, seamstress, human, measuring tape",
+      portraitFilePrefix: "character-068",
+      identityAnchor: "same person as character-068: lean elegant silhouette, silver locs, tiny gold spectacles, measuring tape, needle-filled sleeves, seamstress, human, measuring tape",
       portraitBasePrompt: "A lean dark-skinned seamstress with silver locs pinned high, tiny gold spectacles, measuring tape around her neck, and sleeves full of colored needles. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1508,8 +1508,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-020",
-      source: "legacy_reworked",
+      characterId: "character-069",
+      rosterGroup: "supporting_cast",
       originalIndex: 20,
       seedId: null,
       finalDisplayName: "Borin Mulefriend",
@@ -1565,8 +1565,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-020",
-      identityAnchor: "same person as npc-legacy-020: large gentle silhouette, moss-green skin, kind eyes, braided beard, padded vest, pack animal trader, orc-blooded human, mule bell",
+      portraitFilePrefix: "character-069",
+      identityAnchor: "same person as character-069: large gentle silhouette, moss-green skin, kind eyes, braided beard, padded vest, pack animal trader, orc-blooded human, mule bell",
       portraitBasePrompt: "A large gentle orc-blooded trader with moss-green skin, kind brown eyes, braided beard, padded vest, and a small mule bell necklace. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1579,8 +1579,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-021",
-      source: "legacy_reworked",
+      characterId: "character-070",
+      rosterGroup: "supporting_cast",
       originalIndex: 21,
       seedId: null,
       finalDisplayName: "Talia Redscale",
@@ -1635,8 +1635,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-021",
-      identityAnchor: "same person as npc-legacy-021: lizardfolk silhouette, copper cheek scales, yellow eyes, red scarf, tiny jeweled lizard, reptile seller, lizardfolk, jeweled lizard",
+      portraitFilePrefix: "character-070",
+      identityAnchor: "same person as character-070: lizardfolk silhouette, copper cheek scales, yellow eyes, red scarf, tiny jeweled lizard, reptile seller, lizardfolk, jeweled lizard",
       portraitBasePrompt: "A sun-browned lizardfolk woman with copper scales along her cheeks, yellow eyes, braided red scarf, sleeveless leather vest, and a tiny jeweled lizard perched on her wrist. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1649,8 +1649,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-022",
-      source: "legacy_reworked",
+      characterId: "character-071",
+      rosterGroup: "supporting_cast",
       originalIndex: 22,
       seedId: null,
       finalDisplayName: "Milo Copperpot",
@@ -1705,8 +1705,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-022",
-      identityAnchor: "same person as npc-legacy-022: chubby halfling silhouette, copper pot helmet, striped apron, cinnamon skin, curly hair, cookshop owner, halfling, ladle",
+      portraitFilePrefix: "character-071",
+      identityAnchor: "same person as character-071: chubby halfling silhouette, copper pot helmet, striped apron, cinnamon skin, curly hair, cookshop owner, halfling, ladle",
       portraitBasePrompt: "A chubby halfling cook with cinnamon skin, curly black hair under a copper pot helmet, striped apron, and a ladle worn like a commander baton. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1714,13 +1714,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "missing herbs",
         "hungry guards"
       ],
-      integrationNotes: "Cook/food legacy contact.",
+      integrationNotes: "Cook/food core contact.",
       ancestryOrSpecies: "halfling",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-023",
-      source: "legacy_reworked",
+      characterId: "character-072",
+      rosterGroup: "supporting_cast",
       originalIndex: 23,
       seedId: null,
       finalDisplayName: "Edris Nightjar",
@@ -1775,8 +1775,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-023",
-      identityAnchor: "same person as npc-legacy-023: thin shadow-touched silhouette, pale grey eyes, charcoal turban, amber coat, tiny brass lanterns, lamp oil seller, shadow-touched human, brass lanterns",
+      portraitFilePrefix: "character-072",
+      identityAnchor: "same person as character-072: thin shadow-touched silhouette, pale grey eyes, charcoal turban, amber coat, tiny brass lanterns, lamp oil seller, shadow-touched human, brass lanterns",
       portraitBasePrompt: "A thin shadow-touched human with deep brown skin, pale grey eyes, charcoal turban, long amber coat, and a cluster of tiny brass lanterns at his hip. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1791,8 +1791,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       ]
     },
     {
-      characterId: "npc-legacy-024",
-      source: "legacy_reworked",
+      characterId: "character-073",
+      rosterGroup: "supporting_cast",
       originalIndex: 24,
       seedId: null,
       finalDisplayName: "Vessa Stonebloom",
@@ -1847,8 +1847,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-024",
-      identityAnchor: "same person as npc-legacy-024: sturdy earth-genasi silhouette, clay-colored skin, mineral freckles, thick arms, indigo headscarf, potter, earth-genasi, wet clay cup",
+      portraitFilePrefix: "character-073",
+      identityAnchor: "same person as character-073: sturdy earth-genasi silhouette, clay-colored skin, mineral freckles, thick arms, indigo headscarf, potter, earth-genasi, wet clay cup",
       portraitBasePrompt: "A sturdy earth-genasi potter with warm clay-colored skin, green mineral freckles, thick arms, indigo headscarf, and a wet clay cup turning between her hands. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1856,15 +1856,15 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "rare clay deposit",
         "fragile jar shipment"
       ],
-      integrationNotes: "Container/craft legacy contact.",
+      integrationNotes: "Container/craft core contact.",
       ancestryOrSpecies: "earth-genasi",
       magicalTraits: [
         "green mineral freckles"
       ]
     },
     {
-      characterId: "npc-legacy-025",
-      source: "legacy_reworked",
+      characterId: "character-074",
+      rosterGroup: "supporting_cast",
       originalIndex: 25,
       seedId: null,
       finalDisplayName: "Nico Quickmeasure",
@@ -1919,8 +1919,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-025",
-      identityAnchor: "same person as npc-legacy-025: short wiry silhouette, bright blue eyes, yellow measuring sash, map case, sun-cracked lips, surveyor, human, folded map case",
+      portraitFilePrefix: "character-074",
+      identityAnchor: "same person as character-074: short wiry silhouette, bright blue eyes, yellow measuring sash, map case, sun-cracked lips, surveyor, human, folded map case",
       portraitBasePrompt: "A short wiry human surveyor with tawny skin, bright blue eyes, sun-cracked lips, yellow measuring sash, and a folded map case strapped diagonally across his chest. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1928,13 +1928,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "new shortcut",
         "survey contract"
       ],
-      integrationNotes: "Route information legacy contact.",
+      integrationNotes: "Route information core contact.",
       ancestryOrSpecies: "human",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-026",
-      source: "legacy_reworked",
+      characterId: "character-075",
+      rosterGroup: "supporting_cast",
       originalIndex: 26,
       seedId: null,
       finalDisplayName: "Faela Mournmint",
@@ -1990,8 +1990,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-026",
-      identityAnchor: "same person as npc-legacy-026: tall pale elf silhouette, ash-blonde hair, black veil, mint leaves, silver eyes, undertaker, elf, burial cloth",
+      portraitFilePrefix: "character-075",
+      identityAnchor: "same person as character-075: tall pale elf silhouette, ash-blonde hair, black veil, mint leaves, silver eyes, undertaker, elf, burial cloth",
       portraitBasePrompt: "A tall pale elf undertaker with ash-blonde hair, long black veil pinned with mint leaves, narrow silver eyes, and a folded stack of white burial cloth. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -1999,15 +1999,15 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "haunted grave rumor",
         "candle shortage"
       ],
-      integrationNotes: "Religious/funerary legacy merchant.",
+      integrationNotes: "Religious/funerary trade merchant.",
       ancestryOrSpecies: "elf",
       magicalTraits: [
         "cool silver eye glint"
       ]
     },
     {
-      characterId: "npc-legacy-027",
-      source: "legacy_reworked",
+      characterId: "character-076",
+      rosterGroup: "supporting_cast",
       originalIndex: 27,
       seedId: null,
       finalDisplayName: "Garrik Rednail",
@@ -2061,8 +2061,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-027",
-      identityAnchor: "same person as npc-legacy-027: huge butcher silhouette, red beard, freckled arms, striped apron, bone tally tags, butcher, human, polished cleaver",
+      portraitFilePrefix: "character-076",
+      identityAnchor: "same person as character-076: huge butcher silhouette, red beard, freckled arms, striped apron, bone tally tags, butcher, human, polished cleaver",
       portraitBasePrompt: "A huge red-bearded human butcher with freckled arms, heavy shoulders, striped apron, polished cleaver kept low and safe, and a necklace of little bone tally tags. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2070,13 +2070,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "festival meat order",
         "knife sharpening debt"
       ],
-      integrationNotes: "Meat legacy merchant.",
+      integrationNotes: "Meat trade merchant.",
       ancestryOrSpecies: "human",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-028",
-      source: "legacy_reworked",
+      characterId: "character-077",
+      rosterGroup: "supporting_cast",
       originalIndex: 28,
       seedId: null,
       finalDisplayName: "Senna Rainbarrel",
@@ -2131,8 +2131,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-028",
-      identityAnchor: "same person as npc-legacy-028: tall water-touched silhouette, blue skin, white braids, teal dress, silver testing beads, water seller, water-touched human, water beads",
+      portraitFilePrefix: "character-077",
+      identityAnchor: "same person as character-077: tall water-touched silhouette, blue skin, white braids, teal dress, silver testing beads, water seller, water-touched human, water beads",
       portraitBasePrompt: "A tall blue-skinned water-touched woman with braided white hair, bright smile, patched teal dress, and two tiny silver water-testing beads on a cord. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2140,15 +2140,15 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "drought price spike",
         "barrel shortage"
       ],
-      integrationNotes: "Water/travel supply legacy contact.",
+      integrationNotes: "Water/travel supply core contact.",
       ancestryOrSpecies: "water-touched human",
       magicalTraits: [
         "wet shimmer along hair tips"
       ]
     },
     {
-      characterId: "npc-legacy-029",
-      source: "legacy_reworked",
+      characterId: "character-078",
+      rosterGroup: "supporting_cast",
       originalIndex: 29,
       seedId: null,
       finalDisplayName: "Odelia Sunhusk",
@@ -2202,8 +2202,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-029",
-      identityAnchor: "same person as npc-legacy-029: round-cheeked silhouette, sunflower scarf, green eyes, woven basket, bright fruit slices, fruit seller, human, fruit basket",
+      portraitFilePrefix: "character-078",
+      identityAnchor: "same person as character-078: round-cheeked silhouette, sunflower scarf, green eyes, woven basket, bright fruit slices, fruit seller, human, fruit basket",
       portraitBasePrompt: "A warm brown-skinned fruit seller with round cheeks, sunflower-yellow scarf, green eyes, woven shoulder basket, and a fan of bright fruit slices held safely inside the portrait. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2211,13 +2211,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "fruit blight",
         "festival preserves"
       ],
-      integrationNotes: "Produce legacy merchant.",
+      integrationNotes: "Produce trade merchant.",
       ancestryOrSpecies: "human",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-030",
-      source: "legacy_reworked",
+      characterId: "character-079",
+      rosterGroup: "supporting_cast",
       originalIndex: 30,
       seedId: null,
       finalDisplayName: "Kiva Moonmoth",
@@ -2273,8 +2273,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-030",
-      identityAnchor: "same person as npc-legacy-030: delicate moth-kin silhouette, grey-lilac skin, feathery brows, black eyes, stained aprons, dyer, moth-kin, dye bottles",
+      portraitFilePrefix: "character-079",
+      identityAnchor: "same person as character-079: delicate moth-kin silhouette, grey-lilac skin, feathery brows, black eyes, stained aprons, dyer, moth-kin, dye bottles",
       portraitBasePrompt: "A delicate moth-kin dyer with soft grey-lilac skin, feathery brows, black eyes, layered stained aprons, and fingers tipped with bright permanent dye. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2282,15 +2282,15 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "guild color ban",
         "festival banner order"
       ],
-      integrationNotes: "Dye/craft legacy contact.",
+      integrationNotes: "Dye/craft core contact.",
       ancestryOrSpecies: "moth-kin",
       magicalTraits: [
         "subtle powdery wing-like collar"
       ]
     },
     {
-      characterId: "npc-legacy-031",
-      source: "legacy_reworked",
+      characterId: "character-080",
+      rosterGroup: "supporting_cast",
       originalIndex: 31,
       seedId: null,
       finalDisplayName: "Padrig Nailroot",
@@ -2345,8 +2345,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-031",
-      identityAnchor: "same person as npc-legacy-031: burly craftsman silhouette, sawdust beard, green eyes, rolled tan sleeves, leather braces, carpenter, human, carved ruler",
+      portraitFilePrefix: "character-080",
+      identityAnchor: "same person as character-080: burly craftsman silhouette, sawdust beard, green eyes, rolled tan sleeves, leather braces, carpenter, human, carved ruler",
       portraitBasePrompt: "A burly green-eyed human carpenter with sawdust in chestnut beard, rolled tan sleeves, leather braces, and a carved ruler tucked behind one ear. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2354,13 +2354,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "broken cart",
         "rare timber order"
       ],
-      integrationNotes: "Construction/company legacy contact.",
+      integrationNotes: "Construction/company core contact.",
       ancestryOrSpecies: "human",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-032",
-      source: "legacy_reworked",
+      characterId: "character-081",
+      rosterGroup: "supporting_cast",
       originalIndex: 32,
       seedId: null,
       finalDisplayName: "Zaira Ashpetal",
@@ -2415,8 +2415,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-032",
-      identityAnchor: "same person as npc-legacy-032: young bright silhouette, coiled hair with petals, rose shawl, deep brown skin, blue flowers, flower seller, human, flower basket",
+      portraitFilePrefix: "character-081",
+      identityAnchor: "same person as character-081: young bright silhouette, coiled hair with petals, rose shawl, deep brown skin, blue flowers, flower seller, human, flower basket",
       portraitBasePrompt: "A young human flower seller with deep brown skin, glossy coiled hair pinned with petals, rose-pink shawl, and a basket of impossible blue flowers. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2431,8 +2431,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       ]
     },
     {
-      characterId: "npc-legacy-033",
-      source: "legacy_reworked",
+      characterId: "character-082",
+      rosterGroup: "supporting_cast",
       originalIndex: 33,
       seedId: null,
       finalDisplayName: "Rusk Ironbelly",
@@ -2477,8 +2477,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-033",
-      identityAnchor: "same person as npc-legacy-033: short massive dwarf silhouette, dark umber skin, braided black beard, iron nose ring, slate apron, ore buyer, dwarf, ore sample",
+      portraitFilePrefix: "character-082",
+      identityAnchor: "same person as character-082: short massive dwarf silhouette, dark umber skin, braided black beard, iron nose ring, slate apron, ore buyer, dwarf, ore sample",
       portraitBasePrompt: "A short massive dwarf ore buyer with dark umber skin, braided black beard, iron nose ring, heavy slate apron, and a cracked ore sample in one fist. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2486,13 +2486,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "bad ore dispute",
         "metal shortage"
       ],
-      integrationNotes: "Mining/metal legacy contact.",
+      integrationNotes: "Mining/metal core contact.",
       ancestryOrSpecies: "dwarf",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-034",
-      source: "legacy_reworked",
+      characterId: "character-083",
+      rosterGroup: "supporting_cast",
       originalIndex: 34,
       seedId: null,
       finalDisplayName: "Lumi Starling",
@@ -2537,8 +2537,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-034",
-      identityAnchor: "same person as npc-legacy-034: petite birdfolk silhouette, gold feather temples, black eyes, sky-blue cape, tiny cage, songbird seller, birdfolk, songbird cage",
+      portraitFilePrefix: "character-083",
+      identityAnchor: "same person as character-083: petite birdfolk silhouette, gold feather temples, black eyes, sky-blue cape, tiny cage, songbird seller, birdfolk, songbird cage",
       portraitBasePrompt: "A petite birdfolk woman with soft golden feathers along her temples, bright black eyes, layered sky-blue cape, and a tiny round cage held safely at chest height. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2551,8 +2551,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-035",
-      source: "legacy_reworked",
+      characterId: "character-084",
+      rosterGroup: "supporting_cast",
       originalIndex: 35,
       seedId: null,
       finalDisplayName: "Marek Saltfront",
@@ -2596,8 +2596,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-035",
-      identityAnchor: "same person as npc-legacy-035: narrow sour silhouette, salt-white moustache, sharp grey eyes, green-stained apron, small barrel, pickle seller, human, pickle barrel",
+      portraitFilePrefix: "character-084",
+      identityAnchor: "same person as character-084: narrow sour silhouette, salt-white moustache, sharp grey eyes, green-stained apron, small barrel, pickle seller, human, pickle barrel",
       portraitBasePrompt: "A narrow-faced human pickle seller with sea-tanned skin, sharp grey eyes, green-stained apron, salt-white moustache, and a small pickle barrel tucked under one arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2605,13 +2605,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "spoiled barrel",
         "winter stockpile"
       ],
-      integrationNotes: "Preserved food legacy merchant.",
+      integrationNotes: "Preserved food trade merchant.",
       ancestryOrSpecies: "human",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-036",
-      source: "legacy_reworked",
+      characterId: "character-085",
+      rosterGroup: "supporting_cast",
       originalIndex: 36,
       seedId: null,
       finalDisplayName: "Imri Lockspoke",
@@ -2667,8 +2667,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-036",
-      identityAnchor: "same person as npc-legacy-036: slender tiefling silhouette, bronze skin, tiny curled horns, violet eyes, black gloves, locksmith, tiefling, fan of keys",
+      portraitFilePrefix: "character-085",
+      identityAnchor: "same person as character-085: slender tiefling silhouette, bronze skin, tiny curled horns, violet eyes, black gloves, locksmith, tiefling, fan of keys",
       portraitBasePrompt: "A slender tiefling locksmith with bronze skin, tiny curled horns, violet eyes, black gloves, and a fan of delicate keys across one palm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2676,15 +2676,15 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "stolen key mold",
         "silent entry rumor"
       ],
-      integrationNotes: "Security/risk legacy contact.",
+      integrationNotes: "Security/risk core contact.",
       ancestryOrSpecies: "tiefling",
       magicalTraits: [
         "faint violet glow in keyholes"
       ]
     },
     {
-      characterId: "npc-legacy-037",
-      source: "legacy_reworked",
+      characterId: "character-086",
+      rosterGroup: "supporting_cast",
       originalIndex: 37,
       seedId: null,
       finalDisplayName: "Bela Fernstep",
@@ -2739,8 +2739,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-037",
-      identityAnchor: "same person as npc-legacy-037: freckled rural silhouette, auburn hair, patched green cloak, goat bell necklace, sun-browned skin, goatherd trader, human, goat bell",
+      portraitFilePrefix: "character-086",
+      identityAnchor: "same person as character-086: freckled rural silhouette, auburn hair, patched green cloak, goat bell necklace, sun-browned skin, goatherd trader, human, goat bell",
       portraitBasePrompt: "A freckled human goatherd with sun-browned skin, tangled auburn hair, green patched cloak, and a carved goat bell necklace. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2753,8 +2753,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-038",
-      source: "legacy_reworked",
+      characterId: "character-087",
+      rosterGroup: "supporting_cast",
       originalIndex: 38,
       seedId: null,
       finalDisplayName: "Nax Twocopper",
@@ -2810,8 +2810,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-038",
-      identityAnchor: "same person as npc-legacy-038: tiny ratfolk silhouette, brown fur, bead eyes, yellow scarf, many satchels, street peddler, ratfolk, button tray",
+      portraitFilePrefix: "character-087",
+      identityAnchor: "same person as character-087: tiny ratfolk silhouette, brown fur, bead eyes, yellow scarf, many satchels, street peddler, ratfolk, button tray",
       portraitBasePrompt: "A tiny ratfolk peddler with brown fur, bright bead eyes, patched yellow scarf, many little satchels, and a grin full of market math. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2819,13 +2819,13 @@ export const characterIdentityCatalogLegacyBatch01 = {
         "lost button box",
         "guard license chase"
       ],
-      integrationNotes: "Street/trinket legacy contact.",
+      integrationNotes: "Street/trinket core contact.",
       ancestryOrSpecies: "ratfolk",
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-039",
-      source: "legacy_reworked",
+      characterId: "character-088",
+      rosterGroup: "supporting_cast",
       originalIndex: 39,
       seedId: null,
       finalDisplayName: "Thera Quillglass",
@@ -2880,8 +2880,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-039",
-      identityAnchor: "same person as npc-legacy-039: calm precise silhouette, short silver bob, rectangular spectacles, ink-smudged fingers, map tube, map copyist, human, rolled map tube",
+      portraitFilePrefix: "character-088",
+      identityAnchor: "same person as character-088: calm precise silhouette, short silver bob, rectangular spectacles, ink-smudged fingers, map tube, map copyist, human, rolled map tube",
       portraitBasePrompt: "A calm human map copyist with dark olive skin, short silver bob, rectangular spectacles, ink-smudged fingers, and a rolled map tube under one arm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2894,8 +2894,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-040",
-      source: "legacy_reworked",
+      characterId: "character-089",
+      rosterGroup: "supporting_cast",
       originalIndex: 40,
       seedId: null,
       finalDisplayName: "Ula Flintseed",
@@ -2950,8 +2950,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-040",
-      identityAnchor: "same person as npc-legacy-040: elderly halfling silhouette, snow-white curls, sunflower clasp, seed envelope fan, dark wrinkled skin, seed merchant, halfling, seed envelopes",
+      portraitFilePrefix: "character-089",
+      identityAnchor: "same person as character-089: elderly halfling silhouette, snow-white curls, sunflower clasp, seed envelope fan, dark wrinkled skin, seed merchant, halfling, seed envelopes",
       portraitBasePrompt: "An elderly halfling seed merchant with dark wrinkled skin, snow-white curls, sunflower cloak clasp, and many labeled seed envelopes fan-shaped in her hands. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -2964,8 +2964,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-041",
-      source: "legacy_reworked",
+      characterId: "character-090",
+      rosterGroup: "supporting_cast",
       originalIndex: 41,
       seedId: null,
       finalDisplayName: "Varek Crowmask",
@@ -3020,8 +3020,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-041",
-      identityAnchor: "same person as npc-legacy-041: tall crowfolk silhouette, black feather hair, long narrow nose, dark cloak, half-mask belt, mask carver, crowfolk, carved mask",
+      portraitFilePrefix: "character-090",
+      identityAnchor: "same person as character-090: tall crowfolk silhouette, black feather hair, long narrow nose, dark cloak, half-mask belt, mask carver, crowfolk, carved mask",
       portraitBasePrompt: "A tall crowfolk mask carver with glossy black feather hair, long narrow nose, dark cloak, carved half-mask at his belt, and wood shavings on his sleeves. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3034,8 +3034,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-042",
-      source: "legacy_reworked",
+      characterId: "character-091",
+      rosterGroup: "supporting_cast",
       originalIndex: 42,
       seedId: null,
       finalDisplayName: "Nell Copperbloom",
@@ -3078,8 +3078,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-042",
-      identityAnchor: "same person as npc-legacy-042: small elderly silhouette, grey bun, patched shawl, twig broom, blue ribbons, market sweeper, human, twig broom",
+      portraitFilePrefix: "character-091",
+      identityAnchor: "same person as character-091: small elderly silhouette, grey bun, patched shawl, twig broom, blue ribbons, market sweeper, human, twig broom",
       portraitBasePrompt: "A small elderly woman with copper skin, grey bun, patched brown shawl, and a twig broom decorated with blue ribbons. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3091,8 +3091,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-043",
-      source: "legacy_reworked",
+      characterId: "character-092",
+      rosterGroup: "supporting_cast",
       originalIndex: 43,
       seedId: null,
       finalDisplayName: "Pim Hollowcheek",
@@ -3135,8 +3135,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-043",
-      identityAnchor: "same person as npc-legacy-043: lanky pale silhouette, hollow cheeks, oilskin hood, rat cage, rat catcher, human, rat cage",
+      portraitFilePrefix: "character-092",
+      identityAnchor: "same person as character-092: lanky pale silhouette, hollow cheeks, oilskin hood, rat cage, rat catcher, human, rat cage",
       portraitBasePrompt: "A lanky pale youth with hollow cheeks, huge grin, patched oilskin hood, and a little cage of sleepy rats. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3148,8 +3148,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-044",
-      source: "legacy_reworked",
+      characterId: "character-093",
+      rosterGroup: "supporting_cast",
       originalIndex: 44,
       seedId: null,
       finalDisplayName: "Sola Bellfern",
@@ -3192,8 +3192,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-044",
-      identityAnchor: "same person as npc-legacy-044: wiry teen silhouette, yellow scarf, cropped curls, running satchel, courier child, human, message satchel",
+      portraitFilePrefix: "character-093",
+      identityAnchor: "same person as character-093: wiry teen silhouette, yellow scarf, cropped curls, running satchel, courier child, human, message satchel",
       portraitBasePrompt: "A wiry teen girl with brown skin, bright yellow scarf, cropped curls, running satchel, and mud on both knees. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3205,8 +3205,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-045",
-      source: "legacy_reworked",
+      characterId: "character-094",
+      rosterGroup: "supporting_cast",
       originalIndex: 45,
       seedId: null,
       finalDisplayName: "Brindle Mossback",
@@ -3249,8 +3249,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-045",
-      identityAnchor: "same person as npc-legacy-045: gentle half-ogre silhouette, moss green skin, sleepy eyes, straw hair, stable hand, half-ogre, horse brush",
+      portraitFilePrefix: "character-094",
+      identityAnchor: "same person as character-094: gentle half-ogre silhouette, moss green skin, sleepy eyes, straw hair, stable hand, half-ogre, horse brush",
       portraitBasePrompt: "A gentle half-ogre stable hand with mossy green skin, sleepy eyes, straw in hair, and a soft horse brush held carefully. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3262,8 +3262,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-046",
-      source: "legacy_reworked",
+      characterId: "character-095",
+      rosterGroup: "supporting_cast",
       originalIndex: 46,
       seedId: null,
       finalDisplayName: "Etti Goldpin",
@@ -3305,8 +3305,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-046",
-      identityAnchor: "same person as npc-legacy-046: tiny gnome silhouette, pink spectacles, button hat, shining clasp tray, button seller, gnome, button tray",
+      portraitFilePrefix: "character-095",
+      identityAnchor: "same person as character-095: tiny gnome silhouette, pink spectacles, button hat, shining clasp tray, button seller, gnome, button tray",
       portraitBasePrompt: "A tiny gnome woman with warm beige skin, pink spectacles, enormous hat pinned with buttons, and a tray of shining clasps. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3318,8 +3318,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-047",
-      source: "legacy_reworked",
+      characterId: "character-096",
+      rosterGroup: "supporting_cast",
       originalIndex: 47,
       seedId: null,
       finalDisplayName: "Rallo Turnipnose",
@@ -3361,8 +3361,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-047",
-      identityAnchor: "same person as npc-legacy-047: round comic silhouette, red nose, green coat, turnip bouquet, turnip crier, human, turnip bunch",
+      portraitFilePrefix: "character-096",
+      identityAnchor: "same person as character-096: round comic silhouette, red nose, green coat, turnip bouquet, turnip crier, human, turnip bunch",
       portraitBasePrompt: "A round red-nosed man with curly brown hair, patched green coat, and a heroic bunch of turnips held like flowers. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3374,8 +3374,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-048",
-      source: "legacy_reworked",
+      characterId: "character-097",
+      rosterGroup: "supporting_cast",
       originalIndex: 48,
       seedId: null,
       finalDisplayName: "Miri Softstep",
@@ -3418,8 +3418,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-048",
-      identityAnchor: "same person as npc-legacy-048: slim worker silhouette, white head wrap, rolled sleeves, wet cloth basket, laundry girl, human, laundry basket",
+      portraitFilePrefix: "character-097",
+      identityAnchor: "same person as character-097: slim worker silhouette, white head wrap, rolled sleeves, wet cloth basket, laundry girl, human, laundry basket",
       portraitBasePrompt: "A slim young woman with deep umber skin, white head wrap, rolled sleeves, and a basket of bright wet cloth. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3431,8 +3431,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-049",
-      source: "legacy_reworked",
+      characterId: "character-098",
+      rosterGroup: "supporting_cast",
       originalIndex: 49,
       seedId: null,
       finalDisplayName: "Dox Lintwhistle",
@@ -3477,8 +3477,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-049",
-      identityAnchor: "same person as npc-legacy-049: small goblin silhouette, mint skin, wild white hair, purple vest, duck puppet, toy mender, goblin, wooden duck puppet",
+      portraitFilePrefix: "character-098",
+      identityAnchor: "same person as character-098: small goblin silhouette, mint skin, wild white hair, purple vest, duck puppet, toy mender, goblin, wooden duck puppet",
       portraitBasePrompt: "A small elderly goblin with mint skin, wild white hair, purple vest, and a wooden duck puppet on one hand. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3490,8 +3490,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-050",
-      source: "legacy_reworked",
+      characterId: "character-099",
+      rosterGroup: "supporting_cast",
       originalIndex: 50,
       seedId: null,
       finalDisplayName: "Kara Roofsalt",
@@ -3535,8 +3535,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-050",
-      identityAnchor: "same person as npc-legacy-050: windburned silhouette, cropped silver hair, blue scarf, gull glove, gull keeper, human, white gull",
+      portraitFilePrefix: "character-099",
+      identityAnchor: "same person as character-099: windburned silhouette, cropped silver hair, blue scarf, gull glove, gull keeper, human, white gull",
       portraitBasePrompt: "A windburned woman with cropped silver hair, blue scarf, leather glove, and a white gull perched on her forearm. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3548,8 +3548,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-051",
-      source: "legacy_reworked",
+      characterId: "character-100",
+      rosterGroup: "supporting_cast",
       originalIndex: 51,
       seedId: null,
       finalDisplayName: "Omi Claythumb",
@@ -3593,8 +3593,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-051",
-      identityAnchor: "same person as npc-legacy-051: muscular silhouette, clay-red skin, shaved sides, thick arms, grey tunic, brick carrier, earth-touched human, two bricks",
+      portraitFilePrefix: "character-100",
+      identityAnchor: "same person as character-100: muscular silhouette, clay-red skin, shaved sides, thick arms, grey tunic, brick carrier, earth-touched human, two bricks",
       portraitBasePrompt: "A muscular young woman with clay-red skin, shaved sides, thick arms, grey work tunic, and two bricks held safely against her chest. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3608,8 +3608,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       ]
     },
     {
-      characterId: "npc-legacy-052",
-      source: "legacy_reworked",
+      characterId: "character-101",
+      rosterGroup: "supporting_cast",
       originalIndex: 52,
       seedId: null,
       finalDisplayName: "Fennel Quickpurse",
@@ -3652,8 +3652,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-052",
-      identityAnchor: "same person as npc-legacy-052: thin ratfolk silhouette, tawny fur, blue vest, coin bowl, coin washer, ratfolk, coin bowl",
+      portraitFilePrefix: "character-101",
+      identityAnchor: "same person as character-101: thin ratfolk silhouette, tawny fur, blue vest, coin bowl, coin washer, ratfolk, coin bowl",
       portraitBasePrompt: "A thin ratfolk with tawny fur, neat blue vest, bright eyes, and a little bowl of shining coins. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3665,8 +3665,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
       magicalTraits: []
     },
     {
-      characterId: "npc-legacy-053",
-      source: "legacy_reworked",
+      characterId: "character-102",
+      rosterGroup: "supporting_cast",
       originalIndex: 53,
       seedId: null,
       finalDisplayName: "Asha Noonveil",
@@ -3710,8 +3710,8 @@ export const characterIdentityCatalogLegacyBatch01 = {
           promptDelta: "calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged"
         }
       ],
-      portraitFilePrefix: "npc-legacy-053",
-      identityAnchor: "same person as npc-legacy-053: sun-browned silhouette, white veil, amber eyes, ochre robe, prayer charms, pilgrim seller, human, prayer charms",
+      portraitFilePrefix: "character-102",
+      identityAnchor: "same person as character-102: sun-browned silhouette, white veil, amber eyes, ochre robe, prayer charms, pilgrim seller, human, prayer charms",
       portraitBasePrompt: "A sun-browned woman with white veil, amber eyes, simple ochre robe, and a string of small prayer charms. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
       negativePrompt: "no text, no labels, no letters, no numbers, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       questHooks: [
@@ -3727,4 +3727,4 @@ export const characterIdentityCatalogLegacyBatch01 = {
   ]
 } satisfies CharacterIdentityCatalogBatch;
 
-export const characterIdentityCatalogLegacyBatch01PortraitImageCount = getIdentityBatchPortraitImageCount(characterIdentityCatalogLegacyBatch01);
+export const characterIdentityCatalogCastBatch03PortraitImageCount = getIdentityBatchPortraitImageCount(characterIdentityCatalogCastBatch03);

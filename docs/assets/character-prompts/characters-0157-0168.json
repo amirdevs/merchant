@@ -51,32 +51,32 @@
   "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified. Put a small readable filename label in the bottom-left corner of each cell. The label text must exactly match that entry outputFile, use pure magenta #FF00FF, simple bold readable font, no outline, no shadow, no glow, no gradient. Keep the label fully separated from the character art on empty green #00FF00 with a clear safety gap.",
   "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
   "sheetOrderLock": [
-    "R1C1 = npc-new-038-happy.png — Vel Tallowmark, Forger, happy, ink-touched human",
-    "R1C2 = npc-new-038-suspicious.png — Vel Tallowmark, Forger, suspicious, ink-touched human",
-    "R1C3 = npc-new-039-neutral.png — Harlon Briarjaw, Bounty Hunter, neutral, wolf-blooded human",
-    "R2C1 = npc-new-039-happy.png — Harlon Briarjaw, Bounty Hunter, happy, wolf-blooded human",
-    "R2C2 = npc-new-039-suspicious.png — Harlon Briarjaw, Bounty Hunter, suspicious, wolf-blooded human",
-    "R2C3 = npc-new-039-worried.png — Harlon Briarjaw, Bounty Hunter, worried, wolf-blooded human",
-    "R3C1 = npc-new-039-angry.png — Harlon Briarjaw, Bounty Hunter, angry, wolf-blooded human",
-    "R3C2 = npc-new-040-neutral.png — Advocate Sel Orison, Legal Advocate, neutral, half-elf advocate",
-    "R3C3 = npc-new-040-happy.png — Advocate Sel Orison, Legal Advocate, happy, half-elf advocate",
-    "R4C1 = npc-new-040-suspicious.png — Advocate Sel Orison, Legal Advocate, suspicious, half-elf advocate",
-    "R4C2 = npc-new-041-neutral.png — Drava Bitterroot, Apothecary Buyer, neutral, moss-touched human",
-    "R4C3 = npc-new-041-happy.png — Drava Bitterroot, Apothecary Buyer, happy, moss-touched human"
+    "R1C1 = character-038-happy.png — Vel Tallowmark, Forger, happy, ink-touched human",
+    "R1C2 = character-038-suspicious.png — Vel Tallowmark, Forger, suspicious, ink-touched human",
+    "R1C3 = character-039-neutral.png — Harlon Briarjaw, Bounty Hunter, neutral, wolf-blooded human",
+    "R2C1 = character-039-happy.png — Harlon Briarjaw, Bounty Hunter, happy, wolf-blooded human",
+    "R2C2 = character-039-suspicious.png — Harlon Briarjaw, Bounty Hunter, suspicious, wolf-blooded human",
+    "R2C3 = character-039-worried.png — Harlon Briarjaw, Bounty Hunter, worried, wolf-blooded human",
+    "R3C1 = character-039-angry.png — Harlon Briarjaw, Bounty Hunter, angry, wolf-blooded human",
+    "R3C2 = character-040-neutral.png — Advocate Sel Orison, Legal Advocate, neutral, half-elf advocate",
+    "R3C3 = character-040-happy.png — Advocate Sel Orison, Legal Advocate, happy, half-elf advocate",
+    "R4C1 = character-040-suspicious.png — Advocate Sel Orison, Legal Advocate, suspicious, half-elf advocate",
+    "R4C2 = character-041-neutral.png — Drava Bitterroot, Apothecary Buyer, neutral, moss-touched human",
+    "R4C3 = character-041-happy.png — Drava Bitterroot, Apothecary Buyer, happy, moss-touched human"
   ],
   "order": [
-    "1. npc-new-038-happy",
-    "2. npc-new-038-suspicious",
-    "3. npc-new-039-neutral",
-    "4. npc-new-039-happy",
-    "5. npc-new-039-suspicious",
-    "6. npc-new-039-worried",
-    "7. npc-new-039-angry",
-    "8. npc-new-040-neutral",
-    "9. npc-new-040-happy",
-    "10. npc-new-040-suspicious",
-    "11. npc-new-041-neutral",
-    "12. npc-new-041-happy"
+    "1. character-038-happy",
+    "2. character-038-suspicious",
+    "3. character-039-neutral",
+    "4. character-039-happy",
+    "5. character-039-suspicious",
+    "6. character-039-worried",
+    "7. character-039-angry",
+    "8. character-040-neutral",
+    "9. character-040-happy",
+    "10. character-040-suspicious",
+    "11. character-041-neutral",
+    "12. character-041-happy"
   ],
   "images": [
     {
@@ -85,17 +85,17 @@
       "row": 1,
       "column": 1,
       "cell": "R1C1",
-      "imageId": "npc-new-038-happy",
-      "characterId": "npc-new-038",
+      "imageId": "character-038-happy",
+      "characterId": "character-038",
       "displayName": "Vel Tallowmark",
       "profession": "Forger",
       "expression": "happy",
-      "outputFile": "npc-new-038-happy.png",
+      "outputFile": "character-038-happy.png",
       "ancestryOrSpecies": "ink-touched human",
       "magicalTraits": [
         "ink-stained fingertips with faint rune marks"
       ],
-      "identityAnchor": "same person as npc-new-038: soft-faced document forger, pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, magnifying lens ribbon, careful guilty expression",
+      "identityAnchor": "same person as character-038: soft-faced document forger, pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, magnifying lens ribbon, careful guilty expression",
       "visualTraits": [
         "soft-faced ink-stained silhouette",
         "pale brown skin",
@@ -115,7 +115,7 @@
         "wax red",
         "ink black"
       ],
-      "prompt": "A soft-faced middle-aged forger with pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, and a magnifying lens pinned to a ribbon. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: ink-touched human. Visible magical traits that must remain consistent: ink-stained fingertips with faint rune marks. Identity anchors must remain unchanged: same person as npc-new-038: soft-faced document forger, pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, magnifying lens ribbon, careful guilty expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A soft-faced middle-aged forger with pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, and a magnifying lens pinned to a ribbon. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: ink-touched human. Visible magical traits that must remain consistent: ink-stained fingertips with faint rune marks. Identity anchors must remain unchanged: same person as character-038: soft-faced document forger, pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, magnifying lens ribbon, careful guilty expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -125,7 +125,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-038-happy.png",
+        "text": "character-038-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -139,17 +139,17 @@
       "row": 1,
       "column": 2,
       "cell": "R1C2",
-      "imageId": "npc-new-038-suspicious",
-      "characterId": "npc-new-038",
+      "imageId": "character-038-suspicious",
+      "characterId": "character-038",
       "displayName": "Vel Tallowmark",
       "profession": "Forger",
       "expression": "suspicious",
-      "outputFile": "npc-new-038-suspicious.png",
+      "outputFile": "character-038-suspicious.png",
       "ancestryOrSpecies": "ink-touched human",
       "magicalTraits": [
         "ink-stained fingertips with faint rune marks"
       ],
-      "identityAnchor": "same person as npc-new-038: soft-faced document forger, pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, magnifying lens ribbon, careful guilty expression",
+      "identityAnchor": "same person as character-038: soft-faced document forger, pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, magnifying lens ribbon, careful guilty expression",
       "visualTraits": [
         "soft-faced ink-stained silhouette",
         "pale brown skin",
@@ -169,7 +169,7 @@
         "wax red",
         "ink black"
       ],
-      "prompt": "A soft-faced middle-aged forger with pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, and a magnifying lens pinned to a ribbon. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: ink-touched human. Visible magical traits that must remain consistent: ink-stained fingertips with faint rune marks. Identity anchors must remain unchanged: same person as npc-new-038: soft-faced document forger, pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, magnifying lens ribbon, careful guilty expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A soft-faced middle-aged forger with pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, and a magnifying lens pinned to a ribbon. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: ink-touched human. Visible magical traits that must remain consistent: ink-stained fingertips with faint rune marks. Identity anchors must remain unchanged: same person as character-038: soft-faced document forger, pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, magnifying lens ribbon, careful guilty expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -179,7 +179,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-038-suspicious.png",
+        "text": "character-038-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -193,18 +193,18 @@
       "row": 1,
       "column": 3,
       "cell": "R1C3",
-      "imageId": "npc-new-039-neutral",
-      "characterId": "npc-new-039",
+      "imageId": "character-039-neutral",
+      "characterId": "character-039",
       "displayName": "Harlon Briarjaw",
       "profession": "Bounty Hunter",
       "expression": "neutral",
-      "outputFile": "npc-new-039-neutral.png",
+      "outputFile": "character-039-neutral.png",
       "ancestryOrSpecies": "wolf-blooded human",
       "magicalTraits": [
         "wolfish sideburns",
         "predator stare"
       ],
-      "identityAnchor": "same person as npc-new-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare",
+      "identityAnchor": "same person as character-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare",
       "visualTraits": [
         "broad scar-notched silhouette",
         "weathered fair skin",
@@ -224,7 +224,7 @@
         "iron",
         "bone"
       ],
-      "prompt": "A broad scar-notched bounty hunter with weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, and iron manacles at his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: wolf-blooded human. Visible magical traits that must remain consistent: wolfish sideburns, predator stare. Identity anchors must remain unchanged: same person as npc-new-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A broad scar-notched bounty hunter with weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, and iron manacles at his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: wolf-blooded human. Visible magical traits that must remain consistent: wolfish sideburns, predator stare. Identity anchors must remain unchanged: same person as character-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -234,7 +234,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-039-neutral.png",
+        "text": "character-039-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -248,18 +248,18 @@
       "row": 2,
       "column": 1,
       "cell": "R2C1",
-      "imageId": "npc-new-039-happy",
-      "characterId": "npc-new-039",
+      "imageId": "character-039-happy",
+      "characterId": "character-039",
       "displayName": "Harlon Briarjaw",
       "profession": "Bounty Hunter",
       "expression": "happy",
-      "outputFile": "npc-new-039-happy.png",
+      "outputFile": "character-039-happy.png",
       "ancestryOrSpecies": "wolf-blooded human",
       "magicalTraits": [
         "wolfish sideburns",
         "predator stare"
       ],
-      "identityAnchor": "same person as npc-new-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare",
+      "identityAnchor": "same person as character-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare",
       "visualTraits": [
         "broad scar-notched silhouette",
         "weathered fair skin",
@@ -279,7 +279,7 @@
         "iron",
         "bone"
       ],
-      "prompt": "A broad scar-notched bounty hunter with weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, and iron manacles at his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: wolf-blooded human. Visible magical traits that must remain consistent: wolfish sideburns, predator stare. Identity anchors must remain unchanged: same person as npc-new-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A broad scar-notched bounty hunter with weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, and iron manacles at his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: wolf-blooded human. Visible magical traits that must remain consistent: wolfish sideburns, predator stare. Identity anchors must remain unchanged: same person as character-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -289,7 +289,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-039-happy.png",
+        "text": "character-039-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -303,18 +303,18 @@
       "row": 2,
       "column": 2,
       "cell": "R2C2",
-      "imageId": "npc-new-039-suspicious",
-      "characterId": "npc-new-039",
+      "imageId": "character-039-suspicious",
+      "characterId": "character-039",
       "displayName": "Harlon Briarjaw",
       "profession": "Bounty Hunter",
       "expression": "suspicious",
-      "outputFile": "npc-new-039-suspicious.png",
+      "outputFile": "character-039-suspicious.png",
       "ancestryOrSpecies": "wolf-blooded human",
       "magicalTraits": [
         "wolfish sideburns",
         "predator stare"
       ],
-      "identityAnchor": "same person as npc-new-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare",
+      "identityAnchor": "same person as character-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare",
       "visualTraits": [
         "broad scar-notched silhouette",
         "weathered fair skin",
@@ -334,7 +334,7 @@
         "iron",
         "bone"
       ],
-      "prompt": "A broad scar-notched bounty hunter with weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, and iron manacles at his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: wolf-blooded human. Visible magical traits that must remain consistent: wolfish sideburns, predator stare. Identity anchors must remain unchanged: same person as npc-new-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A broad scar-notched bounty hunter with weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, and iron manacles at his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: wolf-blooded human. Visible magical traits that must remain consistent: wolfish sideburns, predator stare. Identity anchors must remain unchanged: same person as character-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -344,7 +344,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-039-suspicious.png",
+        "text": "character-039-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -358,18 +358,18 @@
       "row": 2,
       "column": 3,
       "cell": "R2C3",
-      "imageId": "npc-new-039-worried",
-      "characterId": "npc-new-039",
+      "imageId": "character-039-worried",
+      "characterId": "character-039",
       "displayName": "Harlon Briarjaw",
       "profession": "Bounty Hunter",
       "expression": "worried",
-      "outputFile": "npc-new-039-worried.png",
+      "outputFile": "character-039-worried.png",
       "ancestryOrSpecies": "wolf-blooded human",
       "magicalTraits": [
         "wolfish sideburns",
         "predator stare"
       ],
-      "identityAnchor": "same person as npc-new-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare",
+      "identityAnchor": "same person as character-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare",
       "visualTraits": [
         "broad scar-notched silhouette",
         "weathered fair skin",
@@ -389,7 +389,7 @@
         "iron",
         "bone"
       ],
-      "prompt": "A broad scar-notched bounty hunter with weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, and iron manacles at his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: wolf-blooded human. Visible magical traits that must remain consistent: wolfish sideburns, predator stare. Identity anchors must remain unchanged: same person as npc-new-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A broad scar-notched bounty hunter with weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, and iron manacles at his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: wolf-blooded human. Visible magical traits that must remain consistent: wolfish sideburns, predator stare. Identity anchors must remain unchanged: same person as character-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -399,7 +399,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-039-worried.png",
+        "text": "character-039-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -413,18 +413,18 @@
       "row": 3,
       "column": 1,
       "cell": "R3C1",
-      "imageId": "npc-new-039-angry",
-      "characterId": "npc-new-039",
+      "imageId": "character-039-angry",
+      "characterId": "character-039",
       "displayName": "Harlon Briarjaw",
       "profession": "Bounty Hunter",
       "expression": "angry",
-      "outputFile": "npc-new-039-angry.png",
+      "outputFile": "character-039-angry.png",
       "ancestryOrSpecies": "wolf-blooded human",
       "magicalTraits": [
         "wolfish sideburns",
         "predator stare"
       ],
-      "identityAnchor": "same person as npc-new-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare",
+      "identityAnchor": "same person as character-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare",
       "visualTraits": [
         "broad scar-notched silhouette",
         "weathered fair skin",
@@ -444,7 +444,7 @@
         "iron",
         "bone"
       ],
-      "prompt": "A broad scar-notched bounty hunter with weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, and iron manacles at his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: wolf-blooded human. Visible magical traits that must remain consistent: wolfish sideburns, predator stare. Identity anchors must remain unchanged: same person as npc-new-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A broad scar-notched bounty hunter with weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, and iron manacles at his belt. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: wolf-blooded human. Visible magical traits that must remain consistent: wolfish sideburns, predator stare. Identity anchors must remain unchanged: same person as character-039: broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -454,7 +454,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-039-angry.png",
+        "text": "character-039-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -468,15 +468,15 @@
       "row": 3,
       "column": 2,
       "cell": "R3C2",
-      "imageId": "npc-new-040-neutral",
-      "characterId": "npc-new-040",
+      "imageId": "character-040-neutral",
+      "characterId": "character-040",
       "displayName": "Advocate Sel Orison",
       "profession": "Legal Advocate",
       "expression": "neutral",
-      "outputFile": "npc-new-040-neutral.png",
+      "outputFile": "character-040-neutral.png",
       "ancestryOrSpecies": "half-elf advocate",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile",
+      "identityAnchor": "same person as character-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile",
       "visualTraits": [
         "slender silver-tongued silhouette",
         "elder",
@@ -496,7 +496,7 @@
         "blue",
         "silver"
       ],
-      "prompt": "A slender elderly advocate with deep russet skin, silver goatee, layered cream robes, blue legal sash, and folded citations tucked under one elbow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: half-elf advocate. Identity anchors must remain unchanged: same person as npc-new-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A slender elderly advocate with deep russet skin, silver goatee, layered cream robes, blue legal sash, and folded citations tucked under one elbow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: half-elf advocate. Identity anchors must remain unchanged: same person as character-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -506,7 +506,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-040-neutral.png",
+        "text": "character-040-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -520,15 +520,15 @@
       "row": 3,
       "column": 3,
       "cell": "R3C3",
-      "imageId": "npc-new-040-happy",
-      "characterId": "npc-new-040",
+      "imageId": "character-040-happy",
+      "characterId": "character-040",
       "displayName": "Advocate Sel Orison",
       "profession": "Legal Advocate",
       "expression": "happy",
-      "outputFile": "npc-new-040-happy.png",
+      "outputFile": "character-040-happy.png",
       "ancestryOrSpecies": "half-elf advocate",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile",
+      "identityAnchor": "same person as character-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile",
       "visualTraits": [
         "slender silver-tongued silhouette",
         "elder",
@@ -548,7 +548,7 @@
         "blue",
         "silver"
       ],
-      "prompt": "A slender elderly advocate with deep russet skin, silver goatee, layered cream robes, blue legal sash, and folded citations tucked under one elbow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: half-elf advocate. Identity anchors must remain unchanged: same person as npc-new-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A slender elderly advocate with deep russet skin, silver goatee, layered cream robes, blue legal sash, and folded citations tucked under one elbow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: half-elf advocate. Identity anchors must remain unchanged: same person as character-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -558,7 +558,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-040-happy.png",
+        "text": "character-040-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -572,15 +572,15 @@
       "row": 4,
       "column": 1,
       "cell": "R4C1",
-      "imageId": "npc-new-040-suspicious",
-      "characterId": "npc-new-040",
+      "imageId": "character-040-suspicious",
+      "characterId": "character-040",
       "displayName": "Advocate Sel Orison",
       "profession": "Legal Advocate",
       "expression": "suspicious",
-      "outputFile": "npc-new-040-suspicious.png",
+      "outputFile": "character-040-suspicious.png",
       "ancestryOrSpecies": "half-elf advocate",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile",
+      "identityAnchor": "same person as character-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile",
       "visualTraits": [
         "slender silver-tongued silhouette",
         "elder",
@@ -600,7 +600,7 @@
         "blue",
         "silver"
       ],
-      "prompt": "A slender elderly advocate with deep russet skin, silver goatee, layered cream robes, blue legal sash, and folded citations tucked under one elbow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: half-elf advocate. Identity anchors must remain unchanged: same person as npc-new-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A slender elderly advocate with deep russet skin, silver goatee, layered cream robes, blue legal sash, and folded citations tucked under one elbow. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: half-elf advocate. Identity anchors must remain unchanged: same person as character-040: slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -610,7 +610,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-040-suspicious.png",
+        "text": "character-040-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -624,18 +624,18 @@
       "row": 4,
       "column": 2,
       "cell": "R4C2",
-      "imageId": "npc-new-041-neutral",
-      "characterId": "npc-new-041",
+      "imageId": "character-041-neutral",
+      "characterId": "character-041",
       "displayName": "Drava Bitterroot",
       "profession": "Apothecary Buyer",
       "expression": "neutral",
-      "outputFile": "npc-new-041-neutral.png",
+      "outputFile": "character-041-neutral.png",
       "ancestryOrSpecies": "moss-touched human",
       "magicalTraits": [
         "leaf-green stains",
         "herbal aura"
       ],
-      "identityAnchor": "same person as npc-new-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze",
+      "identityAnchor": "same person as character-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze",
       "visualTraits": [
         "stooped fragrant silhouette",
         "elder",
@@ -655,7 +655,7 @@
         "glass blue",
         "brown"
       ],
-      "prompt": "A stooped elderly apothecary with dark olive skin, cloud-white brows, green-stained fingertips, layered moss shawl, and glass vials braided into her hair. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: moss-touched human. Visible magical traits that must remain consistent: leaf-green stains, herbal aura. Identity anchors must remain unchanged: same person as npc-new-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A stooped elderly apothecary with dark olive skin, cloud-white brows, green-stained fingertips, layered moss shawl, and glass vials braided into her hair. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: moss-touched human. Visible magical traits that must remain consistent: leaf-green stains, herbal aura. Identity anchors must remain unchanged: same person as character-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -665,7 +665,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-041-neutral.png",
+        "text": "character-041-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -679,18 +679,18 @@
       "row": 4,
       "column": 3,
       "cell": "R4C3",
-      "imageId": "npc-new-041-happy",
-      "characterId": "npc-new-041",
+      "imageId": "character-041-happy",
+      "characterId": "character-041",
       "displayName": "Drava Bitterroot",
       "profession": "Apothecary Buyer",
       "expression": "happy",
-      "outputFile": "npc-new-041-happy.png",
+      "outputFile": "character-041-happy.png",
       "ancestryOrSpecies": "moss-touched human",
       "magicalTraits": [
         "leaf-green stains",
         "herbal aura"
       ],
-      "identityAnchor": "same person as npc-new-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze",
+      "identityAnchor": "same person as character-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze",
       "visualTraits": [
         "stooped fragrant silhouette",
         "elder",
@@ -710,7 +710,7 @@
         "glass blue",
         "brown"
       ],
-      "prompt": "A stooped elderly apothecary with dark olive skin, cloud-white brows, green-stained fingertips, layered moss shawl, and glass vials braided into her hair. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: moss-touched human. Visible magical traits that must remain consistent: leaf-green stains, herbal aura. Identity anchors must remain unchanged: same person as npc-new-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A stooped elderly apothecary with dark olive skin, cloud-white brows, green-stained fingertips, layered moss shawl, and glass vials braided into her hair. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: moss-touched human. Visible magical traits that must remain consistent: leaf-green stains, herbal aura. Identity anchors must remain unchanged: same person as character-041: stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -720,7 +720,7 @@
       },
       "batchId": "characters-0157-0168",
       "filenameLabel": {
-        "text": "npc-new-041-happy.png",
+        "text": "character-041-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",

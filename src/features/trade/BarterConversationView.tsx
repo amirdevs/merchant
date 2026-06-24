@@ -1,7 +1,7 @@
 import { useState, type ReactNode } from "react";
 import { Handshake, HelpCircle, MessageCircle } from "lucide-react";
 import type { Character, InventoryEntry } from "@/data/types";
-import { remakeCharacterPortraitAsset, remakeCharacterView, tradePortraitExpression } from "@/data/characters/characterPortraitManifest";
+import { characterPortraitAssetForCharacter, characterProfileView, tradePortraitExpression } from "@/data/characters/characterPortraitManifest";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { moodLabel, patienceLabel, relationFor, trustLabel, ultimatumActive } from "@/lib/reputation";
 import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
@@ -51,8 +51,8 @@ export function BarterConversationView({ state, character, playerOffer, characte
   }, dialogueNode) : [];
   const recentNotes = character ? state.dialogueLog.filter((entry) => entry.characterIndex === character.index).slice(0, 3) : [];
   const dealReaction = reactionForAdvantage(advantage, playerOffer, characterOffer);
-  const characterView = character ? remakeCharacterView(character, tradePortraitExpression(advantage, relation?.mood || 0)) : null;
-  const portraitSrc = character ? remakeCharacterPortraitAsset(character, tradePortraitExpression(advantage, relation?.mood || 0)) : "";
+  const characterView = character ? characterProfileView(character, tradePortraitExpression(advantage, relation?.mood || 0)) : null;
+  const portraitSrc = character ? characterPortraitAssetForCharacter(character, tradePortraitExpression(advantage, relation?.mood || 0)) : "";
   const chooseDialogue = (choice: ReturnType<typeof dialogueChoices>[number]) => {
     if (choice.id === "ask-price") onAskPrice();
     else if (choice.id === "ask-offer" || choice.id === "barter") onAskOffer();

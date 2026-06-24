@@ -1,5 +1,5 @@
 import type { Character, Kingdom, Marketplace } from "../data/types";
-import { remakeCharacterView } from "@/data/characters/characterPortraitManifest";
+import { characterProfileView } from "@/data/characters/characterPortraitManifest";
 import type { NpcRelation } from "./reputation";
 import { compactBiasText, routeLedger } from "./travel";
 
@@ -47,28 +47,28 @@ export type DialogueContext = {
 };
 
 export function customerIntro(character: Character) {
-  const view = remakeCharacterView(character);
+  const view = characterProfileView(character);
   return `${view.name} steps up to the counter. ${view.marketFlavor}`;
 }
 
 export function customerPreference(character: Character) {
-  const view = remakeCharacterView(character);
+  const view = characterProfileView(character);
   return view.tradePersonality || "They bargain by instinct and watch your ledger closely.";
 }
 
 export function customerPrompt(character: Character) {
-  const view = remakeCharacterView(character);
+  const view = characterProfileView(character);
   if (view.roleTags.length) return `Ask about ${view.roleTags[0].replace(/[-_]/g, " ")}.`;
   return "What is your place in this market?";
 }
 
 export function customerReply(character: Character) {
-  const view = remakeCharacterView(character);
+  const view = characterProfileView(character);
   return view.story;
 }
 
 function displayName(character: Character) {
-  return remakeCharacterView(character).name;
+  return characterProfileView(character).name;
 }
 
 function strongestBias(character: Character, direction: "like" | "dislike") {

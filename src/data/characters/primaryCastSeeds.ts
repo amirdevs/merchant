@@ -1,12 +1,12 @@
-import type { NewUsefulNpcSeed } from "./characterRemakeTypes";
+import type { PrimaryCastSeed } from "./characterProfileTypes";
 
 const sharedNegativePrompt = "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face";
 
-export const newUsefulNpcSeeds = [
+export const primaryCastSeeds = [
   {
-    characterId: "npc-new-001",
+    characterId: "character-001",
     displayName: "Mirella Brasscall",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "trade",
     profession: "Auctioneer",
     roleTags: ["auctioneer", "market", "trade", "price_signal"],
@@ -19,7 +19,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-001",
+      portraitFilePrefix: "character-001",
       identityAnchor: "tall olive-skinned auctioneer, severe black braid, red wax-stained fingers, burgundy auction coat, brass hand bell, sharp cheekbones, commanding smile",
       visualTraits: ["tall and ringing-voiced", "middle aged", "A tall middle-aged auctioneer with olive skin, a severe black braid, long fingers stained with red sealing wax, and a sleeveless burgundy coat over parchment-colored sleeves."],
       professionProps: ["brass hand bell", "sealed bid cards", "wax-stained ledger"],
@@ -30,9 +30,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Can appear near high-value trade, festival auctions, and rare item valuation.",
   },
   {
-    characterId: "npc-new-002",
+    characterId: "character-002",
     displayName: "Orren Scale-Eye",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "trade",
     profession: "Appraiser",
     roleTags: ["appraiser", "valuation", "trade", "item_quality"],
@@ -45,7 +45,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-002",
+      portraitFilePrefix: "character-002",
       identityAnchor: "short elderly appraiser, square jaw, cloudy blue eyes, round green glass lenses, dark pocketed apron, tiny brass scale, expression of severe patience",
       visualTraits: ["short, square, and still", "elder", "A short elderly appraiser with pale freckled skin, a square jaw, cloudy blue eyes behind round green glass lenses, and a dark apron sewn with tiny pockets."],
       professionProps: ["tiny brass scale", "green glass lens", "marked appraisal tags"],
@@ -56,9 +56,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for future item quality, appraisal, and Ask Price clarity.",
   },
   {
-    characterId: "npc-new-003",
+    characterId: "character-003",
     displayName: "Basko Fencrate",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "trade",
     profession: "Bulk Goods Broker",
     roleTags: ["bulk", "wholesale", "market", "supplier"],
@@ -71,7 +71,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-003",
+      portraitFilePrefix: "character-003",
       identityAnchor: "barrel-chested bulk goods broker, deep brown skin, close-cropped curls, patched ochre vest, rope belt with wooden counting tiles, heavy confident posture",
       visualTraits: ["broad and barrel-chested", "middle aged", "A broad barrel-chested broker with deep brown skin, close-cropped curls, a patched ochre vest, and a rope belt hung with wooden counting tiles."],
       professionProps: ["wooden counting tiles", "crate hook", "bulk order slate"],
@@ -82,9 +82,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Can support bulk sales, warehouse turnover, and market surplus UI.",
   },
   {
-    characterId: "npc-new-004",
+    characterId: "character-004",
     displayName: "Saffra Moonlock",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "collector_specialist",
     profession: "Rare Item Collector",
     roleTags: ["collector", "luxury", "rare_goods", "quest_giver"],
@@ -97,7 +97,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-004",
+      portraitFilePrefix: "character-004",
       identityAnchor: "thin young rare item collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, restless wide eyes, elegant nervous hands",
       visualTraits: ["thin and jeweled", "young adult", "A thin young collector with warm golden-brown skin, crescent earrings, a midnight-blue scarf, silver rings on every finger, and wide restless eyes."],
       professionProps: ["velvet specimen pouch", "silver rings", "catalog of rumors"],
@@ -108,9 +108,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for rare item sinks, collection quests, and high-value flavor.",
   },
   {
-    characterId: "npc-new-005",
+    characterId: "character-005",
     displayName: "Joryn Crackbox",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "trade",
     profession: "Damaged Goods Dealer",
     roleTags: ["damaged_goods", "bargain", "repair", "trade"],
@@ -123,7 +123,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-005",
+      portraitFilePrefix: "character-005",
       identityAnchor: "wiry damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
       visualTraits: ["wiry and lopsided", "young adult", "A wiry young dealer with tawny skin, uneven shoulders, a crooked grin, messy copper hair, and a patched leather satchel spilling bent hinges and chipped cups."],
       professionProps: ["patched satchel", "repair twine", "cracked sample box"],
@@ -134,9 +134,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Supports damaged/discount goods and repair-adjacent systems later.",
   },
   {
-    characterId: "npc-new-006",
+    characterId: "character-006",
     displayName: "Helva Quaystamp",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "trade",
     profession: "Import Export Clerk",
     roleTags: ["customs", "imports", "paperwork", "market_service"],
@@ -149,7 +149,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-006",
+      portraitFilePrefix: "character-006",
       identityAnchor: "narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stack of stamped dock papers",
       visualTraits: ["upright and narrow", "middle aged", "A narrow upright clerk with dark umber skin, a crisp teal collar, silver-threaded hair wrapped under a small cap, and ink-stained thumbs."],
       professionProps: ["origin stamps", "dock papers", "ink pad"],
@@ -160,9 +160,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for customs, tariffs, route legality, and port flavor.",
   },
   {
-    characterId: "npc-new-007",
+    characterId: "character-007",
     displayName: "Pella Brightspoon",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "trade",
     profession: "Festival Trader",
     roleTags: ["festival", "seasonal", "food", "rumor_source"],
@@ -175,7 +175,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-007",
+      portraitFilePrefix: "character-007",
       identityAnchor: "round animated festival trader, rosy-brown skin, sparkling eyes, yellow scarf, embroidered apron, tiny sleeve bells, cheerful crowd-ready smile",
       visualTraits: ["round and animated", "young adult", "A round young festival trader with rosy-brown skin, sparkling eyes, a yellow scarf, embroidered apron, and tiny bells tied to her sleeves."],
       professionProps: ["festival tray", "sleeve bells", "sugared nut cones"],
@@ -186,9 +186,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for seasonal events and temporary market demand.",
   },
   {
-    characterId: "npc-new-008",
+    characterId: "character-008",
     displayName: "Davin Ledgerhook",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "trade",
     profession: "Market Inspector",
     roleTags: ["inspection", "law", "market", "anti_fraud"],
@@ -201,7 +201,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-008",
+      portraitFilePrefix: "character-008",
       identityAnchor: "lean severe market inspector, light brown skin, close-shaven head, angular nose, stiff charcoal coat, chained hooked stylus, controlled suspicious stare",
       visualTraits: ["lean and severe", "middle aged", "A lean severe inspector with light brown skin, close-shaven head, angular nose, stiff charcoal coat, and a hooked metal stylus chained to his wrist."],
       professionProps: ["chained stylus", "inspection ledger", "seal tags"],
@@ -212,9 +212,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Can connect legality, market rules, and fraud warnings.",
   },
   {
-    characterId: "npc-new-009",
+    characterId: "character-009",
     displayName: "Kesta Far-Ridge",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "travel",
     profession: "Route Scout",
     roleTags: ["route_scout", "travel", "risk", "rumor_source"],
@@ -227,7 +227,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-009",
+      portraitFilePrefix: "character-009",
       identityAnchor: "small weather-bitten route scout, copper-brown skin, sun-cracked lips, short black hair, faded green hood, map case across chest, alert narrowed eyes",
       visualTraits: ["small and weather-bitten", "young adult", "A small weather-bitten scout with copper-brown skin, sun-cracked lips, short black hair, a faded green hood, and a map case strapped across her chest."],
       professionProps: ["map case", "trail tokens", "muddy boots"],
@@ -238,9 +238,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for travel risk previews and route rumors.",
   },
   {
-    characterId: "npc-new-010",
+    characterId: "character-010",
     displayName: "Brann Oxweather",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "travel",
     profession: "Caravan Captain",
     roleTags: ["caravan", "guard", "travel", "bulk"],
@@ -253,7 +253,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-010",
+      portraitFilePrefix: "character-010",
       identityAnchor: "massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture",
       visualTraits: ["massive and calm", "elder", "A massive elderly caravan captain with dark bronze skin, one missing thumb, a white beard braided into three cords, and a heavy red travel cloak pinned with iron route badges."],
       professionProps: ["iron route badges", "wagon tally board", "heavy travel cloak"],
@@ -264,9 +264,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Supports convoy travel, escort jobs, and route safety UI.",
   },
   {
-    characterId: "npc-new-011",
+    characterId: "character-011",
     displayName: "Nilo Gatecoin",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "travel",
     profession: "Toll Officer",
     roleTags: ["toll", "law", "travel", "money_sink"],
@@ -279,7 +279,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-011",
+      portraitFilePrefix: "character-011",
       identityAnchor: "plump immaculate toll officer, fair skin, tiny curled moustache, lacquered blue cap, cream gloves, polished coin abacus, smug official posture",
       visualTraits: ["plump and immaculate", "middle aged", "A plump immaculate toll officer with fair skin, tiny curled moustache, lacquered blue cap, stiff cream gloves, and a polished coin abacus at his belt."],
       professionProps: ["coin abacus", "toll tickets", "blue cap badge"],
@@ -290,9 +290,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Can appear in travel cost breakdown and toll events.",
   },
   {
-    characterId: "npc-new-012",
+    characterId: "character-012",
     displayName: "Arra Stonepassport",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "travel",
     profession: "Border Customs Guard",
     roleTags: ["customs", "guard", "border", "legality"],
@@ -305,7 +305,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-012",
+      portraitFilePrefix: "character-012",
       identityAnchor: "tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, piercing inspection stare",
       visualTraits: ["tall and stone-faced", "middle aged", "A tall stone-faced border guard with deep mahogany skin, silver streaks at her temples, square shoulders, and a sand-colored uniform reinforced with dark leather plates."],
       professionProps: ["inspection spear", "passport seals", "contraband hook"],
@@ -316,9 +316,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Supports legality warnings and border travel risk.",
   },
   {
-    characterId: "npc-new-013",
+    characterId: "character-013",
     displayName: "Tovin Hearthmile",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "travel",
     profession: "Roadside Innkeeper",
     roleTags: ["inn", "travel", "food", "rest"],
@@ -331,7 +331,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-013",
+      portraitFilePrefix: "character-013",
       identityAnchor: "wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile",
       visualTraits: ["wide and warm", "middle aged", "A wide warm innkeeper with ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, and a copper ladle tucked like a sword."],
       professionProps: ["copper ladle", "guest ledger", "travel stew bowl"],
@@ -342,9 +342,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for travel recovery, food demand, and rumors.",
   },
   {
-    characterId: "npc-new-014",
+    characterId: "character-014",
     displayName: "Madu Long-Ear",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "travel",
     profession: "Pack Animal Trader",
     roleTags: ["animals", "capacity", "travel", "supplier"],
@@ -357,7 +357,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-014",
+      portraitFilePrefix: "character-014",
       identityAnchor: "tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, patient mule-wise eyes",
       visualTraits: ["tall and loose-limbed", "young adult", "A tall loose-limbed animal trader with dark skin, shaved head, long ears, a faded orange sash, and bits of straw stuck to a sleeveless work tunic."],
       professionProps: ["mule lead rope", "feed scoop", "capacity tags"],
@@ -368,9 +368,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Can support cargo capacity upgrades later.",
   },
   {
-    characterId: "npc-new-015",
+    characterId: "character-015",
     displayName: "Suren Reedwake",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "travel",
     profession: "Ferry Master",
     roleTags: ["ferry", "river", "travel", "route"],
@@ -383,7 +383,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-015",
+      portraitFilePrefix: "character-015",
       identityAnchor: "thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, quiet foggy expression",
       visualTraits: ["thin and reedlike", "elder", "A thin elderly ferry master with weathered tan skin, watery grey eyes, a reed hat, patched navy coat, and hands knotted like rope."],
       professionProps: ["ferry pole", "river token pouch", "reed hat"],
@@ -394,9 +394,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for route locks, river tolls, and stealth travel.",
   },
   {
-    characterId: "npc-new-016",
+    characterId: "character-016",
     displayName: "Vaska LowLantern",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "risk_crime",
     profession: "Smuggler Guide",
     roleTags: ["smuggler", "travel", "illegal", "risk"],
@@ -409,7 +409,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-016",
+      portraitFilePrefix: "character-016",
       identityAnchor: "short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture",
       visualTraits: ["short and shadowy", "young adult", "A short shadowy guide with brown skin, sharp green eyes, a black hood lined in dull copper, and a lantern with its glass painted half-dark."],
       professionProps: ["half-dark lantern", "hidden trail cord", "knife-length map"],
@@ -420,9 +420,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Can support illegal travel options and risk events.",
   },
   {
-    characterId: "npc-new-017",
+    characterId: "character-017",
     displayName: "Tessa Cratewell",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "company",
     profession: "Warehouse Keeper",
     roleTags: ["warehouse", "company", "storage", "market_service"],
@@ -435,7 +435,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-017",
+      portraitFilePrefix: "character-017",
       identityAnchor: "stocky warehouse keeper, warm brown skin, square glasses, greying curls under blue kerchief, heavy key ring across chest, tidy watchful expression",
       visualTraits: ["stocky and organized", "middle aged", "A stocky middle-aged warehouse keeper with warm brown skin, square glasses, greying curls under a blue kerchief, and a heavy key ring across her chest."],
       professionProps: ["heavy key ring", "crate ledger", "chalk tally board"],
@@ -446,9 +446,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Primary company warehouse contact.",
   },
   {
-    characterId: "npc-new-018",
+    characterId: "character-018",
     displayName: "Corvin Sailstamp",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "company",
     profession: "Shipment Broker",
     roleTags: ["shipment", "company", "logistics", "travel"],
@@ -461,7 +461,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-018",
+      portraitFilePrefix: "character-018",
       identityAnchor: "slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile",
       visualTraits: ["slender and polished", "young adult", "A slender polished broker with light olive skin, swept black hair, a teal silk cravat, brass cuff seals, and a contract tube tucked under one arm."],
       professionProps: ["contract tube", "shipping seals", "route fee cards"],
@@ -472,9 +472,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Primary company shipment contact.",
   },
   {
-    characterId: "npc-new-019",
+    characterId: "character-019",
     displayName: "Idra Sumbright",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "company",
     profession: "Company Accountant",
     roleTags: ["accountant", "ledger", "company", "finance"],
@@ -487,7 +487,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-019",
+      portraitFilePrefix: "character-019",
       identityAnchor: "small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, severe truth-counting stare",
       visualTraits: ["small and sharp-eyed", "elder", "A small elderly accountant with pale olive skin, sharp black eyes, silver hair in a tight bun, ink-black robe, and abacus beads polished from use."],
       professionProps: ["abacus", "double ledger", "ink knife"],
@@ -498,9 +498,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Supports company balance, profit, dividends, and warning UI.",
   },
   {
-    characterId: "npc-new-020",
+    characterId: "character-020",
     displayName: "Lord Pavren Duskmere",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "guild_noble",
     profession: "Investor",
     roleTags: ["investor", "noble", "company", "finance"],
@@ -513,7 +513,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-020",
+      portraitFilePrefix: "character-020",
       identityAnchor: "tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture",
       visualTraits: ["tall and soft-handed", "middle aged", "A tall soft-handed noble with pale skin, powdered dark hair, a plum velvet coat, pearl buttons, and a lazy smile that never reaches his eyes."],
       professionProps: ["pearl buttons", "investment letter", "velvet glove"],
@@ -524,9 +524,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for company investment and reputation systems.",
   },
   {
-    characterId: "npc-new-021",
+    characterId: "character-021",
     displayName: "Mara Debtneedle",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "company",
     profession: "Debt Collector",
     roleTags: ["debt", "finance", "risk", "company"],
@@ -539,7 +539,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-021",
+      portraitFilePrefix: "character-021",
       identityAnchor: "thin needle-straight debt collector, dark brown skin, charcoal veil, silver nose chain, ledger strapped across ribs, calm merciless expression",
       visualTraits: ["thin and needle-straight", "middle aged", "A thin needle-straight collector with dark brown skin, narrow eyes, a charcoal veil, silver nose chain, and a ledger strapped like armor across her ribs."],
       professionProps: ["rib-strapped ledger", "silver nose chain", "debt tokens"],
@@ -550,9 +550,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for loans, debt pressure, and failure consequences.",
   },
   {
-    characterId: "npc-new-022",
+    characterId: "character-022",
     displayName: "Fenro Shieldpaper",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "company",
     profession: "Insurance Agent",
     roleTags: ["insurance", "shipment", "company", "risk"],
@@ -565,7 +565,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-022",
+      portraitFilePrefix: "character-022",
       identityAnchor: "round anxious insurance agent, fair freckled skin, sandy curls, mint-green waistcoat, spectacles on blue string, worried polite smile",
       visualTraits: ["round and anxious", "young adult", "A round anxious insurance agent with fair freckled skin, sandy curls, a mint-green waistcoat, and spectacles tied to his collar with blue string."],
       professionProps: ["policy scrolls", "risk stamps", "wax umbrella seal"],
@@ -576,9 +576,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Can explain and sell shipment insurance.",
   },
   {
-    characterId: "npc-new-023",
+    characterId: "character-023",
     displayName: "Rudo Dockhand-King",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "company",
     profession: "Dock Foreman",
     roleTags: ["dock", "warehouse", "labor", "shipment"],
@@ -591,7 +591,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-023",
+      portraitFilePrefix: "character-023",
       identityAnchor: "huge scarred dock foreman, deep umber skin, shaved scalp, broken nose, sleeveless blue work coat, rope tattoos, commanding dockside glare",
       visualTraits: ["huge and scarred", "middle aged", "A huge scarred foreman with deep umber skin, shaved scalp, broken nose, sleeveless blue work coat, and rope tattoos around both forearms."],
       professionProps: ["cargo hook", "rope tattoos", "dock schedule slate"],
@@ -602,9 +602,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for port logistics and warehouse labor flavor.",
   },
   {
-    characterId: "npc-new-024",
+    characterId: "character-024",
     displayName: "Linna Axlewise",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "company",
     profession: "Cartwright",
     roleTags: ["cartwright", "repair", "travel", "capacity"],
@@ -617,7 +617,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-024",
+      portraitFilePrefix: "character-024",
       identityAnchor: "broad-hipped young cartwright, cinnamon skin, braided hair under leather cap, rolled sleeves, axle grease on cheek, practical confident stance",
       visualTraits: ["broad-hipped and practical", "young adult", "A broad-hipped young cartwright with cinnamon skin, thick braided hair tucked under a leather cap, rolled sleeves, and axle grease across one cheek."],
       professionProps: ["spoke gauge", "axle grease rag", "mini wagon wheel"],
@@ -628,9 +628,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Supports capacity upgrades, travel repairs, and cart events.",
   },
   {
-    characterId: "npc-new-025",
+    characterId: "character-025",
     displayName: "Nessa Pinboard",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "quest",
     profession: "Contract Board Clerk",
     roleTags: ["contracts", "quest_giver", "market_service"],
@@ -643,7 +643,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-025",
+      portraitFilePrefix: "character-025",
       identityAnchor: "small quick-handed contract clerk, warm tan skin, short dark curls, green ink-stained vest, belt full of colored pins, bright alert eyes",
       visualTraits: ["small and quick-handed", "young adult", "A small quick-handed clerk with warm tan skin, short dark curls, a green ink-stained vest, and a belt full of colored pins."],
       professionProps: ["colored pins", "contract board slips", "green ink pen"],
@@ -654,9 +654,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Primary notice-board and contract UI NPC.",
   },
   {
-    characterId: "npc-new-026",
+    characterId: "character-026",
     displayName: "Master Edrin Vowmark",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "guild_noble",
     profession: "Guild Representative",
     roleTags: ["guild", "reputation", "quest_giver", "law"],
@@ -669,7 +669,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-026",
+      portraitFilePrefix: "character-026",
       identityAnchor: "upright elderly guild representative, dark olive skin, white forked beard, blue ceremonial mantle, gold ledger-scale brooch, formal judging expression",
       visualTraits: ["upright and ceremonial", "elder", "An upright elderly guild official with dark olive skin, white forked beard, blue ceremonial mantle, and a square gold brooch stamped with ledger scales."],
       professionProps: ["ledger-scale brooch", "guild scroll", "ceremonial mantle"],
@@ -680,9 +680,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for reputation, guild quests, and unlocks.",
   },
   {
-    characterId: "npc-new-027",
+    characterId: "character-027",
     displayName: "Osha Rainbarrel",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "quest",
     profession: "Missing Shipment Witness",
     roleTags: ["witness", "shipment", "rumor_source", "quest"],
@@ -695,7 +695,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "minor",
       plannedExpressions: ["neutral"],
-      portraitFilePrefix: "npc-new-027",
+      portraitFilePrefix: "character-027",
       identityAnchor: "round-shouldered nervous witness, dark skin, wet curls, oversized brown cloak, cracked mug held tightly, frightened sideways glance",
       visualTraits: ["round-shouldered and nervous", "young adult", "A round-shouldered nervous witness with dark skin, wet curls plastered to her face, oversized brown cloak, and both hands clenched around a cracked mug."],
       professionProps: ["cracked mug", "rain cloak", "muddy parcel tag"],
@@ -706,9 +706,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful as a quest clue NPC, mostly not a merchant.",
   },
   {
-    characterId: "npc-new-028",
+    characterId: "character-028",
     displayName: "Kael Varnish",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "quest",
     profession: "Rival Merchant",
     roleTags: ["rival", "merchant", "quest", "reputation"],
@@ -721,7 +721,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-028",
+      portraitFilePrefix: "character-028",
       identityAnchor: "sleek young rival merchant, light brown skin, glossy black hair, cream coat with emerald trim, sharp priced smile, theatrical hand gesture",
       visualTraits: ["sleek and smiling", "young adult", "A sleek young rival merchant with light brown skin, glossy black hair, a cream coat trimmed in emerald, and a smile sharp enough to feel priced."],
       professionProps: ["emerald-trim coat", "sample case", "rival price cards"],
@@ -732,9 +732,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Can drive rivalry quests and market competition.",
   },
   {
-    characterId: "npc-new-029",
+    characterId: "character-029",
     displayName: "Lady Sermira Goldveil",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "guild_noble",
     profession: "Noble Patron",
     roleTags: ["noble", "patron", "luxury", "quest_giver"],
@@ -747,7 +747,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-029",
+      portraitFilePrefix: "character-029",
       identityAnchor: "willowy noble patron, rich brown skin, silver-gold veil, black lacquered nails, layered ivory gown, tower-shaped perfume vial, distant elegant gaze",
       visualTraits: ["willowy and distant", "middle aged", "A willowy noblewoman with rich brown skin, long silver-gold veil, lacquered black nails, layered ivory gown, and a perfume vial shaped like a tiny tower."],
       professionProps: ["tower perfume vial", "gold veil", "patron seal"],
@@ -758,9 +758,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for luxury item sinks, prestige quests, and patronage.",
   },
   {
-    characterId: "npc-new-030",
+    characterId: "character-030",
     displayName: "Brother Calven Ashlamp",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "quest",
     profession: "Religious Relic Buyer",
     roleTags: ["religious", "relic", "collector", "quest_giver"],
@@ -773,7 +773,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-030",
+      portraitFilePrefix: "character-030",
       identityAnchor: "thin elderly relic buyer monk, soot-ash greyed skin, kind dark eyes, shaved head, rough wool robe, bronze lamp on belt, humble determined posture",
       visualTraits: ["thin and soot-marked", "elder", "A thin elderly monk with ash-grey skin tone from lamp soot, kind dark eyes, shaved head, rough wool robe, and a small bronze lamp chained to his belt."],
       professionProps: ["bronze lamp", "relic cloth", "pilgrim tokens"],
@@ -784,9 +784,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for relic goods, pilgrim markets, and moral quests.",
   },
   {
-    characterId: "npc-new-031",
+    characterId: "character-031",
     displayName: "Yara Whispercup",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "quest",
     profession: "Rumor Seller",
     roleTags: ["rumor", "information", "market_service", "quest"],
@@ -799,7 +799,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-031",
+      portraitFilePrefix: "character-031",
       identityAnchor: "short birdlike rumor seller, amber skin, sharp nose, hennaed fingertips, layered purple shawls, chipped porcelain cup, knowing half-smile",
       visualTraits: ["short and birdlike", "middle aged", "A short birdlike rumor seller with amber skin, sharp nose, hennaed fingertips, layered purple shawls, and a chipped porcelain cup always near her mouth."],
       professionProps: ["chipped tea cup", "rumor slips", "mint pouch"],
@@ -810,9 +810,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Supports rumor UI, market tips, and quest discovery.",
   },
   {
-    characterId: "npc-new-032",
+    characterId: "character-032",
     displayName: "Elo Juniperseal",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "quest",
     profession: "Public Scribe",
     roleTags: ["scribe", "contracts", "law", "market_service"],
@@ -825,7 +825,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-032",
+      portraitFilePrefix: "character-032",
       identityAnchor: "long-fingered public scribe, fair olive skin, soft brown curls, indigo writing robe, feather pen behind ear, patient attentive expression",
       visualTraits: ["long-fingered and patient", "young adult", "A patient young scribe with fair olive skin, long fingers, soft brown curls, an indigo writing robe, and a feather pen tucked behind one ear."],
       professionProps: ["feather pen", "wax seals", "folded letters"],
@@ -836,9 +836,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for contract flavor, letters, and dialogue hooks.",
   },
   {
-    characterId: "npc-new-033",
+    characterId: "character-033",
     displayName: "Rook Velvetknife",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "risk_crime",
     profession: "Black Market Fence",
     roleTags: ["black_market", "fence", "illegal", "rare_goods"],
@@ -851,7 +851,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-033",
+      portraitFilePrefix: "character-033",
       identityAnchor: "slim black market fence, deep brown skin, oiled black moustache, maroon velvet coat, single pearl earring, cane-top hidden knife, charming dangerous smile",
       visualTraits: ["slim and velvet-smooth", "middle aged", "A slim middle-aged fence with deep brown skin, oiled black moustache, velvet maroon coat, one pearl earring, and a knife handle disguised as a cane top."],
       professionProps: ["cane-top knife", "velvet coat", "black ledger"],
@@ -862,9 +862,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for contraband and black-market systems.",
   },
   {
-    characterId: "npc-new-034",
+    characterId: "character-034",
     displayName: "Pip Sootheel",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "risk_crime",
     profession: "Thief Contact",
     roleTags: ["thief", "information", "risk", "street"],
@@ -877,7 +877,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-034",
+      portraitFilePrefix: "character-034",
       identityAnchor: "tiny quick thief contact, soot-darkened cheeks, bright hazel eyes, chopped black hair, oversized green coat, cloth-wrapped bare feet, mischievous wary grin",
       visualTraits: ["tiny and quick", "teen", "A tiny quick teen with soot-darkened cheeks, bright hazel eyes, chopped black hair, oversized green coat, and bare feet wrapped in cloth strips."],
       professionProps: ["lockpick string", "stolen button pouch", "sooty coat"],
@@ -888,9 +888,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful as low-level crime/risk contact.",
   },
   {
-    characterId: "npc-new-035",
+    characterId: "character-035",
     displayName: "Sergeant Borran Clink",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "risk_crime",
     profession: "Corrupt Guard",
     roleTags: ["corrupt_guard", "law", "illegal", "risk"],
@@ -903,7 +903,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-035",
+      portraitFilePrefix: "character-035",
       identityAnchor: "thick-necked corrupt guard, flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, heavy coin purse, forced friendly grin",
       visualTraits: ["thick-necked and sweating", "middle aged", "A thick-necked guard with flushed pale skin, sweating temples, rusted chain shirt, yellowed moustache, and a purse heavier than his sword."],
       professionProps: ["heavy coin purse", "rusted badge", "crooked spear"],
@@ -914,9 +914,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Can drive bribery, illegal route, and risk choices.",
   },
   {
-    characterId: "npc-new-036",
+    characterId: "character-036",
     displayName: "Tala Bittermint",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "risk_crime",
     profession: "Contraband Buyer",
     roleTags: ["contraband", "illegal", "buyer", "medicine"],
@@ -929,7 +929,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-036",
+      portraitFilePrefix: "character-036",
       identityAnchor: "narrow sharp contraband buyer, medium brown skin, shaved sides with long mint-green braid, black apothecary apron, silver herb knife, focused unsentimental stare",
       visualTraits: ["narrow and sharp", "young adult", "A narrow sharp young buyer with medium brown skin, shaved sides and long mint-green braid, black apothecary apron, and a silver herb knife at her wrist."],
       professionProps: ["silver herb knife", "sealed herb tins", "black apron"],
@@ -940,9 +940,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for illegal herbs, medicine quests, and moral choices.",
   },
   {
-    characterId: "npc-new-037",
+    characterId: "character-037",
     displayName: "Nim Crowstep",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "risk_crime",
     profession: "Night Courier",
     roleTags: ["courier", "night", "delivery", "risk"],
@@ -955,7 +955,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-037",
+      portraitFilePrefix: "character-037",
       identityAnchor: "lanky night courier, dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, wrapped runner calves, quiet watchful eyes",
       visualTraits: ["lanky and quiet", "young adult", "A lanky quiet courier with dark umber skin, long narrow face, crow-feather cloak pin, charcoal scarf, and calves wrapped for running."],
       professionProps: ["crow-feather pin", "sealed night pouch", "runner wraps"],
@@ -966,9 +966,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for timed deliveries and stealth contracts.",
   },
   {
-    characterId: "npc-new-038",
+    characterId: "character-038",
     displayName: "Vel Tallowmark",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "risk_crime",
     profession: "Forger",
     roleTags: ["forger", "documents", "illegal", "market_service"],
@@ -981,7 +981,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-038",
+      portraitFilePrefix: "character-038",
       identityAnchor: "soft-faced document forger, pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, magnifying lens ribbon, careful guilty expression",
       visualTraits: ["soft-faced and ink-stained", "middle aged", "A soft-faced middle-aged forger with pale brown skin, tired eyes, ink-stained cuffs, wax-spattered grey robe, and a magnifying lens pinned to a ribbon."],
       professionProps: ["seal molds", "magnifying lens", "wax scrap box"],
@@ -992,9 +992,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Supports permit systems and illegal paperwork.",
   },
   {
-    characterId: "npc-new-039",
+    characterId: "character-039",
     displayName: "Harlon Briarjaw",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "risk_crime",
     profession: "Bounty Hunter",
     roleTags: ["bounty", "combat", "risk", "guard"],
@@ -1007,7 +1007,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-039",
+      portraitFilePrefix: "character-039",
       identityAnchor: "broad scar-notched bounty hunter, weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, iron manacles, grim measuring stare",
       visualTraits: ["broad and scar-notched", "middle aged", "A broad scar-notched hunter with weathered fair skin, broken jawline, heavy brown beard, wolf-hide shoulder cape, and iron manacles at his belt."],
       professionProps: ["iron manacles", "wanted scraps", "wolf-hide cape"],
@@ -1018,9 +1018,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for risk, criminal questlines, and escorts.",
   },
   {
-    characterId: "npc-new-040",
+    characterId: "character-040",
     displayName: "Advocate Sel Orison",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "risk_crime",
     profession: "Legal Advocate",
     roleTags: ["law", "defense", "fines", "market_service"],
@@ -1033,7 +1033,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-040",
+      portraitFilePrefix: "character-040",
       identityAnchor: "slender elderly legal advocate, deep russet skin, silver goatee, cream robes, blue legal sash, folded citations, sly legalistic smile",
       visualTraits: ["slender and silver-tongued", "elder", "A slender elderly advocate with deep russet skin, silver goatee, layered cream robes, blue legal sash, and a stack of folded citations tucked under one elbow."],
       professionProps: ["folded citations", "blue legal sash", "court token"],
@@ -1044,9 +1044,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for fines, confiscation, and legal route outcomes.",
   },
   {
-    characterId: "npc-new-041",
+    characterId: "character-041",
     displayName: "Drava Bitterroot",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "collector_specialist",
     profession: "Apothecary Buyer",
     roleTags: ["apothecary", "medicine", "herbs", "collector"],
@@ -1059,7 +1059,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-041",
+      portraitFilePrefix: "character-041",
       identityAnchor: "stooped elderly apothecary buyer, dark olive skin, cloud-white brows, green-stained fingertips, moss shawl, glass vials braided in hair, sharp herbal gaze",
       visualTraits: ["stooped and fragrant", "elder", "A stooped elderly apothecary with dark olive skin, cloud-white brows, green-stained fingertips, layered moss shawl, and glass vials braided into her hair."],
       professionProps: ["glass vials", "moss shawl", "herb scales"],
@@ -1070,9 +1070,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for medicine/herb goods and emergency requests.",
   },
   {
-    characterId: "npc-new-042",
+    characterId: "character-042",
     displayName: "Iven Starfold",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "collector_specialist",
     profession: "Mapmaker",
     roleTags: ["mapmaker", "travel", "route", "knowledge"],
@@ -1085,7 +1085,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-042",
+      portraitFilePrefix: "character-042",
       identityAnchor: "thin young mapmaker, light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, compass tattoo on wrist, fascinated faraway eyes",
       visualTraits: ["thin and ink-dusted", "young adult", "A thin young mapmaker with light tan skin, ink-dusted nose, unruly blond curls, pale blue coat, and a compass tattoo on his left wrist."],
       professionProps: ["rolled maps", "brass compass", "route pins"],
@@ -1096,9 +1096,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for route discovery and travel UI flavor.",
   },
   {
-    characterId: "npc-new-043",
+    characterId: "character-043",
     displayName: "Sorna Maneclip",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "collector_specialist",
     profession: "Beast Handler",
     roleTags: ["animals", "travel", "risk", "supplier"],
@@ -1111,7 +1111,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-043",
+      portraitFilePrefix: "character-043",
       identityAnchor: "muscular beast handler, copper skin, shaved head, red patterned arm tattoos, hide apron, eyebrow scar, relaxed animal-wise confidence",
       visualTraits: ["muscular and relaxed", "middle aged", "A muscular relaxed handler with copper skin, shaved head, patterned red arm tattoos, heavy hide apron, and a scar crossing one eyebrow."],
       professionProps: ["feed bucket", "leather lead", "claw charm"],
@@ -1122,9 +1122,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Supports pack animals, travel risk, and special cargo.",
   },
   {
-    characterId: "npc-new-044",
+    characterId: "character-044",
     displayName: "Qadir Saffron-Tongue",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "collector_specialist",
     profession: "Spice Authenticator",
     roleTags: ["spice", "luxury", "appraiser", "trade"],
@@ -1137,7 +1137,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-044",
+      portraitFilePrefix: "character-044",
       identityAnchor: "round spice authenticator, warm brown skin, hennaed beard, saffron turban, emerald robe, golden tasting spoon chain, delighted discerning smile",
       visualTraits: ["round and perfumed", "middle aged", "A round perfumed specialist with warm brown skin, hennaed beard, saffron turban, emerald robe, and tiny golden tasting spoon on a chain."],
       professionProps: ["gold tasting spoon", "spice vials", "saffron turban"],
@@ -1148,9 +1148,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for spice goods, appraisal, and luxury markets.",
   },
   {
-    characterId: "npc-new-045",
+    characterId: "character-045",
     displayName: "Mina Bluevat",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "market_service",
     profession: "Fabric Dyer",
     roleTags: ["dye", "textile", "craft", "supplier"],
@@ -1163,7 +1163,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-045",
+      portraitFilePrefix: "character-045",
       identityAnchor: "strong-armed fabric dyer, dark brown skin, vivid blue-stained forearms, braided hair in white wrap, splash-patterned apron, bold creative grin",
       visualTraits: ["strong-armed and bright", "young adult", "A strong-armed young dyer with dark brown skin, vivid blue-stained forearms, braided hair wrapped in white cloth, and a splash-patterned apron."],
       professionProps: ["dye paddle", "cloth swatches", "blue-stained apron"],
@@ -1174,9 +1174,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for textile goods, festival jobs, and visual market flavor.",
   },
   {
-    characterId: "npc-new-046",
+    characterId: "character-046",
     displayName: "Pavel Gemquiet",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "collector_specialist",
     profession: "Gem Cutter",
     roleTags: ["gem", "luxury", "craft", "appraiser"],
@@ -1189,7 +1189,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-046",
+      portraitFilePrefix: "character-046",
       identityAnchor: "very still angular gem cutter, pale skin, shaved head, long grey eyebrows, black magnifier visor, dark blue stone-dusted apron, patient precise gaze",
       visualTraits: ["very still and angular", "elder", "A very still angular elder with pale skin, shaved head, long grey eyebrows, black magnifier visor, and a dark blue apron dusted with glittering stone powder."],
       professionProps: ["magnifier visor", "gem clamp", "stone dust apron"],
@@ -1200,9 +1200,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for gems, luxury appraisal, and crafting hooks.",
   },
   {
-    characterId: "npc-new-047",
+    characterId: "character-047",
     displayName: "Beni Tick-Tally",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "market_service",
     profession: "Tally Repairer",
     roleTags: ["tools", "accounting", "repair", "market_service"],
@@ -1215,7 +1215,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "merchant",
       plannedExpressions: ["neutral", "happy", "suspicious"],
-      portraitFilePrefix: "npc-new-047",
+      portraitFilePrefix: "character-047",
       identityAnchor: "short springy tally repairer, tan skin, wild brown curls, oversized round spectacles, striped yellow sleeves, tiny gears in cuffs, fussy animated face",
       visualTraits: ["short and springy", "young adult", "A short springy repairer with tan skin, wild brown curls, oversized round spectacles, striped yellow sleeves, and tiny gears caught in his cuffs."],
       professionProps: ["tiny gears", "broken abacus", "repair tweezers"],
@@ -1226,9 +1226,9 @@ export const newUsefulNpcSeeds = [
     integrationNotes: "Useful for comic market service and accounting/tool flavor.",
   },
   {
-    characterId: "npc-new-048",
+    characterId: "character-048",
     displayName: "Hessa Pilgrim-Marshal",
-    status: "NEW_GAMEPLAY_NPC",
+    status: "PRIMARY_CAST_SLOT",
     gameplayGroup: "guild_noble",
     profession: "Pilgrim Quartermaster",
     roleTags: ["pilgrim", "supply", "religious", "logistics"],
@@ -1241,7 +1241,7 @@ export const newUsefulNpcSeeds = [
     portraitPlan: {
       expressionTier: "major",
       plannedExpressions: ["neutral", "happy", "suspicious", "worried", "angry"],
-      portraitFilePrefix: "npc-new-048",
+      portraitFilePrefix: "character-048",
       identityAnchor: "broad steady pilgrim quartermaster, medium brown skin, grey-streaked braid, sand pilgrim coat, blue prayer beads, ration knife, calm protective expression",
       visualTraits: ["broad and steady", "middle aged", "A broad steady quartermaster with medium brown skin, thick grey-streaked braid, sand-colored pilgrim coat, blue prayer beads, and a ration knife at her belt."],
       professionProps: ["blue prayer beads", "ration knife", "pilgrim supply ledger"],
@@ -1251,6 +1251,6 @@ export const newUsefulNpcSeeds = [
     questHooks: ["pilgrim supply run", "camp shortage", "relic procession"],
     integrationNotes: "Useful for religious markets, bulk supply quests, and crowd events.",
   },
-] as const satisfies readonly NewUsefulNpcSeed[];
+] as const satisfies readonly PrimaryCastSeed[];
 
-export const newUsefulNpcPortraitCount = newUsefulNpcSeeds.reduce((sum, npc) => sum + npc.portraitPlan.plannedExpressions.length, 0);
+export const newUsefulNpcPortraitCount = primaryCastSeeds.reduce((sum, npc) => sum + npc.portraitPlan.plannedExpressions.length, 0);

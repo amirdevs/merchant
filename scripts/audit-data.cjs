@@ -8,11 +8,11 @@ const mediaDir = path.join(publicDir, "game-assets", "media");
 const dataDir = path.join(root, "src", "data", "generated");
 
 // Default audit:data is a structural/data-shape gate.
-// The original generated data still contains many old reference-game visual
+// The original generated data still contains many archived-source visual
 // filenames for townsquares, backdrops, ambiance, routes, portraits, and stalls.
 // Those are no longer the Phase 1 runtime source of truth. Keep strict legacy
 // visual checks opt-in so verify:current-state is not blocked by retired assets.
-const auditLegacyCharacterAssetFields = process.argv.includes("--legacy-character-assets");
+const auditCatalogCharacterAssetFields = process.argv.includes("--legacy-character-assets");
 const auditLegacyWorldAssetFields = process.argv.includes("--legacy-world-assets") || process.argv.includes("--legacy-market-assets");
 const strictLegacyAssets = process.argv.includes("--strict-assets");
 
@@ -70,7 +70,7 @@ expectCount("marketplaces", marketplaces.length);
 expectCount("professions", Object.keys(professions).length);
 
 for (const character of characters) {
-  if (!auditLegacyCharacterAssetFields && !strictLegacyAssets) {
+  if (!auditCatalogCharacterAssetFields && !strictLegacyAssets) {
     if (character.portraitFile) skippedLegacyPortraitFields += 1;
     if (character.stallFile) skippedLegacyStallFields += 1;
     continue;
@@ -125,7 +125,7 @@ console.log(`Characters: ${characters.length}`);
 console.log(`Items: ${items.length}`);
 console.log(`Marketplaces: ${marketplaces.length}`);
 console.log(`Professions: ${Object.keys(professions).length}`);
-if (!auditLegacyCharacterAssetFields && !strictLegacyAssets) {
+if (!auditCatalogCharacterAssetFields && !strictLegacyAssets) {
   console.log(`Skipped legacy character asset fields: ${skippedLegacyPortraitFields} portraitFile, ${skippedLegacyStallFields} stallFile.`);
   console.log("Run pnpm audit:character-portraits for the final remake portrait gate.");
 }

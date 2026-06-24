@@ -1,7 +1,7 @@
 import type { Character } from "@/data/types";
 import { characterIdentityCatalogBatches } from "./characterIdentityCatalog";
 import type { FinalCharacterIdentityProfile } from "./characterIdentityTypes";
-import type { CharacterExpression } from "./characterRemakeTypes";
+import type { CharacterExpression } from "./characterProfileTypes";
 import sheet0001_0012 from "../../../docs/assets/character-prompts/characters-0001-0012.json";
 import sheet0013_0024 from "../../../docs/assets/character-prompts/characters-0013-0024.json";
 import sheet0025_0036 from "../../../docs/assets/character-prompts/characters-0025-0036.json";
@@ -98,8 +98,8 @@ export type CharacterPortraitRecord = PromptImageEntry & {
 export const CHARACTER_PORTRAIT_ASSET_ROOT = "/assets/portraits/characters";
 export const EXPECTED_CHARACTER_PORTRAIT_COUNT = 722;
 export const EXPECTED_CHARACTER_IDENTITY_COUNT = 240;
-export const EXPECTED_USEFUL_NEW_NPC_COUNT = 48;
-export const EXPECTED_LEGACY_REWORKED_COUNT = 192;
+export const EXPECTED_PRIMARY_CAST_COUNT = 48;
+export const EXPECTED_SUPPORTING_CAST_COUNT = 192;
 
 export function runtimePortraitAsset(outputFile: string | null | undefined) {
   if (!outputFile) return "";
@@ -136,10 +136,10 @@ export const characterIdentityById = new Map(
   characterIdentityProfiles.map((identity) => [identity.characterId, identity] as const),
 );
 
-export const legacyCharacterIdByOriginalIndex = new Map<number, string>();
+export const characterIdByRuntimeIndex = new Map<number, string>();
 for (const identity of characterIdentityProfiles) {
-  if (identity.source === "legacy_reworked" && typeof identity.originalIndex === "number") {
-    legacyCharacterIdByOriginalIndex.set(identity.originalIndex, identity.characterId);
+  if (identity.rosterGroup === "supporting_cast" && typeof identity.originalIndex === "number") {
+    characterIdByRuntimeIndex.set(identity.originalIndex, identity.characterId);
   }
 }
 
@@ -147,24 +147,24 @@ export const characterPortraitManifestSummary = {
   promptSheetCount: promptSheets.length,
   portraitCount: characterPortraitRecords.length,
   identityCount: characterIdentityProfiles.length,
-  usefulNewNpcCount: characterIdentityProfiles.filter((identity) => identity.source === "new_useful_npc").length,
-  legacyReworkedCount: characterIdentityProfiles.filter((identity) => identity.source === "legacy_reworked").length,
+  primaryCastCount: characterIdentityProfiles.filter((identity) => identity.rosterGroup === "primary_cast").length,
+  supportingCastCount: characterIdentityProfiles.filter((identity) => identity.rosterGroup === "supporting_cast").length,
   assetRoot: CHARACTER_PORTRAIT_ASSET_ROOT,
 } as const;
 
-export function legacyCharacterIdForIndex(index: number) {
-  return legacyCharacterIdByOriginalIndex.get(index) || null;
+export function characterIdForRuntimeIndex(index: number) {
+  return characterIdByRuntimeIndex.get(index) || null;
 }
 
-export function remakeCharacterIdForCharacter(character: Character | null | undefined) {
+export function characterIdForCharacter(character: Character | null | undefined) {
   if (!character) return null;
-  const explicit = (character as Character & { characterId?: string; remakeCharacterId?: string }).remakeCharacterId || (character as Character & { characterId?: string }).characterId;
+  const explicit = (character as Character & { characterId?: string }).characterId;
   if (explicit && characterIdentityById.has(explicit)) return explicit;
-  return legacyCharacterIdForIndex(character.index);
+  return characterIdForRuntimeIndex(character.index);
 }
 
-export function remakeCharacterProfile(character: Character | null | undefined) {
-  const id = remakeCharacterIdForCharacter(character);
+export function characterProfileForCharacter(character: Character | null | undefined) {
+  const id = characterIdForCharacter(character);
   return id ? characterIdentityById.get(id) || null : null;
 }
 
@@ -178,13 +178,13 @@ export function characterExpressionPortrait(characterId: string, expression: Cha
   );
 }
 
-export function remakeCharacterPortraitAsset(character: Character | null | undefined, expression: CharacterExpression = "neutral") {
-  const id = remakeCharacterIdForCharacter(character);
+export function characterPortraitAssetForCharacter(character: Character | null | undefined, expression: CharacterExpression = "neutral") {
+  const id = characterIdForCharacter(character);
   if (!id) return "";
   return characterExpressionPortrait(id, expression)?.assetPath || "";
 }
 
-export type RemakeCharacterView = {
+export type CharacterProfileView = {
   readonly id: string | null;
   readonly name: string;
   readonly profession: string;
@@ -199,8 +199,8 @@ export type RemakeCharacterView = {
   readonly visualIdentity: string;
 };
 
-export function remakeCharacterView(character: Character, expression: CharacterExpression = "neutral"): RemakeCharacterView {
-  const id = remakeCharacterIdForCharacter(character);
+export function characterProfileView(character: Character, expression: CharacterExpression = "neutral"): CharacterProfileView {
+  const id = characterIdForCharacter(character);
   const profile = id ? characterIdentityById.get(id) || null : null;
   const portraitSrc = profile ? characterExpressionPortrait(profile.characterId, expression)?.assetPath || "" : "";
   return {
@@ -215,12 +215,12 @@ export function remakeCharacterView(character: Character, expression: CharacterE
     gameplayGroups: profile?.gameplayGroups || [],
     ancestryOrSpecies: profile?.ancestryOrSpecies,
     magicalTraits: profile?.magicalTraits || [],
-    visualIdentity: profile?.visualIdentity || "Original remake identity pending.",
+    visualIdentity: profile?.visualIdentity || "Character profile pending.",
   };
 }
 
-export function remakeCustomerIntro(character: Character) {
-  const view = remakeCharacterView(character);
+export function characterCustomerIntro(character: Character) {
+  const view = characterProfileView(character);
   return `${view.name} steps up to the counter. ${view.marketFlavor}`;
 }
 

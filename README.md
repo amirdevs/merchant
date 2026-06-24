@@ -1,6 +1,6 @@
-# Merchant React/Vite Remake
+# Merchant React/Vite
 
-Offline React/Vite remake prototype using extracted Merchant-style data, local assets, and new replacement systems for trading, stock, items, travel, quests, company management, UI integration, and original character/portrait replacement.
+Offline React/Vite fantasy trading game prototype using archived seed data, local assets, and current production systems for trading, stock, items, travel, quests, company management, UI integration, and original character portraits.
 
 ## Commands
 
@@ -39,16 +39,16 @@ pnpm test:playtest
 This is a playable local vertical-slice foundation, not a full clone yet. It currently includes:
 
 - generated original data loading
-- new item catalog/icon pipeline
+- current item catalog/icon pipeline
 - profession-aware NPC stock and restocking
-- old generated-data bias as mild stock/trade flavor
+- archived data bias as mild stock/trade flavor
 - barter valuation, Ask Price, Ask Offer, and regression tests
 - save schema v2 clean break
 - item/icon structural lock checks
 - economy, capacity, travel, quest, company, and UI-integration helper foundations
 - playable UI integration through the Strategy Planner
-- character rework planning for replacing original visible NPC identities
-- useful-new-NPC seed and identity catalog data under `src/data/characters/`
+- character profile planning for replacing visible NPC identities
+- primary cast seed and identity catalog data under `src/data/characters/`
 - playtest/balance report generation
 - offline local save/load and import/export
 
@@ -72,7 +72,7 @@ Current source-of-truth docs:
 08_UI_UX_DIRECTION.md
 ```
 
-Generated reports, old phase notes, audit outputs, and historical notes belong under `docs/logs/` and are not part of the normal reading path.
+Generated reports, prior phase notes, audit outputs, and historical notes belong under `docs/logs/` and are not part of the normal reading path.
 
 Asset prompt configs are kept under `docs/assets/`:
 

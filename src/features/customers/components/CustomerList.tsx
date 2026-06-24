@@ -1,6 +1,6 @@
 import { Users } from "lucide-react";
 import type { Character, Marketplace } from "@/data/types";
-import { remakeCharacterPortraitAsset, remakeCharacterView } from "@/data/characters/characterPortraitManifest";
+import { characterPortraitAssetForCharacter, characterProfileView } from "@/data/characters/characterPortraitManifest";
 import { townAsset } from "@/lib/assets";
 import { Panel } from "@/components/ui";
 
@@ -25,8 +25,8 @@ export function CustomerList({
       <div className="bg-cover bg-center" style={{ backgroundImage: `url("${townAsset(market.townsquareFile)}")` }}>
         <div className="grid max-h-[230px] grid-cols-3 content-start gap-2 overflow-auto bg-gradient-to-b from-black/10 to-black/65 p-2 max-[760px]:grid-cols-2">
           {people.map((person) => {
-            const portraitSrc = remakeCharacterPortraitAsset(person);
-            const view = remakeCharacterView(person);
+            const portraitSrc = characterPortraitAssetForCharacter(person);
+            const view = characterProfileView(person);
             return (
               <button
                 key={person.index}

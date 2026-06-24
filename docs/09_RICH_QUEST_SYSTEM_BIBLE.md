@@ -2,7 +2,7 @@
 
 This document defines the confirmed direction and implementation rules for the new original quest system.
 
-The remake should not keep the old reference-game quest content. Old marketplace quests may remain temporarily as legacy data while migration is in progress, but they are not the creative or runtime target for the remake.
+The project should not keep archived source quest content as the runtime target. Older marketplace quests may remain temporarily as transitional data while migration is in progress, but they are not the creative or runtime target.
 
 ## Core rule
 

@@ -51,32 +51,32 @@
   "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified. Put a small readable filename label in the bottom-left corner of each cell. The label text must exactly match that entry outputFile, use pure magenta #FF00FF, simple bold readable font, no outline, no shadow, no glow, no gradient. Keep the label fully separated from the character art on empty green #00FF00 with a clear safety gap.",
   "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
   "sheetOrderLock": [
-    "R1C1 = npc-legacy-052-neutral.png — Fennel Quickpurse, coin washer, neutral, ratfolk",
-    "R1C2 = npc-legacy-053-neutral.png — Asha Noonveil, pilgrim seller, neutral, human",
-    "R1C3 = npc-legacy-054-neutral.png — Varka Glasshook, harbor broker, neutral, sea-orc",
-    "R2C1 = npc-legacy-054-happy.png — Varka Glasshook, harbor broker, happy, sea-orc",
-    "R2C2 = npc-legacy-054-suspicious.png — Varka Glasshook, harbor broker, suspicious, sea-orc",
-    "R2C3 = npc-legacy-054-worried.png — Varka Glasshook, harbor broker, worried, sea-orc",
-    "R3C1 = npc-legacy-054-angry.png — Varka Glasshook, harbor broker, angry, sea-orc",
-    "R3C2 = npc-legacy-055-neutral.png — Sister Caldra Waxveil, relic candle seller, neutral, moon-touched human",
-    "R3C3 = npc-legacy-055-happy.png — Sister Caldra Waxveil, relic candle seller, happy, moon-touched human",
-    "R4C1 = npc-legacy-055-suspicious.png — Sister Caldra Waxveil, relic candle seller, suspicious, moon-touched human",
-    "R4C2 = npc-legacy-055-worried.png — Sister Caldra Waxveil, relic candle seller, worried, moon-touched human",
-    "R4C3 = npc-legacy-055-angry.png — Sister Caldra Waxveil, relic candle seller, angry, moon-touched human"
+    "R1C1 = character-101-neutral.png — Fennel Quickpurse, coin washer, neutral, ratfolk",
+    "R1C2 = character-102-neutral.png — Asha Noonveil, pilgrim seller, neutral, human",
+    "R1C3 = character-103-neutral.png — Varka Glasshook, harbor broker, neutral, sea-orc",
+    "R2C1 = character-103-happy.png — Varka Glasshook, harbor broker, happy, sea-orc",
+    "R2C2 = character-103-suspicious.png — Varka Glasshook, harbor broker, suspicious, sea-orc",
+    "R2C3 = character-103-worried.png — Varka Glasshook, harbor broker, worried, sea-orc",
+    "R3C1 = character-103-angry.png — Varka Glasshook, harbor broker, angry, sea-orc",
+    "R3C2 = character-104-neutral.png — Sister Caldra Waxveil, relic candle seller, neutral, moon-touched human",
+    "R3C3 = character-104-happy.png — Sister Caldra Waxveil, relic candle seller, happy, moon-touched human",
+    "R4C1 = character-104-suspicious.png — Sister Caldra Waxveil, relic candle seller, suspicious, moon-touched human",
+    "R4C2 = character-104-worried.png — Sister Caldra Waxveil, relic candle seller, worried, moon-touched human",
+    "R4C3 = character-104-angry.png — Sister Caldra Waxveil, relic candle seller, angry, moon-touched human"
   ],
   "order": [
-    "1. npc-legacy-052-neutral",
-    "2. npc-legacy-053-neutral",
-    "3. npc-legacy-054-neutral",
-    "4. npc-legacy-054-happy",
-    "5. npc-legacy-054-suspicious",
-    "6. npc-legacy-054-worried",
-    "7. npc-legacy-054-angry",
-    "8. npc-legacy-055-neutral",
-    "9. npc-legacy-055-happy",
-    "10. npc-legacy-055-suspicious",
-    "11. npc-legacy-055-worried",
-    "12. npc-legacy-055-angry"
+    "1. character-101-neutral",
+    "2. character-102-neutral",
+    "3. character-103-neutral",
+    "4. character-103-happy",
+    "5. character-103-suspicious",
+    "6. character-103-worried",
+    "7. character-103-angry",
+    "8. character-104-neutral",
+    "9. character-104-happy",
+    "10. character-104-suspicious",
+    "11. character-104-worried",
+    "12. character-104-angry"
   ],
   "images": [
     {
@@ -84,12 +84,12 @@
       "row": 1,
       "column": 1,
       "cell": "R1C1",
-      "imageId": "npc-legacy-052-neutral",
-      "characterId": "npc-legacy-052",
+      "imageId": "character-101-neutral",
+      "characterId": "character-101",
       "displayName": "Fennel Quickpurse",
       "profession": "coin washer",
       "expression": "neutral",
-      "outputFile": "npc-legacy-052-neutral.png",
+      "outputFile": "character-101-neutral.png",
       "cropCell": {
         "x": 0,
         "y": 0,
@@ -98,7 +98,7 @@
       },
       "ancestryOrSpecies": "ratfolk",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-052: thin ratfolk silhouette, tawny fur, blue vest, coin bowl, coin washer, ratfolk, coin bowl",
+      "identityAnchor": "same person as character-101: thin ratfolk silhouette, tawny fur, blue vest, coin bowl, coin washer, ratfolk, coin bowl",
       "visualTraits": [
         "thin ratfolk silhouette",
         "tawny fur",
@@ -115,7 +115,7 @@
       "globalOrder": 337,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-052-neutral.png",
+        "text": "character-101-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -128,12 +128,12 @@
       "row": 1,
       "column": 2,
       "cell": "R1C2",
-      "imageId": "npc-legacy-053-neutral",
-      "characterId": "npc-legacy-053",
+      "imageId": "character-102-neutral",
+      "characterId": "character-102",
       "displayName": "Asha Noonveil",
       "profession": "pilgrim seller",
       "expression": "neutral",
-      "outputFile": "npc-legacy-053-neutral.png",
+      "outputFile": "character-102-neutral.png",
       "cropCell": {
         "x": 1024,
         "y": 0,
@@ -144,7 +144,7 @@
       "magicalTraits": [
         "soft sun-halo charm glint"
       ],
-      "identityAnchor": "same person as npc-legacy-053: sun-browned silhouette, white veil, amber eyes, ochre robe, prayer charms, pilgrim seller, human, prayer charms",
+      "identityAnchor": "same person as character-102: sun-browned silhouette, white veil, amber eyes, ochre robe, prayer charms, pilgrim seller, human, prayer charms",
       "visualTraits": [
         "sun-browned silhouette",
         "white veil",
@@ -162,7 +162,7 @@
       "globalOrder": 338,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-053-neutral.png",
+        "text": "character-102-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -175,12 +175,12 @@
       "row": 1,
       "column": 3,
       "cell": "R1C3",
-      "imageId": "npc-legacy-054-neutral",
-      "characterId": "npc-legacy-054",
+      "imageId": "character-103-neutral",
+      "characterId": "character-103",
       "displayName": "Varka Glasshook",
       "profession": "harbor broker",
       "expression": "neutral",
-      "outputFile": "npc-legacy-054-neutral.png",
+      "outputFile": "character-103-neutral.png",
       "cropCell": {
         "x": 2048,
         "y": 0,
@@ -191,7 +191,7 @@
       "magicalTraits": [
         "faint tide-glow in shell coins"
       ],
-      "identityAnchor": "same person as npc-legacy-054: tall sea-orc silhouette, moss-green skin, pearl nose ring, shell-coin braids, dark indigo dock coat, harbor broker, sea-orc, steel cargo hook",
+      "identityAnchor": "same person as character-103: tall sea-orc silhouette, moss-green skin, pearl nose ring, shell-coin braids, dark indigo dock coat, harbor broker, sea-orc, steel cargo hook",
       "visualTraits": [
         "tall sea-orc silhouette",
         "moss-green skin",
@@ -210,7 +210,7 @@
       "globalOrder": 339,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-054-neutral.png",
+        "text": "character-103-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -223,12 +223,12 @@
       "row": 2,
       "column": 1,
       "cell": "R2C1",
-      "imageId": "npc-legacy-054-happy",
-      "characterId": "npc-legacy-054",
+      "imageId": "character-103-happy",
+      "characterId": "character-103",
       "displayName": "Varka Glasshook",
       "profession": "harbor broker",
       "expression": "happy",
-      "outputFile": "npc-legacy-054-happy.png",
+      "outputFile": "character-103-happy.png",
       "cropCell": {
         "x": 0,
         "y": 1024,
@@ -239,7 +239,7 @@
       "magicalTraits": [
         "faint tide-glow in shell coins"
       ],
-      "identityAnchor": "same person as npc-legacy-054: tall sea-orc silhouette, moss-green skin, pearl nose ring, shell-coin braids, dark indigo dock coat, harbor broker, sea-orc, steel cargo hook",
+      "identityAnchor": "same person as character-103: tall sea-orc silhouette, moss-green skin, pearl nose ring, shell-coin braids, dark indigo dock coat, harbor broker, sea-orc, steel cargo hook",
       "visualTraits": [
         "tall sea-orc silhouette",
         "moss-green skin",
@@ -258,7 +258,7 @@
       "globalOrder": 340,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-054-happy.png",
+        "text": "character-103-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -271,12 +271,12 @@
       "row": 2,
       "column": 2,
       "cell": "R2C2",
-      "imageId": "npc-legacy-054-suspicious",
-      "characterId": "npc-legacy-054",
+      "imageId": "character-103-suspicious",
+      "characterId": "character-103",
       "displayName": "Varka Glasshook",
       "profession": "harbor broker",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-054-suspicious.png",
+      "outputFile": "character-103-suspicious.png",
       "cropCell": {
         "x": 1024,
         "y": 1024,
@@ -287,7 +287,7 @@
       "magicalTraits": [
         "faint tide-glow in shell coins"
       ],
-      "identityAnchor": "same person as npc-legacy-054: tall sea-orc silhouette, moss-green skin, pearl nose ring, shell-coin braids, dark indigo dock coat, harbor broker, sea-orc, steel cargo hook",
+      "identityAnchor": "same person as character-103: tall sea-orc silhouette, moss-green skin, pearl nose ring, shell-coin braids, dark indigo dock coat, harbor broker, sea-orc, steel cargo hook",
       "visualTraits": [
         "tall sea-orc silhouette",
         "moss-green skin",
@@ -306,7 +306,7 @@
       "globalOrder": 341,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-054-suspicious.png",
+        "text": "character-103-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -319,12 +319,12 @@
       "row": 2,
       "column": 3,
       "cell": "R2C3",
-      "imageId": "npc-legacy-054-worried",
-      "characterId": "npc-legacy-054",
+      "imageId": "character-103-worried",
+      "characterId": "character-103",
       "displayName": "Varka Glasshook",
       "profession": "harbor broker",
       "expression": "worried",
-      "outputFile": "npc-legacy-054-worried.png",
+      "outputFile": "character-103-worried.png",
       "cropCell": {
         "x": 2048,
         "y": 1024,
@@ -335,7 +335,7 @@
       "magicalTraits": [
         "faint tide-glow in shell coins"
       ],
-      "identityAnchor": "same person as npc-legacy-054: tall sea-orc silhouette, moss-green skin, pearl nose ring, shell-coin braids, dark indigo dock coat, harbor broker, sea-orc, steel cargo hook",
+      "identityAnchor": "same person as character-103: tall sea-orc silhouette, moss-green skin, pearl nose ring, shell-coin braids, dark indigo dock coat, harbor broker, sea-orc, steel cargo hook",
       "visualTraits": [
         "tall sea-orc silhouette",
         "moss-green skin",
@@ -354,7 +354,7 @@
       "globalOrder": 342,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-054-worried.png",
+        "text": "character-103-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -367,12 +367,12 @@
       "row": 3,
       "column": 1,
       "cell": "R3C1",
-      "imageId": "npc-legacy-054-angry",
-      "characterId": "npc-legacy-054",
+      "imageId": "character-103-angry",
+      "characterId": "character-103",
       "displayName": "Varka Glasshook",
       "profession": "harbor broker",
       "expression": "angry",
-      "outputFile": "npc-legacy-054-angry.png",
+      "outputFile": "character-103-angry.png",
       "cropCell": {
         "x": 0,
         "y": 2048,
@@ -383,7 +383,7 @@
       "magicalTraits": [
         "faint tide-glow in shell coins"
       ],
-      "identityAnchor": "same person as npc-legacy-054: tall sea-orc silhouette, moss-green skin, pearl nose ring, shell-coin braids, dark indigo dock coat, harbor broker, sea-orc, steel cargo hook",
+      "identityAnchor": "same person as character-103: tall sea-orc silhouette, moss-green skin, pearl nose ring, shell-coin braids, dark indigo dock coat, harbor broker, sea-orc, steel cargo hook",
       "visualTraits": [
         "tall sea-orc silhouette",
         "moss-green skin",
@@ -402,7 +402,7 @@
       "globalOrder": 343,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-054-angry.png",
+        "text": "character-103-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -415,12 +415,12 @@
       "row": 3,
       "column": 2,
       "cell": "R3C2",
-      "imageId": "npc-legacy-055-neutral",
-      "characterId": "npc-legacy-055",
+      "imageId": "character-104-neutral",
+      "characterId": "character-104",
       "displayName": "Sister Caldra Waxveil",
       "profession": "relic candle seller",
       "expression": "neutral",
-      "outputFile": "npc-legacy-055-neutral.png",
+      "outputFile": "character-104-neutral.png",
       "cropCell": {
         "x": 1024,
         "y": 2048,
@@ -432,7 +432,7 @@
         "soft silver crescent mark on brow",
         "tiny candlelight motes"
       ],
-      "identityAnchor": "same person as npc-legacy-055: serene moon-touched silhouette, bronze skin, silver lashes, pale candle eyes, ivory veil, relic candle seller, moon-touched human, glowing votive tray",
+      "identityAnchor": "same person as character-104: serene moon-touched silhouette, bronze skin, silver lashes, pale candle eyes, ivory veil, relic candle seller, moon-touched human, glowing votive tray",
       "visualTraits": [
         "serene moon-touched silhouette",
         "bronze skin",
@@ -451,7 +451,7 @@
       "globalOrder": 344,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-055-neutral.png",
+        "text": "character-104-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -464,12 +464,12 @@
       "row": 3,
       "column": 3,
       "cell": "R3C3",
-      "imageId": "npc-legacy-055-happy",
-      "characterId": "npc-legacy-055",
+      "imageId": "character-104-happy",
+      "characterId": "character-104",
       "displayName": "Sister Caldra Waxveil",
       "profession": "relic candle seller",
       "expression": "happy",
-      "outputFile": "npc-legacy-055-happy.png",
+      "outputFile": "character-104-happy.png",
       "cropCell": {
         "x": 2048,
         "y": 2048,
@@ -481,7 +481,7 @@
         "soft silver crescent mark on brow",
         "tiny candlelight motes"
       ],
-      "identityAnchor": "same person as npc-legacy-055: serene moon-touched silhouette, bronze skin, silver lashes, pale candle eyes, ivory veil, relic candle seller, moon-touched human, glowing votive tray",
+      "identityAnchor": "same person as character-104: serene moon-touched silhouette, bronze skin, silver lashes, pale candle eyes, ivory veil, relic candle seller, moon-touched human, glowing votive tray",
       "visualTraits": [
         "serene moon-touched silhouette",
         "bronze skin",
@@ -500,7 +500,7 @@
       "globalOrder": 345,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-055-happy.png",
+        "text": "character-104-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -513,12 +513,12 @@
       "row": 4,
       "column": 1,
       "cell": "R4C1",
-      "imageId": "npc-legacy-055-suspicious",
-      "characterId": "npc-legacy-055",
+      "imageId": "character-104-suspicious",
+      "characterId": "character-104",
       "displayName": "Sister Caldra Waxveil",
       "profession": "relic candle seller",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-055-suspicious.png",
+      "outputFile": "character-104-suspicious.png",
       "cropCell": {
         "x": 0,
         "y": 3072,
@@ -530,7 +530,7 @@
         "soft silver crescent mark on brow",
         "tiny candlelight motes"
       ],
-      "identityAnchor": "same person as npc-legacy-055: serene moon-touched silhouette, bronze skin, silver lashes, pale candle eyes, ivory veil, relic candle seller, moon-touched human, glowing votive tray",
+      "identityAnchor": "same person as character-104: serene moon-touched silhouette, bronze skin, silver lashes, pale candle eyes, ivory veil, relic candle seller, moon-touched human, glowing votive tray",
       "visualTraits": [
         "serene moon-touched silhouette",
         "bronze skin",
@@ -549,7 +549,7 @@
       "globalOrder": 346,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-055-suspicious.png",
+        "text": "character-104-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -562,12 +562,12 @@
       "row": 4,
       "column": 2,
       "cell": "R4C2",
-      "imageId": "npc-legacy-055-worried",
-      "characterId": "npc-legacy-055",
+      "imageId": "character-104-worried",
+      "characterId": "character-104",
       "displayName": "Sister Caldra Waxveil",
       "profession": "relic candle seller",
       "expression": "worried",
-      "outputFile": "npc-legacy-055-worried.png",
+      "outputFile": "character-104-worried.png",
       "cropCell": {
         "x": 1024,
         "y": 3072,
@@ -579,7 +579,7 @@
         "soft silver crescent mark on brow",
         "tiny candlelight motes"
       ],
-      "identityAnchor": "same person as npc-legacy-055: serene moon-touched silhouette, bronze skin, silver lashes, pale candle eyes, ivory veil, relic candle seller, moon-touched human, glowing votive tray",
+      "identityAnchor": "same person as character-104: serene moon-touched silhouette, bronze skin, silver lashes, pale candle eyes, ivory veil, relic candle seller, moon-touched human, glowing votive tray",
       "visualTraits": [
         "serene moon-touched silhouette",
         "bronze skin",
@@ -598,7 +598,7 @@
       "globalOrder": 347,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-055-worried.png",
+        "text": "character-104-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -611,12 +611,12 @@
       "row": 4,
       "column": 3,
       "cell": "R4C3",
-      "imageId": "npc-legacy-055-angry",
-      "characterId": "npc-legacy-055",
+      "imageId": "character-104-angry",
+      "characterId": "character-104",
       "displayName": "Sister Caldra Waxveil",
       "profession": "relic candle seller",
       "expression": "angry",
-      "outputFile": "npc-legacy-055-angry.png",
+      "outputFile": "character-104-angry.png",
       "cropCell": {
         "x": 2048,
         "y": 3072,
@@ -628,7 +628,7 @@
         "soft silver crescent mark on brow",
         "tiny candlelight motes"
       ],
-      "identityAnchor": "same person as npc-legacy-055: serene moon-touched silhouette, bronze skin, silver lashes, pale candle eyes, ivory veil, relic candle seller, moon-touched human, glowing votive tray",
+      "identityAnchor": "same person as character-104: serene moon-touched silhouette, bronze skin, silver lashes, pale candle eyes, ivory veil, relic candle seller, moon-touched human, glowing votive tray",
       "visualTraits": [
         "serene moon-touched silhouette",
         "bronze skin",
@@ -647,7 +647,7 @@
       "globalOrder": 348,
       "batchId": "characters-0337-0348",
       "filenameLabel": {
-        "text": "npc-legacy-055-angry.png",
+        "text": "character-104-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",

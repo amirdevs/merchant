@@ -51,32 +51,32 @@
   "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified. Put a small readable filename label in the bottom-left corner of each cell. The label text must exactly match that entry outputFile, use pure magenta #FF00FF, simple bold readable font, no outline, no shadow, no glow, no gradient. Keep the label fully separated from the character art on empty green #00FF00 with a clear safety gap.",
   "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
   "sheetOrderLock": [
-    "R1C1 = npc-new-018-happy.png — Corvin Sailstamp, Shipment Broker, happy, sea-elf",
-    "R1C2 = npc-new-018-suspicious.png — Corvin Sailstamp, Shipment Broker, suspicious, sea-elf",
-    "R1C3 = npc-new-018-worried.png — Corvin Sailstamp, Shipment Broker, worried, sea-elf",
-    "R2C1 = npc-new-018-angry.png — Corvin Sailstamp, Shipment Broker, angry, sea-elf",
-    "R2C2 = npc-new-019-neutral.png — Idra Sumbright, Company Accountant, neutral, clockwork-touched gnome",
-    "R2C3 = npc-new-019-happy.png — Idra Sumbright, Company Accountant, happy, clockwork-touched gnome",
-    "R3C1 = npc-new-019-suspicious.png — Idra Sumbright, Company Accountant, suspicious, clockwork-touched gnome",
-    "R3C2 = npc-new-019-worried.png — Idra Sumbright, Company Accountant, worried, clockwork-touched gnome",
-    "R3C3 = npc-new-019-angry.png — Idra Sumbright, Company Accountant, angry, clockwork-touched gnome",
-    "R4C1 = npc-new-020-neutral.png — Lord Pavren Duskmere, Investor, neutral, human noble",
-    "R4C2 = npc-new-020-happy.png — Lord Pavren Duskmere, Investor, happy, human noble",
-    "R4C3 = npc-new-020-suspicious.png — Lord Pavren Duskmere, Investor, suspicious, human noble"
+    "R1C1 = character-018-happy.png — Corvin Sailstamp, Shipment Broker, happy, sea-elf",
+    "R1C2 = character-018-suspicious.png — Corvin Sailstamp, Shipment Broker, suspicious, sea-elf",
+    "R1C3 = character-018-worried.png — Corvin Sailstamp, Shipment Broker, worried, sea-elf",
+    "R2C1 = character-018-angry.png — Corvin Sailstamp, Shipment Broker, angry, sea-elf",
+    "R2C2 = character-019-neutral.png — Idra Sumbright, Company Accountant, neutral, clockwork-touched gnome",
+    "R2C3 = character-019-happy.png — Idra Sumbright, Company Accountant, happy, clockwork-touched gnome",
+    "R3C1 = character-019-suspicious.png — Idra Sumbright, Company Accountant, suspicious, clockwork-touched gnome",
+    "R3C2 = character-019-worried.png — Idra Sumbright, Company Accountant, worried, clockwork-touched gnome",
+    "R3C3 = character-019-angry.png — Idra Sumbright, Company Accountant, angry, clockwork-touched gnome",
+    "R4C1 = character-020-neutral.png — Lord Pavren Duskmere, Investor, neutral, human noble",
+    "R4C2 = character-020-happy.png — Lord Pavren Duskmere, Investor, happy, human noble",
+    "R4C3 = character-020-suspicious.png — Lord Pavren Duskmere, Investor, suspicious, human noble"
   ],
   "order": [
-    "1. npc-new-018-happy",
-    "2. npc-new-018-suspicious",
-    "3. npc-new-018-worried",
-    "4. npc-new-018-angry",
-    "5. npc-new-019-neutral",
-    "6. npc-new-019-happy",
-    "7. npc-new-019-suspicious",
-    "8. npc-new-019-worried",
-    "9. npc-new-019-angry",
-    "10. npc-new-020-neutral",
-    "11. npc-new-020-happy",
-    "12. npc-new-020-suspicious"
+    "1. character-018-happy",
+    "2. character-018-suspicious",
+    "3. character-018-worried",
+    "4. character-018-angry",
+    "5. character-019-neutral",
+    "6. character-019-happy",
+    "7. character-019-suspicious",
+    "8. character-019-worried",
+    "9. character-019-angry",
+    "10. character-020-neutral",
+    "11. character-020-happy",
+    "12. character-020-suspicious"
   ],
   "images": [
     {
@@ -85,18 +85,18 @@
       "row": 1,
       "column": 1,
       "cell": "R1C1",
-      "imageId": "npc-new-018-happy",
-      "characterId": "npc-new-018",
+      "imageId": "character-018-happy",
+      "characterId": "character-018",
       "displayName": "Corvin Sailstamp",
       "profession": "Shipment Broker",
       "expression": "happy",
-      "outputFile": "npc-new-018-happy.png",
+      "outputFile": "character-018-happy.png",
       "ancestryOrSpecies": "sea-elf",
       "magicalTraits": [
         "sea-glass eyes",
         "wet pearl accents"
       ],
-      "identityAnchor": "same person as npc-new-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile",
+      "identityAnchor": "same person as character-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile",
       "visualTraits": [
         "slender polished silhouette",
         "light olive skin",
@@ -116,7 +116,7 @@
         "brass",
         "cream"
       ],
-      "prompt": "A slender polished shipment broker with light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube tucked under one arm, and a smile that turns delays into invoices. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: sea-elf. Visible magical traits that must remain consistent: sea-glass eyes, wet pearl accents. Identity anchors must remain unchanged: same person as npc-new-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A slender polished shipment broker with light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube tucked under one arm, and a smile that turns delays into invoices. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: sea-elf. Visible magical traits that must remain consistent: sea-glass eyes, wet pearl accents. Identity anchors must remain unchanged: same person as character-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -126,7 +126,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-018-happy.png",
+        "text": "character-018-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -140,18 +140,18 @@
       "row": 1,
       "column": 2,
       "cell": "R1C2",
-      "imageId": "npc-new-018-suspicious",
-      "characterId": "npc-new-018",
+      "imageId": "character-018-suspicious",
+      "characterId": "character-018",
       "displayName": "Corvin Sailstamp",
       "profession": "Shipment Broker",
       "expression": "suspicious",
-      "outputFile": "npc-new-018-suspicious.png",
+      "outputFile": "character-018-suspicious.png",
       "ancestryOrSpecies": "sea-elf",
       "magicalTraits": [
         "sea-glass eyes",
         "wet pearl accents"
       ],
-      "identityAnchor": "same person as npc-new-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile",
+      "identityAnchor": "same person as character-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile",
       "visualTraits": [
         "slender polished silhouette",
         "light olive skin",
@@ -171,7 +171,7 @@
         "brass",
         "cream"
       ],
-      "prompt": "A slender polished shipment broker with light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube tucked under one arm, and a smile that turns delays into invoices. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: sea-elf. Visible magical traits that must remain consistent: sea-glass eyes, wet pearl accents. Identity anchors must remain unchanged: same person as npc-new-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A slender polished shipment broker with light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube tucked under one arm, and a smile that turns delays into invoices. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: sea-elf. Visible magical traits that must remain consistent: sea-glass eyes, wet pearl accents. Identity anchors must remain unchanged: same person as character-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -181,7 +181,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-018-suspicious.png",
+        "text": "character-018-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -195,18 +195,18 @@
       "row": 1,
       "column": 3,
       "cell": "R1C3",
-      "imageId": "npc-new-018-worried",
-      "characterId": "npc-new-018",
+      "imageId": "character-018-worried",
+      "characterId": "character-018",
       "displayName": "Corvin Sailstamp",
       "profession": "Shipment Broker",
       "expression": "worried",
-      "outputFile": "npc-new-018-worried.png",
+      "outputFile": "character-018-worried.png",
       "ancestryOrSpecies": "sea-elf",
       "magicalTraits": [
         "sea-glass eyes",
         "wet pearl accents"
       ],
-      "identityAnchor": "same person as npc-new-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile",
+      "identityAnchor": "same person as character-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile",
       "visualTraits": [
         "slender polished silhouette",
         "light olive skin",
@@ -226,7 +226,7 @@
         "brass",
         "cream"
       ],
-      "prompt": "A slender polished shipment broker with light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube tucked under one arm, and a smile that turns delays into invoices. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: sea-elf. Visible magical traits that must remain consistent: sea-glass eyes, wet pearl accents. Identity anchors must remain unchanged: same person as npc-new-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A slender polished shipment broker with light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube tucked under one arm, and a smile that turns delays into invoices. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: sea-elf. Visible magical traits that must remain consistent: sea-glass eyes, wet pearl accents. Identity anchors must remain unchanged: same person as character-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -236,7 +236,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-018-worried.png",
+        "text": "character-018-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -250,18 +250,18 @@
       "row": 2,
       "column": 1,
       "cell": "R2C1",
-      "imageId": "npc-new-018-angry",
-      "characterId": "npc-new-018",
+      "imageId": "character-018-angry",
+      "characterId": "character-018",
       "displayName": "Corvin Sailstamp",
       "profession": "Shipment Broker",
       "expression": "angry",
-      "outputFile": "npc-new-018-angry.png",
+      "outputFile": "character-018-angry.png",
       "ancestryOrSpecies": "sea-elf",
       "magicalTraits": [
         "sea-glass eyes",
         "wet pearl accents"
       ],
-      "identityAnchor": "same person as npc-new-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile",
+      "identityAnchor": "same person as character-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile",
       "visualTraits": [
         "slender polished silhouette",
         "light olive skin",
@@ -281,7 +281,7 @@
         "brass",
         "cream"
       ],
-      "prompt": "A slender polished shipment broker with light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube tucked under one arm, and a smile that turns delays into invoices. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: sea-elf. Visible magical traits that must remain consistent: sea-glass eyes, wet pearl accents. Identity anchors must remain unchanged: same person as npc-new-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A slender polished shipment broker with light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube tucked under one arm, and a smile that turns delays into invoices. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: sea-elf. Visible magical traits that must remain consistent: sea-glass eyes, wet pearl accents. Identity anchors must remain unchanged: same person as character-018: slender shipment broker, light olive skin, swept black hair, teal silk cravat, brass cuff seals, contract tube, confident calculating smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -291,7 +291,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-018-angry.png",
+        "text": "character-018-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -305,18 +305,18 @@
       "row": 2,
       "column": 2,
       "cell": "R2C2",
-      "imageId": "npc-new-019-neutral",
-      "characterId": "npc-new-019",
+      "imageId": "character-019-neutral",
+      "characterId": "character-019",
       "displayName": "Idra Sumbright",
       "profession": "Company Accountant",
       "expression": "neutral",
-      "outputFile": "npc-new-019-neutral.png",
+      "outputFile": "character-019-neutral.png",
       "ancestryOrSpecies": "clockwork-touched gnome",
       "magicalTraits": [
         "tiny clockwork ear cuff",
         "brass timepiece glow"
       ],
-      "identityAnchor": "same person as npc-new-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare",
+      "identityAnchor": "same person as character-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare",
       "visualTraits": [
         "small sharp-eyed silhouette",
         "elder",
@@ -336,7 +336,7 @@
         "silver",
         "red ink"
       ],
-      "prompt": "A small elderly accountant with pale olive skin, sharp black eyes, silver hair in a tight bun, ink-black robe, polished abacus beads, and a red correction brush held like a judge's gavel. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: clockwork-touched gnome. Visible magical traits that must remain consistent: tiny clockwork ear cuff, brass timepiece glow. Identity anchors must remain unchanged: same person as npc-new-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A small elderly accountant with pale olive skin, sharp black eyes, silver hair in a tight bun, ink-black robe, polished abacus beads, and a red correction brush held like a judge's gavel. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: clockwork-touched gnome. Visible magical traits that must remain consistent: tiny clockwork ear cuff, brass timepiece glow. Identity anchors must remain unchanged: same person as character-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -346,7 +346,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-019-neutral.png",
+        "text": "character-019-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -360,18 +360,18 @@
       "row": 2,
       "column": 3,
       "cell": "R2C3",
-      "imageId": "npc-new-019-happy",
-      "characterId": "npc-new-019",
+      "imageId": "character-019-happy",
+      "characterId": "character-019",
       "displayName": "Idra Sumbright",
       "profession": "Company Accountant",
       "expression": "happy",
-      "outputFile": "npc-new-019-happy.png",
+      "outputFile": "character-019-happy.png",
       "ancestryOrSpecies": "clockwork-touched gnome",
       "magicalTraits": [
         "tiny clockwork ear cuff",
         "brass timepiece glow"
       ],
-      "identityAnchor": "same person as npc-new-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare",
+      "identityAnchor": "same person as character-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare",
       "visualTraits": [
         "small sharp-eyed silhouette",
         "elder",
@@ -391,7 +391,7 @@
         "silver",
         "red ink"
       ],
-      "prompt": "A small elderly accountant with pale olive skin, sharp black eyes, silver hair in a tight bun, ink-black robe, polished abacus beads, and a red correction brush held like a judge's gavel. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: clockwork-touched gnome. Visible magical traits that must remain consistent: tiny clockwork ear cuff, brass timepiece glow. Identity anchors must remain unchanged: same person as npc-new-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A small elderly accountant with pale olive skin, sharp black eyes, silver hair in a tight bun, ink-black robe, polished abacus beads, and a red correction brush held like a judge's gavel. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: clockwork-touched gnome. Visible magical traits that must remain consistent: tiny clockwork ear cuff, brass timepiece glow. Identity anchors must remain unchanged: same person as character-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -401,7 +401,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-019-happy.png",
+        "text": "character-019-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -415,18 +415,18 @@
       "row": 3,
       "column": 1,
       "cell": "R3C1",
-      "imageId": "npc-new-019-suspicious",
-      "characterId": "npc-new-019",
+      "imageId": "character-019-suspicious",
+      "characterId": "character-019",
       "displayName": "Idra Sumbright",
       "profession": "Company Accountant",
       "expression": "suspicious",
-      "outputFile": "npc-new-019-suspicious.png",
+      "outputFile": "character-019-suspicious.png",
       "ancestryOrSpecies": "clockwork-touched gnome",
       "magicalTraits": [
         "tiny clockwork ear cuff",
         "brass timepiece glow"
       ],
-      "identityAnchor": "same person as npc-new-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare",
+      "identityAnchor": "same person as character-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare",
       "visualTraits": [
         "small sharp-eyed silhouette",
         "elder",
@@ -446,7 +446,7 @@
         "silver",
         "red ink"
       ],
-      "prompt": "A small elderly accountant with pale olive skin, sharp black eyes, silver hair in a tight bun, ink-black robe, polished abacus beads, and a red correction brush held like a judge's gavel. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: clockwork-touched gnome. Visible magical traits that must remain consistent: tiny clockwork ear cuff, brass timepiece glow. Identity anchors must remain unchanged: same person as npc-new-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A small elderly accountant with pale olive skin, sharp black eyes, silver hair in a tight bun, ink-black robe, polished abacus beads, and a red correction brush held like a judge's gavel. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: clockwork-touched gnome. Visible magical traits that must remain consistent: tiny clockwork ear cuff, brass timepiece glow. Identity anchors must remain unchanged: same person as character-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -456,7 +456,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-019-suspicious.png",
+        "text": "character-019-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -470,18 +470,18 @@
       "row": 3,
       "column": 2,
       "cell": "R3C2",
-      "imageId": "npc-new-019-worried",
-      "characterId": "npc-new-019",
+      "imageId": "character-019-worried",
+      "characterId": "character-019",
       "displayName": "Idra Sumbright",
       "profession": "Company Accountant",
       "expression": "worried",
-      "outputFile": "npc-new-019-worried.png",
+      "outputFile": "character-019-worried.png",
       "ancestryOrSpecies": "clockwork-touched gnome",
       "magicalTraits": [
         "tiny clockwork ear cuff",
         "brass timepiece glow"
       ],
-      "identityAnchor": "same person as npc-new-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare",
+      "identityAnchor": "same person as character-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare",
       "visualTraits": [
         "small sharp-eyed silhouette",
         "elder",
@@ -501,7 +501,7 @@
         "silver",
         "red ink"
       ],
-      "prompt": "A small elderly accountant with pale olive skin, sharp black eyes, silver hair in a tight bun, ink-black robe, polished abacus beads, and a red correction brush held like a judge's gavel. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: clockwork-touched gnome. Visible magical traits that must remain consistent: tiny clockwork ear cuff, brass timepiece glow. Identity anchors must remain unchanged: same person as npc-new-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A small elderly accountant with pale olive skin, sharp black eyes, silver hair in a tight bun, ink-black robe, polished abacus beads, and a red correction brush held like a judge's gavel. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: clockwork-touched gnome. Visible magical traits that must remain consistent: tiny clockwork ear cuff, brass timepiece glow. Identity anchors must remain unchanged: same person as character-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -511,7 +511,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-019-worried.png",
+        "text": "character-019-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -525,18 +525,18 @@
       "row": 3,
       "column": 3,
       "cell": "R3C3",
-      "imageId": "npc-new-019-angry",
-      "characterId": "npc-new-019",
+      "imageId": "character-019-angry",
+      "characterId": "character-019",
       "displayName": "Idra Sumbright",
       "profession": "Company Accountant",
       "expression": "angry",
-      "outputFile": "npc-new-019-angry.png",
+      "outputFile": "character-019-angry.png",
       "ancestryOrSpecies": "clockwork-touched gnome",
       "magicalTraits": [
         "tiny clockwork ear cuff",
         "brass timepiece glow"
       ],
-      "identityAnchor": "same person as npc-new-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare",
+      "identityAnchor": "same person as character-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare",
       "visualTraits": [
         "small sharp-eyed silhouette",
         "elder",
@@ -556,7 +556,7 @@
         "silver",
         "red ink"
       ],
-      "prompt": "A small elderly accountant with pale olive skin, sharp black eyes, silver hair in a tight bun, ink-black robe, polished abacus beads, and a red correction brush held like a judge's gavel. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: clockwork-touched gnome. Visible magical traits that must remain consistent: tiny clockwork ear cuff, brass timepiece glow. Identity anchors must remain unchanged: same person as npc-new-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A small elderly accountant with pale olive skin, sharp black eyes, silver hair in a tight bun, ink-black robe, polished abacus beads, and a red correction brush held like a judge's gavel. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: clockwork-touched gnome. Visible magical traits that must remain consistent: tiny clockwork ear cuff, brass timepiece glow. Identity anchors must remain unchanged: same person as character-019: small sharp-eyed company accountant, pale olive skin, silver hair in tight bun, black robe, polished abacus beads, red correction brush, severe truth-counting stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -566,7 +566,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-019-angry.png",
+        "text": "character-019-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -580,15 +580,15 @@
       "row": 4,
       "column": 1,
       "cell": "R4C1",
-      "imageId": "npc-new-020-neutral",
-      "characterId": "npc-new-020",
+      "imageId": "character-020-neutral",
+      "characterId": "character-020",
       "displayName": "Lord Pavren Duskmere",
       "profession": "Investor",
       "expression": "neutral",
-      "outputFile": "npc-new-020-neutral.png",
+      "outputFile": "character-020-neutral.png",
       "ancestryOrSpecies": "human noble",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture",
+      "identityAnchor": "same person as character-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture",
       "visualTraits": [
         "tall soft-handed silhouette",
         "pale skin",
@@ -608,7 +608,7 @@
         "pearl",
         "black"
       ],
-      "prompt": "A tall soft-handed noble with pale skin, powdered dark hair, plum velvet coat, pearl buttons, velvet gloves, and a lazy smile that never reaches his eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: human noble. Identity anchors must remain unchanged: same person as npc-new-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A tall soft-handed noble with pale skin, powdered dark hair, plum velvet coat, pearl buttons, velvet gloves, and a lazy smile that never reaches his eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: human noble. Identity anchors must remain unchanged: same person as character-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 0,
@@ -618,7 +618,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-020-neutral.png",
+        "text": "character-020-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -632,15 +632,15 @@
       "row": 4,
       "column": 2,
       "cell": "R4C2",
-      "imageId": "npc-new-020-happy",
-      "characterId": "npc-new-020",
+      "imageId": "character-020-happy",
+      "characterId": "character-020",
       "displayName": "Lord Pavren Duskmere",
       "profession": "Investor",
       "expression": "happy",
-      "outputFile": "npc-new-020-happy.png",
+      "outputFile": "character-020-happy.png",
       "ancestryOrSpecies": "human noble",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture",
+      "identityAnchor": "same person as character-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture",
       "visualTraits": [
         "tall soft-handed silhouette",
         "pale skin",
@@ -660,7 +660,7 @@
         "pearl",
         "black"
       ],
-      "prompt": "A tall soft-handed noble with pale skin, powdered dark hair, plum velvet coat, pearl buttons, velvet gloves, and a lazy smile that never reaches his eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: human noble. Identity anchors must remain unchanged: same person as npc-new-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A tall soft-handed noble with pale skin, powdered dark hair, plum velvet coat, pearl buttons, velvet gloves, and a lazy smile that never reaches his eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: human noble. Identity anchors must remain unchanged: same person as character-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 1024,
@@ -670,7 +670,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-020-happy.png",
+        "text": "character-020-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -684,15 +684,15 @@
       "row": 4,
       "column": 3,
       "cell": "R4C3",
-      "imageId": "npc-new-020-suspicious",
-      "characterId": "npc-new-020",
+      "imageId": "character-020-suspicious",
+      "characterId": "character-020",
       "displayName": "Lord Pavren Duskmere",
       "profession": "Investor",
       "expression": "suspicious",
-      "outputFile": "npc-new-020-suspicious.png",
+      "outputFile": "character-020-suspicious.png",
       "ancestryOrSpecies": "human noble",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture",
+      "identityAnchor": "same person as character-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture",
       "visualTraits": [
         "tall soft-handed silhouette",
         "pale skin",
@@ -712,7 +712,7 @@
         "pearl",
         "black"
       ],
-      "prompt": "A tall soft-handed noble with pale skin, powdered dark hair, plum velvet coat, pearl buttons, velvet gloves, and a lazy smile that never reaches his eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: human noble. Identity anchors must remain unchanged: same person as npc-new-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A tall soft-handed noble with pale skin, powdered dark hair, plum velvet coat, pearl buttons, velvet gloves, and a lazy smile that never reaches his eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: human noble. Identity anchors must remain unchanged: same person as character-020: tall soft-handed noble investor, pale skin, powdered dark hair, plum velvet coat, pearl buttons, lazy cold smile, aristocratic posture. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no letters except the required outputFile filename label, no numbers except numbers that appear inside the required outputFile filename label, no watermark, no UI frame, no visible border, no visible grid lines, no colored cell panels, no cropped head, no cropped shoulders, no cropped hands, no cropped props, no prop touching edge, no extra limbs, no full-body scene, no photorealism, no anime, no modern clothes, no sci-fi, no gritty realism, no boring plain medieval worker, no generic identical NPC face, no duplicate faces across different characters, no busy background, no gradient background",
       "cropCell": {
         "x": 2048,
@@ -722,7 +722,7 @@
       },
       "batchId": "characters-0073-0084",
       "filenameLabel": {
-        "text": "npc-new-020-suspicious.png",
+        "text": "character-020-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",

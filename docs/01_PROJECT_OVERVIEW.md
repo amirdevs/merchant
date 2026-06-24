@@ -1,6 +1,6 @@
 # 01 - Project Overview
 
-Merchant is an offline React/Vite remake prototype inspired by Merchant of the Six Kingdoms.
+Merchant is an offline React/Vite fantasy trading game prototype.
 
 The project uses extracted original data as a reference layer, but the current goal is to build a cleaner local-only trading game with new systems, item naming, stock logic, UI, and generated item art.
 

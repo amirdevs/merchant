@@ -3,7 +3,7 @@ import type { CharacterQuestline } from "./questTypes";
 export const characterQuestlines: CharacterQuestline[] = [
   {
     id: "questline-mara-night-baker",
-    npcId: "npc-new-010",
+    npcId: "character-010",
     npcName: "Mara the Night Baker",
     theme: "Food, pride, worker trust, and whether help becomes dependency.",
     summary: "Mara's arc follows a bakery that feeds working people at night. The player can make her an independent supplier, a loyal company partner, a cautious ally, or a critic who remembers being exploited.",
@@ -17,7 +17,7 @@ export const characterQuestlines: CharacterQuestline[] = [
   },
   {
     id: "questline-ivor-route-scout",
-    npcId: "npc-new-021",
+    npcId: "character-021",
     npcName: "Ivor the Route Scout",
     theme: "Road truth, risk, and the price of safe passage.",
     summary: "Ivor knows which roads are safe and which are only called safe because someone profits from silence. His trust can unlock route previews, but using him carelessly puts scouts in danger.",
@@ -30,7 +30,7 @@ export const characterQuestlines: CharacterQuestline[] = [
   },
   {
     id: "questline-sable-auction-clerk",
-    npcId: "npc-new-030",
+    npcId: "character-030",
     npcName: "Sable of the Auction House",
     theme: "Inside information, debt, and auction trust.",
     summary: "Sable can open the auction system to the player, but her family debt creates pressure to bend the rules. Her path decides whether auctions become fair opportunity or quiet corruption.",
@@ -43,7 +43,7 @@ export const characterQuestlines: CharacterQuestline[] = [
   },
   {
     id: "questline-orren-weighmaster",
-    npcId: "npc-new-028",
+    npcId: "character-028",
     npcName: "Orren the Weighmaster",
     theme: "Standards, shame, and official cheating.",
     summary: "Orren works inside a dishonest weighhouse. The player can make him a whistleblower, a private asset, or an enemy who protects manipulated scales.",
@@ -56,7 +56,7 @@ export const characterQuestlines: CharacterQuestline[] = [
   },
   {
     id: "questline-vela-ledger-copyist",
-    npcId: "npc-new-014",
+    npcId: "character-014",
     npcName: "Vela the Ledger Copyist",
     theme: "Records, fear, and whether truth should be public.",
     summary: "Vela copies records for people powerful enough to rewrite them. Her arc feeds the main ledger mystery and can decide whether evidence becomes public trust or private control.",
@@ -69,7 +69,7 @@ export const characterQuestlines: CharacterQuestline[] = [
   },
   {
     id: "questline-tamsin-warehouse-keeper",
-    npcId: "npc-new-036",
+    npcId: "character-036",
     npcName: "Tamsin the Warehouse Keeper",
     theme: "Storage, custody, and what disappears behind locked doors.",
     summary: "Tamsin controls storage access and knows how goods vanish. Her trust can unlock warehouse systems; her fear can hide fires, thefts, and false insurance.",
@@ -82,7 +82,7 @@ export const characterQuestlines: CharacterQuestline[] = [
   },
   {
     id: "questline-maelis-dye-master",
-    npcId: "npc-new-011",
+    npcId: "character-011",
     npcName: "Maelis the Dye Master",
     theme: "Craft pride, color scarcity, and festival pressure.",
     summary: "Maelis' dye-house gives the game a craft supplier whose relationship can produce special goods, festival contracts, and guild conflicts over quality.",
@@ -95,7 +95,7 @@ export const characterQuestlines: CharacterQuestline[] = [
   },
   {
     id: "questline-brann-counting-house",
-    npcId: "npc-new-016",
+    npcId: "character-016",
     npcName: "Brann of the Counting House",
     theme: "Credit, hidden theft, and institutional trust.",
     summary: "Brann's arc determines whether the player gains credit tools through honest banking, private leverage, or compromised silence.",
@@ -108,7 +108,7 @@ export const characterQuestlines: CharacterQuestline[] = [
   },
   {
     id: "questline-nessa-fishmonger",
-    npcId: "npc-new-038",
+    npcId: "character-038",
     npcName: "Nessa the Fishmonger",
     theme: "Perishable goods, silence, and reputation at the docks.",
     summary: "Nessa's fish trade turns freshness, rumor, intimidation, and dock politics into a relationship line that can affect harbor supply.",
@@ -121,7 +121,7 @@ export const characterQuestlines: CharacterQuestline[] = [
   },
   {
     id: "questline-cassian-rival-merchant",
-    npcId: "npc-new-041",
+    npcId: "character-041",
     npcName: "Cassian the Rival Merchant",
     theme: "Respect, competition, and whether rivalry becomes hatred or alliance.",
     summary: "Cassian is not just an enemy. He tests whether the player wins through better trade, better ethics, better manipulation, or ruthless control.",

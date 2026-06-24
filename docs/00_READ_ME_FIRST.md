@@ -7,7 +7,7 @@ This is the first doc to read.
 1. `00_READ_ME_FIRST.md` - rules, reading path, and what is current vs log-only.
 2. `01_PROJECT_OVERVIEW.md` - what the project is and current scope.
 3. `02_DEVELOPMENT_SETUP.md` - commands, scripts, validation, and repo hygiene.
-4. `03_GAME_LOGIC_AND_ROADMAP.md` - implemented game logic, playable UI roadmap, character rework plan, portrait gates, quest overhaul gates, and vertical-slice milestones.
+4. `03_GAME_LOGIC_AND_ROADMAP.md` - implemented game logic, playable UI roadmap, character profile plan, portrait gates, quest overhaul gates, and vertical-slice milestones.
 5. `04_TRADING_AND_STOCK.md` - NPC stock, generated-data bias, barter, Ask Price, Ask Offer.
 6. `05_ITEMS_AND_ICONS.md` - item catalog, icon pipeline, and item-art lock rules.
 7. `06_ECONOMY_AND_TRAVEL.md` - money, capacity, travel, risk, market loop.

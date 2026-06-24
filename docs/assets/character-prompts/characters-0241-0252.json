@@ -51,32 +51,32 @@
   "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified. Put a small readable filename label in the bottom-left corner of each cell. The label text must exactly match that entry outputFile, use pure magenta #FF00FF, simple bold readable font, no outline, no shadow, no glow, no gradient. Keep the label fully separated from the character art on empty green #00FF00 with a clear safety gap.",
   "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
   "sheetOrderLock": [
-    "R1C1 = npc-legacy-011-happy.png — Kellan Sootwink, chimney sweep, happy, human",
-    "R1C2 = npc-legacy-011-suspicious.png — Kellan Sootwink, chimney sweep, suspicious, human",
-    "R1C3 = npc-legacy-012-neutral.png — Dalla Reefsong, pearl trader, neutral, merfolk-blooded human",
-    "R2C1 = npc-legacy-012-happy.png — Dalla Reefsong, pearl trader, happy, merfolk-blooded human",
-    "R2C2 = npc-legacy-012-suspicious.png — Dalla Reefsong, pearl trader, suspicious, merfolk-blooded human",
-    "R2C3 = npc-legacy-013-neutral.png — Hobb Ashbarrel, charcoal burner, neutral, dwarf",
-    "R3C1 = npc-legacy-013-happy.png — Hobb Ashbarrel, charcoal burner, happy, dwarf",
-    "R3C2 = npc-legacy-013-suspicious.png — Hobb Ashbarrel, charcoal burner, suspicious, dwarf",
-    "R3C3 = npc-legacy-014-neutral.png — Rima Glasslark, glass seller, neutral, human",
-    "R4C1 = npc-legacy-014-happy.png — Rima Glasslark, glass seller, happy, human",
-    "R4C2 = npc-legacy-014-suspicious.png — Rima Glasslark, glass seller, suspicious, human",
-    "R4C3 = npc-legacy-015-neutral.png — Orvik Bellows, tinker, neutral, goblin"
+    "R1C1 = character-060-happy.png — Kellan Sootwink, chimney sweep, happy, human",
+    "R1C2 = character-060-suspicious.png — Kellan Sootwink, chimney sweep, suspicious, human",
+    "R1C3 = character-061-neutral.png — Dalla Reefsong, pearl trader, neutral, merfolk-blooded human",
+    "R2C1 = character-061-happy.png — Dalla Reefsong, pearl trader, happy, merfolk-blooded human",
+    "R2C2 = character-061-suspicious.png — Dalla Reefsong, pearl trader, suspicious, merfolk-blooded human",
+    "R2C3 = character-062-neutral.png — Hobb Ashbarrel, charcoal burner, neutral, dwarf",
+    "R3C1 = character-062-happy.png — Hobb Ashbarrel, charcoal burner, happy, dwarf",
+    "R3C2 = character-062-suspicious.png — Hobb Ashbarrel, charcoal burner, suspicious, dwarf",
+    "R3C3 = character-063-neutral.png — Rima Glasslark, glass seller, neutral, human",
+    "R4C1 = character-063-happy.png — Rima Glasslark, glass seller, happy, human",
+    "R4C2 = character-063-suspicious.png — Rima Glasslark, glass seller, suspicious, human",
+    "R4C3 = character-064-neutral.png — Orvik Bellows, tinker, neutral, goblin"
   ],
   "order": [
-    "1. npc-legacy-011-happy",
-    "2. npc-legacy-011-suspicious",
-    "3. npc-legacy-012-neutral",
-    "4. npc-legacy-012-happy",
-    "5. npc-legacy-012-suspicious",
-    "6. npc-legacy-013-neutral",
-    "7. npc-legacy-013-happy",
-    "8. npc-legacy-013-suspicious",
-    "9. npc-legacy-014-neutral",
-    "10. npc-legacy-014-happy",
-    "11. npc-legacy-014-suspicious",
-    "12. npc-legacy-015-neutral"
+    "1. character-060-happy",
+    "2. character-060-suspicious",
+    "3. character-061-neutral",
+    "4. character-061-happy",
+    "5. character-061-suspicious",
+    "6. character-062-neutral",
+    "7. character-062-happy",
+    "8. character-062-suspicious",
+    "9. character-063-neutral",
+    "10. character-063-happy",
+    "11. character-063-suspicious",
+    "12. character-064-neutral"
   ],
   "images": [
     {
@@ -84,12 +84,12 @@
       "row": 1,
       "column": 1,
       "cell": "R1C1",
-      "imageId": "npc-legacy-011-happy",
-      "characterId": "npc-legacy-011",
+      "imageId": "character-060-happy",
+      "characterId": "character-060",
       "displayName": "Kellan Sootwink",
       "profession": "chimney sweep",
       "expression": "happy",
-      "outputFile": "npc-legacy-011-happy.png",
+      "outputFile": "character-060-happy.png",
       "cropCell": {
         "x": 0,
         "y": 0,
@@ -98,7 +98,7 @@
       },
       "ancestryOrSpecies": "human",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-011: skinny vertical silhouette, soot-blackened face, bright grin, messy curls, patched charcoal coat, chimney sweep, human, chimney brush",
+      "identityAnchor": "same person as character-060: skinny vertical silhouette, soot-blackened face, bright grin, messy curls, patched charcoal coat, chimney sweep, human, chimney brush",
       "visualTraits": [
         "skinny vertical silhouette",
         "soot-blackened face",
@@ -116,7 +116,7 @@
       "globalOrder": 241,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-011-happy.png",
+        "text": "character-060-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -129,12 +129,12 @@
       "row": 1,
       "column": 2,
       "cell": "R1C2",
-      "imageId": "npc-legacy-011-suspicious",
-      "characterId": "npc-legacy-011",
+      "imageId": "character-060-suspicious",
+      "characterId": "character-060",
       "displayName": "Kellan Sootwink",
       "profession": "chimney sweep",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-011-suspicious.png",
+      "outputFile": "character-060-suspicious.png",
       "cropCell": {
         "x": 1024,
         "y": 0,
@@ -143,7 +143,7 @@
       },
       "ancestryOrSpecies": "human",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-011: skinny vertical silhouette, soot-blackened face, bright grin, messy curls, patched charcoal coat, chimney sweep, human, chimney brush",
+      "identityAnchor": "same person as character-060: skinny vertical silhouette, soot-blackened face, bright grin, messy curls, patched charcoal coat, chimney sweep, human, chimney brush",
       "visualTraits": [
         "skinny vertical silhouette",
         "soot-blackened face",
@@ -161,7 +161,7 @@
       "globalOrder": 242,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-011-suspicious.png",
+        "text": "character-060-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -174,12 +174,12 @@
       "row": 1,
       "column": 3,
       "cell": "R1C3",
-      "imageId": "npc-legacy-012-neutral",
-      "characterId": "npc-legacy-012",
+      "imageId": "character-061-neutral",
+      "characterId": "character-061",
       "displayName": "Dalla Reefsong",
       "profession": "pearl trader",
       "expression": "neutral",
-      "outputFile": "npc-legacy-012-neutral.png",
+      "outputFile": "character-061-neutral.png",
       "cropCell": {
         "x": 2048,
         "y": 0,
@@ -190,7 +190,7 @@
       "magicalTraits": [
         "subtle scale shimmer at collarbones"
       ],
-      "identityAnchor": "same person as npc-legacy-012: graceful sea-blood silhouette, turquoise eyes, shell-braided hair, scaled teal collar, pearl tray, pearl trader, merfolk-blooded human, velvet pearl tray",
+      "identityAnchor": "same person as character-061: graceful sea-blood silhouette, turquoise eyes, shell-braided hair, scaled teal collar, pearl tray, pearl trader, merfolk-blooded human, velvet pearl tray",
       "visualTraits": [
         "graceful sea-blood silhouette",
         "turquoise eyes",
@@ -208,7 +208,7 @@
       "globalOrder": 243,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-012-neutral.png",
+        "text": "character-061-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -221,12 +221,12 @@
       "row": 2,
       "column": 1,
       "cell": "R2C1",
-      "imageId": "npc-legacy-012-happy",
-      "characterId": "npc-legacy-012",
+      "imageId": "character-061-happy",
+      "characterId": "character-061",
       "displayName": "Dalla Reefsong",
       "profession": "pearl trader",
       "expression": "happy",
-      "outputFile": "npc-legacy-012-happy.png",
+      "outputFile": "character-061-happy.png",
       "cropCell": {
         "x": 0,
         "y": 1024,
@@ -237,7 +237,7 @@
       "magicalTraits": [
         "subtle scale shimmer at collarbones"
       ],
-      "identityAnchor": "same person as npc-legacy-012: graceful sea-blood silhouette, turquoise eyes, shell-braided hair, scaled teal collar, pearl tray, pearl trader, merfolk-blooded human, velvet pearl tray",
+      "identityAnchor": "same person as character-061: graceful sea-blood silhouette, turquoise eyes, shell-braided hair, scaled teal collar, pearl tray, pearl trader, merfolk-blooded human, velvet pearl tray",
       "visualTraits": [
         "graceful sea-blood silhouette",
         "turquoise eyes",
@@ -255,7 +255,7 @@
       "globalOrder": 244,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-012-happy.png",
+        "text": "character-061-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -268,12 +268,12 @@
       "row": 2,
       "column": 2,
       "cell": "R2C2",
-      "imageId": "npc-legacy-012-suspicious",
-      "characterId": "npc-legacy-012",
+      "imageId": "character-061-suspicious",
+      "characterId": "character-061",
       "displayName": "Dalla Reefsong",
       "profession": "pearl trader",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-012-suspicious.png",
+      "outputFile": "character-061-suspicious.png",
       "cropCell": {
         "x": 1024,
         "y": 1024,
@@ -284,7 +284,7 @@
       "magicalTraits": [
         "subtle scale shimmer at collarbones"
       ],
-      "identityAnchor": "same person as npc-legacy-012: graceful sea-blood silhouette, turquoise eyes, shell-braided hair, scaled teal collar, pearl tray, pearl trader, merfolk-blooded human, velvet pearl tray",
+      "identityAnchor": "same person as character-061: graceful sea-blood silhouette, turquoise eyes, shell-braided hair, scaled teal collar, pearl tray, pearl trader, merfolk-blooded human, velvet pearl tray",
       "visualTraits": [
         "graceful sea-blood silhouette",
         "turquoise eyes",
@@ -302,7 +302,7 @@
       "globalOrder": 245,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-012-suspicious.png",
+        "text": "character-061-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -315,12 +315,12 @@
       "row": 2,
       "column": 3,
       "cell": "R2C3",
-      "imageId": "npc-legacy-013-neutral",
-      "characterId": "npc-legacy-013",
+      "imageId": "character-062-neutral",
+      "characterId": "character-062",
       "displayName": "Hobb Ashbarrel",
       "profession": "charcoal burner",
       "expression": "neutral",
-      "outputFile": "npc-legacy-013-neutral.png",
+      "outputFile": "character-062-neutral.png",
       "cropCell": {
         "x": 2048,
         "y": 1024,
@@ -331,7 +331,7 @@
       "magicalTraits": [
         "faint ember glow inside belt pot"
       ],
-      "identityAnchor": "same person as npc-legacy-013: squat dwarf silhouette, ash-stained cheeks, grey beard, smoky hood, thick gloves, charcoal burner, dwarf, iron ember pot",
+      "identityAnchor": "same person as character-062: squat dwarf silhouette, ash-stained cheeks, grey beard, smoky hood, thick gloves, charcoal burner, dwarf, iron ember pot",
       "visualTraits": [
         "squat dwarf silhouette",
         "ash-stained cheeks",
@@ -349,7 +349,7 @@
       "globalOrder": 246,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-013-neutral.png",
+        "text": "character-062-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -362,12 +362,12 @@
       "row": 3,
       "column": 1,
       "cell": "R3C1",
-      "imageId": "npc-legacy-013-happy",
-      "characterId": "npc-legacy-013",
+      "imageId": "character-062-happy",
+      "characterId": "character-062",
       "displayName": "Hobb Ashbarrel",
       "profession": "charcoal burner",
       "expression": "happy",
-      "outputFile": "npc-legacy-013-happy.png",
+      "outputFile": "character-062-happy.png",
       "cropCell": {
         "x": 0,
         "y": 2048,
@@ -378,7 +378,7 @@
       "magicalTraits": [
         "faint ember glow inside belt pot"
       ],
-      "identityAnchor": "same person as npc-legacy-013: squat dwarf silhouette, ash-stained cheeks, grey beard, smoky hood, thick gloves, charcoal burner, dwarf, iron ember pot",
+      "identityAnchor": "same person as character-062: squat dwarf silhouette, ash-stained cheeks, grey beard, smoky hood, thick gloves, charcoal burner, dwarf, iron ember pot",
       "visualTraits": [
         "squat dwarf silhouette",
         "ash-stained cheeks",
@@ -396,7 +396,7 @@
       "globalOrder": 247,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-013-happy.png",
+        "text": "character-062-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -409,12 +409,12 @@
       "row": 3,
       "column": 2,
       "cell": "R3C2",
-      "imageId": "npc-legacy-013-suspicious",
-      "characterId": "npc-legacy-013",
+      "imageId": "character-062-suspicious",
+      "characterId": "character-062",
       "displayName": "Hobb Ashbarrel",
       "profession": "charcoal burner",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-013-suspicious.png",
+      "outputFile": "character-062-suspicious.png",
       "cropCell": {
         "x": 1024,
         "y": 2048,
@@ -425,7 +425,7 @@
       "magicalTraits": [
         "faint ember glow inside belt pot"
       ],
-      "identityAnchor": "same person as npc-legacy-013: squat dwarf silhouette, ash-stained cheeks, grey beard, smoky hood, thick gloves, charcoal burner, dwarf, iron ember pot",
+      "identityAnchor": "same person as character-062: squat dwarf silhouette, ash-stained cheeks, grey beard, smoky hood, thick gloves, charcoal burner, dwarf, iron ember pot",
       "visualTraits": [
         "squat dwarf silhouette",
         "ash-stained cheeks",
@@ -443,7 +443,7 @@
       "globalOrder": 248,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-013-suspicious.png",
+        "text": "character-062-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -456,12 +456,12 @@
       "row": 3,
       "column": 3,
       "cell": "R3C3",
-      "imageId": "npc-legacy-014-neutral",
-      "characterId": "npc-legacy-014",
+      "imageId": "character-063-neutral",
+      "characterId": "character-063",
       "displayName": "Rima Glasslark",
       "profession": "glass seller",
       "expression": "neutral",
-      "outputFile": "npc-legacy-014-neutral.png",
+      "outputFile": "character-063-neutral.png",
       "cropCell": {
         "x": 2048,
         "y": 2048,
@@ -472,7 +472,7 @@
       "magicalTraits": [
         "tiny rainbow glints on glass props"
       ],
-      "identityAnchor": "same person as npc-legacy-014: slim careful silhouette, amber spectacles, short blue-black bob, translucent cuffs, colored bottles, glass seller, human, colored bottles",
+      "identityAnchor": "same person as character-063: slim careful silhouette, amber spectacles, short blue-black bob, translucent cuffs, colored bottles, glass seller, human, colored bottles",
       "visualTraits": [
         "slim careful silhouette",
         "amber spectacles",
@@ -490,7 +490,7 @@
       "globalOrder": 249,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-014-neutral.png",
+        "text": "character-063-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -503,12 +503,12 @@
       "row": 4,
       "column": 1,
       "cell": "R4C1",
-      "imageId": "npc-legacy-014-happy",
-      "characterId": "npc-legacy-014",
+      "imageId": "character-063-happy",
+      "characterId": "character-063",
       "displayName": "Rima Glasslark",
       "profession": "glass seller",
       "expression": "happy",
-      "outputFile": "npc-legacy-014-happy.png",
+      "outputFile": "character-063-happy.png",
       "cropCell": {
         "x": 0,
         "y": 3072,
@@ -519,7 +519,7 @@
       "magicalTraits": [
         "tiny rainbow glints on glass props"
       ],
-      "identityAnchor": "same person as npc-legacy-014: slim careful silhouette, amber spectacles, short blue-black bob, translucent cuffs, colored bottles, glass seller, human, colored bottles",
+      "identityAnchor": "same person as character-063: slim careful silhouette, amber spectacles, short blue-black bob, translucent cuffs, colored bottles, glass seller, human, colored bottles",
       "visualTraits": [
         "slim careful silhouette",
         "amber spectacles",
@@ -537,7 +537,7 @@
       "globalOrder": 250,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-014-happy.png",
+        "text": "character-063-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -550,12 +550,12 @@
       "row": 4,
       "column": 2,
       "cell": "R4C2",
-      "imageId": "npc-legacy-014-suspicious",
-      "characterId": "npc-legacy-014",
+      "imageId": "character-063-suspicious",
+      "characterId": "character-063",
       "displayName": "Rima Glasslark",
       "profession": "glass seller",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-014-suspicious.png",
+      "outputFile": "character-063-suspicious.png",
       "cropCell": {
         "x": 1024,
         "y": 3072,
@@ -566,7 +566,7 @@
       "magicalTraits": [
         "tiny rainbow glints on glass props"
       ],
-      "identityAnchor": "same person as npc-legacy-014: slim careful silhouette, amber spectacles, short blue-black bob, translucent cuffs, colored bottles, glass seller, human, colored bottles",
+      "identityAnchor": "same person as character-063: slim careful silhouette, amber spectacles, short blue-black bob, translucent cuffs, colored bottles, glass seller, human, colored bottles",
       "visualTraits": [
         "slim careful silhouette",
         "amber spectacles",
@@ -584,7 +584,7 @@
       "globalOrder": 251,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-014-suspicious.png",
+        "text": "character-063-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -597,12 +597,12 @@
       "row": 4,
       "column": 3,
       "cell": "R4C3",
-      "imageId": "npc-legacy-015-neutral",
-      "characterId": "npc-legacy-015",
+      "imageId": "character-064-neutral",
+      "characterId": "character-064",
       "displayName": "Orvik Bellows",
       "profession": "tinker",
       "expression": "neutral",
-      "outputFile": "npc-legacy-015-neutral.png",
+      "outputFile": "character-064-neutral.png",
       "cropCell": {
         "x": 2048,
         "y": 3072,
@@ -611,7 +611,7 @@
       },
       "ancestryOrSpecies": "goblin",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-015: wiry goblin silhouette, lime-tinted skin, huge ears, brass goggles, patched orange coat, tinker, goblin, spiral screwdrivers",
+      "identityAnchor": "same person as character-064: wiry goblin silhouette, lime-tinted skin, huge ears, brass goggles, patched orange coat, tinker, goblin, spiral screwdrivers",
       "visualTraits": [
         "wiry goblin silhouette",
         "lime-tinted skin",
@@ -629,7 +629,7 @@
       "globalOrder": 252,
       "batchId": "characters-0241-0252",
       "filenameLabel": {
-        "text": "npc-legacy-015-neutral.png",
+        "text": "character-064-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",

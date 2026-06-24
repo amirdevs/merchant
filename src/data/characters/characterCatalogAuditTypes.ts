@@ -1,32 +1,32 @@
-import type { CharacterExpressionTier, CharacterReworkStatus } from "./characterRemakeTypes";
+import type { CharacterExpressionTier, CharacterRosterStatus } from "./characterProfileTypes";
 
-export type LegacyCharacterAuditPriority = "core" | "standard" | "low" | "reference_check";
+export type CharacterCatalogAuditPriority = "core" | "standard" | "low" | "reference_check";
 
-export type LegacyCharacterAuditDecision =
-  | "KEEP_AND_REWORK"
-  | "REPLACE_VISIBLE_IDENTITY"
+export type CharacterCatalogAuditDecision =
+  | "KEEP_VISIBLE_ROLE"
+  | "REPLACE_VISIBLE_ROLE"
   | "MERGE_WITH_ANOTHER"
   | "DISABLE_OR_HIDE"
   | "REFERENCE_CHECK_REQUIRED";
 
-export interface LegacyCharacterRangeAudit {
+export interface CharacterCatalogRangeAudit {
   readonly rangeId: string;
   readonly startIndex: number;
   readonly endIndex: number;
-  readonly priority: LegacyCharacterAuditPriority;
-  readonly defaultDecision: LegacyCharacterAuditDecision;
-  readonly defaultReworkStatus: CharacterReworkStatus;
+  readonly priority: CharacterCatalogAuditPriority;
+  readonly defaultDecision: CharacterCatalogAuditDecision;
+  readonly defaultReworkStatus: CharacterRosterStatus;
   readonly defaultExpressionTier: CharacterExpressionTier;
   readonly publicIdentityRule: string;
   readonly gameplayReason: string;
   readonly auditNotes: readonly string[];
 }
 
-export interface LegacyCharacterAuditSummary {
+export interface CharacterCatalogAuditSummary {
   readonly generatedCharacterRecordCount: number;
   readonly firstGeneratedIndex: number;
   readonly lastGeneratedIndex: number;
-  readonly targetLegacyVisibleSlots: number;
-  readonly targetLegacyDisableOrMergeSlots: number;
-  readonly auditRanges: readonly LegacyCharacterRangeAudit[];
+  readonly targetVisibleSupportingCastSlots: number;
+  readonly targetDisableOrMergeSlots: number;
+  readonly auditRanges: readonly CharacterCatalogRangeAudit[];
 }

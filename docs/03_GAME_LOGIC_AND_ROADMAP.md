@@ -4,9 +4,9 @@ This is the only roadmap doc. Keep current gameplay status, character/portrait g
 
 ## Current foundation status
 
-- Loads generated reference data from `src/data/generated`, with remake layers for systems that need original public-facing content.
+- Loads generated reference data from `src/data/generated`, with current character-profile systems layered over archived seed content.
 - Supports local save/load/import/export with the current save envelope.
-- Inventory, barter, stock, economy, travel, company, law, rivals, contracts, and legacy quest helpers exist as foundation systems.
+- Inventory, barter, stock, economy, travel, company, law, rivals, contracts, and transitional quest helpers exist as foundation systems.
 - Character portrait runtime integration is complete enough for gameplay: final cropped portraits live under `public/assets/portraits/characters/`, have a manifest, and pass the portrait audit gate.
 - Rich Quest System Foundation exists as source data, state helpers, effect helpers, selectors, journal view models, and focused tests.
 - The first playable merchant loop now exists as a small story-rich vertical slice: buy, travel, sell, progress rich quests, see consequences, and register the first company.
@@ -14,13 +14,13 @@ This is the only roadmap doc. Keep current gameplay status, character/portrait g
 - Economy/world expansion helpers exist for stock pressure, dynamic prices, route risk events, tuned regional items, company upgrade candidates, expansion towns, and next quest seeds.
 - Vertical-slice polish helpers exist for alpha-readiness scoring, player-flow checklist, save/load readiness, consequence visibility, and release/playtest guidance.
 
-## Confirmed remake direction
+## Confirmed project direction
 
-The remake should not keep old reference-game public-facing content as the creative target.
+The project should not keep archived source public-facing content as the creative target.
 
 Confirmed replacement areas:
 
-1. **Characters** - use original remake names, portraits, stories, role tags, and dialogue flavor while keeping mechanical anchors stable until deeper runtime migration is safe.
+1. **Characters** - use the current production names, portraits, stories, role tags, and dialogue flavor while keeping mechanical anchors stable until deeper runtime migration is safe.
 2. **Quests** - replace old marketplace quests with original rich merchant stories, meaningful choices, and campaign goals.
 3. **Playable loop** - prioritize a real playable vertical slice before producing more loose assets.
 4. **GameState runtime** - playable features should persist through the main save/export model instead of private local-only prototype slots.
@@ -58,7 +58,7 @@ Generated character sheet PNGs under `docs/assets/character-sheets/` are product
 
 ## Quest overhaul direction
 
-The current reference-style marketplace quests are not the remake target. They should be treated as legacy scaffolding until replaced.
+The current placeholder marketplace quests are not the final target. They should be treated as temporary scaffolding until replaced.
 
 The new quest direction is defined in:
 
@@ -91,7 +91,7 @@ Implemented:
 character portrait manifest
 runtime portrait selectors
 portrait audit gate
-first UI surfaces using remake-facing character identities
+first UI surfaces using production character identities
 AGENTS/docs order fix for the new quest bible
 ```
 

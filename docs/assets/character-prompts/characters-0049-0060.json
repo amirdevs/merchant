@@ -51,32 +51,32 @@
   "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified. Put a small readable filename label in the bottom-left corner of each cell. The label text must exactly match that entry outputFile, use pure magenta #FF00FF, simple bold readable font, no outline, no shadow, no glow, no gradient. Keep the label fully separated from the character art on empty green #00FF00 with a clear safety gap.",
   "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
   "sheetOrderLock": [
-    "R1C1 = npc-new-012-worried.png — Arra Stonepassport, Border Customs Guard, worried, river gnome",
-    "R1C2 = npc-new-012-angry.png — Arra Stonepassport, Border Customs Guard, angry, river gnome",
-    "R1C3 = npc-new-013-neutral.png — Tovin Hearthmile, Roadside Innkeeper, neutral, ember-touched human",
-    "R2C1 = npc-new-013-happy.png — Tovin Hearthmile, Roadside Innkeeper, happy, ember-touched human",
-    "R2C2 = npc-new-013-suspicious.png — Tovin Hearthmile, Roadside Innkeeper, suspicious, ember-touched human",
-    "R2C3 = npc-new-014-neutral.png — Madu Long-Ear, Pack Animal Trader, neutral, human",
-    "R3C1 = npc-new-014-happy.png — Madu Long-Ear, Pack Animal Trader, happy, human",
-    "R3C2 = npc-new-014-suspicious.png — Madu Long-Ear, Pack Animal Trader, suspicious, human",
-    "R3C3 = npc-new-015-neutral.png — Suren Reedwake, Ferry Master, neutral, raven-touched halfling",
-    "R4C1 = npc-new-015-happy.png — Suren Reedwake, Ferry Master, happy, raven-touched halfling",
-    "R4C2 = npc-new-015-suspicious.png — Suren Reedwake, Ferry Master, suspicious, raven-touched halfling",
-    "R4C3 = npc-new-015-worried.png — Suren Reedwake, Ferry Master, worried, raven-touched halfling"
+    "R1C1 = character-012-worried.png — Arra Stonepassport, Border Customs Guard, worried, river gnome",
+    "R1C2 = character-012-angry.png — Arra Stonepassport, Border Customs Guard, angry, river gnome",
+    "R1C3 = character-013-neutral.png — Tovin Hearthmile, Roadside Innkeeper, neutral, ember-touched human",
+    "R2C1 = character-013-happy.png — Tovin Hearthmile, Roadside Innkeeper, happy, ember-touched human",
+    "R2C2 = character-013-suspicious.png — Tovin Hearthmile, Roadside Innkeeper, suspicious, ember-touched human",
+    "R2C3 = character-014-neutral.png — Madu Long-Ear, Pack Animal Trader, neutral, human",
+    "R3C1 = character-014-happy.png — Madu Long-Ear, Pack Animal Trader, happy, human",
+    "R3C2 = character-014-suspicious.png — Madu Long-Ear, Pack Animal Trader, suspicious, human",
+    "R3C3 = character-015-neutral.png — Suren Reedwake, Ferry Master, neutral, raven-touched halfling",
+    "R4C1 = character-015-happy.png — Suren Reedwake, Ferry Master, happy, raven-touched halfling",
+    "R4C2 = character-015-suspicious.png — Suren Reedwake, Ferry Master, suspicious, raven-touched halfling",
+    "R4C3 = character-015-worried.png — Suren Reedwake, Ferry Master, worried, raven-touched halfling"
   ],
   "order": [
-    "1. npc-new-012-worried",
-    "2. npc-new-012-angry",
-    "3. npc-new-013-neutral",
-    "4. npc-new-013-happy",
-    "5. npc-new-013-suspicious",
-    "6. npc-new-014-neutral",
-    "7. npc-new-014-happy",
-    "8. npc-new-014-suspicious",
-    "9. npc-new-015-neutral",
-    "10. npc-new-015-happy",
-    "11. npc-new-015-suspicious",
-    "12. npc-new-015-worried"
+    "1. character-012-worried",
+    "2. character-012-angry",
+    "3. character-013-neutral",
+    "4. character-013-happy",
+    "5. character-013-suspicious",
+    "6. character-014-neutral",
+    "7. character-014-happy",
+    "8. character-014-suspicious",
+    "9. character-015-neutral",
+    "10. character-015-happy",
+    "11. character-015-suspicious",
+    "12. character-015-worried"
   ],
   "images": [
     {
@@ -85,15 +85,15 @@
       "row": 1,
       "column": 1,
       "cell": "R1C1",
-      "imageId": "npc-new-012-worried",
-      "characterId": "npc-new-012",
+      "imageId": "character-012-worried",
+      "characterId": "character-012",
       "displayName": "Arra Stonepassport",
       "profession": "Border Customs Guard",
       "expression": "worried",
-      "outputFile": "npc-new-012-worried.png",
+      "outputFile": "character-012-worried.png",
       "ancestryOrSpecies": "river gnome",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare",
+      "identityAnchor": "same person as character-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare",
       "visualTraits": [
         "tall stone-faced body",
         "deep mahogany skin",
@@ -113,7 +113,7 @@
         "dark leather",
         "silver"
       ],
-      "prompt": "A tall stone-faced customs guard with deep mahogany skin, silver streaks at temples, square shoulders, sand-colored uniform reinforced with dark leather plates, inspection spear and passport seals. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: river gnome. Identity anchors must remain unchanged: same person as npc-new-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A tall stone-faced customs guard with deep mahogany skin, silver streaks at temples, square shoulders, sand-colored uniform reinforced with dark leather plates, inspection spear and passport seals. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: river gnome. Identity anchors must remain unchanged: same person as character-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 0,
@@ -123,7 +123,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-012-worried.png",
+        "text": "character-012-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -137,15 +137,15 @@
       "row": 1,
       "column": 2,
       "cell": "R1C2",
-      "imageId": "npc-new-012-angry",
-      "characterId": "npc-new-012",
+      "imageId": "character-012-angry",
+      "characterId": "character-012",
       "displayName": "Arra Stonepassport",
       "profession": "Border Customs Guard",
       "expression": "angry",
-      "outputFile": "npc-new-012-angry.png",
+      "outputFile": "character-012-angry.png",
       "ancestryOrSpecies": "river gnome",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare",
+      "identityAnchor": "same person as character-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare",
       "visualTraits": [
         "tall stone-faced body",
         "deep mahogany skin",
@@ -165,7 +165,7 @@
         "dark leather",
         "silver"
       ],
-      "prompt": "A tall stone-faced customs guard with deep mahogany skin, silver streaks at temples, square shoulders, sand-colored uniform reinforced with dark leather plates, inspection spear and passport seals. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: river gnome. Identity anchors must remain unchanged: same person as npc-new-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A tall stone-faced customs guard with deep mahogany skin, silver streaks at temples, square shoulders, sand-colored uniform reinforced with dark leather plates, inspection spear and passport seals. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: river gnome. Identity anchors must remain unchanged: same person as character-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 1024,
@@ -175,7 +175,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-012-angry.png",
+        "text": "character-012-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -189,18 +189,18 @@
       "row": 1,
       "column": 3,
       "cell": "R1C3",
-      "imageId": "npc-new-013-neutral",
-      "characterId": "npc-new-013",
+      "imageId": "character-013-neutral",
+      "characterId": "character-013",
       "displayName": "Tovin Hearthmile",
       "profession": "Roadside Innkeeper",
       "expression": "neutral",
-      "outputFile": "npc-new-013-neutral.png",
+      "outputFile": "character-013-neutral.png",
       "ancestryOrSpecies": "ember-touched human",
       "magicalTraits": [
         "warm ember freckles",
         "faint candle-glow eyes"
       ],
-      "identityAnchor": "same person as npc-new-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile",
+      "identityAnchor": "same person as character-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile",
       "visualTraits": [
         "wide warm build",
         "ruddy skin",
@@ -220,7 +220,7 @@
         "copper",
         "warm cream"
       ],
-      "prompt": "A wide warm roadside innkeeper with ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle tucked like a sword, guest ledger and steaming stew bowl nearby. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: ember-touched human. Visible magical traits that must remain consistent: warm ember freckles, faint candle-glow eyes. Identity anchors must remain unchanged: same person as npc-new-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A wide warm roadside innkeeper with ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle tucked like a sword, guest ledger and steaming stew bowl nearby. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: ember-touched human. Visible magical traits that must remain consistent: warm ember freckles, faint candle-glow eyes. Identity anchors must remain unchanged: same person as character-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 2048,
@@ -230,7 +230,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-013-neutral.png",
+        "text": "character-013-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -244,18 +244,18 @@
       "row": 2,
       "column": 1,
       "cell": "R2C1",
-      "imageId": "npc-new-013-happy",
-      "characterId": "npc-new-013",
+      "imageId": "character-013-happy",
+      "characterId": "character-013",
       "displayName": "Tovin Hearthmile",
       "profession": "Roadside Innkeeper",
       "expression": "happy",
-      "outputFile": "npc-new-013-happy.png",
+      "outputFile": "character-013-happy.png",
       "ancestryOrSpecies": "ember-touched human",
       "magicalTraits": [
         "warm ember freckles",
         "faint candle-glow eyes"
       ],
-      "identityAnchor": "same person as npc-new-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile",
+      "identityAnchor": "same person as character-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile",
       "visualTraits": [
         "wide warm build",
         "ruddy skin",
@@ -275,7 +275,7 @@
         "copper",
         "warm cream"
       ],
-      "prompt": "A wide warm roadside innkeeper with ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle tucked like a sword, guest ledger and steaming stew bowl nearby. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: ember-touched human. Visible magical traits that must remain consistent: warm ember freckles, faint candle-glow eyes. Identity anchors must remain unchanged: same person as npc-new-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A wide warm roadside innkeeper with ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle tucked like a sword, guest ledger and steaming stew bowl nearby. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: ember-touched human. Visible magical traits that must remain consistent: warm ember freckles, faint candle-glow eyes. Identity anchors must remain unchanged: same person as character-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 0,
@@ -285,7 +285,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-013-happy.png",
+        "text": "character-013-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -299,18 +299,18 @@
       "row": 2,
       "column": 2,
       "cell": "R2C2",
-      "imageId": "npc-new-013-suspicious",
-      "characterId": "npc-new-013",
+      "imageId": "character-013-suspicious",
+      "characterId": "character-013",
       "displayName": "Tovin Hearthmile",
       "profession": "Roadside Innkeeper",
       "expression": "suspicious",
-      "outputFile": "npc-new-013-suspicious.png",
+      "outputFile": "character-013-suspicious.png",
       "ancestryOrSpecies": "ember-touched human",
       "magicalTraits": [
         "warm ember freckles",
         "faint candle-glow eyes"
       ],
-      "identityAnchor": "same person as npc-new-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile",
+      "identityAnchor": "same person as character-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile",
       "visualTraits": [
         "wide warm build",
         "ruddy skin",
@@ -330,7 +330,7 @@
         "copper",
         "warm cream"
       ],
-      "prompt": "A wide warm roadside innkeeper with ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle tucked like a sword, guest ledger and steaming stew bowl nearby. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: ember-touched human. Visible magical traits that must remain consistent: warm ember freckles, faint candle-glow eyes. Identity anchors must remain unchanged: same person as npc-new-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A wide warm roadside innkeeper with ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle tucked like a sword, guest ledger and steaming stew bowl nearby. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: ember-touched human. Visible magical traits that must remain consistent: warm ember freckles, faint candle-glow eyes. Identity anchors must remain unchanged: same person as character-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 1024,
@@ -340,7 +340,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-013-suspicious.png",
+        "text": "character-013-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -354,15 +354,15 @@
       "row": 2,
       "column": 3,
       "cell": "R2C3",
-      "imageId": "npc-new-014-neutral",
-      "characterId": "npc-new-014",
+      "imageId": "character-014-neutral",
+      "characterId": "character-014",
       "displayName": "Madu Long-Ear",
       "profession": "Pack Animal Trader",
       "expression": "neutral",
-      "outputFile": "npc-new-014-neutral.png",
+      "outputFile": "character-014-neutral.png",
       "ancestryOrSpecies": "human",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes",
+      "identityAnchor": "same person as character-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes",
       "visualTraits": [
         "tall loose-limbed body",
         "dark skin",
@@ -382,7 +382,7 @@
         "straw yellow",
         "earth brown"
       ],
-      "prompt": "A tall loose-limbed pack animal trader with dark skin, shaved head, long ears, faded orange sash, straw in sleeveless tunic, mule lead rope in one hand and capacity tags on belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A tall loose-limbed pack animal trader with dark skin, shaved head, long ears, faded orange sash, straw in sleeveless tunic, mule lead rope in one hand and capacity tags on belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as character-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 2048,
@@ -392,7 +392,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-014-neutral.png",
+        "text": "character-014-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -406,15 +406,15 @@
       "row": 3,
       "column": 1,
       "cell": "R3C1",
-      "imageId": "npc-new-014-happy",
-      "characterId": "npc-new-014",
+      "imageId": "character-014-happy",
+      "characterId": "character-014",
       "displayName": "Madu Long-Ear",
       "profession": "Pack Animal Trader",
       "expression": "happy",
-      "outputFile": "npc-new-014-happy.png",
+      "outputFile": "character-014-happy.png",
       "ancestryOrSpecies": "human",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes",
+      "identityAnchor": "same person as character-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes",
       "visualTraits": [
         "tall loose-limbed body",
         "dark skin",
@@ -434,7 +434,7 @@
         "straw yellow",
         "earth brown"
       ],
-      "prompt": "A tall loose-limbed pack animal trader with dark skin, shaved head, long ears, faded orange sash, straw in sleeveless tunic, mule lead rope in one hand and capacity tags on belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A tall loose-limbed pack animal trader with dark skin, shaved head, long ears, faded orange sash, straw in sleeveless tunic, mule lead rope in one hand and capacity tags on belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as character-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 0,
@@ -444,7 +444,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-014-happy.png",
+        "text": "character-014-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -458,15 +458,15 @@
       "row": 3,
       "column": 2,
       "cell": "R3C2",
-      "imageId": "npc-new-014-suspicious",
-      "characterId": "npc-new-014",
+      "imageId": "character-014-suspicious",
+      "characterId": "character-014",
       "displayName": "Madu Long-Ear",
       "profession": "Pack Animal Trader",
       "expression": "suspicious",
-      "outputFile": "npc-new-014-suspicious.png",
+      "outputFile": "character-014-suspicious.png",
       "ancestryOrSpecies": "human",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes",
+      "identityAnchor": "same person as character-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes",
       "visualTraits": [
         "tall loose-limbed body",
         "dark skin",
@@ -486,7 +486,7 @@
         "straw yellow",
         "earth brown"
       ],
-      "prompt": "A tall loose-limbed pack animal trader with dark skin, shaved head, long ears, faded orange sash, straw in sleeveless tunic, mule lead rope in one hand and capacity tags on belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as npc-new-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A tall loose-limbed pack animal trader with dark skin, shaved head, long ears, faded orange sash, straw in sleeveless tunic, mule lead rope in one hand and capacity tags on belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: human. Identity anchors must remain unchanged: same person as character-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 1024,
@@ -496,7 +496,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-014-suspicious.png",
+        "text": "character-014-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -510,18 +510,18 @@
       "row": 3,
       "column": 3,
       "cell": "R3C3",
-      "imageId": "npc-new-015-neutral",
-      "characterId": "npc-new-015",
+      "imageId": "character-015-neutral",
+      "characterId": "character-015",
       "displayName": "Suren Reedwake",
       "profession": "Ferry Master",
       "expression": "neutral",
-      "outputFile": "npc-new-015-neutral.png",
+      "outputFile": "character-015-neutral.png",
       "ancestryOrSpecies": "raven-touched halfling",
       "magicalTraits": [
         "raven-feather hair charms",
         "dark omen markings"
       ],
-      "identityAnchor": "same person as npc-new-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression",
+      "identityAnchor": "same person as character-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression",
       "visualTraits": [
         "thin reedlike silhouette",
         "elder",
@@ -542,7 +542,7 @@
         "reed tan",
         "grey"
       ],
-      "prompt": "A thin reedlike elderly ferry master with weathered tan skin, watery grey eyes, reed hat, patched navy coat, hands knotted like rope around a ferry pole, river token pouch at belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: raven-touched halfling. Visible magical traits that must remain consistent: raven-feather hair charms, dark omen markings. Identity anchors must remain unchanged: same person as npc-new-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin reedlike elderly ferry master with weathered tan skin, watery grey eyes, reed hat, patched navy coat, hands knotted like rope around a ferry pole, river token pouch at belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: raven-touched halfling. Visible magical traits that must remain consistent: raven-feather hair charms, dark omen markings. Identity anchors must remain unchanged: same person as character-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 2048,
@@ -552,7 +552,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-015-neutral.png",
+        "text": "character-015-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -566,18 +566,18 @@
       "row": 4,
       "column": 1,
       "cell": "R4C1",
-      "imageId": "npc-new-015-happy",
-      "characterId": "npc-new-015",
+      "imageId": "character-015-happy",
+      "characterId": "character-015",
       "displayName": "Suren Reedwake",
       "profession": "Ferry Master",
       "expression": "happy",
-      "outputFile": "npc-new-015-happy.png",
+      "outputFile": "character-015-happy.png",
       "ancestryOrSpecies": "raven-touched halfling",
       "magicalTraits": [
         "raven-feather hair charms",
         "dark omen markings"
       ],
-      "identityAnchor": "same person as npc-new-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression",
+      "identityAnchor": "same person as character-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression",
       "visualTraits": [
         "thin reedlike silhouette",
         "elder",
@@ -598,7 +598,7 @@
         "reed tan",
         "grey"
       ],
-      "prompt": "A thin reedlike elderly ferry master with weathered tan skin, watery grey eyes, reed hat, patched navy coat, hands knotted like rope around a ferry pole, river token pouch at belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: raven-touched halfling. Visible magical traits that must remain consistent: raven-feather hair charms, dark omen markings. Identity anchors must remain unchanged: same person as npc-new-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin reedlike elderly ferry master with weathered tan skin, watery grey eyes, reed hat, patched navy coat, hands knotted like rope around a ferry pole, river token pouch at belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: raven-touched halfling. Visible magical traits that must remain consistent: raven-feather hair charms, dark omen markings. Identity anchors must remain unchanged: same person as character-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 0,
@@ -608,7 +608,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-015-happy.png",
+        "text": "character-015-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -622,18 +622,18 @@
       "row": 4,
       "column": 2,
       "cell": "R4C2",
-      "imageId": "npc-new-015-suspicious",
-      "characterId": "npc-new-015",
+      "imageId": "character-015-suspicious",
+      "characterId": "character-015",
       "displayName": "Suren Reedwake",
       "profession": "Ferry Master",
       "expression": "suspicious",
-      "outputFile": "npc-new-015-suspicious.png",
+      "outputFile": "character-015-suspicious.png",
       "ancestryOrSpecies": "raven-touched halfling",
       "magicalTraits": [
         "raven-feather hair charms",
         "dark omen markings"
       ],
-      "identityAnchor": "same person as npc-new-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression",
+      "identityAnchor": "same person as character-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression",
       "visualTraits": [
         "thin reedlike silhouette",
         "elder",
@@ -654,7 +654,7 @@
         "reed tan",
         "grey"
       ],
-      "prompt": "A thin reedlike elderly ferry master with weathered tan skin, watery grey eyes, reed hat, patched navy coat, hands knotted like rope around a ferry pole, river token pouch at belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: raven-touched halfling. Visible magical traits that must remain consistent: raven-feather hair charms, dark omen markings. Identity anchors must remain unchanged: same person as npc-new-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin reedlike elderly ferry master with weathered tan skin, watery grey eyes, reed hat, patched navy coat, hands knotted like rope around a ferry pole, river token pouch at belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: raven-touched halfling. Visible magical traits that must remain consistent: raven-feather hair charms, dark omen markings. Identity anchors must remain unchanged: same person as character-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 1024,
@@ -664,7 +664,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-015-suspicious.png",
+        "text": "character-015-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -678,18 +678,18 @@
       "row": 4,
       "column": 3,
       "cell": "R4C3",
-      "imageId": "npc-new-015-worried",
-      "characterId": "npc-new-015",
+      "imageId": "character-015-worried",
+      "characterId": "character-015",
       "displayName": "Suren Reedwake",
       "profession": "Ferry Master",
       "expression": "worried",
-      "outputFile": "npc-new-015-worried.png",
+      "outputFile": "character-015-worried.png",
       "ancestryOrSpecies": "raven-touched halfling",
       "magicalTraits": [
         "raven-feather hair charms",
         "dark omen markings"
       ],
-      "identityAnchor": "same person as npc-new-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression",
+      "identityAnchor": "same person as character-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression",
       "visualTraits": [
         "thin reedlike silhouette",
         "elder",
@@ -710,7 +710,7 @@
         "reed tan",
         "grey"
       ],
-      "prompt": "A thin reedlike elderly ferry master with weathered tan skin, watery grey eyes, reed hat, patched navy coat, hands knotted like rope around a ferry pole, river token pouch at belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: raven-touched halfling. Visible magical traits that must remain consistent: raven-feather hair charms, dark omen markings. Identity anchors must remain unchanged: same person as npc-new-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin reedlike elderly ferry master with weathered tan skin, watery grey eyes, reed hat, patched navy coat, hands knotted like rope around a ferry pole, river token pouch at belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: raven-touched halfling. Visible magical traits that must remain consistent: raven-feather hair charms, dark omen markings. Identity anchors must remain unchanged: same person as character-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 2048,
@@ -720,7 +720,7 @@
       },
       "batchId": "characters-0049-0060",
       "filenameLabel": {
-        "text": "npc-new-015-worried.png",
+        "text": "character-015-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",

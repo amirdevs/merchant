@@ -7,7 +7,7 @@ const dataDir = path.join(root, "src", "data", "generated");
 const strict = process.argv.includes("--strict");
 const verbose = process.argv.includes("--verbose") || strict;
 const auditGeneratedAssetRefs = process.argv.includes("--generated-assets") || strict;
-const auditLegacyCharacterAssetFields = process.argv.includes("--legacy-character-assets") || strict;
+const auditCatalogCharacterAssetFields = process.argv.includes("--legacy-character-assets") || strict;
 const auditUiAssets = process.argv.includes("--ui-assets") || strict;
 
 function readJson(file) {
@@ -70,7 +70,7 @@ const items = readJson("items.json");
 const marketplaces = readJson("marketplaces.json");
 
 for (const character of characters) {
-  if (!auditLegacyCharacterAssetFields) {
+  if (!auditCatalogCharacterAssetFields) {
     if (character.portraitFile) skipped.legacyPortrait += 1;
     if (character.stallFile) skipped.legacyStall += 1;
     continue;

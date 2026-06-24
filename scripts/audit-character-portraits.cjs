@@ -14,8 +14,8 @@ const expectedCounts = {
   sheets: 61,
   portraits: 722,
   identities: 240,
-  usefulNewNpcIdentities: 48,
-  legacyIdentities: 192,
+  primaryCastIdentities: 48,
+  supportingCastIdentities: 192,
 };
 
 function fail(message) {
@@ -226,10 +226,21 @@ function auditIdentityCatalog(records) {
   let oldNameLeaks = [];
   if (fs.existsSync(generatedCharactersPath)) {
     const generatedCharacters = readJson(generatedCharactersPath);
+    const originalIndexByCharacterId = new Map();
+    const identityFiles = fs.existsSync(identityDir)
+      ? fs.readdirSync(identityDir).filter((file) => /^characterIdentityCatalog.*\.ts$/.test(file) && !file.includes("Types"))
+      : [];
+    for (const file of identityFiles) {
+      const source = fs.readFileSync(path.join(identityDir, file), "utf8");
+      for (const match of source.matchAll(/characterId:\s*"([^"]+)"[\s\S]*?originalIndex:\s*(null|\d+)/g)) {
+        const [, characterId, originalIndex] = match;
+        if (originalIndex !== "null") originalIndexByCharacterId.set(characterId, Number(originalIndex));
+      }
+    }
     oldNameLeaks = uniqueCharacters
-      .filter((record) => record.characterId.startsWith("npc-legacy-"))
       .filter((record) => {
-        const index = Number(record.characterId.replace("npc-legacy-", ""));
+        const index = originalIndexByCharacterId.get(record.characterId);
+        if (typeof index !== "number") return false;
         const generated = generatedCharacters[index];
         return generated && generated.name && generated.name === record.displayName;
       })

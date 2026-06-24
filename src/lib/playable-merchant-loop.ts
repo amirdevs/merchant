@@ -127,7 +127,7 @@ export const LOOP_TOWNS: LoopTown[] = [
     name: "Sunwake Harbor",
     role: "starting port market",
     storyHook: "A crowded harbor where small traders can still find honest margins between fish bells, salt sheds, and paper clerks.",
-    availableNpcIds: ["npc-new-001", "npc-new-004", "npc-new-011", "npc-legacy-000"],
+    availableNpcIds: ["character-001", "character-004", "character-011", "character-049"],
     priceTable: {
       "coastal-salt": 8,
       "mill-flour": 13,
@@ -142,7 +142,7 @@ export const LOOP_TOWNS: LoopTown[] = [
     name: "Riverwake Mill",
     role: "food and craft town",
     storyHook: "Mill wheels and bakery ovens make this town cheap for flour but hungry for harbor salt and lamp oil.",
-    availableNpcIds: ["npc-new-006", "npc-new-017", "npc-new-024", "npc-legacy-023"],
+    availableNpcIds: ["character-006", "character-017", "character-024", "character-072"],
     priceTable: {
       "coastal-salt": 14,
       "mill-flour": 6,
@@ -157,7 +157,7 @@ export const LOOP_TOWNS: LoopTown[] = [
     name: "Brasskeep Gate",
     role: "company and warehouse checkpoint",
     storyHook: "A guarded gate market where contracts, warehouses, caravan papers, and guild seals become more valuable than sacks of goods.",
-    availableNpcIds: ["npc-new-003", "npc-new-031", "npc-new-039", "npc-legacy-120"],
+    availableNpcIds: ["character-003", "character-031", "character-039", "character-169"],
     priceTable: {
       "coastal-salt": 12,
       "mill-flour": 11,

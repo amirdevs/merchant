@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Building2, ClipboardList, Gavel, Handshake, Map, Menu, PackageSearch, ScrollText, UserRoundPlus } from "lucide-react";
 import type { Character, Marketplace } from "@/data/types";
-import { remakeCharacterPortraitAsset, remakeCharacterView } from "@/data/characters/characterPortraitManifest";
+import { characterPortraitAssetForCharacter, characterProfileView } from "@/data/characters/characterPortraitManifest";
 import type { GameState } from "@/lib/game";
 import { eventBiases, eventIsActive, nextEventDay } from "@/lib/events";
 import { money } from "@/lib/format";
@@ -11,7 +11,7 @@ import { Button, LedgerRow, Panel, ScreenFrame, StatChip } from "@/components/ui
 
 export function MarketHubView({ state, market, people, onNavigate, onSelectCustomer, onNextCustomer, onPackup }: { state: GameState; market: Marketplace; people: Character[]; onNavigate: (view: GameView) => void; onSelectCustomer: (person: Character) => void; onNextCustomer: () => void; onPackup: () => void; onUnavailable: (message: string) => void }) {
   const currentCustomer = people.find((person) => person.index === state.selectedCharacterIndex) || null;
-  const currentCustomerView = currentCustomer ? remakeCharacterView(currentCustomer) : null;
+  const currentCustomerView = currentCustomer ? characterProfileView(currentCustomer) : null;
   const seenToday = state.customerQueueDay === state.day ? new Set(state.seenCharacterIndexes || []) : new Set<number>();
   const waitingPeople = people.filter((person) => person.index !== currentCustomer?.index && !seenToday.has(person.index)).slice(0, 3);
   const eventActive = eventIsActive(market, state.day);
@@ -76,7 +76,7 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
                 {waitingPeople.length ? (
                   <div className="grid gap-1.5">
                     {waitingPeople.map((person) => {
-                      const view = remakeCharacterView(person);
+                      const view = characterProfileView(person);
                       return (
                         <LedgerRow
                           key={person.index}
@@ -130,8 +130,8 @@ export function MarketHubView({ state, market, people, onNavigate, onSelectCusto
 }
 
 function CustomerPortrait({ person }: { person: Character }) {
-  const view = remakeCharacterView(person);
-  const src = remakeCharacterPortraitAsset(person);
+  const view = characterProfileView(person);
+  const src = characterPortraitAssetForCharacter(person);
   return (
     <span className="grid h-20 w-20 place-items-center overflow-hidden rounded-sm border border-[#9a7138]/70 bg-[#f2ddb1] text-[#26170a] shadow-inner">
       {src ? <img className="h-full w-full object-cover object-top" src={src} alt={view.name} /> : <UserRoundPlus />}

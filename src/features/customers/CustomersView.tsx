@@ -1,6 +1,6 @@
 import { MessageSquare, Search, UserRound } from "lucide-react";
 import type { Character } from "@/data/types";
-import { remakeCharacterPortraitAsset, remakeCharacterView } from "@/data/characters/characterPortraitManifest";
+import { characterPortraitAssetForCharacter, characterProfileView } from "@/data/characters/characterPortraitManifest";
 import { dialogueChoices, type DialogueEffect, type DialogueNodeId } from "@/lib/dialogue";
 import { currentKingdom, currentMarket, marketplaces, type GameState } from "@/lib/game";
 import { relationFor } from "@/lib/reputation";
@@ -14,7 +14,7 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
   const market = currentMarket(state);
   const kingdom = currentKingdom(state);
   const selectedRelation = relationFor(state.npcRelations, selected);
-  const selectedView = selected ? remakeCharacterView(selected) : null;
+  const selectedView = selected ? characterProfileView(selected) : null;
   const recentNotes = selected ? state.dialogueLog.filter((entry) => entry.characterIndex === selected.index).slice(0, 5) : [];
 
   return (
@@ -35,7 +35,7 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
               <span>Portrait</span><span>Name</span><span>Profession</span><span>Story Hook</span><span>Role Tags</span><span>Stock</span><span>Status</span>
             </div>
             {people.map((person) => {
-              const view = remakeCharacterView(person);
+              const view = characterProfileView(person);
               return (
                 <button
                   key={person.index}
@@ -63,7 +63,7 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
               <h2 className="mt-3 text-center font-display text-3xl text-[#26170a]">{selectedView.name}</h2>
               <p className="text-center font-bold text-[#75501f]">{selectedView.profession}</p>
               <p className="mt-2 text-center text-xs font-black uppercase tracking-[0.16em] text-[#9a7138]">
-                {[selectedView.ancestryOrSpecies, ...selectedView.magicalTraits].filter(Boolean).join(" / ") || "Original remake identity"}
+                {[selectedView.ancestryOrSpecies, ...selectedView.magicalTraits].filter(Boolean).join(" / ") || "Character profile pending"}
               </p>
               <dl className="mt-3 grid grid-cols-2 gap-2">
                 <StatChip label="Wealth" value="Budget hint" />
@@ -101,8 +101,8 @@ export function CustomersView({ state, people, selected, onSelect, onNext, onNav
 }
 
 function Portrait({ person, large }: { person: Character; large?: boolean }) {
-  const src = remakeCharacterPortraitAsset(person);
-  const view = remakeCharacterView(person);
+  const src = characterPortraitAssetForCharacter(person);
+  const view = characterProfileView(person);
   return (
     <span className={`${large ? "h-40 w-40" : "h-12 w-12"} grid shrink-0 place-items-center overflow-hidden rounded-md border border-[#9a7138]/70 bg-[#f2ddb1] text-[#26170a]`}>
       {src ? <img className="h-full w-full object-cover object-top" src={src} alt={view.name} /> : <UserRound />}

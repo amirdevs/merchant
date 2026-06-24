@@ -1,6 +1,6 @@
-import type { CharacterExpression, CharacterExpressionTier, CharacterGameplayGroup } from "./characterRemakeTypes";
+import type { CharacterExpression, CharacterExpressionTier, CharacterGameplayGroup } from "./characterProfileTypes";
 
-export type CharacterIdentitySource = "legacy_reworked" | "new_useful_npc";
+export type CharacterRosterGroup = "supporting_cast" | "primary_cast";
 
 export type CharacterIdentityBatchStatus =
   | "identity_draft"
@@ -15,7 +15,7 @@ export interface CharacterExpressionProfile {
 
 export interface FinalCharacterIdentityProfile {
   readonly characterId: string;
-  readonly source: CharacterIdentitySource;
+  readonly rosterGroup: CharacterRosterGroup;
   readonly originalIndex: number | null;
   readonly seedId: string | null;
   readonly finalDisplayName: string;

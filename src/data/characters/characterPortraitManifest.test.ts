@@ -8,10 +8,10 @@ import {
   characterPortraitsByOutputFile,
   EXPECTED_CHARACTER_IDENTITY_COUNT,
   EXPECTED_CHARACTER_PORTRAIT_COUNT,
-  EXPECTED_LEGACY_REWORKED_COUNT,
-  EXPECTED_USEFUL_NEW_NPC_COUNT,
-  remakeCharacterPortraitAsset,
-  remakeCharacterView,
+  EXPECTED_SUPPORTING_CAST_COUNT,
+  EXPECTED_PRIMARY_CAST_COUNT,
+  characterPortraitAssetForCharacter,
+  characterProfileView,
   runtimePortraitAsset,
 } from "./characterPortraitManifest";
 
@@ -20,8 +20,8 @@ describe("character portrait manifest", () => {
     expect(characterPortraitManifestSummary.promptSheetCount).toBe(61);
     expect(characterPortraitManifestSummary.portraitCount).toBe(EXPECTED_CHARACTER_PORTRAIT_COUNT);
     expect(characterPortraitManifestSummary.identityCount).toBe(EXPECTED_CHARACTER_IDENTITY_COUNT);
-    expect(characterPortraitManifestSummary.usefulNewNpcCount).toBe(EXPECTED_USEFUL_NEW_NPC_COUNT);
-    expect(characterPortraitManifestSummary.legacyReworkedCount).toBe(EXPECTED_LEGACY_REWORKED_COUNT);
+    expect(characterPortraitManifestSummary.primaryCastCount).toBe(EXPECTED_PRIMARY_CAST_COUNT);
+    expect(characterPortraitManifestSummary.supportingCastCount).toBe(EXPECTED_SUPPORTING_CAST_COUNT);
   });
 
   it("has unique output files and image ids", () => {
@@ -30,12 +30,12 @@ describe("character portrait manifest", () => {
   });
 
   it("maps known first and last portrait assets", () => {
-    expect(characterPortraitsByOutputFile.has("npc-new-001-neutral.png")).toBe(true);
-    expect(characterPortraitsByOutputFile.has("npc-legacy-191-neutral.png")).toBe(true);
-    expect(runtimePortraitAsset("npc-new-001-neutral.png")).toBe("/assets/portraits/characters/npc-new-001-neutral.png");
+    expect(characterPortraitsByOutputFile.has("character-001-neutral.png")).toBe(true);
+    expect(characterPortraitsByOutputFile.has("character-240-neutral.png")).toBe(true);
+    expect(runtimePortraitAsset("character-001-neutral.png")).toBe("/assets/portraits/characters/character-001-neutral.png");
   });
 
-  it("links legacy generated indexes to remake profiles and portrait paths", () => {
+  it("links generated indexes to character profiles and portrait paths", () => {
     const generatedReferenceCharacter = {
       index: 0,
       name: "Guard",
@@ -55,10 +55,10 @@ describe("character portrait manifest", () => {
       inventory: [],
     } satisfies Character;
 
-    const view = remakeCharacterView(generatedReferenceCharacter);
+    const view = characterProfileView(generatedReferenceCharacter);
     expect(view.name).not.toBe("Guard");
-    expect(view.id).toBe("npc-legacy-000");
-    expect(remakeCharacterPortraitAsset(generatedReferenceCharacter)).toMatch(/^\/assets\/portraits\/characters\/npc-legacy-000-/);
+    expect(view.id).toBe("character-049");
+    expect(characterPortraitAssetForCharacter(generatedReferenceCharacter)).toMatch(/^\/assets\/portraits\/characters\/character-049-/);
   });
 
   it("has at least one portrait for every identity", () => {

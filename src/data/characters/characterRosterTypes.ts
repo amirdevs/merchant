@@ -1,6 +1,6 @@
-import type { CharacterExpressionTier, CharacterReworkStatus } from "./characterRemakeTypes";
+import type { CharacterExpressionTier, CharacterRosterStatus } from "./characterProfileTypes";
 
-export type CharacterRosterSource = "legacy_generated" | "new_useful_npc" | "future_story_npc";
+export type CharacterRosterGroup = "supporting_cast_pool" | "primary_cast" | "future_story_cast";
 
 export type CharacterPortraitGenerationStatus =
   | "BLOCKED_UNTIL_IDENTITY_CATALOG"
@@ -17,12 +17,12 @@ export interface PortraitTierAllocation {
 }
 
 export interface CharacterRosterPoolPlan {
-  readonly source: CharacterRosterSource;
+  readonly rosterGroup: CharacterRosterGroup;
   readonly label: string;
   readonly characterCount: number;
   readonly visibleCount: number;
   readonly hiddenOrMergedCount: number;
-  readonly defaultStatus: CharacterReworkStatus;
+  readonly defaultStatus: CharacterRosterStatus;
   readonly planningNotes: readonly string[];
   readonly portraitAllocations: readonly PortraitTierAllocation[];
 }
@@ -38,7 +38,7 @@ export interface FinalCharacterRosterPlan {
   readonly planId: string;
   readonly portraitGenerationStatus: CharacterPortraitGenerationStatus;
   readonly finalVisibleCharacterTarget: number;
-  readonly hiddenOrMergedLegacyTarget: number;
+  readonly hiddenOrMergedSupportingCastTarget: number;
   readonly plannedPortraitImageTarget: number;
   readonly completedIdentityCatalogBatches?: readonly CharacterIdentityCatalogProgress[];
   readonly pools: readonly CharacterRosterPoolPlan[];

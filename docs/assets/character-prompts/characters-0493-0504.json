@@ -51,32 +51,32 @@
   "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified. Put a small readable filename label in the bottom-left corner of each cell. The label text must exactly match that entry outputFile, use pure magenta #FF00FF, simple bold readable font, no outline, no shadow, no glow, no gradient. Keep the label fully separated from the character art on empty green #00FF00 with a clear safety gap.",
   "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
   "sheetOrderLock": [
-    "R1C1 = npc-legacy-110-neutral.png — Captain Orvo Bluebanner, caravan banner captain, neutral, ogre-kin",
-    "R1C2 = npc-legacy-110-happy.png — Captain Orvo Bluebanner, caravan banner captain, happy, ogre-kin",
-    "R1C3 = npc-legacy-110-suspicious.png — Captain Orvo Bluebanner, caravan banner captain, suspicious, ogre-kin",
-    "R2C1 = npc-legacy-110-worried.png — Captain Orvo Bluebanner, caravan banner captain, worried, ogre-kin",
-    "R2C2 = npc-legacy-110-angry.png — Captain Orvo Bluebanner, caravan banner captain, angry, ogre-kin",
-    "R2C3 = npc-legacy-111-neutral.png — Madame Ivara Lacecoin, luxury pawnbroker, neutral, tiefling",
-    "R3C1 = npc-legacy-111-happy.png — Madame Ivara Lacecoin, luxury pawnbroker, happy, tiefling",
-    "R3C2 = npc-legacy-111-suspicious.png — Madame Ivara Lacecoin, luxury pawnbroker, suspicious, tiefling",
-    "R3C3 = npc-legacy-111-worried.png — Madame Ivara Lacecoin, luxury pawnbroker, worried, tiefling",
-    "R4C1 = npc-legacy-111-angry.png — Madame Ivara Lacecoin, luxury pawnbroker, angry, tiefling",
-    "R4C2 = npc-legacy-112-neutral.png — Pell Oatwhistle, grain futures clerk, neutral, halfling",
-    "R4C3 = npc-legacy-112-happy.png — Pell Oatwhistle, grain futures clerk, happy, halfling"
+    "R1C1 = character-159-neutral.png — Captain Orvo Bluebanner, caravan banner captain, neutral, ogre-kin",
+    "R1C2 = character-159-happy.png — Captain Orvo Bluebanner, caravan banner captain, happy, ogre-kin",
+    "R1C3 = character-159-suspicious.png — Captain Orvo Bluebanner, caravan banner captain, suspicious, ogre-kin",
+    "R2C1 = character-159-worried.png — Captain Orvo Bluebanner, caravan banner captain, worried, ogre-kin",
+    "R2C2 = character-159-angry.png — Captain Orvo Bluebanner, caravan banner captain, angry, ogre-kin",
+    "R2C3 = character-160-neutral.png — Madame Ivara Lacecoin, luxury pawnbroker, neutral, tiefling",
+    "R3C1 = character-160-happy.png — Madame Ivara Lacecoin, luxury pawnbroker, happy, tiefling",
+    "R3C2 = character-160-suspicious.png — Madame Ivara Lacecoin, luxury pawnbroker, suspicious, tiefling",
+    "R3C3 = character-160-worried.png — Madame Ivara Lacecoin, luxury pawnbroker, worried, tiefling",
+    "R4C1 = character-160-angry.png — Madame Ivara Lacecoin, luxury pawnbroker, angry, tiefling",
+    "R4C2 = character-161-neutral.png — Pell Oatwhistle, grain futures clerk, neutral, halfling",
+    "R4C3 = character-161-happy.png — Pell Oatwhistle, grain futures clerk, happy, halfling"
   ],
   "order": [
-    "1. npc-legacy-110-neutral",
-    "2. npc-legacy-110-happy",
-    "3. npc-legacy-110-suspicious",
-    "4. npc-legacy-110-worried",
-    "5. npc-legacy-110-angry",
-    "6. npc-legacy-111-neutral",
-    "7. npc-legacy-111-happy",
-    "8. npc-legacy-111-suspicious",
-    "9. npc-legacy-111-worried",
-    "10. npc-legacy-111-angry",
-    "11. npc-legacy-112-neutral",
-    "12. npc-legacy-112-happy"
+    "1. character-159-neutral",
+    "2. character-159-happy",
+    "3. character-159-suspicious",
+    "4. character-159-worried",
+    "5. character-159-angry",
+    "6. character-160-neutral",
+    "7. character-160-happy",
+    "8. character-160-suspicious",
+    "9. character-160-worried",
+    "10. character-160-angry",
+    "11. character-161-neutral",
+    "12. character-161-happy"
   ],
   "images": [
     {
@@ -84,12 +84,12 @@
       "row": 1,
       "column": 1,
       "cell": "R1C1",
-      "imageId": "npc-legacy-110-neutral",
-      "characterId": "npc-legacy-110",
+      "imageId": "character-159-neutral",
+      "characterId": "character-159",
       "displayName": "Captain Orvo Bluebanner",
       "profession": "caravan banner captain",
       "expression": "neutral",
-      "outputFile": "npc-legacy-110-neutral.png",
+      "outputFile": "character-159-neutral.png",
       "cropCell": {
         "x": 0,
         "y": 0,
@@ -100,7 +100,7 @@
       "magicalTraits": [
         "wind shimmer around banner edge"
       ],
-      "identityAnchor": "same person as npc-legacy-110: huge ogre-kin silhouette, sky-blue banner cloak, braided black beard, bell-topped staff, ochre skin, caravan banner captain, ogre-kin, route staff",
+      "identityAnchor": "same person as character-159: huge ogre-kin silhouette, sky-blue banner cloak, braided black beard, bell-topped staff, ochre skin, caravan banner captain, ogre-kin, route staff",
       "visualTraits": [
         "huge ogre-kin silhouette",
         "sky-blue banner cloak",
@@ -119,7 +119,7 @@
       "globalOrder": 493,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-110-neutral.png",
+        "text": "character-159-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -132,12 +132,12 @@
       "row": 1,
       "column": 2,
       "cell": "R1C2",
-      "imageId": "npc-legacy-110-happy",
-      "characterId": "npc-legacy-110",
+      "imageId": "character-159-happy",
+      "characterId": "character-159",
       "displayName": "Captain Orvo Bluebanner",
       "profession": "caravan banner captain",
       "expression": "happy",
-      "outputFile": "npc-legacy-110-happy.png",
+      "outputFile": "character-159-happy.png",
       "cropCell": {
         "x": 1024,
         "y": 0,
@@ -148,7 +148,7 @@
       "magicalTraits": [
         "wind shimmer around banner edge"
       ],
-      "identityAnchor": "same person as npc-legacy-110: huge ogre-kin silhouette, sky-blue banner cloak, braided black beard, bell-topped staff, ochre skin, caravan banner captain, ogre-kin, route staff",
+      "identityAnchor": "same person as character-159: huge ogre-kin silhouette, sky-blue banner cloak, braided black beard, bell-topped staff, ochre skin, caravan banner captain, ogre-kin, route staff",
       "visualTraits": [
         "huge ogre-kin silhouette",
         "sky-blue banner cloak",
@@ -167,7 +167,7 @@
       "globalOrder": 494,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-110-happy.png",
+        "text": "character-159-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -180,12 +180,12 @@
       "row": 1,
       "column": 3,
       "cell": "R1C3",
-      "imageId": "npc-legacy-110-suspicious",
-      "characterId": "npc-legacy-110",
+      "imageId": "character-159-suspicious",
+      "characterId": "character-159",
       "displayName": "Captain Orvo Bluebanner",
       "profession": "caravan banner captain",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-110-suspicious.png",
+      "outputFile": "character-159-suspicious.png",
       "cropCell": {
         "x": 2048,
         "y": 0,
@@ -196,7 +196,7 @@
       "magicalTraits": [
         "wind shimmer around banner edge"
       ],
-      "identityAnchor": "same person as npc-legacy-110: huge ogre-kin silhouette, sky-blue banner cloak, braided black beard, bell-topped staff, ochre skin, caravan banner captain, ogre-kin, route staff",
+      "identityAnchor": "same person as character-159: huge ogre-kin silhouette, sky-blue banner cloak, braided black beard, bell-topped staff, ochre skin, caravan banner captain, ogre-kin, route staff",
       "visualTraits": [
         "huge ogre-kin silhouette",
         "sky-blue banner cloak",
@@ -215,7 +215,7 @@
       "globalOrder": 495,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-110-suspicious.png",
+        "text": "character-159-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -228,12 +228,12 @@
       "row": 2,
       "column": 1,
       "cell": "R2C1",
-      "imageId": "npc-legacy-110-worried",
-      "characterId": "npc-legacy-110",
+      "imageId": "character-159-worried",
+      "characterId": "character-159",
       "displayName": "Captain Orvo Bluebanner",
       "profession": "caravan banner captain",
       "expression": "worried",
-      "outputFile": "npc-legacy-110-worried.png",
+      "outputFile": "character-159-worried.png",
       "cropCell": {
         "x": 0,
         "y": 1024,
@@ -244,7 +244,7 @@
       "magicalTraits": [
         "wind shimmer around banner edge"
       ],
-      "identityAnchor": "same person as npc-legacy-110: huge ogre-kin silhouette, sky-blue banner cloak, braided black beard, bell-topped staff, ochre skin, caravan banner captain, ogre-kin, route staff",
+      "identityAnchor": "same person as character-159: huge ogre-kin silhouette, sky-blue banner cloak, braided black beard, bell-topped staff, ochre skin, caravan banner captain, ogre-kin, route staff",
       "visualTraits": [
         "huge ogre-kin silhouette",
         "sky-blue banner cloak",
@@ -263,7 +263,7 @@
       "globalOrder": 496,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-110-worried.png",
+        "text": "character-159-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -276,12 +276,12 @@
       "row": 2,
       "column": 2,
       "cell": "R2C2",
-      "imageId": "npc-legacy-110-angry",
-      "characterId": "npc-legacy-110",
+      "imageId": "character-159-angry",
+      "characterId": "character-159",
       "displayName": "Captain Orvo Bluebanner",
       "profession": "caravan banner captain",
       "expression": "angry",
-      "outputFile": "npc-legacy-110-angry.png",
+      "outputFile": "character-159-angry.png",
       "cropCell": {
         "x": 1024,
         "y": 1024,
@@ -292,7 +292,7 @@
       "magicalTraits": [
         "wind shimmer around banner edge"
       ],
-      "identityAnchor": "same person as npc-legacy-110: huge ogre-kin silhouette, sky-blue banner cloak, braided black beard, bell-topped staff, ochre skin, caravan banner captain, ogre-kin, route staff",
+      "identityAnchor": "same person as character-159: huge ogre-kin silhouette, sky-blue banner cloak, braided black beard, bell-topped staff, ochre skin, caravan banner captain, ogre-kin, route staff",
       "visualTraits": [
         "huge ogre-kin silhouette",
         "sky-blue banner cloak",
@@ -311,7 +311,7 @@
       "globalOrder": 497,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-110-angry.png",
+        "text": "character-159-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -324,12 +324,12 @@
       "row": 2,
       "column": 3,
       "cell": "R2C3",
-      "imageId": "npc-legacy-111-neutral",
-      "characterId": "npc-legacy-111",
+      "imageId": "character-160-neutral",
+      "characterId": "character-160",
       "displayName": "Madame Ivara Lacecoin",
       "profession": "luxury pawnbroker",
       "expression": "neutral",
-      "outputFile": "npc-legacy-111-neutral.png",
+      "outputFile": "character-160-neutral.png",
       "cropCell": {
         "x": 2048,
         "y": 1024,
@@ -340,7 +340,7 @@
       "magicalTraits": [
         "faint ruby glow in horn caps"
       ],
-      "identityAnchor": "same person as npc-legacy-111: glamorous tiefling silhouette, gold-capped horns, pearl choker, black lace sleeves, velvet ring tray, luxury pawnbroker, tiefling, velvet ring tray",
+      "identityAnchor": "same person as character-160: glamorous tiefling silhouette, gold-capped horns, pearl choker, black lace sleeves, velvet ring tray, luxury pawnbroker, tiefling, velvet ring tray",
       "visualTraits": [
         "glamorous tiefling silhouette",
         "gold-capped horns",
@@ -359,7 +359,7 @@
       "globalOrder": 498,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-111-neutral.png",
+        "text": "character-160-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -372,12 +372,12 @@
       "row": 3,
       "column": 1,
       "cell": "R3C1",
-      "imageId": "npc-legacy-111-happy",
-      "characterId": "npc-legacy-111",
+      "imageId": "character-160-happy",
+      "characterId": "character-160",
       "displayName": "Madame Ivara Lacecoin",
       "profession": "luxury pawnbroker",
       "expression": "happy",
-      "outputFile": "npc-legacy-111-happy.png",
+      "outputFile": "character-160-happy.png",
       "cropCell": {
         "x": 0,
         "y": 2048,
@@ -388,7 +388,7 @@
       "magicalTraits": [
         "faint ruby glow in horn caps"
       ],
-      "identityAnchor": "same person as npc-legacy-111: glamorous tiefling silhouette, gold-capped horns, pearl choker, black lace sleeves, velvet ring tray, luxury pawnbroker, tiefling, velvet ring tray",
+      "identityAnchor": "same person as character-160: glamorous tiefling silhouette, gold-capped horns, pearl choker, black lace sleeves, velvet ring tray, luxury pawnbroker, tiefling, velvet ring tray",
       "visualTraits": [
         "glamorous tiefling silhouette",
         "gold-capped horns",
@@ -407,7 +407,7 @@
       "globalOrder": 499,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-111-happy.png",
+        "text": "character-160-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -420,12 +420,12 @@
       "row": 3,
       "column": 2,
       "cell": "R3C2",
-      "imageId": "npc-legacy-111-suspicious",
-      "characterId": "npc-legacy-111",
+      "imageId": "character-160-suspicious",
+      "characterId": "character-160",
       "displayName": "Madame Ivara Lacecoin",
       "profession": "luxury pawnbroker",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-111-suspicious.png",
+      "outputFile": "character-160-suspicious.png",
       "cropCell": {
         "x": 1024,
         "y": 2048,
@@ -436,7 +436,7 @@
       "magicalTraits": [
         "faint ruby glow in horn caps"
       ],
-      "identityAnchor": "same person as npc-legacy-111: glamorous tiefling silhouette, gold-capped horns, pearl choker, black lace sleeves, velvet ring tray, luxury pawnbroker, tiefling, velvet ring tray",
+      "identityAnchor": "same person as character-160: glamorous tiefling silhouette, gold-capped horns, pearl choker, black lace sleeves, velvet ring tray, luxury pawnbroker, tiefling, velvet ring tray",
       "visualTraits": [
         "glamorous tiefling silhouette",
         "gold-capped horns",
@@ -455,7 +455,7 @@
       "globalOrder": 500,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-111-suspicious.png",
+        "text": "character-160-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -468,12 +468,12 @@
       "row": 3,
       "column": 3,
       "cell": "R3C3",
-      "imageId": "npc-legacy-111-worried",
-      "characterId": "npc-legacy-111",
+      "imageId": "character-160-worried",
+      "characterId": "character-160",
       "displayName": "Madame Ivara Lacecoin",
       "profession": "luxury pawnbroker",
       "expression": "worried",
-      "outputFile": "npc-legacy-111-worried.png",
+      "outputFile": "character-160-worried.png",
       "cropCell": {
         "x": 2048,
         "y": 2048,
@@ -484,7 +484,7 @@
       "magicalTraits": [
         "faint ruby glow in horn caps"
       ],
-      "identityAnchor": "same person as npc-legacy-111: glamorous tiefling silhouette, gold-capped horns, pearl choker, black lace sleeves, velvet ring tray, luxury pawnbroker, tiefling, velvet ring tray",
+      "identityAnchor": "same person as character-160: glamorous tiefling silhouette, gold-capped horns, pearl choker, black lace sleeves, velvet ring tray, luxury pawnbroker, tiefling, velvet ring tray",
       "visualTraits": [
         "glamorous tiefling silhouette",
         "gold-capped horns",
@@ -503,7 +503,7 @@
       "globalOrder": 501,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-111-worried.png",
+        "text": "character-160-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -516,12 +516,12 @@
       "row": 4,
       "column": 1,
       "cell": "R4C1",
-      "imageId": "npc-legacy-111-angry",
-      "characterId": "npc-legacy-111",
+      "imageId": "character-160-angry",
+      "characterId": "character-160",
       "displayName": "Madame Ivara Lacecoin",
       "profession": "luxury pawnbroker",
       "expression": "angry",
-      "outputFile": "npc-legacy-111-angry.png",
+      "outputFile": "character-160-angry.png",
       "cropCell": {
         "x": 0,
         "y": 3072,
@@ -532,7 +532,7 @@
       "magicalTraits": [
         "faint ruby glow in horn caps"
       ],
-      "identityAnchor": "same person as npc-legacy-111: glamorous tiefling silhouette, gold-capped horns, pearl choker, black lace sleeves, velvet ring tray, luxury pawnbroker, tiefling, velvet ring tray",
+      "identityAnchor": "same person as character-160: glamorous tiefling silhouette, gold-capped horns, pearl choker, black lace sleeves, velvet ring tray, luxury pawnbroker, tiefling, velvet ring tray",
       "visualTraits": [
         "glamorous tiefling silhouette",
         "gold-capped horns",
@@ -551,7 +551,7 @@
       "globalOrder": 502,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-111-angry.png",
+        "text": "character-160-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -564,12 +564,12 @@
       "row": 4,
       "column": 2,
       "cell": "R4C2",
-      "imageId": "npc-legacy-112-neutral",
-      "characterId": "npc-legacy-112",
+      "imageId": "character-161-neutral",
+      "characterId": "character-161",
       "displayName": "Pell Oatwhistle",
       "profession": "grain futures clerk",
       "expression": "neutral",
-      "outputFile": "npc-legacy-112-neutral.png",
+      "outputFile": "character-161-neutral.png",
       "cropCell": {
         "x": 1024,
         "y": 3072,
@@ -578,7 +578,7 @@
       },
       "ancestryOrSpecies": "halfling",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-112: tiny halfling silhouette, sandy curls, oversized green coat, ink-stained fingers, contract-scroll wings, grain futures clerk, halfling, grain contracts",
+      "identityAnchor": "same person as character-161: tiny halfling silhouette, sandy curls, oversized green coat, ink-stained fingers, contract-scroll wings, grain futures clerk, halfling, grain contracts",
       "visualTraits": [
         "tiny halfling silhouette",
         "sandy curls",
@@ -597,7 +597,7 @@
       "globalOrder": 503,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-112-neutral.png",
+        "text": "character-161-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -610,12 +610,12 @@
       "row": 4,
       "column": 3,
       "cell": "R4C3",
-      "imageId": "npc-legacy-112-happy",
-      "characterId": "npc-legacy-112",
+      "imageId": "character-161-happy",
+      "characterId": "character-161",
       "displayName": "Pell Oatwhistle",
       "profession": "grain futures clerk",
       "expression": "happy",
-      "outputFile": "npc-legacy-112-happy.png",
+      "outputFile": "character-161-happy.png",
       "cropCell": {
         "x": 2048,
         "y": 3072,
@@ -624,7 +624,7 @@
       },
       "ancestryOrSpecies": "halfling",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-112: tiny halfling silhouette, sandy curls, oversized green coat, ink-stained fingers, contract-scroll wings, grain futures clerk, halfling, grain contracts",
+      "identityAnchor": "same person as character-161: tiny halfling silhouette, sandy curls, oversized green coat, ink-stained fingers, contract-scroll wings, grain futures clerk, halfling, grain contracts",
       "visualTraits": [
         "tiny halfling silhouette",
         "sandy curls",
@@ -643,7 +643,7 @@
       "globalOrder": 504,
       "batchId": "characters-0493-0504",
       "filenameLabel": {
-        "text": "npc-legacy-112-happy.png",
+        "text": "character-161-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",

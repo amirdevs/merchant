@@ -51,32 +51,32 @@
   "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified. Put a small readable filename label in the bottom-left corner of each cell. The label text must exactly match that entry outputFile, use pure magenta #FF00FF, simple bold readable font, no outline, no shadow, no glow, no gradient. Keep the label fully separated from the character art on empty green #00FF00 with a clear safety gap.",
   "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
   "sheetOrderLock": [
-    "R1C1 = npc-legacy-031-happy.png — Padrig Nailroot, carpenter, happy, human",
-    "R1C2 = npc-legacy-031-suspicious.png — Padrig Nailroot, carpenter, suspicious, human",
-    "R1C3 = npc-legacy-032-neutral.png — Zaira Ashpetal, flower seller, neutral, human",
-    "R2C1 = npc-legacy-032-happy.png — Zaira Ashpetal, flower seller, happy, human",
-    "R2C2 = npc-legacy-032-suspicious.png — Zaira Ashpetal, flower seller, suspicious, human",
-    "R2C3 = npc-legacy-033-neutral.png — Rusk Ironbelly, ore buyer, neutral, dwarf",
-    "R3C1 = npc-legacy-034-neutral.png — Lumi Starling, songbird seller, neutral, birdfolk",
-    "R3C2 = npc-legacy-035-neutral.png — Marek Saltfront, pickle seller, neutral, human",
-    "R3C3 = npc-legacy-036-neutral.png — Imri Lockspoke, locksmith, neutral, tiefling",
-    "R4C1 = npc-legacy-036-happy.png — Imri Lockspoke, locksmith, happy, tiefling",
-    "R4C2 = npc-legacy-036-suspicious.png — Imri Lockspoke, locksmith, suspicious, tiefling",
-    "R4C3 = npc-legacy-037-neutral.png — Bela Fernstep, goatherd trader, neutral, human"
+    "R1C1 = character-080-happy.png — Padrig Nailroot, carpenter, happy, human",
+    "R1C2 = character-080-suspicious.png — Padrig Nailroot, carpenter, suspicious, human",
+    "R1C3 = character-081-neutral.png — Zaira Ashpetal, flower seller, neutral, human",
+    "R2C1 = character-081-happy.png — Zaira Ashpetal, flower seller, happy, human",
+    "R2C2 = character-081-suspicious.png — Zaira Ashpetal, flower seller, suspicious, human",
+    "R2C3 = character-082-neutral.png — Rusk Ironbelly, ore buyer, neutral, dwarf",
+    "R3C1 = character-083-neutral.png — Lumi Starling, songbird seller, neutral, birdfolk",
+    "R3C2 = character-084-neutral.png — Marek Saltfront, pickle seller, neutral, human",
+    "R3C3 = character-085-neutral.png — Imri Lockspoke, locksmith, neutral, tiefling",
+    "R4C1 = character-085-happy.png — Imri Lockspoke, locksmith, happy, tiefling",
+    "R4C2 = character-085-suspicious.png — Imri Lockspoke, locksmith, suspicious, tiefling",
+    "R4C3 = character-086-neutral.png — Bela Fernstep, goatherd trader, neutral, human"
   ],
   "order": [
-    "1. npc-legacy-031-happy",
-    "2. npc-legacy-031-suspicious",
-    "3. npc-legacy-032-neutral",
-    "4. npc-legacy-032-happy",
-    "5. npc-legacy-032-suspicious",
-    "6. npc-legacy-033-neutral",
-    "7. npc-legacy-034-neutral",
-    "8. npc-legacy-035-neutral",
-    "9. npc-legacy-036-neutral",
-    "10. npc-legacy-036-happy",
-    "11. npc-legacy-036-suspicious",
-    "12. npc-legacy-037-neutral"
+    "1. character-080-happy",
+    "2. character-080-suspicious",
+    "3. character-081-neutral",
+    "4. character-081-happy",
+    "5. character-081-suspicious",
+    "6. character-082-neutral",
+    "7. character-083-neutral",
+    "8. character-084-neutral",
+    "9. character-085-neutral",
+    "10. character-085-happy",
+    "11. character-085-suspicious",
+    "12. character-086-neutral"
   ],
   "images": [
     {
@@ -84,12 +84,12 @@
       "row": 1,
       "column": 1,
       "cell": "R1C1",
-      "imageId": "npc-legacy-031-happy",
-      "characterId": "npc-legacy-031",
+      "imageId": "character-080-happy",
+      "characterId": "character-080",
       "displayName": "Padrig Nailroot",
       "profession": "carpenter",
       "expression": "happy",
-      "outputFile": "npc-legacy-031-happy.png",
+      "outputFile": "character-080-happy.png",
       "cropCell": {
         "x": 0,
         "y": 0,
@@ -98,7 +98,7 @@
       },
       "ancestryOrSpecies": "human",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-031: burly craftsman silhouette, sawdust beard, green eyes, rolled tan sleeves, leather braces, carpenter, human, carved ruler",
+      "identityAnchor": "same person as character-080: burly craftsman silhouette, sawdust beard, green eyes, rolled tan sleeves, leather braces, carpenter, human, carved ruler",
       "visualTraits": [
         "burly craftsman silhouette",
         "sawdust beard",
@@ -116,7 +116,7 @@
       "globalOrder": 301,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-031-happy.png",
+        "text": "character-080-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -129,12 +129,12 @@
       "row": 1,
       "column": 2,
       "cell": "R1C2",
-      "imageId": "npc-legacy-031-suspicious",
-      "characterId": "npc-legacy-031",
+      "imageId": "character-080-suspicious",
+      "characterId": "character-080",
       "displayName": "Padrig Nailroot",
       "profession": "carpenter",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-031-suspicious.png",
+      "outputFile": "character-080-suspicious.png",
       "cropCell": {
         "x": 1024,
         "y": 0,
@@ -143,7 +143,7 @@
       },
       "ancestryOrSpecies": "human",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-031: burly craftsman silhouette, sawdust beard, green eyes, rolled tan sleeves, leather braces, carpenter, human, carved ruler",
+      "identityAnchor": "same person as character-080: burly craftsman silhouette, sawdust beard, green eyes, rolled tan sleeves, leather braces, carpenter, human, carved ruler",
       "visualTraits": [
         "burly craftsman silhouette",
         "sawdust beard",
@@ -161,7 +161,7 @@
       "globalOrder": 302,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-031-suspicious.png",
+        "text": "character-080-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -174,12 +174,12 @@
       "row": 1,
       "column": 3,
       "cell": "R1C3",
-      "imageId": "npc-legacy-032-neutral",
-      "characterId": "npc-legacy-032",
+      "imageId": "character-081-neutral",
+      "characterId": "character-081",
       "displayName": "Zaira Ashpetal",
       "profession": "flower seller",
       "expression": "neutral",
-      "outputFile": "npc-legacy-032-neutral.png",
+      "outputFile": "character-081-neutral.png",
       "cropCell": {
         "x": 2048,
         "y": 0,
@@ -190,7 +190,7 @@
       "magicalTraits": [
         "one faintly glowing blue flower"
       ],
-      "identityAnchor": "same person as npc-legacy-032: young bright silhouette, coiled hair with petals, rose shawl, deep brown skin, blue flowers, flower seller, human, flower basket",
+      "identityAnchor": "same person as character-081: young bright silhouette, coiled hair with petals, rose shawl, deep brown skin, blue flowers, flower seller, human, flower basket",
       "visualTraits": [
         "young bright silhouette",
         "coiled hair with petals",
@@ -208,7 +208,7 @@
       "globalOrder": 303,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-032-neutral.png",
+        "text": "character-081-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -221,12 +221,12 @@
       "row": 2,
       "column": 1,
       "cell": "R2C1",
-      "imageId": "npc-legacy-032-happy",
-      "characterId": "npc-legacy-032",
+      "imageId": "character-081-happy",
+      "characterId": "character-081",
       "displayName": "Zaira Ashpetal",
       "profession": "flower seller",
       "expression": "happy",
-      "outputFile": "npc-legacy-032-happy.png",
+      "outputFile": "character-081-happy.png",
       "cropCell": {
         "x": 0,
         "y": 1024,
@@ -237,7 +237,7 @@
       "magicalTraits": [
         "one faintly glowing blue flower"
       ],
-      "identityAnchor": "same person as npc-legacy-032: young bright silhouette, coiled hair with petals, rose shawl, deep brown skin, blue flowers, flower seller, human, flower basket",
+      "identityAnchor": "same person as character-081: young bright silhouette, coiled hair with petals, rose shawl, deep brown skin, blue flowers, flower seller, human, flower basket",
       "visualTraits": [
         "young bright silhouette",
         "coiled hair with petals",
@@ -255,7 +255,7 @@
       "globalOrder": 304,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-032-happy.png",
+        "text": "character-081-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -268,12 +268,12 @@
       "row": 2,
       "column": 2,
       "cell": "R2C2",
-      "imageId": "npc-legacy-032-suspicious",
-      "characterId": "npc-legacy-032",
+      "imageId": "character-081-suspicious",
+      "characterId": "character-081",
       "displayName": "Zaira Ashpetal",
       "profession": "flower seller",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-032-suspicious.png",
+      "outputFile": "character-081-suspicious.png",
       "cropCell": {
         "x": 1024,
         "y": 1024,
@@ -284,7 +284,7 @@
       "magicalTraits": [
         "one faintly glowing blue flower"
       ],
-      "identityAnchor": "same person as npc-legacy-032: young bright silhouette, coiled hair with petals, rose shawl, deep brown skin, blue flowers, flower seller, human, flower basket",
+      "identityAnchor": "same person as character-081: young bright silhouette, coiled hair with petals, rose shawl, deep brown skin, blue flowers, flower seller, human, flower basket",
       "visualTraits": [
         "young bright silhouette",
         "coiled hair with petals",
@@ -302,7 +302,7 @@
       "globalOrder": 305,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-032-suspicious.png",
+        "text": "character-081-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -315,12 +315,12 @@
       "row": 2,
       "column": 3,
       "cell": "R2C3",
-      "imageId": "npc-legacy-033-neutral",
-      "characterId": "npc-legacy-033",
+      "imageId": "character-082-neutral",
+      "characterId": "character-082",
       "displayName": "Rusk Ironbelly",
       "profession": "ore buyer",
       "expression": "neutral",
-      "outputFile": "npc-legacy-033-neutral.png",
+      "outputFile": "character-082-neutral.png",
       "cropCell": {
         "x": 2048,
         "y": 1024,
@@ -329,7 +329,7 @@
       },
       "ancestryOrSpecies": "dwarf",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-033: short massive dwarf silhouette, dark umber skin, braided black beard, iron nose ring, slate apron, ore buyer, dwarf, ore sample",
+      "identityAnchor": "same person as character-082: short massive dwarf silhouette, dark umber skin, braided black beard, iron nose ring, slate apron, ore buyer, dwarf, ore sample",
       "visualTraits": [
         "short massive dwarf silhouette",
         "dark umber skin",
@@ -347,7 +347,7 @@
       "globalOrder": 306,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-033-neutral.png",
+        "text": "character-082-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -360,12 +360,12 @@
       "row": 3,
       "column": 1,
       "cell": "R3C1",
-      "imageId": "npc-legacy-034-neutral",
-      "characterId": "npc-legacy-034",
+      "imageId": "character-083-neutral",
+      "characterId": "character-083",
       "displayName": "Lumi Starling",
       "profession": "songbird seller",
       "expression": "neutral",
-      "outputFile": "npc-legacy-034-neutral.png",
+      "outputFile": "character-083-neutral.png",
       "cropCell": {
         "x": 0,
         "y": 2048,
@@ -374,7 +374,7 @@
       },
       "ancestryOrSpecies": "birdfolk",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-034: petite birdfolk silhouette, gold feather temples, black eyes, sky-blue cape, tiny cage, songbird seller, birdfolk, songbird cage",
+      "identityAnchor": "same person as character-083: petite birdfolk silhouette, gold feather temples, black eyes, sky-blue cape, tiny cage, songbird seller, birdfolk, songbird cage",
       "visualTraits": [
         "petite birdfolk silhouette",
         "gold feather temples",
@@ -392,7 +392,7 @@
       "globalOrder": 307,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-034-neutral.png",
+        "text": "character-083-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -405,12 +405,12 @@
       "row": 3,
       "column": 2,
       "cell": "R3C2",
-      "imageId": "npc-legacy-035-neutral",
-      "characterId": "npc-legacy-035",
+      "imageId": "character-084-neutral",
+      "characterId": "character-084",
       "displayName": "Marek Saltfront",
       "profession": "pickle seller",
       "expression": "neutral",
-      "outputFile": "npc-legacy-035-neutral.png",
+      "outputFile": "character-084-neutral.png",
       "cropCell": {
         "x": 1024,
         "y": 2048,
@@ -419,7 +419,7 @@
       },
       "ancestryOrSpecies": "human",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-035: narrow sour silhouette, salt-white moustache, sharp grey eyes, green-stained apron, small barrel, pickle seller, human, pickle barrel",
+      "identityAnchor": "same person as character-084: narrow sour silhouette, salt-white moustache, sharp grey eyes, green-stained apron, small barrel, pickle seller, human, pickle barrel",
       "visualTraits": [
         "narrow sour silhouette",
         "salt-white moustache",
@@ -437,7 +437,7 @@
       "globalOrder": 308,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-035-neutral.png",
+        "text": "character-084-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -450,12 +450,12 @@
       "row": 3,
       "column": 3,
       "cell": "R3C3",
-      "imageId": "npc-legacy-036-neutral",
-      "characterId": "npc-legacy-036",
+      "imageId": "character-085-neutral",
+      "characterId": "character-085",
       "displayName": "Imri Lockspoke",
       "profession": "locksmith",
       "expression": "neutral",
-      "outputFile": "npc-legacy-036-neutral.png",
+      "outputFile": "character-085-neutral.png",
       "cropCell": {
         "x": 2048,
         "y": 2048,
@@ -466,7 +466,7 @@
       "magicalTraits": [
         "faint violet glow in keyholes"
       ],
-      "identityAnchor": "same person as npc-legacy-036: slender tiefling silhouette, bronze skin, tiny curled horns, violet eyes, black gloves, locksmith, tiefling, fan of keys",
+      "identityAnchor": "same person as character-085: slender tiefling silhouette, bronze skin, tiny curled horns, violet eyes, black gloves, locksmith, tiefling, fan of keys",
       "visualTraits": [
         "slender tiefling silhouette",
         "bronze skin",
@@ -485,7 +485,7 @@
       "globalOrder": 309,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-036-neutral.png",
+        "text": "character-085-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -498,12 +498,12 @@
       "row": 4,
       "column": 1,
       "cell": "R4C1",
-      "imageId": "npc-legacy-036-happy",
-      "characterId": "npc-legacy-036",
+      "imageId": "character-085-happy",
+      "characterId": "character-085",
       "displayName": "Imri Lockspoke",
       "profession": "locksmith",
       "expression": "happy",
-      "outputFile": "npc-legacy-036-happy.png",
+      "outputFile": "character-085-happy.png",
       "cropCell": {
         "x": 0,
         "y": 3072,
@@ -514,7 +514,7 @@
       "magicalTraits": [
         "faint violet glow in keyholes"
       ],
-      "identityAnchor": "same person as npc-legacy-036: slender tiefling silhouette, bronze skin, tiny curled horns, violet eyes, black gloves, locksmith, tiefling, fan of keys",
+      "identityAnchor": "same person as character-085: slender tiefling silhouette, bronze skin, tiny curled horns, violet eyes, black gloves, locksmith, tiefling, fan of keys",
       "visualTraits": [
         "slender tiefling silhouette",
         "bronze skin",
@@ -533,7 +533,7 @@
       "globalOrder": 310,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-036-happy.png",
+        "text": "character-085-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -546,12 +546,12 @@
       "row": 4,
       "column": 2,
       "cell": "R4C2",
-      "imageId": "npc-legacy-036-suspicious",
-      "characterId": "npc-legacy-036",
+      "imageId": "character-085-suspicious",
+      "characterId": "character-085",
       "displayName": "Imri Lockspoke",
       "profession": "locksmith",
       "expression": "suspicious",
-      "outputFile": "npc-legacy-036-suspicious.png",
+      "outputFile": "character-085-suspicious.png",
       "cropCell": {
         "x": 1024,
         "y": 3072,
@@ -562,7 +562,7 @@
       "magicalTraits": [
         "faint violet glow in keyholes"
       ],
-      "identityAnchor": "same person as npc-legacy-036: slender tiefling silhouette, bronze skin, tiny curled horns, violet eyes, black gloves, locksmith, tiefling, fan of keys",
+      "identityAnchor": "same person as character-085: slender tiefling silhouette, bronze skin, tiny curled horns, violet eyes, black gloves, locksmith, tiefling, fan of keys",
       "visualTraits": [
         "slender tiefling silhouette",
         "bronze skin",
@@ -581,7 +581,7 @@
       "globalOrder": 311,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-036-suspicious.png",
+        "text": "character-085-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -594,12 +594,12 @@
       "row": 4,
       "column": 3,
       "cell": "R4C3",
-      "imageId": "npc-legacy-037-neutral",
-      "characterId": "npc-legacy-037",
+      "imageId": "character-086-neutral",
+      "characterId": "character-086",
       "displayName": "Bela Fernstep",
       "profession": "goatherd trader",
       "expression": "neutral",
-      "outputFile": "npc-legacy-037-neutral.png",
+      "outputFile": "character-086-neutral.png",
       "cropCell": {
         "x": 2048,
         "y": 3072,
@@ -608,7 +608,7 @@
       },
       "ancestryOrSpecies": "human",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-legacy-037: freckled rural silhouette, auburn hair, patched green cloak, goat bell necklace, sun-browned skin, goatherd trader, human, goat bell",
+      "identityAnchor": "same person as character-086: freckled rural silhouette, auburn hair, patched green cloak, goat bell necklace, sun-browned skin, goatherd trader, human, goat bell",
       "visualTraits": [
         "freckled rural silhouette",
         "auburn hair",
@@ -626,7 +626,7 @@
       "globalOrder": 312,
       "batchId": "characters-0301-0312",
       "filenameLabel": {
-        "text": "npc-legacy-037-neutral.png",
+        "text": "character-086-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",

@@ -4,7 +4,7 @@ This repo is `C:\Freelance\merchant-react-electron`.
 
 Always treat `C:\Freelance\merchant-react-electron` as the only valid project root for this app. Do not use, inspect, edit, sync from, or infer project state from any `D:\game\...` checkout unless the user explicitly asks for work in that path. If Codex is launched from another directory, change to `C:\Freelance\merchant-react-electron` before reading or editing project files.
 
-The project is an offline React/Vite remake prototype inspired by Merchant of the Six Kingdoms. The user wants a local-only app that uses original extracted data as reference while replacing/overhauling systems, UI, item art, character identities, character portraits, and visible narrative flavor.
+The project is an offline React/Vite fantasy trading game prototype. The user wants a local-only app that uses original extracted data as reference while replacing/overhauling systems, UI, item art, character identities, character portraits, and visible narrative flavor.
 
 ## Documentation Rules
 
@@ -62,34 +62,34 @@ Asset production folders are allowed to remain under `/docs/assets/` when they c
 
 Before adding docs, update the numbered reading order if the doc is permanent; otherwise put it in `/docs/logs/`.
 
-## Character Rework Rules
+## Character Profile Rules
 
 Visible character identity must be original. Do not preserve original public-facing names, portraits, dialogue flavor, or lookalike visual designs from the source game.
 
-Keep stable internal IDs/indexes until the runtime has a safe migration path. The original generated character data may remain as mechanical reference, but UI-facing identity should come from the remake layer.
+Keep stable internal IDs/indexes until the runtime has a safe migration path. The original generated character data may remain as mechanical reference, but UI-facing identity should come from the character profile layer.
 
-Useful new NPCs should be planned before portrait generation so portrait sheets only need to be generated/cropped once. The current seed roster lives in:
+Primary cast additions should be planned before portrait generation so portrait sheets only need to be generated/cropped once. The current seed roster lives in:
 
 ```text
-src/data/characters/newUsefulNpcSeeds.ts
+src/data/characters/primaryCastSeeds.ts
 ```
 
 The existing generated-character audit and final roster-map planning live in:
 
 ```text
-src/data/characters/legacyCharacterAuditPlan.ts
+src/data/characters/characterCatalogAuditPlan.ts
 src/data/characters/finalCharacterRosterPlan.ts
 ```
 
 The identity catalog batches live in:
 
 ```text
-src/data/characters/characterIdentityCatalogBatch01.ts
-src/data/characters/characterIdentityCatalogBatch02.ts
-src/data/characters/characterIdentityCatalogLegacyBatch01.ts
-src/data/characters/characterIdentityCatalogLegacyBatch02.ts
-src/data/characters/characterIdentityCatalogLegacyBatch03.ts
-src/data/characters/characterIdentityCatalogLegacyBatch04.ts
+src/data/characters/characterIdentityCatalogCastBatch01.ts
+src/data/characters/characterIdentityCatalogCastBatch02.ts
+src/data/characters/characterIdentityCatalogCastBatch03.ts
+src/data/characters/characterIdentityCatalogCastBatch04.ts
+src/data/characters/characterIdentityCatalogCastBatch05.ts
+src/data/characters/characterIdentityCatalogCastBatch06.ts
 src/data/characters/characterIdentityCatalog.ts
 ```
 
@@ -105,7 +105,7 @@ Final cropped runtime portraits must live under:
 /public/assets/portraits/characters/
 ```
 
-The runtime portrait manifest and remake selectors live in:
+The runtime portrait manifest and character selectors live in:
 
 ```text
 src/data/characters/characterPortraitManifest.ts
@@ -129,7 +129,7 @@ Prompts must be hand-written for each character/image. Do not use generic repeat
 
 Each expression prompt must preserve the same identity anchors and change only expression, posture, and emotional acting.
 
-Do not generate portrait sheets until the final roster, per-character identity catalog, and portrait manifest batches have been reviewed. Portrait generation/cropping is expensive and should happen after weak old characters, useful new NPCs, and expression counts are planned.
+Do not generate portrait sheets until the final roster, per-character identity catalog, and portrait manifest batches have been reviewed. Portrait generation/cropping is expensive and should happen after weak catalog characters, primary cast additions, and expression counts are planned.
 
 After cropping, run `pnpm audit:character-portraits` and review `docs/logs/character-portrait-lock-report.md` before treating portraits as locked.
 

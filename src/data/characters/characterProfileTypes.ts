@@ -1,10 +1,10 @@
-export type CharacterReworkStatus =
-  | "KEEP_AND_REWORK"
-  | "REPLACE_VISIBLE_IDENTITY"
+export type CharacterRosterStatus =
+  | "KEEP_VISIBLE_ROLE"
+  | "REPLACE_VISIBLE_ROLE"
   | "MERGE_WITH_ANOTHER"
   | "DISABLE_OR_HIDE"
-  | "NEW_GAMEPLAY_NPC"
-  | "SPECIAL_STORY_NPC";
+  | "PRIMARY_CAST_SLOT"
+  | "SPECIAL_STORY_SLOT";
 
 export type CharacterExpression =
   | "neutral"
@@ -47,10 +47,10 @@ export interface CharacterPortraitPlan {
   readonly magicalTraits?: readonly string[];
 }
 
-export interface NewUsefulNpcSeed {
-  readonly characterId: `npc-new-${string}`;
+export interface PrimaryCastSeed {
+  readonly characterId: `character-${string}`;
   readonly displayName: string;
-  readonly status: "NEW_GAMEPLAY_NPC" | "SPECIAL_STORY_NPC";
+  readonly status: "PRIMARY_CAST_SLOT" | "SPECIAL_STORY_SLOT";
   readonly gameplayGroup: CharacterGameplayGroup;
   readonly profession: string;
   readonly roleTags: readonly string[];
@@ -71,6 +71,6 @@ export const expressionPresets = {
   minor: ["neutral"],
 } as const satisfies Record<"major" | "merchant" | "minor", readonly CharacterExpression[]>;
 
-export function getPlannedPortraitImageCount(seed: NewUsefulNpcSeed): number {
+export function getPlannedPortraitImageCount(seed: PrimaryCastSeed): number {
   return seed.portraitPlan.plannedExpressions.length;
 }

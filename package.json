@@ -2,7 +2,7 @@
   "name": "merchant-react-vite",
   "version": "1.0.0",
   "private": true,
-  "description": "Offline React/Vite remake prototype.",
+  "description": "Offline React/Vite fantasy trading game.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "dev:web": "vite --host 127.0.0.1",
@@ -39,13 +39,14 @@
     "test:economy-world": "vitest run src/lib/economy-world-expansion.test.ts",
     "playtest:economy-world": "node scripts/playtest-economy-world.cjs",
     "test:vertical-polish": "vitest run src/lib/vertical-slice-polish.test.ts",
-    "playtest:vertical-polish": "node scripts/playtest-vertical-slice-polish.cjs"
+    "playtest:vertical-polish": "node scripts/playtest-vertical-slice-polish.cjs",
+    "audit:naming": "node scripts/audit-naming-traces.cjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",
     "@vitejs/plugin-react": "^4.3.4",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.477.0",
+    "lucide-react": "^0.477",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-toastify": "^11.1.0",

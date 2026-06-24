@@ -51,32 +51,32 @@
   "sheetPrompt": "Create one full medieval fantasy character portrait sprite sheet using this JSON only. Use the exact layout, order, crop cells, imageIds, and outputFiles from the JSON. Use one continuous flat pure green #00FF00 background with no visible grid, no borders, no colored panels, and no separators. Keep every portrait fully inside its invisible crop cell and slightly smaller than the cell for safe cropping. Characters should be beautiful, entertaining, slightly cartoony, profession-specific, and varied, including fantasy ancestries and magical traits when specified. Put a small readable filename label in the bottom-left corner of each cell. The label text must exactly match that entry outputFile, use pure magenta #FF00FF, simple bold readable font, no outline, no shadow, no glow, no gradient. Keep the label fully separated from the character art on empty green #00FF00 with a clear safety gap.",
   "sharedStyle": "stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background",
   "sheetOrderLock": [
-    "R1C1 = npc-new-004-happy.png — Saffra Moonlock, Rare Item Collector, happy, moon-touched half-elf",
-    "R1C2 = npc-new-004-suspicious.png — Saffra Moonlock, Rare Item Collector, suspicious, moon-touched half-elf",
-    "R1C3 = npc-new-004-worried.png — Saffra Moonlock, Rare Item Collector, worried, moon-touched half-elf",
-    "R2C1 = npc-new-004-angry.png — Saffra Moonlock, Rare Item Collector, angry, moon-touched half-elf",
-    "R2C2 = npc-new-005-neutral.png — Joryn Crackbox, Damaged Goods Dealer, neutral, halfling",
-    "R2C3 = npc-new-005-happy.png — Joryn Crackbox, Damaged Goods Dealer, happy, halfling",
-    "R3C1 = npc-new-005-suspicious.png — Joryn Crackbox, Damaged Goods Dealer, suspicious, halfling",
-    "R3C2 = npc-new-006-neutral.png — Helva Quaystamp, Import Export Clerk, neutral, djinn-blooded human",
-    "R3C3 = npc-new-006-happy.png — Helva Quaystamp, Import Export Clerk, happy, djinn-blooded human",
-    "R4C1 = npc-new-006-suspicious.png — Helva Quaystamp, Import Export Clerk, suspicious, djinn-blooded human",
-    "R4C2 = npc-new-006-worried.png — Helva Quaystamp, Import Export Clerk, worried, djinn-blooded human",
-    "R4C3 = npc-new-006-angry.png — Helva Quaystamp, Import Export Clerk, angry, djinn-blooded human"
+    "R1C1 = character-004-happy.png — Saffra Moonlock, Rare Item Collector, happy, moon-touched half-elf",
+    "R1C2 = character-004-suspicious.png — Saffra Moonlock, Rare Item Collector, suspicious, moon-touched half-elf",
+    "R1C3 = character-004-worried.png — Saffra Moonlock, Rare Item Collector, worried, moon-touched half-elf",
+    "R2C1 = character-004-angry.png — Saffra Moonlock, Rare Item Collector, angry, moon-touched half-elf",
+    "R2C2 = character-005-neutral.png — Joryn Crackbox, Damaged Goods Dealer, neutral, halfling",
+    "R2C3 = character-005-happy.png — Joryn Crackbox, Damaged Goods Dealer, happy, halfling",
+    "R3C1 = character-005-suspicious.png — Joryn Crackbox, Damaged Goods Dealer, suspicious, halfling",
+    "R3C2 = character-006-neutral.png — Helva Quaystamp, Import Export Clerk, neutral, djinn-blooded human",
+    "R3C3 = character-006-happy.png — Helva Quaystamp, Import Export Clerk, happy, djinn-blooded human",
+    "R4C1 = character-006-suspicious.png — Helva Quaystamp, Import Export Clerk, suspicious, djinn-blooded human",
+    "R4C2 = character-006-worried.png — Helva Quaystamp, Import Export Clerk, worried, djinn-blooded human",
+    "R4C3 = character-006-angry.png — Helva Quaystamp, Import Export Clerk, angry, djinn-blooded human"
   ],
   "order": [
-    "1. npc-new-004-happy",
-    "2. npc-new-004-suspicious",
-    "3. npc-new-004-worried",
-    "4. npc-new-004-angry",
-    "5. npc-new-005-neutral",
-    "6. npc-new-005-happy",
-    "7. npc-new-005-suspicious",
-    "8. npc-new-006-neutral",
-    "9. npc-new-006-happy",
-    "10. npc-new-006-suspicious",
-    "11. npc-new-006-worried",
-    "12. npc-new-006-angry"
+    "1. character-004-happy",
+    "2. character-004-suspicious",
+    "3. character-004-worried",
+    "4. character-004-angry",
+    "5. character-005-neutral",
+    "6. character-005-happy",
+    "7. character-005-suspicious",
+    "8. character-006-neutral",
+    "9. character-006-happy",
+    "10. character-006-suspicious",
+    "11. character-006-worried",
+    "12. character-006-angry"
   ],
   "images": [
     {
@@ -85,18 +85,18 @@
       "row": 1,
       "column": 1,
       "cell": "R1C1",
-      "imageId": "npc-new-004-happy",
-      "characterId": "npc-new-004",
+      "imageId": "character-004-happy",
+      "characterId": "character-004",
       "displayName": "Saffra Moonlock",
       "profession": "Rare Item Collector",
       "expression": "happy",
-      "outputFile": "npc-new-004-happy.png",
+      "outputFile": "character-004-happy.png",
       "ancestryOrSpecies": "moon-touched half-elf",
       "magicalTraits": [
         "faint moon marks",
         "small lunar shimmer around jewelry"
       ],
-      "identityAnchor": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
+      "identityAnchor": "same person as character-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
       "visualTraits": [
         "thin jeweled silhouette",
         "young adult",
@@ -117,7 +117,7 @@
         "silver",
         "violet"
       ],
-      "prompt": "A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: moon-touched half-elf. Visible magical traits that must remain consistent: faint moon marks, small lunar shimmer around jewelry. Identity anchors must remain unchanged: same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: moon-touched half-elf. Visible magical traits that must remain consistent: faint moon marks, small lunar shimmer around jewelry. Identity anchors must remain unchanged: same person as character-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 0,
@@ -127,7 +127,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-004-happy.png",
+        "text": "character-004-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -141,18 +141,18 @@
       "row": 1,
       "column": 2,
       "cell": "R1C2",
-      "imageId": "npc-new-004-suspicious",
-      "characterId": "npc-new-004",
+      "imageId": "character-004-suspicious",
+      "characterId": "character-004",
       "displayName": "Saffra Moonlock",
       "profession": "Rare Item Collector",
       "expression": "suspicious",
-      "outputFile": "npc-new-004-suspicious.png",
+      "outputFile": "character-004-suspicious.png",
       "ancestryOrSpecies": "moon-touched half-elf",
       "magicalTraits": [
         "faint moon marks",
         "small lunar shimmer around jewelry"
       ],
-      "identityAnchor": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
+      "identityAnchor": "same person as character-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
       "visualTraits": [
         "thin jeweled silhouette",
         "young adult",
@@ -173,7 +173,7 @@
         "silver",
         "violet"
       ],
-      "prompt": "A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: moon-touched half-elf. Visible magical traits that must remain consistent: faint moon marks, small lunar shimmer around jewelry. Identity anchors must remain unchanged: same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: moon-touched half-elf. Visible magical traits that must remain consistent: faint moon marks, small lunar shimmer around jewelry. Identity anchors must remain unchanged: same person as character-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 1024,
@@ -183,7 +183,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-004-suspicious.png",
+        "text": "character-004-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -197,18 +197,18 @@
       "row": 1,
       "column": 3,
       "cell": "R1C3",
-      "imageId": "npc-new-004-worried",
-      "characterId": "npc-new-004",
+      "imageId": "character-004-worried",
+      "characterId": "character-004",
       "displayName": "Saffra Moonlock",
       "profession": "Rare Item Collector",
       "expression": "worried",
-      "outputFile": "npc-new-004-worried.png",
+      "outputFile": "character-004-worried.png",
       "ancestryOrSpecies": "moon-touched half-elf",
       "magicalTraits": [
         "faint moon marks",
         "small lunar shimmer around jewelry"
       ],
-      "identityAnchor": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
+      "identityAnchor": "same person as character-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
       "visualTraits": [
         "thin jeweled silhouette",
         "young adult",
@@ -229,7 +229,7 @@
         "silver",
         "violet"
       ],
-      "prompt": "A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: moon-touched half-elf. Visible magical traits that must remain consistent: faint moon marks, small lunar shimmer around jewelry. Identity anchors must remain unchanged: same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: moon-touched half-elf. Visible magical traits that must remain consistent: faint moon marks, small lunar shimmer around jewelry. Identity anchors must remain unchanged: same person as character-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 2048,
@@ -239,7 +239,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-004-worried.png",
+        "text": "character-004-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -253,18 +253,18 @@
       "row": 2,
       "column": 1,
       "cell": "R2C1",
-      "imageId": "npc-new-004-angry",
-      "characterId": "npc-new-004",
+      "imageId": "character-004-angry",
+      "characterId": "character-004",
       "displayName": "Saffra Moonlock",
       "profession": "Rare Item Collector",
       "expression": "angry",
-      "outputFile": "npc-new-004-angry.png",
+      "outputFile": "character-004-angry.png",
       "ancestryOrSpecies": "moon-touched half-elf",
       "magicalTraits": [
         "faint moon marks",
         "small lunar shimmer around jewelry"
       ],
-      "identityAnchor": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
+      "identityAnchor": "same person as character-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
       "visualTraits": [
         "thin jeweled silhouette",
         "young adult",
@@ -285,7 +285,7 @@
         "silver",
         "violet"
       ],
-      "prompt": "A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: moon-touched half-elf. Visible magical traits that must remain consistent: faint moon marks, small lunar shimmer around jewelry. Identity anchors must remain unchanged: same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: moon-touched half-elf. Visible magical traits that must remain consistent: faint moon marks, small lunar shimmer around jewelry. Identity anchors must remain unchanged: same person as character-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 0,
@@ -295,7 +295,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-004-angry.png",
+        "text": "character-004-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -309,15 +309,15 @@
       "row": 2,
       "column": 2,
       "cell": "R2C2",
-      "imageId": "npc-new-005-neutral",
-      "characterId": "npc-new-005",
+      "imageId": "character-005-neutral",
+      "characterId": "character-005",
       "displayName": "Joryn Crackbox",
       "profession": "Damaged Goods Dealer",
       "expression": "neutral",
-      "outputFile": "npc-new-005-neutral.png",
+      "outputFile": "character-005-neutral.png",
       "ancestryOrSpecies": "halfling",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
+      "identityAnchor": "same person as character-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
       "visualTraits": [
         "wiry lopsided body",
         "tawny skin",
@@ -337,7 +337,7 @@
         "patched leather",
         "dusty teal"
       ],
-      "prompt": "A wiry lopsided young damaged-goods dealer with tawny skin, uneven shoulders, crooked grin, messy copper hair, patched leather satchel spilling bent hinges and chipped cups, bargain-cart energy. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: halfling. Identity anchors must remain unchanged: same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A wiry lopsided young damaged-goods dealer with tawny skin, uneven shoulders, crooked grin, messy copper hair, patched leather satchel spilling bent hinges and chipped cups, bargain-cart energy. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: halfling. Identity anchors must remain unchanged: same person as character-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 1024,
@@ -347,7 +347,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-005-neutral.png",
+        "text": "character-005-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -361,15 +361,15 @@
       "row": 2,
       "column": 3,
       "cell": "R2C3",
-      "imageId": "npc-new-005-happy",
-      "characterId": "npc-new-005",
+      "imageId": "character-005-happy",
+      "characterId": "character-005",
       "displayName": "Joryn Crackbox",
       "profession": "Damaged Goods Dealer",
       "expression": "happy",
-      "outputFile": "npc-new-005-happy.png",
+      "outputFile": "character-005-happy.png",
       "ancestryOrSpecies": "halfling",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
+      "identityAnchor": "same person as character-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
       "visualTraits": [
         "wiry lopsided body",
         "tawny skin",
@@ -389,7 +389,7 @@
         "patched leather",
         "dusty teal"
       ],
-      "prompt": "A wiry lopsided young damaged-goods dealer with tawny skin, uneven shoulders, crooked grin, messy copper hair, patched leather satchel spilling bent hinges and chipped cups, bargain-cart energy. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: halfling. Identity anchors must remain unchanged: same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A wiry lopsided young damaged-goods dealer with tawny skin, uneven shoulders, crooked grin, messy copper hair, patched leather satchel spilling bent hinges and chipped cups, bargain-cart energy. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: halfling. Identity anchors must remain unchanged: same person as character-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 2048,
@@ -399,7 +399,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-005-happy.png",
+        "text": "character-005-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -413,15 +413,15 @@
       "row": 3,
       "column": 1,
       "cell": "R3C1",
-      "imageId": "npc-new-005-suspicious",
-      "characterId": "npc-new-005",
+      "imageId": "character-005-suspicious",
+      "characterId": "character-005",
       "displayName": "Joryn Crackbox",
       "profession": "Damaged Goods Dealer",
       "expression": "suspicious",
-      "outputFile": "npc-new-005-suspicious.png",
+      "outputFile": "character-005-suspicious.png",
       "ancestryOrSpecies": "halfling",
       "magicalTraits": [],
-      "identityAnchor": "same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
+      "identityAnchor": "same person as character-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
       "visualTraits": [
         "wiry lopsided body",
         "tawny skin",
@@ -441,7 +441,7 @@
         "patched leather",
         "dusty teal"
       ],
-      "prompt": "A wiry lopsided young damaged-goods dealer with tawny skin, uneven shoulders, crooked grin, messy copper hair, patched leather satchel spilling bent hinges and chipped cups, bargain-cart energy. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: halfling. Identity anchors must remain unchanged: same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A wiry lopsided young damaged-goods dealer with tawny skin, uneven shoulders, crooked grin, messy copper hair, patched leather satchel spilling bent hinges and chipped cups, bargain-cart energy. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: halfling. Identity anchors must remain unchanged: same person as character-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 0,
@@ -451,7 +451,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-005-suspicious.png",
+        "text": "character-005-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -465,18 +465,18 @@
       "row": 3,
       "column": 2,
       "cell": "R3C2",
-      "imageId": "npc-new-006-neutral",
-      "characterId": "npc-new-006",
+      "imageId": "character-006-neutral",
+      "characterId": "character-006",
       "displayName": "Helva Quaystamp",
       "profession": "Import Export Clerk",
       "expression": "neutral",
-      "outputFile": "npc-new-006-neutral.png",
+      "outputFile": "character-006-neutral.png",
       "ancestryOrSpecies": "djinn-blooded human",
       "magicalTraits": [
         "subtle wind-silver eyes",
         "faint djinn glow in jewelry"
       ],
-      "identityAnchor": "same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
+      "identityAnchor": "same person as character-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
       "visualTraits": [
         "upright narrow posture",
         "dark umber skin",
@@ -495,7 +495,7 @@
         "silver",
         "ink black"
       ],
-      "prompt": "A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: djinn-blooded human. Visible magical traits that must remain consistent: subtle wind-silver eyes, faint djinn glow in jewelry. Identity anchors must remain unchanged: same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: calm neutral expression, readable face, relaxed mouth, direct eye contact, identity anchors unchanged. Ancestry/species: djinn-blooded human. Visible magical traits that must remain consistent: subtle wind-silver eyes, faint djinn glow in jewelry. Identity anchors must remain unchanged: same person as character-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 1024,
@@ -505,7 +505,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-006-neutral.png",
+        "text": "character-006-neutral.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -519,18 +519,18 @@
       "row": 3,
       "column": 3,
       "cell": "R3C3",
-      "imageId": "npc-new-006-happy",
-      "characterId": "npc-new-006",
+      "imageId": "character-006-happy",
+      "characterId": "character-006",
       "displayName": "Helva Quaystamp",
       "profession": "Import Export Clerk",
       "expression": "happy",
-      "outputFile": "npc-new-006-happy.png",
+      "outputFile": "character-006-happy.png",
       "ancestryOrSpecies": "djinn-blooded human",
       "magicalTraits": [
         "subtle wind-silver eyes",
         "faint djinn glow in jewelry"
       ],
-      "identityAnchor": "same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
+      "identityAnchor": "same person as character-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
       "visualTraits": [
         "upright narrow posture",
         "dark umber skin",
@@ -549,7 +549,7 @@
         "silver",
         "ink black"
       ],
-      "prompt": "A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: djinn-blooded human. Visible magical traits that must remain consistent: subtle wind-silver eyes, faint djinn glow in jewelry. Identity anchors must remain unchanged: same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: happy expression, genuine smile or profession-appropriate satisfaction, brighter eyes, identity anchors unchanged. Ancestry/species: djinn-blooded human. Visible magical traits that must remain consistent: subtle wind-silver eyes, faint djinn glow in jewelry. Identity anchors must remain unchanged: same person as character-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 2048,
@@ -559,7 +559,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-006-happy.png",
+        "text": "character-006-happy.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -573,18 +573,18 @@
       "row": 4,
       "column": 1,
       "cell": "R4C1",
-      "imageId": "npc-new-006-suspicious",
-      "characterId": "npc-new-006",
+      "imageId": "character-006-suspicious",
+      "characterId": "character-006",
       "displayName": "Helva Quaystamp",
       "profession": "Import Export Clerk",
       "expression": "suspicious",
-      "outputFile": "npc-new-006-suspicious.png",
+      "outputFile": "character-006-suspicious.png",
       "ancestryOrSpecies": "djinn-blooded human",
       "magicalTraits": [
         "subtle wind-silver eyes",
         "faint djinn glow in jewelry"
       ],
-      "identityAnchor": "same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
+      "identityAnchor": "same person as character-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
       "visualTraits": [
         "upright narrow posture",
         "dark umber skin",
@@ -603,7 +603,7 @@
         "silver",
         "ink black"
       ],
-      "prompt": "A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: djinn-blooded human. Visible magical traits that must remain consistent: subtle wind-silver eyes, faint djinn glow in jewelry. Identity anchors must remain unchanged: same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged. Ancestry/species: djinn-blooded human. Visible magical traits that must remain consistent: subtle wind-silver eyes, faint djinn glow in jewelry. Identity anchors must remain unchanged: same person as character-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 0,
@@ -613,7 +613,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-006-suspicious.png",
+        "text": "character-006-suspicious.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -627,18 +627,18 @@
       "row": 4,
       "column": 2,
       "cell": "R4C2",
-      "imageId": "npc-new-006-worried",
-      "characterId": "npc-new-006",
+      "imageId": "character-006-worried",
+      "characterId": "character-006",
       "displayName": "Helva Quaystamp",
       "profession": "Import Export Clerk",
       "expression": "worried",
-      "outputFile": "npc-new-006-worried.png",
+      "outputFile": "character-006-worried.png",
       "ancestryOrSpecies": "djinn-blooded human",
       "magicalTraits": [
         "subtle wind-silver eyes",
         "faint djinn glow in jewelry"
       ],
-      "identityAnchor": "same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
+      "identityAnchor": "same person as character-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
       "visualTraits": [
         "upright narrow posture",
         "dark umber skin",
@@ -657,7 +657,7 @@
         "silver",
         "ink black"
       ],
-      "prompt": "A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: djinn-blooded human. Visible magical traits that must remain consistent: subtle wind-silver eyes, faint djinn glow in jewelry. Identity anchors must remain unchanged: same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: worried expression, tense brow, compressed mouth, shoulders slightly raised, identity anchors unchanged. Ancestry/species: djinn-blooded human. Visible magical traits that must remain consistent: subtle wind-silver eyes, faint djinn glow in jewelry. Identity anchors must remain unchanged: same person as character-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 1024,
@@ -667,7 +667,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-006-worried.png",
+        "text": "character-006-worried.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",
@@ -681,18 +681,18 @@
       "row": 4,
       "column": 3,
       "cell": "R4C3",
-      "imageId": "npc-new-006-angry",
-      "characterId": "npc-new-006",
+      "imageId": "character-006-angry",
+      "characterId": "character-006",
       "displayName": "Helva Quaystamp",
       "profession": "Import Export Clerk",
       "expression": "angry",
-      "outputFile": "npc-new-006-angry.png",
+      "outputFile": "character-006-angry.png",
       "ancestryOrSpecies": "djinn-blooded human",
       "magicalTraits": [
         "subtle wind-silver eyes",
         "faint djinn glow in jewelry"
       ],
-      "identityAnchor": "same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
+      "identityAnchor": "same person as character-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
       "visualTraits": [
         "upright narrow posture",
         "dark umber skin",
@@ -711,7 +711,7 @@
         "silver",
         "ink black"
       ],
-      "prompt": "A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: djinn-blooded human. Visible magical traits that must remain consistent: subtle wind-silver eyes, faint djinn glow in jewelry. Identity anchors must remain unchanged: same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
+      "prompt": "A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders. Expression: angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged. Ancestry/species: djinn-blooded human. Visible magical traits that must remain consistent: subtle wind-silver eyes, faint djinn glow in jewelry. Identity anchors must remain unchanged: same person as character-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare. stylized medieval fantasy merchant RPG portrait art, polished painterly-cartoon PC game UI look, slightly cartoony, beautiful, charming, expressive, entertaining, natural facial acting, clear profession silhouette, varied body shapes, rich costume accents, crop-safe bust portrait, one flat solid pure green #00FF00 background. Keep the complete bust and every prop fully inside the assigned invisible crop cell. Keep the character slightly smaller than the crop cell with clear green padding on all sides. Use one continuous flat #00FF00 background only; do not draw cell panels, separators, frames, borders, gradients, or grid lines.",
       "negativePrompt": "no text except the required pure magenta filename label, no labels except the required pure magenta filename label, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
       "cropCell": {
         "x": 2048,
@@ -721,7 +721,7 @@
       },
       "batchId": "characters-0013-0024",
       "filenameLabel": {
-        "text": "npc-new-006-angry.png",
+        "text": "character-006-angry.png",
         "color": "#FF00FF",
         "placement": "bottom-left corner inside this crop cell",
         "font": "simple bold readable font",

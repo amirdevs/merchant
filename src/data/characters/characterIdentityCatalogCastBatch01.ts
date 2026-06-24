@@ -4,10 +4,10 @@ import { getIdentityBatchPortraitImageCount } from "./characterIdentityTypes";
 const sharedPortraitStyle = "ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders";
 const sharedNegativePrompt = "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background";
 
-export const characterIdentityCatalogBatch01 = {
-  batchId: "identity-catalog-batch-001-useful-npcs",
+export const characterIdentityCatalogCastBatch01 = {
+  batchId: "identity-catalog-cast-batch-001",
   status: "portrait_generation_blocked",
-  rosterScope: "First 16 useful new NPCs: trade, travel, market service, collector, law, customs, and risk contacts.",
+  rosterScope: "First 16 primary cast characters: trade, travel, market service, collector, law, customs, and risk contacts.",
   portraitGenerationAllowed: false,
   notes: [
     "This is an identity catalog batch, not a final portrait-generation manifest.",
@@ -16,10 +16,10 @@ export const characterIdentityCatalogBatch01 = {
   ],
   identities: [
     {
-        "characterId": "npc-new-001",
-        "source": "new_useful_npc",
+        "characterId": "character-001",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-001",
+        "seedId": "character-001",
         "finalDisplayName": "Mirella Brasscall",
         "profession": "Auctioneer",
         "gameplayGroups": [
@@ -86,8 +86,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-001",
-        "identityAnchor": "same person as npc-new-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile",
+        "portraitFilePrefix": "character-001",
+        "identityAnchor": "same person as character-001: tall olive-skinned auctioneer, severe black braid, sharp cheekbones, red wax-stained long fingers, burgundy auction coat, parchment sleeves, brass hand bell, commanding smile",
         "portraitBasePrompt": "A tall olive-skinned woman auctioneer with a severe black braid, sharp cheekbones, long fingers stained red with sealing wax, burgundy sleeveless auction coat over parchment sleeves, polished brass hand bell, sealed bid cards tucked at her belt, posture like a stage commander. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -98,10 +98,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "High-value market contact for auctions, price rumors, and rare item sales."
     },
     {
-        "characterId": "npc-new-002",
-        "source": "new_useful_npc",
+        "characterId": "character-002",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-002",
+        "seedId": "character-002",
         "finalDisplayName": "Orren Scale-Eye",
         "profession": "Appraiser",
         "gameplayGroups": [
@@ -157,8 +157,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-002",
-        "identityAnchor": "same person as npc-new-002: short elderly appraiser, square jaw, pale freckles, cloudy blue eyes, round green glass lenses, dark pocketed apron, tiny brass scale, severe patience",
+        "portraitFilePrefix": "character-002",
+        "identityAnchor": "same person as character-002: short elderly appraiser, square jaw, pale freckles, cloudy blue eyes, round green glass lenses, dark pocketed apron, tiny brass scale, severe patience",
         "portraitBasePrompt": "A short square elderly appraiser with pale freckled skin, square jaw, cloudy blue eyes behind round green glass lenses, a dark apron covered in tiny pockets, tiny brass scale raised near his chest, expression of severe patience. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -169,10 +169,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Trade-support NPC for Ask Price, item quality, and appraisal UI."
     },
     {
-        "characterId": "npc-new-003",
-        "source": "new_useful_npc",
+        "characterId": "character-003",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-003",
+        "seedId": "character-003",
         "finalDisplayName": "Basko Fencrate",
         "profession": "Bulk Goods Broker",
         "gameplayGroups": [
@@ -228,8 +228,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-003",
-        "identityAnchor": "same person as npc-new-003: barrel-chested broker, deep brown skin, close-cropped curls, patched ochre vest, rope belt with wooden counting tiles, crate hook, heavy confident posture",
+        "portraitFilePrefix": "character-003",
+        "identityAnchor": "same person as character-003: barrel-chested broker, deep brown skin, close-cropped curls, patched ochre vest, rope belt with wooden counting tiles, crate hook, heavy confident posture",
         "portraitBasePrompt": "A broad barrel-chested bulk goods broker with deep brown skin, close-cropped curls, patched ochre vest, rope belt hung with wooden counting tiles, crate hook over one shoulder, confident warehouse-row posture. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -240,10 +240,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Wholesale/bulk contact for warehouse economy and large trade lots."
     },
     {
-        "characterId": "npc-new-004",
-        "source": "new_useful_npc",
+        "characterId": "character-004",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-004",
+        "seedId": "character-004",
         "finalDisplayName": "Saffra Moonlock",
         "profession": "Rare Item Collector",
         "gameplayGroups": [
@@ -310,8 +310,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-004",
-        "identityAnchor": "same person as npc-new-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
+        "portraitFilePrefix": "character-004",
+        "identityAnchor": "same person as character-004: thin young collector, warm golden-brown skin, crescent earrings, midnight-blue scarf, many silver rings, wide restless eyes, nervous elegant hands, velvet specimen pouch",
         "portraitBasePrompt": "A thin young rare item collector with warm golden-brown skin, crescent earrings, midnight-blue scarf, silver rings on every finger, wide restless eyes, elegant nervous hands around a velvet specimen pouch and tiny rumor catalog. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -322,10 +322,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Rare-item sink and quest giver for named relics, luxury goods, and rumors."
     },
     {
-        "characterId": "npc-new-005",
-        "source": "new_useful_npc",
+        "characterId": "character-005",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-005",
+        "seedId": "character-005",
         "finalDisplayName": "Joryn Crackbox",
         "profession": "Damaged Goods Dealer",
         "gameplayGroups": [
@@ -379,8 +379,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-005",
-        "identityAnchor": "same person as npc-new-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
+        "portraitFilePrefix": "character-005",
+        "identityAnchor": "same person as character-005: wiry lopsided damaged goods dealer, tawny skin, crooked grin, messy copper hair, uneven shoulders, patched leather satchel, bent hinges and chipped cups",
         "portraitBasePrompt": "A wiry lopsided young damaged-goods dealer with tawny skin, uneven shoulders, crooked grin, messy copper hair, patched leather satchel spilling bent hinges and chipped cups, bargain-cart energy. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -391,10 +391,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Discount/damaged goods NPC for later quality, salvage, and repair systems."
     },
     {
-        "characterId": "npc-new-006",
-        "source": "new_useful_npc",
+        "characterId": "character-006",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-006",
+        "seedId": "character-006",
         "finalDisplayName": "Helva Quaystamp",
         "profession": "Import Export Clerk",
         "gameplayGroups": [
@@ -460,8 +460,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-006",
-        "identityAnchor": "same person as npc-new-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
+        "portraitFilePrefix": "character-006",
+        "identityAnchor": "same person as character-006: narrow upright import export clerk, dark umber skin, crisp teal collar, silver-threaded hair under cap, ink-stained thumbs, stamped dock papers, controlled polite stare",
         "portraitBasePrompt": "A narrow upright import-export clerk with dark umber skin, crisp teal collar, silver-threaded hair under a small cap, ink-stained thumbs, stack of stamped dock papers, origin stamps and ink pad visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -472,10 +472,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Customs/tariff NPC for port trade, route legality, and paperwork events."
     },
     {
-        "characterId": "npc-new-007",
-        "source": "new_useful_npc",
+        "characterId": "character-007",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-007",
+        "seedId": "character-007",
         "finalDisplayName": "Pella Brightspoon",
         "profession": "Festival Trader",
         "gameplayGroups": [
@@ -531,8 +531,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-007",
-        "identityAnchor": "same person as npc-new-007: round animated festival trader, rosy-brown skin, sparkling eyes, yellow scarf, embroidered apron, tiny sleeve bells, sugared nut tray, cheerful crowd-ready smile",
+        "portraitFilePrefix": "character-007",
+        "identityAnchor": "same person as character-007: round animated festival trader, rosy-brown skin, sparkling eyes, yellow scarf, embroidered apron, tiny sleeve bells, sugared nut tray, cheerful crowd-ready smile",
         "portraitBasePrompt": "A round animated festival trader with rosy-brown skin, sparkling eyes, yellow scarf, embroidered apron, tiny bells tied to sleeves, tray of sugared nut cones, bright crowd-ready smile. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -543,10 +543,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Seasonal/festival NPC for temporary demand and event-driven market flavor."
     },
     {
-        "characterId": "npc-new-008",
-        "source": "new_useful_npc",
+        "characterId": "character-008",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-008",
+        "seedId": "character-008",
         "finalDisplayName": "Davin Ledgerhook",
         "profession": "Market Inspector",
         "gameplayGroups": [
@@ -612,8 +612,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-008",
-        "identityAnchor": "same person as npc-new-008: lean severe market inspector, light brown skin, close-shaven head, angular nose, stiff charcoal coat, chained hooked stylus, seal tags, controlled suspicious stare",
+        "portraitFilePrefix": "character-008",
+        "identityAnchor": "same person as character-008: lean severe market inspector, light brown skin, close-shaven head, angular nose, stiff charcoal coat, chained hooked stylus, seal tags, controlled suspicious stare",
         "portraitBasePrompt": "A lean severe market inspector with light brown skin, close-shaven head, angular nose, stiff charcoal coat, hooked metal stylus chained to wrist, inspection ledger and seal tags held close. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -624,10 +624,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Law/inspection NPC for trade legality, fraud warnings, and market permits."
     },
     {
-        "characterId": "npc-new-009",
-        "source": "new_useful_npc",
+        "characterId": "character-009",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-009",
+        "seedId": "character-009",
         "finalDisplayName": "Kesta Far-Ridge",
         "profession": "Route Scout",
         "gameplayGroups": [
@@ -693,8 +693,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-009",
-        "identityAnchor": "same person as npc-new-009: small weather-bitten route scout, copper-brown skin, sun-cracked lips, short black hair, faded green hood, map case across chest, muddy boots, alert narrowed eyes",
+        "portraitFilePrefix": "character-009",
+        "identityAnchor": "same person as character-009: small weather-bitten route scout, copper-brown skin, sun-cracked lips, short black hair, faded green hood, map case across chest, muddy boots, alert narrowed eyes",
         "portraitBasePrompt": "A small weather-bitten route scout with copper-brown skin, sun-cracked lips, short black hair, faded green hood, map case strapped across chest, muddy boots, alert narrowed eyes and trail tokens. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -705,10 +705,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Travel-risk NPC for route previews, rumors, shortcuts, and ambush warnings."
     },
     {
-        "characterId": "npc-new-010",
-        "source": "new_useful_npc",
+        "characterId": "character-010",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-010",
+        "seedId": "character-010",
         "finalDisplayName": "Brann Oxweather",
         "profession": "Caravan Captain",
         "gameplayGroups": [
@@ -774,8 +774,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-010",
-        "identityAnchor": "same person as npc-new-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture",
+        "portraitFilePrefix": "character-010",
+        "identityAnchor": "same person as character-010: massive elderly caravan captain, dark bronze skin, missing thumb, white beard in three braids, heavy red travel cloak, iron route badges, calm mountain-like posture",
         "portraitBasePrompt": "A massive elderly caravan captain with dark bronze skin, one missing thumb visible, white beard braided into three cords, heavy red travel cloak pinned with iron route badges, wagon tally board at his side. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -786,10 +786,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Convoy/escort NPC for travel safety, caravan jobs, and bulk route planning."
     },
     {
-        "characterId": "npc-new-011",
-        "source": "new_useful_npc",
+        "characterId": "character-011",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-011",
+        "seedId": "character-011",
         "finalDisplayName": "Nilo Gatecoin",
         "profession": "Toll Officer",
         "gameplayGroups": [
@@ -845,8 +845,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-011",
-        "identityAnchor": "same person as npc-new-011: plump immaculate toll officer, fair skin, tiny curled moustache, lacquered blue cap, cream gloves, polished coin abacus, smug official posture",
+        "portraitFilePrefix": "character-011",
+        "identityAnchor": "same person as character-011: plump immaculate toll officer, fair skin, tiny curled moustache, lacquered blue cap, cream gloves, polished coin abacus, smug official posture",
         "portraitBasePrompt": "A plump immaculate toll officer with fair skin, tiny curled moustache, lacquered blue cap, stiff cream gloves, polished coin abacus at belt, toll tickets fanned in one hand. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -857,10 +857,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Travel-cost NPC for toll events, waivers, and route money sinks."
     },
     {
-        "characterId": "npc-new-012",
-        "source": "new_useful_npc",
+        "characterId": "character-012",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-012",
+        "seedId": "character-012",
         "finalDisplayName": "Arra Stonepassport",
         "profession": "Border Customs Guard",
         "gameplayGroups": [
@@ -926,8 +926,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-012",
-        "identityAnchor": "same person as npc-new-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare",
+        "portraitFilePrefix": "character-012",
+        "identityAnchor": "same person as character-012: tall stone-faced customs guard, deep mahogany skin, silver temple streaks, square shoulders, sand uniform with dark leather plates, inspection spear, piercing inspection stare",
         "portraitBasePrompt": "A tall stone-faced customs guard with deep mahogany skin, silver streaks at temples, square shoulders, sand-colored uniform reinforced with dark leather plates, inspection spear and passport seals. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -938,10 +938,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Border/legal NPC for contraband checks, permits, and route risk."
     },
     {
-        "characterId": "npc-new-013",
-        "source": "new_useful_npc",
+        "characterId": "character-013",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-013",
+        "seedId": "character-013",
         "finalDisplayName": "Tovin Hearthmile",
         "profession": "Roadside Innkeeper",
         "gameplayGroups": [
@@ -997,8 +997,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-013",
-        "identityAnchor": "same person as npc-new-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile",
+        "portraitFilePrefix": "character-013",
+        "identityAnchor": "same person as character-013: wide warm roadside innkeeper, ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle at belt, welcoming tired smile",
         "portraitBasePrompt": "A wide warm roadside innkeeper with ruddy skin, thick auburn beard, flour-dusted sleeves, patched brown waistcoat, copper ladle tucked like a sword, guest ledger and steaming stew bowl nearby. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -1009,10 +1009,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Travel/rest NPC for road rumors, recovery, and food demand."
     },
     {
-        "characterId": "npc-new-014",
-        "source": "new_useful_npc",
+        "characterId": "character-014",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-014",
+        "seedId": "character-014",
         "finalDisplayName": "Madu Long-Ear",
         "profession": "Pack Animal Trader",
         "gameplayGroups": [
@@ -1068,8 +1068,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "suspicious expression, narrowed eyes, guarded mouth, slight backward lean, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-014",
-        "identityAnchor": "same person as npc-new-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes",
+        "portraitFilePrefix": "character-014",
+        "identityAnchor": "same person as character-014: tall loose-limbed pack animal trader, dark skin, shaved head, long ears, faded orange sash, straw in work tunic, mule lead rope, patient mule-wise eyes",
         "portraitBasePrompt": "A tall loose-limbed pack animal trader with dark skin, shaved head, long ears, faded orange sash, straw in sleeveless tunic, mule lead rope in one hand and capacity tags on belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -1080,10 +1080,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Capacity/travel NPC for cargo upgrades and animal-based travel events."
     },
     {
-        "characterId": "npc-new-015",
-        "source": "new_useful_npc",
+        "characterId": "character-015",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-015",
+        "seedId": "character-015",
         "finalDisplayName": "Suren Reedwake",
         "profession": "Ferry Master",
         "gameplayGroups": [
@@ -1150,8 +1150,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-015",
-        "identityAnchor": "same person as npc-new-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression",
+        "portraitFilePrefix": "character-015",
+        "identityAnchor": "same person as character-015: thin elderly ferry master, weathered tan skin, watery grey eyes, reed hat, patched navy coat, rope-knotted hands, ferry pole, quiet foggy expression",
         "portraitBasePrompt": "A thin reedlike elderly ferry master with weathered tan skin, watery grey eyes, reed hat, patched navy coat, hands knotted like rope around a ferry pole, river token pouch at belt. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -1162,10 +1162,10 @@ export const characterIdentityCatalogBatch01 = {
         "integrationNotes": "Route-lock NPC for river crossings, ferry costs, and stealth travel."
     },
     {
-        "characterId": "npc-new-016",
-        "source": "new_useful_npc",
+        "characterId": "character-016",
+        "rosterGroup": "primary_cast",
         "originalIndex": null,
-        "seedId": "npc-new-016",
+        "seedId": "character-016",
         "finalDisplayName": "Vaska LowLantern",
         "profession": "Smuggler Guide",
         "gameplayGroups": [
@@ -1230,8 +1230,8 @@ export const characterIdentityCatalogBatch01 = {
                 "promptDelta": "angry expression, hard stare, tightened jaw, controlled anger, identity anchors unchanged"
             }
         ],
-        "portraitFilePrefix": "npc-new-016",
-        "identityAnchor": "same person as npc-new-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture",
+        "portraitFilePrefix": "character-016",
+        "identityAnchor": "same person as character-016: short shadowy smuggler guide, brown skin, sharp green eyes, black hood with dull copper lining, half-dark painted lantern, foxlike cautious posture",
         "portraitBasePrompt": "A short shadowy smuggler guide with brown skin, sharp green eyes, black hood lined in dull copper, half-dark painted lantern held low, hidden trail cord and knife-length map visible. ultra-readable stylized medieval fantasy merchant game portrait, polished painterly-cartoon PC RPG UI art, three-quarter bust portrait, clear face, expressive eyes, collectible NPC portrait, clean silhouette, soft warm daylight, simple pure green background #00FF00 for cropping, generous padding around head and shoulders",
         "negativePrompt": "no text, no labels, no watermark, no UI frame, no border, no duplicated face, no extra limbs, no photorealism, no modern clothes, no sci-fi, no generic identical medieval NPC face, no cropped head, no busy background",
         "questHooks": [
@@ -1244,9 +1244,9 @@ export const characterIdentityCatalogBatch01 = {
   ],
 } as const satisfies CharacterIdentityCatalogBatch;
 
-export const characterIdentityCatalogBatch01Summary = {
-  batchId: characterIdentityCatalogBatch01.batchId,
-  characterCount: characterIdentityCatalogBatch01.identities.length,
-  plannedPortraitImageCount: getIdentityBatchPortraitImageCount(characterIdentityCatalogBatch01),
-  portraitGenerationAllowed: characterIdentityCatalogBatch01.portraitGenerationAllowed,
+export const characterIdentityCatalogCastBatch01Summary = {
+  batchId: characterIdentityCatalogCastBatch01.batchId,
+  characterCount: characterIdentityCatalogCastBatch01.identities.length,
+  plannedPortraitImageCount: getIdentityBatchPortraitImageCount(characterIdentityCatalogCastBatch01),
+  portraitGenerationAllowed: characterIdentityCatalogCastBatch01.portraitGenerationAllowed,
 } as const;

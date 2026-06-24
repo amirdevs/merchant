@@ -1,19 +1,19 @@
-import type { LegacyCharacterAuditSummary } from "./legacyCharacterAuditTypes";
+import type { CharacterCatalogAuditSummary } from "./characterCatalogAuditTypes";
 
-export const legacyGeneratedCharacterAuditSummary = {
+export const characterCatalogAuditSummary = {
   generatedCharacterRecordCount: 203,
   firstGeneratedIndex: 0,
   lastGeneratedIndex: 202,
-  targetLegacyVisibleSlots: 192,
-  targetLegacyDisableOrMergeSlots: 11,
+  targetVisibleSupportingCastSlots: 192,
+  targetDisableOrMergeSlots: 11,
   auditRanges: [
     {
-      rangeId: "legacy-000-000-guard-anchor",
+      rangeId: "catalog-000-000-guard-anchor",
       startIndex: 0,
       endIndex: 0,
       priority: "core",
-      defaultDecision: "REPLACE_VISIBLE_IDENTITY",
-      defaultReworkStatus: "REPLACE_VISIBLE_IDENTITY",
+      defaultDecision: "REPLACE_VISIBLE_ROLE",
+      defaultReworkStatus: "REPLACE_VISIBLE_ROLE",
       defaultExpressionTier: "major",
       publicIdentityRule: "Keep the mechanical guard slot, but replace the public name, portrait, story, and dialogue flavor completely.",
       gameplayReason: "The guard role is useful for legality, tolls, inspections, risky travel, and market warnings.",
@@ -24,12 +24,12 @@ export const legacyGeneratedCharacterAuditSummary = {
       ],
     },
     {
-      rangeId: "legacy-001-040-core-market-cast",
+      rangeId: "catalog-001-040-core-market-cast",
       startIndex: 1,
       endIndex: 40,
       priority: "core",
-      defaultDecision: "REPLACE_VISIBLE_IDENTITY",
-      defaultReworkStatus: "REPLACE_VISIBLE_IDENTITY",
+      defaultDecision: "REPLACE_VISIBLE_ROLE",
+      defaultReworkStatus: "REPLACE_VISIBLE_ROLE",
       defaultExpressionTier: "merchant",
       publicIdentityRule: "Preserve only useful mechanical references, then create fully original names, looks, stories, and trade personalities.",
       gameplayReason: "Early-index NPCs are likely to appear often in market and trading flows, so they should become high-quality original merchants and service NPCs.",
@@ -40,12 +40,12 @@ export const legacyGeneratedCharacterAuditSummary = {
       ],
     },
     {
-      rangeId: "legacy-041-120-standard-traders-and-workers",
+      rangeId: "catalog-041-120-standard-traders-and-workers",
       startIndex: 41,
       endIndex: 120,
       priority: "standard",
-      defaultDecision: "REPLACE_VISIBLE_IDENTITY",
-      defaultReworkStatus: "REPLACE_VISIBLE_IDENTITY",
+      defaultDecision: "REPLACE_VISIBLE_ROLE",
+      defaultReworkStatus: "REPLACE_VISIBLE_ROLE",
       defaultExpressionTier: "merchant",
       publicIdentityRule: "Rework all visible identity and keep the slot if it contributes a readable profession, market role, or item-supply purpose.",
       gameplayReason: "This middle pool should provide most normal merchants, suppliers, craftspeople, buyers, and rumor sources.",
@@ -56,15 +56,15 @@ export const legacyGeneratedCharacterAuditSummary = {
       ],
     },
     {
-      rangeId: "legacy-121-180-duplicate-and-support-review",
+      rangeId: "catalog-121-180-duplicate-and-support-review",
       startIndex: 121,
       endIndex: 180,
       priority: "reference_check",
       defaultDecision: "REFERENCE_CHECK_REQUIRED",
-      defaultReworkStatus: "KEEP_AND_REWORK",
+      defaultReworkStatus: "KEEP_VISIBLE_ROLE",
       defaultExpressionTier: "minor",
       publicIdentityRule: "Check runtime references before disabling. Rework useful slots; merge or hide slots that are duplicate, inactive, or mechanically empty.",
-      gameplayReason: "This pool is reserved for finding weak old characters that can be replaced by useful new NPCs without breaking market or quest data.",
+      gameplayReason: "This pool is reserved for finding weak catalog characters that can be replaced by primary cast additions without breaking market or quest data.",
       auditNotes: [
         "Do not delete raw generated records yet.",
         "If a slot has no useful profession, no stock identity, and no likely references, mark it merge/disable in the final identity pass.",
@@ -72,7 +72,7 @@ export const legacyGeneratedCharacterAuditSummary = {
       ],
     },
     {
-      rangeId: "legacy-181-202-late-inactive-and-special-review",
+      rangeId: "catalog-181-202-late-inactive-and-special-review",
       startIndex: 181,
       endIndex: 202,
       priority: "reference_check",
@@ -83,9 +83,9 @@ export const legacyGeneratedCharacterAuditSummary = {
       gameplayReason: "The late tail is the best place to reduce weak source-game carryover before portrait generation.",
       auditNotes: [
         "Known inactive records should not receive portraits unless intentionally reactivated.",
-        "Use this range to hit the target of 11 disabled/merged legacy slots.",
+        "Use this range to hit the target of 11 disabled or merged slots.",
         "If a slot becomes useful, give it a completely new public identity rather than preserving old flavor.",
       ],
     },
   ],
-} as const satisfies LegacyCharacterAuditSummary;
+} as const satisfies CharacterCatalogAuditSummary;

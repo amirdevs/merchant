@@ -53,13 +53,13 @@ Every portrait JSON entry must include:
   "row": 1,
   "column": 1,
   "cell": "R1C1",
-  "imageId": "npc-new-001-neutral",
-  "characterId": "npc-new-001",
+  "imageId": "character-001-neutral",
+  "characterId": "character-001",
   "expression": "neutral",
-  "outputFile": "npc-new-001-neutral.png",
+  "outputFile": "character-001-neutral.png",
   "cropCell": { "x": 0, "y": 0, "width": 1024, "height": 1024 },
   "filenameLabel": {
-    "text": "npc-new-001-neutral.png",
+    "text": "character-001-neutral.png",
     "color": "#FF00FF",
     "placement": "bottom-left corner inside this crop cell"
   }
