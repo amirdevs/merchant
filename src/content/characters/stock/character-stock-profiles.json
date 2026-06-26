@@ -116,7 +116,7 @@
     ],
     "sourceNotes": [
       "role: Silk and textile factor",
-      "score: 44",
+      "score: 32.7",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
@@ -219,7 +219,7 @@
     ],
     "sourceNotes": [
       "role: Baker and grain goods",
-      "score: 47.3",
+      "score: 49.3",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
@@ -330,7 +330,7 @@
     ],
     "sourceNotes": [
       "role: Books, ledgers, and documents",
-      "score: 82.3",
+      "score: 47",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
@@ -441,7 +441,7 @@
     ],
     "sourceNotes": [
       "role: Fish and maritime catch",
-      "score: 37.3",
+      "score: 29.3",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
@@ -455,7 +455,7 @@
     "displayName": "Nera Flintcup",
     "profession": "Tavern Keeper",
     "stockRole": "performance_games",
-    "confidence": "direct",
+    "confidence": "broad",
     "primaryPools": [
       {
         "tag": "instrument",
@@ -535,7 +535,7 @@
     ],
     "sourceNotes": [
       "role: Music, games, and performance goods",
-      "score: 24.3",
+      "score: 8",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
@@ -547,110 +547,112 @@
     "characterId": "character-056",
     "displayName": "Jarek Thornboot",
     "profession": "Caravan Cobbler",
-    "stockRole": "maritime_travel",
-    "confidence": "inferred",
+    "stockRole": "cobbler",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "rope",
+        "tag": "shoe_repair",
         "quantityMin": 1,
         "quantityMax": 7
       },
       {
-        "tag": "sail",
+        "tag": "shoes",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "map",
-        "quantityMin": 1,
-        "quantityMax": 4
-      },
-      {
-        "tag": "lantern",
+        "tag": "boots",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "travel",
+        "tag": "leather",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "buckle",
+        "quantityMin": 1,
+        "quantityMax": 6
+      },
+      {
+        "tag": "thread",
         "quantityMin": 1,
         "quantityMax": 6
       }
     ],
     "secondaryPools": [
       {
-        "tag": "barrels",
+        "tag": "nails",
         "quantityMin": 1,
         "quantityMax": 6
       },
       {
-        "tag": "food",
-        "quantityMin": 1,
-        "quantityMax": 6
-      },
-      {
-        "tag": "tool",
+        "tag": "wax",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "compass",
+        "tag": "polish",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "rope",
+        "tag": "shoe_repair",
         "percent": 100
       },
       {
-        "tag": "sail",
+        "tag": "shoes",
         "percent": 94
       },
       {
-        "tag": "map",
+        "tag": "boots",
         "percent": 88
       },
       {
-        "tag": "lantern",
+        "tag": "leather",
         "percent": 82
       },
       {
-        "tag": "travel",
+        "tag": "buckle",
         "percent": 76
       },
       {
-        "tag": "barrels",
+        "tag": "thread",
+        "percent": 70
+      },
+      {
+        "tag": "nails",
         "percent": 52
       },
       {
-        "tag": "food",
+        "tag": "wax",
         "percent": 47
       },
       {
-        "tag": "tool",
+        "tag": "polish",
         "percent": 42
-      },
-      {
-        "tag": "compass",
-        "percent": 37
       }
     ],
     "forbiddenTags": [
-      "royal",
+      "fish",
+      "meat",
+      "ore",
+      "gems",
       "jewelry",
-      "magic",
-      "livestock"
+      "royal"
     ],
     "sourceNotes": [
-      "role: Maritime and travel supplies",
-      "score: 13.7",
+      "role: Shoes, boots, and leather repairs",
+      "score: 59",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
-      "sail",
-      "lantern",
-      "compass"
+      "shoe_repair",
+      "buckle",
+      "polish"
     ]
   },
   {
@@ -747,7 +749,7 @@
     ],
     "sourceNotes": [
       "role: Scents, candles, and household luxuries",
-      "score: 42.7",
+      "score: 33",
       "runtime profession slug: alchemist"
     ],
     "missingTags": [
@@ -761,45 +763,45 @@
     "characterId": "character-058",
     "displayName": "Tovan Gristlen",
     "profession": "Miller",
-    "stockRole": "farmer",
-    "confidence": "inferred",
+    "stockRole": "miller",
+    "confidence": "direct",
     "primaryPools": [
+      {
+        "tag": "flour",
+        "quantityMin": 2,
+        "quantityMax": 14
+      },
       {
         "tag": "grain",
         "quantityMin": 2,
         "quantityMax": 14
       },
       {
-        "tag": "seeds",
-        "quantityMin": 1,
-        "quantityMax": 10
-      },
-      {
-        "tag": "apple",
-        "quantityMin": 2,
-        "quantityMax": 14
-      },
-      {
-        "tag": "vegetable",
+        "tag": "meal",
         "quantityMin": 2,
         "quantityMax": 12
       },
       {
-        "tag": "herbs",
+        "tag": "bran_sack",
         "quantityMin": 1,
-        "quantityMax": 7
+        "quantityMax": 8
+      },
+      {
+        "tag": "salt",
+        "quantityMin": 1,
+        "quantityMax": 6
       }
     ],
     "secondaryPools": [
       {
-        "tag": "cider",
-        "quantityMin": 1,
-        "quantityMax": 7
-      },
-      {
         "tag": "basket",
         "quantityMin": 1,
         "quantityMax": 4
+      },
+      {
+        "tag": "sack",
+        "quantityMin": 1,
+        "quantityMax": 5
       },
       {
         "tag": "tool",
@@ -809,31 +811,31 @@
     ],
     "stockBias": [
       {
-        "tag": "grain",
+        "tag": "flour",
         "percent": 100
       },
       {
-        "tag": "seeds",
+        "tag": "grain",
         "percent": 94
       },
       {
-        "tag": "apple",
+        "tag": "meal",
         "percent": 88
       },
       {
-        "tag": "vegetable",
+        "tag": "bran_sack",
         "percent": 82
       },
       {
-        "tag": "herbs",
+        "tag": "salt",
         "percent": 76
       },
       {
-        "tag": "cider",
+        "tag": "basket",
         "percent": 52
       },
       {
-        "tag": "basket",
+        "tag": "sack",
         "percent": 47
       },
       {
@@ -847,16 +849,16 @@
       "ore",
       "gems",
       "jewelry",
-      "royal"
+      "livestock"
     ],
     "sourceNotes": [
-      "role: Farm and orchard goods",
-      "score: 19",
+      "role: Milled grain and flour goods",
+      "score: 31",
       "runtime profession slug: alchemist"
     ],
     "missingTags": [
-      "herbs",
-      "cider"
+      "meal",
+      "bran_sack"
     ]
   },
   {
@@ -953,56 +955,52 @@
     ],
     "sourceNotes": [
       "role: Flowers, seeds, and gathered goods",
-      "score: 32",
+      "score: 39",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
-      "flower"
+      "flower",
+      "herbs"
     ]
   },
   {
     "characterId": "character-060",
     "displayName": "Kellan Sootwink",
     "profession": "Chimney Sweep",
-    "stockRole": "artisan_art",
-    "confidence": "inferred",
+    "stockRole": "chimney_sweep",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "brush",
+        "tag": "chimney_brush",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 7
       },
       {
-        "tag": "pigments",
+        "tag": "brush_bundle",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 6
       },
       {
-        "tag": "painting",
+        "tag": "soot",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 6
       },
       {
-        "tag": "statue",
+        "tag": "ash",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 6
       },
       {
-        "tag": "mask",
-        "quantityMin": 1,
-        "quantityMax": 4
-      },
-      {
-        "tag": "toy",
+        "tag": "coal",
         "quantityMin": 1,
         "quantityMax": 5
       }
     ],
     "secondaryPools": [
       {
-        "tag": "wood",
+        "tag": "ladder",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 3
       },
       {
         "tag": "cloth",
@@ -1010,38 +1008,34 @@
         "quantityMax": 4
       },
       {
-        "tag": "paper",
+        "tag": "bucket",
         "quantityMin": 1,
         "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "brush",
+        "tag": "chimney_brush",
         "percent": 100
       },
       {
-        "tag": "pigments",
+        "tag": "brush_bundle",
         "percent": 94
       },
       {
-        "tag": "painting",
+        "tag": "soot",
         "percent": 88
       },
       {
-        "tag": "statue",
+        "tag": "ash",
         "percent": 82
       },
       {
-        "tag": "mask",
+        "tag": "coal",
         "percent": 76
       },
       {
-        "tag": "toy",
-        "percent": 70
-      },
-      {
-        "tag": "wood",
+        "tag": "ladder",
         "percent": 52
       },
       {
@@ -1049,28 +1043,27 @@
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "bucket",
         "percent": 42
       }
     ],
     "forbiddenTags": [
+      "jewelry",
+      "gems",
+      "royal",
       "meat",
       "fish",
-      "ore",
-      "weapon",
-      "armor",
       "livestock"
     ],
     "sourceNotes": [
-      "role: Artisan and crafted goods",
-      "score: 17.7",
+      "role: Soot cleaning and hearth tools",
+      "score: 77.7",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
-      "brush",
-      "painting",
-      "statue",
-      "toy"
+      "chimney_brush",
+      "soot",
+      "ash"
     ]
   },
   {
@@ -1176,7 +1169,7 @@
     ],
     "sourceNotes": [
       "role: Jewelry and small luxuries",
-      "score: 37.3",
+      "score: 22.7",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
@@ -1190,99 +1183,114 @@
     "characterId": "character-062",
     "displayName": "Hobb Ashbarrel",
     "profession": "Charcoal Burner",
-    "stockRole": "miner",
-    "confidence": "direct",
+    "stockRole": "potter",
+    "confidence": "broad",
     "primaryPools": [
       {
-        "tag": "ore",
-        "quantityMin": 1,
-        "quantityMax": 10
-      },
-      {
-        "tag": "coal",
-        "quantityMin": 1,
-        "quantityMax": 10
-      },
-      {
-        "tag": "stone",
+        "tag": "pottery",
         "quantityMin": 1,
         "quantityMax": 8
       },
       {
-        "tag": "rocks",
+        "tag": "clay",
         "quantityMin": 1,
         "quantityMax": 8
       },
       {
-        "tag": "chalk",
+        "tag": "ceramic",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 7
+      },
+      {
+        "tag": "bowl",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "cup",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "jug",
+        "quantityMin": 1,
+        "quantityMax": 7
       }
     ],
     "secondaryPools": [
       {
-        "tag": "crystal",
+        "tag": "straw",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "tool",
+        "tag": "crate",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "lantern",
+        "tag": "chalk",
         "quantityMin": 1,
         "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "ore",
+        "tag": "pottery",
         "percent": 100
       },
       {
-        "tag": "coal",
+        "tag": "clay",
         "percent": 94
       },
       {
-        "tag": "stone",
+        "tag": "ceramic",
         "percent": 88
       },
       {
-        "tag": "rocks",
+        "tag": "bowl",
         "percent": 82
       },
       {
-        "tag": "chalk",
+        "tag": "cup",
         "percent": 76
       },
       {
-        "tag": "crystal",
+        "tag": "jug",
+        "percent": 70
+      },
+      {
+        "tag": "straw",
         "percent": 52
       },
       {
-        "tag": "tool",
+        "tag": "crate",
         "percent": 47
       },
       {
-        "tag": "lantern",
+        "tag": "chalk",
         "percent": 42
       }
     ],
     "forbiddenTags": [
-      "food",
-      "textile",
       "meat",
       "fish",
-      "book"
+      "livestock",
+      "jewelry",
+      "gems",
+      "weapon"
     ],
     "sourceNotes": [
-      "role: Mine and quarry goods",
-      "score: 36.3",
+      "role: Pottery and clay vessels",
+      "score: 6.3",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
+      "ceramic",
+      "bowl",
+      "cup",
+      "jug",
+      "straw",
       "chalk"
     ]
   },
@@ -1290,201 +1298,231 @@
     "characterId": "character-063",
     "displayName": "Rima Glasslark",
     "profession": "Glass Seller",
-    "stockRole": "general_market_trader",
+    "stockRole": "glass_seller",
     "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
-        "quantityMin": 1,
-        "quantityMax": 6
-      },
-      {
-        "tag": "cloth",
-        "quantityMin": 1,
-        "quantityMax": 5
-      },
-      {
-        "tag": "salt",
-        "quantityMin": 1,
-        "quantityMax": 6
-      },
-      {
-        "tag": "candle",
-        "quantityMin": 1,
-        "quantityMax": 5
-      },
-      {
-        "tag": "rope",
-        "quantityMin": 1,
-        "quantityMax": 4
-      }
-    ],
-    "secondaryPools": [
-      {
-        "tag": "basket",
-        "quantityMin": 1,
-        "quantityMax": 3
-      },
-      {
-        "tag": "jar",
-        "quantityMin": 1,
-        "quantityMax": 4
-      },
-      {
-        "tag": "paper",
-        "quantityMin": 1,
-        "quantityMax": 3
-      }
-    ],
-    "stockBias": [
-      {
-        "tag": "bread",
-        "percent": 100
-      },
-      {
-        "tag": "cloth",
-        "percent": 94
-      },
-      {
-        "tag": "salt",
-        "percent": 88
-      },
-      {
-        "tag": "candle",
-        "percent": 82
-      },
-      {
-        "tag": "rope",
-        "percent": 76
-      },
-      {
-        "tag": "basket",
-        "percent": 52
-      },
-      {
-        "tag": "jar",
-        "percent": 47
-      },
-      {
-        "tag": "paper",
-        "percent": 42
-      }
-    ],
-    "forbiddenTags": [],
-    "sourceNotes": [
-      "role: General market trader",
-      "score: 30.7",
-      "runtime profession slug: merchant"
-    ],
-    "missingTags": []
-  },
-  {
-    "characterId": "character-064",
-    "displayName": "Orvik Bellows",
-    "profession": "Tinker",
-    "stockRole": "scribe_books",
-    "confidence": "inferred",
-    "primaryPools": [
-      {
-        "tag": "book",
+        "tag": "glassware",
         "quantityMin": 1,
         "quantityMax": 7
       },
       {
-        "tag": "ledger",
-        "quantityMin": 1,
-        "quantityMax": 5
-      },
-      {
-        "tag": "paper",
-        "quantityMin": 1,
-        "quantityMax": 7
-      },
-      {
-        "tag": "ink",
+        "tag": "glass_bottle",
         "quantityMin": 1,
         "quantityMax": 6
       },
       {
-        "tag": "contract",
+        "tag": "glass_vial",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 8
       },
       {
-        "tag": "wax_seal",
+        "tag": "glass_pane",
         "quantityMin": 1,
         "quantityMax": 5
+      },
+      {
+        "tag": "jar",
+        "quantityMin": 1,
+        "quantityMax": 6
+      },
+      {
+        "tag": "bottle",
+        "quantityMin": 1,
+        "quantityMax": 6
       }
     ],
     "secondaryPools": [
       {
-        "tag": "map",
+        "tag": "wax",
         "quantityMin": 1,
         "quantityMax": 4
       },
       {
-        "tag": "letter_writing_kit",
+        "tag": "cloth",
         "quantityMin": 1,
         "quantityMax": 4
       },
       {
-        "tag": "quill",
+        "tag": "crate",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "book",
+        "tag": "glassware",
         "percent": 100
       },
       {
-        "tag": "ledger",
+        "tag": "glass_bottle",
         "percent": 94
       },
       {
-        "tag": "paper",
+        "tag": "glass_vial",
         "percent": 88
       },
       {
-        "tag": "ink",
+        "tag": "glass_pane",
         "percent": 82
       },
       {
-        "tag": "contract",
+        "tag": "jar",
         "percent": 76
       },
       {
-        "tag": "wax_seal",
+        "tag": "bottle",
         "percent": 70
       },
       {
-        "tag": "map",
+        "tag": "wax",
         "percent": 52
       },
       {
-        "tag": "letter_writing_kit",
+        "tag": "cloth",
         "percent": 47
       },
       {
-        "tag": "quill",
+        "tag": "crate",
         "percent": 42
       }
     ],
     "forbiddenTags": [
       "meat",
       "fish",
-      "ore",
+      "livestock",
       "weapon",
       "armor",
-      "livestock"
+      "ore",
+      "grain"
     ],
     "sourceNotes": [
-      "role: Books, ledgers, and documents",
-      "score: 17",
+      "role: Glassware and careful containers",
+      "score: 55.7",
+      "runtime profession slug: merchant"
+    ],
+    "missingTags": [
+      "glassware",
+      "glass_bottle",
+      "glass_vial",
+      "glass_pane"
+    ]
+  },
+  {
+    "characterId": "character-064",
+    "displayName": "Orvik Bellows",
+    "profession": "Tinker",
+    "stockRole": "tinker",
+    "confidence": "direct",
+    "primaryPools": [
+      {
+        "tag": "repair_tools",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "small_gears",
+        "quantityMin": 1,
+        "quantityMax": 6
+      },
+      {
+        "tag": "tinware",
+        "quantityMin": 1,
+        "quantityMax": 6
+      },
+      {
+        "tag": "kettle",
+        "quantityMin": 1,
+        "quantityMax": 5
+      },
+      {
+        "tag": "pot",
+        "quantityMin": 1,
+        "quantityMax": 5
+      },
+      {
+        "tag": "wire",
+        "quantityMin": 1,
+        "quantityMax": 6
+      }
+    ],
+    "secondaryPools": [
+      {
+        "tag": "metal_scraps",
+        "quantityMin": 1,
+        "quantityMax": 6
+      },
+      {
+        "tag": "nails",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "oil",
+        "quantityMin": 1,
+        "quantityMax": 4
+      }
+    ],
+    "stockBias": [
+      {
+        "tag": "repair_tools",
+        "percent": 100
+      },
+      {
+        "tag": "small_gears",
+        "percent": 94
+      },
+      {
+        "tag": "tinware",
+        "percent": 88
+      },
+      {
+        "tag": "kettle",
+        "percent": 82
+      },
+      {
+        "tag": "pot",
+        "percent": 76
+      },
+      {
+        "tag": "wire",
+        "percent": 70
+      },
+      {
+        "tag": "metal_scraps",
+        "percent": 52
+      },
+      {
+        "tag": "nails",
+        "percent": 47
+      },
+      {
+        "tag": "oil",
+        "percent": 42
+      }
+    ],
+    "forbiddenTags": [
+      "meat",
+      "fish",
+      "livestock",
+      "jewelry",
+      "gems",
+      "royal"
+    ],
+    "sourceNotes": [
+      "role: Tinker tools and small repairs",
+      "score: 39",
       "runtime profession slug: magic"
     ],
-    "missingTags": []
+    "missingTags": [
+      "repair_tools",
+      "small_gears",
+      "tinware",
+      "kettle",
+      "wire",
+      "metal_scraps",
+      "oil"
+    ]
   },
   {
     "characterId": "character-065",
@@ -1579,7 +1617,7 @@
     ],
     "sourceNotes": [
       "role: Hunting and leather goods",
-      "score: 47.7",
+      "score: 44.7",
       "runtime profession slug: blacksmith"
     ],
     "missingTags": [
@@ -1592,93 +1630,111 @@
     "characterId": "character-066",
     "displayName": "Ivo Plumspice",
     "profession": "Spice Hawker",
-    "stockRole": "general_market_trader",
-    "confidence": "inferred",
+    "stockRole": "spice_merchant",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "spices",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 10
       },
       {
-        "tag": "cloth",
+        "tag": "spice",
+        "quantityMin": 1,
+        "quantityMax": 9
+      },
+      {
+        "tag": "spice_jar_set",
         "quantityMin": 1,
         "quantityMax": 5
+      },
+      {
+        "tag": "clove_oil_vial",
+        "quantityMin": 1,
+        "quantityMax": 4
       },
       {
         "tag": "salt",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "candle",
+        "tag": "pepper",
         "quantityMin": 1,
         "quantityMax": 5
-      },
-      {
-        "tag": "rope",
-        "quantityMin": 1,
-        "quantityMax": 4
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "jar",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 5
       },
       {
-        "tag": "jar",
+        "tag": "basket",
         "quantityMin": 1,
         "quantityMax": 4
       },
       {
-        "tag": "paper",
+        "tag": "honey",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "spices",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "spice",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "spice_jar_set",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "clove_oil_vial",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "salt",
         "percent": 76
       },
       {
-        "tag": "basket",
-        "percent": 52
+        "tag": "pepper",
+        "percent": 70
       },
       {
         "tag": "jar",
+        "percent": 52
+      },
+      {
+        "tag": "basket",
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "honey",
         "percent": 42
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "weapon",
+      "armor",
+      "ore",
+      "livestock",
+      "jewelry",
+      "gems"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 12.7",
+      "role: Spices and kitchen aromatics",
+      "score: 47.3",
       "runtime profession slug: merchant"
     ],
-    "missingTags": []
+    "missingTags": [
+      "pepper"
+    ]
   },
   {
     "characterId": "character-067",
@@ -1774,7 +1830,7 @@
     ],
     "sourceNotes": [
       "role: Flowers, seeds, and gathered goods",
-      "score: 25.7",
+      "score: 23.7",
       "runtime profession slug: merchant"
     ],
     "missingTags": []
@@ -1883,7 +1939,7 @@
     ],
     "sourceNotes": [
       "role: Textile and sewing specialist",
-      "score: 32.3",
+      "score: 31.3",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
@@ -1894,67 +1950,72 @@
     "characterId": "character-069",
     "displayName": "Borin Mulefriend",
     "profession": "Pack Animal Trader",
-    "stockRole": "general_market_trader",
+    "stockRole": "pack_animal_trader",
     "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "mule",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 3
       },
       {
-        "tag": "cloth",
+        "tag": "pack_saddle",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "salt",
+        "tag": "harness",
         "quantityMin": 1,
         "quantityMax": 6
       },
       {
-        "tag": "candle",
+        "tag": "animal_feed",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 8
       },
       {
         "tag": "rope",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 7
+      },
+      {
+        "tag": "pack_bell",
+        "quantityMin": 1,
+        "quantityMax": 6
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "brush",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 5
       },
       {
-        "tag": "jar",
+        "tag": "grain",
+        "quantityMin": 1,
+        "quantityMax": 6
+      },
+      {
+        "tag": "blanket",
         "quantityMin": 1,
         "quantityMax": 4
-      },
-      {
-        "tag": "paper",
-        "quantityMin": 1,
-        "quantityMax": 3
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "mule",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "pack_saddle",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "harness",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "animal_feed",
         "percent": 82
       },
       {
@@ -1962,117 +2023,146 @@
         "percent": 76
       },
       {
-        "tag": "basket",
+        "tag": "pack_bell",
+        "percent": 70
+      },
+      {
+        "tag": "brush",
         "percent": 52
       },
       {
-        "tag": "jar",
+        "tag": "grain",
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "blanket",
         "percent": 42
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "jewelry",
+      "gems",
+      "book",
+      "paper",
+      "magic",
+      "seafood"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 30.7",
+      "role: Pack animals and caravan tack",
+      "score: 83.3",
       "runtime profession slug: merchant"
     ],
-    "missingTags": []
+    "missingTags": [
+      "pack_saddle",
+      "harness",
+      "animal_feed",
+      "pack_bell",
+      "brush",
+      "blanket"
+    ]
   },
   {
     "characterId": "character-070",
     "displayName": "Talia Redscale",
     "profession": "Reptile Seller",
-    "stockRole": "general_market_trader",
+    "stockRole": "reptile_seller",
     "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
-        "quantityMin": 1,
-        "quantityMax": 6
-      },
-      {
-        "tag": "cloth",
-        "quantityMin": 1,
-        "quantityMax": 5
-      },
-      {
-        "tag": "salt",
-        "quantityMin": 1,
-        "quantityMax": 6
-      },
-      {
-        "tag": "candle",
-        "quantityMin": 1,
-        "quantityMax": 5
-      },
-      {
-        "tag": "rope",
+        "tag": "reptile",
         "quantityMin": 1,
         "quantityMax": 4
+      },
+      {
+        "tag": "lizard",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "animal_cage",
+        "quantityMin": 1,
+        "quantityMax": 5
+      },
+      {
+        "tag": "feed",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "insects",
+        "quantityMin": 1,
+        "quantityMax": 7
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
-        "quantityMin": 1,
-        "quantityMax": 3
-      },
-      {
         "tag": "jar",
         "quantityMin": 1,
         "quantityMax": 4
       },
       {
-        "tag": "paper",
+        "tag": "basket",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
+      },
+      {
+        "tag": "cloth",
+        "quantityMin": 1,
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "reptile",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "lizard",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "animal_cage",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "feed",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "insects",
         "percent": 76
       },
       {
-        "tag": "basket",
+        "tag": "jar",
         "percent": 52
       },
       {
-        "tag": "jar",
+        "tag": "basket",
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "cloth",
         "percent": 42
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "jewelry",
+      "gems",
+      "ore",
+      "weapon",
+      "armor",
+      "book"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 30.3",
+      "role: Reptile and small animal care",
+      "score: 63",
       "runtime profession slug: merchant"
     ],
-    "missingTags": []
+    "missingTags": [
+      "reptile",
+      "animal_cage",
+      "feed"
+    ]
   },
   {
     "characterId": "character-071",
@@ -2199,11 +2289,10 @@
     ],
     "sourceNotes": [
       "role: Cookshop and kitchen goods",
-      "score: 59.7",
+      "score: 64.7",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
-      "oil",
       "pan"
     ]
   },
@@ -2211,40 +2300,45 @@
     "characterId": "character-072",
     "displayName": "Edris Nightjar",
     "profession": "Lamp Oil Seller",
-    "stockRole": "general_market_trader",
+    "stockRole": "lamp_oil_seller",
     "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "lamp_oil",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "cloth",
+        "tag": "oil",
+        "quantityMin": 1,
+        "quantityMax": 8
+      },
+      {
+        "tag": "lantern",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "salt",
+        "tag": "wick",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
         "tag": "candle",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 7
       },
       {
-        "tag": "rope",
+        "tag": "bottle",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 5
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "wax",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 5
       },
       {
         "tag": "jar",
@@ -2252,34 +2346,38 @@
         "quantityMax": 4
       },
       {
-        "tag": "paper",
+        "tag": "cloth",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "lamp_oil",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "oil",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "lantern",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "wick",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "candle",
         "percent": 76
       },
       {
-        "tag": "basket",
+        "tag": "bottle",
+        "percent": 70
+      },
+      {
+        "tag": "wax",
         "percent": 52
       },
       {
@@ -2287,112 +2385,133 @@
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "cloth",
         "percent": 42
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "meat",
+      "fish",
+      "livestock",
+      "ore",
+      "weapon",
+      "armor",
+      "gems"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 30.7",
+      "role: Lamp oil and lighting goods",
+      "score: 82",
       "runtime profession slug: merchant"
     ],
-    "missingTags": []
+    "missingTags": [
+      "lamp_oil",
+      "lantern"
+    ]
   },
   {
     "characterId": "character-073",
     "displayName": "Vessa Stonebloom",
     "profession": "Potter",
-    "stockRole": "miner",
-    "confidence": "inferred",
+    "stockRole": "potter",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "ore",
-        "quantityMin": 1,
-        "quantityMax": 10
-      },
-      {
-        "tag": "coal",
-        "quantityMin": 1,
-        "quantityMax": 10
-      },
-      {
-        "tag": "stone",
+        "tag": "pottery",
         "quantityMin": 1,
         "quantityMax": 8
       },
       {
-        "tag": "rocks",
+        "tag": "clay",
         "quantityMin": 1,
         "quantityMax": 8
       },
       {
-        "tag": "chalk",
+        "tag": "ceramic",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 7
+      },
+      {
+        "tag": "bowl",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "cup",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "jug",
+        "quantityMin": 1,
+        "quantityMax": 7
       }
     ],
     "secondaryPools": [
       {
-        "tag": "crystal",
+        "tag": "straw",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "tool",
+        "tag": "crate",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "lantern",
+        "tag": "chalk",
         "quantityMin": 1,
         "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "ore",
+        "tag": "pottery",
         "percent": 100
       },
       {
-        "tag": "coal",
+        "tag": "clay",
         "percent": 94
       },
       {
-        "tag": "stone",
+        "tag": "ceramic",
         "percent": 88
       },
       {
-        "tag": "rocks",
+        "tag": "bowl",
         "percent": 82
       },
       {
-        "tag": "chalk",
+        "tag": "cup",
         "percent": 76
       },
       {
-        "tag": "crystal",
+        "tag": "jug",
+        "percent": 70
+      },
+      {
+        "tag": "straw",
         "percent": 52
       },
       {
-        "tag": "tool",
+        "tag": "crate",
         "percent": 47
       },
       {
-        "tag": "lantern",
+        "tag": "chalk",
         "percent": 42
       }
     ],
     "forbiddenTags": [
-      "food",
-      "textile",
       "meat",
       "fish",
-      "book"
+      "livestock",
+      "jewelry",
+      "gems",
+      "weapon"
     ],
     "sourceNotes": [
-      "role: Mine and quarry goods",
-      "score: 16.3",
+      "role: Pottery and clay vessels",
+      "score: 51",
       "runtime profession slug: merchant"
     ],
     "missingTags": []
@@ -2401,93 +2520,115 @@
     "characterId": "character-074",
     "displayName": "Nico Quickmeasure",
     "profession": "Surveyor",
-    "stockRole": "general_market_trader",
-    "confidence": "inferred",
+    "stockRole": "surveying_tools",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
-        "quantityMin": 1,
-        "quantityMax": 6
-      },
-      {
-        "tag": "cloth",
+        "tag": "measuring_cord",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "salt",
-        "quantityMin": 1,
-        "quantityMax": 6
-      },
-      {
-        "tag": "candle",
+        "tag": "map",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "rope",
+        "tag": "compass",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "astrolabe",
+        "quantityMin": 1,
+        "quantityMax": 3
+      },
+      {
+        "tag": "lens",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "ledger",
         "quantityMin": 1,
         "quantityMax": 4
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "paper",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 5
       },
       {
-        "tag": "jar",
+        "tag": "ink",
         "quantityMin": 1,
         "quantityMax": 4
       },
       {
-        "tag": "paper",
+        "tag": "brass_tools",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "measuring_cord",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "map",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "compass",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "astrolabe",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "lens",
         "percent": 76
       },
       {
-        "tag": "basket",
-        "percent": 52
-      },
-      {
-        "tag": "jar",
-        "percent": 47
+        "tag": "ledger",
+        "percent": 70
       },
       {
         "tag": "paper",
+        "percent": 52
+      },
+      {
+        "tag": "ink",
+        "percent": 47
+      },
+      {
+        "tag": "brass_tools",
         "percent": 42
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "meat",
+      "fish",
+      "livestock",
+      "grain",
+      "jewelry",
+      "gems"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 12.7",
+      "role: Surveying and navigation instruments",
+      "score: 23.7",
       "runtime profession slug: merchant"
     ],
-    "missingTags": []
+    "missingTags": [
+      "measuring_cord",
+      "compass",
+      "astrolabe",
+      "lens",
+      "brass_tools"
+    ]
   },
   {
     "characterId": "character-075",
@@ -2573,7 +2714,7 @@
     ],
     "sourceNotes": [
       "role: Religious goods",
-      "score: 20",
+      "score: 18",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
@@ -2673,7 +2814,7 @@
     ],
     "sourceNotes": [
       "role: Butcher and preserved meats",
-      "score: 30.7",
+      "score: 37.7",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
@@ -2684,125 +2825,135 @@
     "characterId": "character-077",
     "displayName": "Senna Rainbarrel",
     "profession": "Water Seller",
-    "stockRole": "general_market_trader",
+    "stockRole": "water_seller",
     "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "rainwater_jug",
+        "quantityMin": 1,
+        "quantityMax": 8
+      },
+      {
+        "tag": "water",
+        "quantityMin": 1,
+        "quantityMax": 10
+      },
+      {
+        "tag": "jug",
+        "quantityMin": 1,
+        "quantityMax": 8
+      },
+      {
+        "tag": "waterskin",
         "quantityMin": 1,
         "quantityMax": 6
       },
       {
-        "tag": "cloth",
-        "quantityMin": 1,
-        "quantityMax": 5
-      },
-      {
-        "tag": "salt",
+        "tag": "bottle",
         "quantityMin": 1,
         "quantityMax": 6
-      },
-      {
-        "tag": "candle",
-        "quantityMin": 1,
-        "quantityMax": 5
-      },
-      {
-        "tag": "rope",
-        "quantityMin": 1,
-        "quantityMax": 4
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "bucket",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 5
       },
       {
-        "tag": "jar",
+        "tag": "cup",
+        "quantityMin": 1,
+        "quantityMax": 5
+      },
+      {
+        "tag": "cloth",
         "quantityMin": 1,
         "quantityMax": 4
-      },
-      {
-        "tag": "paper",
-        "quantityMin": 1,
-        "quantityMax": 3
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "rainwater_jug",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "water",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "jug",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "waterskin",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "bottle",
         "percent": 76
       },
       {
-        "tag": "basket",
+        "tag": "bucket",
         "percent": 52
       },
       {
-        "tag": "jar",
+        "tag": "cup",
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "cloth",
         "percent": 42
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "weapon",
+      "armor",
+      "ore",
+      "jewelry",
+      "gems",
+      "livestock",
+      "meat"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 24.7",
+      "role: Water and clean carrying vessels",
+      "score: 33",
       "runtime profession slug: merchant"
     ],
-    "missingTags": []
+    "missingTags": [
+      "waterskin"
+    ]
   },
   {
     "characterId": "character-087",
     "displayName": "Nax Twocopper",
     "profession": "Street Peddler",
-    "stockRole": "general_market_trader",
+    "stockRole": "street_peddler",
     "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "buttons",
         "quantityMin": 1,
         "quantityMax": 6
       },
       {
-        "tag": "cloth",
-        "quantityMin": 1,
-        "quantityMax": 5
-      },
-      {
-        "tag": "salt",
+        "tag": "ribbons",
         "quantityMin": 1,
         "quantityMax": 6
       },
       {
         "tag": "candle",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 6
       },
       {
-        "tag": "rope",
+        "tag": "paper",
         "quantityMin": 1,
         "quantityMax": 4
+      },
+      {
+        "tag": "small_bells",
+        "quantityMin": 1,
+        "quantityMax": 5
       }
     ],
     "secondaryPools": [
@@ -2817,30 +2968,30 @@
         "quantityMax": 4
       },
       {
-        "tag": "paper",
+        "tag": "toy",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "buttons",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "ribbons",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "candle",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "paper",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "small_bells",
         "percent": 76
       },
       {
@@ -2852,17 +3003,27 @@
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "toy",
         "percent": 42
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "ore",
+      "ingots",
+      "livestock",
+      "weapon",
+      "armor",
+      "royal"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 24.3",
+      "role: Street peddler small wares",
+      "score: 57",
       "runtime profession slug: blacksmith"
     ],
-    "missingTags": []
+    "missingTags": [
+      "small_bells",
+      "toy"
+    ]
   },
   {
     "characterId": "character-089",
@@ -2958,10 +3119,12 @@
     ],
     "sourceNotes": [
       "role: Farm and orchard goods",
-      "score: 43.7",
+      "score: 29.7",
       "runtime profession slug: fisher"
     ],
-    "missingTags": []
+    "missingTags": [
+      "cider"
+    ]
   },
   {
     "characterId": "character-128",
@@ -3057,7 +3220,7 @@
     ],
     "sourceNotes": [
       "role: Flowers, seeds, and gathered goods",
-      "score: 25.7",
+      "score: 23.7",
       "runtime profession slug: blacksmith"
     ],
     "missingTags": []
@@ -3066,93 +3229,114 @@
     "characterId": "character-152",
     "displayName": "Nixie Copperbell",
     "profession": "Bell Polisher",
-    "stockRole": "general_market_trader",
-    "confidence": "inferred",
+    "stockRole": "bell_polisher",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "bell",
         "quantityMin": 1,
         "quantityMax": 6
       },
       {
-        "tag": "cloth",
+        "tag": "small_bells",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 8
       },
       {
-        "tag": "salt",
+        "tag": "brass_polish",
         "quantityMin": 1,
         "quantityMax": 6
       },
       {
-        "tag": "candle",
+        "tag": "polishing_cloth",
+        "quantityMin": 1,
+        "quantityMax": 6
+      },
+      {
+        "tag": "wax",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "rope",
+        "tag": "oil",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 5
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "brass",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 5
       },
       {
-        "tag": "jar",
+        "tag": "cloth",
         "quantityMin": 1,
         "quantityMax": 4
       },
       {
-        "tag": "paper",
+        "tag": "brush_bundle",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "bell",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "small_bells",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "brass_polish",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "polishing_cloth",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "wax",
         "percent": 76
       },
       {
-        "tag": "basket",
+        "tag": "oil",
+        "percent": 70
+      },
+      {
+        "tag": "brass",
         "percent": 52
       },
       {
-        "tag": "jar",
+        "tag": "cloth",
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "brush_bundle",
         "percent": 42
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "meat",
+      "fish",
+      "livestock",
+      "grain",
+      "jewelry",
+      "gems"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 19.7",
+      "role: Bells and polishing supplies",
+      "score: 57.7",
       "runtime profession slug: blacksmith"
     ],
-    "missingTags": []
+    "missingTags": [
+      "bell",
+      "brass_polish",
+      "polishing_cloth",
+      "brass"
+    ]
   },
   {
     "characterId": "character-157",
@@ -3257,7 +3441,7 @@
     ],
     "sourceNotes": [
       "role: Forge goods and metalwork",
-      "score: 37",
+      "score: 24.3",
       "runtime profession slug: blacksmith"
     ],
     "missingTags": []
@@ -3365,7 +3549,7 @@
     ],
     "sourceNotes": [
       "role: Fish and maritime catch",
-      "score: 35.3",
+      "score: 23",
       "runtime profession slug: fisher"
     ],
     "missingTags": []
@@ -3473,7 +3657,7 @@
     ],
     "sourceNotes": [
       "role: Forge goods and metalwork",
-      "score: 37",
+      "score: 24.3",
       "runtime profession slug: blacksmith"
     ],
     "missingTags": []
@@ -3581,7 +3765,7 @@
     ],
     "sourceNotes": [
       "role: Fish and maritime catch",
-      "score: 35.3",
+      "score: 23",
       "runtime profession slug: fisher"
     ],
     "missingTags": []
@@ -3590,90 +3774,113 @@
     "characterId": "character-177",
     "displayName": "character-177",
     "profession": "quartermaster",
-    "stockRole": "general_market_trader",
-    "confidence": "broad",
+    "stockRole": "quartermaster",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 8
+      },
+      {
+        "tag": "barrels",
+        "quantityMin": 1,
+        "quantityMax": 7
       },
       {
         "tag": "salt",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "candle",
+        "tag": "cloth",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "lantern",
         "quantityMin": 1,
         "quantityMax": 5
-      },
-      {
-        "tag": "rope",
-        "quantityMin": 1,
-        "quantityMax": 4
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "bread",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 8
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 5
+      },
+      {
+        "tag": "basket",
+        "quantityMin": 1,
+        "quantityMax": 5
       },
       {
         "tag": "paper",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "barrels",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "salt",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "cloth",
         "percent": 76
       },
       {
-        "tag": "basket",
+        "tag": "lantern",
+        "percent": 70
+      },
+      {
+        "tag": "bread",
         "percent": 52
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "basket",
         "percent": 42
+      },
+      {
+        "tag": "paper",
+        "percent": 37
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "jewelry",
+      "gems",
+      "royal",
+      "magic"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 0",
+      "role: Quartermaster logistics stock",
+      "score: 25.3",
       "runtime profession slug: quartermaster"
     ],
     "missingTags": []
@@ -3682,90 +3889,113 @@
     "characterId": "character-178",
     "displayName": "character-178",
     "profession": "quartermaster",
-    "stockRole": "general_market_trader",
-    "confidence": "broad",
+    "stockRole": "quartermaster",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 8
+      },
+      {
+        "tag": "barrels",
+        "quantityMin": 1,
+        "quantityMax": 7
       },
       {
         "tag": "salt",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "candle",
+        "tag": "cloth",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "lantern",
         "quantityMin": 1,
         "quantityMax": 5
-      },
-      {
-        "tag": "rope",
-        "quantityMin": 1,
-        "quantityMax": 4
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "bread",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 8
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 5
+      },
+      {
+        "tag": "basket",
+        "quantityMin": 1,
+        "quantityMax": 5
       },
       {
         "tag": "paper",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "barrels",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "salt",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "cloth",
         "percent": 76
       },
       {
-        "tag": "basket",
+        "tag": "lantern",
+        "percent": 70
+      },
+      {
+        "tag": "bread",
         "percent": 52
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "basket",
         "percent": 42
+      },
+      {
+        "tag": "paper",
+        "percent": 37
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "jewelry",
+      "gems",
+      "royal",
+      "magic"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 0",
+      "role: Quartermaster logistics stock",
+      "score: 25.3",
       "runtime profession slug: quartermaster"
     ],
     "missingTags": []
@@ -3774,90 +4004,113 @@
     "characterId": "character-179",
     "displayName": "character-179",
     "profession": "quartermaster",
-    "stockRole": "general_market_trader",
-    "confidence": "broad",
+    "stockRole": "quartermaster",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 8
+      },
+      {
+        "tag": "barrels",
+        "quantityMin": 1,
+        "quantityMax": 7
       },
       {
         "tag": "salt",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "candle",
+        "tag": "cloth",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "lantern",
         "quantityMin": 1,
         "quantityMax": 5
-      },
-      {
-        "tag": "rope",
-        "quantityMin": 1,
-        "quantityMax": 4
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "bread",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 8
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 5
+      },
+      {
+        "tag": "basket",
+        "quantityMin": 1,
+        "quantityMax": 5
       },
       {
         "tag": "paper",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "barrels",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "salt",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "cloth",
         "percent": 76
       },
       {
-        "tag": "basket",
+        "tag": "lantern",
+        "percent": 70
+      },
+      {
+        "tag": "bread",
         "percent": 52
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "basket",
         "percent": 42
+      },
+      {
+        "tag": "paper",
+        "percent": 37
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "jewelry",
+      "gems",
+      "royal",
+      "magic"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 0",
+      "role: Quartermaster logistics stock",
+      "score: 25.3",
       "runtime profession slug: quartermaster"
     ],
     "missingTags": []
@@ -3866,90 +4119,113 @@
     "characterId": "character-180",
     "displayName": "character-180",
     "profession": "quartermaster",
-    "stockRole": "general_market_trader",
-    "confidence": "broad",
+    "stockRole": "quartermaster",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 8
+      },
+      {
+        "tag": "barrels",
+        "quantityMin": 1,
+        "quantityMax": 7
       },
       {
         "tag": "salt",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "candle",
+        "tag": "cloth",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "lantern",
         "quantityMin": 1,
         "quantityMax": 5
-      },
-      {
-        "tag": "rope",
-        "quantityMin": 1,
-        "quantityMax": 4
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "bread",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 8
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 5
+      },
+      {
+        "tag": "basket",
+        "quantityMin": 1,
+        "quantityMax": 5
       },
       {
         "tag": "paper",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "barrels",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "salt",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "cloth",
         "percent": 76
       },
       {
-        "tag": "basket",
+        "tag": "lantern",
+        "percent": 70
+      },
+      {
+        "tag": "bread",
         "percent": 52
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "basket",
         "percent": 42
+      },
+      {
+        "tag": "paper",
+        "percent": 37
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "jewelry",
+      "gems",
+      "royal",
+      "magic"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 0",
+      "role: Quartermaster logistics stock",
+      "score: 25.3",
       "runtime profession slug: quartermaster"
     ],
     "missingTags": []
@@ -3958,90 +4234,113 @@
     "characterId": "character-181",
     "displayName": "character-181",
     "profession": "quartermaster",
-    "stockRole": "general_market_trader",
-    "confidence": "broad",
+    "stockRole": "quartermaster",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 8
+      },
+      {
+        "tag": "barrels",
+        "quantityMin": 1,
+        "quantityMax": 7
       },
       {
         "tag": "salt",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "candle",
+        "tag": "cloth",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "lantern",
         "quantityMin": 1,
         "quantityMax": 5
-      },
-      {
-        "tag": "rope",
-        "quantityMin": 1,
-        "quantityMax": 4
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "bread",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 8
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 5
+      },
+      {
+        "tag": "basket",
+        "quantityMin": 1,
+        "quantityMax": 5
       },
       {
         "tag": "paper",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "barrels",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "salt",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "cloth",
         "percent": 76
       },
       {
-        "tag": "basket",
+        "tag": "lantern",
+        "percent": 70
+      },
+      {
+        "tag": "bread",
         "percent": 52
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "basket",
         "percent": 42
+      },
+      {
+        "tag": "paper",
+        "percent": 37
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "jewelry",
+      "gems",
+      "royal",
+      "magic"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 0",
+      "role: Quartermaster logistics stock",
+      "score: 25.3",
       "runtime profession slug: quartermaster"
     ],
     "missingTags": []
@@ -4050,90 +4349,113 @@
     "characterId": "character-182",
     "displayName": "character-182",
     "profession": "quartermaster",
-    "stockRole": "general_market_trader",
-    "confidence": "broad",
+    "stockRole": "quartermaster",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "quantityMin": 1,
-        "quantityMax": 5
+        "quantityMax": 8
+      },
+      {
+        "tag": "barrels",
+        "quantityMin": 1,
+        "quantityMax": 7
       },
       {
         "tag": "salt",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 8
       },
       {
-        "tag": "candle",
+        "tag": "cloth",
+        "quantityMin": 1,
+        "quantityMax": 7
+      },
+      {
+        "tag": "lantern",
         "quantityMin": 1,
         "quantityMax": 5
-      },
-      {
-        "tag": "rope",
-        "quantityMin": 1,
-        "quantityMax": 4
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "bread",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 8
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "quantityMin": 1,
-        "quantityMax": 4
+        "quantityMax": 5
+      },
+      {
+        "tag": "basket",
+        "quantityMin": 1,
+        "quantityMax": 5
       },
       {
         "tag": "paper",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "rope",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "crate",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "barrels",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "salt",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "cloth",
         "percent": 76
       },
       {
-        "tag": "basket",
+        "tag": "lantern",
+        "percent": 70
+      },
+      {
+        "tag": "bread",
         "percent": 52
       },
       {
-        "tag": "jar",
+        "tag": "tool",
         "percent": 47
       },
       {
-        "tag": "paper",
+        "tag": "basket",
         "percent": 42
+      },
+      {
+        "tag": "paper",
+        "percent": 37
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "jewelry",
+      "gems",
+      "royal",
+      "magic"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 0",
+      "role: Quartermaster logistics stock",
+      "score: 25.3",
       "runtime profession slug: quartermaster"
     ],
     "missingTags": []
@@ -4241,7 +4563,7 @@
     ],
     "sourceNotes": [
       "role: Forge goods and metalwork",
-      "score: 37",
+      "score: 24.3",
       "runtime profession slug: blacksmith"
     ],
     "missingTags": []
@@ -4349,7 +4671,7 @@
     ],
     "sourceNotes": [
       "role: Forge goods and metalwork",
-      "score: 37",
+      "score: 24.3",
       "runtime profession slug: blacksmith"
     ],
     "missingTags": []
@@ -4457,7 +4779,7 @@
     ],
     "sourceNotes": [
       "role: Forge goods and metalwork",
-      "score: 37",
+      "score: 24.3",
       "runtime profession slug: blacksmith"
     ],
     "missingTags": []
@@ -4565,7 +4887,7 @@
     ],
     "sourceNotes": [
       "role: Forge goods and metalwork",
-      "score: 37",
+      "score: 24.3",
       "runtime profession slug: blacksmith"
     ],
     "missingTags": []
@@ -4673,7 +4995,7 @@
     ],
     "sourceNotes": [
       "role: Forge goods and metalwork",
-      "score: 37",
+      "score: 24.3",
       "runtime profession slug: blacksmith"
     ],
     "missingTags": []
@@ -4781,7 +5103,7 @@
     ],
     "sourceNotes": [
       "role: Forge goods and metalwork",
-      "score: 37",
+      "score: 24.3",
       "runtime profession slug: blacksmith"
     ],
     "missingTags": []
@@ -4889,7 +5211,7 @@
     ],
     "sourceNotes": [
       "role: Fish and maritime catch",
-      "score: 35.3",
+      "score: 23",
       "runtime profession slug: fisher"
     ],
     "missingTags": []
@@ -4997,7 +5319,7 @@
     ],
     "sourceNotes": [
       "role: Fish and maritime catch",
-      "score: 35.3",
+      "score: 23",
       "runtime profession slug: fisher"
     ],
     "missingTags": []
@@ -5106,7 +5428,7 @@
     ],
     "sourceNotes": [
       "role: Textile and sewing specialist",
-      "score: 32",
+      "score: 31",
       "runtime profession slug: fisher"
     ],
     "missingTags": []
@@ -5204,7 +5526,7 @@
     ],
     "sourceNotes": [
       "role: Mine and quarry goods",
-      "score: 18.3",
+      "score: 14.7",
       "runtime profession slug: fisher"
     ],
     "missingTags": []
@@ -5213,90 +5535,106 @@
     "characterId": "character-227",
     "displayName": "Idris Starbrass",
     "profession": "Astrolabe Seller",
-    "stockRole": "general_market_trader",
+    "stockRole": "surveying_tools",
     "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "bread",
-        "quantityMin": 1,
-        "quantityMax": 6
-      },
-      {
-        "tag": "cloth",
+        "tag": "measuring_cord",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "salt",
-        "quantityMin": 1,
-        "quantityMax": 6
-      },
-      {
-        "tag": "candle",
+        "tag": "map",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "rope",
+        "tag": "compass",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "astrolabe",
+        "quantityMin": 1,
+        "quantityMax": 3
+      },
+      {
+        "tag": "lens",
+        "quantityMin": 1,
+        "quantityMax": 4
+      },
+      {
+        "tag": "ledger",
         "quantityMin": 1,
         "quantityMax": 4
       }
     ],
     "secondaryPools": [
       {
-        "tag": "basket",
+        "tag": "paper",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 5
       },
       {
-        "tag": "jar",
+        "tag": "ink",
         "quantityMin": 1,
         "quantityMax": 4
       },
       {
-        "tag": "paper",
+        "tag": "brass_tools",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "bread",
+        "tag": "measuring_cord",
         "percent": 100
       },
       {
-        "tag": "cloth",
+        "tag": "map",
         "percent": 94
       },
       {
-        "tag": "salt",
+        "tag": "compass",
         "percent": 88
       },
       {
-        "tag": "candle",
+        "tag": "astrolabe",
         "percent": 82
       },
       {
-        "tag": "rope",
+        "tag": "lens",
         "percent": 76
       },
       {
-        "tag": "basket",
-        "percent": 52
-      },
-      {
-        "tag": "jar",
-        "percent": 47
+        "tag": "ledger",
+        "percent": 70
       },
       {
         "tag": "paper",
+        "percent": 52
+      },
+      {
+        "tag": "ink",
+        "percent": 47
+      },
+      {
+        "tag": "brass_tools",
         "percent": 42
       }
     ],
-    "forbiddenTags": [],
+    "forbiddenTags": [
+      "meat",
+      "fish",
+      "livestock",
+      "grain",
+      "jewelry",
+      "gems"
+    ],
     "sourceNotes": [
-      "role: General market trader",
-      "score: 24.7",
+      "role: Surveying and navigation instruments",
+      "score: 65.7",
       "runtime profession slug: fisher"
     ],
     "missingTags": []
@@ -5305,108 +5643,110 @@
     "characterId": "character-228",
     "displayName": "Mora Pindrop",
     "profession": "Needle Locksmith",
-    "stockRole": "blacksmith",
+    "stockRole": "locksmith",
     "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "iron",
+        "tag": "lock",
         "quantityMin": 1,
         "quantityMax": 7
       },
       {
-        "tag": "coal",
+        "tag": "key",
         "quantityMin": 1,
         "quantityMax": 8
       },
       {
-        "tag": "tool",
+        "tag": "lockpick",
+        "quantityMin": 1,
+        "quantityMax": 5
+      },
+      {
+        "tag": "small_gears",
         "quantityMin": 1,
         "quantityMax": 6
       },
       {
-        "tag": "metal",
+        "tag": "needle",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 5
       },
       {
-        "tag": "nails",
+        "tag": "iron",
         "quantityMin": 1,
-        "quantityMax": 8
-      },
-      {
-        "tag": "horseshoe",
-        "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 5
       }
     ],
     "secondaryPools": [
       {
-        "tag": "ore",
+        "tag": "tool",
         "quantityMin": 1,
-        "quantityMax": 8
+        "quantityMax": 5
       },
       {
-        "tag": "ingots",
+        "tag": "oil",
         "quantityMin": 1,
-        "quantityMax": 7
+        "quantityMax": 4
       },
       {
-        "tag": "weapon",
+        "tag": "wax",
         "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 4
       }
     ],
     "stockBias": [
       {
-        "tag": "iron",
+        "tag": "lock",
         "percent": 100
       },
       {
-        "tag": "coal",
+        "tag": "key",
         "percent": 94
       },
       {
-        "tag": "tool",
+        "tag": "lockpick",
         "percent": 88
       },
       {
-        "tag": "metal",
+        "tag": "small_gears",
         "percent": 82
       },
       {
-        "tag": "nails",
+        "tag": "needle",
         "percent": 76
       },
       {
-        "tag": "horseshoe",
+        "tag": "iron",
         "percent": 70
       },
       {
-        "tag": "ore",
+        "tag": "tool",
         "percent": 52
       },
       {
-        "tag": "ingots",
+        "tag": "oil",
         "percent": 47
       },
       {
-        "tag": "weapon",
+        "tag": "wax",
         "percent": 42
       }
     ],
     "forbiddenTags": [
-      "food",
+      "meat",
+      "fish",
+      "livestock",
+      "grain",
       "jewelry",
-      "luxury",
-      "magic",
-      "art",
-      "book"
+      "gems"
     ],
     "sourceNotes": [
-      "role: Forge goods and metalwork",
-      "score: 30.3",
+      "role: Locks, keys, and precise metalwork",
+      "score: 86.7",
       "runtime profession slug: fisher"
     ],
-    "missingTags": []
+    "missingTags": [
+      "key"
+    ]
   }
 ]

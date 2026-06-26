@@ -6,30 +6,43 @@ Failures: 0
 Warnings: 0
 
 ## Confidence
-- broad: 6
-- direct: 37
-- inferred: 10
+- broad: 2
+- direct: 49
+- inferred: 2
 
 ## Roles
-- general_market_trader: 16
-- blacksmith: 9
+- blacksmith: 8
+- quartermaster: 6
 - fisher: 5
 - botanical: 3
-- miner: 3
-- scribe_books: 2
-- farmer: 2
+- potter: 2
 - textile_specialist: 2
+- surveying_tools: 2
 - silk_factor: 1
 - baker: 1
+- scribe_books: 1
 - performance_games: 1
-- maritime_travel: 1
+- cobbler: 1
 - household_luxury: 1
-- artisan_art: 1
+- miller: 1
+- chimney_sweep: 1
 - jeweler: 1
+- glass_seller: 1
+- tinker: 1
 - hunter_leather: 1
+- spice_merchant: 1
+- pack_animal_trader: 1
+- reptile_seller: 1
 - cookshop_owner: 1
+- lamp_oil_seller: 1
 - religious_goods: 1
 - butcher: 1
+- water_seller: 1
+- street_peddler: 1
+- farmer: 1
+- bell_polisher: 1
+- miner: 1
+- locksmith: 1
 
 ## Failures
 None.
@@ -50,87 +63,87 @@ None.
 - character-054 — Old Marrow Finn — Fishmonger — fisher — direct
   - primary: fish, seafood, shellfish, oyster, hook
   - secondary: barrels, net, salt, rope
-- character-055 — Nera Flintcup — Tavern Keeper — performance_games — direct
+- character-055 — Nera Flintcup — Tavern Keeper — performance_games — broad
   - primary: instrument, game, cards, dice
   - secondary: book, travel, mask
-- character-056 — Jarek Thornboot — Caravan Cobbler — maritime_travel — inferred
-  - primary: rope, sail, map, lantern, travel
-  - secondary: barrels, food, tool, compass
+- character-056 — Jarek Thornboot — Caravan Cobbler — cobbler — direct
+  - primary: shoe_repair, shoes, boots, leather, buckle, thread
+  - secondary: nails, wax, polish
 - character-057 — Pippa Candlebrook — Candle Maker — household_luxury — direct
   - primary: perfume, soap, candle, wax, wick
   - secondary: bottle, jar, luxury
-- character-058 — Tovan Gristlen — Miller — farmer — inferred
-  - primary: grain, seeds, apple, vegetable, herbs
-  - secondary: cider, basket, tool
+- character-058 — Tovan Gristlen — Miller — miller — direct
+  - primary: flour, grain, meal, bran_sack, salt
+  - secondary: basket, sack, tool
 - character-059 — Suri Amberleaf — Herbalist — botanical — direct
   - primary: flower, seeds, herbs, mushrooms, fruit
   - secondary: basket, medicine, honey
-- character-060 — Kellan Sootwink — Chimney Sweep — artisan_art — inferred
-  - primary: brush, pigments, painting, statue, mask, toy
-  - secondary: wood, cloth, paper
+- character-060 — Kellan Sootwink — Chimney Sweep — chimney_sweep — direct
+  - primary: chimney_brush, brush_bundle, soot, ash, coal
+  - secondary: ladder, cloth, bucket
 - character-061 — Dalla Reefsong — Pearl Trader — jeweler — direct
   - primary: jewelry, gem, pearls, brooch, ring, necklace
   - secondary: scale, small_pearl_lot, luxury
-- character-062 — Hobb Ashbarrel — Charcoal Burner — miner — direct
-  - primary: ore, coal, stone, rocks, chalk
-  - secondary: crystal, tool, lantern
-- character-063 — Rima Glasslark — Glass Seller — general_market_trader — direct
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
-- character-064 — Orvik Bellows — Tinker — scribe_books — inferred
-  - primary: book, ledger, paper, ink, contract, wax_seal
-  - secondary: map, letter_writing_kit, quill
+- character-062 — Hobb Ashbarrel — Charcoal Burner — potter — broad
+  - primary: pottery, clay, ceramic, bowl, cup, jug
+  - secondary: straw, crate, chalk
+- character-063 — Rima Glasslark — Glass Seller — glass_seller — direct
+  - primary: glassware, glass_bottle, glass_vial, glass_pane, jar, bottle
+  - secondary: wax, cloth, crate
+- character-064 — Orvik Bellows — Tinker — tinker — direct
+  - primary: repair_tools, small_gears, tinware, kettle, pot, wire
+  - secondary: metal_scraps, nails, oil
 - character-065 — Selka Warmhide — Furrier — hunter_leather — direct
   - primary: leather, hide, fur, pelt, bone
   - secondary: meat, arrows, knife
-- character-066 — Ivo Plumspice — Spice Hawker — general_market_trader — inferred
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
+- character-066 — Ivo Plumspice — Spice Hawker — spice_merchant — direct
+  - primary: spices, spice, spice_jar_set, clove_oil_vial, salt, pepper
+  - secondary: jar, basket, honey
 - character-067 — Coro Bluecap — Mushroom Farmer — botanical — direct
   - primary: flower, seeds, herbs, mushrooms, fruit
   - secondary: basket, medicine, honey
 - character-068 — Anja Threadmere — Seamstress — textile_specialist — direct
   - primary: cloth, thread, ribbons, lace, needle, wool
   - secondary: buttons, dye_vials, sail_repair
-- character-069 — Borin Mulefriend — Pack Animal Trader — general_market_trader — direct
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
-- character-070 — Talia Redscale — Reptile Seller — general_market_trader — direct
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
+- character-069 — Borin Mulefriend — Pack Animal Trader — pack_animal_trader — direct
+  - primary: mule, pack_saddle, harness, animal_feed, rope, pack_bell
+  - secondary: brush, grain, blanket
+- character-070 — Talia Redscale — Reptile Seller — reptile_seller — direct
+  - primary: reptile, lizard, animal_cage, feed, insects
+  - secondary: jar, basket, cloth
 - character-071 — Milo Copperpot — Cookshop Owner — cookshop_owner — direct
   - primary: cookpot, cookware, ladle, kitchen_tools, spices, recipe_papers
   - secondary: salt, flour, oil, pan, cauldron
-- character-072 — Edris Nightjar — Lamp Oil Seller — general_market_trader — direct
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
-- character-073 — Vessa Stonebloom — Potter — miner — inferred
-  - primary: ore, coal, stone, rocks, chalk
-  - secondary: crystal, tool, lantern
-- character-074 — Nico Quickmeasure — Surveyor — general_market_trader — inferred
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
+- character-072 — Edris Nightjar — Lamp Oil Seller — lamp_oil_seller — direct
+  - primary: lamp_oil, oil, lantern, wick, candle, bottle
+  - secondary: wax, jar, cloth
+- character-073 — Vessa Stonebloom — Potter — potter — direct
+  - primary: pottery, clay, ceramic, bowl, cup, jug
+  - secondary: straw, crate, chalk
+- character-074 — Nico Quickmeasure — Surveyor — surveying_tools — direct
+  - primary: measuring_cord, map, compass, astrolabe, lens, ledger
+  - secondary: paper, ink, brass_tools
 - character-075 — Faela Mournmint — Undertaker — religious_goods — inferred
   - primary: candle, relic, book, cloth
   - secondary: herbs, wax, oil
 - character-076 — Garrik Rednail — Butcher — butcher — direct
   - primary: meat, sausage, smoked, salt, knife
   - secondary: spice, leather, bone
-- character-077 — Senna Rainbarrel — Water Seller — general_market_trader — direct
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
-- character-087 — Nax Twocopper — Street Peddler — general_market_trader — direct
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
+- character-077 — Senna Rainbarrel — Water Seller — water_seller — direct
+  - primary: rainwater_jug, water, jug, waterskin, bottle
+  - secondary: bucket, cup, cloth
+- character-087 — Nax Twocopper — Street Peddler — street_peddler — direct
+  - primary: buttons, ribbons, candle, paper, small_bells
+  - secondary: basket, jar, toy
 - character-089 — Ula Flintseed — Seed Merchant — farmer — direct
   - primary: grain, seeds, apple, vegetable, herbs
   - secondary: cider, basket, tool
 - character-128 — Sella Redmoss — Mushroom Seller — botanical — direct
   - primary: flower, seeds, herbs, mushrooms, fruit
   - secondary: basket, medicine, honey
-- character-152 — Nixie Copperbell — Bell Polisher — general_market_trader — inferred
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
+- character-152 — Nixie Copperbell — Bell Polisher — bell_polisher — direct
+  - primary: bell, small_bells, brass_polish, polishing_cloth, wax, oil
+  - secondary: brass, cloth, brush_bundle
 - character-157 — character-157 — blacksmith — blacksmith — direct
   - primary: iron, coal, tool, metal, nails, horseshoe
   - secondary: ore, ingots, weapon
@@ -143,24 +156,24 @@ None.
 - character-173 — character-173 — fisher — fisher — direct
   - primary: fish, seafood, shellfish, oyster, hook
   - secondary: barrels, net, salt, rope
-- character-177 — character-177 — quartermaster — general_market_trader — broad
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
-- character-178 — character-178 — quartermaster — general_market_trader — broad
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
-- character-179 — character-179 — quartermaster — general_market_trader — broad
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
-- character-180 — character-180 — quartermaster — general_market_trader — broad
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
-- character-181 — character-181 — quartermaster — general_market_trader — broad
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
-- character-182 — character-182 — quartermaster — general_market_trader — broad
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
+- character-177 — character-177 — quartermaster — quartermaster — direct
+  - primary: rope, crate, barrels, salt, cloth, lantern
+  - secondary: bread, tool, basket, paper
+- character-178 — character-178 — quartermaster — quartermaster — direct
+  - primary: rope, crate, barrels, salt, cloth, lantern
+  - secondary: bread, tool, basket, paper
+- character-179 — character-179 — quartermaster — quartermaster — direct
+  - primary: rope, crate, barrels, salt, cloth, lantern
+  - secondary: bread, tool, basket, paper
+- character-180 — character-180 — quartermaster — quartermaster — direct
+  - primary: rope, crate, barrels, salt, cloth, lantern
+  - secondary: bread, tool, basket, paper
+- character-181 — character-181 — quartermaster — quartermaster — direct
+  - primary: rope, crate, barrels, salt, cloth, lantern
+  - secondary: bread, tool, basket, paper
+- character-182 — character-182 — quartermaster — quartermaster — direct
+  - primary: rope, crate, barrels, salt, cloth, lantern
+  - secondary: bread, tool, basket, paper
 - character-183 — character-183 — blacksmith — blacksmith — direct
   - primary: iron, coal, tool, metal, nails, horseshoe
   - secondary: ore, ingots, weapon
@@ -191,9 +204,9 @@ None.
 - character-221 — Darnik Stonehush — Mason — miner — inferred
   - primary: ore, coal, stone, rocks, chalk
   - secondary: crystal, tool, lantern
-- character-227 — Idris Starbrass — Astrolabe Seller — general_market_trader — direct
-  - primary: bread, cloth, salt, candle, rope
-  - secondary: basket, jar, paper
-- character-228 — Mora Pindrop — Needle Locksmith — blacksmith — direct
-  - primary: iron, coal, tool, metal, nails, horseshoe
-  - secondary: ore, ingots, weapon
+- character-227 — Idris Starbrass — Astrolabe Seller — surveying_tools — direct
+  - primary: measuring_cord, map, compass, astrolabe, lens, ledger
+  - secondary: paper, ink, brass_tools
+- character-228 — Mora Pindrop — Needle Locksmith — locksmith — direct
+  - primary: lock, key, lockpick, small_gears, needle, iron
+  - secondary: tool, oil, wax

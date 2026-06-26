@@ -1,32 +1,52 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
 const ROOT = process.cwd();
-const PROFILE_PATH = path.join(ROOT, "src/content/characters/stock/character-stock-profiles.json");
-const RUNTIME_PROFILE_PATH = path.join(ROOT, "src/content/characters/runtime/profiles.data.json");
-const ITEM_CATALOG_DIR = path.join(ROOT, "src/content/items/catalog");
-const REPORT_PATH = path.join(ROOT, "docs/logs/character-stock-profile-report.md");
+const PROFILE_PATH = path.join(ROOT, 'src/content/characters/stock/character-stock-profiles.json');
+const RUNTIME_PROFILE_PATH = path.join(ROOT, 'src/content/characters/runtime/profiles.data.json');
+const ITEM_CATALOG_DIR = path.join(ROOT, 'src/content/items/catalog');
+const REPORT_PATH = path.join(ROOT, 'docs/logs/character-stock-profile-report.md');
 
 const ABSTRACT_TAGS = new Set([
-  "market", "merchant", "specialty_trade", "finished_good", "input_good", "ordinary", "dry", "durable", "small_group",
-  "single_object", "food", "tool", "tools", "luxury", "currency", "documents", "document", "household", "travel",
-  "container", "storage", "maritime", "botanical", "religion", "contraband", "royal", "art", "magic", "music",
-  "textile", "cloth", "fabric", "metal", "wood", "produce", "ingredient", "small_luxury", "salvage", "bulky",
+  'market', 'merchant', 'specialty_trade', 'finished_good', 'input_good', 'ordinary', 'dry', 'durable', 'small_group',
+  'single_object', 'food', 'tool', 'tools', 'luxury', 'currency', 'documents', 'document', 'household', 'travel',
+  'container', 'storage', 'maritime', 'botanical', 'religion', 'contraband', 'royal', 'art', 'magic', 'music',
+  'textile', 'cloth', 'fabric', 'metal', 'wood', 'produce', 'ingredient', 'small_luxury', 'salvage', 'bulky',
 ]);
+
+const ROLE_EXPECTATIONS = [
+  { match: 'Lysaro Vellthorn', role: 'silk_factor', tags: ['silk_bolt', 'dye_vials'] },
+  { match: 'Milo Copperpot', role: 'cookshop_owner', tags: ['cookpot', 'ladle', 'spices'] },
+  { match: 'Rima Glasslark', role: 'glass_seller', tags: ['glassware', 'glass_bottle'] },
+  { match: 'Ivo Plumspice', role: 'spice_merchant', tags: ['spices', 'spice_jar_set'] },
+  { match: 'Edris Nightjar', role: 'lamp_oil_seller', tags: ['lamp_oil', 'lantern'] },
+  { match: 'Senna Rainbarrel', role: 'water_seller', tags: ['rainwater_jug', 'water'] },
+  { match: 'Jarek Thornboot', role: 'cobbler', tags: ['shoe_repair', 'leather'] },
+  { match: 'Kellan Sootwink', role: 'chimney_sweep', tags: ['chimney_brush', 'soot'] },
+  { match: 'Orvik Bellows', role: 'tinker', tags: ['repair_tools', 'tinware'] },
+  { match: 'Tovan Gristlen', role: 'miller', tags: ['flour', 'grain'] },
+  { match: 'Borin Mulefriend', role: 'pack_animal_trader', tags: ['pack_saddle', 'animal_feed'] },
+  { match: 'Talia Redscale', role: 'reptile_seller', tags: ['reptile', 'animal_cage'] },
+  { match: 'Vessa Stonebloom', role: 'potter', tags: ['pottery', 'clay'] },
+  { match: 'Nico Quickmeasure', role: 'surveying_tools', tags: ['measuring_cord', 'map'] },
+  { match: 'Nixie Copperbell', role: 'bell_polisher', tags: ['bell', 'brass_polish'] },
+  { match: 'Idris Starbrass', role: 'surveying_tools', tags: ['astrolabe', 'compass'] },
+  { match: 'Mora Pindrop', role: 'locksmith', tags: ['lock', 'key'] },
+];
 
 function readJson(filePath, fallback) {
   if (!fs.existsSync(filePath)) return fallback;
-  const source = fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, "");
+  const source = fs.readFileSync(filePath, 'utf8').replace(/^\uFEFF/, '');
   return JSON.parse(source);
 }
 
 function normalizeToken(value) {
-  return String(value || "")
+  return String(value || '')
     .toLowerCase()
-    .replace(/&/g, " and ")
-    .replace(/[^a-z0-9]+/g, "_")
-    .replace(/^_+|_+$/g, "")
-    .replace(/_+/g, "_");
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .replace(/_+/g, '_');
 }
 
 function walkJsonFiles(dir) {
@@ -35,14 +55,14 @@ function walkJsonFiles(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const filePath = path.join(dir, entry.name);
     if (entry.isDirectory()) results.push(...walkJsonFiles(filePath));
-    if (entry.isFile() && entry.name.endsWith(".json")) results.push(filePath);
+    if (entry.isFile() && entry.name.endsWith('.json')) results.push(filePath);
   }
   return results;
 }
 
 function flattenCategoryAxes(axes) {
   const values = [];
-  if (!axes || typeof axes !== "object") return values;
+  if (!axes || typeof axes !== 'object') return values;
   for (const entry of Object.values(axes)) {
     if (Array.isArray(entry)) values.push(...entry);
   }
@@ -75,7 +95,7 @@ function readItemTokens() {
 }
 
 function poolTags(profile) {
-  return [...(profile.primaryPools || []), ...(profile.secondaryPools || [])].map((pool) => normalizeToken(pool.tag)).filter(Boolean);
+  return [...(profile.primaryPools || []), ...(profile.secondaryPools || [])].map((entry) => normalizeToken(entry.tag)).filter(Boolean);
 }
 
 const profiles = readJson(PROFILE_PATH, []);
@@ -85,15 +105,15 @@ const profileById = new Map(profiles.map((profile) => [profile.characterId, prof
 const failures = [];
 const warnings = [];
 
-if (!profiles.length) failures.push("No explicit character stock profiles were generated.");
+if (!profiles.length) failures.push('No explicit character stock profiles were generated.');
 
-const runtimeMerchants = runtimeProfiles.filter((profile) => typeof profile.runtimeIndex === "number" && profile.isMerchant);
+const runtimeMerchants = runtimeProfiles.filter((profile) => typeof profile.runtimeIndex === 'number' && profile.isMerchant);
 for (const runtimeProfile of runtimeMerchants) {
   if (!profileById.has(runtimeProfile.characterId)) failures.push(`Missing stock profile for merchant ${runtimeProfile.characterId}.`);
 }
 
 for (const profile of profiles) {
-  if (!profile.characterId) failures.push("A stock profile is missing characterId.");
+  if (!profile.characterId) failures.push('A stock profile is missing characterId.');
   if (!profile.displayName) failures.push(`${profile.characterId} is missing displayName.`);
   if (!profile.stockRole) failures.push(`${profile.characterId} is missing stockRole.`);
   if (!Array.isArray(profile.primaryPools) || profile.primaryPools.length < 2) failures.push(`${profile.characterId} has fewer than 2 primary pools.`);
@@ -106,43 +126,63 @@ for (const profile of profiles) {
   }
 }
 
+for (const expectation of ROLE_EXPECTATIONS) {
+  const profile = profiles.find((entry) => entry.displayName === expectation.match);
+  if (!profile) {
+    failures.push(`Expected stock profile was not found for ${expectation.match}.`);
+    continue;
+  }
+  const tags = new Set(poolTags(profile));
+  if (profile.stockRole !== expectation.role) {
+    failures.push(`${expectation.match} must use stock role ${expectation.role}, got ${profile.stockRole}.`);
+  }
+  for (const tag of expectation.tags) {
+    if (!tags.has(normalizeToken(tag))) failures.push(`${expectation.match} is missing expected stock tag ${tag}.`);
+  }
+}
+
+const genericProfiles = profiles.filter((profile) => profile.stockRole === 'general_market_trader');
+if (genericProfiles.length > Math.max(6, Math.ceil(profiles.length * 0.18))) {
+  warnings.push(`General market trader role count is high: ${genericProfiles.length}. Review broad profiles manually.`);
+}
+
 const roleCounts = new Map();
 const confidenceCounts = new Map();
 for (const profile of profiles) {
   roleCounts.set(profile.stockRole, (roleCounts.get(profile.stockRole) || 0) + 1);
-  confidenceCounts.set(profile.confidence || "unknown", (confidenceCounts.get(profile.confidence || "unknown") || 0) + 1);
+  confidenceCounts.set(profile.confidence || 'unknown', (confidenceCounts.get(profile.confidence || 'unknown') || 0) + 1);
 }
 
 const lines = [];
-lines.push("# Character Stock Profile Report");
-lines.push("");
+lines.push('# Character Stock Profile Report');
+lines.push('');
 lines.push(`Runtime merchants: ${runtimeMerchants.length}`);
 lines.push(`Explicit stock profiles: ${profiles.length}`);
 lines.push(`Failures: ${failures.length}`);
 lines.push(`Warnings: ${warnings.length}`);
-lines.push("");
-lines.push("## Confidence");
+lines.push('');
+lines.push('## Confidence');
 for (const [key, count] of [...confidenceCounts.entries()].sort()) lines.push(`- ${key}: ${count}`);
-lines.push("");
-lines.push("## Roles");
+lines.push('');
+lines.push('## Roles');
 for (const [key, count] of [...roleCounts.entries()].sort((a, b) => b[1] - a[1])) lines.push(`- ${key}: ${count}`);
-lines.push("");
-lines.push("## Failures");
-if (!failures.length) lines.push("None.");
+lines.push('');
+lines.push('## Failures');
+if (!failures.length) lines.push('None.');
 for (const failure of failures) lines.push(`- ${failure}`);
-lines.push("");
-lines.push("## Warnings");
-if (!warnings.length) lines.push("None.");
+lines.push('');
+lines.push('## Warnings');
+if (!warnings.length) lines.push('None.');
 for (const warning of warnings.slice(0, 200)) lines.push(`- ${warning}`);
-lines.push("");
-lines.push("## Profiles");
+lines.push('');
+lines.push('## Profiles');
 for (const profile of profiles) {
   lines.push(`- ${profile.characterId} — ${profile.displayName} — ${profile.profession} — ${profile.stockRole} — ${profile.confidence}`);
-  lines.push(`  - primary: ${(profile.primaryPools || []).map((pool) => pool.tag).join(", ")}`);
-  if ((profile.secondaryPools || []).length) lines.push(`  - secondary: ${profile.secondaryPools.map((pool) => pool.tag).join(", ")}`);
+  lines.push(`  - primary: ${(profile.primaryPools || []).map((entry) => entry.tag).join(', ')}`);
+  if ((profile.secondaryPools || []).length) lines.push(`  - secondary: ${profile.secondaryPools.map((entry) => entry.tag).join(', ')}`);
 }
 fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
-fs.writeFileSync(REPORT_PATH, `${lines.join("\n")}\n`);
+fs.writeFileSync(REPORT_PATH, `${lines.join('\n')}\n`);
 
 for (const warning of warnings.slice(0, 30)) console.warn(warning);
 if (warnings.length > 30) console.warn(`...and ${warnings.length - 30} more warnings. See docs/logs/character-stock-profile-report.md.`);
