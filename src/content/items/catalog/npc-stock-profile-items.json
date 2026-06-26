@@ -1,18 +1,18 @@
 [
   {
     "index": 2238,
-    "id": "stock_profile_wax_seal",
-    "name": "wax seal",
-    "displayName": "Wax Seal",
-    "iconFile": "character-stock/wax_seal.png",
+    "id": "stock_profile_coin",
+    "name": "coin",
+    "displayName": "Coin",
+    "iconFile": "character-stock/coin.png",
     "tags": [
-      "wax_seal",
-      "silk_factor",
+      "coin",
+      "guild_finance",
       "character_stock",
       "specialty_trade"
     ],
     "family": "documents",
-    "subfamily": "silk goods",
+    "subfamily": "guild finance",
     "categoryAxes": {
       "material": [],
       "productionStage": [
@@ -41,7 +41,7 @@
       "many"
     ],
     "professionUses": [
-      "silk_factor"
+      "guild_finance"
     ],
     "regions": [],
     "sources": [
@@ -69,7 +69,7 @@
     "kingdomIndex": null,
     "imageFile": null,
     "textFile": null,
-    "description": "specialist stock item for silk and textile factor: wax seal"
+    "description": "specialist stock item for guild papers and financial goods: coin"
   },
   {
     "index": 2239,
@@ -79,12 +79,12 @@
     "iconFile": "character-stock/ledger.png",
     "tags": [
       "ledger",
-      "silk_factor",
+      "guild_finance",
       "character_stock",
       "specialty_trade"
     ],
     "family": "documents",
-    "subfamily": "silk goods",
+    "subfamily": "guild finance",
     "categoryAxes": {
       "material": [],
       "productionStage": [
@@ -113,7 +113,7 @@
       "many"
     ],
     "professionUses": [
-      "silk_factor"
+      "guild_finance"
     ],
     "regions": [],
     "sources": [
@@ -141,7 +141,7 @@
     "kingdomIndex": null,
     "imageFile": null,
     "textFile": null,
-    "description": "specialist stock item for silk and textile factor: ledger"
+    "description": "specialist stock item for guild papers and financial goods: ledger"
   },
   {
     "index": 2240,
@@ -151,12 +151,12 @@
     "iconFile": "character-stock/contract.png",
     "tags": [
       "contract",
-      "silk_factor",
+      "guild_finance",
       "character_stock",
       "specialty_trade"
     ],
     "family": "documents",
-    "subfamily": "silk goods",
+    "subfamily": "guild finance",
     "categoryAxes": {
       "material": [],
       "productionStage": [
@@ -185,7 +185,7 @@
       "many"
     ],
     "professionUses": [
-      "silk_factor"
+      "guild_finance"
     ],
     "regions": [],
     "sources": [
@@ -213,10 +213,226 @@
     "kingdomIndex": null,
     "imageFile": null,
     "textFile": null,
-    "description": "specialist stock item for silk and textile factor: contract"
+    "description": "specialist stock item for guild papers and financial goods: contract"
   },
   {
     "index": 2241,
+    "id": "stock_profile_permit",
+    "name": "permit",
+    "displayName": "Permit",
+    "iconFile": "character-stock/permit.png",
+    "tags": [
+      "permit",
+      "guild_finance",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "documents",
+    "subfamily": "guild finance",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "guild_finance"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for guild papers and financial goods: permit"
+  },
+  {
+    "index": 2242,
+    "id": "stock_profile_wax_seal",
+    "name": "wax seal",
+    "displayName": "Wax Seal",
+    "iconFile": "character-stock/wax_seal.png",
+    "tags": [
+      "wax_seal",
+      "guild_finance",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "documents",
+    "subfamily": "guild finance",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "guild_finance"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for guild papers and financial goods: wax seal"
+  },
+  {
+    "index": 2243,
+    "id": "stock_profile_share",
+    "name": "share",
+    "displayName": "Share",
+    "iconFile": "character-stock/share.png",
+    "tags": [
+      "share",
+      "guild_finance",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "documents",
+    "subfamily": "guild finance",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "guild_finance"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for guild papers and financial goods: share"
+  },
+  {
+    "index": 2244,
     "id": "stock_profile_flour",
     "name": "flour",
     "displayName": "Flour",
@@ -292,7 +508,7 @@
     "description": "specialist stock item for baker and grain goods: flour"
   },
   {
-    "index": 2242,
+    "index": 2245,
     "id": "stock_profile_pastry",
     "name": "pastry",
     "displayName": "Pastry",
@@ -368,7 +584,7 @@
     "description": "specialist stock item for baker and grain goods: pastry"
   },
   {
-    "index": 2243,
+    "index": 2246,
     "id": "stock_profile_map",
     "name": "map",
     "displayName": "Map",
@@ -440,7 +656,7 @@
     "description": "specialist stock item for books, ledgers, and documents: map"
   },
   {
-    "index": 2244,
+    "index": 2247,
     "id": "stock_profile_quill",
     "name": "quill",
     "displayName": "Quill",
@@ -512,7 +728,7 @@
     "description": "specialist stock item for books, ledgers, and documents: quill"
   },
   {
-    "index": 2245,
+    "index": 2248,
     "id": "stock_profile_oyster",
     "name": "oyster",
     "displayName": "Oyster",
@@ -588,7 +804,7 @@
     "description": "specialist stock item for fish and maritime catch: oyster"
   },
   {
-    "index": 2246,
+    "index": 2249,
     "id": "stock_profile_hook",
     "name": "hook",
     "displayName": "Hook",
@@ -660,7 +876,7 @@
     "description": "specialist stock item for fish and maritime catch: hook"
   },
   {
-    "index": 2247,
+    "index": 2250,
     "id": "stock_profile_net",
     "name": "net",
     "displayName": "Net",
@@ -732,7 +948,7 @@
     "description": "specialist stock item for fish and maritime catch: net"
   },
   {
-    "index": 2248,
+    "index": 2251,
     "id": "stock_profile_tavern_meal",
     "name": "tavern meal",
     "displayName": "Tavern Meal",
@@ -808,7 +1024,7 @@
     "description": "specialist stock item for tavern food, hearth, and table goods: tavern meal"
   },
   {
-    "index": 2249,
+    "index": 2252,
     "id": "stock_profile_stew",
     "name": "stew",
     "displayName": "Stew",
@@ -880,7 +1096,7 @@
     "description": "specialist stock item for tavern food, hearth, and table goods: stew"
   },
   {
-    "index": 2250,
+    "index": 2253,
     "id": "stock_profile_mug",
     "name": "mug",
     "displayName": "Mug",
@@ -952,7 +1168,7 @@
     "description": "specialist stock item for tavern food, hearth, and table goods: mug"
   },
   {
-    "index": 2251,
+    "index": 2254,
     "id": "stock_profile_candle",
     "name": "candle",
     "displayName": "Candle",
@@ -1024,7 +1240,7 @@
     "description": "specialist stock item for tavern food, hearth, and table goods: candle"
   },
   {
-    "index": 2252,
+    "index": 2255,
     "id": "stock_profile_instrument",
     "name": "instrument",
     "displayName": "Instrument",
@@ -1096,7 +1312,7 @@
     "description": "specialist stock item for tavern food, hearth, and table goods: instrument"
   },
   {
-    "index": 2253,
+    "index": 2256,
     "id": "stock_profile_firewood",
     "name": "firewood",
     "displayName": "Firewood",
@@ -1168,7 +1384,7 @@
     "description": "specialist stock item for tavern food, hearth, and table goods: firewood"
   },
   {
-    "index": 2254,
+    "index": 2257,
     "id": "stock_profile_shoe_repair",
     "name": "shoe repair",
     "displayName": "Shoe Repair",
@@ -1240,7 +1456,7 @@
     "description": "specialist stock item for shoes, boots, and leather repairs: shoe repair"
   },
   {
-    "index": 2255,
+    "index": 2258,
     "id": "stock_profile_buckle",
     "name": "buckle",
     "displayName": "Buckle",
@@ -1312,7 +1528,7 @@
     "description": "specialist stock item for shoes, boots, and leather repairs: buckle"
   },
   {
-    "index": 2256,
+    "index": 2259,
     "id": "stock_profile_polish",
     "name": "polish",
     "displayName": "Polish",
@@ -1384,7 +1600,7 @@
     "description": "specialist stock item for shoes, boots, and leather repairs: polish"
   },
   {
-    "index": 2257,
+    "index": 2260,
     "id": "stock_profile_perfume",
     "name": "perfume",
     "displayName": "Perfume",
@@ -1456,7 +1672,7 @@
     "description": "specialist stock item for scents, candles, and household luxuries: perfume"
   },
   {
-    "index": 2258,
+    "index": 2261,
     "id": "stock_profile_wick",
     "name": "wick",
     "displayName": "Wick",
@@ -1528,7 +1744,7 @@
     "description": "specialist stock item for scents, candles, and household luxuries: wick"
   },
   {
-    "index": 2259,
+    "index": 2262,
     "id": "stock_profile_jar",
     "name": "jar",
     "displayName": "Jar",
@@ -1600,7 +1816,7 @@
     "description": "specialist stock item for scents, candles, and household luxuries: jar"
   },
   {
-    "index": 2260,
+    "index": 2263,
     "id": "stock_profile_meal",
     "name": "meal",
     "displayName": "Meal",
@@ -1676,7 +1892,7 @@
     "description": "specialist stock item for milled grain and flour goods: meal"
   },
   {
-    "index": 2261,
+    "index": 2264,
     "id": "stock_profile_bran_sack",
     "name": "bran sack",
     "displayName": "Bran Sack",
@@ -1752,7 +1968,7 @@
     "description": "specialist stock item for milled grain and flour goods: bran sack"
   },
   {
-    "index": 2262,
+    "index": 2265,
     "id": "stock_profile_flower",
     "name": "flower",
     "displayName": "Flower",
@@ -1824,7 +2040,7 @@
     "description": "specialist stock item for flowers, seeds, and gathered goods: flower"
   },
   {
-    "index": 2263,
+    "index": 2266,
     "id": "stock_profile_herbs",
     "name": "herbs",
     "displayName": "Herbs",
@@ -1900,7 +2116,7 @@
     "description": "specialist stock item for flowers, seeds, and gathered goods: herbs"
   },
   {
-    "index": 2264,
+    "index": 2267,
     "id": "stock_profile_chimney_brush",
     "name": "chimney brush",
     "displayName": "Chimney Brush",
@@ -1972,7 +2188,7 @@
     "description": "specialist stock item for soot cleaning and hearth tools: chimney brush"
   },
   {
-    "index": 2265,
+    "index": 2268,
     "id": "stock_profile_soot",
     "name": "soot",
     "displayName": "Soot",
@@ -2044,7 +2260,7 @@
     "description": "specialist stock item for soot cleaning and hearth tools: soot"
   },
   {
-    "index": 2266,
+    "index": 2269,
     "id": "stock_profile_ash",
     "name": "ash",
     "displayName": "Ash",
@@ -2116,7 +2332,7 @@
     "description": "specialist stock item for soot cleaning and hearth tools: ash"
   },
   {
-    "index": 2267,
+    "index": 2270,
     "id": "stock_profile_brooch",
     "name": "brooch",
     "displayName": "Brooch",
@@ -2188,7 +2404,7 @@
     "description": "specialist stock item for jewelry and small luxuries: brooch"
   },
   {
-    "index": 2268,
+    "index": 2271,
     "id": "stock_profile_ring",
     "name": "ring",
     "displayName": "Ring",
@@ -2260,7 +2476,7 @@
     "description": "specialist stock item for jewelry and small luxuries: ring"
   },
   {
-    "index": 2269,
+    "index": 2272,
     "id": "stock_profile_necklace",
     "name": "necklace",
     "displayName": "Necklace",
@@ -2332,7 +2548,7 @@
     "description": "specialist stock item for jewelry and small luxuries: necklace"
   },
   {
-    "index": 2270,
+    "index": 2273,
     "id": "stock_profile_scale",
     "name": "scale",
     "displayName": "Scale",
@@ -2404,7 +2620,7 @@
     "description": "specialist stock item for jewelry and small luxuries: scale"
   },
   {
-    "index": 2271,
+    "index": 2274,
     "id": "stock_profile_charcoal",
     "name": "charcoal",
     "displayName": "Charcoal",
@@ -2476,7 +2692,7 @@
     "description": "specialist stock item for charcoal, fuel, and hearth supplies: charcoal"
   },
   {
-    "index": 2272,
+    "index": 2275,
     "id": "stock_profile_kindling",
     "name": "kindling",
     "displayName": "Kindling",
@@ -2548,7 +2764,7 @@
     "description": "specialist stock item for charcoal, fuel, and hearth supplies: kindling"
   },
   {
-    "index": 2273,
+    "index": 2276,
     "id": "stock_profile_lantern",
     "name": "lantern",
     "displayName": "Lantern",
@@ -2620,7 +2836,7 @@
     "description": "specialist stock item for charcoal, fuel, and hearth supplies: lantern"
   },
   {
-    "index": 2274,
+    "index": 2277,
     "id": "stock_profile_glassware",
     "name": "glassware",
     "displayName": "Glassware",
@@ -2692,7 +2908,7 @@
     "description": "specialist stock item for glassware and careful containers: glassware"
   },
   {
-    "index": 2275,
+    "index": 2278,
     "id": "stock_profile_glass_bottle",
     "name": "glass bottle",
     "displayName": "Glass Bottle",
@@ -2764,7 +2980,7 @@
     "description": "specialist stock item for glassware and careful containers: glass bottle"
   },
   {
-    "index": 2276,
+    "index": 2279,
     "id": "stock_profile_glass_vial",
     "name": "glass vial",
     "displayName": "Glass Vial",
@@ -2836,7 +3052,7 @@
     "description": "specialist stock item for glassware and careful containers: glass vial"
   },
   {
-    "index": 2277,
+    "index": 2280,
     "id": "stock_profile_glass_pane",
     "name": "glass pane",
     "displayName": "Glass Pane",
@@ -2908,7 +3124,7 @@
     "description": "specialist stock item for glassware and careful containers: glass pane"
   },
   {
-    "index": 2278,
+    "index": 2281,
     "id": "stock_profile_repair_tools",
     "name": "repair tools",
     "displayName": "Repair Tools",
@@ -2980,7 +3196,7 @@
     "description": "specialist stock item for tinker tools and small repairs: repair tools"
   },
   {
-    "index": 2279,
+    "index": 2282,
     "id": "stock_profile_small_gears",
     "name": "small gears",
     "displayName": "Small Gears",
@@ -3052,7 +3268,7 @@
     "description": "specialist stock item for tinker tools and small repairs: small gears"
   },
   {
-    "index": 2280,
+    "index": 2283,
     "id": "stock_profile_tinware",
     "name": "tinware",
     "displayName": "Tinware",
@@ -3124,7 +3340,7 @@
     "description": "specialist stock item for tinker tools and small repairs: tinware"
   },
   {
-    "index": 2281,
+    "index": 2284,
     "id": "stock_profile_kettle",
     "name": "kettle",
     "displayName": "Kettle",
@@ -3196,7 +3412,7 @@
     "description": "specialist stock item for tinker tools and small repairs: kettle"
   },
   {
-    "index": 2282,
+    "index": 2285,
     "id": "stock_profile_wire",
     "name": "wire",
     "displayName": "Wire",
@@ -3268,7 +3484,7 @@
     "description": "specialist stock item for tinker tools and small repairs: wire"
   },
   {
-    "index": 2283,
+    "index": 2286,
     "id": "stock_profile_metal_scraps",
     "name": "metal scraps",
     "displayName": "Metal Scraps",
@@ -3340,7 +3556,7 @@
     "description": "specialist stock item for tinker tools and small repairs: metal scraps"
   },
   {
-    "index": 2284,
+    "index": 2287,
     "id": "stock_profile_oil",
     "name": "oil",
     "displayName": "Oil",
@@ -3416,7 +3632,7 @@
     "description": "specialist stock item for tinker tools and small repairs: oil"
   },
   {
-    "index": 2285,
+    "index": 2288,
     "id": "stock_profile_hide",
     "name": "hide",
     "displayName": "Hide",
@@ -3488,7 +3704,7 @@
     "description": "specialist stock item for hunting and leather goods: hide"
   },
   {
-    "index": 2286,
+    "index": 2289,
     "id": "stock_profile_pelt",
     "name": "pelt",
     "displayName": "Pelt",
@@ -3560,7 +3776,7 @@
     "description": "specialist stock item for hunting and leather goods: pelt"
   },
   {
-    "index": 2287,
+    "index": 2290,
     "id": "stock_profile_bone",
     "name": "bone",
     "displayName": "Bone",
@@ -3632,7 +3848,7 @@
     "description": "specialist stock item for hunting and leather goods: bone"
   },
   {
-    "index": 2288,
+    "index": 2291,
     "id": "stock_profile_pepper",
     "name": "pepper",
     "displayName": "Pepper",
@@ -3704,7 +3920,7 @@
     "description": "specialist stock item for spices and kitchen aromatics: pepper"
   },
   {
-    "index": 2289,
+    "index": 2292,
     "id": "stock_profile_sail_repair",
     "name": "sail repair",
     "displayName": "Sail Repair",
@@ -3776,7 +3992,7 @@
     "description": "specialist stock item for textile and sewing specialist: sail repair"
   },
   {
-    "index": 2290,
+    "index": 2293,
     "id": "stock_profile_pack_saddle",
     "name": "pack saddle",
     "displayName": "Pack Saddle",
@@ -3848,7 +4064,7 @@
     "description": "specialist stock item for pack animals and caravan tack: pack saddle"
   },
   {
-    "index": 2291,
+    "index": 2294,
     "id": "stock_profile_harness",
     "name": "harness",
     "displayName": "Harness",
@@ -3920,7 +4136,7 @@
     "description": "specialist stock item for pack animals and caravan tack: harness"
   },
   {
-    "index": 2292,
+    "index": 2295,
     "id": "stock_profile_animal_feed",
     "name": "animal feed",
     "displayName": "Animal Feed",
@@ -3996,7 +4212,7 @@
     "description": "specialist stock item for pack animals and caravan tack: animal feed"
   },
   {
-    "index": 2293,
+    "index": 2296,
     "id": "stock_profile_pack_bell",
     "name": "pack bell",
     "displayName": "Pack Bell",
@@ -4068,7 +4284,7 @@
     "description": "specialist stock item for pack animals and caravan tack: pack bell"
   },
   {
-    "index": 2294,
+    "index": 2297,
     "id": "stock_profile_brush",
     "name": "brush",
     "displayName": "Brush",
@@ -4140,7 +4356,7 @@
     "description": "specialist stock item for pack animals and caravan tack: brush"
   },
   {
-    "index": 2295,
+    "index": 2298,
     "id": "stock_profile_blanket",
     "name": "blanket",
     "displayName": "Blanket",
@@ -4212,7 +4428,7 @@
     "description": "specialist stock item for pack animals and caravan tack: blanket"
   },
   {
-    "index": 2296,
+    "index": 2299,
     "id": "stock_profile_reptile",
     "name": "reptile",
     "displayName": "Reptile",
@@ -4284,7 +4500,7 @@
     "description": "specialist stock item for reptile and small animal care: reptile"
   },
   {
-    "index": 2297,
+    "index": 2300,
     "id": "stock_profile_animal_cage",
     "name": "animal cage",
     "displayName": "Animal Cage",
@@ -4356,7 +4572,7 @@
     "description": "specialist stock item for reptile and small animal care: animal cage"
   },
   {
-    "index": 2298,
+    "index": 2301,
     "id": "stock_profile_feed",
     "name": "feed",
     "displayName": "Feed",
@@ -4432,7 +4648,7 @@
     "description": "specialist stock item for reptile and small animal care: feed"
   },
   {
-    "index": 2299,
+    "index": 2302,
     "id": "stock_profile_pan",
     "name": "pan",
     "displayName": "Pan",
@@ -4504,7 +4720,7 @@
     "description": "specialist stock item for cookshop and kitchen goods: pan"
   },
   {
-    "index": 2300,
+    "index": 2303,
     "id": "stock_profile_lamp_oil",
     "name": "lamp oil",
     "displayName": "Lamp Oil",
@@ -4580,7 +4796,7 @@
     "description": "specialist stock item for lamp oil and lighting goods: lamp oil"
   },
   {
-    "index": 2301,
+    "index": 2304,
     "id": "stock_profile_ceramic",
     "name": "ceramic",
     "displayName": "Ceramic",
@@ -4652,7 +4868,7 @@
     "description": "specialist stock item for pottery and clay vessels: ceramic"
   },
   {
-    "index": 2302,
+    "index": 2305,
     "id": "stock_profile_bowl",
     "name": "bowl",
     "displayName": "Bowl",
@@ -4724,7 +4940,7 @@
     "description": "specialist stock item for pottery and clay vessels: bowl"
   },
   {
-    "index": 2303,
+    "index": 2306,
     "id": "stock_profile_cup",
     "name": "cup",
     "displayName": "Cup",
@@ -4796,7 +5012,7 @@
     "description": "specialist stock item for pottery and clay vessels: cup"
   },
   {
-    "index": 2304,
+    "index": 2307,
     "id": "stock_profile_jug",
     "name": "jug",
     "displayName": "Jug",
@@ -4868,7 +5084,7 @@
     "description": "specialist stock item for pottery and clay vessels: jug"
   },
   {
-    "index": 2305,
+    "index": 2308,
     "id": "stock_profile_straw",
     "name": "straw",
     "displayName": "Straw",
@@ -4940,7 +5156,7 @@
     "description": "specialist stock item for pottery and clay vessels: straw"
   },
   {
-    "index": 2306,
+    "index": 2309,
     "id": "stock_profile_chalk",
     "name": "chalk",
     "displayName": "Chalk",
@@ -5012,7 +5228,7 @@
     "description": "specialist stock item for pottery and clay vessels: chalk"
   },
   {
-    "index": 2307,
+    "index": 2310,
     "id": "stock_profile_measuring_cord",
     "name": "measuring cord",
     "displayName": "Measuring Cord",
@@ -5084,7 +5300,7 @@
     "description": "specialist stock item for surveying and navigation instruments: measuring cord"
   },
   {
-    "index": 2308,
+    "index": 2311,
     "id": "stock_profile_compass",
     "name": "compass",
     "displayName": "Compass",
@@ -5156,7 +5372,7 @@
     "description": "specialist stock item for surveying and navigation instruments: compass"
   },
   {
-    "index": 2309,
+    "index": 2312,
     "id": "stock_profile_astrolabe",
     "name": "astrolabe",
     "displayName": "Astrolabe",
@@ -5228,7 +5444,7 @@
     "description": "specialist stock item for surveying and navigation instruments: astrolabe"
   },
   {
-    "index": 2310,
+    "index": 2313,
     "id": "stock_profile_lens",
     "name": "lens",
     "displayName": "Lens",
@@ -5300,7 +5516,7 @@
     "description": "specialist stock item for surveying and navigation instruments: lens"
   },
   {
-    "index": 2311,
+    "index": 2314,
     "id": "stock_profile_brass_tools",
     "name": "brass tools",
     "displayName": "Brass Tools",
@@ -5372,7 +5588,7 @@
     "description": "specialist stock item for surveying and navigation instruments: brass tools"
   },
   {
-    "index": 2312,
+    "index": 2315,
     "id": "stock_profile_relic",
     "name": "relic",
     "displayName": "Relic",
@@ -5444,7 +5660,7 @@
     "description": "specialist stock item for religious goods: relic"
   },
   {
-    "index": 2313,
+    "index": 2316,
     "id": "stock_profile_smoked",
     "name": "smoked",
     "displayName": "Smoked",
@@ -5516,7 +5732,7 @@
     "description": "specialist stock item for butcher and preserved meats: smoked"
   },
   {
-    "index": 2314,
+    "index": 2317,
     "id": "stock_profile_waterskin",
     "name": "waterskin",
     "displayName": "Waterskin",
@@ -5592,19 +5808,19 @@
     "description": "specialist stock item for water and clean carrying vessels: waterskin"
   },
   {
-    "index": 2315,
-    "id": "stock_profile_small_bells",
-    "name": "small bells",
-    "displayName": "Small Bells",
-    "iconFile": "character-stock/small_bells.png",
+    "index": 2318,
+    "id": "stock_profile_wheel",
+    "name": "wheel",
+    "displayName": "Wheel",
+    "iconFile": "character-stock/wheel.png",
     "tags": [
-      "small_bells",
-      "street_peddler",
+      "wheel",
+      "woodworker",
       "character_stock",
       "specialty_trade"
     ],
-    "family": "market goods",
-    "subfamily": "small wares",
+    "family": "woodwork",
+    "subfamily": "storage goods",
     "categoryAxes": {
       "material": [],
       "productionStage": [
@@ -5633,7 +5849,7 @@
       "many"
     ],
     "professionUses": [
-      "street_peddler"
+      "woodworker"
     ],
     "regions": [],
     "sources": [
@@ -5661,82 +5877,10 @@
     "kingdomIndex": null,
     "imageFile": null,
     "textFile": null,
-    "description": "specialist stock item for street peddler small wares: small bells"
+    "description": "specialist stock item for woodwork and storage goods: wheel"
   },
   {
-    "index": 2316,
-    "id": "stock_profile_toy",
-    "name": "toy",
-    "displayName": "Toy",
-    "iconFile": "character-stock/toy.png",
-    "tags": [
-      "toy",
-      "street_peddler",
-      "character_stock",
-      "specialty_trade"
-    ],
-    "family": "market goods",
-    "subfamily": "small wares",
-    "categoryAxes": {
-      "material": [],
-      "productionStage": [
-        "finished_good"
-      ],
-      "freshness": [],
-      "legalSocial": [
-        "ordinary"
-      ],
-      "marketBehavior": [
-        "specialty_trade"
-      ],
-      "storageHandling": [
-        "dry"
-      ],
-      "artVariant": [
-        "single_object"
-      ],
-      "featureHooks": [
-        "character_stock_profile"
-      ]
-    },
-    "forms": [
-      "one",
-      "few",
-      "many"
-    ],
-    "professionUses": [
-      "street_peddler"
-    ],
-    "regions": [],
-    "sources": [
-      "market"
-    ],
-    "tradeRole": "specialty_good",
-    "rarityBand": "common",
-    "qualityBands": [
-      "common",
-      "fine"
-    ],
-    "bulkProfile": "small_goods",
-    "storageNeeds": [],
-    "decayProfile": "none",
-    "marketBehavior": [
-      "specialty_trade"
-    ],
-    "loafValue": 55,
-    "size": 1,
-    "weight": 1,
-    "pull": 0,
-    "carry": 0,
-    "rarity": 1,
-    "unique": false,
-    "kingdomIndex": null,
-    "imageFile": null,
-    "textFile": null,
-    "description": "specialist stock item for street peddler small wares: toy"
-  },
-  {
-    "index": 2317,
+    "index": 2319,
     "id": "stock_profile_cider",
     "name": "cider",
     "displayName": "Cider",
@@ -5808,7 +5952,1163 @@
     "description": "specialist stock item for farm and orchard goods: cider"
   },
   {
-    "index": 2318,
+    "index": 2320,
+    "id": "stock_profile_key",
+    "name": "key",
+    "displayName": "Key",
+    "iconFile": "character-stock/key.png",
+    "tags": [
+      "key",
+      "locksmith",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "metalwork",
+    "subfamily": "locks and keys",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "locksmith"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for locks, keys, and precise metalwork: key"
+  },
+  {
+    "index": 2321,
+    "id": "stock_profile_small_bells",
+    "name": "small bells",
+    "displayName": "Small Bells",
+    "iconFile": "character-stock/small_bells.png",
+    "tags": [
+      "small_bells",
+      "street_peddler",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "market goods",
+    "subfamily": "small wares",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "street_peddler"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for street peddler small wares: small bells"
+  },
+  {
+    "index": 2322,
+    "id": "stock_profile_toy",
+    "name": "toy",
+    "displayName": "Toy",
+    "iconFile": "character-stock/toy.png",
+    "tags": [
+      "toy",
+      "street_peddler",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "market goods",
+    "subfamily": "small wares",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "street_peddler"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for street peddler small wares: toy"
+  },
+  {
+    "index": 2323,
+    "id": "stock_profile_satchel",
+    "name": "satchel",
+    "displayName": "Satchel",
+    "iconFile": "character-stock/satchel.png",
+    "tags": [
+      "satchel",
+      "courier_clerk",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "documents",
+    "subfamily": "message supplies",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "courier_clerk"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for courier, clerk, and posting supplies: satchel"
+  },
+  {
+    "index": 2324,
+    "id": "stock_profile_halter",
+    "name": "halter",
+    "displayName": "Halter",
+    "iconFile": "character-stock/halter.png",
+    "tags": [
+      "halter",
+      "stable_hand",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "stable goods",
+    "subfamily": "tack and grooming",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "stable_hand"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for stable hand tack and grooming stock: halter"
+  },
+  {
+    "index": 2325,
+    "id": "stock_profile_horse_brush",
+    "name": "horse brush",
+    "displayName": "Horse Brush",
+    "iconFile": "character-stock/horse_brush.png",
+    "tags": [
+      "horse_brush",
+      "stable_hand",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "stable goods",
+    "subfamily": "tack and grooming",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "stable_hand"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for stable hand tack and grooming stock: horse brush"
+  },
+  {
+    "index": 2326,
+    "id": "stock_profile_feed_scoop",
+    "name": "feed scoop",
+    "displayName": "Feed Scoop",
+    "iconFile": "character-stock/feed_scoop.png",
+    "tags": [
+      "feed_scoop",
+      "stable_hand",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "food",
+    "subfamily": "tack and grooming",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [
+        "shelf_stable"
+      ],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "sealed"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "stable_hand"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "consumable_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [
+      "dry"
+    ],
+    "decayProfile": "slow",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 35,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for stable hand tack and grooming stock: feed scoop"
+  },
+  {
+    "index": 2327,
+    "id": "stock_profile_hay_bundle",
+    "name": "hay bundle",
+    "displayName": "Hay Bundle",
+    "iconFile": "character-stock/hay_bundle.png",
+    "tags": [
+      "hay_bundle",
+      "stable_hand",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "stable goods",
+    "subfamily": "tack and grooming",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "stable_hand"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for stable hand tack and grooming stock: hay bundle"
+  },
+  {
+    "index": 2328,
+    "id": "stock_profile_pin",
+    "name": "pin",
+    "displayName": "Pin",
+    "iconFile": "character-stock/pin.png",
+    "tags": [
+      "pin",
+      "button_seller",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "textiles",
+    "subfamily": "tailoring notions",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "button_seller"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for buttons and tailoring notions: pin"
+  },
+  {
+    "index": 2329,
+    "id": "stock_profile_sail",
+    "name": "sail",
+    "displayName": "Sail",
+    "iconFile": "character-stock/sail.png",
+    "tags": [
+      "sail",
+      "maritime_travel",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "travel supplies",
+    "subfamily": "maritime goods",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "maritime_travel"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for maritime and travel supplies: sail"
+  },
+  {
+    "index": 2330,
+    "id": "stock_profile_work_gloves",
+    "name": "work gloves",
+    "displayName": "Work Gloves",
+    "iconFile": "character-stock/work_gloves.png",
+    "tags": [
+      "work_gloves",
+      "porter",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "market goods",
+    "subfamily": "hauling gear",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "porter"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for porter and hauling gear: work gloves"
+  },
+  {
+    "index": 2331,
+    "id": "stock_profile_potion",
+    "name": "potion",
+    "displayName": "Potion",
+    "iconFile": "character-stock/potion.png",
+    "tags": [
+      "potion",
+      "alchemist",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "alchemy",
+    "subfamily": "remedies",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "alchemist"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for alchemy and remedies: potion"
+  },
+  {
+    "index": 2332,
+    "id": "stock_profile_tonic",
+    "name": "tonic",
+    "displayName": "Tonic",
+    "iconFile": "character-stock/tonic.png",
+    "tags": [
+      "tonic",
+      "alchemist",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "alchemy",
+    "subfamily": "remedies",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "alchemist"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for alchemy and remedies: tonic"
+  },
+  {
+    "index": 2333,
+    "id": "stock_profile_remedy",
+    "name": "remedy",
+    "displayName": "Remedy",
+    "iconFile": "character-stock/remedy.png",
+    "tags": [
+      "remedy",
+      "alchemist",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "alchemy",
+    "subfamily": "remedies",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "alchemist"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for alchemy and remedies: remedy"
+  },
+  {
+    "index": 2334,
+    "id": "stock_profile_vial",
+    "name": "vial",
+    "displayName": "Vial",
+    "iconFile": "character-stock/vial.png",
+    "tags": [
+      "vial",
+      "alchemist",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "alchemy",
+    "subfamily": "remedies",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "alchemist"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for alchemy and remedies: vial"
+  },
+  {
+    "index": 2335,
+    "id": "stock_profile_forged_documents",
+    "name": "forged documents",
+    "displayName": "Forged Documents",
+    "iconFile": "character-stock/forged_documents.png",
+    "tags": [
+      "forged_documents",
+      "black_market",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "documents",
+    "subfamily": "discreet goods",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "black_market"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for discreet market goods: forged documents"
+  },
+  {
+    "index": 2336,
     "id": "stock_profile_bell",
     "name": "bell",
     "displayName": "Bell",
@@ -5880,7 +7180,7 @@
     "description": "specialist stock item for bells and polishing supplies: bell"
   },
   {
-    "index": 2319,
+    "index": 2337,
     "id": "stock_profile_brass_polish",
     "name": "brass polish",
     "displayName": "Brass Polish",
@@ -5952,7 +7252,7 @@
     "description": "specialist stock item for bells and polishing supplies: brass polish"
   },
   {
-    "index": 2320,
+    "index": 2338,
     "id": "stock_profile_polishing_cloth",
     "name": "polishing cloth",
     "displayName": "Polishing Cloth",
@@ -6024,7 +7324,7 @@
     "description": "specialist stock item for bells and polishing supplies: polishing cloth"
   },
   {
-    "index": 2321,
+    "index": 2339,
     "id": "stock_profile_brass",
     "name": "brass",
     "displayName": "Brass",
@@ -6096,19 +7396,19 @@
     "description": "specialist stock item for bells and polishing supplies: brass"
   },
   {
-    "index": 2322,
-    "id": "stock_profile_key",
-    "name": "key",
-    "displayName": "Key",
-    "iconFile": "character-stock/key.png",
+    "index": 2340,
+    "id": "stock_profile_painting",
+    "name": "painting",
+    "displayName": "Painting",
+    "iconFile": "character-stock/painting.png",
     "tags": [
-      "key",
-      "locksmith",
+      "painting",
+      "artisan_art",
       "character_stock",
       "specialty_trade"
     ],
-    "family": "metalwork",
-    "subfamily": "locks and keys",
+    "family": "crafted goods",
+    "subfamily": "art supplies",
     "categoryAxes": {
       "material": [],
       "productionStage": [
@@ -6137,7 +7437,7 @@
       "many"
     ],
     "professionUses": [
-      "locksmith"
+      "artisan_art"
     ],
     "regions": [],
     "sources": [
@@ -6165,6 +7465,150 @@
     "kingdomIndex": null,
     "imageFile": null,
     "textFile": null,
-    "description": "specialist stock item for locks, keys, and precise metalwork: key"
+    "description": "specialist stock item for artisan and crafted goods: painting"
+  },
+  {
+    "index": 2341,
+    "id": "stock_profile_statue",
+    "name": "statue",
+    "displayName": "Statue",
+    "iconFile": "character-stock/statue.png",
+    "tags": [
+      "statue",
+      "artisan_art",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "crafted goods",
+    "subfamily": "art supplies",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "artisan_art"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for artisan and crafted goods: statue"
+  },
+  {
+    "index": 2342,
+    "id": "stock_profile_mask",
+    "name": "mask",
+    "displayName": "Mask",
+    "iconFile": "character-stock/mask.png",
+    "tags": [
+      "mask",
+      "artisan_art",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "crafted goods",
+    "subfamily": "art supplies",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "artisan_art"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for artisan and crafted goods: mask"
   }
 ]

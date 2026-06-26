@@ -17,6 +17,7 @@ export type CharacterStockProfileRecord = {
 export type ResolvedCharacterStockProfile = {
   characterId: string;
   stockRole: string;
+  explicitProfile: boolean;
   primaryPools: ObtainableItem[];
   secondaryPools: ObtainableItem[];
   stockBias: Bias[];

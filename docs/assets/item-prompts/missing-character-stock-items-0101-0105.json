@@ -1,0 +1,93 @@
+{
+  "batch": {
+    "firstGlobalSlot": 101,
+    "lastGlobalSlot": 105,
+    "slotCount": 5,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 5 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making each merchant-stock item visually distinct by silhouette, material, color, trim, age, and fantasy decoration. Every slot in this sheet is a single object item. Show exactly one main item in each slot.",
+  "generationPrompt": "Create one sprite sheet containing exactly 5 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making each merchant-stock item visually distinct by silhouette, material, color, trim, age, and fantasy decoration. Every slot in this sheet is a single object item. Show exactly one main item in each slot.\n\nSlot order:\n1. Polishing Cloth (one)\n2. Brass (one)\n3. Painting (one)\n4. Statue (one)\n5. Mask (one)",
+  "order": [
+    "1. Polishing Cloth (one)",
+    "2. Brass (one)",
+    "3. Painting (one)",
+    "4. Statue (one)",
+    "5. Mask (one)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 101,
+      "itemNumber": 101,
+      "itemId": "stock_profile_polishing_cloth",
+      "itemName": "Polishing Cloth",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "character-stock/polishing_cloth.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of polishing cloth, clear readable collectible merchant stock, centered object, no text, no border, pure green background #00FF00.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 102,
+      "itemNumber": 102,
+      "itemId": "stock_profile_brass",
+      "itemName": "Brass",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "character-stock/brass.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of brass, clear readable collectible merchant stock, centered object, no text, no border, pure green background #00FF00.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 103,
+      "itemNumber": 103,
+      "itemId": "stock_profile_painting",
+      "itemName": "Painting",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "character-stock/painting.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of painting, clear readable collectible merchant stock, centered object, no text, no border, pure green background #00FF00.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 104,
+      "itemNumber": 104,
+      "itemId": "stock_profile_statue",
+      "itemName": "Statue",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "character-stock/statue.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of statue, clear readable collectible merchant stock, centered object, no text, no border, pure green background #00FF00.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 105,
+      "itemNumber": 105,
+      "itemId": "stock_profile_mask",
+      "itemName": "Mask",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "character-stock/mask.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of mask, clear readable collectible merchant stock, centered object, no text, no border, pure green background #00FF00.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    }
+  ]
+}

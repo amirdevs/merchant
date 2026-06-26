@@ -55,6 +55,7 @@ export function resolveCharacterStockProfile(
     return {
       characterId: explicit.characterId,
       stockRole: explicit.stockRole,
+      explicitProfile: true,
       primaryPools: cleanPools(explicit.primaryPools),
       secondaryPools: cleanPools(explicit.secondaryPools),
       stockBias: cleanBiases(explicit.stockBias),
@@ -66,6 +67,7 @@ export function resolveCharacterStockProfile(
   return {
     characterId: identity.characterId,
     stockRole: stockPersona.personaId || runtimeProfile.professionSlug || "general_profile_stock",
+    explicitProfile: false,
     primaryPools: cleanPools(merchandise?.stockPools || stockPersona.stockPools),
     secondaryPools: cleanPools(merchandise?.stockPools ? stockPersona.stockPools : []),
     stockBias: cleanBiases([...(stockPersona.stockBias || []), ...((merchandise?.stockBias || []))]),

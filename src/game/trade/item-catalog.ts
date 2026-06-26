@@ -1,10 +1,14 @@
 import type { Item } from "@/shared/types/game-data";
 
+const itemTokenCache = new WeakMap<Item, Set<string>>();
+
 export function normalizeItemToken(value: string) {
   return value.toLowerCase().replace(/[_-]+/g, " ").trim();
 }
 
 export function itemCatalogTokens(item: Item) {
+  const cached = itemTokenCache.get(item);
+  if (cached) return cached;
   const tokens = new Set<string>();
   const add = (value: unknown) => {
     if (typeof value !== "string" || !value.trim()) return;
@@ -35,6 +39,7 @@ export function itemCatalogTokens(item: Item) {
 
   for (const values of Object.values(item.categoryAxes || {})) addMany(values);
 
+  itemTokenCache.set(item, tokens);
   return tokens;
 }
 

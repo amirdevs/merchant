@@ -66,6 +66,10 @@ export type Character = {
   name: string;
   profession: string;
   professionSlug: string | null;
+  stockRole?: string | null;
+  stockProfileMode?: "explicit" | "fallback";
+  primaryStockTags?: string[];
+  secondaryStockTags?: string[];
   portraitFile?: string | null;
   stallFile?: string | null;
   isActive: boolean;

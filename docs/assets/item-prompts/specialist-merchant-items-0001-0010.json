@@ -1,0 +1,163 @@
+{
+  "batch": {
+    "firstGlobalSlot": 1,
+    "lastGlobalSlot": 10,
+    "slotCount": 10,
+    "maxSlotsPerSheet": 50
+  },
+  "grid": {
+    "columns": 10,
+    "rows": 5,
+    "readingOrder": "left-to-right by row, top-to-bottom",
+    "targetCanvas": "highest available 16:9 canvas",
+    "targetGrid": "centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells",
+    "targetCell": "square cells; grid spans nearly the full width with transparent padding above and below"
+  },
+  "style": "Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.",
+  "sheetPrompt": "Create one sprite sheet containing exactly 10 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making each item visually distinct by silhouette, material, color, trim, age, and fantasy decoration. Every slot in this sheet is a single object item. Show exactly one main item in each slot.",
+  "generationPrompt": "Create one sprite sheet containing exactly 10 separate inventory item icons. Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding. Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish. Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is. Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background. Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9. Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas. Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot. The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making each item visually distinct by silhouette, material, color, trim, age, and fantasy decoration. Every slot in this sheet is a single object item. Show exactly one main item in each slot.\n\nSlot order:\n1. silk bolt (one)\n2. dyed silk bolt (one)\n3. raw silk skein (one)\n4. silk ribbon spool (one)\n5. lace trim bundle (one)\n6. copper cookpot set (one)\n7. kitchen ladle bundle (one)\n8. spice jar set (one)\n9. recipe papers (one)\n10. kitchen knife roll (one)",
+  "order": [
+    "1. silk bolt (one)",
+    "2. dyed silk bolt (one)",
+    "3. raw silk skein (one)",
+    "4. silk ribbon spool (one)",
+    "5. lace trim bundle (one)",
+    "6. copper cookpot set (one)",
+    "7. kitchen ladle bundle (one)",
+    "8. spice jar set (one)",
+    "9. recipe papers (one)",
+    "10. kitchen knife roll (one)"
+  ],
+  "slots": [
+    {
+      "globalSlot": 1,
+      "itemNumber": 1,
+      "itemId": "specialist_silk_bolt",
+      "itemName": "silk bolt",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "specialist-merchants/specialist_silk_bolt.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of a rolled bolt of smooth pale silk tied with a small ribbon, collectible merchant good, readable silhouette, no text, pure green background #00FF00.",
+      "sheetSlot": 1,
+      "row": 1,
+      "column": 1
+    },
+    {
+      "globalSlot": 2,
+      "itemNumber": 2,
+      "itemId": "specialist_dyed_silk_bolt",
+      "itemName": "dyed silk bolt",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "specialist-merchants/specialist_dyed_silk_bolt.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of a folded dyed silk bolt with rich jewel-tone fabric layers, luxurious merchant textile, no text, pure green background #00FF00.",
+      "sheetSlot": 2,
+      "row": 1,
+      "column": 2
+    },
+    {
+      "globalSlot": 3,
+      "itemNumber": 3,
+      "itemId": "specialist_raw_silk_skein",
+      "itemName": "raw silk skein",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "specialist-merchants/specialist_raw_silk_skein.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of soft raw silk skeins bundled in loose shining threads, small textile supply, no text, pure green background #00FF00.",
+      "sheetSlot": 3,
+      "row": 1,
+      "column": 3
+    },
+    {
+      "globalSlot": 4,
+      "itemNumber": 4,
+      "itemId": "specialist_silk_ribbon_spool",
+      "itemName": "silk ribbon spool",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "specialist-merchants/specialist_silk_ribbon_spool.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of colorful silk ribbon spools with curled ribbon ends, tailoring notion, no text, pure green background #00FF00.",
+      "sheetSlot": 4,
+      "row": 1,
+      "column": 4
+    },
+    {
+      "globalSlot": 5,
+      "itemNumber": 5,
+      "itemId": "specialist_lace_trim_bundle",
+      "itemName": "lace trim bundle",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "specialist-merchants/specialist_lace_trim_bundle.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of bundled lace trim strips with delicate scalloped edges, elegant tailoring supply, no text, pure green background #00FF00.",
+      "sheetSlot": 5,
+      "row": 1,
+      "column": 5
+    },
+    {
+      "globalSlot": 6,
+      "itemNumber": 6,
+      "itemId": "specialist_copper_cookpot_set",
+      "itemName": "copper cookpot set",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "specialist-merchants/specialist_copper_cookpot_set.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of nested copper cookpots with warm highlights and sturdy handles, cookshop goods, no text, pure green background #00FF00.",
+      "sheetSlot": 6,
+      "row": 1,
+      "column": 6
+    },
+    {
+      "globalSlot": 7,
+      "itemNumber": 7,
+      "itemId": "specialist_kitchen_ladle_bundle",
+      "itemName": "kitchen ladle bundle",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "specialist-merchants/specialist_kitchen_ladle_bundle.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of wooden and brass kitchen ladles tied together with twine, cookshop tool bundle, no text, pure green background #00FF00.",
+      "sheetSlot": 7,
+      "row": 1,
+      "column": 7
+    },
+    {
+      "globalSlot": 8,
+      "itemNumber": 8,
+      "itemId": "specialist_spice_jar_set",
+      "itemName": "spice jar set",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "specialist-merchants/specialist_spice_jar_set.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of small sealed spice jars with colorful powders and cork lids, kitchen merchant goods, no text, pure green background #00FF00.",
+      "sheetSlot": 8,
+      "row": 1,
+      "column": 8
+    },
+    {
+      "globalSlot": 9,
+      "itemNumber": 9,
+      "itemId": "specialist_recipe_papers",
+      "itemName": "recipe papers",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "specialist-merchants/specialist_recipe_papers.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of oil-stained recipe papers tied with a string and tiny spoon charm, cookshop notes, no text, pure green background #00FF00.",
+      "sheetSlot": 9,
+      "row": 1,
+      "column": 9
+    },
+    {
+      "globalSlot": 10,
+      "itemNumber": 10,
+      "itemId": "specialist_kitchen_knife_roll",
+      "itemName": "kitchen knife roll",
+      "variant": "single",
+      "variantName": "one",
+      "outputFile": "specialist-merchants/specialist_kitchen_knife_roll.png",
+      "prompt": "Ultra-cartoony magical fantasy game item icon of a rolled leather kitchen knife kit with small prep blades visible, safe stylized cooking tools, no text, pure green background #00FF00.",
+      "sheetSlot": 10,
+      "row": 1,
+      "column": 10
+    }
+  ]
+}

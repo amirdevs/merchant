@@ -26,6 +26,8 @@ const ROLE_EXPECTATIONS = [
   { match: 'Orvik Bellows', role: 'tinker', tags: ['repair_tools', 'tinware'] },
   { match: 'Tovan Gristlen', role: 'miller', tags: ['flour', 'grain'] },
   { match: 'Borin Mulefriend', role: 'pack_animal_trader', tags: ['pack_saddle', 'animal_feed'] },
+  { match: 'Brindle Mossback', role: 'stable_hand', tags: ['halter', 'horse_brush'] },
+  { match: 'Hanna Milkbell', role: 'stable_hand', tags: ['feed_scoop', 'halter'] },
   { match: 'Talia Redscale', role: 'reptile_seller', tags: ['reptile', 'animal_cage'] },
   { match: 'Vessa Stonebloom', role: 'potter', tags: ['pottery', 'clay'] },
   { match: 'Nico Quickmeasure', role: 'surveying_tools', tags: ['measuring_cord', 'map'] },
@@ -107,9 +109,9 @@ const warnings = [];
 
 if (!profiles.length) failures.push('No explicit character stock profiles were generated.');
 
-const runtimeMerchants = runtimeProfiles.filter((profile) => typeof profile.runtimeIndex === 'number' && profile.isMerchant);
-for (const runtimeProfile of runtimeMerchants) {
-  if (!profileById.has(runtimeProfile.characterId)) failures.push(`Missing stock profile for merchant ${runtimeProfile.characterId}.`);
+const runtimeCharacters = runtimeProfiles.filter((profile) => typeof profile.runtimeIndex === 'number');
+for (const runtimeProfile of runtimeCharacters) {
+  if (!profileById.has(runtimeProfile.characterId)) failures.push(`Missing stock profile for runtime character ${runtimeProfile.characterId}.`);
 }
 
 for (const profile of profiles) {
@@ -142,7 +144,7 @@ for (const expectation of ROLE_EXPECTATIONS) {
 }
 
 const genericProfiles = profiles.filter((profile) => profile.stockRole === 'general_market_trader');
-if (genericProfiles.length > Math.max(6, Math.ceil(profiles.length * 0.18))) {
+if (genericProfiles.length > Math.max(12, Math.ceil(profiles.length * 0.12))) {
   warnings.push(`General market trader role count is high: ${genericProfiles.length}. Review broad profiles manually.`);
 }
 
@@ -156,7 +158,7 @@ for (const profile of profiles) {
 const lines = [];
 lines.push('# Character Stock Profile Report');
 lines.push('');
-lines.push(`Runtime merchants: ${runtimeMerchants.length}`);
+lines.push(`Runtime characters: ${runtimeCharacters.length}`);
 lines.push(`Explicit stock profiles: ${profiles.length}`);
 lines.push(`Failures: ${failures.length}`);
 lines.push(`Warnings: ${warnings.length}`);
@@ -177,7 +179,7 @@ for (const warning of warnings.slice(0, 200)) lines.push(`- ${warning}`);
 lines.push('');
 lines.push('## Profiles');
 for (const profile of profiles) {
-  lines.push(`- ${profile.characterId} — ${profile.displayName} — ${profile.profession} — ${profile.stockRole} — ${profile.confidence}`);
+  lines.push(`- ${profile.characterId} - ${profile.displayName} - ${profile.profession} - ${profile.stockRole} - ${profile.confidence}`);
   lines.push(`  - primary: ${(profile.primaryPools || []).map((entry) => entry.tag).join(', ')}`);
   if ((profile.secondaryPools || []).length) lines.push(`  - secondary: ${profile.secondaryPools.map((entry) => entry.tag).join(', ')}`);
 }

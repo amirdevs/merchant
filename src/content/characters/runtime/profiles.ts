@@ -96,12 +96,18 @@ export function buildRuntimeCharacters(options: {
       mergeBiases(mergeBiases(stockProfile.stockBias, merchandise?.stockBias), stockPersona.stockBias),
       profile.tradeBias,
     );
+    const primaryStockTags = stockProfile.primaryPools.map((entry) => entry.tag.trim()).filter(Boolean);
+    const secondaryStockTags = stockProfile.secondaryPools.map((entry) => entry.tag.trim()).filter(Boolean);
     const character: Character = {
       characterId: profile.characterId,
       index: profile.runtimeIndex as number,
       name: identity.finalDisplayName,
       profession: identity.profession,
       professionSlug: profile.professionSlug,
+      stockRole: stockProfile.stockRole,
+      stockProfileMode: stockProfile.explicitProfile ? "explicit" : "fallback",
+      primaryStockTags,
+      secondaryStockTags,
       portraitFile: neutralPortrait,
       stallFile: null,
       isActive: profile.isActive,

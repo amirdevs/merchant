@@ -246,6 +246,7 @@ export function generateInventory(character: Character, day = 1) {
   const roll = seeded((character.index + 1) * 7919 + Math.max(1, day) * 104729 + (settings.profile.stockSeed || 0));
   const characterPools = (character.obtainableItems || []).slice(0, 24);
   const hasProfilePools = characterPools.length > 0;
+  const explicitProfileMode = character.stockProfileMode === "explicit";
   const professionPools = character.professionSlug ? professions[character.professionSlug]?.obtainableItems || [] : [];
   const pools = [...characterPools, ...professionPools].slice(0, 32);
   const { weights, configs } = weightedArchetypeTags(settings.profile.archetypes);
@@ -259,11 +260,11 @@ export function generateInventory(character: Character, day = 1) {
   // inventory composition; profession, market, and lifestyle stock are filler.
   for (const pool of characterPools) {
     const normalized = normalizeStockToken(pool.tag);
-    weights.set(normalized, (weights.get(normalized) || 0) + 900);
+    weights.set(normalized, (weights.get(normalized) || 0) + (explicitProfileMode ? 1800 : 900));
   }
   for (const pool of professionPools) {
     const normalized = normalizeStockToken(pool.tag);
-    weights.set(normalized, (weights.get(normalized) || 0) + (hasProfilePools ? 1 : 10));
+    weights.set(normalized, (weights.get(normalized) || 0) + (explicitProfileMode ? 0.25 : hasProfilePools ? 1 : 10));
   }
 
   const forbidden = new Set([
@@ -275,7 +276,13 @@ export function generateInventory(character: Character, day = 1) {
   const maxValue = Math.min(character.maxObtainValue, settings.profile.maxValue ?? character.maxObtainValue);
   const targetStacks = Math.min(items.length, settings.minStacks + Math.floor(roll() * (settings.maxStacks - settings.minStacks + 1)));
   const profileTargetStacks = hasProfilePools
-    ? Math.min(targetStacks, Math.max(Math.ceil(targetStacks * 0.86), Math.min(characterPools.length, targetStacks)))
+    ? Math.min(
+      targetStacks,
+      Math.max(
+        Math.ceil(targetStacks * (explicitProfileMode ? 0.94 : 0.86)),
+        Math.min(characterPools.length, targetStacks),
+      ),
+    )
     : 0;
   const rarityBias = Math.max(0, ...configs.map((config) => config.rarityBias || 0));
   const localityBias = Math.max(0, ...configs.map((config) => config.localityBias || 0));
@@ -306,9 +313,16 @@ export function generateInventory(character: Character, day = 1) {
       : settings.minStacks >= 15
         ? ["copper coins", "silver coins"]
         : ["copper coins"];
+  const anchoredPrimaryTags = explicitProfileMode
+    ? (character.primaryStockTags || []).slice(0, Math.max(2, Math.min(6, targetStacks - 1)))
+    : [];
+  const anchoredSecondaryTags = explicitProfileMode
+    ? (character.secondaryStockTags || []).slice(0, Math.max(1, Math.min(3, targetStacks - anchoredPrimaryTags.length - 1)))
+    : [];
   const guaranteedTags = [
     ...tierCoinGuarantees,
-    ...characterPools.map((pool) => pool.tag),
+    ...(explicitProfileMode ? anchoredPrimaryTags : characterPools.map((pool) => pool.tag)),
+    ...anchoredSecondaryTags,
     ...(hasProfilePools ? [] : settings.profile.guaranteedTags || []),
     ...(hasProfilePools ? [] : configs.flatMap((config) => config.guaranteedTags || [])),
   ].map(normalizeStockToken);
@@ -343,7 +357,7 @@ export function generateInventory(character: Character, day = 1) {
 
   while (hasProfilePools && inventory.length < profileTargetStacks) {
     if (!profileCandidates.length) break;
-    const selected = weightedPickByWeight(profileCandidates, (candidate) => candidate.weight * 12, roll);
+    const selected = weightedPickByWeight(profileCandidates, (candidate) => candidate.weight * (explicitProfileMode ? 18 : 12), roll);
     if (!selected) break;
     addCandidate(selected);
   }

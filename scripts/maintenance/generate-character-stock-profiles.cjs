@@ -6,7 +6,7 @@ const POSIX = (value) => value.split(path.sep).join('/');
 
 const OUTPUT_PROFILE_PATH = path.join(ROOT, 'src/content/characters/stock/character-stock-profiles.json');
 const OUTPUT_ITEM_PATH = path.join(ROOT, 'src/content/items/catalog/npc-stock-profile-items.json');
-const OUTPUT_PROMPT_PATH = path.join(ROOT, 'docs/assets/item-prompts/missing-character-stock-items.json');
+const OUTPUT_PROMPT_DIR = path.join(ROOT, 'docs/assets/item-prompts');
 const OUTPUT_REPORT_PATH = path.join(ROOT, 'docs/logs/character-stock-profile-report.md');
 const RUNTIME_PROFILE_PATH = path.join(ROOT, 'src/content/characters/runtime/profiles.data.json');
 const IDENTITY_BATCH_DIR = path.join(ROOT, 'src/content/characters/profiles/batches');
@@ -118,6 +118,9 @@ const ROLE_CATALOG = [
   role({ id: 'black_market', label: 'Discreet market goods', terms: ['thief', 'fence', 'smuggler', 'contraband', 'black market', 'forged', 'hidden wares'], primary: [pool('contraband', 1, 6), pool('lockpick', 1, 4), pool('forged_documents', 1, 4), pool('small_luxury', 1, 4)], secondary: [pool('jewelry', 1, 4), pool('salvage', 1, 5), pool('documents', 1, 4)], forbidden: ['religion', 'livestock', 'grain', 'bulky'], family: 'black market goods', subfamily: 'discreet goods' }),
   role({ id: 'court_luxury', label: 'Court and luxury goods', terms: ['noble', 'countess', 'duke', 'lady', 'lord', 'court merchant', 'luxury collector', 'courtier'], primary: [pool('luxury', 1, 6), pool('royal', 1, 4), pool('jewelry', 1, 4), pool('perfume', 1, 4), pool('silk', 1, 4)], secondary: [pool('art', 1, 4), pool('documents', 1, 3), pool('wax_seal', 1, 3)], forbidden: ['meat', 'fish', 'ore', 'grain', 'livestock'], family: 'luxury goods', subfamily: 'court goods' }),
   role({ id: 'street_peddler', label: 'Street peddler small wares', terms: ['street peddler', 'peddler', 'hawker'], primary: [pool('buttons', 1, 6), pool('ribbons', 1, 6), pool('candle', 1, 6), pool('paper', 1, 4), pool('small_bells', 1, 5)], secondary: [pool('basket', 1, 3), pool('jar', 1, 4), pool('toy', 1, 4)], forbidden: ['ore', 'ingots', 'livestock', 'weapon', 'armor', 'royal'], family: 'market goods', subfamily: 'small wares' }),
+  role({ id: 'stable_hand', label: 'Stable hand tack and grooming stock', terms: ['stable hand', 'stable helper', 'stable boy', 'stable girl', 'stable sweep', 'ostler', 'horse brush', 'feed scoop', 'halter', 'hay fork', 'muck rake'], primary: [pool('halter', 1, 7), pool('horse_brush', 1, 7), pool('feed_scoop', 1, 6), pool('animal_feed', 1, 10), pool('hay_bundle', 1, 8), pool('horseshoe', 1, 6)], secondary: [pool('rope', 1, 6), pool('bucket', 1, 6), pool('blanket', 1, 4), pool('brush_bundle', 1, 4)], forbidden: ['jewelry', 'gems', 'royal', 'magic', 'seafood'], family: 'stable goods', subfamily: 'tack and grooming' }),
+  role({ id: 'porter', label: 'Porter and hauling gear', terms: ['porter', 'dock porter', 'old porter', 'basket carrier', 'brick carrier', 'load carrier', 'hauler', 'dock hand', 'freight hand'], primary: [pool('rope', 1, 8), pool('sack', 1, 8), pool('basket', 1, 8), pool('crate', 1, 7), pool('handcart', 1, 4), pool('work_gloves', 1, 6)], secondary: [pool('cloth', 1, 5), pool('lantern', 1, 4), pool('bucket', 1, 5), pool('tool', 1, 4)], forbidden: ['jewelry', 'gems', 'royal', 'magic', 'book'], family: 'market goods', subfamily: 'hauling gear' }),
+  role({ id: 'courier_clerk', label: 'Courier, clerk, and posting supplies', terms: ['courier', 'night courier', 'courier child', 'ferry clerk', 'contract board clerk', 'queue marker', 'public scribe', 'message runner', 'notice clerk'], primary: [pool('letter_writing_kit', 1, 6), pool('paper', 1, 8), pool('ink', 1, 7), pool('quill', 1, 7), pool('contract', 1, 5), pool('wax_seal', 1, 5)], secondary: [pool('ledger', 1, 4), pool('map', 1, 4), pool('permit', 1, 4), pool('satchel', 1, 4)], forbidden: ['meat', 'fish', 'ore', 'weapon', 'armor', 'livestock'], family: 'documents', subfamily: 'message supplies' }),
   role({ id: 'quartermaster', label: 'Quartermaster logistics stock', terms: ['quartermaster', 'supply clerk', 'warehouse clerk'], primary: [pool('rope', 1, 8), pool('crate', 1, 8), pool('barrels', 1, 7), pool('salt', 1, 8), pool('cloth', 1, 7), pool('lantern', 1, 5)], secondary: [pool('bread', 1, 8), pool('tool', 1, 5), pool('basket', 1, 5), pool('paper', 1, 4)], forbidden: ['jewelry', 'gems', 'royal', 'magic'], family: 'market goods', subfamily: 'logistics' }),
   role({ id: 'general_market_trader', label: 'General market trader', terms: [], primary: [pool('bread', 1, 6), pool('cloth', 1, 5), pool('salt', 1, 6), pool('candle', 1, 5), pool('rope', 1, 4)], secondary: [pool('basket', 1, 3), pool('jar', 1, 4), pool('paper', 1, 3)], forbidden: [], family: 'market goods', subfamily: 'general goods' }),
 ];
@@ -167,14 +170,16 @@ function parseStringLiteral(raw) {
 
 function extractString(block, field) {
   const safeField = field.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const quoted = block.match(new RegExp(safeField + '\\s*:\\s*([\\"\'])([\\s\\S]*?)\\1'));
+  const fieldPattern = `["']?${safeField}["']?`;
+  const quoted = block.match(new RegExp(fieldPattern + '\\s*:\\s*([\\"\'])([\\s\\S]*?)\\1'));
   if (quoted) return quoted[2].replace(/\\n/g, ' ').replace(/\\\"/g, '"').replace(/\\'/g, "'");
-  const templated = block.match(new RegExp(safeField + '\\s*:\\s*`([\\s\\S]*?)`'));
+  const templated = block.match(new RegExp(fieldPattern + '\\s*:\\s*`([\\s\\S]*?)`'));
   return templated ? templated[1].replace(/\$\{[^}]*\}/g, '').replace(/\\n/g, ' ') : '';
 }
 
 function extractStringArray(block, field) {
-  const match = block.match(new RegExp(`${field}\\s*:\\s*\\[([\\s\\S]*?)\\]`));
+  const safeField = field.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const match = block.match(new RegExp(`["']?${safeField}["']?\\s*:\\s*\\[([\\s\\S]*?)\\]`));
   if (!match) return [];
   const values = [];
   const re = /("(?:\\.|[^"])*"|'(?:\\.|[^'])*'|`(?:\\.|[^`])*`)/g;
@@ -189,7 +194,7 @@ function parseIdentityBatches() {
   for (const file of fs.readdirSync(IDENTITY_BATCH_DIR).filter((entry) => entry.endsWith('.ts')).sort()) {
     const filePath = path.join(IDENTITY_BATCH_DIR, file);
     const source = fs.readFileSync(filePath, 'utf8');
-    const idRe = /characterId\s*:\s*["'](character-\d+)["']/g;
+    const idRe = /["']?characterId["']?\s*:\s*["'](character-\d+)["']/g;
     let match;
     while ((match = idRe.exec(source))) {
       const before = source.lastIndexOf('{', match.index);
@@ -197,7 +202,7 @@ function parseIdentityBatches() {
       if (before < 0 || end < 0) continue;
       const block = source.slice(before, end + 1);
       const characterId = match[1];
-      identities.set(characterId, {
+      const parsed = {
         characterId,
         finalDisplayName: extractString(block, 'finalDisplayName'),
         profession: extractString(block, 'profession'),
@@ -213,7 +218,11 @@ function parseIdentityBatches() {
         professionProps: extractStringArray(block, 'professionProps'),
         questHooks: extractStringArray(block, 'questHooks'),
         uniquenessTraits: extractStringArray(block, 'uniquenessTraits'),
-      });
+      };
+      if (!parsed.finalDisplayName && !parsed.profession) continue;
+      const existing = identities.get(characterId);
+      if (existing?.finalDisplayName && existing?.profession && (!parsed.finalDisplayName || !parsed.profession)) continue;
+      identities.set(characterId, parsed);
     }
   }
   return identities;
@@ -404,13 +413,99 @@ function buildPrompt(item, order) {
   };
 }
 
+const PROMPT_BATCH_SIZE = 50;
+const PROMPT_GRID_COLUMNS = 10;
+const PROMPT_GRID_ROWS = 5;
+const PROMPT_STYLE = 'Ultra-cartoony fantasy merchant inventory icon, artistic magical game asset, playful and fantastic rather than realistic, bold exaggerated silhouette, chunky toy-like 3D form, hand-painted details, vibrant enchanted colors, glowing magical accents, whimsical proportions, polished collectible-game look, consistent three-quarter top-down camera angle, isolated object, no text, no labels, no UI frame, no border, no watermark.';
+const PROMPT_SHEET_TEMPLATE = [
+  'Create one sprite sheet containing exactly {slotCount} separate inventory item icons.',
+  'Use a strict 10 columns by 5 rows grid. Every grid cell must contain exactly one centered icon and must stay visually separated from neighboring cells with empty padding.',
+  'Use a strongly stylized ultra-cartoony fantasy game-art look, not realistic and not semi-realistic: make the icons feel much cooler, more magical, more artistic, more playful, and more fantastic, with bold shapes, chunky 3D forms, crisp hand-painted details, enchanted glows, saturated accents, rim light, decorative fantasy materials, and collectible-game polish.',
+  'Avoid boring everyday realism. Push each item toward a memorable fantasy-game version while preserving what the item is.',
+  'Do not add visible grid lines, numbers, labels, captions, letters, watermarks, UI frames, boxes, or shadows that cross cells. Do not show a transparency checkerboard. Use a solid pure #00FF00 green background.',
+  'Use the 16:9 canvas option. Inside it, create a centered 2:1 transparent sprite-sheet area with a strict 10 by 5 grid of square cells. The grid should span nearly the full canvas width and leave equal transparent padding above and below. Do not stretch the grid to 16:9.',
+  'Make each icon large, sharp, and detailed enough to crop into an individual high-quality icon later. Use the highest available resolution for the 16:9 canvas. The crop area is the centered 10 by 5 grid, not the full 16:9 canvas.',
+  'Use the provided slot order exactly, reading left to right across each row, then top to bottom. Do not reorder, skip, merge, duplicate, or rename any slot.',
+  'The icons must share one consistent ultra-cartoony magical fantasy game-art direction, lighting setup, camera angle, and scale language, while still making each merchant-stock item visually distinct by silhouette, material, color, trim, age, and fantasy decoration.',
+  'Every slot in this sheet is a single object item. Show exactly one main item in each slot.',
+].join(' ');
+
+function promptSheetText(slotCount) {
+  return PROMPT_SHEET_TEMPLATE.replace('{slotCount}', String(slotCount));
+}
+
+function slotLabel(slot) {
+  return `${slot.sheetSlot}. ${slot.itemName} (one)`;
+}
+
+function writePromptBatches(items) {
+  ensureDir(path.join(OUTPUT_PROMPT_DIR, 'placeholder.json'));
+  for (const file of fs.readdirSync(OUTPUT_PROMPT_DIR)) {
+    if (/^missing-character-stock-items-\d{4}-\d{4}\.json$/.test(file)) {
+      fs.rmSync(path.join(OUTPUT_PROMPT_DIR, file), { force: true });
+    }
+  }
+  if (!items.length) return [];
+
+  const prompts = items.map((item, index) => {
+    const prompt = buildPrompt(item, index + 1);
+    return {
+      globalSlot: index + 1,
+      itemNumber: index + 1,
+      itemId: prompt.itemId,
+      itemName: item.displayName,
+      variant: 'single',
+      variantName: 'one',
+      outputFile: prompt.outputFile,
+      prompt: prompt.prompt,
+    };
+  });
+
+  const files = [];
+  for (let start = 0; start < prompts.length; start += PROMPT_BATCH_SIZE) {
+    const batchSlots = prompts.slice(start, start + PROMPT_BATCH_SIZE).map((slot, index) => ({
+      ...slot,
+      sheetSlot: index + 1,
+      row: Math.floor(index / PROMPT_GRID_COLUMNS) + 1,
+      column: (index % PROMPT_GRID_COLUMNS) + 1,
+    }));
+    const first = String(batchSlots[0].globalSlot).padStart(4, '0');
+    const last = String(batchSlots[batchSlots.length - 1].globalSlot).padStart(4, '0');
+    const fileName = `missing-character-stock-items-${first}-${last}.json`;
+    const order = batchSlots.map(slotLabel);
+    const sheetPrompt = promptSheetText(batchSlots.length);
+    writeJson(path.join(OUTPUT_PROMPT_DIR, fileName), {
+      batch: {
+        firstGlobalSlot: batchSlots[0].globalSlot,
+        lastGlobalSlot: batchSlots[batchSlots.length - 1].globalSlot,
+        slotCount: batchSlots.length,
+        maxSlotsPerSheet: PROMPT_BATCH_SIZE,
+      },
+      grid: {
+        columns: PROMPT_GRID_COLUMNS,
+        rows: PROMPT_GRID_ROWS,
+        readingOrder: 'left-to-right by row, top-to-bottom',
+        targetCanvas: 'highest available 16:9 canvas',
+        targetGrid: 'centered 2:1 grid area inside the 16:9 canvas, strict 10x5 square cells',
+        targetCell: 'square cells; grid spans nearly the full width with transparent padding above and below',
+      },
+      style: PROMPT_STYLE,
+      sheetPrompt,
+      generationPrompt: `${sheetPrompt}\n\nSlot order:\n${order.join('\n')}`,
+      order,
+      slots: batchSlots,
+    });
+    files.push(fileName);
+  }
+  return files;
+}
+
 function main() {
   const runtimeProfiles = readJson(RUNTIME_PROFILE_PATH, {});
   const identities = parseIdentityBatches();
   const { tokens, maxIndex } = readItemCatalog();
   const generatedProfiles = [];
   const missingByTag = new Map();
-  const missingPrompts = [];
   let nextIndex = Math.max(maxIndex + 1, 2238);
 
   const runtimeEntries = Object.values(runtimeProfiles)
@@ -418,11 +513,10 @@ function main() {
     .sort((left, right) => (left.runtimeIndex ?? 0) - (right.runtimeIndex ?? 0));
 
   for (const runtimeProfile of runtimeEntries) {
-    if (!runtimeProfile.isMerchant) continue;
     const identity = identities.get(runtimeProfile.characterId) || {
       characterId: runtimeProfile.characterId,
       finalDisplayName: runtimeProfile.characterId,
-      profession: runtimeProfile.professionSlug || 'Merchant',
+      profession: runtimeProfile.professionSlug || 'Trader',
       roleTags: [],
       professionProps: [],
       questHooks: [],
@@ -432,7 +526,7 @@ function main() {
     const profile = {
       characterId: runtimeProfile.characterId,
       displayName: identity.finalDisplayName || runtimeProfile.characterId,
-      profession: identity.profession || runtimeProfile.professionSlug || 'Merchant',
+      profession: identity.profession || runtimeProfile.professionSlug || 'Trader',
       stockRole: roleEntry.id,
       confidence,
       primaryPools: roleEntry.primary,
@@ -462,16 +556,10 @@ function main() {
   }
 
   const generatedItems = [...missingByTag.values()].sort((left, right) => left.index - right.index);
-  generatedItems.forEach((item, index) => missingPrompts.push(buildPrompt(item, index + 1)));
+  const promptFiles = writePromptBatches(generatedItems);
 
   writeJson(OUTPUT_PROFILE_PATH, generatedProfiles);
   writeJson(OUTPUT_ITEM_PATH, generatedItems);
-  writeJson(OUTPUT_PROMPT_PATH, {
-    batchId: `missing-character-stock-items-${generatedItems.length}`,
-    purpose: 'Generate item icons for concrete stock goods required by explicit NPC stock profiles.',
-    layout: { columns: 5, rows: Math.max(1, Math.ceil(generatedItems.length / 5)), background: '#00FF00' },
-    items: missingPrompts,
-  });
 
   ensureDir(OUTPUT_REPORT_PATH);
   const roleCounts = new Map();
@@ -494,6 +582,7 @@ function main() {
   lines.push('');
   lines.push('## Generated item prompts');
   if (!generatedItems.length) lines.push('No additional item prompts were needed.');
+  for (const fileName of promptFiles) lines.push(`- batch: docs/assets/item-prompts/${fileName}`);
   for (const item of generatedItems) lines.push(`- ${item.displayName} -> ${item.iconFile}`);
   lines.push('');
   lines.push('## Profiles');

@@ -4,7 +4,7 @@ const path = require('node:path');
 const repoRoot = process.cwd();
 const assignmentsPath = path.join(repoRoot, 'src/content/characters/merchandise/assignments.json');
 const itemsPath = path.join(repoRoot, 'src/content/items/catalog/character-merchandise-items.json');
-const promptPath = path.join(repoRoot, 'docs/assets/item-prompts/missing-character-merchandise-items.json');
+const promptDir = path.join(repoRoot, 'docs/assets/item-prompts');
 const reportPath = path.join(repoRoot, 'docs/logs/character-merchandise-alignment-report.md');
 
 function readJson(filePath) {
@@ -13,12 +13,17 @@ function readJson(filePath) {
 
 const assignments = readJson(assignmentsPath);
 const itemRecords = readJson(itemsPath);
-const promptBatch = readJson(promptPath);
 const issues = [];
+const promptSlots = fs.existsSync(promptDir)
+  ? fs.readdirSync(promptDir)
+    .filter((file) => /^missing-character-merchandise-items-\d{4}-\d{4}\.json$/.test(file))
+    .sort()
+    .flatMap((file) => (readJson(path.join(promptDir, file)).slots || []))
+  : [];
 
 const assignmentById = new Map(assignments.map((assignment) => [assignment.characterId, assignment]));
 const itemIds = new Set(itemRecords.map((item) => item.id));
-const promptItemIds = new Set((promptBatch.items || []).map((item) => item.itemId));
+const promptItemIds = new Set(promptSlots.map((item) => item.itemId));
 
 const forbiddenNoise = [
   'company_stake',
@@ -76,4 +81,4 @@ if (issues.length) {
   process.exit(1);
 }
 
-console.log(`Character merchandise audit passed: ${assignments.length} curated assignments, ${itemRecords.length} item records, ${promptBatch.items.length} icon prompts.`);
+console.log(`Character merchandise audit passed: ${assignments.length} curated assignments, ${itemRecords.length} item records, ${promptSlots.length} icon prompts.`);

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { characterStockProfiles, characterStockProfileById } from "@/content/characters/stock";
+import { runtimeCharacterProfilesInOrder } from "@/content/characters/runtime";
 
 function profileForDisplayName(displayName: string) {
   return characterStockProfiles.find((entry) => entry.displayName === displayName);
@@ -11,8 +12,8 @@ function tagsForDisplayName(displayName: string) {
 }
 
 describe("explicit character stock profiles", () => {
-  it("creates explicit stock profiles for runtime merchants", () => {
-    expect(characterStockProfiles.length).toBeGreaterThan(40);
+  it("creates explicit stock profiles for all runtime characters", () => {
+    expect(characterStockProfiles.length).toBe(runtimeCharacterProfilesInOrder.length);
     expect(characterStockProfileById.size).toBe(characterStockProfiles.length);
   });
 
@@ -45,6 +46,8 @@ describe("explicit character stock profiles", () => {
       ["Orvik Bellows", "tinker", ["repair_tools", "tinware"]],
       ["Tovan Gristlen", "miller", ["flour", "grain"]],
       ["Borin Mulefriend", "pack_animal_trader", ["pack_saddle", "animal_feed"]],
+      ["Brindle Mossback", "stable_hand", ["halter", "horse_brush"]],
+      ["Hanna Milkbell", "stable_hand", ["feed_scoop", "halter"]],
       ["Talia Redscale", "reptile_seller", ["reptile", "animal_cage"]],
       ["Vessa Stonebloom", "potter", ["pottery", "clay"]],
       ["Nico Quickmeasure", "surveying_tools", ["measuring_cord", "map"]],

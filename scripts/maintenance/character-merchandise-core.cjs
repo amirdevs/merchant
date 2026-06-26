@@ -9,7 +9,7 @@ const MERCH_DIR = path.join(ROOT, 'src/content/characters/merchandise');
 const ITEM_EXTENSION_FILE = path.join(ROOT, 'src/content/items/catalog/character-merchandise-items.json');
 const ASSIGNMENTS_FILE = path.join(MERCH_DIR, 'assignments.json');
 const REVIEW_FILE = path.join(MERCH_DIR, 'review-needed.json');
-const PROMPT_FILE = path.join(ROOT, 'docs/assets/item-prompts/missing-character-merchandise-items.json');
+const PROMPT_DIR = path.join(ROOT, 'docs/assets/item-prompts');
 const REPORT_FILE = path.join(ROOT, 'docs/logs/character-merchandise-alignment-report.md');
 
 const GENERIC_TERMS = new Set([
@@ -554,7 +554,7 @@ module.exports = {
   ROOT,
   ASSIGNMENTS_FILE,
   REVIEW_FILE,
-  PROMPT_FILE,
+  PROMPT_DIR,
   REPORT_FILE,
   ITEM_EXTENSION_FILE,
   analyzeProfiles,
