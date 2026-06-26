@@ -51,6 +51,8 @@ describe("explicit character stock profiles", () => {
       ["Nixie Copperbell", "bell_polisher", ["bell", "brass_polish"]],
       ["Idris Starbrass", "surveying_tools", ["astrolabe", "compass"]],
       ["Mora Pindrop", "locksmith", ["lock", "key"]],
+      ["Nera Flintcup", "tavern_keeper", ["tavern_meal", "mug"]],
+      ["Hobb Ashbarrel", "charcoal_burner", ["charcoal", "firewood"]],
     ];
 
     for (const [displayName, role, expectedTags] of expectations) {

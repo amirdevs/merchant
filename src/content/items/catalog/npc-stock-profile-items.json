@@ -733,18 +733,310 @@
   },
   {
     "index": 2248,
+    "id": "stock_profile_tavern_meal",
+    "name": "tavern meal",
+    "displayName": "Tavern Meal",
+    "iconFile": "character-stock/tavern_meal.png",
+    "tags": [
+      "tavern_meal",
+      "tavern_keeper",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "food",
+    "subfamily": "tavern goods",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [
+        "shelf_stable"
+      ],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "sealed"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "tavern_keeper"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "consumable_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [
+      "dry"
+    ],
+    "decayProfile": "slow",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 35,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for tavern food, hearth, and table goods: tavern meal"
+  },
+  {
+    "index": 2249,
+    "id": "stock_profile_stew",
+    "name": "stew",
+    "displayName": "Stew",
+    "iconFile": "character-stock/stew.png",
+    "tags": [
+      "stew",
+      "tavern_keeper",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "food",
+    "subfamily": "tavern goods",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "tavern_keeper"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for tavern food, hearth, and table goods: stew"
+  },
+  {
+    "index": 2250,
+    "id": "stock_profile_mug",
+    "name": "mug",
+    "displayName": "Mug",
+    "iconFile": "character-stock/mug.png",
+    "tags": [
+      "mug",
+      "tavern_keeper",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "food",
+    "subfamily": "tavern goods",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "tavern_keeper"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for tavern food, hearth, and table goods: mug"
+  },
+  {
+    "index": 2251,
+    "id": "stock_profile_candle",
+    "name": "candle",
+    "displayName": "Candle",
+    "iconFile": "character-stock/candle.png",
+    "tags": [
+      "candle",
+      "tavern_keeper",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "food",
+    "subfamily": "tavern goods",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "tavern_keeper"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for tavern food, hearth, and table goods: candle"
+  },
+  {
+    "index": 2252,
     "id": "stock_profile_instrument",
     "name": "instrument",
     "displayName": "Instrument",
     "iconFile": "character-stock/instrument.png",
     "tags": [
       "instrument",
-      "performance_games",
+      "tavern_keeper",
       "character_stock",
       "specialty_trade"
     ],
-    "family": "entertainment",
-    "subfamily": "games",
+    "family": "food",
+    "subfamily": "tavern goods",
     "categoryAxes": {
       "material": [],
       "productionStage": [
@@ -773,7 +1065,7 @@
       "many"
     ],
     "professionUses": [
-      "performance_games"
+      "tavern_keeper"
     ],
     "regions": [],
     "sources": [
@@ -801,22 +1093,22 @@
     "kingdomIndex": null,
     "imageFile": null,
     "textFile": null,
-    "description": "specialist stock item for music, games, and performance goods: instrument"
+    "description": "specialist stock item for tavern food, hearth, and table goods: instrument"
   },
   {
-    "index": 2249,
-    "id": "stock_profile_mask",
-    "name": "mask",
-    "displayName": "Mask",
-    "iconFile": "character-stock/mask.png",
+    "index": 2253,
+    "id": "stock_profile_firewood",
+    "name": "firewood",
+    "displayName": "Firewood",
+    "iconFile": "character-stock/firewood.png",
     "tags": [
-      "mask",
-      "performance_games",
+      "firewood",
+      "tavern_keeper",
       "character_stock",
       "specialty_trade"
     ],
-    "family": "entertainment",
-    "subfamily": "games",
+    "family": "food",
+    "subfamily": "tavern goods",
     "categoryAxes": {
       "material": [],
       "productionStage": [
@@ -845,7 +1137,7 @@
       "many"
     ],
     "professionUses": [
-      "performance_games"
+      "tavern_keeper"
     ],
     "regions": [],
     "sources": [
@@ -873,10 +1165,10 @@
     "kingdomIndex": null,
     "imageFile": null,
     "textFile": null,
-    "description": "specialist stock item for music, games, and performance goods: mask"
+    "description": "specialist stock item for tavern food, hearth, and table goods: firewood"
   },
   {
-    "index": 2250,
+    "index": 2254,
     "id": "stock_profile_shoe_repair",
     "name": "shoe repair",
     "displayName": "Shoe Repair",
@@ -948,7 +1240,7 @@
     "description": "specialist stock item for shoes, boots, and leather repairs: shoe repair"
   },
   {
-    "index": 2251,
+    "index": 2255,
     "id": "stock_profile_buckle",
     "name": "buckle",
     "displayName": "Buckle",
@@ -1020,7 +1312,7 @@
     "description": "specialist stock item for shoes, boots, and leather repairs: buckle"
   },
   {
-    "index": 2252,
+    "index": 2256,
     "id": "stock_profile_polish",
     "name": "polish",
     "displayName": "Polish",
@@ -1092,7 +1384,7 @@
     "description": "specialist stock item for shoes, boots, and leather repairs: polish"
   },
   {
-    "index": 2253,
+    "index": 2257,
     "id": "stock_profile_perfume",
     "name": "perfume",
     "displayName": "Perfume",
@@ -1164,79 +1456,7 @@
     "description": "specialist stock item for scents, candles, and household luxuries: perfume"
   },
   {
-    "index": 2254,
-    "id": "stock_profile_candle",
-    "name": "candle",
-    "displayName": "Candle",
-    "iconFile": "character-stock/candle.png",
-    "tags": [
-      "candle",
-      "household_luxury",
-      "character_stock",
-      "specialty_trade"
-    ],
-    "family": "household goods",
-    "subfamily": "scented goods",
-    "categoryAxes": {
-      "material": [],
-      "productionStage": [
-        "finished_good"
-      ],
-      "freshness": [],
-      "legalSocial": [
-        "ordinary"
-      ],
-      "marketBehavior": [
-        "specialty_trade"
-      ],
-      "storageHandling": [
-        "dry"
-      ],
-      "artVariant": [
-        "single_object"
-      ],
-      "featureHooks": [
-        "character_stock_profile"
-      ]
-    },
-    "forms": [
-      "one",
-      "few",
-      "many"
-    ],
-    "professionUses": [
-      "household_luxury"
-    ],
-    "regions": [],
-    "sources": [
-      "market"
-    ],
-    "tradeRole": "specialty_good",
-    "rarityBand": "common",
-    "qualityBands": [
-      "common",
-      "fine"
-    ],
-    "bulkProfile": "small_goods",
-    "storageNeeds": [],
-    "decayProfile": "none",
-    "marketBehavior": [
-      "specialty_trade"
-    ],
-    "loafValue": 55,
-    "size": 1,
-    "weight": 1,
-    "pull": 0,
-    "carry": 0,
-    "rarity": 1,
-    "unique": false,
-    "kingdomIndex": null,
-    "imageFile": null,
-    "textFile": null,
-    "description": "specialist stock item for scents, candles, and household luxuries: candle"
-  },
-  {
-    "index": 2255,
+    "index": 2258,
     "id": "stock_profile_wick",
     "name": "wick",
     "displayName": "Wick",
@@ -1308,7 +1528,7 @@
     "description": "specialist stock item for scents, candles, and household luxuries: wick"
   },
   {
-    "index": 2256,
+    "index": 2259,
     "id": "stock_profile_jar",
     "name": "jar",
     "displayName": "Jar",
@@ -1380,7 +1600,7 @@
     "description": "specialist stock item for scents, candles, and household luxuries: jar"
   },
   {
-    "index": 2257,
+    "index": 2260,
     "id": "stock_profile_meal",
     "name": "meal",
     "displayName": "Meal",
@@ -1456,7 +1676,7 @@
     "description": "specialist stock item for milled grain and flour goods: meal"
   },
   {
-    "index": 2258,
+    "index": 2261,
     "id": "stock_profile_bran_sack",
     "name": "bran sack",
     "displayName": "Bran Sack",
@@ -1532,7 +1752,7 @@
     "description": "specialist stock item for milled grain and flour goods: bran sack"
   },
   {
-    "index": 2259,
+    "index": 2262,
     "id": "stock_profile_flower",
     "name": "flower",
     "displayName": "Flower",
@@ -1604,7 +1824,7 @@
     "description": "specialist stock item for flowers, seeds, and gathered goods: flower"
   },
   {
-    "index": 2260,
+    "index": 2263,
     "id": "stock_profile_herbs",
     "name": "herbs",
     "displayName": "Herbs",
@@ -1680,7 +1900,7 @@
     "description": "specialist stock item for flowers, seeds, and gathered goods: herbs"
   },
   {
-    "index": 2261,
+    "index": 2264,
     "id": "stock_profile_chimney_brush",
     "name": "chimney brush",
     "displayName": "Chimney Brush",
@@ -1752,7 +1972,7 @@
     "description": "specialist stock item for soot cleaning and hearth tools: chimney brush"
   },
   {
-    "index": 2262,
+    "index": 2265,
     "id": "stock_profile_soot",
     "name": "soot",
     "displayName": "Soot",
@@ -1824,7 +2044,7 @@
     "description": "specialist stock item for soot cleaning and hearth tools: soot"
   },
   {
-    "index": 2263,
+    "index": 2266,
     "id": "stock_profile_ash",
     "name": "ash",
     "displayName": "Ash",
@@ -1896,7 +2116,7 @@
     "description": "specialist stock item for soot cleaning and hearth tools: ash"
   },
   {
-    "index": 2264,
+    "index": 2267,
     "id": "stock_profile_brooch",
     "name": "brooch",
     "displayName": "Brooch",
@@ -1968,7 +2188,7 @@
     "description": "specialist stock item for jewelry and small luxuries: brooch"
   },
   {
-    "index": 2265,
+    "index": 2268,
     "id": "stock_profile_ring",
     "name": "ring",
     "displayName": "Ring",
@@ -2040,7 +2260,7 @@
     "description": "specialist stock item for jewelry and small luxuries: ring"
   },
   {
-    "index": 2266,
+    "index": 2269,
     "id": "stock_profile_necklace",
     "name": "necklace",
     "displayName": "Necklace",
@@ -2112,7 +2332,7 @@
     "description": "specialist stock item for jewelry and small luxuries: necklace"
   },
   {
-    "index": 2267,
+    "index": 2270,
     "id": "stock_profile_scale",
     "name": "scale",
     "displayName": "Scale",
@@ -2184,235 +2404,19 @@
     "description": "specialist stock item for jewelry and small luxuries: scale"
   },
   {
-    "index": 2268,
-    "id": "stock_profile_ceramic",
-    "name": "ceramic",
-    "displayName": "Ceramic",
-    "iconFile": "character-stock/ceramic.png",
-    "tags": [
-      "ceramic",
-      "potter",
-      "character_stock",
-      "specialty_trade"
-    ],
-    "family": "household goods",
-    "subfamily": "pottery",
-    "categoryAxes": {
-      "material": [],
-      "productionStage": [
-        "finished_good"
-      ],
-      "freshness": [],
-      "legalSocial": [
-        "ordinary"
-      ],
-      "marketBehavior": [
-        "specialty_trade"
-      ],
-      "storageHandling": [
-        "dry"
-      ],
-      "artVariant": [
-        "single_object"
-      ],
-      "featureHooks": [
-        "character_stock_profile"
-      ]
-    },
-    "forms": [
-      "one",
-      "few",
-      "many"
-    ],
-    "professionUses": [
-      "potter"
-    ],
-    "regions": [],
-    "sources": [
-      "market"
-    ],
-    "tradeRole": "specialty_good",
-    "rarityBand": "common",
-    "qualityBands": [
-      "common",
-      "fine"
-    ],
-    "bulkProfile": "small_goods",
-    "storageNeeds": [],
-    "decayProfile": "none",
-    "marketBehavior": [
-      "specialty_trade"
-    ],
-    "loafValue": 55,
-    "size": 1,
-    "weight": 1,
-    "pull": 0,
-    "carry": 0,
-    "rarity": 1,
-    "unique": false,
-    "kingdomIndex": null,
-    "imageFile": null,
-    "textFile": null,
-    "description": "specialist stock item for pottery and clay vessels: ceramic"
-  },
-  {
-    "index": 2269,
-    "id": "stock_profile_bowl",
-    "name": "bowl",
-    "displayName": "Bowl",
-    "iconFile": "character-stock/bowl.png",
-    "tags": [
-      "bowl",
-      "potter",
-      "character_stock",
-      "specialty_trade"
-    ],
-    "family": "household goods",
-    "subfamily": "pottery",
-    "categoryAxes": {
-      "material": [],
-      "productionStage": [
-        "finished_good"
-      ],
-      "freshness": [],
-      "legalSocial": [
-        "ordinary"
-      ],
-      "marketBehavior": [
-        "specialty_trade"
-      ],
-      "storageHandling": [
-        "dry"
-      ],
-      "artVariant": [
-        "single_object"
-      ],
-      "featureHooks": [
-        "character_stock_profile"
-      ]
-    },
-    "forms": [
-      "one",
-      "few",
-      "many"
-    ],
-    "professionUses": [
-      "potter"
-    ],
-    "regions": [],
-    "sources": [
-      "market"
-    ],
-    "tradeRole": "specialty_good",
-    "rarityBand": "common",
-    "qualityBands": [
-      "common",
-      "fine"
-    ],
-    "bulkProfile": "small_goods",
-    "storageNeeds": [],
-    "decayProfile": "none",
-    "marketBehavior": [
-      "specialty_trade"
-    ],
-    "loafValue": 55,
-    "size": 1,
-    "weight": 1,
-    "pull": 0,
-    "carry": 0,
-    "rarity": 1,
-    "unique": false,
-    "kingdomIndex": null,
-    "imageFile": null,
-    "textFile": null,
-    "description": "specialist stock item for pottery and clay vessels: bowl"
-  },
-  {
-    "index": 2270,
-    "id": "stock_profile_cup",
-    "name": "cup",
-    "displayName": "Cup",
-    "iconFile": "character-stock/cup.png",
-    "tags": [
-      "cup",
-      "potter",
-      "character_stock",
-      "specialty_trade"
-    ],
-    "family": "household goods",
-    "subfamily": "pottery",
-    "categoryAxes": {
-      "material": [],
-      "productionStage": [
-        "finished_good"
-      ],
-      "freshness": [],
-      "legalSocial": [
-        "ordinary"
-      ],
-      "marketBehavior": [
-        "specialty_trade"
-      ],
-      "storageHandling": [
-        "dry"
-      ],
-      "artVariant": [
-        "single_object"
-      ],
-      "featureHooks": [
-        "character_stock_profile"
-      ]
-    },
-    "forms": [
-      "one",
-      "few",
-      "many"
-    ],
-    "professionUses": [
-      "potter"
-    ],
-    "regions": [],
-    "sources": [
-      "market"
-    ],
-    "tradeRole": "specialty_good",
-    "rarityBand": "common",
-    "qualityBands": [
-      "common",
-      "fine"
-    ],
-    "bulkProfile": "small_goods",
-    "storageNeeds": [],
-    "decayProfile": "none",
-    "marketBehavior": [
-      "specialty_trade"
-    ],
-    "loafValue": 55,
-    "size": 1,
-    "weight": 1,
-    "pull": 0,
-    "carry": 0,
-    "rarity": 1,
-    "unique": false,
-    "kingdomIndex": null,
-    "imageFile": null,
-    "textFile": null,
-    "description": "specialist stock item for pottery and clay vessels: cup"
-  },
-  {
     "index": 2271,
-    "id": "stock_profile_jug",
-    "name": "jug",
-    "displayName": "Jug",
-    "iconFile": "character-stock/jug.png",
+    "id": "stock_profile_charcoal",
+    "name": "charcoal",
+    "displayName": "Charcoal",
+    "iconFile": "character-stock/charcoal.png",
     "tags": [
-      "jug",
-      "potter",
+      "charcoal",
+      "charcoal_burner",
       "character_stock",
       "specialty_trade"
     ],
-    "family": "household goods",
-    "subfamily": "pottery",
+    "family": "fuel",
+    "subfamily": "charcoal goods",
     "categoryAxes": {
       "material": [],
       "productionStage": [
@@ -2441,7 +2445,7 @@
       "many"
     ],
     "professionUses": [
-      "potter"
+      "charcoal_burner"
     ],
     "regions": [],
     "sources": [
@@ -2469,22 +2473,22 @@
     "kingdomIndex": null,
     "imageFile": null,
     "textFile": null,
-    "description": "specialist stock item for pottery and clay vessels: jug"
+    "description": "specialist stock item for charcoal, fuel, and hearth supplies: charcoal"
   },
   {
     "index": 2272,
-    "id": "stock_profile_straw",
-    "name": "straw",
-    "displayName": "Straw",
-    "iconFile": "character-stock/straw.png",
+    "id": "stock_profile_kindling",
+    "name": "kindling",
+    "displayName": "Kindling",
+    "iconFile": "character-stock/kindling.png",
     "tags": [
-      "straw",
-      "potter",
+      "kindling",
+      "charcoal_burner",
       "character_stock",
       "specialty_trade"
     ],
-    "family": "household goods",
-    "subfamily": "pottery",
+    "family": "fuel",
+    "subfamily": "charcoal goods",
     "categoryAxes": {
       "material": [],
       "productionStage": [
@@ -2513,7 +2517,7 @@
       "many"
     ],
     "professionUses": [
-      "potter"
+      "charcoal_burner"
     ],
     "regions": [],
     "sources": [
@@ -2541,22 +2545,22 @@
     "kingdomIndex": null,
     "imageFile": null,
     "textFile": null,
-    "description": "specialist stock item for pottery and clay vessels: straw"
+    "description": "specialist stock item for charcoal, fuel, and hearth supplies: kindling"
   },
   {
     "index": 2273,
-    "id": "stock_profile_chalk",
-    "name": "chalk",
-    "displayName": "Chalk",
-    "iconFile": "character-stock/chalk.png",
+    "id": "stock_profile_lantern",
+    "name": "lantern",
+    "displayName": "Lantern",
+    "iconFile": "character-stock/lantern.png",
     "tags": [
-      "chalk",
-      "potter",
+      "lantern",
+      "charcoal_burner",
       "character_stock",
       "specialty_trade"
     ],
-    "family": "household goods",
-    "subfamily": "pottery",
+    "family": "fuel",
+    "subfamily": "charcoal goods",
     "categoryAxes": {
       "material": [],
       "productionStage": [
@@ -2585,7 +2589,7 @@
       "many"
     ],
     "professionUses": [
-      "potter"
+      "charcoal_burner"
     ],
     "regions": [],
     "sources": [
@@ -2613,7 +2617,7 @@
     "kingdomIndex": null,
     "imageFile": null,
     "textFile": null,
-    "description": "specialist stock item for pottery and clay vessels: chalk"
+    "description": "specialist stock item for charcoal, fuel, and hearth supplies: lantern"
   },
   {
     "index": 2274,
@@ -4577,18 +4581,18 @@
   },
   {
     "index": 2301,
-    "id": "stock_profile_lantern",
-    "name": "lantern",
-    "displayName": "Lantern",
-    "iconFile": "character-stock/lantern.png",
+    "id": "stock_profile_ceramic",
+    "name": "ceramic",
+    "displayName": "Ceramic",
+    "iconFile": "character-stock/ceramic.png",
     "tags": [
-      "lantern",
-      "lamp_oil_seller",
+      "ceramic",
+      "potter",
       "character_stock",
       "specialty_trade"
     ],
     "family": "household goods",
-    "subfamily": "lighting",
+    "subfamily": "pottery",
     "categoryAxes": {
       "material": [],
       "productionStage": [
@@ -4617,7 +4621,7 @@
       "many"
     ],
     "professionUses": [
-      "lamp_oil_seller"
+      "potter"
     ],
     "regions": [],
     "sources": [
@@ -4645,10 +4649,370 @@
     "kingdomIndex": null,
     "imageFile": null,
     "textFile": null,
-    "description": "specialist stock item for lamp oil and lighting goods: lantern"
+    "description": "specialist stock item for pottery and clay vessels: ceramic"
   },
   {
     "index": 2302,
+    "id": "stock_profile_bowl",
+    "name": "bowl",
+    "displayName": "Bowl",
+    "iconFile": "character-stock/bowl.png",
+    "tags": [
+      "bowl",
+      "potter",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "household goods",
+    "subfamily": "pottery",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "potter"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for pottery and clay vessels: bowl"
+  },
+  {
+    "index": 2303,
+    "id": "stock_profile_cup",
+    "name": "cup",
+    "displayName": "Cup",
+    "iconFile": "character-stock/cup.png",
+    "tags": [
+      "cup",
+      "potter",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "household goods",
+    "subfamily": "pottery",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "potter"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for pottery and clay vessels: cup"
+  },
+  {
+    "index": 2304,
+    "id": "stock_profile_jug",
+    "name": "jug",
+    "displayName": "Jug",
+    "iconFile": "character-stock/jug.png",
+    "tags": [
+      "jug",
+      "potter",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "household goods",
+    "subfamily": "pottery",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "potter"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for pottery and clay vessels: jug"
+  },
+  {
+    "index": 2305,
+    "id": "stock_profile_straw",
+    "name": "straw",
+    "displayName": "Straw",
+    "iconFile": "character-stock/straw.png",
+    "tags": [
+      "straw",
+      "potter",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "household goods",
+    "subfamily": "pottery",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "potter"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for pottery and clay vessels: straw"
+  },
+  {
+    "index": 2306,
+    "id": "stock_profile_chalk",
+    "name": "chalk",
+    "displayName": "Chalk",
+    "iconFile": "character-stock/chalk.png",
+    "tags": [
+      "chalk",
+      "potter",
+      "character_stock",
+      "specialty_trade"
+    ],
+    "family": "household goods",
+    "subfamily": "pottery",
+    "categoryAxes": {
+      "material": [],
+      "productionStage": [
+        "finished_good"
+      ],
+      "freshness": [],
+      "legalSocial": [
+        "ordinary"
+      ],
+      "marketBehavior": [
+        "specialty_trade"
+      ],
+      "storageHandling": [
+        "dry"
+      ],
+      "artVariant": [
+        "single_object"
+      ],
+      "featureHooks": [
+        "character_stock_profile"
+      ]
+    },
+    "forms": [
+      "one",
+      "few",
+      "many"
+    ],
+    "professionUses": [
+      "potter"
+    ],
+    "regions": [],
+    "sources": [
+      "market"
+    ],
+    "tradeRole": "specialty_good",
+    "rarityBand": "common",
+    "qualityBands": [
+      "common",
+      "fine"
+    ],
+    "bulkProfile": "small_goods",
+    "storageNeeds": [],
+    "decayProfile": "none",
+    "marketBehavior": [
+      "specialty_trade"
+    ],
+    "loafValue": 55,
+    "size": 1,
+    "weight": 1,
+    "pull": 0,
+    "carry": 0,
+    "rarity": 1,
+    "unique": false,
+    "kingdomIndex": null,
+    "imageFile": null,
+    "textFile": null,
+    "description": "specialist stock item for pottery and clay vessels: chalk"
+  },
+  {
+    "index": 2307,
     "id": "stock_profile_measuring_cord",
     "name": "measuring cord",
     "displayName": "Measuring Cord",
@@ -4720,7 +5084,7 @@
     "description": "specialist stock item for surveying and navigation instruments: measuring cord"
   },
   {
-    "index": 2303,
+    "index": 2308,
     "id": "stock_profile_compass",
     "name": "compass",
     "displayName": "Compass",
@@ -4792,7 +5156,7 @@
     "description": "specialist stock item for surveying and navigation instruments: compass"
   },
   {
-    "index": 2304,
+    "index": 2309,
     "id": "stock_profile_astrolabe",
     "name": "astrolabe",
     "displayName": "Astrolabe",
@@ -4864,7 +5228,7 @@
     "description": "specialist stock item for surveying and navigation instruments: astrolabe"
   },
   {
-    "index": 2305,
+    "index": 2310,
     "id": "stock_profile_lens",
     "name": "lens",
     "displayName": "Lens",
@@ -4936,7 +5300,7 @@
     "description": "specialist stock item for surveying and navigation instruments: lens"
   },
   {
-    "index": 2306,
+    "index": 2311,
     "id": "stock_profile_brass_tools",
     "name": "brass tools",
     "displayName": "Brass Tools",
@@ -5008,7 +5372,7 @@
     "description": "specialist stock item for surveying and navigation instruments: brass tools"
   },
   {
-    "index": 2307,
+    "index": 2312,
     "id": "stock_profile_relic",
     "name": "relic",
     "displayName": "Relic",
@@ -5080,7 +5444,7 @@
     "description": "specialist stock item for religious goods: relic"
   },
   {
-    "index": 2308,
+    "index": 2313,
     "id": "stock_profile_smoked",
     "name": "smoked",
     "displayName": "Smoked",
@@ -5152,7 +5516,7 @@
     "description": "specialist stock item for butcher and preserved meats: smoked"
   },
   {
-    "index": 2309,
+    "index": 2314,
     "id": "stock_profile_waterskin",
     "name": "waterskin",
     "displayName": "Waterskin",
@@ -5228,7 +5592,7 @@
     "description": "specialist stock item for water and clean carrying vessels: waterskin"
   },
   {
-    "index": 2310,
+    "index": 2315,
     "id": "stock_profile_small_bells",
     "name": "small bells",
     "displayName": "Small Bells",
@@ -5300,7 +5664,7 @@
     "description": "specialist stock item for street peddler small wares: small bells"
   },
   {
-    "index": 2311,
+    "index": 2316,
     "id": "stock_profile_toy",
     "name": "toy",
     "displayName": "Toy",
@@ -5372,7 +5736,7 @@
     "description": "specialist stock item for street peddler small wares: toy"
   },
   {
-    "index": 2312,
+    "index": 2317,
     "id": "stock_profile_cider",
     "name": "cider",
     "displayName": "Cider",
@@ -5444,7 +5808,7 @@
     "description": "specialist stock item for farm and orchard goods: cider"
   },
   {
-    "index": 2313,
+    "index": 2318,
     "id": "stock_profile_bell",
     "name": "bell",
     "displayName": "Bell",
@@ -5516,7 +5880,7 @@
     "description": "specialist stock item for bells and polishing supplies: bell"
   },
   {
-    "index": 2314,
+    "index": 2319,
     "id": "stock_profile_brass_polish",
     "name": "brass polish",
     "displayName": "Brass Polish",
@@ -5588,7 +5952,7 @@
     "description": "specialist stock item for bells and polishing supplies: brass polish"
   },
   {
-    "index": 2315,
+    "index": 2320,
     "id": "stock_profile_polishing_cloth",
     "name": "polishing cloth",
     "displayName": "Polishing Cloth",
@@ -5660,7 +6024,7 @@
     "description": "specialist stock item for bells and polishing supplies: polishing cloth"
   },
   {
-    "index": 2316,
+    "index": 2321,
     "id": "stock_profile_brass",
     "name": "brass",
     "displayName": "Brass",
@@ -5732,7 +6096,7 @@
     "description": "specialist stock item for bells and polishing supplies: brass"
   },
   {
-    "index": 2317,
+    "index": 2322,
     "id": "stock_profile_key",
     "name": "key",
     "displayName": "Key",

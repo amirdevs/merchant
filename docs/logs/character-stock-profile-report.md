@@ -6,8 +6,7 @@ Failures: 0
 Warnings: 0
 
 ## Confidence
-- broad: 2
-- direct: 49
+- direct: 51
 - inferred: 2
 
 ## Roles
@@ -15,18 +14,18 @@ Warnings: 0
 - quartermaster: 6
 - fisher: 5
 - botanical: 3
-- potter: 2
 - textile_specialist: 2
 - surveying_tools: 2
 - silk_factor: 1
 - baker: 1
 - scribe_books: 1
-- performance_games: 1
+- tavern_keeper: 1
 - cobbler: 1
 - household_luxury: 1
 - miller: 1
 - chimney_sweep: 1
 - jeweler: 1
+- charcoal_burner: 1
 - glass_seller: 1
 - tinker: 1
 - hunter_leather: 1
@@ -35,6 +34,7 @@ Warnings: 0
 - reptile_seller: 1
 - cookshop_owner: 1
 - lamp_oil_seller: 1
+- potter: 1
 - religious_goods: 1
 - butcher: 1
 - water_seller: 1
@@ -63,9 +63,9 @@ None.
 - character-054 — Old Marrow Finn — Fishmonger — fisher — direct
   - primary: fish, seafood, shellfish, oyster, hook
   - secondary: barrels, net, salt, rope
-- character-055 — Nera Flintcup — Tavern Keeper — performance_games — broad
-  - primary: instrument, game, cards, dice
-  - secondary: book, travel, mask
+- character-055 — Nera Flintcup — Tavern Keeper — tavern_keeper — direct
+  - primary: tavern_meal, bread, stew, cheese, mug, candle
+  - secondary: cards, dice, instrument, firewood
 - character-056 — Jarek Thornboot — Caravan Cobbler — cobbler — direct
   - primary: shoe_repair, shoes, boots, leather, buckle, thread
   - secondary: nails, wax, polish
@@ -84,9 +84,9 @@ None.
 - character-061 — Dalla Reefsong — Pearl Trader — jeweler — direct
   - primary: jewelry, gem, pearls, brooch, ring, necklace
   - secondary: scale, small_pearl_lot, luxury
-- character-062 — Hobb Ashbarrel — Charcoal Burner — potter — broad
-  - primary: pottery, clay, ceramic, bowl, cup, jug
-  - secondary: straw, crate, chalk
+- character-062 — Hobb Ashbarrel — Charcoal Burner — charcoal_burner — direct
+  - primary: charcoal, coal, firewood, kindling, ash, soot
+  - secondary: sack, basket, lantern
 - character-063 — Rima Glasslark — Glass Seller — glass_seller — direct
   - primary: glassware, glass_bottle, glass_vial, glass_pane, jar, bottle
   - secondary: wax, cloth, crate

@@ -454,75 +454,102 @@
     "characterId": "character-055",
     "displayName": "Nera Flintcup",
     "profession": "Tavern Keeper",
-    "stockRole": "performance_games",
-    "confidence": "broad",
+    "stockRole": "tavern_keeper",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "instrument",
-        "quantityMin": 1,
-        "quantityMax": 4
+        "tag": "tavern_meal",
+        "quantityMin": 2,
+        "quantityMax": 10
       },
       {
-        "tag": "game",
+        "tag": "bread",
+        "quantityMin": 2,
+        "quantityMax": 10
+      },
+      {
+        "tag": "stew",
+        "quantityMin": 1,
+        "quantityMax": 8
+      },
+      {
+        "tag": "cheese",
+        "quantityMin": 1,
+        "quantityMax": 8
+      },
+      {
+        "tag": "mug",
+        "quantityMin": 1,
+        "quantityMax": 8
+      },
+      {
+        "tag": "candle",
         "quantityMin": 1,
         "quantityMax": 6
-      },
+      }
+    ],
+    "secondaryPools": [
       {
         "tag": "cards",
         "quantityMin": 1,
-        "quantityMax": 6
+        "quantityMax": 5
       },
       {
         "tag": "dice",
         "quantityMin": 1,
         "quantityMax": 5
-      }
-    ],
-    "secondaryPools": [
+      },
       {
-        "tag": "book",
+        "tag": "instrument",
         "quantityMin": 1,
         "quantityMax": 3
       },
       {
-        "tag": "travel",
+        "tag": "firewood",
         "quantityMin": 1,
-        "quantityMax": 4
-      },
-      {
-        "tag": "mask",
-        "quantityMin": 1,
-        "quantityMax": 3
+        "quantityMax": 6
       }
     ],
     "stockBias": [
       {
-        "tag": "instrument",
+        "tag": "tavern_meal",
         "percent": 100
       },
       {
-        "tag": "game",
+        "tag": "bread",
         "percent": 94
       },
       {
-        "tag": "cards",
+        "tag": "stew",
         "percent": 88
       },
       {
-        "tag": "dice",
+        "tag": "cheese",
         "percent": 82
       },
       {
-        "tag": "book",
+        "tag": "mug",
+        "percent": 76
+      },
+      {
+        "tag": "candle",
+        "percent": 70
+      },
+      {
+        "tag": "cards",
         "percent": 52
       },
       {
-        "tag": "travel",
+        "tag": "dice",
         "percent": 47
       },
       {
-        "tag": "mask",
+        "tag": "instrument",
         "percent": 42
+      },
+      {
+        "tag": "firewood",
+        "percent": 37
       }
     ],
     "forbiddenTags": [
@@ -531,16 +558,21 @@
       "armor",
       "weapon",
       "livestock",
-      "barrels"
+      "gems",
+      "jewelry"
     ],
     "sourceNotes": [
-      "role: Music, games, and performance goods",
-      "score: 8",
+      "role: Tavern food, hearth, and table goods",
+      "score: 56.3",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
+      "tavern_meal",
+      "stew",
+      "mug",
+      "candle",
       "instrument",
-      "mask"
+      "firewood"
     ]
   },
   {
@@ -754,7 +786,6 @@
     ],
     "missingTags": [
       "perfume",
-      "candle",
       "wick",
       "jar"
     ]
@@ -1183,115 +1214,113 @@
     "characterId": "character-062",
     "displayName": "Hobb Ashbarrel",
     "profession": "Charcoal Burner",
-    "stockRole": "potter",
-    "confidence": "broad",
+    "stockRole": "charcoal_burner",
+    "confidence": "direct",
     "primaryPools": [
       {
-        "tag": "pottery",
-        "quantityMin": 1,
-        "quantityMax": 8
+        "tag": "charcoal",
+        "quantityMin": 2,
+        "quantityMax": 12
       },
       {
-        "tag": "clay",
-        "quantityMin": 1,
-        "quantityMax": 8
+        "tag": "coal",
+        "quantityMin": 2,
+        "quantityMax": 12
       },
       {
-        "tag": "ceramic",
-        "quantityMin": 1,
-        "quantityMax": 7
+        "tag": "firewood",
+        "quantityMin": 2,
+        "quantityMax": 10
       },
       {
-        "tag": "bowl",
-        "quantityMin": 1,
-        "quantityMax": 7
+        "tag": "kindling",
+        "quantityMin": 2,
+        "quantityMax": 10
       },
       {
-        "tag": "cup",
+        "tag": "ash",
         "quantityMin": 1,
-        "quantityMax": 7
+        "quantityMax": 6
       },
       {
-        "tag": "jug",
+        "tag": "soot",
         "quantityMin": 1,
-        "quantityMax": 7
+        "quantityMax": 5
       }
     ],
     "secondaryPools": [
       {
-        "tag": "straw",
+        "tag": "sack",
         "quantityMin": 1,
         "quantityMax": 5
       },
       {
-        "tag": "crate",
-        "quantityMin": 1,
-        "quantityMax": 5
-      },
-      {
-        "tag": "chalk",
+        "tag": "basket",
         "quantityMin": 1,
         "quantityMax": 4
+      },
+      {
+        "tag": "lantern",
+        "quantityMin": 1,
+        "quantityMax": 3
       }
     ],
     "stockBias": [
       {
-        "tag": "pottery",
+        "tag": "charcoal",
         "percent": 100
       },
       {
-        "tag": "clay",
+        "tag": "coal",
         "percent": 94
       },
       {
-        "tag": "ceramic",
+        "tag": "firewood",
         "percent": 88
       },
       {
-        "tag": "bowl",
+        "tag": "kindling",
         "percent": 82
       },
       {
-        "tag": "cup",
+        "tag": "ash",
         "percent": 76
       },
       {
-        "tag": "jug",
+        "tag": "soot",
         "percent": 70
       },
       {
-        "tag": "straw",
+        "tag": "sack",
         "percent": 52
       },
       {
-        "tag": "crate",
+        "tag": "basket",
         "percent": 47
       },
       {
-        "tag": "chalk",
+        "tag": "lantern",
         "percent": 42
       }
     ],
     "forbiddenTags": [
+      "jewelry",
+      "gems",
+      "royal",
       "meat",
       "fish",
       "livestock",
-      "jewelry",
-      "gems",
-      "weapon"
+      "book"
     ],
     "sourceNotes": [
-      "role: Pottery and clay vessels",
-      "score: 6.3",
+      "role: Charcoal, fuel, and hearth supplies",
+      "score: 65.7",
       "runtime profession slug: merchant"
     ],
     "missingTags": [
-      "ceramic",
-      "bowl",
-      "cup",
-      "jug",
-      "straw",
-      "chalk"
+      "charcoal",
+      "kindling",
+      "lantern"
     ]
   },
   {
@@ -2404,8 +2433,7 @@
       "runtime profession slug: merchant"
     ],
     "missingTags": [
-      "lamp_oil",
-      "lantern"
+      "lamp_oil"
     ]
   },
   {
@@ -2514,7 +2542,14 @@
       "score: 51",
       "runtime profession slug: merchant"
     ],
-    "missingTags": []
+    "missingTags": [
+      "ceramic",
+      "bowl",
+      "cup",
+      "jug",
+      "straw",
+      "chalk"
+    ]
   },
   {
     "characterId": "character-074",
