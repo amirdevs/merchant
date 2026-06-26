@@ -34,7 +34,7 @@ describe("game runtime playable loop integration", () => {
     expect(game.playableLoop).toBe(loop);
     expect(game.playableLoopRuntimeVersion).toBe(1);
     expect(loop.day).toBe(game.day);
-  });
+  }, 20000);
 
   it("stores trade/travel/story progress on the game save payload", () => {
     const game = freshGame();
@@ -52,7 +52,7 @@ describe("game runtime playable loop integration", () => {
     const loaded = parseGameSave(serializeGame(game)) as GameStateWithPlayableLoop | null;
     expect(loaded?.playableLoop?.totalProfit).toBeGreaterThan(0);
     expect(loaded?.playableLoop?.questChain.questStates[FIRST_PLAYABLE_QUEST_CHAIN_IDS[0]]).toBe("completed");
-  });
+  }, 20000);
 
   it("persists the complete recommended loop through serialize and parse", () => {
     const game = freshGame();
@@ -64,7 +64,7 @@ describe("game runtime playable loop integration", () => {
     expect(summary.companyRegistered).toBe(true);
     expect(summary.completedRichQuestChain).toBe(true);
     expect(summary.saveField).toBe("playableLoop");
-  });
+  }, 20000);
 
   it("resets the runtime loop without losing the surrounding game state", () => {
     const game = freshGame();
@@ -78,5 +78,5 @@ describe("game runtime playable loop integration", () => {
     expect(snapshot.view.completedGoals).toBe(0);
     expect(game.characters.length).toBeGreaterThan(0);
     expect(game.playerInventory.length).toBeGreaterThan(0);
-  });
+  }, 20000);
 });

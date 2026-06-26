@@ -25,6 +25,7 @@ const checks = [
   ["pnpm", ["test:characters"]],
   ["pnpm", ["test:runtime-characters"]],
   ["pnpm", ["test:character-merchandise"]],
+  ["pnpm", ["test:character-stock-personas"]],
   ["pnpm", ["test:company"]],
   ["pnpm", ["test:ui-integration"]],
   ["pnpm", ["test:playtest"]],
@@ -68,6 +69,7 @@ console.log("Travel planning helpers are covered by src/tests/travel/travel-loop
 console.log("Quest runtime helpers, the rich quest foundation, the first playable story chain, the playable merchant loop, GameState runtime loop persistence, economy/world expansion helpers, and vertical-slice polish helpers are covered by pnpm test:quests, pnpm test:rich-quest-chain, pnpm test:merchant-loop, pnpm test:merchant-polish, pnpm test:runtime-loop, pnpm test:economy-world, and pnpm test:vertical-polish.");
 console.log("Character portrait manifest helpers are covered by src/tests/characters/characterPortraitManifest.test.ts.");
 console.log("Character merchandise assignments are covered by pnpm test:character-merchandise.");
+console.log("Character stock persona coverage is checked by pnpm test:character-stock-personas.");
 console.log("Company, warehouse, shipment, and stock helpers are covered by src/tests/company/company.test.ts.");
 console.log("UI integration view models are covered by src/tests/runtime/ui-integration.test.ts.");
 console.log("Playtest/balance checklist helpers are covered by src/tests/vertical-slice/playtest-balance.test.ts.");

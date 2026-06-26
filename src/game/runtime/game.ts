@@ -197,6 +197,18 @@ function weightedPick<T>(entries: Array<{ value: T; weight: number }>, roll: () 
   return entries[entries.length - 1]?.value ?? null;
 }
 
+function weightedPickByWeight<T>(entries: T[], getWeight: (entry: T) => number, roll: () => number) {
+  let total = 0;
+  for (const entry of entries) total += Math.max(0, getWeight(entry));
+  if (total <= 0) return null;
+  let target = roll() * total;
+  for (const entry of entries) {
+    target -= Math.max(0, getWeight(entry));
+    if (target <= 0) return entry;
+  }
+  return entries[entries.length - 1] ?? null;
+}
+
 function quantityPoolFor(item: Item, pools: ObtainableItem[]) {
   return pools.find((pool) => itemMatchesPool(item, pool)) || {
     tag: item.tags[0] || item.name,
@@ -230,22 +242,28 @@ function archetypeMinimumQuantity(item: Item, configs: StockArchetype[]) {
 export function generateInventory(character: Character, day = 1) {
   const settings = resolvedStockSettings(character, day);
   if (settings.maxStacks <= 0) return [];
+
   const roll = seeded((character.index + 1) * 7919 + Math.max(1, day) * 104729 + (settings.profile.stockSeed || 0));
-  const characterPools = (character.obtainableItems || []).slice(0, 16);
+  const characterPools = (character.obtainableItems || []).slice(0, 24);
+  const hasProfilePools = characterPools.length > 0;
   const professionPools = character.professionSlug ? professions[character.professionSlug]?.obtainableItems || [] : [];
-  const pools = [...characterPools, ...professionPools].slice(0, 24);
+  const pools = [...characterPools, ...professionPools].slice(0, 32);
   const { weights, configs } = weightedArchetypeTags(settings.profile.archetypes);
+
   for (const [tag, weight] of Object.entries(settings.profile.stockBiasWeights || {})) {
     const normalized = normalizeStockToken(tag);
     weights.set(normalized, (weights.get(normalized) || 0) + weight);
   }
+
+  // Profile pools are the identity of a specialist merchant. They should dominate
+  // inventory composition; profession, market, and lifestyle stock are filler.
   for (const pool of characterPools) {
     const normalized = normalizeStockToken(pool.tag);
-    weights.set(normalized, (weights.get(normalized) || 0) + 80);
+    weights.set(normalized, (weights.get(normalized) || 0) + 420);
   }
   for (const pool of professionPools) {
     const normalized = normalizeStockToken(pool.tag);
-    weights.set(normalized, (weights.get(normalized) || 0) + 4);
+    weights.set(normalized, (weights.get(normalized) || 0) + (hasProfilePools ? 2 : 10));
   }
 
   const forbidden = new Set([
@@ -256,10 +274,14 @@ export function generateInventory(character: Character, day = 1) {
   const minValue = settings.profile.minValue || 0;
   const maxValue = Math.min(character.maxObtainValue, settings.profile.maxValue ?? character.maxObtainValue);
   const targetStacks = Math.min(items.length, settings.minStacks + Math.floor(roll() * (settings.maxStacks - settings.minStacks + 1)));
+  const profileTargetStacks = hasProfilePools
+    ? Math.min(targetStacks, Math.max(Math.ceil(targetStacks * 0.74), Math.min(characterPools.length, targetStacks)))
+    : 0;
   const rarityBias = Math.max(0, ...configs.map((config) => config.rarityBias || 0));
   const localityBias = Math.max(0, ...configs.map((config) => config.localityBias || 0));
   const marketKingdomIndex = marketplaces[character.marketplaceIndex]?.kingdomIndex;
-  const candidates = stockItemRecords.flatMap((record) => {
+
+  let candidates = stockItemRecords.flatMap((record) => {
     const { item } = record;
     if (item.unique || item.loafValue < minValue || item.loafValue > maxValue) return [];
     if (forbidden.has(record.name) || record.tags.some((tag) => forbidden.has(tag))) return [];
@@ -267,20 +289,46 @@ export function generateInventory(character: Character, day = 1) {
     if (baseWeight <= 0) return [];
     const localBonus = item.kingdomIndex === marketKingdomIndex ? 1 + localityBias : 1;
     const rarityPenalty = item.rarity && item.rarity > 2 && roll() > settings.tier.rareItemChance + rarityBias ? 0.15 : 1;
-    return [{ item, record, weight: baseWeight * localBonus * rarityPenalty }];
+    return [{
+      item,
+      record,
+      weight: baseWeight * localBonus * rarityPenalty,
+      matchesProfilePool: hasProfilePools && characterPools.some((pool) => itemMatchesPool(item, pool)),
+    }];
   });
+  let profileCandidates = hasProfilePools ? candidates.filter((candidate) => candidate.matchesProfilePool) : [];
+
   const inventory: InventoryEntry[] = [];
-  const tierCoinGuarantees = settings.minStacks >= 29
-    ? ["copper coins", "silver coins", "gold coins"]
-    : settings.minStacks >= 15
-      ? ["copper coins", "silver coins"]
-      : ["copper coins"];
+  const tierCoinGuarantees = hasProfilePools
+    ? ["copper coins"]
+    : settings.minStacks >= 29
+      ? ["copper coins", "silver coins", "gold coins"]
+      : settings.minStacks >= 15
+        ? ["copper coins", "silver coins"]
+        : ["copper coins"];
   const guaranteedTags = [
     ...tierCoinGuarantees,
     ...characterPools.map((pool) => pool.tag),
-    ...(settings.profile.guaranteedTags || []),
-    ...configs.flatMap((config) => config.guaranteedTags || []),
+    ...(hasProfilePools ? [] : settings.profile.guaranteedTags || []),
+    ...(hasProfilePools ? [] : configs.flatMap((config) => config.guaranteedTags || [])),
   ].map(normalizeStockToken);
+
+  function addCandidate(selected: (typeof candidates)[number]) {
+    const selectedIndex = candidates.findIndex((candidate) => candidate.item.index === selected.item.index);
+    if (selectedIndex >= 0) candidates.splice(selectedIndex, 1);
+    if (selected.matchesProfilePool) {
+      const selectedProfileIndex = profileCandidates.findIndex((candidate) => candidate.item.index === selected.item.index);
+      if (selectedProfileIndex >= 0) profileCandidates.splice(selectedProfileIndex, 1);
+    }
+    const pool = quantityPoolFor(selected.item, pools);
+    const multiplier = selected.record.tags.includes("coins") || selected.record.tags.includes("currency")
+      ? settings.coinMultiplier
+      : settings.quantityMultiplier * archetypeQuantityMultiplier(selected.item, configs);
+    addInventory(inventory, selected.item.index, Math.max(
+      archetypeMinimumQuantity(selected.item, configs),
+      quantityFor(pool, selected.item, roll, multiplier)
+    ));
+  }
 
   for (const guaranteedTag of guaranteedTags) {
     if (inventory.length >= targetStacks) break;
@@ -290,30 +338,22 @@ export function generateInventory(character: Character, day = 1) {
     );
     const selected = guaranteed[Math.floor(roll() * guaranteed.length)];
     if (!selected) continue;
-    candidates.splice(candidates.findIndex((candidate) => candidate.item.index === selected.item.index), 1);
-    const pool = quantityPoolFor(selected.item, pools);
-    const multiplier = selected.record.tags.includes("coins") || selected.record.tags.includes("currency")
-      ? settings.coinMultiplier
-      : settings.quantityMultiplier * archetypeQuantityMultiplier(selected.item, configs);
-    addInventory(inventory, selected.item.index, Math.max(
-      archetypeMinimumQuantity(selected.item, configs),
-      quantityFor(pool, selected.item, roll, multiplier)
-    ));
+    addCandidate(selected);
+  }
+
+  while (hasProfilePools && inventory.length < profileTargetStacks) {
+    if (!profileCandidates.length) break;
+    const selected = weightedPickByWeight(profileCandidates, (candidate) => candidate.weight * 8, roll);
+    if (!selected) break;
+    addCandidate(selected);
   }
 
   while (inventory.length < targetStacks && candidates.length) {
-    const selected = weightedPick(candidates.map((candidate) => ({ value: candidate, weight: candidate.weight })), roll);
+    const selected = weightedPickByWeight(candidates, (candidate) => candidate.weight, roll);
     if (!selected) break;
-    candidates.splice(candidates.findIndex((candidate) => candidate.item.index === selected.item.index), 1);
-    const pool = quantityPoolFor(selected.item, pools);
-    const multiplier = selected.record.tags.includes("coins") || selected.record.tags.includes("currency")
-      ? settings.coinMultiplier
-      : settings.quantityMultiplier * archetypeQuantityMultiplier(selected.item, configs);
-    addInventory(inventory, selected.item.index, Math.max(
-      archetypeMinimumQuantity(selected.item, configs),
-      quantityFor(pool, selected.item, roll, multiplier)
-    ));
+    addCandidate(selected);
   }
+
   return inventory;
 }
 

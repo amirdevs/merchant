@@ -32,6 +32,10 @@ function profile(overrides: Partial<FinalCharacterIdentityProfile>): FinalCharac
   };
 }
 
+function tagsFor(overrides: Partial<FinalCharacterIdentityProfile>) {
+  return resolveProfileStockPersona(profile(overrides)).stockPools.map((entry) => entry.tag);
+}
+
 describe("character stock personas", () => {
   it("detects silk factors as textile specialists", () => {
     const persona = resolveProfileStockPersona(profile({
@@ -46,7 +50,7 @@ describe("character stock personas", () => {
     expect(poolTags).toContain("silk");
     expect(poolTags).toContain("dye_vials");
     expect(poolTags).toContain("ribbons");
-    expect(persona.stockBias.some((entry) => entry.tag === "silk" && entry.percent >= 80)).toBe(true);
+    expect(persona.stockBias.some((entry) => entry.tag === "silk" && entry.percent >= 90)).toBe(true);
   });
 
   it("detects cookshop owners as kitchen goods specialists", () => {
@@ -62,7 +66,7 @@ describe("character stock personas", () => {
     expect(poolTags).toContain("cookware");
     expect(poolTags).toContain("cookpot");
     expect(poolTags).toContain("spices");
-    expect(persona.stockBias.some((entry) => entry.tag === "cookware" && entry.percent >= 80)).toBe(true);
+    expect(persona.stockBias.some((entry) => entry.tag === "cookware" && entry.percent >= 90)).toBe(true);
   });
 
   it("detects button sellers as tailoring goods specialists", () => {
@@ -77,5 +81,25 @@ describe("character stock personas", () => {
     expect(persona.personaId).toBe("button_seller");
     expect(poolTags).toContain("tailoring_buttons");
     expect(poolTags).toContain("buttons");
+  });
+
+  it("covers common specialist merchant professions", () => {
+    const cases: Array<[Partial<FinalCharacterIdentityProfile>, string[]]> = [
+      [{ profession: "Baker", shortStory: "Sells bread, flour, and pastries from an oven stall." }, ["bread", "flour"]],
+      [{ profession: "Butcher", shortStory: "Cuts meat and smoked sausages." }, ["meat", "sausage"]],
+      [{ profession: "Farmer", shortStory: "Sells orchard apples, grain, seeds, and vegetables." }, ["produce", "grain", "seeds"]],
+      [{ profession: "Fisher", shortStory: "Brings fish, shellfish, hooks, and salted catch from the harbor." }, ["fish", "seafood"]],
+      [{ profession: "Jeweler", shortStory: "Trades gems, pearls, rings, and brooches." }, ["jewelry", "gem"]],
+      [{ profession: "Alchemist", shortStory: "Keeps potions, remedies, vials, and herbs." }, ["alchemy", "potion", "herbs"]],
+      [{ profession: "Blacksmith", shortStory: "Works iron, coal, tools, nails, and metal goods." }, ["ore", "coal", "tool"]],
+      [{ profession: "Fletcher", shortStory: "Makes arrows, bows, feathers, and quivers." }, ["arrows", "bows"]],
+      [{ profession: "Scribe", shortStory: "Sells paper, ink, ledgers, contracts, and wax seals." }, ["paper", "ink", "ledger"]],
+      [{ profession: "Florist", shortStory: "Sells flowers, seeds, herbs, and botanical baskets." }, ["flower", "seeds", "herbs"]],
+    ];
+
+    for (const [input, expectedTags] of cases) {
+      const tags = tagsFor(input);
+      for (const tag of expectedTags) expect(tags).toContain(tag);
+    }
   });
 });

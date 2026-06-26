@@ -16,6 +16,7 @@
     "test:characters": "vitest run src/tests/characters/characterPortraitManifest.test.ts",
     "test:runtime-characters": "vitest run src/tests/characters/runtime-characters.test.ts src/tests/characters/customerDialogueProfile.test.ts src/tests/characters/npc-flow.test.ts",
     "test:character-merchandise": "vitest run src/tests/characters/characterMerchandiseAssignments.test.ts",
+    "test:character-stock-personas": "vitest run src/tests/characters/characterStockPersonas.test.ts",
     "test:runtime-loop": "vitest run src/tests/runtime/game-runtime-loop.test.ts",
     "audit:data": "node scripts/audits/audit-data.cjs",
     "audit:assets": "node scripts/audits/audit-assets.cjs",
@@ -45,8 +46,7 @@
     "playtest:economy-world": "node scripts/playtests/playtest-economy-world.cjs",
     "test:vertical-polish": "vitest run src/tests/vertical-slice/vertical-slice-polish.test.ts",
     "playtest:vertical-polish": "node scripts/playtests/playtest-vertical-slice-polish.cjs",
-    "audit:naming": "node scripts/audits/audit-naming-traces.cjs",
-    "test:character-stock-personas": "vitest run src/tests/characters/characterStockPersonas.test.ts"
+    "audit:naming": "node scripts/audits/audit-naming-traces.cjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",
