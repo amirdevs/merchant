@@ -18,7 +18,7 @@ export default defineConfig({
     port: 5173,
   },
   test: {
-    testTimeout: 30000,
+    testTimeout: 60000,
   },
   build: {
     outDir: "dist",

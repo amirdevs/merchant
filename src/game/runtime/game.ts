@@ -259,11 +259,11 @@ export function generateInventory(character: Character, day = 1) {
   // inventory composition; profession, market, and lifestyle stock are filler.
   for (const pool of characterPools) {
     const normalized = normalizeStockToken(pool.tag);
-    weights.set(normalized, (weights.get(normalized) || 0) + 420);
+    weights.set(normalized, (weights.get(normalized) || 0) + 900);
   }
   for (const pool of professionPools) {
     const normalized = normalizeStockToken(pool.tag);
-    weights.set(normalized, (weights.get(normalized) || 0) + (hasProfilePools ? 2 : 10));
+    weights.set(normalized, (weights.get(normalized) || 0) + (hasProfilePools ? 1 : 10));
   }
 
   const forbidden = new Set([
@@ -275,7 +275,7 @@ export function generateInventory(character: Character, day = 1) {
   const maxValue = Math.min(character.maxObtainValue, settings.profile.maxValue ?? character.maxObtainValue);
   const targetStacks = Math.min(items.length, settings.minStacks + Math.floor(roll() * (settings.maxStacks - settings.minStacks + 1)));
   const profileTargetStacks = hasProfilePools
-    ? Math.min(targetStacks, Math.max(Math.ceil(targetStacks * 0.74), Math.min(characterPools.length, targetStacks)))
+    ? Math.min(targetStacks, Math.max(Math.ceil(targetStacks * 0.86), Math.min(characterPools.length, targetStacks)))
     : 0;
   const rarityBias = Math.max(0, ...configs.map((config) => config.rarityBias || 0));
   const localityBias = Math.max(0, ...configs.map((config) => config.localityBias || 0));
@@ -343,7 +343,7 @@ export function generateInventory(character: Character, day = 1) {
 
   while (hasProfilePools && inventory.length < profileTargetStacks) {
     if (!profileCandidates.length) break;
-    const selected = weightedPickByWeight(profileCandidates, (candidate) => candidate.weight * 8, roll);
+    const selected = weightedPickByWeight(profileCandidates, (candidate) => candidate.weight * 12, roll);
     if (!selected) break;
     addCandidate(selected);
   }

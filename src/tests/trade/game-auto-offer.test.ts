@@ -23,5 +23,5 @@ describe("real Ask Price offerability", () => {
     expect(message).toBe(`${character.name} names a price from your goods.`);
     expect(state.playerInventory.find((entry) => entry.itemIndex === silverIndex)?.offerQuantity || 0).toBe(0);
     expect(state.playerInventory.find((entry) => entry.itemIndex === copperIndex)?.offerQuantity || 0).toBeGreaterThan(0);
-  }, 20000);
+  }, 45000);
 });

@@ -8,6 +8,7 @@ import items1801To2100 from "./chunks/items-1801-2100.json";
 import items2101To2206 from "./chunks/items-2101-2206.json";
 import characterMerchandiseItems from "./character-merchandise-items.json";
 import specialistMerchantItems from "./specialist-merchant-items.json";
+import npcStockProfileItems from "./npc-stock-profile-items.json";
 import type { Item } from "@/shared/types/game-data";
 
 export const itemsChunked = [
@@ -21,4 +22,5 @@ export const itemsChunked = [
   ...items2101To2206,
   ...characterMerchandiseItems,
   ...specialistMerchantItems,
+  ...npcStockProfileItems,
 ] as Item[];

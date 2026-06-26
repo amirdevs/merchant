@@ -1,6 +1,7 @@
 import runtimeProfileDataJson from "./profiles.data.json";
 import { characterMerchandiseAssignmentById } from "../merchandise";
 import { resolveProfileStockPersona } from "../merchandise/stock-personas";
+import { resolveCharacterStockProfile } from "../stock";
 import type { FinalCharacterIdentityProfile } from "../profiles/types";
 import type { Bias, Character, ObtainableItem } from "@/shared/types/game-data";
 import type { CharacterRuntimeProfileRecord } from "./types";
@@ -82,7 +83,19 @@ export function buildRuntimeCharacters(options: {
     const neutralPortrait = options.neutralPortraitByCharacterId?.get(profile.characterId) || `${profile.characterId}-neutral.png`;
     const merchandise = characterMerchandiseAssignmentById.get(profile.characterId);
     const stockPersona = resolveProfileStockPersona(identity);
+    const stockProfile = resolveCharacterStockProfile(identity, profile, stockPersona, merchandise);
     const dialogue = profile.dialogueBehavior;
+    const profileFirstPools = mergeObtainableItems(
+      mergeObtainableItems(
+        mergeObtainableItems([...stockProfile.primaryPools, ...stockProfile.secondaryPools], merchandise?.stockPools),
+        stockPersona.stockPools,
+      ),
+      profile.obtainableItems,
+    );
+    const profileFirstBias = mergeBiases(
+      mergeBiases(mergeBiases(stockProfile.stockBias, merchandise?.stockBias), stockPersona.stockBias),
+      profile.tradeBias,
+    );
     const character: Character = {
       characterId: profile.characterId,
       index: profile.runtimeIndex as number,
@@ -111,9 +124,9 @@ export function buildRuntimeCharacters(options: {
       reachingDealPercent: profile.reachingDealPercent,
       farFromDealPercent: profile.farFromDealPercent || undefined,
       dialogue: dialogue && Object.keys(dialogue).length ? { ...dialogue } : undefined,
-      bias: mergeBiases(mergeBiases(profile.tradeBias, stockPersona.stockBias), merchandise?.stockBias),
-      obtainableItems: mergeObtainableItems(mergeObtainableItems(profile.obtainableItems, stockPersona.stockPools), merchandise?.stockPools),
-      excludedObtainItems: [...new Set([...profile.excludedObtainItems, ...(stockPersona.forbiddenTags || [])])],
+      bias: profileFirstBias,
+      obtainableItems: profileFirstPools,
+      excludedObtainItems: [...new Set([...profile.excludedObtainItems, ...(stockPersona.forbiddenTags || []), ...stockProfile.forbiddenTags])],
       inventory: [],
     };
     return character;
